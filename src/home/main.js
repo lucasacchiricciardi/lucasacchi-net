@@ -638,7 +638,5 @@ function retrieveAndDecompress(lang) {
         // Silent fail
       });
     }
-    } // end init()
-
-  // Start initialization
-})();
+  } // end init()
+})(); // Start initialization
