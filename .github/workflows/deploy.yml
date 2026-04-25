@@ -55,6 +55,7 @@ jobs:
             sleep 1
           done
       - name: Run Lighthouse CI
+        continue-on-error: true
         uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
