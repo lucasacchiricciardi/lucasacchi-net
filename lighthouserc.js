@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      url: ['https://lucasacchiricciardi.github.io/the-linux-formula/'],
+      url: ['https://lucasacchiricciardi.github.io/lucasacchi-net/'],
       numberOfRuns: 3,
       settings: {
         preset: 'desktop',
