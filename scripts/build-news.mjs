@@ -181,6 +181,16 @@ function assembleDist() {
     }
   }
 
+  // Copy i18n.js from src root
+  const i18nSrc = join(process.cwd(), 'src', 'i18n.js');
+  const i18nDst = join(DIST, 'i18n.js');
+  if (existsSync(i18nSrc)) {
+    copyFileSync(i18nSrc, i18nDst);
+    console.log(`Copied i18n.js to dist/`);
+  } else {
+    console.warn(`Warning: ${i18nSrc} not found, skipping`);
+  }
+
 
   // Copy subpages
   const subpagesDir = 'src';
