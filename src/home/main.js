@@ -9,8 +9,6 @@ if (document.readyState === 'loading') {
 }
     
     function init() {
-
-  function init() {
     // Global error handlers for production
     window.onerror = function(message, source, lineno, colno, error) {
       showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
