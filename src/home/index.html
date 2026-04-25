@@ -48,6 +48,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="vendor/lz-string.min.js"></script>
+<script src="i18n.js"></script>
 <script id="tailwind-config" type="application/json">
 {
   "theme": {
@@ -111,7 +112,7 @@
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Vai al contenuto principale</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest" data-i18n="meta.skipToContent">Vai al contenuto principale</a>
 
 <nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Navigazione principale">
 <div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
@@ -120,11 +121,11 @@
   <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">The Linux Formula</a>
 </div>
 <div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
-<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content">Home</a>
-<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#chi-sono">Chi Sono</a>
-<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#corsi">Corsi</a>
-<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#blog">Blog</a>
-<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#contatti">Contattami</a>
+<a id="nav-home" class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content" data-i18n="nav.home">Home</a>
+<a id="nav-chi-sono" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a id="nav-corsi" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#corsi" data-i18n="nav.corsi">Corsi</a>
+<a id="nav-blog" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#blog" data-i18n="nav.blog">Blog</a>
+<a id="nav-contattami" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#contatti" data-i18n="nav.contattami">Contattami</a>
 <button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
 <button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
 </div>
@@ -133,11 +134,11 @@
 </button>
 </div>
 <div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
-<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content">Home</a>
-<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#chi-sono">Chi Sono</a>
-<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#corsi">Corsi</a>
-<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#blog">Blog</a>
-<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#contatti">Contattami</a>
+<a id="nav-home" class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content" data-i18n="nav.home">Home</a>
+<a id="nav-chi-sono" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a id="nav-corsi" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#corsi" data-i18n="nav.corsi">Corsi</a>
+<a id="nav-blog" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#blog" data-i18n="nav.blog">Blog</a>
+<a id="nav-contattami" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#contatti" data-i18n="nav.contattami">Contattami</a>
 <div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
 <button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
 <button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
@@ -151,22 +152,22 @@
 <section class="lg:col-span-8 flex flex-col justify-center space-y-8">
 <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest w-max">
 <span class="w-2 h-2 bg-primary rounded-none"></span>
-<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">SysAdmin_Protocol_v2.4</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest" data-i18n="hero.protocol">SysAdmin_Protocol_v2.4</span>
 </div>
 <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight text-balance">
-                The Linux Formula:<br/>
-<span class="text-primary italic font-light">Tools, Apps, and Insights.</span>
-</h1>
+                <span data-i18n="hero.title">The Linux Formula:</span><br/>
+<span class="text-primary italic font-light" data-i18n="hero.subtitle">Tools, Apps, and Insights.</span>
+            </h1>
 <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                A rigorous, methodical approach to system administration. Moving beyond generic tutorials to deliver architect-level blueprints for robust, scalable infrastructure.
+                <span data-i18n="meta.description">The Linux Formula — Tools, Apps, and Insights for the Open Source World. A rigorous, methodical approach to system administration. Moving beyond generic tutorials to deliver architect-level blueprints for robust, scalable infrastructure.</span>
             </p>
 <div class="flex flex-wrap gap-4 pt-4">
-<a class="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-8 py-4 hover:bg-primary-container transition-colors flex items-center gap-2 rounded-none" href="#corsi">
-<span>Scopri i Corsi</span>
+<a data-scopri-corsi class="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-8 py-4 hover:bg-primary-container transition-colors flex items-center gap-2 rounded-none" href="#corsi">
+<span data-i18n="hero.scopriCorsi">Scopri i Corsi</span>
 <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
-<a class="border-b-2 border-outline-variant/20 text-on-surface font-label text-sm uppercase tracking-widest px-8 py-4 hover:border-primary hover:text-primary transition-all flex items-center gap-2 rounded-none bg-surface-container-low" href="#contatti">
-<span>Contattami</span>
+<a data-contattami class="border-b-2 border-outline-variant/20 text-on-surface font-label text-sm uppercase tracking-widest px-8 py-4 hover:border-primary hover:text-primary transition-all flex items-center gap-2 rounded-none bg-surface-container-low" href="#contatti">
+<span data-i18n="hero.contattami">Contattami</span>
 </a>
 </div>
 </section>
@@ -199,7 +200,7 @@
 <section id="chi-sono" class="lg:col-span-12 mt-16 md:mt-24">
 <div class="flex items-center gap-4 mb-16">
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">Subject Matter Expert</h2>
+<h2 data-section-expert class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4" data-i18n="sections.subjectMatterExpert">Subject Matter Expert</h2>
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -208,21 +209,21 @@
 <div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl text-primary">person</span>
 </div>
-<span class="font-label text-xs text-outline">ID: LS-001</span>
+<span class="font-label text-xs text-outline" data-i18n="expert.id">ID: LS-001</span>
 </div>
-<h3 class="font-headline text-2xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Luca Sacchi</h3>
-<p class="font-label text-sm text-primary mb-6">Senior Systems Administrator</p>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="expert.name">Luca Sacchi</h3>
+<p class="font-label text-sm text-primary mb-6" data-i18n="expert.role">Senior Systems Administrator</p>
 <div class="space-y-2">
 <div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
-<span class="font-label text-xs text-on-surface-variant">Experience</span>
+<span data-expert-experience class="font-label text-xs text-on-surface-variant" data-i18n="expert.experience">Experience</span>
 <span class="font-body text-sm font-medium text-on-surface">20+ Years</span>
 </div>
 <div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
-<span class="font-label text-xs text-on-surface-variant">Specialty</span>
+<span data-expert-specialty class="font-label text-xs text-on-surface-variant" data-i18n="expert.specialty">Specialty</span>
 <span class="font-body text-sm font-medium text-on-surface text-right">Unix / Linux / Solaris</span>
 </div>
 <div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
-<span class="font-label text-xs text-on-surface-variant">Role</span>
+<span data-expert-role class="font-label text-xs text-on-surface-variant" data-i18n="expert.roleLabel">Role</span>
 <span class="font-body text-sm font-medium text-on-surface text-right">Architect</span>
 </div>
 </div>
@@ -233,20 +234,20 @@
 </div>
 <div class="relative z-10 h-full flex flex-col justify-between">
 <div>
-<span class="inline-block px-2 py-1 bg-surface text-on-surface font-label text-[10px] uppercase tracking-widest mb-6">Pedagogical Framework</span>
-<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">The 'Metodo Sacchi'</h3>
+<span class="inline-block px-2 py-1 bg-surface text-on-surface font-label text-[10px] uppercase tracking-widest mb-6" data-i18n="expert.pedagogicalFramework">Pedagogical Framework</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4" data-i18n="expert.metodoSacchi">The 'Metodo Sacchi'</h3>
 <p class="font-body text-on-surface-variant leading-relaxed max-w-xl">
                             Educator for ITS/IFTS programs, developing a rigorous, practically-grounded curriculum designed to bridge the gap between academic theory and high-stakes enterprise infrastructure management.
                         </p>
 </div>
 <div class="mt-8 flex gap-4 flex-wrap">
 <div class="bg-surface px-4 py-2 border-l-2 border-primary">
-<span class="block font-label text-[10px] text-outline mb-1">MODULE_01</span>
-<span class="font-body text-sm font-medium text-on-surface">Systems Architecture</span>
+<span class="block font-label text-[10px] text-outline mb-1" data-i18n="expert.module01">MODULE_01</span>
+<span class="font-body text-sm font-medium text-on-surface" data-i18n="expert.systemsArchitecture">Systems Architecture</span>
 </div>
 <div class="bg-surface px-4 py-2 border-l-2 border-secondary">
-<span class="block font-label text-[10px] text-outline mb-1">MODULE_02</span>
-<span class="font-body text-sm font-medium text-on-surface">Network Security</span>
+<span class="block font-label text-[10px] text-outline mb-1" data-i18n="expert.module02">MODULE_02</span>
+<span class="font-body text-sm font-medium text-on-surface" data-i18n="expert.networkSecurity">Network Security</span>
 </div>
 </div>
 </div>
@@ -257,7 +258,7 @@
 <section id="corsi" class="lg:col-span-12 mt-16 md:mt-24">
 <div class="flex items-center gap-4 mb-16">
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">Latest Insights</h2>
+<h2 data-section-insights class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4" data-i18n="sections.latestInsights">Latest Insights</h2>
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -267,11 +268,11 @@
 <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">dns</span>
 </div>
 <div>
-<h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Systems Architecture</h3>
-<span class="font-label text-xs text-primary uppercase tracking-widest">Infrastructure Focus</span>
+<h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors" data-i18n="insights.systemsArchitecture">Systems Architecture</h3>
+<span class="font-label text-xs text-primary uppercase tracking-widest" data-i18n="insights.infrastructureFocus">Infrastructure Focus</span>
 </div>
 </div>
-<p class="font-body text-on-surface-variant leading-relaxed">Deep dives into enterprise Linux infrastructure. From kernel tuning to cluster design—architect-level blueprints.</p>
+<p class="font-body text-on-surface-variant leading-relaxed" data-i18n="insights.systemsArchitectureDesc">Deep dives into enterprise Linux infrastructure. From kernel tuning to cluster design—architect-level blueprints.</p>
 </div>
 <div class="bg-surface-container-low p-8 border-t-4 border-secondary hover:bg-surface-container-high transition-colors group">
 <div class="flex items-center gap-4 mb-6">
@@ -280,17 +281,17 @@
 </div>
 <div>
 <h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Network Security</h3>
-<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Security Focus</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest" data-i18n="insights.securityFocus">Security Focus</span>
 </div>
 </div>
-<p class="font-body text-on-surface-variant leading-relaxed">Firewall, IDS/IPS, SELinux, and zero-trust architectures. Hardening production systems with proven patterns.</p>
+<p class="font-body text-on-surface-variant leading-relaxed" data-i18n="insights.networkSecurityDesc">Firewall, IDS/IPS, SELinux, and zero-trust architectures. Hardening production systems with proven patterns.</p>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-primary text-3xl">dns</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Infrastructure</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.infrastructure">Infrastructure</span>
 </div>
 <h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Linux Kernel Tuning</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Deep dive into sysctl, kernel parameters, and performance profiling for production systems.</p>
@@ -298,41 +299,41 @@
 <div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-primary text-3xl">storage</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Storage</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.storage">Storage</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">LVM & RAID Architecture</h3>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="insights.lvmRaidArchitecture">LVM & RAID Architecture</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Enterprise storage design with LVM, RAID levels, and filesystem selection for critical workloads.</p>
 </div>
 <div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-primary text-3xl">cloud</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Virtualization</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.virtualization">Virtualization</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Proxmox VE & Containers</h3>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="insights.proxmoxContainers">Proxmox VE & Containers</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Container orchestration, VM management, and clustering for high-availability infrastructure.</p>
 </div>
 <div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-outline text-3xl">security</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Security</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.security">Security</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">SELinux & AppArmor</h3>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="insights.selinuxApparmor">SELinux & AppArmor</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Mandatory access control systems. From disabled to strict—production-hardened policies.</p>
 </div>
 <div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-outline text-3xl">router</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Networking</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.networking">Networking</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">BGP & High Availability</h3>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="insights.bgpHighAvailability">BGP & High Availability</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Border Gateway Protocol, VRRP, and load balancing for resilient network architectures.</p>
 </div>
 <div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
 <div class="flex items-start justify-between mb-6">
 <span class="material-symbols-outlined text-outline text-3xl">code</span>
-<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Automation</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1" data-i18n="insights.automation">Automation</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Ansible & Bash Scripting</h3>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors" data-i18n="insights.ansibleBashScripting">Ansible & Bash Scripting</h3>
 <p class="font-body text-sm text-on-surface-variant leading-relaxed">Infrastructure as Code. Playbooks and scripts for repeatable, auditable deployments.</p>
 </div>
 </div>
@@ -341,26 +342,26 @@
 <section class="lg:col-span-12 mt-16 md:mt-24">
 <div class="flex items-center gap-4 mb-16">
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">Broadcast Channel</h2>
+<h2 data-section-broadcast class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4" data-i18n="sections.broadcastChannel">Broadcast Channel</h2>
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">memory</span>
-<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Infrastructure</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest" data-i18n="broadcast.infrastructure">Infrastructure</span>
 </div>
 <h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Proxmox VE Architecture Deep Dive</h3>
 <div class="flex items-center gap-4 mt-4">
-<span class="font-label text-xs text-on-surface-variant">4051 views</span>
-<span class="font-label text-xs text-primary">+96 subscribers</span>
+<span class="font-label text-xs text-on-surface-variant">4051 <span data-i18n="broadcast.views">views</span></span>
+<span class="font-label text-xs text-primary">+96 <span data-i18n="broadcast.subscribers">subscribers</span></span>
 </div>
 <div class="font-label text-xs text-outline mt-2">1h</div>
 </div>
 <div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
-<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Linux</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest" data-i18n="broadcast.linux">Linux</span>
 </div>
 <h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Debian System Administration</h3>
 <div class="flex items-center gap-4 mt-4">
@@ -372,7 +373,7 @@
 <div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">cloud</span>
-<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Virtualization</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest" data-i18n="broadcast.virtualization">Virtualization</span>
 </div>
 <h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">LXC Containers Deep Dive</h3>
 <div class="flex items-center gap-4 mt-4">
@@ -384,7 +385,7 @@
 </div>
 <div class="mt-8 text-center">
 <a class="inline-flex items-center gap-2 bg-error text-on-error font-label text-sm uppercase tracking-widest px-8 py-4 hover:bg-red-700 transition-colors rounded-none" href="https://www.youtube.com/@lucasacchinet" rel="noopener noreferrer" target="_blank">
-<span>Explore Broadcast Channel</span>
+<span data-i18n="broadcast.exploreBroadcastChannel">Explore Broadcast Channel</span>
 <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
@@ -392,10 +393,10 @@
 
 <section id="blog" class="lg:col-span-12 mt-16 md:mt-24" role="status" aria-live="polite">
 <div class="flex justify-between items-center mb-16 border-b border-outline-variant/20 pb-4">
-<h2 class="font-label text-sm uppercase tracking-widest text-on-surface-variant">Insights Feed</h2>
+<h2 class="font-label text-sm uppercase tracking-widest text-on-surface-variant" data-i18n="status.insightsFeed">Insights Feed</h2>
 <div class="relative">
 <span class="material-symbols-outlined text-on-surface-variant text-sm absolute left-3 top-1/2 -translate-y-1/2">search</span>
-<input id="news-search" type="text" placeholder="Search articles..." class="font-label text-xs pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none w-48 md:w-64" aria-label="Search articles"/>
+<input id="news-search" type="text" placeholder="Search articles..." class="font-label text-xs pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none w-48 md:w-64" aria-label="Search articles" data-i18n="status.searchArticles"/>
 </div>
 </div>
 <div id="news-feed-articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -406,8 +407,8 @@
 <div class="h-3 bg-surface-container-highest rounded w-5/6"></div>
 </div>
 </div>
-<noscript><p class="font-body text-sm text-on-surface-variant p-4">JavaScript è necessario per caricare il blog.</p></noscript>
-<div id="news-feed-error" class="hidden font-label text-xs uppercase tracking-widest text-error p-4 border-l-2 border-error bg-error-container"></div>
+<noscript><p class="font-body text-sm text-on-surface-variant p-4" data-i18n="meta.genericError">JavaScript è necessario per caricare il blog.</p></noscript>
+<div id="news-feed-error" class="hidden font-label text-xs uppercase tracking-widest text-error p-4 border-l-2 border-error bg-error-container" data-i18n="status.noArticlesFound"></div>
 </section>
 
 <section class="lg:col-span-12 mt-16 md:mt-24">
@@ -419,7 +420,7 @@
 <span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">work</span>
 </div>
 <div>
-<h4 class="font-body font-semibold text-on-surface group-hover:text-on-primary">LinkedIn</h4>
+<h4 class="font-body font-semibold text-on-surface group-hover:text-on-primary" data-i18n="externalVectors.linkedin">LinkedIn</h4>
 <p class="font-label text-xs text-on-surface-variant group-hover:text-primary-fixed-dim mt-1">linkedin.com/in/lucasacchi</p>
 </div>
 </div>
@@ -431,7 +432,7 @@
 <span class="material-symbols-outlined text-on-surface group-hover:text-on-error">smart_display</span>
 </div>
 <div>
-<h4 class="font-body font-semibold text-on-surface group-hover:text-on-error-container">YouTube</h4>
+<h4 class="font-body font-semibold text-on-surface group-hover:text-on-error-container" data-i18n="externalVectors.youtube">YouTube</h4>
 <p class="font-label text-xs text-on-surface-variant group-hover:text-on-error-container/70 mt-1">youtube.com/@lucasacchinet</p>
 </div>
 </div>
@@ -444,44 +445,44 @@
 <footer id="contatti" class="bg-surface-container-low text-on-surface border-t border-outline-variant/20 mt-auto">
 <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
 <div class="md:col-span-1">
-<span class="font-headline font-bold text-lg block mb-4">The Linux Formula</span>
-<p class="font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant">
+<span class="font-headline font-bold text-lg block mb-4" data-i18n="footer.theLinuxFormula">The Linux Formula</span>
+<p class="font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant" data-i18n="footer.architecturalInsights">
                     Architectural-grade insights for enterprise Linux systems.
                 </p>
 </div>
 <div class="md:col-span-2 grid grid-cols-2 gap-8 font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant">
 <div>
-<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Coordinates</span>
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.coordinates">Coordinates</span>
 <ul class="space-y-2">
 <li>Office: Viale Bligny 13/a Milano</li>
 <li>P.IVA: IT09731490968</li>
 </ul>
 </div>
 <div>
-<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Comm_Links</span>
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.commLinks">Comm_Links</span>
 <ul class="space-y-2">
 <li>Cell: <span id="phone-obf"></span></li>
 <li>Email: <span id="email-obf"></span></li>
 </ul>
 </div>
 <div class="md:col-span-2">
-<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Contact</span>
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.contact">Contact</span>
 <form id="contact-form" class="space-y-3">
-<input type="text" name="name" placeholder="Name" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none"/>
-<input type="email" name="email" placeholder="Email" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none"/>
-<textarea name="message" placeholder="Message" required rows="3" class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none resize-none"></textarea>
-<button type="submit" class="bg-primary text-on-primary font-label text-xs uppercase tracking-widest px-4 py-2 hover:bg-primary-container transition-colors rounded-none w-full">Send Message</button>
+<input type="text" name="name" placeholder="Name" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none" data-i18n-placeholder="footer.name"/>
+<input type="email" name="email" placeholder="Email" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none" data-i18n-placeholder="footer.email"/>
+<textarea name="message" placeholder="Message" required rows="3" class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none resize-none" data-i18n-placeholder="footer.message"></textarea>
+<button type="submit" class="bg-primary text-on-primary font-label text-xs uppercase tracking-widest px-4 py-2 hover:bg-primary-container transition-colors rounded-none w-full" data-i18n="footer.send">Send Message</button>
 </form>
-<p id="contact-success" class="hidden text-xs text-primary mt-2">Message sent! I'll get back to you soon.</p>
+<p id="contact-success" class="hidden text-xs text-primary mt-2" data-i18n="footer.messageSent">Message sent! I'll get back to you soon.</p>
 </div>
 </div>
 <div class="md:col-span-1 flex flex-col justify-between items-start md:items-end font-label text-[10px] uppercase tracking-widest text-outline">
 <span class="material-symbols-outlined text-3xl mb-4">terminal</span>
 <div class="text-left md:text-right">
-<p>&copy; The Linux Formula.</p>
-<p>All Rights Reserved.</p>
+<p data-i18n="footer.copyright">&copy; The Linux Formula.</p>
+<p data-i18n="footer.allRightsReserved">All Rights Reserved.</p>
 <p class="mt-2" id="copyright-years"></p>
-<p class="mt-2 text-[9px]">Analytics: anonymous, cookie-free</p>
+<p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics: anonymous, cookie-free</p>
 </div>
 </div>
 </div>

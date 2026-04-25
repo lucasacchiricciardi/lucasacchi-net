@@ -1,22 +1,24 @@
 (function() {
-  // Wait for DOM if script is deferred
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      init();
-    });
-  } else {
+// Wait for DOM if script is deferred
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
     init();
-  }
+  });
+} else {
+  init();
+}
+    
+    function init() {
 
   function init() {
     // Global error handlers for production
     window.onerror = function(message, source, lineno, colno, error) {
-      showError('An error occurred. Please refresh the page.');
+      showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
       return false;
     };
 
     window.onunhandledrejection = function(event) {
-      showError('An error occurred. Please refresh the page.');
+      showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
     };
 
     var worker;
@@ -27,7 +29,7 @@
       worker = new Worker(baseUrl + 'newsWorker.js');
       worker.postMessage({ type: 'init', baseUrl: baseUrl });
     } catch (e) {
-      showError('Failed to initialize news. Please refresh the page.');
+      showError(window.i18n.t('meta.failedToInitializeNews', currentLang));
       return;
     }
 
@@ -36,7 +38,7 @@
     
     if (!articlesContainer || !errorContainer) {
       console.error('News feed containers not found:', { articlesContainer, errorContainer });
-      showError('Unable to load news feed. Please refresh.');
+      showError(window.i18n.t('meta.unableToLoadNews', currentLang));
       return;
     }
 
@@ -50,6 +52,9 @@
       if (browserLang.startsWith('en')) return 'en';
       return 'it';
     }
+
+    // Initialize i18n
+    var translations = window.i18n.initI18n(currentLang);
 
     function setLanguageCookie(lang) {
       document.cookie = 'lsn_lang=' + lang + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
@@ -251,9 +256,18 @@ function retrieveAndDecompress(lang) {
       while (articlesContainer.firstChild) {
         articlesContainer.removeChild(articlesContainer.firstChild);
       }
-      articles.forEach(function(article) {
-        articlesContainer.appendChild(createArticleElement(article));
-      });
+      
+      if (articles.length === 0) {
+        // Show no articles message
+        var noArticlesMsg = document.createElement('div');
+        noArticlesMsg.className = 'col-span-full text-center py-12';
+        noArticlesMsg.innerHTML = '<p class="font-body text-lg text-on-surface-variant">' + window.i18n.t('status.noArticlesFound', currentLang) + '</p>';
+        articlesContainer.appendChild(noArticlesMsg);
+      } else {
+        articles.forEach(function(article) {
+          articlesContainer.appendChild(createArticleElement(article));
+        });
+      }
     }
 
     var allArticles = [];
@@ -436,8 +450,16 @@ function retrieveAndDecompress(lang) {
       function switchLanguage(lang) {
         currentLang = lang;
         setLanguageCookie(lang);
+        
+        // Update UI texts
+        updateUITexts(lang);
+        translations = window.i18n.initI18n(lang);
+        
+        // Refresh news worker
         worker.postMessage({ type: 'refresh' });
         updateSwitcherUI(lang);
+        
+        // Re-render search if active
         var searchInput = document.getElementById('news-search');
         if (searchInput && searchInput.value) {
           var filtered = filterArticles(searchInput.value);
@@ -469,6 +491,128 @@ function retrieveAndDecompress(lang) {
       updateSwitcherUI(currentLang);
     }
 
+    function updateUITexts(lang) {
+      // Update document title and lang attribute
+      document.documentElement.lang = lang;
+      document.title = 'The Linux Formula — Tools, Apps, and Insights for the Open Source World';
+      
+      // Update meta description
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.content = t('meta.description', lang);
+      }
+      
+      // Update navigation
+      updateNavTexts(lang);
+      
+      // Update hero section
+      updateHeroTexts(lang);
+      
+      // Update sections
+      updateSectionTexts(lang);
+      
+      // Update expert section
+      updateExpertTexts(lang);
+      
+      // Update insights section
+      updateInsightsTexts(lang);
+      
+      // Update broadcast section
+      updateBroadcastTexts(lang);
+      
+      // Update footer
+      updateFooterTexts(lang);
+    }
+
+    function updateNavTexts(lang) {
+      // Update desktop nav items
+      var desktopNavItems = document.querySelectorAll('#nav-home, #nav-chi-sono, #nav-corsi, #nav-blog, #nav-contattami');
+      desktopNavItems.forEach(function(element) {
+        if (element.id === 'nav-home') element.textContent = window.i18n.t('nav.home', lang);
+        else if (element.id === 'nav-chi-sono') element.textContent = window.i18n.t('nav.chiSono', lang);
+        else if (element.id === 'nav-corsi') element.textContent = window.i18n.t('nav.corsi', lang);
+        else if (element.id === 'nav-blog') element.textContent = window.i18n.t('nav.blog', lang);
+        else if (element.id === 'nav-contattami') element.textContent = window.i18n.t('nav.contattami', lang);
+      });
+      
+      // Update mobile nav items (separate elements)
+      var mobileNavItems = document.querySelectorAll('#mobile-menu #nav-home, #mobile-menu #nav-chi-sono, #mobile-menu #nav-corsi, #mobile-menu #nav-blog, #mobile-menu #nav-contattami');
+      mobileNavItems.forEach(function(element) {
+        if (element.id === 'nav-home') element.textContent = window.i18n.t('nav.home', lang);
+        else if (element.id === 'nav-chi-sono') element.textContent = window.i18n.t('nav.chiSono', lang);
+        else if (element.id === 'nav-corsi') element.textContent = window.i18n.t('nav.corsi', lang);
+        else if (element.id === 'nav-blog') element.textContent = window.i18n.t('nav.blog', lang);
+        else if (element.id === 'nav-contattami') element.textContent = window.i18n.t('nav.contattami', lang);
+      });
+    }
+
+    function updateHeroTexts(lang) {
+      var scopriBtn = document.querySelector('[data-scopri-corsi]');
+      if (scopriBtn) {
+        scopriBtn.querySelector('span').textContent = window.i18n.t('hero.scopriCorsi', lang);
+      }
+      
+      var contattamiBtn = document.querySelector('[data-contattami]');
+      if (contattamiBtn) {
+        contattamiBtn.querySelector('span').textContent = window.i18n.t('hero.contattami', lang);
+      }
+    }
+
+    function updateSectionTexts(lang) {
+      var expertTitle = document.querySelector('[data-section-expert]');
+      if (expertTitle) {
+        expertTitle.textContent = window.i18n.t('sections.subjectMatterExpert', lang);
+      }
+      
+      var insightsTitle = document.querySelector('[data-section-insights]');
+      if (insightsTitle) {
+        insightsTitle.textContent = window.i18n.t('sections.latestInsights', lang);
+      }
+      
+      var broadcastTitle = document.querySelector('[data-section-broadcast]');
+      if (broadcastTitle) {
+        broadcastTitle.textContent = window.i18n.t('sections.broadcastChannel', lang);
+      }
+    }
+
+    function updateExpertTexts(lang) {
+      var experienceEl = document.querySelector('[data-expert-experience]');
+      if (experienceEl) {
+        experienceEl.textContent = window.i18n.t('expert.experience', lang);
+      }
+      
+      var specialtyEl = document.querySelector('[data-expert-specialty]');
+      if (specialtyEl) {
+        specialtyEl.textContent = window.i18n.t('expert.specialty', lang);
+      }
+      
+      var roleEl = document.querySelector('[data-expert-role]');
+      if (roleEl) {
+        roleEl.textContent = window.i18n.t('expert.roleLabel', lang);
+      }
+    }
+
+    function updateInsightsTexts(lang) {
+      var searchInput = document.getElementById('news-search');
+      if (searchInput) {
+        searchInput.placeholder = t('status.searchArticles', lang);
+      }
+    }
+
+    function updateBroadcastTexts(lang) {
+      // Update broadcast texts if needed
+    }
+
+    function updateFooterTexts(lang) {
+      var contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        var submitBtn = contactForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.textContent = window.i18n.t('footer.send', lang);
+        }
+      }
+    }
+
     setupLanguageSwitcher();
     initializeOfflineFirst();
     setupSearch();
@@ -496,7 +640,7 @@ function retrieveAndDecompress(lang) {
         // Silent fail
       });
     }
-  } // end init()
+    } // end init()
 
   // Start initialization
 })();
