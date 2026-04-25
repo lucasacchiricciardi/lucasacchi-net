@@ -202,7 +202,7 @@ function retrieveAndDecompress(lang) {
       
       var linkedinBtn = document.createElement('a');
       linkedinBtn.className = 'text-on-surface-variant hover:text-[#0077b5] transition-colors text-sm font-label';
-      linkedinBtn.href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent('https://thelinuxformula.com/') + '&title=' + encodeURIComponent(article.title);
+      linkedinBtn.href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent('https://lucasacchi.net/') + '&title=' + encodeURIComponent(article.title);
       linkedinBtn.target = '_blank';
       linkedinBtn.title = 'Share on LinkedIn';
       var linkedinIcon = document.createElement('span');
@@ -213,7 +213,7 @@ function retrieveAndDecompress(lang) {
       
       var emailBtn = document.createElement('a');
       emailBtn.className = 'text-on-surface-variant hover:text-primary transition-colors text-sm font-label';
-      emailBtn.href = 'mailto:?subject=' + encodeURIComponent(article.title) + '&body=' + encodeURIComponent(article.title + '\n\nhttps://thelinuxformula.com/');
+      emailBtn.href = 'mailto:?subject=' + encodeURIComponent(article.title) + '&body=' + encodeURIComponent(article.title + '\n\nhttps://lucasacchi.net/');
       emailBtn.title = 'Share via email';
       var emailIcon = document.createElement('span');
       emailIcon.className = 'material-symbols-outlined';
@@ -229,7 +229,7 @@ function retrieveAndDecompress(lang) {
       copyIcon.textContent = 'link';
       copyBtn.appendChild(copyIcon);
       copyBtn.addEventListener('click', function() {
-        navigator.clipboard.writeText('https://thelinuxformula.com/').then(function() {
+        navigator.clipboard.writeText('https://lucasacchi.net/').then(function() {
           copyIcon.textContent = 'check';
           setTimeout(function() { copyIcon.textContent = 'link'; }, 2000);
         });
@@ -370,7 +370,7 @@ function retrieveAndDecompress(lang) {
 
     var emailEl = document.getElementById('email-obf');
     if (emailEl) {
-      var e = 'info' + '@' + 'thelinuxformula.com';
+      var e = 'info' + '@' + 'lucasacchi.net';
       var emA = document.createElement('a');
       emA.href = 'mailto:' + e;
       emA.textContent = e;
@@ -481,7 +481,7 @@ function retrieveAndDecompress(lang) {
         var email = contactForm.querySelector('[name="email"]').value;
         var message = contactForm.querySelector('[name="message"]').value;
         var body = 'Name: ' + encodeURIComponent(name) + '\nEmail: ' + encodeURIComponent(email) + '\n\nMessage:\n' + encodeURIComponent(message);
-        window.location.href = 'mailto:info@lucasacchi.net?subject=Contact from thelinuxformula.com&body=' + body;
+        window.location.href = 'mailto:info@lucasacchi.net?subject=Contact from lucasacchi.net&body=' + body;
         var successMsg = document.getElementById('contact-success');
         if (successMsg) {
           successMsg.classList.remove('hidden');
