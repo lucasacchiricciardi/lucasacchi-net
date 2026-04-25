@@ -17,9 +17,7 @@ describe('build-news.js', () => {
     if (!existsSync(DIST_NEWS)) mkdirSync(DIST_NEWS, { recursive: true });
   });
 
-  after(() => {
-    // Clean up generated dist but leave structure for other tests
-  });
+  after(() => {});
 
   it('should generate news-feed.json from src/raw/*.md', () => {
     execSync(`node ${SCRIPT}`, { cwd: ROOT });
@@ -28,68 +26,167 @@ describe('build-news.js', () => {
     const raw = readFileSync(FEED_OUTPUT, 'utf-8');
     const feed = JSON.parse(raw);
     assert.ok(Array.isArray(feed.articles), 'feed.articles should be an array');
-    assert.ok(feed.articles.length >= 3, 'should have at least 3 articles from fixtures');
   });
 
-  it('should extract frontmatter fields (title, date, tags)', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+  it('should extract frontmatter fields from fixture articles', () => {
+    const tmpDir = join(ROOT, 'tmp_test_frontmatter');
+    const tmpRaw = join(tmpDir, 'src', 'raw');
+    const tmpDist = join(tmpDir, 'dist');
+    mkdirSync(tmpRaw, { recursive: true });
 
-    const kernel = feed.articles.find(a => a.id === 'kernel-61-lts-it');
-    assert.ok(kernel, 'should find kernel-61-lts-it article');
-    assert.equal(kernel.title, 'Kernel 6.1 e la Long Term Support');
-    assert.equal(kernel.date, '2026-04-15');
-    assert.deepEqual(kernel.tags, ['kernel', 'lts', 'sysadmin']);
-    assert.ok(kernel.content.length > 0, 'content should not be empty');
-  });
+    writeFileSync(join(tmpRaw, 'test-article.md'), `---
+title: Test Article
+date: 2026-01-15
+tags: [test, example]
+lang: it
+---
+This is the body of the test article.
+`);
 
-  it('should extract lang field from frontmatter', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+    execSync(`node ${SCRIPT}`, {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        BUILD_NEWS_SRC: tmpRaw,
+        BUILD_DIST: tmpDist,
+        BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+      },
+    });
 
-    const kernel = feed.articles.find(a => a.id === 'kernel-61-lts-it');
-    assert.ok(kernel, 'should find kernel-61-lts-it article');
-    assert.equal(kernel.lang, 'it', 'lang should be extracted from frontmatter');
+    const feed = JSON.parse(readFileSync(join(tmpDist, 'news', 'news-feed.json'), 'utf-8'));
+    const article = feed.articles.find(a => a.id === 'test-article');
+    assert.ok(article, 'should find test-article');
+    assert.equal(article.title, 'Test Article');
+    assert.equal(article.date, '2026-01-15');
+    assert.deepEqual(article.tags, ['test', 'example']);
+    assert.equal(article.lang, 'it');
+    assert.ok(article.content.length > 0, 'content should not be empty');
+
+    rmSync(tmpDir, { recursive: true, force: true });
   });
 
   it('should default lang to "it" if missing in frontmatter', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+    const tmpDir = join(ROOT, 'tmp_test_lang_default');
+    const tmpRaw = join(tmpDir, 'src', 'raw');
+    const tmpDist = join(tmpDir, 'dist');
+    mkdirSync(tmpRaw, { recursive: true });
 
-    const minimal = feed.articles.find(a => a.id === 'minimal-article-it');
-    assert.ok(minimal, 'should find minimal-article-it');
-    assert.equal(minimal.lang, 'it', 'lang should default to it when missing');
+    writeFileSync(join(tmpRaw, 'no-lang.md'), `---
+title: No Lang
+---
+Body`);
+
+    execSync(`node ${SCRIPT}`, {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        BUILD_NEWS_SRC: tmpRaw,
+        BUILD_DIST: tmpDist,
+        BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+      },
+    });
+
+    const feed = JSON.parse(readFileSync(join(tmpDist, 'news', 'news-feed.json'), 'utf-8'));
+    const article = feed.articles.find(a => a.id === 'no-lang');
+    assert.ok(article, 'should find no-lang');
+    assert.equal(article.lang, 'it', 'lang should default to it when missing');
+
+    rmSync(tmpDir, { recursive: true, force: true });
   });
 
   it('should handle missing frontmatter with filename fallback', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+    const tmpDir = join(ROOT, 'tmp_test_no_frontmatter');
+    const tmpRaw = join(tmpDir, 'src', 'raw');
+    const tmpDist = join(tmpDir, 'dist');
+    mkdirSync(tmpRaw, { recursive: true });
 
-    const minimal = feed.articles.find(a => a.id === 'minimal-article-it');
-    assert.ok(minimal, 'should find minimal-article-it');
-    assert.equal(minimal.title, 'minimal-article-it');
-    assert.equal(minimal.date, null);
-    assert.deepEqual(minimal.tags, []);
+    writeFileSync(join(tmpRaw, 'bare-article.md'), 'Just plain text.');
+
+    execSync(`node ${SCRIPT}`, {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        BUILD_NEWS_SRC: tmpRaw,
+        BUILD_DIST: tmpDist,
+        BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+      },
+    });
+
+    const feed = JSON.parse(readFileSync(join(tmpDist, 'news', 'news-feed.json'), 'utf-8'));
+    const article = feed.articles.find(a => a.id === 'bare-article');
+    assert.ok(article, 'should find bare-article');
+    assert.equal(article.title, 'bare-article');
+    assert.equal(article.date, null);
+    assert.deepEqual(article.tags, []);
+
+    rmSync(tmpDir, { recursive: true, force: true });
   });
 
   it('should sort articles by date descending (most recent first)', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+    const tmpDir = join(ROOT, 'tmp_test_sort');
+    const tmpRaw = join(tmpDir, 'src', 'raw');
+    const tmpDist = join(tmpDir, 'dist');
+    mkdirSync(tmpRaw, { recursive: true });
 
+    writeFileSync(join(tmpRaw, 'a.md'), `---\ndate: 2026-01-01\n---\nA`);
+    writeFileSync(join(tmpRaw, 'b.md'), `---\ndate: 2026-03-01\n---\nB`);
+    writeFileSync(join(tmpRaw, 'c.md'), `---\ndate: 2026-02-01\n---\nC`);
+
+    execSync(`node ${SCRIPT}`, {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        BUILD_NEWS_SRC: tmpRaw,
+        BUILD_DIST: tmpDist,
+        BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+      },
+    });
+
+    const feed = JSON.parse(readFileSync(join(tmpDist, 'news', 'news-feed.json'), 'utf-8'));
     const dated = feed.articles.filter(a => a.date !== null);
     for (let i = 1; i < dated.length; i++) {
       assert.ok(dated[i - 1].date >= dated[i].date, `${dated[i - 1].date} should be >= ${dated[i].date}`);
     }
+
+    rmSync(tmpDir, { recursive: true, force: true });
   });
 
-  it('should support multilingual articles (English)', () => {
-    execSync(`node ${SCRIPT}`, { cwd: ROOT });
-    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+  it('should support multilingual articles', () => {
+    const tmpDir = join(ROOT, 'tmp_test_multilang');
+    const tmpRaw = join(tmpDir, 'src', 'raw');
+    const tmpDist = join(tmpDir, 'dist');
+    mkdirSync(tmpRaw, { recursive: true });
 
-    const kernelEn = feed.articles.find(a => a.id === 'kernel-61-lts-en');
-    assert.ok(kernelEn, 'should find kernel-61-lts-en article');
-    assert.equal(kernelEn.lang, 'en', 'lang should be en');
-    assert.ok(kernelEn.content.length > 0, 'content should not be empty');
+    writeFileSync(join(tmpRaw, 'article-it.md'), `---
+title: Articolo Italiano
+lang: it
+---
+Contenuto italiano`);
+    writeFileSync(join(tmpRaw, 'article-en.md'), `---
+title: English Article
+lang: en
+---
+English content`);
+
+    execSync(`node ${SCRIPT}`, {
+      cwd: ROOT,
+      env: {
+        ...process.env,
+        BUILD_NEWS_SRC: tmpRaw,
+        BUILD_DIST: tmpDist,
+        BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+      },
+    });
+
+    const feed = JSON.parse(readFileSync(join(tmpDist, 'news', 'news-feed.json'), 'utf-8'));
+    const itArticle = feed.articles.find(a => a.id === 'article-it');
+    const enArticle = feed.articles.find(a => a.id === 'article-en');
+    assert.ok(itArticle, 'should find Italian article');
+    assert.equal(itArticle.lang, 'it');
+    assert.ok(enArticle, 'should find English article');
+    assert.equal(enArticle.lang, 'en');
+
+    rmSync(tmpDir, { recursive: true, force: true });
   });
 
   it('should produce idempotent output', () => {

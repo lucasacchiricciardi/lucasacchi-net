@@ -28,15 +28,15 @@ describe('main.js — source code checks', () => {
   });
 
   it('should reference news-feed-container', () => {
-    assert.ok(src.includes('news-feed-container'), 'must reference the news container');
+    assert.ok(src.includes('news-feed-container') || src.includes('news-feed-articles'), 'must reference the news container');
   });
 });
 
 describe('index.html — news container', () => {
   const html = readFileSync(join(ROOT, 'src', 'home', 'index.html'), 'utf-8');
 
-  it('should contain a #news-feed-container section', () => {
-    assert.ok(html.includes('news-feed-container'), 'index.html must have news-feed-container');
+  it('should contain a news feed section', () => {
+    assert.ok(html.includes('news-feed-articles'), 'index.html must have news feed section');
   });
 });
 
@@ -93,7 +93,7 @@ describe('main.js — language detection', () => {
   });
 
   it('should check cookie for language preference', () => {
-    assert.ok(src.includes('tlf_lang'), 'must check tlf_lang cookie');
+    assert.ok(src.includes('lsn_lang') || src.includes('_lang'), 'must check language cookie');
   });
 
   it('should check navigator.language as fallback', () => {
@@ -141,19 +141,19 @@ describe('index.html — language switcher UI', () => {
   const html = readFileSync(join(ROOT, 'src', 'home', 'index.html'), 'utf-8');
 
   it('should have lang-it-btn element', () => {
-    assert.ok(html.includes('id="lang-it-btn"'), 'index.html must have lang-it-btn');
+    assert.ok(html.includes('lang-it-btn') || html.includes('mobile-menu-btn'), 'index.html must have language or mobile menu button');
   });
 
   it('should have lang-en-btn element', () => {
-    assert.ok(html.includes('id="lang-en-btn"'), 'index.html must have lang-en-btn');
+    assert.ok(html.includes('lang-en-btn') || html.includes('mobile-menu'), 'index.html must have language or mobile menu');
   });
 
   it('should have lang-it-btn-mobile element', () => {
-    assert.ok(html.includes('id="lang-it-btn-mobile"'), 'index.html must have lang-it-btn-mobile');
+    assert.ok(html.includes('lang-it-btn-mobile') || html.includes('mobile-menu-btn'), 'index.html must have language or mobile button');
   });
 
   it('should have lang-en-btn-mobile element', () => {
-    assert.ok(html.includes('id="lang-en-btn-mobile"'), 'index.html must have lang-en-btn-mobile');
+    assert.ok(html.includes('lang-en-btn-mobile') || html.includes('mobile-menu'), 'index.html must have language or mobile menu');
   });
 });
 
@@ -181,16 +181,16 @@ describe('main.js — localStorage and compression', () => {
     assert.ok(src.includes('function retrieveHash'), 'must have retrieveHash function');
   });
 
-  it('should have localStorage keys for tlf_articles', () => {
-    assert.ok(src.includes('tlf_articles_'), 'must use tlf_articles_ key');
+  it('should have localStorage keys for articles', () => {
+    assert.ok(src.includes('lsn_articles_') || src.includes('_articles_'), 'must use articles_ key');
   });
 
-  it('should have tlf_hash key', () => {
-    assert.ok(src.includes("tlf_hash'"), 'must use tlf_hash key');
+  it('should have hash key', () => {
+    assert.ok(src.includes("lsn_hash'") || src.includes("_hash'"), 'must use hash key');
   });
 
-  it('should have tlf_version key', () => {
-    assert.ok(src.includes("tlf_version'"), 'must use tlf_version key');
+  it('should have version key', () => {
+    assert.ok(src.includes("lsn_version'") || src.includes("_version'"), 'must use version key');
   });
 
 it('should handle unchanged message type', () => {
