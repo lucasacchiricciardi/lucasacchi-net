@@ -12,7 +12,8 @@ Repository contenente il codice sorgente del sito [lucasacchi.net](https://lucas
 
 ## Demo
 
-**Live:** https://lucasacchi.net
+- **Live (custom domain):** https://lucasacchi.net
+- **GitHub Pages:** https://lucasacchiricciardi.github.io/lucasacchi-net
 
 ## Tech Stack
 
