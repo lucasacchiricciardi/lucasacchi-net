@@ -1,0 +1,21 @@
+{
+  "name": "LucaSacchi.net",
+  "short_name": "LSN",
+  "description": "L'informatica resa semplice — Corsi, formazione e consulenza",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f9fa",
+  "theme_color": "#003f87",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "technology"],
+  "lang": "it",
+  "scope": "/"
+}

@@ -1,0 +1,15 @@
+Copyright © 2024 Luca Sacchi Ricciardi. Tutti i diritti riservati (All rights reserved).
+
+È vietata la copia, la distribuzione o la modifica non autorizzata del presente software
+e della relativa documentazione, in qualsiasi forma, senza il previo consenso scritto
+dell'autore.
+
+Any unauthorized copying, distribution, or modification of this software and its
+accompanying documentation, in any form, is strictly prohibited without the prior
+written consent of the author.
+
+Per qualsiasi controversia legale derivante da o connessa al presente repository,
+il foro competente esclusivo è Milano, Italia.
+
+For any legal dispute arising from or related to this repository, the exclusive
+competent court is Milan, Italy.

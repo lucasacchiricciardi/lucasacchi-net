@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="LucaSacchi.net — L'informatica resa semplice. Corsi di Linux, JavaScript, HTML/CSS in aula e live online. Formazione professionale per principianti e sistemisti."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="LucaSacchi.net"/>
+<meta property="og:description" content="L'informatica resa semplice. Corsi di Linux, JavaScript, HTML/CSS in aula e live online."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="favicon.svg"/>
+<meta property="og:url" content="https://lucasacchi.net/"/>
+<link rel="canonical" href="https://lucasacchi.net/"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="LSN"/>
+<title>LucaSacchi.net — L'informatica resa semplice</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "LucaSacchi.net",
+  "url": "https://lucasacchi.net/",
+  "logo": "favicon.svg",
+  "description": "L'informatica resa semplice. Corsi di Linux, JavaScript, HTML/CSS in aula e live online.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Viale Bligny 13/a",
+    "addressLocality": "Milano",
+    "addressCountry": "IT"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/lucasacchi/",
+    "https://www.youtube.com/@lucasacchinet"
+  ]
+}
+</script>
+<link href="assets/tailwind.css" rel="stylesheet">
+<script src="vendor/lz-string.min.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        body {
+            background-image: 
+                linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Vai al contenuto principale</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Navigazione principale">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+<a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#chi-sono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#corsi">Corsi</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#blog">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#contatti">Contattami</a>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="#main-content">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#chi-sono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#corsi">Corsi</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#blog">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#contatti">Contattami</a>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="main-content" class="flex-grow max-w-7xl mx-auto w-full px-6 md:px-12 py-12 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16">
+
+<section class="lg:col-span-8 flex flex-col justify-center space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest w-max">
+<span class="w-2 h-2 bg-primary rounded-none"></span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Online_Academy_v1.0</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-tight text-balance">
+                L'informatica<br/>
+<span class="text-primary italic font-light">resa semplice.</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Questo è il mio motto ed il mio impegno. Amo l'informatica e insegnare è la mia passione. Corsi in aula e live online per tutti i livelli.
+            </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-8 py-4 hover:bg-primary-container transition-colors flex items-center gap-2 rounded-none" href="#corsi">
+<span>Scopri i Corsi</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="border-b-2 border-outline-variant/20 text-on-surface font-label text-sm uppercase tracking-widest px-8 py-4 hover:border-primary hover:text-primary transition-all flex items-center gap-2 rounded-none bg-surface-container-low" href="#contatti">
+<span>Contattami</span>
+</a>
+</div>
+</section>
+
+<section class="lg:col-span-4 relative hidden lg:block">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<div class="relative z-10 h-full min-h-[400px] border border-outline-variant/20 p-8 flex flex-col justify-between bg-surface-container-lowest/80 backdrop-blur-md">
+<div class="flex justify-between items-start">
+<span class="font-label text-xs text-outline">FIG. 01</span>
+<span class="material-symbols-outlined text-outline">school</span>
+</div>
+<div class="space-y-4">
+<div class="h-2 w-full bg-surface-container-highest">
+<div class="h-full bg-primary w-4/5"></div>
+</div>
+<div class="h-2 w-full bg-surface-container-highest">
+<div class="h-full bg-secondary w-3/5"></div>
+</div>
+<div class="h-2 w-full bg-surface-container-highest">
+<div class="h-full bg-outline w-2/3"></div>
+</div>
+</div>
+<div class="font-label text-[10px] text-on-surface-variant leading-tight">
+                    CORSI_EROGATI // 6 MODULI ATTIVI<br/>
+                    STUDENTI: 500+ // TASSO_SODDISFAZIONE: 98%
+                 </div>
+</div>
+</section>
+
+<section id="chi-sono" class="lg:col-span-12 mt-16 md:mt-24">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">Chi Sono</h2>
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-8">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-primary">person</span>
+</div>
+<span class="font-label text-xs text-outline">ID: LS-001</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Luca Sacchi</h3>
+<p class="font-label text-sm text-primary mb-6">Senior Systems Administrator & Docente</p>
+<div class="space-y-2">
+<div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
+<span class="font-label text-xs text-on-surface-variant">Esperienza</span>
+<span class="font-body text-sm font-medium text-on-surface">20+ Anni</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
+<span class="font-label text-xs text-on-surface-variant">Specializzazione</span>
+<span class="font-body text-sm font-medium text-on-surface text-right">Unix / Linux / Solaris</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 py-2">
+<span class="font-label text-xs text-on-surface-variant">Formazione</span>
+<span class="font-body text-sm font-medium text-on-surface text-right">ITS / IFTS</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-highest p-8 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[15rem]">architecture</span>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<span class="inline-block px-2 py-1 bg-surface text-on-surface font-label text-[10px] uppercase tracking-widest mb-6">Approccio Didattico</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4">Il 'Metodo Sacchi'</h3>
+<p class="font-body text-on-surface-variant leading-relaxed max-w-xl">
+                            Educator per ITS/IFTS, sviluppo un curriculum rigoroso e pratico per colmare il gap tra teoria accademica e gestione di infrastrutture enterprise. L'informatica resa semplice è il mio impegno: dalla base al livello avanzato.
+                        </p>
+</div>
+<div class="mt-8 flex gap-4 flex-wrap">
+<div class="bg-surface px-4 py-2 border-l-2 border-primary">
+<span class="block font-label text-[10px] text-outline mb-1">MODALITÀ_01</span>
+<span class="font-body text-sm font-medium text-on-surface">Corsi in Aula</span>
+</div>
+<div class="bg-surface px-4 py-2 border-l-2 border-secondary">
+<span class="block font-label text-[10px] text-outline mb-1">MODALITÀ_02</span>
+<span class="font-body text-sm font-medium text-on-surface">Live Online</span>
+</div>
+<div class="bg-surface px-4 py-2 border-l-2 border-outline">
+<span class="block font-label text-[10px] text-outline mb-1">MODALITÀ_03</span>
+<span class="font-body text-sm font-medium text-on-surface">Consulenza</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="corsi" class="lg:col-span-12 mt-16 md:mt-24">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">Cosa Insegno</h2>
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">meeting_room</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Corsi in Aula</h3>
+<span class="font-label text-xs text-primary uppercase tracking-widest">Modalità: Presenza</span>
+</div>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed">Dal vivo, in aula insieme per capire ed esplorare le nuove tecnologie. Interazione diretta con il docente e laboratori pratici.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-secondary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface text-2xl" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Corsi Live Online</h3>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Modalità: Remoto</span>
+</div>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed">Live online per lezioni individuali o in piccoli gruppi. La stessa qualità dell'aula, comodamente da casa tua.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Principianti</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Linux Corso Base</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Impara a muovere i primi passi sul sistema operativo Linux Debian.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">settings</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Smanettoni</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Linux Corso Intermedio</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Padroneggia il networking e la personalizzazione del sistema operativo Linux Debian.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">dns</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Sistemisti</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Linux Corso Avanzato</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Gestisci servizi di rete avanzati come WebServer, Database Server, DNS e tanto altro.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-outline text-3xl">code</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Principianti</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">JavaScript</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Imparare a programmare con JavaScript. Le basi della programmazione web moderna.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-outline text-3xl">api</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Sviluppatori Junior</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">JavaScript e NodeJS</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Creare Siti, API e Servizi Back-End con NodeJS ed i principali framework.</p>
+</div>
+<div class="bg-surface-container-low p-8 border-t-4 border-outline hover:bg-surface-container-high transition-colors group">
+<div class="flex items-start justify-between mb-6">
+<span class="material-symbols-outlined text-outline text-3xl">palette</span>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest bg-surface-container-highest px-2 py-1">Principianti</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">HTML5 / CSS3</h3>
+<p class="font-body text-sm text-on-surface-variant leading-relaxed">Crea e dai stile ai tuoi contenuti web. Le fondamenta del web development.</p>
+</div>
+</div>
+</section>
+
+<section class="lg:col-span-12 mt-16 md:mt-24">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<h2 class="font-headline text-3xl font-bold text-on-surface tracking-tight px-4">YouTube</h2>
+<div class="h-px bg-outline-variant/50 flex-grow"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Virtualizzazione</span>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Laboratorio virtuale Proxmox VE 7</h3>
+<div class="flex items-center gap-4 mt-4">
+<span class="font-label text-xs text-on-surface-variant">4051 visualizzazioni</span>
+<span class="font-label text-xs text-primary">+96 iscritti</span>
+</div>
+<div class="font-label text-xs text-outline mt-2">1h</div>
+</div>
+<div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Linux</span>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">VirtualBox installare Debian 11</h3>
+<div class="flex items-center gap-4 mt-4">
+<span class="font-label text-xs text-on-surface-variant">4582 visualizzazioni</span>
+<span class="font-label text-xs text-primary">+50 iscritti</span>
+</div>
+<div class="font-label text-xs text-outline mt-2">35min</div>
+</div>
+<div class="bg-surface-container-low p-6 border-t-4 border-error hover:bg-surface-container-high transition-colors group">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">smart_display</span>
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Virtualizzazione</span>
+</div>
+<h3 class="font-headline text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Proxmox Introduzione containers</h3>
+<div class="flex items-center gap-4 mt-4">
+<span class="font-label text-xs text-on-surface-variant">3162 visualizzazioni</span>
+<span class="font-label text-xs text-primary">+91 iscritti</span>
+</div>
+<div class="font-label text-xs text-outline mt-2">17min</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<a class="inline-flex items-center gap-2 bg-error text-on-error font-label text-sm uppercase tracking-widest px-8 py-4 hover:bg-red-700 transition-colors rounded-none" href="https://www.youtube.com/@lucasacchinet" rel="noopener noreferrer" target="_blank">
+<span>Visita il Canale YouTube</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</section>
+
+<section id="blog" class="lg:col-span-12 mt-16 md:mt-24" role="status" aria-live="polite">
+<div class="flex justify-between items-center mb-16 border-b border-outline-variant/20 pb-4">
+<h2 class="font-label text-sm uppercase tracking-widest text-on-surface-variant">Blog</h2>
+<div class="relative">
+<span class="material-symbols-outlined text-on-surface-variant text-sm absolute left-3 top-1/2 -translate-y-1/2">search</span>
+<input id="news-search" type="text" placeholder="Cerca articoli..." class="font-label text-xs pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/20 text-on-surface placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none w-48 md:w-64" aria-label="Cerca articoli"/>
+</div>
+</div>
+<div id="news-feed-articles" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div id="news-feed-skeleton" class="lg:col-span-3 animate-pulse">
+<div class="h-4 bg-surface-container-highest rounded w-3/4 mb-2"></div>
+<div class="h-3 bg-surface-container-highest rounded w-1/2 mb-4"></div>
+<div class="h-3 bg-surface-container-highest rounded w-full mb-1"></div>
+<div class="h-3 bg-surface-container-highest rounded w-5/6"></div>
+</div>
+</div>
+<noscript><p class="font-body text-sm text-on-surface-variant p-4">JavaScript è necessario per caricare il blog.</p></noscript>
+<div id="news-feed-error" class="hidden font-label text-xs uppercase tracking-widest text-error p-4 border-l-2 border-error bg-error-container"></div>
+</section>
+
+<section class="lg:col-span-12 mt-16 md:mt-24">
+<h2 class="font-label text-sm uppercase tracking-widest text-on-surface-variant mb-16 border-b border-outline-variant/20 pb-2 inline-block">Seguimi</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<a class="group bg-surface-container-low p-6 flex items-center justify-between hover:bg-primary-container transition-colors duration-300" href="https://www.linkedin.com/in/lucasacchi/" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest group-hover:bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-primary">work</span>
+</div>
+<div>
+<h4 class="font-body font-semibold text-on-surface group-hover:text-on-primary">LinkedIn</h4>
+<p class="font-label text-xs text-on-surface-variant group-hover:text-primary-fixed-dim mt-1">linkedin.com/in/lucasacchi</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-primary transform group-hover:translate-x-1 transition-all">arrow_forward</span>
+</a>
+<a class="group bg-surface-container-low p-6 flex items-center justify-between hover:bg-error-container transition-colors duration-300" href="https://www.youtube.com/@lucasacchinet" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest group-hover:bg-error flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-on-error">smart_display</span>
+</div>
+<div>
+<h4 class="font-body font-semibold text-on-surface group-hover:text-on-error-container">YouTube</h4>
+<p class="font-label text-xs text-on-surface-variant group-hover:text-on-error-container/70 mt-1">youtube.com/@lucasacchinet</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-error-container transform group-hover:translate-x-1 transition-all">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+
+<footer id="contatti" class="bg-surface-container-low text-on-surface border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<span class="font-headline font-bold text-lg block mb-4">LucaSacchi.net</span>
+<p class="font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant">
+                    L'informatica resa semplice.
+                </p>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 gap-8 font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant">
+<div>
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Coordinate</span>
+<ul class="space-y-2">
+<li>Office: Viale Bligny 13/a Milano</li>
+<li>P.IVA: IT09731490968</li>
+</ul>
+</div>
+<div>
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Contatti</span>
+<ul class="space-y-2">
+<li>Cell: <span id="phone-obf"></span></li>
+<li>Email: <span id="email-obf"></span></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2">Scrivimi</span>
+<form id="contact-form" class="space-y-3">
+<input type="text" name="name" placeholder="Nome" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none"/>
+<input type="email" name="email" placeholder="Email" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none"/>
+<textarea name="message" placeholder="Messaggio" required rows="3" class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none resize-none"></textarea>
+<button type="submit" class="bg-primary text-on-primary font-label text-xs uppercase tracking-widest px-4 py-2 hover:bg-primary-container transition-colors rounded-none w-full">Invia Messaggio</button>
+</form>
+<p id="contact-success" class="hidden text-xs text-primary mt-2">Messaggio inviato! Ti risponderò presto.</p>
+</div>
+</div>
+<div class="md:col-span-1 flex flex-col justify-between items-start md:items-end font-label text-[10px] uppercase tracking-widest text-outline">
+<span class="material-symbols-outlined text-3xl mb-4">school</span>
+<div class="text-left md:text-right">
+<p>&copy; LucaSacchi.net.</p>
+<p>Tutti i diritti riservati.</p>
+<p class="mt-2" id="copyright-years"></p>
+<p class="mt-2 text-[9px]">Analytics: anonimo, senza cookie</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="analytics.js"></script>
+<script src="main.js" defer></script>
+</body></html>

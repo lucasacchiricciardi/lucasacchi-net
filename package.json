@@ -1,0 +1,27 @@
+{
+  "name": "lucasacchi-net",
+  "version": "1.0.0",
+  "description": "Repository contenente il codice sorgente del sito [lucasacchi.net](https://lucasacchi.net).",
+  "main": "lighthouserc.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasacchiricciardi/lucasacchi-net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucasacchiricciardi/lucasacchi-net/issues"
+  },
+  "homepage": "https://github.com/lucasacchiricciardi/lucasacchi-net#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

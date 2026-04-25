@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# OpenCode
+.opencode/
+
+# IDE
+.lastsession
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright MCP logs
+.playwright-mcp/
+
+# Dev-only artifacts
+AGENTS.md
+docs/
+export/
+prompt/
+prd.md
+unresolved.md
+src/home/styles.css
