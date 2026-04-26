@@ -81,13 +81,30 @@ body {
   font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
-.video-card:hover .play-overlay {
-  opacity: 1;
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .chevron {
+  transform: rotate(180deg);
+}
+.video-thumb {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.video-thumb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 63, 135, 0.15);
+}
+.video-thumb.active {
+  border-color: #003f87;
+  box-shadow: 0 0 0 2px #003f87;
 }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Vai al contenuto principale</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest" data-i18n="meta.skipToContent">Vai al contenuto principale</a>
 
 <nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Navigazione principale">
 <div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
@@ -105,6 +122,14 @@ body {
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a id="nav-home" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/">Home</a>
+<a id="nav-video" class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/videos/">Video</a>
+<a id="nav-chi-sono" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono">Chi Sono</a>
+<a id="nav-contattami" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti">Contattami</a>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
 </nav>
 
 <main id="main-content" class="flex-grow max-w-7xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
@@ -115,404 +140,263 @@ body {
 <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface tracking-tight px-4">Video</h1>
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 </div>
-<p class="font-body text-lg text-on-surface-variant text-center max-w-2xl mx-auto mb-8">
-Tutorial, corsi e guide tecniche sul mio canale YouTube <a href="https://www.youtube.com/@lucasacchinet" class="text-primary hover:underline" target="_blank" rel="noopener">@LucaSacchiNet</a>.
+<p class="font-body text-lg text-on-surface-variant text-center max-w-2xl mx-auto mb-4">
+Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 </p>
-<div class="flex justify-center">
-<a href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener" class="bg-error text-on-error font-label text-sm uppercase tracking-widest px-6 py-3 hover:bg-red-700 transition-colors rounded-none flex items-center gap-2">
-<span class="material-symbols-outlined">smart_display</span>
-<span>Iscriviti al canale</span>
+<div class="flex justify-center gap-4">
+<a href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">
+<span class="material-symbols-outlined align-middle">smart_display</span>
+<span class="ml-1">Canale YouTube</span>
 </a>
+<span class="text-on-surface-variant">•</span>
+<span class="text-sm text-on-surface-variant">1.56K iscritti • 56 video</span>
 </div>
 </section>
 
-<section id="technical-writing" class="mb-16">
-<div class="flex items-center gap-4 mb-8">
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight px-4">Technical Writing per Sviluppatori</h2>
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<!-- Video Player -->
+<section class="mb-12">
+<div class="bg-surface-container-low border-t-4 border-primary">
+<div class="aspect-video w-full relative bg-black">
+<iframe id="video-player" class="absolute inset-0 w-full h-full" 
+  src="https://www.youtube.com/embed/?list=UUa7rXObAfuu9R64-RXmuMhg&rel=0&modestbranding=1" 
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen title="Video player">
+</iframe>
 </div>
-<p class="font-body text-on-surface-variant mb-8 max-w-2xl">Corso completo sulla documentazione tecnica: Docs as Code, Markdown, Diataxis, CI/CD, e altro.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a href="https://www.youtube.com/watch?v=Vj-DU-fjd6Y" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Vj-DU-fjd6Y/maxresdefault.jpg" alt="FormaTemp" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Vj-DU-fjd6Y/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">4:08</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">FormaTemp Sblocca la tua Carriera</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">105 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=4jE0OJKfJ9Y" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/4jE0OJKfJ9Y/maxresdefault.jpg" alt="Lezione 1" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/4jE0OJKfJ9Y/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">5:47</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 1: Il Documento come Codice (Docs as Code) & DDLC</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">58 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=jj6VOXBaTic" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/jj6VOXBaTic/maxresdefault.jpg" alt="Lezione 2" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/jj6VOXBaTic/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">8:42</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 2: Markdown e Struttura - La voce del Codice</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">35 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=E17yMUIj_7I" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/E17yMUIj_7I/maxresdefault.jpg" alt="Lezione 3" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/E17yMUIj_7I/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">7:04</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lesson 3: How to Organize Documentation - Diataxis Framework</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">31 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=Fzy9FkRzba4" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Fzy9FkRzba4/maxresdefault.jpg" alt="Lezione 4" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Fzy9FkRzba4/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">7:16</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 4: Toolchain Avanzata - Linting, Automazione e MkDocs</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">35 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=g4bf0eyF0HA" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/g4bf0eyF0HA/maxresdefault.jpg" alt="Lezione 5" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/g4bf0eyF0HA/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">5:42</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lesson 5: The Collaborative Flow - Branching, PR and Conflicts</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">22 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=Cp-kbmNgvr0" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Cp-kbmNgvr0/maxresdefault.jpg" alt="Lezione 6" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Cp-kbmNgvr0/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">8:21</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 6: Editing Tecnico e Style Guide - Le 3 C della Scrittura</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">26 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=2-rGz-EjGts" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/2-rGz-EjGts/maxresdefault.jpg" alt="Lezione 7" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/2-rGz-EjGts/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">8:08</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 7: Il Processo di Rilascio - CI/CD e GitHub Actions</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">24 views • 4 mesi fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=T_kbGnE-lQg" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-primary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/T_kbGnE-lQg/maxresdefault.jpg" alt="Lezione 8" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/T_kbGnE-lQg/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">7:08</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Lezione 8: Manutenzione e Versioning - La Documentazione come un Giardino</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">50 views • 4 mesi fa</p>
-</div>
-</a>
 </div>
 </section>
 
-<section id="proxmox" class="mb-16">
-<div class="flex items-center gap-4 mb-8">
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight px-4">Proxmox VE</h2>
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
-</div>
-<p class="font-body text-on-surface-variant mb-8 max-w-2xl">Guide complete su Proxmox Virtual Environment: containers, LXC, networking e ottimizzazione.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a href="https://www.youtube.com/watch?v=FzF9U2bxRHE" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-error hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/FzF9U2bxRHE/maxresdefault.jpg" alt="Proxmox Containers" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/FzF9U2bxRHE/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">16:52</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Proxmox 7.0: Introduzione ed uso dei containers</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">6.3K views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=kc1KrfVsP_4" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-error hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/kc1KrfVsP_4/maxresdefault.jpg" alt="Virtualswitch" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/kc1KrfVsP_4/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">12:58</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Proxmox: come creare un virtualswitch isolato</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">2.9K views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=fRrqCoIidts" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-error hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/fRrqCoIidts/maxresdefault.jpg" alt="LXC" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/fRrqCoIidts/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">19:57</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Proxmox: come importare un container linux mint (LXC) con un hack</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">1K views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=Fv4ryPyM5zA" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-error hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Fv4ryPyM5zA/maxresdefault.jpg" alt="Qemu" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Fv4ryPyM5zA/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">6:33</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Installare Qemu Guest Agent su Debian 11 in Proxmox</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">1.7K views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=YeLnBp3ZehQ" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-error hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/YeLnBp3ZehQ/maxresdefault.jpg" alt="Rete" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/YeLnBp3ZehQ/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">4:24</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Debian 11 risolvere problema riavvio rete in ProxMox</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">988 views • 4 anni fa</p>
-</div>
-</a>
-</div>
-</section>
+<!-- Video Gallery by Category -->
+<div class="space-y-4">
 
-<section id="debian" class="mb-16">
-<div class="flex items-center gap-4 mb-8">
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight px-4">Debian 11</h2>
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<!-- Technical Writing -->
+<details class="group" open>
+<summary class="flex items-center justify-between cursor-pointer bg-surface-container-low hover:bg-surface-container px-6 py-4 border-l-4 border-primary">
+<h2 class="font-headline text-xl font-bold text-on-surface">Technical Writing per Sviluppatori</h2>
+<span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
+</summary>
+<div class="bg-surface-container-container border-l-4 border-l-primary/20">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="4jE0OJKfJ9Y" data-title="Lezione 1: Docs as Code">
+<img src="https://img.youtube.com/vi/4jE0OJKfJ9Y/sddefault.jpg" alt="Lezione 1" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">1. Docs as Code</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:47</span>
 </div>
-<p class="font-body text-on-surface-variant mb-8 max-w-2xl">Tutorial su installazione, configurazione e amministrazione di Debian 11 Bullseye.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a href="https://www.youtube.com/watch?v=TzYYy8FZBW4" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/TzYYy8FZBW4/maxresdefault.jpg" alt="OpenVPN" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/TzYYy8FZBW4/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="jj6VOXBaTic" data-title="Lezione 2: Markdown">
+<img src="https://img.youtube.com/vi/jj6VOXBaTic/sddefault.jpg" alt="Lezione 2" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">2. Markdown</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">8:42</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">22:30</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="E17yMUIj_7I" data-title="Lezione 3: Diataxis">
+<img src="https://img.youtube.com/vi/E17yMUIj_7I/sddefault.jpg" alt="Lezione 3" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">3. Diataxis</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">7:04</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Debian 11: Installare OpenVPN ACCESS SERVER</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">1.5K views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="Fzy9FkRzba4" data-title="Lezione 4: Toolchain">
+<img src="https://img.youtube.com/vi/Fzy9FkRzba4/sddefault.jpg" alt="Lezione 4" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">4. Toolchain</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">7:16</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=WERGXrxEWEs" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/WERGXrxEWEs/maxresdefault.jpg" alt="Virtualbox" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/WERGXrxEWEs/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="g4bf0eyF0HA" data-title="Lezione 5: Workflow">
+<img src="https://img.youtube.com/vi/g4bf0eyF0HA/sddefault.jpg" alt="Lezione 5" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">5. Workflow</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:42</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">11:15</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="Cp-kbmNgvr0" data-title="Lezione 6: Style Guide">
+<img src="https://img.youtube.com/vi/Cp-kbmNgvr0/sddefault.jpg" alt="Lezione 6" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">6. Style Guide</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">8:21</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Virtualbox - I tipi di rete spiegati per bene</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">4.8K views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="2-rGz-EjGts" data-title="Lezione 7: CI/CD">
+<img src="https://img.youtube.com/vi/2-rGz-EjGts/sddefault.jpg" alt="Lezione 7" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">7. CI/CD</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">8:08</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=_pYufIMXbkM" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/_pYufIMXbkM/maxresdefault.jpg" alt="SSH" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/_pYufIMXbkM/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="T_kbGnE-lQg" data-title="Lezione 8: Versioning">
+<img src="https://img.youtube.com/vi/T_kbGnE-lQg/sddefault.jpg" alt="Lezione 8" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">8. Versioning</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">7:08</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">5:20</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Come installare OpenSSH Server in Debian 11</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">625 views • 4 anni fa</p>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=gg80s2XNHwM" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/gg80s2XNHwM/maxresdefault.jpg" alt="Chrome" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/gg80s2XNHwM/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">11:17</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Debian 11 - collegarsi ad un server linux da Chrome</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">595 views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=cHmDTC8ITTU" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/cHmDTC8ITTU/maxresdefault.jpg" alt="Repository" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/cHmDTC8ITTU/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">5:45</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Come abilitare i repository ufficiali in Debian 11</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">986 views • 4 anni fa</p>
-</div>
-</a>
-<a href="https://www.youtube.com/watch?v=a2Dkk9Q2pAg" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-secondary hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/a2Dkk9Q2pAg/maxresdefault.jpg" alt="CONKY" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/a2Dkk9Q2pAg/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-</div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">7:41</span>
-</div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Debian 11 Installare CONKY e tenere sotto controllo il nostro Linux</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">1.4K views • 4 anni fa</p>
-</div>
-</a>
-</div>
-</section>
+</details>
 
-<section id="linux-mint" class="mb-16">
-<div class="flex items-center gap-4 mb-8">
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
-<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight px-4">Linux Mint</h2>
-<div class="h-px bg-outline-variant/50 flex-grow"></div>
+<!-- Proxmox -->
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer bg-surface-container-low hover:bg-surface-container px-6 py-4 border-l-4 border-error">
+<h2 class="font-headline text-xl font-bold text-on-surface">Proxmox VE</h2>
+<span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
+</summary>
+<div class="bg-surface-container-container border-l-4 border-l-error/20">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="FzF9U2bxRHE" data-title="Containers">
+<img src="https://img.youtube.com/vi/FzF9U2bxRHE/sddefault.jpg" alt="Containers" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Containers</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">16:52 • 6.3K</span>
 </div>
-<p class="font-body text-on-surface-variant mb-8 max-w-2xl">Guide per Linux Mint: filesystem, web server, NFS, SSH e amministrazione.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<a href="https://www.youtube.com/watch?v=Z29144kOgrs" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Z29144kOgrs/maxresdefault.jpg" alt="Filesystem" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Z29144kOgrs/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="kc1KrfVsP_4" data-title="Virtualswitch">
+<img src="https://img.youtube.com/vi/kc1KrfVsP_4/sddefault.jpg" alt="Virtualswitch" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Virtualswitch</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">12:58 • 2.9K</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">46:18</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="fRrqCoIidts" data-title="LXC Import">
+<img src="https://img.youtube.com/vi/fRrqCoIidts/sddefault.jpg" alt="LXC" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">LXC Import</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">19:57 • 1K</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint: Filesystem e comandi per manipolare file e cartelle da terminale</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">2K views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="Fv4ryPyM5zA" data-title="Qemu Agent">
+<img src="https://img.youtube.com/vi/Fv4ryPyM5zA/sddefault.jpg" alt="Qemu" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Qemu Agent</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">6:33 • 1.7K</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=xYI0giFoiEM" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/xYI0giFoiEM/maxresdefault.jpg" alt="Webmin" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/xYI0giFoiEM/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="YeLnBp3ZehQ" data-title="Rete Proxmox">
+<img src="https://img.youtube.com/vi/YeLnBp3ZehQ/sddefault.jpg" alt="Rete" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Rete Fix</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">4:24 • 988</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">38:16</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint: amministrare Linux Mint via web con WebMin</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">778 views • 4 anni fa</p>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=Im-PhCiaXVQ" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/Im-PhCiaXVQ/maxresdefault.jpg" alt="NFS" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Im-PhCiaXVQ/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</details>
+
+<!-- Debian -->
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer bg-surface-container-low hover:bg-surface-container px-6 py-4 border-l-4 border-secondary">
+<h2 class="font-headline text-xl font-bold text-on-surface">Debian 11</h2>
+<span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
+</summary>
+<div class="bg-surface-container-container border-l-4 border-l-secondary/20">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="TzYYy8FZBW4" data-title="OpenVPN">
+<img src="https://img.youtube.com/vi/TzYYy8FZBW4/sddefault.jpg" alt="OpenVPN" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">OpenVPN</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">22:30 • 1.5K</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">24:36</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="WERGXrxEWEs" data-title="Virtualbox Rete">
+<img src="https://img.youtube.com/vi/WERGXrxEWEs/sddefault.jpg" alt="Virtualbox" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Virtualbox Rete</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:15 • 4.8K</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint 20 - Condividere le cartelle con NFS</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">1.4K views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="_pYufIMXbkM" data-title="SSH Server">
+<img src="https://img.youtube.com/vi/_pYufIMXbkM/sddefault.jpg" alt="SSH" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">SSH Server</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:20 • 625</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=uaaYaPSQxA0" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/uaaYaPSQxA0/maxresdefault.jpg" alt="SSH" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/uaaYaPSQxA0/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="gg80s2XNHwM" data-title="Chrome SSH">
+<img src="https://img.youtube.com/vi/gg80s2XNHwM/sddefault.jpg" alt="Chrome" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Chrome SSH</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:17 • 595</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">12:47</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="cHmDTC8ITTU" data-title="Repository">
+<img src="https://img.youtube.com/vi/cHmDTC8ITTU/sddefault.jpg" alt="Repo" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Repository</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:45 • 986</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint Installare SnowFlake SSH/SFTP</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">977 views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="a2Dkk9Q2pAg" data-title="CONKY">
+<img src="https://img.youtube.com/vi/a2Dkk9Q2pAg/sddefault.jpg" alt="CONKY" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">CONKY</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">7:41 • 1.4K</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=9qaYOg2Hj9M" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/9qaYOg2Hj9M/maxresdefault.jpg" alt="Update" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/9qaYOg2Hj9M/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">11:51</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint: aggiornare da 20.01/20.02 a 20.03</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">504 views • 4 anni fa</p>
+</details>
+
+<!-- Linux Mint -->
+<details class="group">
+<summary class="flex items-center justify-between cursor-pointer bg-surface-container-low hover:bg-surface-container px-6 py-4 border-l-4 border-outline">
+<h2 class="font-headline text-xl font-bold text-on-surface">Linux Mint</h2>
+<span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
+</summary>
+<div class="bg-surface-container-container border-l-4 border-l-outline/20">
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="Z29144kOgrs" data-title="Filesystem">
+<img src="https://img.youtube.com/vi/Z29144kOgrs/sddefault.jpg" alt="Filesystem" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Filesystem</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">46:18 • 2K</span>
 </div>
-</a>
-<a href="https://www.youtube.com/watch?v=2VQxnLHYjfA" target="_blank" rel="noopener" class="video-card group bg-surface-container-low border-t-4 border-outline hover:bg-surface-container-high transition-colors block relative overflow-hidden">
-<div class="aspect-video relative">
-<img src="https://img.youtube.com/vi/2VQxnLHYjfA/maxresdefault.jpg" alt="Journalctl" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://img.youtube.com/vi/2VQxnLHYjfA/sddefault.jpg'"/>
-<div class="play-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="xYI0giFoiEM" data-title="Webmin">
+<img src="https://img.youtube.com/vi/xYI0giFoiEM/sddefault.jpg" alt="Webmin" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Webmin</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">38:16 • 778</span>
 </div>
-<span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 font-label rounded-none">20:08</span>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="Im-PhCiaXVQ" data-title="NFS">
+<img src="https://img.youtube.com/vi/Im-PhCiaXVQ/sddefault.jpg" alt="NFS" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">NFS</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">24:36 • 1.4K</span>
 </div>
-<div class="p-4">
-<h3 class="font-headline text-lg font-bold text-on-surface group-hover:text-primary transition-colors line-clamp-2">Linux Mint 20 logs with journalctl and systemctl</h3>
-<p class="font-label text-xs text-on-surface-variant mt-2">471 views • 4 anni fa</p>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="uaaYaPSQxA0" data-title="SSH/SFTP">
+<img src="https://img.youtube.com/vi/uaaYaPSQxA0/sddefault.jpg" alt="SSH" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">SSH/SFTP</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">12:47 • 977</span>
 </div>
-</a>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="9qaYOg2Hj9M" data-title="Aggiornamento">
+<img src="https://img.youtube.com/vi/9qaYOg2Hj9M/sddefault.jpg" alt="Update" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Aggiornamento</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:51 • 504</span>
 </div>
-</section>
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="2VQxnLHYjfA" data-title="Journalctl">
+<img src="https://img.youtube.com/vi/2VQxnLHYjfA/sddefault.jpg" alt="Journalctl" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
+<span class="font-label text-xs text-on-surface-variant line-clamp-2">Journalctl</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">20:08 • 471</span>
+</div>
+</div>
+</div>
+</details>
+
+</div>
 
 </main>
 
 <footer class="bg-surface-container-low text-on-surface border-t border-outline-variant/20 mt-auto">
-<div class="max-w-7xl mx-auto px-6 md:px-12 py-8 text-center">
-<p class="font-label text-xs text-on-surface-variant">&copy; LucaSacchi.net. Tutti i diritti riservati.</p>
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<span class="font-headline font-bold text-lg block mb-4">LucaSacchi.net</span>
+<p class="font-body text-sm text-on-surface-variant">Personal website of Luca Sacchi.</p>
+</div>
+<div class="md:col-span-1">
+<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">Contact</span>
+<p class="font-body text-sm text-on-surface-variant">info@lucasacchi.net</p>
+<p class="font-body text-sm text-on-surface-variant">+39 3939242165</p>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a Milano</p>
+</div>
+<div class="md:col-span-1">
+<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">Links</span>
+<a href="https://www.linkedin.com/in/lucasacchi/" class="font-body text-sm text-on-surface-variant hover:text-primary block" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.youtube.com/@lucasacchinet" class="font-body text-sm text-on-surface-variant hover:text-primary block" target="_blank" rel="noopener">YouTube</a>
+</div>
+<div class="md:col-span-1">
+<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">&copy;</span>
+<p class="font-body text-xs text-on-surface-variant">© LucaSacchi.net. All rights reserved.</p>
+</div>
 </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Video player click handler
+  var thumbs = document.querySelectorAll('.video-thumb');
+  var player = document.getElementById('video-player');
+  
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var videoId = thumb.dataset.videoId;
+      
+      // Update iframe src
+      player.src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&autoplay=1';
+      
+      // Update active state
+      thumbs.forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+    });
+  });
+  
+  // Mobile menu toggle
+  var menuBtn = document.getElementById('mobile-menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+});
+</script>
 </body></html>
