@@ -42,14 +42,17 @@ if (document.readyState === 'loading') {
 
     var currentLang = getPreferredLanguage();
 
-    function getPreferredLanguage() {
-      var langCookie = document.cookie.split('; ').find(function(row) { return row.startsWith('lsn_lang='); })?.split('=')[1];
-      if (langCookie) return langCookie;
-      var browserLang = navigator.language || navigator.userLanguage;
-      if (browserLang.startsWith('it')) return 'it';
-      if (browserLang.startsWith('en')) return 'en';
-      return 'it';
-    }
+     function getPreferredLanguage() {
+       var cookieRow = document.cookie.split('; ').find(function(row) { return row.startsWith('lsn_lang='); });
+       if (cookieRow) {
+         var langCookie = cookieRow.split('=')[1];
+         if (langCookie) return langCookie;
+       }
+       var browserLang = navigator.language || navigator.userLanguage;
+       if (browserLang && browserLang.startsWith('it')) return 'it';
+       if (browserLang && browserLang.startsWith('en')) return 'en';
+       return 'it';
+     }
 
     // Initialize i18n
     var translations = window.i18n.initI18n(currentLang);
