@@ -8,12 +8,22 @@ if (document.readyState === 'loading') {
   init();
 }
     
-    function init() {
-    // Global error handlers for production
-    window.onerror = function(message, source, lineno, colno, error) {
-      showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
-      return false;
-    };
+     function init() {
+     // Check if secret.json exists (WIP mode)
+     fetch('secret.json').then(function(r) {
+       if (r.ok) {
+         var modal = document.getElementById('tlf-auth-modal');
+         if (modal) modal.classList.remove('hidden');
+       }
+     }).catch(function() {
+       // secret.json not found - hide modal (production mode)
+     });
+
+     // Global error handlers for production
+     window.onerror = function(message, source, lineno, colno, error) {
+       showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
+       return false;
+     };
 
     window.onunhandledrejection = function(event) {
       showError(window.i18n.t('meta.genericError', currentLang, 'An error occurred. Please refresh the page.'));
