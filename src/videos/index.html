@@ -94,17 +94,64 @@ details[open] .chevron {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .video-thumb:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 63, 135, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 63, 135, 0.2);
 }
 .video-thumb.active {
-  border-color: #003f87;
+  border-color: #003f87 !important;
   box-shadow: 0 0 0 2px #003f87;
+}
+/* Modal styles */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
+.video-modal.open {
+  display: flex;
+}
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.video-modal-close {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.video-modal-close:hover {
+  background: rgba(255,255,255,0.2);
+}
+.video-modal-title {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  color: white;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 1rem;
 }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest" data-i18n="meta.skipToContent">Vai al contenuto principale</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Vai al contenuto principale</a>
 
 <nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Navigazione principale">
 <div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
@@ -113,60 +160,38 @@ details[open] .chevron {
   <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
 </div>
 <div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
-<a id="nav-home" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors" href="/" data-i18n="nav.home">Home</a>
-<a id="nav-video" class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/videos/" data-i18n="nav.videos">Video</a>
-<a id="nav-chi-sono" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
-<a id="nav-contattami" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors" href="/">Home</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/videos/">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti">Contattami</a>
 </div>
-<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Menu">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
-</div>
 <div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
-<a id="nav-home" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/">Home</a>
-<a id="nav-video" class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/videos/">Video</a>
-<a id="nav-chi-sono" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono">Chi Sono</a>
-<a id="nav-contattami" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti">Contattami</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary py-2" href="/">Home</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider" href="/videos/">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary py-2" href="/#chi-sono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary py-2" href="/#contatti">Contattami</a>
 </div>
 <div class="h-px w-full bg-outline-variant/20"></div>
 </nav>
 
 <main id="main-content" class="flex-grow max-w-7xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
 
-<section class="mb-16">
-<div class="flex items-center gap-4 mb-8">
+<section class="mb-12">
+<div class="flex items-center gap-4 mb-6">
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface tracking-tight px-4">Video</h1>
 <div class="h-px bg-outline-variant/50 flex-grow"></div>
 </div>
-<p class="font-body text-lg text-on-surface-variant text-center max-w-2xl mx-auto mb-4">
-Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
+<p class="font-body text-lg text-on-surface-variant text-center max-w-2xl mx-auto">
+Clicca su una scheda per aprire il video nel player.
 </p>
-<div class="flex justify-center gap-4">
-<a href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener" class="text-primary hover:underline text-sm">
-<span class="material-symbols-outlined align-middle">smart_display</span>
-<span class="ml-1">Canale YouTube</span>
-</a>
-<span class="text-on-surface-variant">•</span>
-<span class="text-sm text-on-surface-variant">1.56K iscritti • 56 video</span>
-</div>
 </section>
 
-<!-- Video Player -->
-<section class="mb-12">
-<div class="bg-surface-container-low border-t-4 border-primary">
-<div class="aspect-video w-full relative bg-black">
-<iframe id="video-player" class="absolute inset-0 w-full h-full" 
-  src="https://www.youtube.com/embed/?list=UUa7rXObAfuu9R64-RXmuMhg&rel=0&modestbranding=1" 
-  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen title="Video player">
-</iframe>
-</div>
-</div>
-</section>
-
-<!-- Video Gallery by Category -->
+<!-- Video Gallery -->
 <div class="space-y-4">
 
 <!-- Technical Writing -->
@@ -175,29 +200,29 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 <h2 class="font-headline text-xl font-bold text-on-surface">Technical Writing per Sviluppatori</h2>
 <span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
 </summary>
-<div class="bg-surface-container-container border-l-4 border-l-primary/20">
+<div class="bg-surface-container border-l-4 border-l-primary/20">
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="4jE0OJKfJ9Y" data-title="Lezione 1: Docs as Code">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="4jE0OJKfJ9Y" data-title="Lezione 1: Docs as Code & DDLC">
 <img src="https://img.youtube.com/vi/4jE0OJKfJ9Y/sddefault.jpg" alt="Lezione 1" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">1. Docs as Code</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">5:47</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="jj6VOXBaTic" data-title="Lezione 2: Markdown">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="jj6VOXBaTic" data-title="Lezione 2: Markdown e Struttura">
 <img src="https://img.youtube.com/vi/jj6VOXBaTic/sddefault.jpg" alt="Lezione 2" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">2. Markdown</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">8:42</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="E17yMUIj_7I" data-title="Lezione 3: Diataxis">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="E17yMUIj_7I" data-title="Lezione 3: Diataxis Framework">
 <img src="https://img.youtube.com/vi/E17yMUIj_7I/sddefault.jpg" alt="Lezione 3" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">3. Diataxis</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">7:04</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="Fzy9FkRzba4" data-title="Lezione 4: Toolchain">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="Fzy9FkRzba4" data-title="Lezione 4: Toolchain Avanzata">
 <img src="https://img.youtube.com/vi/Fzy9FkRzba4/sddefault.jpg" alt="Lezione 4" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">4. Toolchain</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">7:16</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="g4bf0eyF0HA" data-title="Lezione 5: Workflow">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="g4bf0eyF0HA" data-title="Lezione 5: Collaborative Flow">
 <img src="https://img.youtube.com/vi/g4bf0eyF0HA/sddefault.jpg" alt="Lezione 5" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">5. Workflow</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">5:42</span>
@@ -207,7 +232,7 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">6. Style Guide</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">8:21</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="2-rGz-EjGts" data-title="Lezione 7: CI/CD">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-primary bg-surface-container-low p-2" data-video-id="2-rGz-EjGts" data-title="Lezione 7: CI/CD e GitHub Actions">
 <img src="https://img.youtube.com/vi/2-rGz-EjGts/sddefault.jpg" alt="Lezione 7" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">7. CI/CD</span>
 <span class="font-label text-[10px] text-on-surface-variant/70">8:08</span>
@@ -227,32 +252,32 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 <h2 class="font-headline text-xl font-bold text-on-surface">Proxmox VE</h2>
 <span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
 </summary>
-<div class="bg-surface-container-container border-l-4 border-l-error/20">
+<div class="bg-surface-container border-l-4 border-l-error/20">
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="FzF9U2bxRHE" data-title="Containers">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="FzF9U2bxRHE" data-title="Proxmox: Containers">
 <img src="https://img.youtube.com/vi/FzF9U2bxRHE/sddefault.jpg" alt="Containers" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Containers</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">16:52 • 6.3K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">16:52</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="kc1KrfVsP_4" data-title="Virtualswitch">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="kc1KrfVsP_4" data-title="Proxmox: Virtualswitch">
 <img src="https://img.youtube.com/vi/kc1KrfVsP_4/sddefault.jpg" alt="Virtualswitch" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Virtualswitch</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">12:58 • 2.9K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">12:58</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="fRrqCoIidts" data-title="LXC Import">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="fRrqCoIidts" data-title="Proxmox: LXC Import">
 <img src="https://img.youtube.com/vi/fRrqCoIidts/sddefault.jpg" alt="LXC" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">LXC Import</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">19:57 • 1K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">19:57</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="Fv4ryPyM5zA" data-title="Qemu Agent">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="Fv4ryPyM5zA" data-title="Qemu Guest Agent">
 <img src="https://img.youtube.com/vi/Fv4ryPyM5zA/sddefault.jpg" alt="Qemu" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Qemu Agent</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">6:33 • 1.7K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">6:33</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="YeLnBp3ZehQ" data-title="Rete Proxmox">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-error bg-surface-container-low p-2" data-video-id="YeLnBp3ZehQ" data-title="Rete Proxmox Fix">
 <img src="https://img.youtube.com/vi/YeLnBp3ZehQ/sddefault.jpg" alt="Rete" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Rete Fix</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">4:24 • 988</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">4:24</span>
 </div>
 </div>
 </div>
@@ -264,37 +289,37 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 <h2 class="font-headline text-xl font-bold text-on-surface">Debian 11</h2>
 <span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
 </summary>
-<div class="bg-surface-container-container border-l-4 border-l-secondary/20">
+<div class="bg-surface-container border-l-4 border-l-secondary/20">
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="TzYYy8FZBW4" data-title="OpenVPN">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="TzYYy8FZBW4" data-title="OpenVPN Access Server">
 <img src="https://img.youtube.com/vi/TzYYy8FZBW4/sddefault.jpg" alt="OpenVPN" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">OpenVPN</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">22:30 • 1.5K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">22:30</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="WERGXrxEWEs" data-title="Virtualbox Rete">
 <img src="https://img.youtube.com/vi/WERGXrxEWEs/sddefault.jpg" alt="Virtualbox" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Virtualbox Rete</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">11:15 • 4.8K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:15</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="_pYufIMXbkM" data-title="SSH Server">
 <img src="https://img.youtube.com/vi/_pYufIMXbkM/sddefault.jpg" alt="SSH" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">SSH Server</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">5:20 • 625</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:20</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="gg80s2XNHwM" data-title="Chrome SSH">
 <img src="https://img.youtube.com/vi/gg80s2XNHwM/sddefault.jpg" alt="Chrome" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Chrome SSH</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">11:17 • 595</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:17</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="cHmDTC8ITTU" data-title="Repository">
 <img src="https://img.youtube.com/vi/cHmDTC8ITTU/sddefault.jpg" alt="Repo" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Repository</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">5:45 • 986</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">5:45</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-secondary bg-surface-container-low p-2" data-video-id="a2Dkk9Q2pAg" data-title="CONKY">
 <img src="https://img.youtube.com/vi/a2Dkk9Q2pAg/sddefault.jpg" alt="CONKY" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">CONKY</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">7:41 • 1.4K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">7:41</span>
 </div>
 </div>
 </div>
@@ -306,37 +331,37 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 <h2 class="font-headline text-xl font-bold text-on-surface">Linux Mint</h2>
 <span class="material-symbols-outlined chevron text-on-surface-variant transition-transform">expand_more</span>
 </summary>
-<div class="bg-surface-container-container border-l-4 border-l-outline/20">
+<div class="bg-surface-container border-l-4 border-l-outline/20">
 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="Z29144kOgrs" data-title="Filesystem">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="Z29144kOgrs" data-title="Filesystem e Comandi">
 <img src="https://img.youtube.com/vi/Z29144kOgrs/sddefault.jpg" alt="Filesystem" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Filesystem</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">46:18 • 2K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">46:18</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="xYI0giFoiEM" data-title="Webmin">
 <img src="https://img.youtube.com/vi/xYI0giFoiEM/sddefault.jpg" alt="Webmin" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Webmin</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">38:16 • 778</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">38:16</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="Im-PhCiaXVQ" data-title="NFS">
 <img src="https://img.youtube.com/vi/Im-PhCiaXVQ/sddefault.jpg" alt="NFS" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">NFS</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">24:36 • 1.4K</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">24:36</span>
 </div>
-<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="uaaYaPSQxA0" data-title="SSH/SFTP">
+<div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="uaaYaPSQxA0" data-title="SSH/SFTP SnowFlake">
 <img src="https://img.youtube.com/vi/uaaYaPSQxA0/sddefault.jpg" alt="SSH" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">SSH/SFTP</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">12:47 • 977</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">12:47</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="9qaYOg2Hj9M" data-title="Aggiornamento">
 <img src="https://img.youtube.com/vi/9qaYOg2Hj9M/sddefault.jpg" alt="Update" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Aggiornamento</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">11:51 • 504</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">11:51</span>
 </div>
 <div class="video-thumb cursor-pointer border-l-4 border-transparent hover:border-outline bg-surface-container-low p-2" data-video-id="2VQxnLHYjfA" data-title="Journalctl">
 <img src="https://img.youtube.com/vi/2VQxnLHYjfA/sddefault.jpg" alt="Journalctl" class="w-full aspect-video object-cover mb-2" loading="lazy" onerror="this.src='https://placehold.co/320x180/003f87/fff?text=Video'"/>
 <span class="font-label text-xs text-on-surface-variant line-clamp-2">Journalctl</span>
-<span class="font-label text-[10px] text-on-surface-variant/70">20:08 • 471</span>
+<span class="font-label text-[10px] text-on-surface-variant/70">20:08</span>
 </div>
 </div>
 </div>
@@ -346,47 +371,77 @@ Tutorial, corsi e guide tecniche. Clicca su una scheda per riprodurre il video.
 
 </main>
 
+<!-- Video Modal -->
+<div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+<div class="video-modal-content">
+<button class="video-modal-close" aria-label="Chiudi player">
+<span class="material-symbols-outlined">close</span>
+</button>
+<iframe id="modal-iframe" class="w-full h-full" 
+  src="" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+  allowfullscreen>
+</iframe>
+<span id="modal-title" class="video-modal-title"></span>
+</div>
+</div>
+
 <footer class="bg-surface-container-low text-on-surface border-t border-outline-variant/20 mt-auto">
-<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="md:col-span-1">
-<span class="font-headline font-bold text-lg block mb-4">LucaSacchi.net</span>
-<p class="font-body text-sm text-on-surface-variant">Personal website of Luca Sacchi.</p>
-</div>
-<div class="md:col-span-1">
-<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">Contact</span>
-<p class="font-body text-sm text-on-surface-variant">info@lucasacchi.net</p>
-<p class="font-body text-sm text-on-surface-variant">+39 3939242165</p>
-<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a Milano</p>
-</div>
-<div class="md:col-span-1">
-<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">Links</span>
-<a href="https://www.linkedin.com/in/lucasacchi/" class="font-body text-sm text-on-surface-variant hover:text-primary block" target="_blank" rel="noopener">LinkedIn</a>
-<a href="https://www.youtube.com/@lucasacchinet" class="font-body text-sm text-on-surface-variant hover:text-primary block" target="_blank" rel="noopener">YouTube</a>
-</div>
-<div class="md:col-span-1">
-<span class="font-label font-bold text-xs uppercase tracking-widest text-on-surface-variant block mb-2">&copy;</span>
-<p class="font-body text-xs text-on-surface-variant">© LucaSacchi.net. All rights reserved.</p>
-</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-8 text-center">
+<p class="font-label text-xs text-on-surface-variant">© LucaSacchi.net. Tutti i diritti riservati.</p>
 </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Video player click handler
+  var modal = document.getElementById('video-modal');
+  var iframe = document.getElementById('modal-iframe');
+  var modalTitle = document.getElementById('modal-title');
+  var closeBtn = document.querySelector('.video-modal-close');
   var thumbs = document.querySelectorAll('.video-thumb');
-  var player = document.getElementById('video-player');
   
+  // Open modal on thumbnail click
   thumbs.forEach(function(thumb) {
     thumb.addEventListener('click', function() {
       var videoId = thumb.dataset.videoId;
+      var title = thumb.dataset.title;
       
-      // Update iframe src
-      player.src = 'https://www.youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&autoplay=1';
+      // Set video URL with autoplay
+      iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&modestbranding=1';
+      modalTitle.textContent = title;
       
-      // Update active state
-      thumbs.forEach(function(t) { t.classList.remove('active'); });
-      thumb.classList.add('active');
+      // Show modal
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      
+      // Focus close button for accessibility
+      closeBtn.focus();
     });
+  });
+  
+  // Close modal functions
+  function closeModal() {
+    modal.classList.remove('open');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+  
+  // Close button click
+  closeBtn.addEventListener('click', closeModal);
+  
+  // Click outside to close
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // Escape key to close
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
   });
   
   // Mobile menu toggle

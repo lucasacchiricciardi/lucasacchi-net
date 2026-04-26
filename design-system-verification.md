@@ -1,0 +1,239 @@
+- generic [ref=e1]:
+  - link "Vai al contenuto principale" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Navigazione principale" [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: terminal
+        - link "The Linux Formula" [ref=e7] [cursor=pointer]:
+          - /url: /
+      - generic [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: "#main-content"
+        - link "Chi Sono" [ref=e10] [cursor=pointer]:
+          - /url: "#chi-sono"
+        - link "Corsi" [ref=e11] [cursor=pointer]:
+          - /url: "#corsi"
+        - link "Blog" [ref=e12] [cursor=pointer]:
+          - /url: "#blog"
+        - link "Contattami" [ref=e13] [cursor=pointer]:
+          - /url: "#contatti"
+        - button "Italiano" [active] [ref=e14] [cursor=pointer]: 🇮🇹
+        - button "English" [ref=e15] [cursor=pointer]: 🇬🇧
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e21]: SysAdmin_Protocol_v2.4
+      - 'heading "The Linux Formula: Tools, Apps, and Insights." [level=1] [ref=e22]':
+        - text: "The Linux Formula:"
+        - text: Tools, Apps, and Insights.
+      - paragraph [ref=e23]: A rigorous, methodical approach to system administration. Moving beyond generic tutorials to deliver architect-level blueprints for robust, scalable infrastructure.
+      - generic [ref=e24]:
+        - link "Scopri i Corsi arrow_forward" [ref=e25] [cursor=pointer]:
+          - /url: "#corsi"
+          - generic [ref=e26]: Scopri i Corsi
+          - generic [ref=e27]: arrow_forward
+        - link "Contattami" [ref=e28] [cursor=pointer]:
+          - /url: "#contatti"
+          - generic [ref=e29]: Contattami
+    - generic [ref=e30]:
+      - heading "Subject Matter Expert" [level=2] [ref=e33]
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e39]: person
+            - generic [ref=e40]: "ID: LS-001"
+          - heading "Luca Sacchi" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Senior Systems Administrator
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - generic [ref=e45]: Experience
+              - generic [ref=e46]: 20+ Years
+            - generic [ref=e47]:
+              - generic [ref=e48]: Specialty
+              - generic [ref=e49]: Unix / Linux / Solaris
+            - generic [ref=e50]:
+              - generic [ref=e51]: Role
+              - generic [ref=e52]: Architect
+        - generic [ref=e53]:
+          - generic:
+            - generic: architecture
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Pedagogical Framework
+              - heading "The 'Metodo Sacchi'" [level=3] [ref=e57]
+              - paragraph [ref=e58]: Educator for ITS/IFTS programs, developing a rigorous, practically-grounded curriculum designed to bridge the gap between academic theory and high-stakes enterprise infrastructure management.
+            - generic [ref=e59]:
+              - generic [ref=e60]:
+                - generic [ref=e61]: MODULE_01
+                - text: Systems Architecture
+              - generic [ref=e62]:
+                - generic [ref=e63]: MODULE_02
+                - text: Network Security
+    - generic [ref=e64]:
+      - heading "Latest Insights" [level=2] [ref=e67]
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e73]: dns
+            - generic [ref=e74]:
+              - heading "Systems Architecture" [level=3] [ref=e75]
+              - text: Infrastructure Focus
+          - paragraph [ref=e76]: Deep dives into enterprise Linux infrastructure. From kernel tuning to cluster design—architect-level blueprints.
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e80]: security
+            - generic [ref=e81]:
+              - heading "Network Security" [level=3] [ref=e82]
+              - text: Security Focus
+          - paragraph [ref=e83]: Firewall, IDS/IPS, SELinux, and zero-trust architectures. Hardening production systems with proven patterns.
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e87]: dns
+            - generic [ref=e88]: Infrastructure
+          - heading "Linux Kernel Tuning" [level=3] [ref=e89]
+          - paragraph [ref=e90]: Deep dive into sysctl, kernel parameters, and performance profiling for production systems.
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: storage
+            - generic [ref=e94]: Storage
+          - heading "LVM & RAID Architecture" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Enterprise storage design with LVM, RAID levels, and filesystem selection for critical workloads.
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]: cloud
+            - generic [ref=e100]: Virtualization
+          - heading "Proxmox VE & Containers" [level=3] [ref=e101]
+          - paragraph [ref=e102]: Container orchestration, VM management, and clustering for high-availability infrastructure.
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105]: security
+            - generic [ref=e106]: Security
+          - heading "SELinux & AppArmor" [level=3] [ref=e107]
+          - paragraph [ref=e108]: Mandatory access control systems. From disabled to strict—production-hardened policies.
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: router
+            - generic [ref=e112]: Networking
+          - heading "BGP & High Availability" [level=3] [ref=e113]
+          - paragraph [ref=e114]: Border Gateway Protocol, VRRP, and load balancing for resilient network architectures.
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: code
+            - generic [ref=e118]: Automation
+          - heading "Ansible & Bash Scripting" [level=3] [ref=e119]
+          - paragraph [ref=e120]: Infrastructure as Code. Playbooks and scripts for repeatable, auditable deployments.
+    - generic [ref=e121]:
+      - heading "Broadcast Channel" [level=2] [ref=e124]
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - generic [ref=e129]: memory
+            - generic [ref=e130]: Infrastructure
+          - heading "Proxmox VE Architecture Deep Dive" [level=3] [ref=e131]
+          - generic [ref=e132]:
+            - generic [ref=e133]: 4051 views
+            - generic [ref=e134]: +96 subscribers
+          - generic [ref=e135]: 1h
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]: terminal
+            - generic [ref=e139]: Linux
+          - heading "Debian System Administration" [level=3] [ref=e140]
+          - generic [ref=e141]:
+            - generic [ref=e142]: 4582 views
+            - generic [ref=e143]: +50 subscribers
+          - generic [ref=e144]: 35min
+        - generic [ref=e145]:
+          - generic [ref=e146]:
+            - generic [ref=e147]: cloud
+            - generic [ref=e148]: Virtualization
+          - heading "LXC Containers Deep Dive" [level=3] [ref=e149]
+          - generic [ref=e150]:
+            - generic [ref=e151]: 3162 views
+            - generic [ref=e152]: +91 subscribers
+          - generic [ref=e153]: 17min
+      - link "Explore Broadcast Channel arrow_forward" [ref=e155] [cursor=pointer]:
+        - /url: https://www.youtube.com/@lucasacchinet
+        - generic [ref=e156]: Explore Broadcast Channel
+        - generic [ref=e157]: arrow_forward
+    - status [ref=e158]:
+      - generic [ref=e159]:
+        - heading "Insights Feed" [level=2] [ref=e160]
+        - generic [ref=e161]:
+          - generic [ref=e162]: search
+          - textbox "Search articles" [ref=e163]:
+            - /placeholder: Search articles...
+      - article [ref=e218]:
+        - heading "The Linux Formula — Il mio blog personale a tema Linux" [level=3] [ref=e219]
+        - text: 2026-04-25
+        - generic [ref=e220]:
+          - generic [ref=e221]: linux
+          - generic [ref=e222]: blog
+          - generic [ref=e223]: thelinuxformula
+          - generic [ref=e224]: open-source
+        - paragraph [ref=e225]: Ho lanciato The Linux Formula, il mio blog personale dedicato al mondo Linux e all'open source. Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme Unix, Linux e Solaris, ho sentito la necessità di creare uno spazio dove condividere conoscenze, insight e best practice con la community. Cosa troverai su...
+        - generic [ref=e226]:
+          - link "work" [ref=e227] [cursor=pointer]:
+            - /url: https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flucasacchi.net%2F&title=The%20Linux%20Formula%20%E2%80%94%20Il%20mio%20blog%20personale%20a%20tema%20Linux
+            - generic [ref=e228]: work
+          - link "mail" [ref=e229] [cursor=pointer]:
+            - /url: mailto:?subject=The%20Linux%20Formula%20%E2%80%94%20Il%20mio%20blog%20personale%20a%20tema%20Linux&body=The%20Linux%20Formula%20%E2%80%94%20Il%20mio%20blog%20personale%20a%20tema%20Linux%0A%0Ahttps%3A%2F%2Flucasacchi.net%2F
+            - generic [ref=e230]: mail
+          - button "link" [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]: link
+    - generic [ref=e164]:
+      - heading "External Vectors" [level=2] [ref=e165]
+      - generic [ref=e166]:
+        - link "work LinkedIn linkedin.com/in/lucasacchi arrow_forward" [ref=e167] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/lucasacchi/
+          - generic [ref=e168]:
+            - generic [ref=e170]: work
+            - generic [ref=e171]:
+              - heading "LinkedIn" [level=4] [ref=e172]
+              - paragraph [ref=e173]: linkedin.com/in/lucasacchi
+          - generic [ref=e174]: arrow_forward
+        - link "smart_display YouTube youtube.com/@lucasacchinet arrow_forward" [ref=e175] [cursor=pointer]:
+          - /url: https://www.youtube.com/@lucasacchinet
+          - generic [ref=e176]:
+            - generic [ref=e178]: smart_display
+            - generic [ref=e179]:
+              - heading "YouTube" [level=4] [ref=e180]
+              - paragraph [ref=e181]: youtube.com/@lucasacchinet
+          - generic [ref=e182]: arrow_forward
+  - contentinfo [ref=e183]:
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - generic [ref=e186]: The Linux Formula
+        - paragraph [ref=e187]: Architectural-grade insights for enterprise Linux systems.
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]: Coordinates
+          - list [ref=e191]:
+            - listitem [ref=e192]: "Office: Viale Bligny 13/a Milano"
+            - listitem [ref=e193]: "P.IVA: IT09731490968"
+        - generic [ref=e194]:
+          - generic [ref=e195]: Comm_Links
+          - list [ref=e196]:
+            - listitem [ref=e197]:
+              - text: "Cell:"
+              - link "+39 3939242165" [ref=e199] [cursor=pointer]:
+                - /url: tel:+39 3939242165
+            - listitem [ref=e200]:
+              - text: "Email:"
+              - link "info@lucasacchi.net" [ref=e202] [cursor=pointer]:
+                - /url: mailto:info@lucasacchi.net
+        - generic [ref=e203]:
+          - generic [ref=e204]: Contact
+          - generic [ref=e205]:
+            - textbox "Name" [ref=e206]
+            - textbox "Email" [ref=e207]
+            - textbox "Message" [ref=e208]
+            - button "Send Message" [ref=e209] [cursor=pointer]
+      - generic [ref=e210]:
+        - generic [ref=e211]: terminal
+        - generic [ref=e212]:
+          - paragraph [ref=e213]: © The Linux Formula.
+          - paragraph [ref=e214]: All Rights Reserved.
+          - paragraph [ref=e215]: 2023 - 2026
+          - paragraph [ref=e216]: "Analytics: anonymous, cookie-free"
