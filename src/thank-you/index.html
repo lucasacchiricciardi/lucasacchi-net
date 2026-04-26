@@ -71,6 +71,10 @@ tailwind.config = {
         <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
         <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
       </div>
+      <div class="flex gap-2">
+        <button id="lang-it-btn" class="border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+        <button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+      </div>
     </div>
   </nav>
 
@@ -147,9 +151,49 @@ tailwind.config = {
       if (text) el.placeholder = text;
     });
 
-     document.title = window.i18n.t('thankYou.pageTitle', currentLang, 'Thank You — LucaSacchi.net');
-   }
-})();
+      document.title = window.i18n.t('thankYou.pageTitle', currentLang, 'Thank You — LucaSacchi.net');
+      
+      // Language switching
+      function setLanguageCookie(lang) {
+        document.cookie = 'lsn_lang=' + lang + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+      }
+      
+      function updateLanguageUI(lang) {
+        var itBtn = document.getElementById('lang-it-btn');
+        var enBtn = document.getElementById('lang-en-btn');
+        if (itBtn) {
+          itBtn.classList.toggle('border-primary', lang === 'it');
+          itBtn.classList.toggle('border-outline-variant/20', lang !== 'it');
+        }
+        if (enBtn) {
+          enBtn.classList.toggle('border-primary', lang === 'en');
+          enBtn.classList.toggle('border-outline-variant/20', lang !== 'en');
+        }
+      }
+      
+      function switchLanguage(lang) {
+        currentLang = lang;
+        setLanguageCookie(lang);
+        updateLanguageUI(lang);
+        window.i18n.initI18n(lang);
+        
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          var text = window.i18n.t(key, lang);
+          if (text) el.textContent = text;
+        });
+        
+        document.title = window.i18n.t('thankYou.pageTitle', lang, 'Thank You — LucaSacchi.net');
+      }
+      
+      updateLanguageUI(currentLang);
+      
+      var itBtn = document.getElementById('lang-it-btn');
+      var enBtn = document.getElementById('lang-en-btn');
+      if (itBtn) itBtn.addEventListener('click', function() { if (currentLang !== 'it') switchLanguage('it'); });
+      if (enBtn) enBtn.addEventListener('click', function() { if (currentLang !== 'en') switchLanguage('en'); });
+    }
+  })();
 </script>
 <script type="text/javascript">
 (function (w,d) {
