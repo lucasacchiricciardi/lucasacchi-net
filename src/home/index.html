@@ -677,7 +677,7 @@ body.tlf-auth-required #tlf-auth-overlay {
     lockSite();
 
     try {
-      const response = await fetch('secret.json?v=' + Date.now());
+      const response = await fetch('secret.json?v=' + Date.now(), {cache: 'no-store'}).catch(function() { return {ok: false}; });
       if (response.ok) {
         const data = await response.json();
         authForm.addEventListener('submit', function(e) {

@@ -9,15 +9,8 @@ if (document.readyState === 'loading') {
 }
     
      function init() {
-     // Check if secret.json exists (WIP mode)
-     fetch('secret.json').then(function(r) {
-       if (r.ok) {
-         var modal = document.getElementById('tlf-auth-modal');
-         if (modal) modal.classList.remove('hidden');
-       }
-     }).catch(function() {
-       // secret.json not found - hide modal (production mode)
-     });
+     // Auth gate is handled by inline script in index.html (secret.json fetch)
+     // No duplicate fetch here — avoids double 404 in console
 
      // Global error handlers for production
      window.onerror = function(message, source, lineno, colno, error) {
