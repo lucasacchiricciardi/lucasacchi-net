@@ -111,33 +111,43 @@
             font-feature-settings: 'liga';
             -webkit-font-smoothing: antialiased;
         }
-        body.tlf-auth-required {
-            opacity: 0;
-        }
-        body.tlf-auth-required #tlf-auth-overlay {
-            opacity: 1;
-        }
-        .tlf-auth-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        .tlf-auth-modal {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.25rem;
-            text-align: center;
-            font-family: Inter, sans-serif;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            min-width: 320px;
-        }
+body.tlf-auth-required {
+    overflow: hidden;
+    background: #111827 !important;
+}
+body.tlf-auth-required > :not(#tlf-auth-overlay) {
+    display: none !important;
+}
+body.tlf-auth-required #tlf-auth-overlay {
+    display: flex !important;
+    visibility: visible;
+    pointer-events: auto;
+}
+.tlf-auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 24, 39, 0.82);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.tlf-auth-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    min-width: 320px;
+    border: 1px solid rgba(194, 198, 212, 0.4);
+    position: relative;
+    z-index: 1;
+}
         .tlf-auth-modal h2 {
             font-size: 1.875rem;
             font-weight: 700;
@@ -192,8 +202,8 @@
         }
 </style>
 </head>
-<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-<div id="tlf-auth-overlay" class="tlf-auth-overlay hidden">
+<body class="tlf-auth-required bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<div id="tlf-auth-overlay" class="tlf-auth-overlay">
   <div class="tlf-auth-modal">
     <h2>Work in Progress</h2>
     <p>Enter password to access the site</p>
@@ -216,6 +226,7 @@
 <a id="nav-chi-sono" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
 <a id="nav-corsi" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#corsi" data-i18n="nav.corsi">Corsi</a>
 <a id="nav-blog" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#blog" data-i18n="nav.blog">Blog</a>
+<a id="nav-thelinuxformula" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
 <a id="nav-contattami" class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="#contatti" data-i18n="nav.contattami">Contattami</a>
 <button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
 <button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
@@ -230,6 +241,7 @@
 <a id="nav-chi-sono" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
 <a id="nav-corsi" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#corsi" data-i18n="nav.corsi">Corsi</a>
 <a id="nav-blog" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#blog" data-i18n="nav.blog">Blog</a>
+<a id="nav-thelinuxformula" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
 <a id="nav-contattami" class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="#contatti" data-i18n="nav.contattami">Contattami</a>
 <div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
 <button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
@@ -593,8 +605,11 @@
   }
 
   async function initAuth() {
+    const overlay = document.getElementById('tlf-auth-overlay');
     // Check if already authenticated
     if (sessionStorage.getItem('tlf_auth') === 'true') {
+      if (overlay) overlay.classList.add('hidden');
+      document.body.classList.remove('tlf-auth-required');
       return;
     }
 
@@ -602,12 +617,10 @@
       const response = await fetch('secret.json?v=' + Date.now());
       if (response.ok) {
         const data = await response.json();
-        const overlay = document.getElementById('tlf-auth-overlay');
         const passwordInput = document.getElementById('tlf-auth-password');
         const submitBtn = document.getElementById('tlf-auth-submit');
         const errorDiv = document.getElementById('tlf-auth-error');
 
-        document.body.classList.add('tlf-auth-required');
         overlay.classList.remove('hidden');
 
         function checkPassword() {
@@ -637,7 +650,9 @@
       }
     } catch (e) {
       // secret.json not found, auth disabled
-    }
+      if (overlay) overlay.classList.add('hidden');
+      document.body.classList.remove('tlf-auth-required');
+      }
   }
 
   initAuth();

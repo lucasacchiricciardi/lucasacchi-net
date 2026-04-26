@@ -5,6 +5,7 @@ export const translations = {
     chiSono: "Chi Sono", 
     corsi: "Corsi",
     blog: "Blog",
+    theLinuxFormula: "The Linux Formula",
     contattami: "Contattami"
   },
   

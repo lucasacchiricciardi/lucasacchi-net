@@ -6,6 +6,7 @@ const itTranslations = {
     chiSono: "Chi Sono", 
     corsi: "Corsi",
     blog: "Blog",
+    theLinuxFormula: "The Linux Formula",
     contattami: "Contattami",
     videos: "Video"
   },
@@ -103,6 +104,7 @@ const enTranslations = {
     chiSono: "About Me",
     corsi: "Courses", 
     blog: "Blog",
+    theLinuxFormula: "The Linux Formula",
     contattami: "Contact Me",
     videos: "Video"
   },

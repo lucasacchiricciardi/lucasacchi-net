@@ -524,22 +524,24 @@ function retrieveAndDecompress(lang) {
 
     function updateNavTexts(lang) {
       // Update desktop nav items
-      var desktopNavItems = document.querySelectorAll('#nav-home, #nav-chi-sono, #nav-corsi, #nav-blog, #nav-contattami');
+      var desktopNavItems = document.querySelectorAll('#nav-home, #nav-chi-sono, #nav-corsi, #nav-blog, #nav-thelinuxformula, #nav-contattami');
       desktopNavItems.forEach(function(element) {
         if (element.id === 'nav-home') element.textContent = window.i18n.t('nav.home', lang);
         else if (element.id === 'nav-chi-sono') element.textContent = window.i18n.t('nav.chiSono', lang);
         else if (element.id === 'nav-corsi') element.textContent = window.i18n.t('nav.corsi', lang);
         else if (element.id === 'nav-blog') element.textContent = window.i18n.t('nav.blog', lang);
+        else if (element.id === 'nav-thelinuxformula') element.textContent = window.i18n.t('nav.theLinuxFormula', lang);
         else if (element.id === 'nav-contattami') element.textContent = window.i18n.t('nav.contattami', lang);
       });
       
       // Update mobile nav items (separate elements)
-      var mobileNavItems = document.querySelectorAll('#mobile-menu #nav-home, #mobile-menu #nav-chi-sono, #mobile-menu #nav-corsi, #mobile-menu #nav-blog, #mobile-menu #nav-contattami');
+      var mobileNavItems = document.querySelectorAll('#mobile-menu #nav-home, #mobile-menu #nav-chi-sono, #mobile-menu #nav-corsi, #mobile-menu #nav-blog, #mobile-menu #nav-thelinuxformula, #mobile-menu #nav-contattami');
       mobileNavItems.forEach(function(element) {
         if (element.id === 'nav-home') element.textContent = window.i18n.t('nav.home', lang);
         else if (element.id === 'nav-chi-sono') element.textContent = window.i18n.t('nav.chiSono', lang);
         else if (element.id === 'nav-corsi') element.textContent = window.i18n.t('nav.corsi', lang);
         else if (element.id === 'nav-blog') element.textContent = window.i18n.t('nav.blog', lang);
+        else if (element.id === 'nav-thelinuxformula') element.textContent = window.i18n.t('nav.theLinuxFormula', lang);
         else if (element.id === 'nav-contattami') element.textContent = window.i18n.t('nav.contattami', lang);
       });
     }
