@@ -239,6 +239,16 @@ function assembleDist() {
     console.warn(`Warning: ${i18nSrc} not found, skipping`);
   }
 
+  // Copy lang-switcher.js from src root
+  const langSwitcherSrc = join(process.cwd(), 'src', 'lang-switcher.js');
+  const langSwitcherDst = join(DIST, 'lang-switcher.js');
+  if (existsSync(langSwitcherSrc)) {
+    copyFileSync(langSwitcherSrc, langSwitcherDst);
+    console.log(`Copied lang-switcher.js to dist/`);
+  } else {
+    console.warn(`Warning: ${langSwitcherSrc} not found, skipping`);
+  }
+
   // Copy secret.json if exists
   const secretSrc = join(process.cwd(), 'src', 'secret.json');
   const secretDst = join(DIST, 'secret.json');
