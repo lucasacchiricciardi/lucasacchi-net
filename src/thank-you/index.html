@@ -189,7 +189,17 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
       var text = window.i18n.t(key, lang);
-      if (text) el.textContent = text;
+      if (text) {
+        el.textContent = text;
+      }
+    });
+    
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      var text = window.i18n.t(key, lang);
+      if (text) {
+        el.placeholder = text;
+      }
     });
     
     document.title = window.i18n.t('thankYou.pageTitle', lang, 'Thank You — LucaSacchi.net');
