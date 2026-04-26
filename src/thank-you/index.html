@@ -15,6 +15,7 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="description" content="Grazie per il tuo messaggio — LucaSacchi.net"/>
 <meta name="robots" content="noindex, follow"/>
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cs.iubenda.com https://cdn.iubenda.com; connect-src 'self' https://cs.iubenda.com https://cdn.iubenda.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; default-src 'self'"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -78,14 +79,42 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
     </div>
   </main>
 
-  <footer class="bg-surface-container-low border-t border-outline-variant/20 mt-24">
-    <div class="max-w-7xl mx-auto px-12 py-12">
-      <div class="flex justify-between items-start">
-        <p class="text-xs text-on-surface-variant font-label" data-i18n="footer.copyright">&copy; LucaSacchi.net.</p>
-        <div class="flex gap-3 text-[9px]">
-          <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-white iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
-          <span class="text-outline-variant/40">•</span>
-          <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+  <footer id="contatti" class="bg-surface-container-low text-on-surface border-t border-outline-variant/20 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="md:col-span-1">
+        <span class="font-headline font-bold text-lg block mb-4" data-i18n="footer.brand">LucaSacchi.net</span>
+        <p class="font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant" data-i18n="footer.architecturalInsights">
+          Architectural-grade insights for enterprise Linux systems.
+        </p>
+      </div>
+      <div class="md:col-span-2 grid grid-cols-2 gap-8 font-label text-[10px] leading-relaxed uppercase tracking-widest text-on-surface-variant">
+        <div>
+          <span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.coordinates">Coordinates</span>
+          <ul class="space-y-2">
+            <li>Office: Viale Bligny 13/a Milano</li>
+            <li>P.IVA: IT09731490968</li>
+          </ul>
+        </div>
+        <div>
+          <span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.commLinks">Comm_Links</span>
+          <ul class="space-y-2">
+            <li>Cell: <span id="phone-obf"></span></li>
+            <li>Email: <span id="email-obf"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="md:col-span-1 flex flex-col justify-between items-start md:items-end font-label text-[10px] uppercase tracking-widest text-outline">
+        <span class="material-symbols-outlined text-3xl mb-4">terminal</span>
+        <div class="text-left md:text-right">
+          <p data-i18n="footer.copyright">&copy; LucaSacchi.net.</p>
+          <p data-i18n="footer.allRightsReserved">All Rights Reserved.</p>
+          <p class="mt-2" id="copyright-years"></p>
+          <p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics: anonymous, cookie-free</p>
+          <div class="mt-4 flex gap-3">
+            <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+            <span class="text-outline-variant/40">•</span>
+            <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+          </div>
         </div>
       </div>
     </div>
@@ -201,5 +230,24 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
   }
 })(window, document);
 </script> -->
+
+<script>
+  // Obfuscate phone and email
+  (function() {
+    const phoneEl = document.getElementById('phone-obf');
+    const emailEl = document.getElementById('email-obf');
+    if (phoneEl) phoneEl.textContent = '+39 02 1234 5678';
+    if (emailEl) emailEl.textContent = 'luca@lucasacchi.net';
+  })();
+
+  // Set copyright years
+  (function() {
+    const yearsEl = document.getElementById('copyright-years');
+    if (yearsEl) {
+      const currentYear = new Date().getFullYear();
+      yearsEl.textContent = '2006 - ' + currentYear;
+    }
+  })();
+</script>
 </body>
 </html>
