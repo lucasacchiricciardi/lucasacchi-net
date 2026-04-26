@@ -108,11 +108,11 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
           <p data-i18n="footer.allRightsReserved">All Rights Reserved.</p>
           <p class="mt-2" id="copyright-years"></p>
           <p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics: anonymous, cookie-free</p>
-          <div class="mt-4 flex gap-3">
-            <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
-            <span class="text-outline-variant/40">•</span>
-            <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
-          </div>
+<div class="mt-4 flex gap-3">
+<button onclick="window.openPolicy('privacy')" class="text-[9px] text-on-surface-variant hover:text-primary transition-colors cursor-pointer" title="Privacy Policy">Privacy Policy</button>
+<span class="text-outline-variant/40">•</span>
+<button onclick="window.openPolicy('cookie')" class="text-[9px] text-on-surface-variant hover:text-primary transition-colors cursor-pointer" title="Cookie Policy">Cookie Policy</button>
+</div>
         </div>
       </div>
     </div>
@@ -158,6 +158,52 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       yearsEl.textContent = '2006 - ' + currentYear;
     }
   })();
+</script>
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  window.openPolicy = openPolicy;
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
 </script>
 </body>
 </html>

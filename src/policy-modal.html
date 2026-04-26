@@ -1,0 +1,62 @@
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<p class="text-on-surface-variant">Loading privacy policy...</p>';
+      // Carica da iubenda via iframe
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<p class="text-on-surface-variant">Loading cookie policy...</p>';
+      // Carica da iubenda via iframe
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    
+    modal.classList.remove('hidden');
+  }
+
+  // Attach to window for global access
+  window.openPolicy = openPolicy;
+
+  // Close button
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close on background click
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+})();
+</script>
