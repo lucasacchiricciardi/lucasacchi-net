@@ -1,0 +1,3056 @@
+WEBVTT
+Kind: captions
+Language: it
+
+00:00:00.439 --> 00:00:03.230 align:start position:0%
+ 
+benvenuto<00:00:01.439><c> benvenuta</c><00:00:02.190><c> io</c><00:00:02.400><c> sono</c><00:00:02.850><c> luca</c><00:00:03.030><c> e</c>
+
+00:00:03.230 --> 00:00:03.240 align:start position:0%
+benvenuto benvenuta io sono luca e
+ 
+
+00:00:03.240 --> 00:00:05.719 align:start position:0%
+benvenuto benvenuta io sono luca e
+questo<00:00:03.750><c> è</c><00:00:03.780><c> il</c><00:00:03.840><c> canale</c><00:00:04.049><c> youtube</c><00:00:04.339><c> luca</c><00:00:05.339><c> sacchi</c>
+
+00:00:05.719 --> 00:00:05.729 align:start position:0%
+questo è il canale youtube luca sacchi
+ 
+
+00:00:05.729 --> 00:00:06.799 align:start position:0%
+questo è il canale youtube luca sacchi
+netta
+
+00:00:06.799 --> 00:00:06.809 align:start position:0%
+netta
+ 
+
+00:00:06.809 --> 00:00:08.990 align:start position:0%
+netta
+oggi<00:00:07.169><c> parliamo</c><00:00:07.680><c> di</c>
+
+00:00:08.990 --> 00:00:09.000 align:start position:0%
+oggi parliamo di
+ 
+
+00:00:09.000 --> 00:00:11.960 align:start position:0%
+oggi parliamo di
+come<00:00:09.390><c> importare</c><00:00:09.870><c> un</c><00:00:10.170><c> container</c><00:00:10.710><c> non</c><00:00:11.520><c> nativo</c>
+
+00:00:11.960 --> 00:00:11.970 align:start position:0%
+come importare un container non nativo
+ 
+
+00:00:11.970 --> 00:00:15.020 align:start position:0%
+come importare un container non nativo
+di<00:00:12.090><c> prost</c><00:00:12.480><c> box</c><00:00:12.780><c> in</c><00:00:13.020><c> proms</c><00:00:13.530><c> mons</c><00:00:13.920><c> perché</c><00:00:14.700><c> dico</c>
+
+00:00:15.020 --> 00:00:15.030 align:start position:0%
+di prost box in proms mons perché dico
+ 
+
+00:00:15.030 --> 00:00:17.630 align:start position:0%
+di prost box in proms mons perché dico
+non<00:00:15.719><c> nativo</c><00:00:16.260><c> di</c><00:00:16.379><c> props</c><00:00:16.770><c> mons</c>
+
+00:00:17.630 --> 00:00:17.640 align:start position:0%
+non nativo di props mons
+ 
+
+00:00:17.640 --> 00:00:18.859 align:start position:0%
+non nativo di props mons
+perché<00:00:17.849><c> se</c><00:00:17.970><c> andiamo</c><00:00:18.150><c> sulla</c><00:00:18.720><c> documentazione</c>
+
+00:00:18.859 --> 00:00:18.869 align:start position:0%
+perché se andiamo sulla documentazione
+ 
+
+00:00:18.869 --> 00:00:22.760 align:start position:0%
+perché se andiamo sulla documentazione
+di<00:00:19.560><c> prox</c><00:00:19.980><c> moxos</c><00:00:20.400><c> e</c><00:00:21.270><c> cerchiamo</c><00:00:21.779><c> quali</c><00:00:22.259><c> sono</c><00:00:22.740><c> i</c>
+
+00:00:22.760 --> 00:00:22.770 align:start position:0%
+di prox moxos e cerchiamo quali sono i
+ 
+
+00:00:22.770 --> 00:00:28.420 align:start position:0%
+di prox moxos e cerchiamo quali sono i
+container<00:00:23.720><c> supportati</c><00:00:24.740><c> in</c><00:00:25.740><c> di</c><00:00:25.949><c> fronte</c>
+
+00:00:28.420 --> 00:00:28.430 align:start position:0%
+ 
+ 
+
+00:00:28.430 --> 00:00:31.060 align:start position:0%
+ 
+ai
+
+00:00:31.060 --> 00:00:31.070 align:start position:0%
+ai
+ 
+
+00:00:31.070 --> 00:00:34.040 align:start position:0%
+ai
+supporter<00:00:32.180><c> stasera</c><00:00:33.180><c> veramente</c><00:00:33.600><c> sono</c><00:00:33.780><c> un</c><00:00:33.930><c> po</c>
+
+00:00:34.040 --> 00:00:34.050 align:start position:0%
+supporter stasera veramente sono un po
+ 
+
+00:00:34.050 --> 00:00:35.049 align:start position:0%
+supporter stasera veramente sono un po
+stanco
+
+00:00:35.049 --> 00:00:35.059 align:start position:0%
+stanco
+ 
+
+00:00:35.059 --> 00:00:39.200 align:start position:0%
+stanco
+ok<00:00:36.059><c> andiamo</c><00:00:36.660><c> a</c><00:00:36.900><c> vedere</c><00:00:37.320><c> che</c><00:00:37.699><c> il</c><00:00:38.699><c> bellissimo</c>
+
+00:00:39.200 --> 00:00:39.210 align:start position:0%
+ok andiamo a vedere che il bellissimo
+ 
+
+00:00:39.210 --> 00:00:43.190 align:start position:0%
+ok andiamo a vedere che il bellissimo
+prox<00:00:39.870><c> mox</c><00:00:40.610><c> gestisce</c><00:00:41.610><c> soltanto</c><00:00:42.329><c> ubuntu</c><00:00:42.989><c> debian</c>
+
+00:00:43.190 --> 00:00:43.200 align:start position:0%
+prox mox gestisce soltanto ubuntu debian
+ 
+
+00:00:43.200 --> 00:00:46.700 align:start position:0%
+prox mox gestisce soltanto ubuntu debian
+fedora<00:00:43.790><c> detto</c><00:00:44.790><c> cento</c><00:00:45.510><c> arte</c><00:00:45.840><c> in</c><00:00:45.930><c> inox</c><00:00:46.079><c> al</c><00:00:46.260><c> pane</c>
+
+00:00:46.700 --> 00:00:46.710 align:start position:0%
+fedora detto cento arte in inox al pane
+ 
+
+00:00:46.710 --> 00:00:49.610 align:start position:0%
+fedora detto cento arte in inox al pane
+gentoo<00:00:47.040><c> fine</c><00:00:47.730><c> della</c><00:00:47.879><c> discussione</c><00:00:48.170><c> e</c><00:00:49.170><c> cosa</c><00:00:49.469><c> fa</c>
+
+00:00:49.610 --> 00:00:49.620 align:start position:0%
+gentoo fine della discussione e cosa fa
+ 
+
+00:00:49.620 --> 00:00:51.440 align:start position:0%
+gentoo fine della discussione e cosa fa
+una<00:00:50.010><c> persona</c><00:00:50.040><c> che</c><00:00:50.550><c> invece</c><00:00:50.760><c> adora</c><00:00:51.149><c> come</c>
+
+00:00:51.440 --> 00:00:51.450 align:start position:0%
+una persona che invece adora come
+ 
+
+00:00:51.450 --> 00:00:54.470 align:start position:0%
+una persona che invece adora come
+l'adoro<00:00:51.960><c> linux</c><00:00:52.620><c> mint</c><00:00:52.739><c> si</c><00:00:53.730><c> arma</c><00:00:54.030><c> di</c><00:00:54.059><c> santa</c>
+
+00:00:54.470 --> 00:00:54.480 align:start position:0%
+l'adoro linux mint si arma di santa
+ 
+
+00:00:54.480 --> 00:00:57.770 align:start position:0%
+l'adoro linux mint si arma di santa
+pazienza<00:00:54.840><c> e</c><00:00:55.320><c> apre</c><00:00:55.770><c> il</c><00:00:56.280><c> container</c><00:00:56.780><c> ufficiale</c>
+
+00:00:57.770 --> 00:00:57.780 align:start position:0%
+pazienza e apre il container ufficiale
+ 
+
+00:00:57.780 --> 00:01:02.500 align:start position:0%
+pazienza e apre il container ufficiale
+di<00:00:58.280><c> linux</c><00:00:59.280><c> mint</c><00:00:59.550><c> dato</c><00:01:00.270><c> da</c><00:01:00.390><c> linux</c><00:01:00.660><c> containers</c><00:01:01.410><c> e</c>
+
+00:01:02.500 --> 00:01:02.510 align:start position:0%
+di linux mint dato da linux containers e
+ 
+
+00:01:02.510 --> 00:01:05.329 align:start position:0%
+di linux mint dato da linux containers e
+immette<00:01:03.510><c> a</c><00:01:03.690><c> forza</c><00:01:04.410><c> i</c><00:01:04.440><c> dati</c><00:01:05.160><c> che</c><00:01:05.309><c> gli</c>
+
+00:01:05.329 --> 00:01:05.339 align:start position:0%
+immette a forza i dati che gli
+ 
+
+00:01:05.339 --> 00:01:06.950 align:start position:0%
+immette a forza i dati che gli
+permettono<00:01:06.000><c> di</c><00:01:06.149><c> essere</c><00:01:06.240><c> eseguito</c>
+
+00:01:06.950 --> 00:01:06.960 align:start position:0%
+permettono di essere eseguito
+ 
+
+00:01:06.960 --> 00:01:09.560 align:start position:0%
+permettono di essere eseguito
+nell'ambiente<00:01:07.470><c> pro</c><00:01:07.649><c> boxe</c><00:01:08.250><c> io</c><00:01:08.820><c> ho</c><00:01:08.970><c> letto</c><00:01:09.420><c> di</c>
+
+00:01:09.560 --> 00:01:09.570 align:start position:0%
+nell'ambiente pro boxe io ho letto di
+ 
+
+00:01:09.570 --> 00:01:11.660 align:start position:0%
+nell'ambiente pro boxe io ho letto di
+questa<00:01:09.899><c> cosa</c><00:01:10.289><c> non</c><00:01:10.410><c> l'ho</c><00:01:10.590><c> ancora</c><00:01:10.710><c> sperimentate</c>
+
+00:01:11.660 --> 00:01:11.670 align:start position:0%
+questa cosa non l'ho ancora sperimentate
+ 
+
+00:01:11.670 --> 00:01:13.969 align:start position:0%
+questa cosa non l'ho ancora sperimentate
+quindi<00:01:12.060><c> la</c><00:01:12.210><c> facciamo</c><00:01:12.509><c> assieme</c><00:01:12.899><c> e</c><00:01:13.170><c> ne</c><00:01:13.650><c> capiamo</c>
+
+00:01:13.969 --> 00:01:13.979 align:start position:0%
+quindi la facciamo assieme e ne capiamo
+ 
+
+00:01:13.979 --> 00:01:18.230 align:start position:0%
+quindi la facciamo assieme e ne capiamo
+il<00:01:14.630><c> perché</c><00:01:15.630><c> e</c><00:01:15.659><c> il</c><00:01:15.780><c> percome</c><00:01:16.530><c> bene</c><00:01:17.430><c> allora</c><00:01:17.670><c> più</c>
+
+00:01:18.230 --> 00:01:18.240 align:start position:0%
+il perché e il percome bene allora più
+ 
+
+00:01:18.240 --> 00:01:21.890 align:start position:0%
+il perché e il percome bene allora più
+di<00:01:18.299><c> tutto</c><00:01:18.720><c> parliamo</c><00:01:19.350><c> di</c><00:01:19.439><c> container</c><00:01:20.030><c> chi</c><00:01:21.030><c> li</c>
+
+00:01:21.890 --> 00:01:21.900 align:start position:0%
+di tutto parliamo di container chi li
+ 
+
+00:01:21.900 --> 00:01:23.990 align:start position:0%
+di tutto parliamo di container chi li
+mette<00:01:22.049><c> a</c><00:01:22.229><c> disposizione</c><00:01:23.040><c> è</c><00:01:23.070><c> linux</c><00:01:23.549><c> container</c>
+
+00:01:23.990 --> 00:01:24.000 align:start position:0%
+mette a disposizione è linux container
+ 
+
+00:01:24.000 --> 00:01:28.340 align:start position:0%
+mette a disposizione è linux container
+punto<00:01:24.600><c> org</c><00:01:25.040><c> nas</c><00:01:26.040><c> servono</c><00:01:26.820><c> quelli</c><00:01:27.540><c> di</c><00:01:27.630><c> tipo</c><00:01:27.780><c> l</c>
+
+00:01:28.340 --> 00:01:28.350 align:start position:0%
+punto org nas servono quelli di tipo l
+ 
+
+00:01:28.350 --> 00:01:30.800 align:start position:0%
+punto org nas servono quelli di tipo l
+xc<00:01:29.070><c> e</c><00:01:30.060><c> per</c><00:01:30.390><c> andarle</c><00:01:30.750><c> a</c><00:01:30.780><c> prendere</c>
+
+00:01:30.800 --> 00:01:30.810 align:start position:0%
+xc e per andarle a prendere
+ 
+
+00:01:30.810 --> 00:01:32.690 align:start position:0%
+xc e per andarle a prendere
+semplicemente<00:01:31.560><c> dobbiamo</c><00:01:32.310><c> fare</c><00:01:32.610><c> una</c>
+
+00:01:32.690 --> 00:01:32.700 align:start position:0%
+semplicemente dobbiamo fare una
+ 
+
+00:01:32.700 --> 00:01:34.719 align:start position:0%
+semplicemente dobbiamo fare una
+scorciatoia<00:01:33.180><c> e</c><00:01:33.360><c> guardate</c>
+
+00:01:34.719 --> 00:01:34.729 align:start position:0%
+scorciatoia e guardate
+ 
+
+00:01:34.729 --> 00:01:38.140 align:start position:0%
+scorciatoia e guardate
+prendiamola<00:01:35.729><c> urla</c><00:01:36.240><c> di</c><00:01:36.390><c> linux</c><00:01:36.659><c> container</c>
+
+00:01:38.140 --> 00:01:38.150 align:start position:0%
+prendiamola urla di linux container
+ 
+
+00:01:38.150 --> 00:01:41.020 align:start position:0%
+prendiamola urla di linux container
+c'è<00:01:39.150><c> la</c><00:01:39.270><c> copi</c><00:01:39.509><c> md</c><00:01:39.869><c> un</c><00:01:39.930><c> nuovo</c><00:01:40.110><c> tab</c>
+
+00:01:41.020 --> 00:01:41.030 align:start position:0%
+c'è la copi md un nuovo tab
+ 
+
+00:01:41.030 --> 00:01:44.510 align:start position:0%
+c'è la copi md un nuovo tab
+prima<00:01:42.030><c> di</c><00:01:42.119><c> yoox</c><00:01:42.420><c> container</c><00:01:42.689><c> inizi</c><00:01:43.520><c> inseriamo</c>
+
+00:01:44.510 --> 00:01:44.520 align:start position:0%
+prima di yoox container inizi inseriamo
+ 
+
+00:01:44.520 --> 00:01:47.760 align:start position:0%
+prima di yoox container inizi inseriamo
+la<00:01:44.610><c> parola</c><00:01:45.060><c> images</c>
+
+00:01:47.760 --> 00:01:47.770 align:start position:0%
+ 
+ 
+
+00:01:47.770 --> 00:01:49.830 align:start position:0%
+ 
+e<00:01:47.799><c> veniamo</c><00:01:48.039><c> portati</c><00:01:48.310><c> sul</c><00:01:49.000><c> sito</c><00:01:49.299><c> di</c><00:01:49.390><c> canonical</c>
+
+00:01:49.830 --> 00:01:49.840 align:start position:0%
+e veniamo portati sul sito di canonical
+ 
+
+00:01:49.840 --> 00:01:53.789 align:start position:0%
+e veniamo portati sul sito di canonical
+che<00:01:50.679><c> qui</c><00:01:50.950><c> mette</c><00:01:51.909><c> dentro</c><00:01:52.420><c> nei</c><00:01:52.780><c> server</c><00:01:53.170><c> delle</c>
+
+00:01:53.789 --> 00:01:53.799 align:start position:0%
+che qui mette dentro nei server delle
+ 
+
+00:01:53.799 --> 00:01:57.529 align:start position:0%
+che qui mette dentro nei server delle
+immagini<00:01:54.340><c> per</c><00:01:54.490><c> i</c><00:01:54.579><c> server</c><00:01:54.969><c> lx</c><00:01:55.840><c> clx</c><00:01:56.799><c> di</c>
+
+00:01:57.529 --> 00:01:57.539 align:start position:0%
+immagini per i server lx clx di
+ 
+
+00:01:57.539 --> 00:02:01.380 align:start position:0%
+immagini per i server lx clx di
+più<00:01:58.539><c> disparate</c><00:01:59.229><c> vedi</c><00:01:59.500><c> arpa</c><00:01:59.770><c> in</c><00:02:00.100><c> alt</c><00:02:00.759><c> cento</c>
+
+00:02:01.380 --> 00:02:01.390 align:start position:0%
+più disparate vedi arpa in alt cento
+ 
+
+00:02:01.390 --> 00:02:04.590 align:start position:0%
+più disparate vedi arpa in alt cento
+slam<00:02:01.719><c> ian</c><00:02:02.140><c> e</c><00:02:02.340><c> alla</c><00:02:03.340><c> m</c><00:02:03.729><c> indovinate</c><00:02:04.450><c> cosa</c>
+
+00:02:04.590 --> 00:02:04.600 align:start position:0%
+slam ian e alla m indovinate cosa
+ 
+
+00:02:04.600 --> 00:02:08.699 align:start position:0%
+slam ian e alla m indovinate cosa
+troviamo<00:02:04.960><c> linux</c><00:02:05.770><c> mint</c><00:02:06.299><c> tina</c><00:02:07.299><c> tricia</c><00:02:07.810><c> ulisse</c><00:02:08.319><c> e</c>
+
+00:02:08.699 --> 00:02:08.709 align:start position:0%
+troviamo linux mint tina tricia ulisse e
+ 
+
+00:02:08.709 --> 00:02:12.800 align:start position:0%
+troviamo linux mint tina tricia ulisse e
+menta<00:02:09.810><c> 64</c><00:02:10.810><c> bit</c><00:02:10.959><c> in</c><00:02:11.260><c> due</c><00:02:11.440><c> edizioni</c><00:02:11.739><c> una</c>
+
+00:02:12.800 --> 00:02:12.810 align:start position:0%
+menta 64 bit in due edizioni una
+ 
+
+00:02:12.810 --> 00:02:15.720 align:start position:0%
+menta 64 bit in due edizioni una
+ottimizzata<00:02:13.810><c> per</c><00:02:13.840><c> le</c><00:02:14.500><c> piattaforme</c><00:02:14.530><c> cloud</c><00:02:15.370><c> e</c>
+
+00:02:15.720 --> 00:02:15.730 align:start position:0%
+ottimizzata per le piattaforme cloud e
+ 
+
+00:02:15.730 --> 00:02:18.690 align:start position:0%
+ottimizzata per le piattaforme cloud e
+l'altra<00:02:16.120><c> che</c><00:02:16.239><c> quella</c><00:02:16.480><c> di</c><00:02:16.569><c> me</c><00:02:16.720><c> bolt</c><00:02:17.230><c> quindi</c><00:02:18.190><c> io</c>
+
+00:02:18.690 --> 00:02:18.700 align:start position:0%
+l'altra che quella di me bolt quindi io
+ 
+
+00:02:18.700 --> 00:02:21.530 align:start position:0%
+l'altra che quella di me bolt quindi io
+voglio<00:02:19.209><c> andarmi</c><00:02:19.510><c> a</c><00:02:19.540><c> prendere</c><00:02:19.650><c> questa</c>
+
+00:02:21.530 --> 00:02:21.540 align:start position:0%
+voglio andarmi a prendere questa
+ 
+
+00:02:21.540 --> 00:02:25.480 align:start position:0%
+voglio andarmi a prendere questa
+adesso<00:02:22.540><c> scopriamo</c><00:02:22.959><c> come</c><00:02:23.650><c> si</c><00:02:23.799><c> fa</c>
+
+00:02:25.480 --> 00:02:25.490 align:start position:0%
+adesso scopriamo come si fa
+ 
+
+00:02:25.490 --> 00:02:27.520 align:start position:0%
+adesso scopriamo come si fa
+allora<00:02:25.880><c> ho</c><00:02:26.390><c> fatto</c><00:02:26.420><c> una</c><00:02:26.810><c> ricerchina</c><00:02:27.260><c> e</c><00:02:27.440><c> ho</c>
+
+00:02:27.520 --> 00:02:27.530 align:start position:0%
+allora ho fatto una ricerchina e ho
+ 
+
+00:02:27.530 --> 00:02:30.130 align:start position:0%
+allora ho fatto una ricerchina e ho
+capito<00:02:27.740><c> che</c><00:02:28.040><c> mettendo</c><00:02:28.790><c> in</c><00:02:28.880><c> fondo</c><00:02:29.210><c> questa</c><00:02:29.570><c> urla</c>
+
+00:02:30.130 --> 00:02:30.140 align:start position:0%
+capito che mettendo in fondo questa urla
+ 
+
+00:02:30.140 --> 00:02:33.570 align:start position:0%
+capito che mettendo in fondo questa urla
+lo<00:02:30.830><c> slash</c><00:02:31.100><c> images</c>
+
+00:02:33.570 --> 00:02:33.580 align:start position:0%
+lo slash images
+ 
+
+00:02:33.580 --> 00:02:38.170 align:start position:0%
+lo slash images
+si<00:02:34.580><c> viene</c><00:02:34.760><c> portati</c><00:02:35.290><c> nella</c><00:02:36.290><c> libera</c><00:02:36.620><c> tura</c>
+
+00:02:38.170 --> 00:02:38.180 align:start position:0%
+si viene portati nella libera tura
+ 
+
+00:02:38.180 --> 00:02:40.030 align:start position:0%
+si viene portati nella libera tura
+permette<00:02:38.569><c> il</c><00:02:38.689><c> download</c><00:02:39.230><c> entriamo</c><00:02:39.650><c> nella</c>
+
+00:02:40.030 --> 00:02:40.040 align:start position:0%
+permette il download entriamo nella
+ 
+
+00:02:40.040 --> 00:02:44.190 align:start position:0%
+permette il download entriamo nella
+cartella<00:02:40.340><c> menta</c><00:02:41.000><c> e</c><00:02:41.959><c> andiamo</c><00:02:42.890><c> a</c><00:02:42.920><c> prenderci</c><00:02:43.430><c> una</c>
+
+00:02:44.190 --> 00:02:44.200 align:start position:0%
+cartella menta e andiamo a prenderci una
+ 
+
+00:02:44.200 --> 00:02:45.899 align:start position:0%
+cartella menta e andiamo a prenderci una
+amd64
+
+00:02:45.899 --> 00:02:45.909 align:start position:0%
+amd64
+ 
+
+00:02:45.909 --> 00:02:48.940 align:start position:0%
+amd64
+default<00:02:47.049><c> prendiamo</c><00:02:48.049><c> l'ultima</c><00:02:48.650><c> disponibile</c>
+
+00:02:48.940 --> 00:02:48.950 align:start position:0%
+default prendiamo l'ultima disponibile
+ 
+
+00:02:48.950 --> 00:02:53.170 align:start position:0%
+default prendiamo l'ultima disponibile
+quella<00:02:49.519><c> del</c><00:02:49.640><c> 24</c><00:02:49.969><c> 11</c><00:02:50.780><c> e</c><00:02:51.680><c> qui</c><00:02:51.890><c> sotto</c><00:02:52.250><c> troviamo</c><00:02:52.579><c> un</c>
+
+00:02:53.170 --> 00:02:53.180 align:start position:0%
+quella del 24 11 e qui sotto troviamo un
+ 
+
+00:02:53.180 --> 00:02:55.589 align:start position:0%
+quella del 24 11 e qui sotto troviamo un
+bel<00:02:53.480><c> ruth</c><00:02:53.959><c> squash</c>
+
+00:02:55.589 --> 00:02:55.599 align:start position:0%
+bel ruth squash
+ 
+
+00:02:55.599 --> 00:03:00.160 align:start position:0%
+bel ruth squash
+fs<00:02:56.599><c> un</c><00:02:56.780><c> ruth</c><00:02:57.579><c> fs</c><00:02:58.579><c> punto</c><00:02:59.030><c> tar</c><00:02:59.659><c> questo</c><00:03:00.049><c> è</c><00:03:00.079><c> il</c>
+
+00:03:00.160 --> 00:03:00.170 align:start position:0%
+fs un ruth fs punto tar questo è il
+ 
+
+00:03:00.170 --> 00:03:03.339 align:start position:0%
+fs un ruth fs punto tar questo è il
+nostro<00:03:00.260><c> file</c><00:03:00.650><c> di</c><00:03:00.829><c> container</c><00:03:01.329><c> ci</c><00:03:02.329><c> capiamo</c>
+
+00:03:03.339 --> 00:03:03.349 align:start position:0%
+nostro file di container ci capiamo
+ 
+
+00:03:03.349 --> 00:03:04.740 align:start position:0%
+nostro file di container ci capiamo
+l'indirizzo
+
+00:03:04.740 --> 00:03:04.750 align:start position:0%
+l'indirizzo
+ 
+
+00:03:04.750 --> 00:03:07.149 align:start position:0%
+l'indirizzo
+torniamo<00:03:05.750><c> nel</c><00:03:05.900><c> mondo</c><00:03:06.200><c> nostro</c><00:03:06.500><c> prox</c><00:03:06.859><c> mox</c>
+
+00:03:07.149 --> 00:03:07.159 align:start position:0%
+torniamo nel mondo nostro prox mox
+ 
+
+00:03:07.159 --> 00:03:10.649 align:start position:0%
+torniamo nel mondo nostro prox mox
+andiamo<00:03:07.969><c> nel</c><00:03:08.599><c> disco</c><00:03:09.079><c> è</c><00:03:09.650><c> dedicato</c>
+
+00:03:10.649 --> 00:03:10.659 align:start position:0%
+andiamo nel disco è dedicato
+ 
+
+00:03:10.659 --> 00:03:14.259 align:start position:0%
+andiamo nel disco è dedicato
+alle<00:03:11.659><c> isole</c><00:03:12.139><c> backup</c><00:03:12.470><c> ei</c><00:03:12.769><c> container</c><00:03:13.269><c> facciamo</c>
+
+00:03:14.259 --> 00:03:14.269 align:start position:0%
+alle isole backup ei container facciamo
+ 
+
+00:03:14.269 --> 00:03:19.030 align:start position:0%
+alle isole backup ei container facciamo
+da<00:03:14.450><c> love</c><00:03:14.689><c> from</c><00:03:14.959><c> url</c><00:03:15.489><c> inseriamo</c><00:03:16.489><c> il</c><00:03:16.760><c> download</c>
+
+00:03:19.030 --> 00:03:19.040 align:start position:0%
+da love from url inseriamo il download
+ 
+
+00:03:19.040 --> 00:03:20.709 align:start position:0%
+da love from url inseriamo il download
+facciamo<00:03:19.519><c> la</c><00:03:19.640><c> query</c><00:03:19.969><c> ci</c><00:03:20.090><c> dice</c><00:03:20.269><c> sì</c><00:03:20.450><c> lo</c>
+
+00:03:20.709 --> 00:03:20.719 align:start position:0%
+facciamo la query ci dice sì lo
+ 
+
+00:03:20.719 --> 00:03:24.360 align:start position:0%
+facciamo la query ci dice sì lo
+raggiungo<00:03:21.200><c> e</c><00:03:21.230><c> da</c><00:03:21.379><c> 179</c><00:03:21.980><c> mega</c><00:03:22.519><c> corrisponde</c>
+
+00:03:24.360 --> 00:03:24.370 align:start position:0%
+raggiungo e da 179 mega corrisponde
+ 
+
+00:03:24.370 --> 00:03:29.440 align:start position:0%
+raggiungo e da 179 mega corrisponde
+corrisponde<00:03:25.370><c> prendi</c><00:03:26.299><c> andiamo</c><00:03:26.780><c> download</c>
+
+00:03:29.440 --> 00:03:29.450 align:start position:0%
+ 
+ 
+
+00:03:29.450 --> 00:03:30.750 align:start position:0%
+ 
+e<00:03:29.510><c> scarichiamo</c>
+
+00:03:30.750 --> 00:03:30.760 align:start position:0%
+e scarichiamo
+ 
+
+00:03:30.760 --> 00:03:36.750 align:start position:0%
+e scarichiamo
+questo<00:03:31.760><c> container</c>
+
+00:03:36.750 --> 00:03:36.760 align:start position:0%
+ 
+ 
+
+00:03:36.760 --> 00:03:37.880 align:start position:0%
+ 
+io
+
+00:03:37.880 --> 00:03:37.890 align:start position:0%
+io
+ 
+
+00:03:37.890 --> 00:03:40.429 align:start position:0%
+io
+li<00:03:38.890><c> abbiamo</c><00:03:39.129><c> terminato</c>
+
+00:03:40.429 --> 00:03:40.439 align:start position:0%
+li abbiamo terminato
+ 
+
+00:03:40.439 --> 00:03:44.240 align:start position:0%
+li abbiamo terminato
+io<00:03:41.439><c> adesso</c><00:03:41.590><c> un</c><00:03:41.890><c> elenco</c><00:03:42.250><c> dei</c><00:03:42.400><c> miei</c><00:03:42.549><c> container</c>
+
+00:03:44.240 --> 00:03:44.250 align:start position:0%
+io adesso un elenco dei miei container
+ 
+
+00:03:44.250 --> 00:03:49.100 align:start position:0%
+io adesso un elenco dei miei container
+avrò<00:03:45.450><c> facciamo</c><00:03:46.450><c> un</c><00:03:46.629><c> ridotto</c>
+
+00:03:49.100 --> 00:03:49.110 align:start position:0%
+avrò facciamo un ridotto
+ 
+
+00:03:49.110 --> 00:03:53.150 align:start position:0%
+avrò facciamo un ridotto
+un<00:03:49.890><c> router</c><00:03:50.400><c> sx</c><00:03:51.180><c> età</c><00:03:51.570><c> questo</c><00:03:52.020><c> esperimento</c><00:03:52.500><c> lo</c>
+
+00:03:53.150 --> 00:03:53.160 align:start position:0%
+un router sx età questo esperimento lo
+ 
+
+00:03:53.160 --> 00:03:54.460 align:start position:0%
+un router sx età questo esperimento lo
+togliamo
+
+00:03:54.460 --> 00:03:54.470 align:start position:0%
+togliamo
+ 
+
+00:03:54.470 --> 00:03:58.010 align:start position:0%
+togliamo
+e<00:03:55.470><c> mi</c><00:03:56.010><c> hanno</c><00:03:56.130><c> scaricato</c><00:03:56.880><c> ubuntu</c><00:03:57.540><c> questo</c><00:03:57.900><c> da</c>
+
+00:03:58.010 --> 00:03:58.020 align:start position:0%
+e mi hanno scaricato ubuntu questo da
+ 
+
+00:03:58.020 --> 00:03:59.360 align:start position:0%
+e mi hanno scaricato ubuntu questo da
+dove<00:03:58.260><c> hanno</c><00:03:58.320><c> scaricato</c><00:03:58.980><c> dai</c><00:03:59.100><c> templi</c>
+
+00:03:59.360 --> 00:03:59.370 align:start position:0%
+dove hanno scaricato dai templi
+ 
+
+00:03:59.370 --> 00:04:01.880 align:start position:0%
+dove hanno scaricato dai templi
+ufficiali<00:04:00.090><c> quelli</c><00:04:00.510><c> supportati</c><00:04:00.780><c> mandato</c><00:04:01.770><c> su</c>
+
+00:04:01.880 --> 00:04:01.890 align:start position:0%
+ufficiali quelli supportati mandato su
+ 
+
+00:04:01.890 --> 00:04:05.680 align:start position:0%
+ufficiali quelli supportati mandato su
+template<00:04:02.430><c> ho</c><00:04:03.390><c> scelto</c><00:04:03.870><c> ubuntu</c>
+
+00:04:05.680 --> 00:04:05.690 align:start position:0%
+template ho scelto ubuntu
+ 
+
+00:04:05.690 --> 00:04:10.270 align:start position:0%
+template ho scelto ubuntu
+ok<00:04:06.430><c> equa</c><00:04:07.430><c> punto</c><00:04:08.030><c> 20</c><00:04:08.360><c> standard</c><00:04:08.990><c> però</c><00:04:09.800><c> fatto</c><00:04:10.130><c> il</c>
+
+00:04:10.270 --> 00:04:10.280 align:start position:0%
+ok equa punto 20 standard però fatto il
+ 
+
+00:04:10.280 --> 00:04:12.370 align:start position:0%
+ok equa punto 20 standard però fatto il
+fatto<00:04:10.550><c> il</c><00:04:11.030><c> download</c><00:04:11.420><c> quindi</c><00:04:11.930><c> ce</c><00:04:12.050><c> li</c><00:04:12.170><c> ho</c><00:04:12.200><c> tutti</c>
+
+00:04:12.370 --> 00:04:12.380 align:start position:0%
+fatto il download quindi ce li ho tutti
+ 
+
+00:04:12.380 --> 00:04:13.500 align:start position:0%
+fatto il download quindi ce li ho tutti
+e<00:04:12.590><c> due</c>
+
+00:04:13.500 --> 00:04:13.510 align:start position:0%
+e due
+ 
+
+00:04:13.510 --> 00:04:16.449 align:start position:0%
+e due
+allora<00:04:14.510><c> qual</c><00:04:14.750><c> è</c><00:04:14.810><c> la</c><00:04:14.930><c> fregatura</c><00:04:15.320><c> che</c><00:04:16.160><c> se</c><00:04:16.370><c> io</c>
+
+00:04:16.449 --> 00:04:16.459 align:start position:0%
+allora qual è la fregatura che se io
+ 
+
+00:04:16.459 --> 00:04:18.600 align:start position:0%
+allora qual è la fregatura che se io
+provo<00:04:16.850><c> a</c><00:04:16.910><c> far</c><00:04:17.299><c> funzionare</c>
+
+00:04:18.600 --> 00:04:18.610 align:start position:0%
+provo a far funzionare
+ 
+
+00:04:18.610 --> 00:04:23.640 align:start position:0%
+provo a far funzionare
+questo<00:04:20.019><c> ottengo</c><00:04:21.019><c> un</c><00:04:21.049><c> errore</c><00:04:21.640><c> all'interno</c><00:04:22.640><c> del</c>
+
+00:04:23.640 --> 00:04:23.650 align:start position:0%
+questo ottengo un errore all'interno del
+ 
+
+00:04:23.650 --> 00:04:28.200 align:start position:0%
+questo ottengo un errore all'interno del
+dell'archivio<00:04:24.650><c> cioè</c><00:04:25.640><c> una</c><00:04:26.450><c> serie</c><00:04:26.930><c> di</c><00:04:27.080><c> file</c>
+
+00:04:28.200 --> 00:04:28.210 align:start position:0%
+dell'archivio cioè una serie di file
+ 
+
+00:04:28.210 --> 00:04:32.190 align:start position:0%
+dell'archivio cioè una serie di file
+che<00:04:29.210><c> identificano</c><00:04:30.140><c> questa</c><00:04:30.680><c> macchina</c><00:04:31.340><c> come</c>
+
+00:04:32.190 --> 00:04:32.200 align:start position:0%
+che identificano questa macchina come
+ 
+
+00:04:32.200 --> 00:04:33.810 align:start position:0%
+che identificano questa macchina come
+vinta
+
+00:04:33.810 --> 00:04:33.820 align:start position:0%
+vinta
+ 
+
+00:04:33.820 --> 00:04:37.800 align:start position:0%
+vinta
+sappiamo<00:04:34.820><c> che</c><00:04:35.530><c> il</c><00:04:36.530><c> sistema</c>
+
+00:04:37.800 --> 00:04:37.810 align:start position:0%
+sappiamo che il sistema
+ 
+
+00:04:37.810 --> 00:04:41.320 align:start position:0%
+sappiamo che il sistema
+gestisce<00:04:38.810><c> ubuntu</c><00:04:39.620><c> e</c><00:04:39.650><c> debian</c><00:04:39.860><c> ma</c><00:04:40.640><c> mint</c><00:04:40.970><c> non</c><00:04:41.180><c> lo</c>
+
+00:04:41.320 --> 00:04:41.330 align:start position:0%
+gestisce ubuntu e debian ma mint non lo
+ 
+
+00:04:41.330 --> 00:04:45.280 align:start position:0%
+gestisce ubuntu e debian ma mint non lo
+riconosce<00:04:41.990><c> dice</c><00:04:42.410><c> che</c><00:04:42.560><c> hanno</c><00:04:43.040><c> i</c><00:04:43.280><c> di</c><00:04:44.020><c> allora</c><00:04:45.020><c> a</c>
+
+00:04:45.280 --> 00:04:45.290 align:start position:0%
+riconosce dice che hanno i di allora a
+ 
+
+00:04:45.290 --> 00:04:46.900 align:start position:0%
+riconosce dice che hanno i di allora a
+delle<00:04:45.590><c> persone</c><00:04:45.710><c> su</c><00:04:46.130><c> internet</c><00:04:46.160><c> yamaha</c><00:04:46.880><c> è</c>
+
+00:04:46.900 --> 00:04:46.910 align:start position:0%
+delle persone su internet yamaha è
+ 
+
+00:04:46.910 --> 00:04:49.180 align:start position:0%
+delle persone su internet yamaha è
+venuta<00:04:47.360><c> la</c><00:04:47.450><c> stessa</c><00:04:47.780><c> idea</c><00:04:47.960><c> troviamo</c><00:04:48.680><c> l'insieme</c>
+
+00:04:49.180 --> 00:04:49.190 align:start position:0%
+venuta la stessa idea troviamo l'insieme
+ 
+
+00:04:49.190 --> 00:04:53.850 align:start position:0%
+venuta la stessa idea troviamo l'insieme
+dei<00:04:49.370><c> file</c><00:04:49.910><c> che</c><00:04:50.450><c> permettono</c><00:04:51.140><c> di</c><00:04:51.580><c> far</c>
+
+00:04:53.850 --> 00:04:53.860 align:start position:0%
+dei file che permettono di far
+ 
+
+00:04:53.860 --> 00:04:57.580 align:start position:0%
+dei file che permettono di far
+di<00:04:54.860><c> mascherare</c><00:04:55.610><c> il</c><00:04:56.330><c> nostro</c><00:04:56.840><c> mint</c><00:04:57.200><c> come</c><00:04:57.470><c> se</c>
+
+00:04:57.580 --> 00:04:57.590 align:start position:0%
+di mascherare il nostro mint come se
+ 
+
+00:04:57.590 --> 00:05:00.910 align:start position:0%
+di mascherare il nostro mint come se
+fosse<00:04:57.920><c> 1.20</c><00:04:58.670><c> 04</c><00:04:59.390><c> d'altra</c><00:05:00.110><c> parte</c><00:05:00.140><c> l'ultima</c>
+
+00:05:00.910 --> 00:05:00.920 align:start position:0%
+fosse 1.20 04 d'altra parte l'ultima
+ 
+
+00:05:00.920 --> 00:05:04.200 align:start position:0%
+fosse 1.20 04 d'altra parte l'ultima
+versione<00:05:01.280><c> di</c><00:05:01.610><c> ubuntu</c><00:05:01.870><c> o</c><00:05:02.870><c> ma</c><00:05:03.170><c> si</c><00:05:03.650><c> basa</c><00:05:03.830><c> appunto</c>
+
+00:05:04.200 --> 00:05:04.210 align:start position:0%
+versione di ubuntu o ma si basa appunto
+ 
+
+00:05:04.210 --> 00:05:09.330 align:start position:0%
+versione di ubuntu o ma si basa appunto
+su<00:05:05.210><c> ubuntu</c><00:05:05.480><c> 20</c><00:05:05.990><c> 04</c><00:05:06.350><c> quindi</c><00:05:07.130><c> che</c><00:05:07.790><c> poi</c><00:05:08.000><c> il</c><00:05:08.270><c> mit</c>
+
+00:05:09.330 --> 00:05:09.340 align:start position:0%
+su ubuntu 20 04 quindi che poi il mit
+ 
+
+00:05:09.340 --> 00:05:12.550 align:start position:0%
+su ubuntu 20 04 quindi che poi il mit
+che<00:05:10.340><c> sia</c><00:05:10.520><c> un</c><00:05:10.640><c> min</c><00:05:10.790><c> tema</c><00:05:11.180><c> che</c><00:05:11.330><c> prossimo</c><00:05:12.290><c> solo</c>
+
+00:05:12.550 --> 00:05:12.560 align:start position:0%
+che sia un min tema che prossimo solo
+ 
+
+00:05:12.560 --> 00:05:14.530 align:start position:0%
+che sia un min tema che prossimo solo
+voglia<00:05:12.919><c> trattare</c><00:05:13.250><c> come</c><00:05:13.640><c> ubuntu</c><00:05:13.850><c> a</c><00:05:14.120><c> noi</c><00:05:14.390><c> non</c>
+
+00:05:14.530 --> 00:05:14.540 align:start position:0%
+voglia trattare come ubuntu a noi non
+ 
+
+00:05:14.540 --> 00:05:17.740 align:start position:0%
+voglia trattare come ubuntu a noi non
+cambia<00:05:14.630><c> nulla</c><00:05:15.020><c> anzi</c><00:05:16.090><c> ci</c><00:05:17.090><c> sta</c><00:05:17.240><c> poi</c><00:05:17.419><c> ci</c><00:05:17.600><c> sono</c>
+
+00:05:17.740 --> 00:05:17.750 align:start position:0%
+cambia nulla anzi ci sta poi ci sono
+ 
+
+00:05:17.750 --> 00:05:19.450 align:start position:0%
+cambia nulla anzi ci sta poi ci sono
+fare<00:05:17.960><c> un</c><00:05:18.020><c> po</c><00:05:18.350><c> di</c><00:05:18.470><c> esercizio</c><00:05:18.980><c> siamo</c><00:05:19.280><c> più</c>
+
+00:05:19.450 --> 00:05:19.460 align:start position:0%
+fare un po di esercizio siamo più
+ 
+
+00:05:19.460 --> 00:05:23.020 align:start position:0%
+fare un po di esercizio siamo più
+contenti<00:05:20.150><c> andiamo</c><00:05:21.020><c> a</c><00:05:21.050><c> livello</c><00:05:21.440><c> di</c><00:05:21.560><c> nodo</c><00:05:22.030><c> e</c>
+
+00:05:23.020 --> 00:05:23.030 align:start position:0%
+contenti andiamo a livello di nodo e
+ 
+
+00:05:23.030 --> 00:05:25.050 align:start position:0%
+contenti andiamo a livello di nodo e
+adria<00:05:23.360><c> moon</c><00:05:23.510><c> e</c><00:05:23.600><c> shell</c>
+
+00:05:25.050 --> 00:05:25.060 align:start position:0%
+adria moon e shell
+ 
+
+00:05:25.060 --> 00:05:30.120 align:start position:0%
+adria moon e shell
+perfetto<00:05:26.060><c> allora</c><00:05:27.130><c> al</c><00:05:28.130><c> netto</c><00:05:28.430><c> del</c><00:05:28.580><c> fatto</c><00:05:28.700><c> che</c>
+
+00:05:30.120 --> 00:05:30.130 align:start position:0%
+perfetto allora al netto del fatto che
+ 
+
+00:05:30.130 --> 00:05:33.330 align:start position:0%
+perfetto allora al netto del fatto che
+il<00:05:31.130><c> nostro</c><00:05:31.690><c> file</c>
+
+00:05:33.330 --> 00:05:33.340 align:start position:0%
+il nostro file
+ 
+
+00:05:33.340 --> 00:05:36.300 align:start position:0%
+il nostro file
+questo
+
+00:05:36.300 --> 00:05:36.310 align:start position:0%
+questo
+ 
+
+00:05:36.310 --> 00:05:37.790 align:start position:0%
+questo
+sta<00:05:36.670><c> in</c>
+
+00:05:37.790 --> 00:05:37.800 align:start position:0%
+sta in
+ 
+
+00:05:37.800 --> 00:05:40.369 align:start position:0%
+sta in
+hurley<00:05:38.479><c> template</c><00:05:39.479><c> e</c><00:05:39.690><c> adesso</c><00:05:39.930><c> andiamo</c><00:05:40.199><c> a</c>
+
+00:05:40.369 --> 00:05:40.379 align:start position:0%
+hurley template e adesso andiamo a
+ 
+
+00:05:40.379 --> 00:05:44.300 align:start position:0%
+hurley template e adesso andiamo a
+pescare<00:05:40.979><c> ecco</c><00:05:42.229><c> vediamo</c><00:05:43.229><c> un</c><00:05:43.319><c> po</c><00:05:43.409><c> di</c><00:05:43.560><c> ingrandire</c>
+
+00:05:44.300 --> 00:05:44.310 align:start position:0%
+pescare ecco vediamo un po di ingrandire
+ 
+
+00:05:44.310 --> 00:05:48.520 align:start position:0%
+pescare ecco vediamo un po di ingrandire
+si<00:05:44.460><c> può</c><00:05:44.639><c> sì</c><00:05:45.449><c> bene</c><00:05:46.169><c> non</c><00:05:47.099><c> troppo</c>
+
+00:05:48.520 --> 00:05:48.530 align:start position:0%
+si può sì bene non troppo
+ 
+
+00:05:48.530 --> 00:05:51.980 align:start position:0%
+si può sì bene non troppo
+una<00:05:49.530><c> via</c><00:05:49.680><c> di</c><00:05:49.800><c> mezzo</c><00:05:50.090><c> sono</c><00:05:51.090><c> sempre</c><00:05:51.449><c> eccessivo</c>
+
+00:05:51.980 --> 00:05:51.990 align:start position:0%
+una via di mezzo sono sempre eccessivo
+ 
+
+00:05:51.990 --> 00:05:55.369 align:start position:0%
+una via di mezzo sono sempre eccessivo
+var<00:05:52.740><c> lib</c>
+
+00:05:55.369 --> 00:05:55.379 align:start position:0%
+var lib
+ 
+
+00:05:55.379 --> 00:05:58.650 align:start position:0%
+var lib
+e<00:05:55.409><c> qui</c><00:05:55.650><c> dentro</c>
+
+00:05:58.650 --> 00:05:58.660 align:start position:0%
+ 
+ 
+
+00:05:58.660 --> 00:06:03.800 align:start position:0%
+ 
+lx<00:05:59.110><c> cf</c><00:05:59.740><c> per</c><00:05:59.890><c> esempio</c><00:06:00.630><c> l</c><00:06:01.630><c> i</c><00:06:01.930><c> knicks</c><00:06:02.350><c> ci</c>
+
+00:06:03.800 --> 00:06:03.810 align:start position:0%
+lx cf per esempio l i knicks ci
+ 
+
+00:06:03.810 --> 00:06:05.790 align:start position:0%
+lx cf per esempio l i knicks ci
+sono<00:06:04.810><c> le</c><00:06:04.900><c> due</c><00:06:05.020><c> macchine</c><00:06:05.440><c> che</c><00:06:05.530><c> sono</c><00:06:05.650><c> state</c>
+
+00:06:05.790 --> 00:06:05.800 align:start position:0%
+sono le due macchine che sono state
+ 
+
+00:06:05.800 --> 00:06:06.980 align:start position:0%
+sono le due macchine che sono state
+create
+
+00:06:06.980 --> 00:06:06.990 align:start position:0%
+create
+ 
+
+00:06:06.990 --> 00:06:10.770 align:start position:0%
+create
+e<00:06:07.990><c> invece</c><00:06:08.320><c> li</c><00:06:08.890><c> in</c><00:06:09.040><c> b</c><00:06:09.520><c> zetas</c><00:06:10.120><c> che</c><00:06:10.210><c> mi</c><00:06:10.330><c> ricordo</c>
+
+00:06:10.770 --> 00:06:10.780 align:start position:0%
+e invece li in b zetas che mi ricordo
+ 
+
+00:06:10.780 --> 00:06:13.460 align:start position:0%
+e invece li in b zetas che mi ricordo
+bene<00:06:11.110><c> template</c>
+
+00:06:13.460 --> 00:06:13.470 align:start position:0%
+bene template
+ 
+
+00:06:13.470 --> 00:06:16.900 align:start position:0%
+bene template
+cash
+
+00:06:16.900 --> 00:06:16.910 align:start position:0%
+ 
+ 
+
+00:06:16.910 --> 00:06:21.040 align:start position:0%
+ 
+abbiamo<00:06:17.330><c> il</c><00:06:17.840><c> nostro</c><00:06:18.080><c> brut</c><00:06:19.040><c> fs</c><00:06:19.880><c> e</c><00:06:20.150><c> altre</c><00:06:20.600><c> cose</c>
+
+00:06:21.040 --> 00:06:21.050 align:start position:0%
+abbiamo il nostro brut fs e altre cose
+ 
+
+00:06:21.050 --> 00:06:24.930 align:start position:0%
+abbiamo il nostro brut fs e altre cose
+allora<00:06:21.530><c> c'è</c><00:06:21.710><c> una</c><00:06:21.920><c> diciamo</c><00:06:22.700><c> nell'asse</c><00:06:23.330><c> meno.la</c>
+
+00:06:24.930 --> 00:06:24.940 align:start position:0%
+allora c'è una diciamo nell'asse meno.la
+ 
+
+00:06:24.940 --> 00:06:29.440 align:start position:0%
+allora c'è una diciamo nell'asse meno.la
+per<00:06:25.940><c> avere</c><00:06:26.740><c> un'idea</c><00:06:27.740><c> di</c><00:06:28.700><c> cosa</c><00:06:28.940><c> c'è</c><00:06:29.150><c> in</c><00:06:29.240><c> questa</c>
+
+00:06:29.440 --> 00:06:29.450 align:start position:0%
+per avere un'idea di cosa c'è in questa
+ 
+
+00:06:29.450 --> 00:06:32.260 align:start position:0%
+per avere un'idea di cosa c'è in questa
+cartella<00:06:29.810><c> cioè</c><00:06:30.770><c> debian</c><00:06:31.130><c> 10</c><00:06:31.610><c> che</c><00:06:32.000><c> non</c><00:06:32.150><c> ci</c>
+
+00:06:32.260 --> 00:06:32.270 align:start position:0%
+cartella cioè debian 10 che non ci
+ 
+
+00:06:32.270 --> 00:06:35.990 align:start position:0%
+cartella cioè debian 10 che non ci
+interessa<00:06:32.780><c> la</c><00:06:32.810><c> togliamo</c>
+
+00:06:35.990 --> 00:06:36.000 align:start position:0%
+ 
+ 
+
+00:06:36.000 --> 00:06:38.390 align:start position:0%
+ 
+perfetto
+
+00:06:38.390 --> 00:06:38.400 align:start position:0%
+perfetto
+ 
+
+00:06:38.400 --> 00:06:45.110 align:start position:0%
+perfetto
+da<00:06:38.460><c> ex</c><00:06:38.900><c> la</c><00:06:39.900><c> togliamo</c>
+
+00:06:45.110 --> 00:06:45.120 align:start position:0%
+ 
+ 
+
+00:06:45.120 --> 00:06:47.910 align:start position:0%
+ 
+diamo<00:06:46.120><c> accendiamo</c><00:06:46.660><c> insieme</c><00:06:47.410><c> allora</c><00:06:47.710><c> per</c>
+
+00:06:47.910 --> 00:06:47.920 align:start position:0%
+diamo accendiamo insieme allora per
+ 
+
+00:06:47.920 --> 00:06:49.680 align:start position:0%
+diamo accendiamo insieme allora per
+della<00:06:48.220><c> mente</c><00:06:48.640><c> ho</c><00:06:48.670><c> fatto</c><00:06:49.030><c> un</c><00:06:49.090><c> contro</c><00:06:49.390><c> il</c><00:06:49.510><c> ceo</c>
+
+00:06:49.680 --> 00:06:49.690 align:start position:0%
+della mente ho fatto un contro il ceo
+ 
+
+00:06:49.690 --> 00:06:51.720 align:start position:0%
+della mente ho fatto un contro il ceo
+interrotto<00:06:50.380><c> il</c><00:06:50.470><c> mondo</c><00:06:50.770><c> con</c><00:06:50.980><c> l'iphone</c><00:06:51.310><c> marchal</c>
+
+00:06:51.720 --> 00:06:51.730 align:start position:0%
+interrotto il mondo con l'iphone marchal
+ 
+
+00:06:51.730 --> 00:06:53.790 align:start position:0%
+interrotto il mondo con l'iphone marchal
+e<00:06:51.910><c> in</c><00:06:51.970><c> background</c><00:06:52.390><c> si</c><00:06:52.810><c> lavora</c><00:06:53.410><c> e</c><00:06:53.440><c> produce</c>
+
+00:06:53.790 --> 00:06:53.800 align:start position:0%
+e in background si lavora e produce
+ 
+
+00:06:53.800 --> 00:06:58.560 align:start position:0%
+e in background si lavora e produce
+tutto<00:06:54.690><c> poi</c><00:06:55.770><c> abbiamo</c><00:06:56.770><c> un</c><00:06:56.920><c> file</c><00:06:57.370><c> non</c><00:06:57.760><c> compresso</c>
+
+00:06:58.560 --> 00:06:58.570 align:start position:0%
+tutto poi abbiamo un file non compresso
+ 
+
+00:06:58.570 --> 00:07:03.060 align:start position:0%
+tutto poi abbiamo un file non compresso
+prut<00:06:59.110><c> fs</c><00:06:59.860><c> e</c><00:07:00.280><c> io</c><00:07:00.520><c> lo</c><00:07:01.180><c> voglio</c><00:07:01.530><c> voglio</c><00:07:02.530><c> mostrarvi</c>
+
+00:07:03.060 --> 00:07:03.070 align:start position:0%
+prut fs e io lo voglio voglio mostrarvi
+ 
+
+00:07:03.070 --> 00:07:05.290 align:start position:0%
+prut fs e io lo voglio voglio mostrarvi
+come<00:07:03.190><c> si</c><00:07:03.490><c> estrae</c>
+
+00:07:05.290 --> 00:07:05.300 align:start position:0%
+come si estrae
+ 
+
+00:07:05.300 --> 00:07:08.360 align:start position:0%
+come si estrae
+e<00:07:05.449><c> a</c><00:07:05.750><c> una</c><00:07:05.990><c> cartella</c><00:07:06.470><c> ubuntu</c>
+
+00:07:08.360 --> 00:07:08.370 align:start position:0%
+e a una cartella ubuntu
+ 
+
+00:07:08.370 --> 00:07:10.550 align:start position:0%
+e a una cartella ubuntu
+renderai
+
+00:07:10.550 --> 00:07:10.560 align:start position:0%
+renderai
+ 
+
+00:07:10.560 --> 00:07:14.330 align:start position:0%
+renderai
+culto<00:07:11.880><c> mariano</c><00:07:12.880><c> in</c><00:07:13.180><c> background</c>
+
+00:07:14.330 --> 00:07:14.340 align:start position:0%
+culto mariano in background
+ 
+
+00:07:14.340 --> 00:07:16.730 align:start position:0%
+culto mariano in background
+perfetto
+
+00:07:16.730 --> 00:07:16.740 align:start position:0%
+perfetto
+ 
+
+00:07:16.740 --> 00:07:19.159 align:start position:0%
+perfetto
+fatto<00:07:16.919><c> un</c><00:07:16.979><c> bottino</c><00:07:17.190><c> di</c><00:07:17.370><c> polizia</c><00:07:18.030><c> impariamo</c><00:07:18.990><c> a</c>
+
+00:07:19.159 --> 00:07:19.169 align:start position:0%
+fatto un bottino di polizia impariamo a
+ 
+
+00:07:19.169 --> 00:07:21.290 align:start position:0%
+fatto un bottino di polizia impariamo a
+decomprimere<00:07:19.979><c> abbiamo</c><00:07:20.669><c> visto</c><00:07:20.880><c> un</c><00:07:21.060><c> video</c>
+
+00:07:21.290 --> 00:07:21.300 align:start position:0%
+decomprimere abbiamo visto un video
+ 
+
+00:07:21.300 --> 00:07:26.689 align:start position:0%
+decomprimere abbiamo visto un video
+precedente<00:07:21.990><c> il</c><00:07:22.770><c> file</c><00:07:23.340><c> tar</c><00:07:24.090><c> punto</c><00:07:24.710><c> xz</c><00:07:25.710><c> quindi</c>
+
+00:07:26.689 --> 00:07:26.699 align:start position:0%
+precedente il file tar punto xz quindi
+ 
+
+00:07:26.699 --> 00:07:29.309 align:start position:0%
+precedente il file tar punto xz quindi
+xz<00:07:27.509><c> meno</c><00:07:28.199><c> di</c>
+
+00:07:29.309 --> 00:07:29.319 align:start position:0%
+xz meno di
+ 
+
+00:07:29.319 --> 00:07:31.210 align:start position:0%
+xz meno di
+magari<00:07:30.319><c> accettiamo</c><00:07:30.710><c> altro</c><00:07:30.889><c> un</c><00:07:30.949><c> verbo</c>
+
+00:07:31.210 --> 00:07:31.220 align:start position:0%
+magari accettiamo altro un verbo
+ 
+
+00:07:31.220 --> 00:07:33.820 align:start position:0%
+magari accettiamo altro un verbo
+proviamo<00:07:31.759><c> un</c><00:07:31.819><c> nervoso</c><00:07:32.449><c> ruote</c><00:07:32.960><c> fs</c><00:07:33.530><c> e</c><00:07:33.620><c> lui</c>
+
+00:07:33.820 --> 00:07:33.830 align:start position:0%
+proviamo un nervoso ruote fs e lui
+ 
+
+00:07:33.830 --> 00:07:37.890 align:start position:0%
+proviamo un nervoso ruote fs e lui
+lavora<00:07:34.310><c> e</c><00:07:35.090><c> sta</c><00:07:35.300><c> aprendo</c><00:07:35.599><c> mi</c><00:07:36.020><c> questo</c><00:07:36.380><c> file</c><00:07:36.830><c> o</c><00:07:37.099><c> 60</c>
+
+00:07:37.890 --> 00:07:37.900 align:start position:0%
+lavora e sta aprendo mi questo file o 60
+ 
+
+00:07:37.900 --> 00:07:44.239 align:start position:0%
+lavora e sta aprendo mi questo file o 60
+male<00:07:38.900><c> questo</c><00:07:39.110><c> ssd</c><00:07:39.560><c> piccolina</c>
+
+00:07:44.239 --> 00:07:44.249 align:start position:0%
+ 
+ 
+
+00:07:44.249 --> 00:07:47.269 align:start position:0%
+ 
+siamo<00:07:44.489><c> il</c><00:07:45.209><c> toro</c><00:07:45.479><c> che</c><00:07:46.469><c> possiamo</c><00:07:46.859><c> andare</c><00:07:47.009><c> ad</c>
+
+00:07:47.269 --> 00:07:47.279 align:start position:0%
+siamo il toro che possiamo andare ad
+ 
+
+00:07:47.279 --> 00:07:52.879 align:start position:0%
+siamo il toro che possiamo andare ad
+aprire<00:07:47.779><c> quindi</c>
+
+00:07:52.879 --> 00:07:52.889 align:start position:0%
+ 
+ 
+
+00:07:52.889 --> 00:07:57.059 align:start position:0%
+ 
+hicks<00:07:54.300><c> di</c><00:07:55.300><c> f</c><00:07:55.840><c> per</c><00:07:56.169><c> vedere</c><00:07:56.470><c> cosa</c><00:07:56.620><c> c'è</c><00:07:56.919><c> dentro</c>
+
+00:07:57.059 --> 00:07:57.069 align:start position:0%
+hicks di f per vedere cosa c'è dentro
+ 
+
+00:07:57.069 --> 00:07:58.860 align:start position:0%
+hicks di f per vedere cosa c'è dentro
+anche<00:07:57.490><c> il</c><00:07:57.580><c> file</c><00:07:57.819><c> mentre</c><00:07:57.940><c> non</c><00:07:58.180><c> e</c><00:07:58.240><c> comprime</c>
+
+00:07:58.860 --> 00:07:58.870 align:start position:0%
+anche il file mentre non e comprime
+ 
+
+00:07:58.870 --> 00:08:02.120 align:start position:0%
+anche il file mentre non e comprime
+router<00:07:59.830><c> è</c><00:08:00.039><c> spunto</c><00:08:00.669><c> tar</c><00:08:00.880><c> in</c>
+
+00:08:02.120 --> 00:08:02.130 align:start position:0%
+router è spunto tar in
+ 
+
+00:08:02.130 --> 00:08:04.219 align:start position:0%
+router è spunto tar in
+c.so
+
+00:08:04.219 --> 00:08:04.229 align:start position:0%
+c.so
+ 
+
+00:08:04.229 --> 00:08:08.820 align:start position:0%
+c.so
+p<00:08:05.229><c> mint</c>
+
+00:08:08.820 --> 00:08:08.830 align:start position:0%
+ 
+ 
+
+00:08:08.830 --> 00:08:10.270 align:start position:0%
+ 
+all
+
+00:08:10.270 --> 00:08:10.280 align:start position:0%
+all
+ 
+
+00:08:10.280 --> 00:08:12.330 align:start position:0%
+all
+parlo<00:08:10.550><c> delle</c><00:08:10.820><c> cose</c><00:08:11.090><c> devo</c><00:08:11.330><c> creare</c><00:08:11.570><c> mkd</c>
+
+00:08:12.330 --> 00:08:12.340 align:start position:0%
+parlo delle cose devo creare mkd
+ 
+
+00:08:12.340 --> 00:08:16.780 align:start position:0%
+parlo delle cose devo creare mkd
+rappresenta<00:08:13.600><c> le</c><00:08:14.600><c> censure</c><00:08:15.040><c> freccia</c><00:08:16.040><c> in</c><00:08:16.160><c> su</c><00:08:16.340><c> ed</c>
+
+00:08:16.780 --> 00:08:16.790 align:start position:0%
+rappresenta le censure freccia in su ed
+ 
+
+00:08:16.790 --> 00:08:19.120 align:start position:0%
+rappresenta le censure freccia in su ed
+ecco<00:08:16.970><c> che</c><00:08:17.290><c> quello</c><00:08:18.290><c> che</c><00:08:18.380><c> cena</c><00:08:18.680><c> il</c><00:08:18.770><c> container</c>
+
+00:08:19.120 --> 00:08:19.130 align:start position:0%
+ecco che quello che cena il container
+ 
+
+00:08:19.130 --> 00:08:21.190 align:start position:0%
+ecco che quello che cena il container
+non<00:08:19.550><c> stiamo</c><00:08:19.790><c> andando</c><00:08:20.000><c> ad</c><00:08:20.330><c> esplodere</c><00:08:20.600><c> nella</c>
+
+00:08:21.190 --> 00:08:21.200 align:start position:0%
+non stiamo andando ad esplodere nella
+ 
+
+00:08:21.200 --> 00:08:23.700 align:start position:0%
+non stiamo andando ad esplodere nella
+cartella<00:08:21.500><c> mint</c>
+
+00:08:23.700 --> 00:08:23.710 align:start position:0%
+cartella mint
+ 
+
+00:08:23.710 --> 00:08:25.890 align:start position:0%
+cartella mint
+non<00:08:23.980><c> mi</c><00:08:24.100><c> credete</c><00:08:24.400><c> san</c><00:08:24.880><c> tommaso</c><00:08:25.030><c> non</c><00:08:25.480><c> denunci</c>
+
+00:08:25.890 --> 00:08:25.900 align:start position:0%
+non mi credete san tommaso non denunci
+ 
+
+00:08:25.900 --> 00:08:30.750 align:start position:0%
+non mi credete san tommaso non denunci
+che<00:08:25.990><c> non</c><00:08:26.380><c> ci</c><00:08:26.440><c> mette</c><00:08:26.620><c> il</c><00:08:26.710><c> naso</c><00:08:27.040><c> ls</c><00:08:27.910><c> ben</c><00:08:28.900><c> l</c><00:08:29.020><c> update</c>
+
+00:08:30.750 --> 00:08:30.760 align:start position:0%
+che non ci mette il naso ls ben l update
+ 
+
+00:08:30.760 --> 00:08:34.370 align:start position:0%
+che non ci mette il naso ls ben l update
+ed<00:08:30.820><c> ecco</c><00:08:31.270><c> il</c><00:08:32.170><c> contenuto</c><00:08:32.440><c> del</c><00:08:32.770><c> container</c>
+
+00:08:34.370 --> 00:08:34.380 align:start position:0%
+ed ecco il contenuto del container
+ 
+
+00:08:34.380 --> 00:08:37.320 align:start position:0%
+ed ecco il contenuto del container
+questo<00:08:35.380><c> ci</c><00:08:35.860><c> serve</c><00:08:35.980><c> perché</c><00:08:36.430><c> dobbiamo</c><00:08:36.610><c> andarlo</c>
+
+00:08:37.320 --> 00:08:37.330 align:start position:0%
+questo ci serve perché dobbiamo andarlo
+ 
+
+00:08:37.330 --> 00:08:40.020 align:start position:0%
+questo ci serve perché dobbiamo andarlo
+a<00:08:37.360><c> modificare</c><00:08:38.230><c> ora</c><00:08:38.830><c> la</c><00:08:39.070><c> stessa</c><00:08:39.190><c> sorte</c><00:08:39.460><c> deve</c>
+
+00:08:40.020 --> 00:08:40.030 align:start position:0%
+a modificare ora la stessa sorte deve
+ 
+
+00:08:40.030 --> 00:08:42.540 align:start position:0%
+a modificare ora la stessa sorte deve
+capitare<00:08:40.450><c> al</c><00:08:40.840><c> nostro</c><00:08:41.380><c> ubuntu</c><00:08:41.890><c> punto</c><00:08:42.220><c> tar.gz</c>
+
+00:08:42.540 --> 00:08:42.550 align:start position:0%
+capitare al nostro ubuntu punto tar.gz
+ 
+
+00:08:42.550 --> 00:08:46.860 align:start position:0%
+capitare al nostro ubuntu punto tar.gz
+quindi<00:08:43.360><c> creiamoci</c><00:08:43.870><c> una</c><00:08:44.080><c> cartella</c><00:08:44.620><c> ubuntu</c>
+
+00:08:46.860 --> 00:08:46.870 align:start position:0%
+quindi creiamoci una cartella ubuntu
+ 
+
+00:08:46.870 --> 00:08:52.670 align:start position:0%
+quindi creiamoci una cartella ubuntu
+facciamo<00:08:47.740><c> un</c><00:08:47.860><c> tar</c><00:08:48.570><c> zx</c><00:08:49.980><c> di</c><00:08:50.980><c> ubuntu</c>
+
+00:08:52.670 --> 00:08:52.680 align:start position:0%
+facciamo un tar zx di ubuntu
+ 
+
+00:08:52.680 --> 00:08:56.600 align:start position:0%
+facciamo un tar zx di ubuntu
+protino<00:08:53.490><c> 20</c><00:08:54.270><c> in</c><00:08:54.540><c> meno</c><00:08:54.899><c> c</c><00:08:55.260><c> maiuscola</c><00:08:55.610><c> spazio</c>
+
+00:08:56.600 --> 00:08:56.610 align:start position:0%
+protino 20 in meno c maiuscola spazio
+ 
+
+00:08:56.610 --> 00:09:02.540 align:start position:0%
+protino 20 in meno c maiuscola spazio
+punto<00:08:56.970><c> slash</c><00:08:57.300><c> ubuntu</c>
+
+00:09:02.540 --> 00:09:02.550 align:start position:0%
+ 
+ 
+
+00:09:02.550 --> 00:09:04.550 align:start position:0%
+ 
+in<00:09:02.760><c> questo</c><00:09:03.180><c> modo</c>
+
+00:09:04.550 --> 00:09:04.560 align:start position:0%
+in questo modo
+ 
+
+00:09:04.560 --> 00:09:08.650 align:start position:0%
+in questo modo
+abbiamo<00:09:04.890><c> messo</c><00:09:05.279><c> dentro</c><00:09:05.790><c> pin</c><00:09:06.120><c> bar</c><00:09:06.930><c> in</c>
+
+00:09:08.650 --> 00:09:08.660 align:start position:0%
+abbiamo messo dentro pin bar in
+ 
+
+00:09:08.660 --> 00:09:13.060 align:start position:0%
+abbiamo messo dentro pin bar in
+ubuntu<00:09:09.660><c> il</c><00:09:10.320><c> contenuto</c><00:09:11.100><c> del</c>
+
+00:09:13.060 --> 00:09:13.070 align:start position:0%
+ubuntu il contenuto del
+ 
+
+00:09:13.070 --> 00:09:17.300 align:start position:0%
+ubuntu il contenuto del
+container<00:09:14.180><c> per</c><00:09:15.180><c> nel</c><00:09:15.450><c> tar</c><00:09:15.660><c> gigena</c><00:09:16.279><c> entriamo</c><00:09:17.279><c> in</c>
+
+00:09:17.300 --> 00:09:17.310 align:start position:0%
+container per nel tar gigena entriamo in
+ 
+
+00:09:17.310 --> 00:09:20.420 align:start position:0%
+container per nel tar gigena entriamo in
+ubuntu<00:09:17.520><c> ed</c><00:09:18.529><c> etici</c>
+
+00:09:20.420 --> 00:09:20.430 align:start position:0%
+ubuntu ed etici
+ 
+
+00:09:20.430 --> 00:09:22.940 align:start position:0%
+ubuntu ed etici
+troveremo<00:09:20.760><c> un</c><00:09:20.910><c> file</c><00:09:21.330><c> che</c><00:09:21.480><c> si</c><00:09:21.630><c> chiama</c><00:09:22.140><c> o</c><00:09:22.320><c> esseri</c>
+
+00:09:22.940 --> 00:09:22.950 align:start position:0%
+troveremo un file che si chiama o esseri
+ 
+
+00:09:22.950 --> 00:09:26.750 align:start position:0%
+troveremo un file che si chiama o esseri
+mises<00:09:23.779><c> questo</c><00:09:24.779><c> può</c><00:09:24.990><c> essere</c><00:09:25.020><c> lines</c><00:09:25.830><c> andiamo</c><00:09:26.730><c> a</c>
+
+00:09:26.750 --> 00:09:26.760 align:start position:0%
+mises questo può essere lines andiamo a
+ 
+
+00:09:26.760 --> 00:09:28.930 align:start position:0%
+mises questo può essere lines andiamo a
+vedere<00:09:26.790><c> cosa</c><00:09:27.150><c> contiene</c>
+
+00:09:28.930 --> 00:09:28.940 align:start position:0%
+vedere cosa contiene
+ 
+
+00:09:28.940 --> 00:09:33.320 align:start position:0%
+vedere cosa contiene
+bene<00:09:30.080><c> questo</c><00:09:31.080><c> è</c><00:09:31.110><c> un</c><00:09:31.290><c> punto</c><00:09:31.440><c> 20</c><00:09:31.950><c> 04</c><00:09:32.339><c> bla</c><00:09:32.940><c> bla</c><00:09:33.089><c> bla</c>
+
+00:09:33.320 --> 00:09:33.330 align:start position:0%
+bene questo è un punto 20 04 bla bla bla
+ 
+
+00:09:33.330 --> 00:09:37.030 align:start position:0%
+bene questo è un punto 20 04 bla bla bla
+più<00:09:33.630><c> tutto</c><00:09:33.960><c> quanto</c><00:09:34.200><c> una</c><00:09:34.350><c> serie</c><00:09:34.650><c> di</c><00:09:34.740><c> dati</c><00:09:35.160><c> che</c>
+
+00:09:37.030 --> 00:09:37.040 align:start position:0%
+più tutto quanto una serie di dati che
+ 
+
+00:09:37.040 --> 00:09:39.380 align:start position:0%
+più tutto quanto una serie di dati che
+mi<00:09:38.040><c> scuso</c><00:09:38.339><c> per</c><00:09:38.460><c> il</c><00:09:38.550><c> bla</c><00:09:38.700><c> bla</c><00:09:38.820><c> bla</c><00:09:38.970><c> ma</c><00:09:39.060><c> sono</c>
+
+00:09:39.380 --> 00:09:39.390 align:start position:0%
+mi scuso per il bla bla bla ma sono
+ 
+
+00:09:39.390 --> 00:09:41.660 align:start position:0%
+mi scuso per il bla bla bla ma sono
+stanco<00:09:39.570><c> e</c><00:09:39.750><c> quindi</c><00:09:40.050><c> fa</c><00:09:40.710><c> aprendo</c><00:09:40.980><c> scorciatoie</c>
+
+00:09:41.660 --> 00:09:41.670 align:start position:0%
+stanco e quindi fa aprendo scorciatoie
+ 
+
+00:09:41.670 --> 00:09:44.560 align:start position:0%
+stanco e quindi fa aprendo scorciatoie
+anch'io<00:09:42.180><c> allora</c>
+
+00:09:44.560 --> 00:09:44.570 align:start position:0%
+anch'io allora
+ 
+
+00:09:44.570 --> 00:09:47.360 align:start position:0%
+anch'io allora
+questo<00:09:45.570><c> file</c><00:09:45.930><c> ce</c><00:09:46.020><c> lo</c><00:09:46.140><c> dobbiamo</c><00:09:46.230><c> portare</c><00:09:46.950><c> così</c>
+
+00:09:47.360 --> 00:09:47.370 align:start position:0%
+questo file ce lo dobbiamo portare così
+ 
+
+00:09:47.370 --> 00:09:50.480 align:start position:0%
+questo file ce lo dobbiamo portare così
+come<00:09:47.810><c> nella</c><00:09:48.810><c> directory</c><00:09:49.110><c> quindi</c><00:09:50.040><c> facciamo</c><00:09:50.279><c> un</c>
+
+00:09:50.480 --> 00:09:50.490 align:start position:0%
+come nella directory quindi facciamo un
+ 
+
+00:09:50.490 --> 00:09:51.670 align:start position:0%
+come nella directory quindi facciamo un
+bel
+
+00:09:51.670 --> 00:09:51.680 align:start position:0%
+bel
+ 
+
+00:09:51.680 --> 00:09:53.710 align:start position:0%
+bel
+cps<00:09:52.680><c> meno</c>
+
+00:09:53.710 --> 00:09:53.720 align:start position:0%
+cps meno
+ 
+
+00:09:53.720 --> 00:09:56.900 align:start position:0%
+cps meno
+verboso<00:09:54.720><c> file</c><00:09:55.400><c> interactive</c><00:09:56.400><c> perché</c><00:09:56.730><c> voglio</c>
+
+00:09:56.900 --> 00:09:56.910 align:start position:0%
+verboso file interactive perché voglio
+ 
+
+00:09:56.910 --> 00:09:59.810 align:start position:0%
+verboso file interactive perché voglio
+essere<00:09:57.180><c> sicuro</c><00:09:57.660><c> di</c><00:09:57.690><c> fare</c><00:09:58.020><c> le</c><00:09:58.080><c> cose</c><00:09:58.200><c> giuste</c><00:09:58.820><c> e</c>
+
+00:09:59.810 --> 00:09:59.820 align:start position:0%
+essere sicuro di fare le cose giuste e
+ 
+
+00:09:59.820 --> 00:10:05.500 align:start position:0%
+essere sicuro di fare le cose giuste e
+richiede<00:10:00.360><c> conferma</c><00:10:01.370><c> o</c><00:10:02.370><c> s</c><00:10:03.080><c> release</c><00:10:04.080><c> dove</c>
+
+00:10:05.500 --> 00:10:05.510 align:start position:0%
+richiede conferma o s release dove
+ 
+
+00:10:05.510 --> 00:10:09.950 align:start position:0%
+richiede conferma o s release dove
+all'ora<00:10:06.980><c> o</c><00:10:07.980><c> salgo</c><00:10:08.610><c> le</c><00:10:09.000><c> pene</c><00:10:09.240><c> faccio</c><00:10:09.570><c> punto</c>
+
+00:10:09.950 --> 00:10:09.960 align:start position:0%
+all'ora o salgo le pene faccio punto
+ 
+
+00:10:09.960 --> 00:10:12.890 align:start position:0%
+all'ora o salgo le pene faccio punto
+punto<00:10:10.380><c> salgono</c><00:10:11.339><c> di</c><00:10:11.490><c> una</c><00:10:11.640><c> cartella</c><00:10:11.910><c> e</c><00:10:12.420><c> suonando</c>
+
+00:10:12.890 --> 00:10:12.900 align:start position:0%
+punto salgono di una cartella e suonando
+ 
+
+00:10:12.900 --> 00:10:17.180 align:start position:0%
+punto salgono di una cartella e suonando
+in<00:10:13.620><c> ubuntu</c><00:10:14.180><c> punto</c><00:10:15.180><c> punto</c><00:10:15.660><c> slash</c><00:10:16.020><c> e</c><00:10:16.770><c> sono</c><00:10:17.160><c> a</c>
+
+00:10:17.180 --> 00:10:17.190 align:start position:0%
+in ubuntu punto punto slash e sono a
+ 
+
+00:10:17.190 --> 00:10:19.750 align:start position:0%
+in ubuntu punto punto slash e sono a
+livello<00:10:17.550><c> di</c><00:10:17.670><c> ubuntu</c><00:10:17.910><c> quindi</c><00:10:18.570><c> scendo</c>
+
+00:10:19.750 --> 00:10:19.760 align:start position:0%
+livello di ubuntu quindi scendo
+ 
+
+00:10:19.760 --> 00:10:22.490 align:start position:0%
+livello di ubuntu quindi scendo
+entra<00:10:20.760><c> in</c><00:10:20.880><c> etici</c>
+
+00:10:22.490 --> 00:10:22.500 align:start position:0%
+entra in etici
+ 
+
+00:10:22.500 --> 00:10:23.890 align:start position:0%
+entra in etici
+a<00:10:22.530><c> questo</c><00:10:22.860><c> punto</c>
+
+00:10:23.890 --> 00:10:23.900 align:start position:0%
+a questo punto
+ 
+
+00:10:23.900 --> 00:10:27.440 align:start position:0%
+a questo punto
+mi<00:10:24.900><c> dirà</c><00:10:25.170><c> devo</c><00:10:25.950><c> sovrascrivere</c><00:10:26.760><c> certo</c><00:10:27.420><c> è</c>
+
+00:10:27.440 --> 00:10:27.450 align:start position:0%
+mi dirà devo sovrascrivere certo è
+ 
+
+00:10:27.450 --> 00:10:31.220 align:start position:0%
+mi dirà devo sovrascrivere certo è
+quello<00:10:27.600><c> che</c><00:10:27.780><c> voglio</c><00:10:27.900><c> yes</c><00:10:28.700><c> invio</c><00:10:29.900><c> e</c><00:10:30.900><c> abbiamo</c>
+
+00:10:31.220 --> 00:10:31.230 align:start position:0%
+quello che voglio yes invio e abbiamo
+ 
+
+00:10:31.230 --> 00:10:34.250 align:start position:0%
+quello che voglio yes invio e abbiamo
+messo<00:10:31.530><c> a</c><00:10:31.560><c> posto</c><00:10:31.740><c> il</c><00:10:31.980><c> primo</c><00:10:32.280><c> file</c><00:10:32.990><c> ma</c><00:10:33.990><c> c'è</c><00:10:34.140><c> un</c>
+
+00:10:34.250 --> 00:10:34.260 align:start position:0%
+messo a posto il primo file ma c'è un
+ 
+
+00:10:34.260 --> 00:10:34.900 align:start position:0%
+messo a posto il primo file ma c'è un
+problema
+
+00:10:34.900 --> 00:10:34.910 align:start position:0%
+problema
+ 
+
+00:10:34.910 --> 00:10:38.000 align:start position:0%
+problema
+i<00:10:35.910><c> sistemi</c><00:10:36.270><c> operativi</c><00:10:36.420><c> che</c><00:10:37.260><c> aderiscono</c><00:10:37.800><c> allo</c>
+
+00:10:38.000 --> 00:10:38.010 align:start position:0%
+i sistemi operativi che aderiscono allo
+ 
+
+00:10:38.010 --> 00:10:41.180 align:start position:0%
+i sistemi operativi che aderiscono allo
+standard<00:10:38.400><c> linux</c><00:10:39.150><c> standard</c><00:10:40.080><c> based</c><00:10:40.190><c> rispondono</c>
+
+00:10:41.180 --> 00:10:41.190 align:start position:0%
+standard linux standard based rispondono
+ 
+
+00:10:41.190 --> 00:10:42.520 align:start position:0%
+standard linux standard based rispondono
+al<00:10:41.370><c> comando</c>
+
+00:10:42.520 --> 00:10:42.530 align:start position:0%
+al comando
+ 
+
+00:10:42.530 --> 00:10:47.079 align:start position:0%
+al comando
+lsb<00:10:43.530><c> underscore</c><00:10:44.370><c> release</c>
+
+00:10:47.079 --> 00:10:47.089 align:start position:0%
+ 
+ 
+
+00:10:47.089 --> 00:10:50.930 align:start position:0%
+ 
+mena<00:10:48.410><c> quando</c><00:10:49.410><c> rispondo</c><00:10:49.980><c> non</c><00:10:50.130><c> so</c><00:10:50.610><c> se</c><00:10:50.820><c> sono</c>
+
+00:10:50.930 --> 00:10:50.940 align:start position:0%
+mena quando rispondo non so se sono
+ 
+
+00:10:50.940 --> 00:10:52.760 align:start position:0%
+mena quando rispondo non so se sono
+attinenti<00:10:51.330><c> rispondono</c><00:10:52.080><c> andando</c><00:10:52.500><c> a</c><00:10:52.530><c> leggere</c>
+
+00:10:52.760 --> 00:10:52.770 align:start position:0%
+attinenti rispondono andando a leggere
+ 
+
+00:10:52.770 --> 00:10:54.050 align:start position:0%
+attinenti rispondono andando a leggere
+dei<00:10:53.070><c> dati</c>
+
+00:10:54.050 --> 00:10:54.060 align:start position:0%
+dei dati
+ 
+
+00:10:54.060 --> 00:10:56.090 align:start position:0%
+dei dati
+quindi<00:10:54.270><c> dobbiamo</c><00:10:54.360><c> andare</c><00:10:54.870><c> a</c><00:10:54.900><c> trovare</c><00:10:55.440><c> dove</c>
+
+00:10:56.090 --> 00:10:56.100 align:start position:0%
+quindi dobbiamo andare a trovare dove
+ 
+
+00:10:56.100 --> 00:10:59.930 align:start position:0%
+quindi dobbiamo andare a trovare dove
+sono<00:10:56.400><c> i</c><00:10:56.430><c> dati</c><00:10:56.780><c> di</c><00:10:57.780><c> lsb</c><00:10:58.230><c> di</c><00:10:58.560><c> ubuntu</c><00:10:58.940><c> per</c>
+
+00:10:59.930 --> 00:10:59.940 align:start position:0%
+sono i dati di lsb di ubuntu per
+ 
+
+00:10:59.940 --> 00:11:04.750 align:start position:0%
+sono i dati di lsb di ubuntu per
+portarli<00:11:00.720><c> nella</c><00:11:00.930><c> nostra</c><00:11:01.290><c> cartella</c><00:11:01.650><c> di</c><00:11:01.950><c> mint</c>
+
+00:11:04.750 --> 00:11:04.760 align:start position:0%
+ 
+ 
+
+00:11:04.760 --> 00:11:06.130 align:start position:0%
+ 
+attenzione
+
+00:11:06.130 --> 00:11:06.140 align:start position:0%
+attenzione
+ 
+
+00:11:06.140 --> 00:11:07.600 align:start position:0%
+attenzione
+dopo<00:11:06.320><c> che</c><00:11:06.410><c> abbiamo</c><00:11:06.440><c> fatto</c><00:11:06.800><c> il</c><00:11:07.040><c> ponte</c><00:11:07.340><c> né</c><00:11:07.580><c> a</c>
+
+00:11:07.600 --> 00:11:07.610 align:start position:0%
+dopo che abbiamo fatto il ponte né a
+ 
+
+00:11:07.610 --> 00:11:09.570 align:start position:0%
+dopo che abbiamo fatto il ponte né a
+questo<00:11:08.540><c> container</c>
+
+00:11:09.570 --> 00:11:09.580 align:start position:0%
+questo container
+ 
+
+00:11:09.580 --> 00:11:13.420 align:start position:0%
+questo container
+sarà<00:11:10.580><c> visto</c><00:11:11.000><c> appunto</c><00:11:11.360><c> come</c><00:11:11.810><c> ubuntu</c><00:11:12.200><c> in</c><00:11:13.010><c> tutto</c>
+
+00:11:13.420 --> 00:11:13.430 align:start position:0%
+sarà visto appunto come ubuntu in tutto
+ 
+
+00:11:13.430 --> 00:11:17.460 align:start position:0%
+sarà visto appunto come ubuntu in tutto
+e<00:11:13.460><c> per</c><00:11:13.520><c> tutto</c>
+
+00:11:17.460 --> 00:11:17.470 align:start position:0%
+ 
+ 
+
+00:11:17.470 --> 00:11:19.410 align:start position:0%
+ 
+i<00:11:17.620><c> container</c><00:11:17.980><c> per</c><00:11:18.280><c> fortuna</c><00:11:19.000><c> macchine</c>
+
+00:11:19.410 --> 00:11:19.420 align:start position:0%
+i container per fortuna macchine
+ 
+
+00:11:19.420 --> 00:11:22.230 align:start position:0%
+i container per fortuna macchine
+virtuali<00:11:19.540><c> per</c><00:11:20.080><c> cui</c><00:11:20.230><c> quando</c><00:11:20.910><c> facciamo</c><00:11:21.910><c> una</c>
+
+00:11:22.230 --> 00:11:22.240 align:start position:0%
+virtuali per cui quando facciamo una
+ 
+
+00:11:22.240 --> 00:11:24.060 align:start position:0%
+virtuali per cui quando facciamo una
+nuova<00:11:22.540><c> release</c><00:11:22.780><c> di</c><00:11:23.080><c> container</c><00:11:23.410><c> dobbiamo</c>
+
+00:11:24.060 --> 00:11:24.070 align:start position:0%
+nuova release di container dobbiamo
+ 
+
+00:11:24.070 --> 00:11:26.340 align:start position:0%
+nuova release di container dobbiamo
+ripetere<00:11:24.550><c> da</c><00:11:24.670><c> capo</c><00:11:24.970><c> questa</c><00:11:25.330><c> tutta</c><00:11:26.140><c> quanta</c>
+
+00:11:26.340 --> 00:11:26.350 align:start position:0%
+ripetere da capo questa tutta quanta
+ 
+
+00:11:26.350 --> 00:11:28.860 align:start position:0%
+ripetere da capo questa tutta quanta
+questa<00:11:26.680><c> procedura</c><00:11:27.340><c> perché</c><00:11:28.150><c> se</c><00:11:28.300><c> fosse</c><00:11:28.420><c> stata</c>
+
+00:11:28.860 --> 00:11:28.870 align:start position:0%
+questa procedura perché se fosse stata
+ 
+
+00:11:28.870 --> 00:11:31.200 align:start position:0%
+questa procedura perché se fosse stata
+una<00:11:28.900><c> macchina</c><00:11:29.410><c> virtuale</c>
+
+00:11:31.200 --> 00:11:31.210 align:start position:0%
+una macchina virtuale
+ 
+
+00:11:31.210 --> 00:11:33.390 align:start position:0%
+una macchina virtuale
+noi<00:11:31.420><c> avremmo</c><00:11:31.690><c> avuto</c><00:11:32.080><c> il</c><00:11:32.200><c> problema</c><00:11:32.380><c> se</c><00:11:33.280><c> ci</c>
+
+00:11:33.390 --> 00:11:33.400 align:start position:0%
+noi avremmo avuto il problema se ci
+ 
+
+00:11:33.400 --> 00:11:34.950 align:start position:0%
+noi avremmo avuto il problema se ci
+fosse<00:11:33.730><c> stata</c><00:11:34.000><c> questa</c><00:11:34.030><c> limitazione</c><00:11:34.660><c> di</c>
+
+00:11:34.950 --> 00:11:34.960 align:start position:0%
+fosse stata questa limitazione di
+ 
+
+00:11:34.960 --> 00:11:38.680 align:start position:0%
+fosse stata questa limitazione di
+supporto<00:11:35.620><c> per</c><00:11:35.800><c> fortuna</c><00:11:36.250><c> non</c><00:11:36.430><c> c'è</c>
+
+00:11:38.680 --> 00:11:38.690 align:start position:0%
+ 
+ 
+
+00:11:38.690 --> 00:11:40.530 align:start position:0%
+ 
+quindi<00:11:38.840><c> questa</c><00:11:39.020><c> è</c><00:11:39.050><c> una</c><00:11:39.200><c> un</c><00:11:39.290><c> po</c>
+
+00:11:40.530 --> 00:11:40.540 align:start position:0%
+quindi questa è una un po
+ 
+
+00:11:40.540 --> 00:11:42.449 align:start position:0%
+quindi questa è una un po
+una
+
+00:11:42.449 --> 00:11:42.459 align:start position:0%
+una
+ 
+
+00:11:42.459 --> 00:11:45.250 align:start position:0%
+una
+un<00:11:43.459><c> caso</c><00:11:43.760><c> limite</c><00:11:43.940><c> l'analisi</c><00:11:44.810><c> di</c><00:11:44.899><c> un</c><00:11:45.020><c> caso</c>
+
+00:11:45.250 --> 00:11:45.260 align:start position:0%
+un caso limite l'analisi di un caso
+ 
+
+00:11:45.260 --> 00:11:47.769 align:start position:0%
+un caso limite l'analisi di un caso
+limite<00:11:45.709><c> cosa</c><00:11:46.610><c> sarebbe</c><00:11:46.940><c> successo</c><00:11:47.360><c> in</c><00:11:47.390><c> caso</c><00:11:47.660><c> di</c>
+
+00:11:47.769 --> 00:11:47.779 align:start position:0%
+limite cosa sarebbe successo in caso di
+ 
+
+00:11:47.779 --> 00:11:50.350 align:start position:0%
+limite cosa sarebbe successo in caso di
+aggiornamento<00:11:48.440><c> di</c><00:11:48.589><c> release</c><00:11:49.060><c> alla</c><00:11:50.060><c> nuova</c>
+
+00:11:50.350 --> 00:11:50.360 align:start position:0%
+aggiornamento di release alla nuova
+ 
+
+00:11:50.360 --> 00:11:53.290 align:start position:0%
+aggiornamento di release alla nuova
+release<00:11:51.070><c> sarebbero</c><00:11:52.070><c> stati</c><00:11:52.279><c> scaricati</c><00:11:52.399><c> file</c>
+
+00:11:53.290 --> 00:11:53.300 align:start position:0%
+release sarebbero stati scaricati file
+ 
+
+00:11:53.300 --> 00:11:55.420 align:start position:0%
+release sarebbero stati scaricati file
+del<00:11:53.660><c> nuovo</c><00:11:53.930><c> del</c><00:11:54.200><c> pacchetto</c><00:11:54.529><c> lsb</c><00:11:55.010><c> release</c>
+
+00:11:55.420 --> 00:11:55.430 align:start position:0%
+del nuovo del pacchetto lsb release
+ 
+
+00:11:55.430 --> 00:11:58.300 align:start position:0%
+del nuovo del pacchetto lsb release
+sovrascrivendo<00:11:56.270><c> questa</c><00:11:56.660><c> cosa</c><00:11:57.050><c> e</c><00:11:57.649><c> rendendo</c>
+
+00:11:58.300 --> 00:11:58.310 align:start position:0%
+sovrascrivendo questa cosa e rendendo
+ 
+
+00:11:58.310 --> 00:11:59.850 align:start position:0%
+sovrascrivendo questa cosa e rendendo
+non<00:11:59.000><c> più</c>
+
+00:11:59.850 --> 00:11:59.860 align:start position:0%
+non più
+ 
+
+00:11:59.860 --> 00:12:02.800 align:start position:0%
+non più
+utilizzabile<00:12:00.890><c> la</c><00:12:01.220><c> nostra</c><00:12:01.339><c> macchina</c><00:12:02.060><c> però</c><00:12:02.690><c> qui</c>
+
+00:12:02.800 --> 00:12:02.810 align:start position:0%
+utilizzabile la nostra macchina però qui
+ 
+
+00:12:02.810 --> 00:12:04.389 align:start position:0%
+utilizzabile la nostra macchina però qui
+siamo<00:12:02.990><c> nella</c><00:12:03.170><c> milan</c><00:12:03.440><c> ambito</c><00:12:03.800><c> dell'ipotesi</c>
+
+00:12:04.389 --> 00:12:04.399 align:start position:0%
+siamo nella milan ambito dell'ipotesi
+ 
+
+00:12:04.399 --> 00:12:07.780 align:start position:0%
+siamo nella milan ambito dell'ipotesi
+della<00:12:04.760><c> fantascienza</c><00:12:05.630><c> sta</c><00:12:06.320><c> di</c><00:12:06.410><c> fatto</c><00:12:06.440><c> che</c><00:12:06.790><c> ora</c>
+
+00:12:07.780 --> 00:12:07.790 align:start position:0%
+della fantascienza sta di fatto che ora
+ 
+
+00:12:07.790 --> 00:12:09.340 align:start position:0%
+della fantascienza sta di fatto che ora
+stiamo<00:12:07.880><c> modificando</c><00:12:08.089><c> un</c><00:12:08.510><c> container</c><00:12:08.839><c> che</c><00:12:09.260><c> la</c>
+
+00:12:09.340 --> 00:12:09.350 align:start position:0%
+stiamo modificando un container che la
+ 
+
+00:12:09.350 --> 00:12:10.840 align:start position:0%
+stiamo modificando un container che la
+prossima<00:12:09.529><c> volta</c><00:12:09.740><c> che</c><00:12:09.980><c> ci</c><00:12:10.010><c> riuscirà</c><00:12:10.520><c> ad</c><00:12:10.670><c> esso</c>
+
+00:12:10.840 --> 00:12:10.850 align:start position:0%
+prossima volta che ci riuscirà ad esso
+ 
+
+00:12:10.850 --> 00:12:13.560 align:start position:0%
+prossima volta che ci riuscirà ad esso
+dicembre<00:12:11.330><c> da</c><00:12:12.020><c> 20</c>
+
+00:12:13.560 --> 00:12:13.570 align:start position:0%
+dicembre da 20
+ 
+
+00:12:13.570 --> 00:12:17.070 align:start position:0%
+dicembre da 20
+04<00:12:14.570><c> 3</c>
+
+00:12:17.070 --> 00:12:17.080 align:start position:0%
+04 3
+ 
+
+00:12:17.080 --> 00:12:19.800 align:start position:0%
+04 3
+avremo<00:12:17.890><c> da</c><00:12:18.280><c> rifare</c><00:12:18.640><c> il</c><00:12:18.700><c> container</c><00:12:19.030><c> con</c><00:12:19.540><c> questa</c>
+
+00:12:19.800 --> 00:12:19.810 align:start position:0%
+avremo da rifare il container con questa
+ 
+
+00:12:19.810 --> 00:12:21.080 align:start position:0%
+avremo da rifare il container con questa
+stessa<00:12:19.990><c> metodologia</c>
+
+00:12:21.080 --> 00:12:21.090 align:start position:0%
+stessa metodologia
+ 
+
+00:12:21.090 --> 00:12:24.120 align:start position:0%
+stessa metodologia
+vado<00:12:22.090><c> a</c><00:12:22.120><c> studiarmi</c><00:12:22.540><c> la</c><00:12:22.660><c> documentazione</c><00:12:23.130><c> torno</c>
+
+00:12:24.120 --> 00:12:24.130 align:start position:0%
+vado a studiarmi la documentazione torno
+ 
+
+00:12:24.130 --> 00:12:27.820 align:start position:0%
+vado a studiarmi la documentazione torno
+tra<00:12:24.280><c> un</c><00:12:24.370><c> attimo</c>
+
+00:12:27.820 --> 00:12:27.830 align:start position:0%
+ 
+ 
+
+00:12:27.830 --> 00:12:30.460 align:start position:0%
+ 
+allora<00:12:28.640><c> guardiamo</c><00:12:29.570><c> assieme</c><00:12:29.780><c> allo</c><00:12:29.990><c> schermo</c>
+
+00:12:30.460 --> 00:12:30.470 align:start position:0%
+allora guardiamo assieme allo schermo
+ 
+
+00:12:30.470 --> 00:12:34.620 align:start position:0%
+allora guardiamo assieme allo schermo
+perché<00:12:30.830><c> è</c><00:12:30.890><c> un</c><00:12:30.980><c> pochino</c><00:12:31.130><c> cambiato</c>
+
+00:12:34.620 --> 00:12:34.630 align:start position:0%
+ 
+ 
+
+00:12:34.630 --> 00:12:39.000 align:start position:0%
+ 
+visto<00:12:35.020><c> che</c><00:12:35.230><c> nel</c><00:12:35.440><c> file</c><00:12:36.930><c> ho</c><00:12:37.930><c> visto</c><00:12:38.440><c> che</c><00:12:38.650><c> nella</c>
+
+00:12:39.000 --> 00:12:39.010 align:start position:0%
+visto che nel file ho visto che nella
+ 
+
+00:12:39.010 --> 00:12:41.670 align:start position:0%
+visto che nel file ho visto che nella
+cartella<00:12:39.430><c> etici</c><00:12:40.270><c> è</c><00:12:40.450><c> presente</c><00:12:40.960><c> anche</c><00:12:41.170><c> un</c><00:12:41.290><c> file</c>
+
+00:12:41.670 --> 00:12:41.680 align:start position:0%
+cartella etici è presente anche un file
+ 
+
+00:12:41.680 --> 00:12:44.910 align:start position:0%
+cartella etici è presente anche un file
+lsb<00:12:42.190><c> release</c><00:12:42.700><c> quindi</c><00:12:43.690><c> ho</c><00:12:43.720><c> fatto</c><00:12:43.780><c> lsl</c><00:12:44.470><c> singer</c><00:12:44.800><c> e</c>
+
+00:12:44.910 --> 00:12:44.920 align:start position:0%
+lsb release quindi ho fatto lsl singer e
+ 
+
+00:12:44.920 --> 00:12:47.010 align:start position:0%
+lsb release quindi ho fatto lsl singer e
+liszt<00:12:45.280><c> per</c><00:12:45.550><c> verificare</c><00:12:46.150><c> questa</c><00:12:46.180><c> cosa</c><00:12:46.810><c> anche</c>
+
+00:12:47.010 --> 00:12:47.020 align:start position:0%
+liszt per verificare questa cosa anche
+ 
+
+00:12:47.020 --> 00:12:48.690 align:start position:0%
+liszt per verificare questa cosa anche
+su<00:12:47.140><c> questa</c><00:12:47.380><c> in</c><00:12:47.980><c> questa</c><00:12:48.220><c> cartella</c><00:12:48.490><c> di</c>
+
+00:12:48.690 --> 00:12:48.700 align:start position:0%
+su questa in questa cartella di
+ 
+
+00:12:48.700 --> 00:12:51.000 align:start position:0%
+su questa in questa cartella di
+container<00:12:49.000><c> ubuntu</c><00:12:49.660><c> e</c><00:12:50.440><c> poi</c><00:12:50.650><c> me</c><00:12:50.740><c> non</c><00:12:50.890><c> sono</c>
+
+00:12:51.000 --> 00:12:51.010 align:start position:0%
+container ubuntu e poi me non sono
+ 
+
+00:12:51.010 --> 00:12:53.450 align:start position:0%
+container ubuntu e poi me non sono
+aperto<00:12:51.400><c> con</c><00:12:51.520><c> il</c><00:12:51.700><c> moro</c><00:12:52.210><c> e</c><00:12:52.300><c> vedo</c><00:12:52.660><c> che</c><00:12:52.690><c> ci</c><00:12:52.990><c> sono</c>
+
+00:12:53.450 --> 00:12:53.460 align:start position:0%
+aperto con il moro e vedo che ci sono
+ 
+
+00:12:53.460 --> 00:12:56.880 align:start position:0%
+aperto con il moro e vedo che ci sono
+altri<00:12:54.460><c> dati</c><00:12:54.880><c> che</c><00:12:55.150><c> districhi</c><00:12:55.890><c> distinguono</c>
+
+00:12:56.880 --> 00:12:56.890 align:start position:0%
+altri dati che districhi distinguono
+ 
+
+00:12:56.890 --> 00:12:59.970 align:start position:0%
+altri dati che districhi distinguono
+questa<00:12:57.130><c> distribuzione</c><00:12:57.460><c> delle</c><00:12:58.150><c> altre</c><00:12:58.980><c> è</c>
+
+00:12:59.970 --> 00:12:59.980 align:start position:0%
+questa distribuzione delle altre è
+ 
+
+00:12:59.980 --> 00:13:03.360 align:start position:0%
+questa distribuzione delle altre è
+fondamentalmente<00:13:00.700><c> ripeto</c><00:13:01.510><c> l'operazione</c><00:13:02.370><c> che</c>
+
+00:13:03.360 --> 00:13:03.370 align:start position:0%
+fondamentalmente ripeto l'operazione che
+ 
+
+00:13:03.370 --> 00:13:04.400 align:start position:0%
+fondamentalmente ripeto l'operazione che
+ho<00:13:03.400><c> fatto</c><00:13:03.580><c> prima</c>
+
+00:13:04.400 --> 00:13:04.410 align:start position:0%
+ho fatto prima
+ 
+
+00:13:04.410 --> 00:13:08.070 align:start position:0%
+ho fatto prima
+con<00:13:05.410><c> lsd</c><00:13:06.250><c> release</c>
+
+00:13:08.070 --> 00:13:08.080 align:start position:0%
+con lsd release
+ 
+
+00:13:08.080 --> 00:13:10.350 align:start position:0%
+con lsd release
+poi<00:13:08.560><c> sottoscriverlo</c><00:13:09.970><c> il</c><00:13:10.030><c> provvedimento</c>
+
+00:13:10.350 --> 00:13:10.360 align:start position:0%
+poi sottoscriverlo il provvedimento
+ 
+
+00:13:10.360 --> 00:13:14.190 align:start position:0%
+poi sottoscriverlo il provvedimento
+certamente<00:13:11.460><c> a</c><00:13:12.460><c> questo</c><00:13:12.850><c> punto</c><00:13:13.270><c> dovrei</c><00:13:13.810><c> aveva</c>
+
+00:13:14.190 --> 00:13:14.200 align:start position:0%
+certamente a questo punto dovrei aveva
+ 
+
+00:13:14.200 --> 00:13:18.060 align:start position:0%
+certamente a questo punto dovrei aveva
+terminato<00:13:14.580><c> le</c><00:13:15.580><c> modifiche</c><00:13:16.240><c> al</c><00:13:17.020><c> mio</c><00:13:17.260><c> contenere</c>
+
+00:13:18.060 --> 00:13:18.070 align:start position:0%
+terminato le modifiche al mio contenere
+ 
+
+00:13:18.070 --> 00:13:22.160 align:start position:0%
+terminato le modifiche al mio contenere
+quindi<00:13:18.400><c> esco</c><00:13:19.050><c> dalla</c><00:13:20.050><c> cartella</c><00:13:20.380><c> ubuntu</c>
+
+00:13:22.160 --> 00:13:22.170 align:start position:0%
+quindi esco dalla cartella ubuntu
+ 
+
+00:13:22.170 --> 00:13:26.150 align:start position:0%
+quindi esco dalla cartella ubuntu
+perfetto<00:13:22.829><c> entrò</c><00:13:23.370><c> nella</c><00:13:23.639><c> cartella</c><00:13:23.970><c> mente</c><00:13:25.160><c> e</c>
+
+00:13:26.150 --> 00:13:26.160 align:start position:0%
+perfetto entrò nella cartella mente e
+ 
+
+00:13:26.160 --> 00:13:31.759 align:start position:0%
+perfetto entrò nella cartella mente e
+faccio<00:13:26.730><c> punta</c><00:13:27.529><c> crater</c><00:13:28.529><c> verboso</c><00:13:29.370><c> file</c><00:13:30.470><c> e</c><00:13:31.470><c> ci</c>
+
+00:13:31.759 --> 00:13:31.769 align:start position:0%
+faccio punta crater verboso file e ci
+ 
+
+00:13:31.769 --> 00:13:36.519 align:start position:0%
+faccio punta crater verboso file e ci
+aggiungo<00:13:32.360><c> davanti</c><00:13:33.360><c> un</c><00:13:33.540><c> bel</c><00:13:33.720><c> z</c><00:13:34.560><c> compresse</c>
+
+00:13:36.519 --> 00:13:36.529 align:start position:0%
+aggiungo davanti un bel z compresse
+ 
+
+00:13:36.529 --> 00:13:39.860 align:start position:0%
+aggiungo davanti un bel z compresse
+come<00:13:37.529><c> si</c><00:13:37.769><c> chiamerà</c><00:13:38.040><c> i</c><00:13:38.220><c> dove</c><00:13:38.490><c> sarà</c><00:13:38.820><c> il</c><00:13:39.029><c> mio</c><00:13:39.209><c> file</c>
+
+00:13:39.860 --> 00:13:39.870 align:start position:0%
+come si chiamerà i dove sarà il mio file
+ 
+
+00:13:39.870 --> 00:13:41.680 align:start position:0%
+come si chiamerà i dove sarà il mio file
+del
+
+00:13:41.680 --> 00:13:41.690 align:start position:0%
+del
+ 
+
+00:13:41.690 --> 00:13:45.199 align:start position:0%
+del
+ponte<00:13:42.690><c> ne</c><00:13:42.959><c> ha</c><00:13:42.990><c> su</c><00:13:43.649><c> di</c><00:13:43.829><c> una</c><00:13:43.949><c> cartella</c><00:13:44.279><c> lo</c>
+
+00:13:45.199 --> 00:13:45.209 align:start position:0%
+ponte ne ha su di una cartella lo
+ 
+
+00:13:45.209 --> 00:13:48.550 align:start position:0%
+ponte ne ha su di una cartella lo
+chiamerò<00:13:45.600><c> mio</c><00:13:46.250><c> mint</c>
+
+00:13:48.550 --> 00:13:48.560 align:start position:0%
+chiamerò mio mint
+ 
+
+00:13:48.560 --> 00:13:53.680 align:start position:0%
+chiamerò mio mint
+svoto<00:13:49.560><c> tar</c><00:13:50.269><c> punto</c><00:13:51.449><c> gz</c><00:13:51.839><c> cosa</c><00:13:52.470><c> conterrà</c>
+
+00:13:53.680 --> 00:13:53.690 align:start position:0%
+svoto tar punto gz cosa conterrà
+ 
+
+00:13:53.690 --> 00:13:55.790 align:start position:0%
+svoto tar punto gz cosa conterrà
+tutto<00:13:54.690><c> quanto</c><00:13:54.959><c> quello</c><00:13:55.230><c> che</c><00:13:55.320><c> c'è</c><00:13:55.470><c> in</c><00:13:55.589><c> questa</c>
+
+00:13:55.790 --> 00:13:55.800 align:start position:0%
+tutto quanto quello che c'è in questa
+ 
+
+00:13:55.800 --> 00:14:00.009 align:start position:0%
+tutto quanto quello che c'è in questa
+cartella<00:13:56.100><c> mint</c><00:13:57.170><c> ed</c><00:13:58.170><c> o</c><00:13:58.260><c> invio</c>
+
+00:14:00.009 --> 00:14:00.019 align:start position:0%
+cartella mint ed o invio
+ 
+
+00:14:00.019 --> 00:14:02.679 align:start position:0%
+cartella mint ed o invio
+e<00:14:00.199><c> adesso</c><00:14:00.470><c> sto</c><00:14:01.309><c> creandomi</c><00:14:01.819><c> il</c><00:14:02.269><c> pacchetto</c>
+
+00:14:02.679 --> 00:14:02.689 align:start position:0%
+e adesso sto creandomi il pacchetto
+ 
+
+00:14:02.689 --> 00:14:05.109 align:start position:0%
+e adesso sto creandomi il pacchetto
+della<00:14:03.079><c> mia</c><00:14:03.170><c> ponte</c><00:14:03.529><c> ne</c><00:14:03.800><c> sa</c><00:14:03.829><c> se</c><00:14:04.699><c> tutto</c><00:14:04.999><c> è</c><00:14:05.029><c> andato</c>
+
+00:14:05.109 --> 00:14:05.119 align:start position:0%
+della mia ponte ne sa se tutto è andato
+ 
+
+00:14:05.119 --> 00:14:08.379 align:start position:0%
+della mia ponte ne sa se tutto è andato
+bene<00:14:05.720><c> ci</c><00:14:05.749><c> troveremo</c><00:14:06.379><c> questo</c><00:14:06.889><c> file</c><00:14:07.389><c> dentro</c>
+
+00:14:08.379 --> 00:14:08.389 align:start position:0%
+bene ci troveremo questo file dentro
+ 
+
+00:14:08.389 --> 00:14:11.590 align:start position:0%
+bene ci troveremo questo file dentro
+nell'elenco<00:14:09.139><c> nell'interfaccia</c><00:14:09.949><c> web</c><00:14:10.600><c> e</c>
+
+00:14:11.590 --> 00:14:11.600 align:start position:0%
+nell'elenco nell'interfaccia web e
+ 
+
+00:14:11.600 --> 00:14:14.530 align:start position:0%
+nell'elenco nell'interfaccia web e
+potremo<00:14:12.499><c> creare</c><00:14:12.739><c> una</c><00:14:13.100><c> macchina</c><00:14:13.220><c> con</c><00:14:14.209><c> linux</c>
+
+00:14:14.530 --> 00:14:14.540 align:start position:0%
+potremo creare una macchina con linux
+ 
+
+00:14:14.540 --> 00:14:19.800 align:start position:0%
+potremo creare una macchina con linux
+mint<00:14:15.189><c> da</c><00:14:16.189><c> container</c>
+
+00:14:19.800 --> 00:14:19.810 align:start position:0%
+ 
+ 
+
+00:14:19.810 --> 00:14:22.980 align:start position:0%
+ 
+può<00:14:19.900><c> vedere</c><00:14:20.290><c> come</c><00:14:20.380><c> succede</c><00:14:20.980><c> cosa</c><00:14:21.160><c> succede</c>
+
+00:14:22.980 --> 00:14:22.990 align:start position:0%
+può vedere come succede cosa succede
+ 
+
+00:14:22.990 --> 00:14:26.820 align:start position:0%
+può vedere come succede cosa succede
+intanto<00:14:23.950><c> mette</c><00:14:24.490><c> in</c><00:14:24.610><c> pausa</c><00:14:24.790><c> un</c><00:14:25.090><c> secondo</c><00:14:25.770><c> e</c><00:14:26.770><c> ci</c>
+
+00:14:26.820 --> 00:14:26.830 align:start position:0%
+intanto mette in pausa un secondo e ci
+ 
+
+00:14:26.830 --> 00:14:30.550 align:start position:0%
+intanto mette in pausa un secondo e ci
+rivediamo<00:14:27.190><c> tra</c><00:14:27.490><c> poco</c>
+
+00:14:30.550 --> 00:14:30.560 align:start position:0%
+ 
+ 
+
+00:14:30.560 --> 00:14:33.310 align:start position:0%
+ 
+non<00:14:30.650><c> è</c><00:14:30.800><c> inter</c><00:14:31.160><c> gz</c><00:14:31.610><c> ha</c><00:14:31.880><c> terminato</c><00:14:32.360><c> saliamo</c><00:14:33.290><c> di</c>
+
+00:14:33.310 --> 00:14:33.320 align:start position:0%
+non è inter gz ha terminato saliamo di
+ 
+
+00:14:33.320 --> 00:14:35.400 align:start position:0%
+non è inter gz ha terminato saliamo di
+una<00:14:33.740><c> cartella</c>
+
+00:14:35.400 --> 00:14:35.410 align:start position:0%
+una cartella
+ 
+
+00:14:35.410 --> 00:14:38.480 align:start position:0%
+una cartella
+effettivamente<00:14:36.040><c> ho</c><00:14:36.490><c> mio</c><00:14:36.819><c> mint</c><00:14:37.300><c> punto</c><00:14:37.750><c> tar.gz</c>
+
+00:14:38.480 --> 00:14:38.490 align:start position:0%
+effettivamente ho mio mint punto tar.gz
+ 
+
+00:14:38.490 --> 00:14:42.960 align:start position:0%
+effettivamente ho mio mint punto tar.gz
+il<00:14:39.490><c> root</c><00:14:39.699><c> fs</c><00:14:40.300><c> di</c><00:14:40.449><c> partenza</c><00:14:41.160><c> il</c><00:14:42.160><c> cancello</c>
+
+00:14:42.960 --> 00:14:42.970 align:start position:0%
+il root fs di partenza il cancello
+ 
+
+00:14:42.970 --> 00:14:44.939 align:start position:0%
+il root fs di partenza il cancello
+perché<00:14:43.209><c> tanto</c><00:14:43.629><c> posso</c><00:14:43.990><c> riscaricarlo</c><00:14:44.649><c> quando</c>
+
+00:14:44.939 --> 00:14:44.949 align:start position:0%
+perché tanto posso riscaricarlo quando
+ 
+
+00:14:44.949 --> 00:14:49.170 align:start position:0%
+perché tanto posso riscaricarlo quando
+muoia<00:14:45.310><c> le</c><00:14:46.060><c> cartelle</c><00:14:46.680><c> con</c><00:14:47.680><c> mentre</c><00:14:48.339><c> ubuntu</c><00:14:48.579><c> per</c>
+
+00:14:49.170 --> 00:14:49.180 align:start position:0%
+muoia le cartelle con mentre ubuntu per
+ 
+
+00:14:49.180 --> 00:14:51.269 align:start position:0%
+muoia le cartelle con mentre ubuntu per
+fare<00:14:49.779><c> eventuali</c><00:14:50.050><c> maneggiamenti</c><00:14:50.949><c> nelle</c>
+
+00:14:51.269 --> 00:14:51.279 align:start position:0%
+fare eventuali maneggiamenti nelle
+ 
+
+00:14:51.279 --> 00:14:53.400 align:start position:0%
+fare eventuali maneggiamenti nelle
+lascio<00:14:51.579><c> per</c><00:14:51.759><c> comodità</c><00:14:52.300><c> per</c><00:14:52.509><c> il</c><00:14:52.629><c> momento</c><00:14:53.110><c> no</c><00:14:53.259><c> un</c>
+
+00:14:53.400 --> 00:14:53.410 align:start position:0%
+lascio per comodità per il momento no un
+ 
+
+00:14:53.410 --> 00:14:58.090 align:start position:0%
+lascio per comodità per il momento no un
+exit<00:14:54.240><c> è</c><00:14:55.240><c> chiuso</c><00:14:55.750><c> la</c><00:14:55.870><c> finestra</c>
+
+00:14:58.090 --> 00:14:58.100 align:start position:0%
+exit è chiuso la finestra
+ 
+
+00:14:58.100 --> 00:15:01.860 align:start position:0%
+exit è chiuso la finestra
+qua<00:14:58.759><c> riporto</c><00:14:59.509><c> le</c><00:14:59.810><c> dimensioni</c>
+
+00:15:01.860 --> 00:15:01.870 align:start position:0%
+qua riporto le dimensioni
+ 
+
+00:15:01.870 --> 00:15:04.019 align:start position:0%
+qua riporto le dimensioni
+all'originale
+
+00:15:04.019 --> 00:15:04.029 align:start position:0%
+all'originale
+ 
+
+00:15:04.029 --> 00:15:12.290 align:start position:0%
+all'originale
+ok<00:15:05.319><c> e</c><00:15:06.319><c> faccio</c><00:15:06.829><c> un</c><00:15:06.860><c> refresh</c>
+
+00:15:12.290 --> 00:15:12.300 align:start position:0%
+ 
+ 
+
+00:15:12.300 --> 00:15:15.080 align:start position:0%
+ 
+esce<00:15:12.780><c> rientra</c><00:15:13.350><c> nella</c><00:15:13.920><c> cartella</c><00:15:14.250><c> ed</c><00:15:14.640><c> ecco</c><00:15:14.910><c> che</c>
+
+00:15:15.080 --> 00:15:15.090 align:start position:0%
+esce rientra nella cartella ed ecco che
+ 
+
+00:15:15.090 --> 00:15:16.520 align:start position:0%
+esce rientra nella cartella ed ecco che
+ho<00:15:15.120><c> il</c><00:15:15.330><c> mio</c><00:15:15.450><c> min</c>
+
+00:15:16.520 --> 00:15:16.530 align:start position:0%
+ho il mio min
+ 
+
+00:15:16.530 --> 00:15:18.440 align:start position:0%
+ho il mio min
+ora<00:15:16.800><c> proviamo</c><00:15:17.070><c> a</c><00:15:17.310><c> creare</c><00:15:17.880><c> il</c><00:15:18.300><c> nostro</c>
+
+00:15:18.440 --> 00:15:18.450 align:start position:0%
+ora proviamo a creare il nostro
+ 
+
+00:15:18.450 --> 00:15:20.210 align:start position:0%
+ora proviamo a creare il nostro
+container<00:15:19.020><c> a</c><00:15:19.320><c> partire</c><00:15:19.740><c> da</c><00:15:19.830><c> queste</c><00:15:20.130><c> immagini</c>
+
+00:15:20.210 --> 00:15:20.220 align:start position:0%
+container a partire da queste immagini
+ 
+
+00:15:20.220 --> 00:15:22.360 align:start position:0%
+container a partire da queste immagini
+of<00:15:21.120><c> slime</c>
+
+00:15:22.360 --> 00:15:22.370 align:start position:0%
+of slime
+ 
+
+00:15:22.370 --> 00:15:24.980 align:start position:0%
+of slime
+mint
+
+00:15:24.980 --> 00:15:24.990 align:start position:0%
+mint
+ 
+
+00:15:24.990 --> 00:15:27.850 align:start position:0%
+mint
+20<00:15:25.500><c> 04</c>
+
+00:15:27.850 --> 00:15:27.860 align:start position:0%
+20 04
+ 
+
+00:15:27.860 --> 00:15:31.040 align:start position:0%
+20 04
+ct<00:15:28.860><c> perché</c><00:15:29.670><c> un</c><00:15:29.820><c> contenere</c><00:15:30.420><c> quindi</c><00:15:30.660><c> lo</c><00:15:30.779><c> piano</c>
+
+00:15:31.040 --> 00:15:31.050 align:start position:0%
+ct perché un contenere quindi lo piano
+ 
+
+00:15:31.050 --> 00:15:34.160 align:start position:0%
+ct perché un contenere quindi lo piano
+in<00:15:31.140><c> questo</c><00:15:31.380><c> modo</c><00:15:31.770><c> per</c><00:15:33.050><c> differenziarla</c><00:15:34.050><c> da</c>
+
+00:15:34.160 --> 00:15:34.170 align:start position:0%
+in questo modo per differenziarla da
+ 
+
+00:15:34.170 --> 00:15:36.680 align:start position:0%
+in questo modo per differenziarla da
+altre<00:15:34.200><c> macchie</c><00:15:34.709><c> attenzione</c><00:15:35.550><c> io</c><00:15:36.209><c> qui</c><00:15:36.510><c> ho</c><00:15:36.570><c> le</c>
+
+00:15:36.680 --> 00:15:36.690 align:start position:0%
+altre macchie attenzione io qui ho le
+ 
+
+00:15:36.690 --> 00:15:40.430 align:start position:0%
+altre macchie attenzione io qui ho le
+macchine<00:15:37.080><c> 100</c><00:15:37.500><c> 103</c><00:15:37.980><c> 104</c><00:15:38.850><c> qui</c><00:15:39.660><c> viene</c><00:15:39.930><c> proposto</c>
+
+00:15:40.430 --> 00:15:40.440 align:start position:0%
+macchine 100 103 104 qui viene proposto
+ 
+
+00:15:40.440 --> 00:15:43.370 align:start position:0%
+macchine 100 103 104 qui viene proposto
+il<00:15:40.560><c> 108</c><00:15:41.270><c> ma</c><00:15:42.270><c> potrebbe</c><00:15:42.630><c> essere</c><00:15:42.930><c> benissimo</c><00:15:43.110><c> un</c>
+
+00:15:43.370 --> 00:15:43.380 align:start position:0%
+il 108 ma potrebbe essere benissimo un
+ 
+
+00:15:43.380 --> 00:15:45.560 align:start position:0%
+il 108 ma potrebbe essere benissimo un
+centro<00:15:43.890><c> perché</c><00:15:44.670><c> tanto</c><00:15:45.060><c> nella</c><00:15:45.300><c> numerazione</c>
+
+00:15:45.560 --> 00:15:45.570 align:start position:0%
+centro perché tanto nella numerazione
+ 
+
+00:15:45.570 --> 00:15:47.900 align:start position:0%
+centro perché tanto nella numerazione
+dei<00:15:45.990><c> container</c><00:15:46.380><c> id</c><00:15:46.830><c> diversa</c><00:15:47.580><c> dalla</c>
+
+00:15:47.900 --> 00:15:47.910 align:start position:0%
+dei container id diversa dalla
+ 
+
+00:15:47.910 --> 00:15:57.490 align:start position:0%
+dei container id diversa dalla
+decorazione<00:15:48.209><c> delle</c><00:15:48.660><c> macchine</c><00:15:49.080><c> virtuali</c>
+
+00:15:57.490 --> 00:15:57.500 align:start position:0%
+ 
+ 
+
+00:15:57.500 --> 00:16:01.070 align:start position:0%
+ 
+procediamo<00:15:58.070><c> scegliamo</c><00:15:58.910><c> il</c><00:15:59.000><c> template</c>
+
+00:16:01.070 --> 00:16:01.080 align:start position:0%
+procediamo scegliamo il template
+ 
+
+00:16:01.080 --> 00:16:02.560 align:start position:0%
+procediamo scegliamo il template
+siamo<00:16:01.290><c> mio</c><00:16:01.410><c> moov</c>
+
+00:16:02.560 --> 00:16:02.570 align:start position:0%
+siamo mio moov
+ 
+
+00:16:02.570 --> 00:16:04.630 align:start position:0%
+siamo mio moov
+gli<00:16:03.570><c> diamo</c>
+
+00:16:04.630 --> 00:16:04.640 align:start position:0%
+gli diamo
+ 
+
+00:16:04.640 --> 00:16:13.100 align:start position:0%
+gli diamo
+16<00:16:05.640><c> gb</c>
+
+00:16:13.100 --> 00:16:13.110 align:start position:0%
+ 
+ 
+
+00:16:13.110 --> 00:16:19.150 align:start position:0%
+ 
+memoria<00:16:14.089><c> che</c><00:16:15.089><c> viene</c><00:16:15.500><c> passata</c><00:16:16.500><c> al</c><00:16:16.529><c> container</c>
+
+00:16:19.150 --> 00:16:19.160 align:start position:0%
+ 
+ 
+
+00:16:19.160 --> 00:16:23.210 align:start position:0%
+ 
+2048<00:16:20.240><c> lega</c><00:16:21.240><c> quindi</c><00:16:21.570><c> 2</c><00:16:21.810><c> gb</c><00:16:22.019><c> nella</c><00:16:22.950><c> sua</c>
+
+00:16:23.210 --> 00:16:23.220 align:start position:0%
+2048 lega quindi 2 gb nella sua
+ 
+
+00:16:23.220 --> 00:16:25.170 align:start position:0%
+2048 lega quindi 2 gb nella sua
+altrettanto
+
+00:16:25.170 --> 00:16:25.180 align:start position:0%
+altrettanto
+ 
+
+00:16:25.180 --> 00:16:27.790 align:start position:0%
+altrettanto
+[Musica]
+
+00:16:27.790 --> 00:16:27.800 align:start position:0%
+[Musica]
+ 
+
+00:16:27.800 --> 00:16:31.810 align:start position:0%
+[Musica]
+text<00:16:28.480><c> poi</c><00:16:29.480><c> c'è</c><00:16:29.660><c> tutta</c><00:16:30.200><c> quanta</c><00:16:30.410><c> la</c><00:16:30.620><c> parte</c><00:16:31.310><c> che</c>
+
+00:16:31.810 --> 00:16:31.820 align:start position:0%
+text poi c'è tutta quanta la parte che
+ 
+
+00:16:31.820 --> 00:16:32.430 align:start position:0%
+text poi c'è tutta quanta la parte che
+riguarda
+
+00:16:32.430 --> 00:16:32.440 align:start position:0%
+riguarda
+ 
+
+00:16:32.440 --> 00:16:36.780 align:start position:0%
+riguarda
+ip<00:16:33.440><c> e</c><00:16:34.370><c> quindi</c><00:16:34.730><c> noi</c><00:16:35.140><c> divideremo</c>
+
+00:16:36.780 --> 00:16:36.790 align:start position:0%
+ip e quindi noi divideremo
+ 
+
+00:16:36.790 --> 00:16:40.389 align:start position:0%
+ip e quindi noi divideremo
+prenderebbe<00:16:37.790><c> come</c><00:16:37.970><c> statico</c><00:16:38.600><c> per</c><00:16:38.720><c> le</c><00:16:38.870><c> tv</c><00:16:39.080><c> 4</c><00:16:39.589><c> per</c>
+
+00:16:40.389 --> 00:16:40.399 align:start position:0%
+prenderebbe come statico per le tv 4 per
+ 
+
+00:16:40.399 --> 00:16:44.050 align:start position:0%
+prenderebbe come statico per le tv 4 per
+le<00:16:40.910><c> divise</c><00:16:41.269><c> lo</c><00:16:41.480><c> lasciamo</c><00:16:41.779><c> non</c><00:16:42.519><c> configurato</c><00:16:43.519><c> il</c>
+
+00:16:44.050 --> 00:16:44.060 align:start position:0%
+le divise lo lasciamo non configurato il
+ 
+
+00:16:44.060 --> 00:16:48.750 align:start position:0%
+le divise lo lasciamo non configurato il
+dns<00:16:44.779><c> usa</c><00:16:45.500><c> quelli</c><00:16:45.829><c> dell'host</c><00:16:46.459><c> va</c><00:16:46.910><c> bene</c><00:16:47.470><c> l'ex</c>
+
+00:16:48.750 --> 00:16:48.760 align:start position:0%
+dns usa quelli dell'host va bene l'ex
+ 
+
+00:16:48.760 --> 00:16:55.550 align:start position:0%
+dns usa quelli dell'host va bene l'ex
+finish<00:16:49.970><c> e</c><00:16:50.810><c> se</c><00:16:51.079><c> tutto</c><00:16:51.410><c> va</c><00:16:51.529><c> bene</c>
+
+00:16:55.550 --> 00:16:55.560 align:start position:0%
+ 
+ 
+
+00:16:55.560 --> 00:16:58.190 align:start position:0%
+ 
+avremo<00:16:55.950><c> la</c><00:16:56.040><c> nostra</c><00:16:56.160><c> macchina</c><00:16:56.510><c> e</c><00:16:57.510><c> non</c><00:16:57.570><c> un</c>
+
+00:16:58.190 --> 00:16:58.200 align:start position:0%
+avremo la nostra macchina e non un
+ 
+
+00:16:58.200 --> 00:17:00.100 align:start position:0%
+avremo la nostra macchina e non un
+container<00:16:59.100><c> e</c><00:16:59.430><c> di</c>
+
+00:17:00.100 --> 00:17:00.110 align:start position:0%
+container e di
+ 
+
+00:17:00.110 --> 00:17:02.720 align:start position:0%
+container e di
+sconosciuto<00:17:01.110><c> già</c><00:17:01.260><c> mi</c><00:17:02.100><c> posso</c><00:17:02.370><c> dire</c><00:17:02.640><c> che</c>
+
+00:17:02.720 --> 00:17:02.730 align:start position:0%
+sconosciuto già mi posso dire che
+ 
+
+00:17:02.730 --> 00:17:05.059 align:start position:0%
+sconosciuto già mi posso dire che
+rispetto<00:17:02.880><c> alla</c><00:17:03.270><c> prova</c><00:17:03.540><c> avevo</c><00:17:03.779><c> fatto</c><00:17:04.199><c> un</c><00:17:04.770><c> paio</c>
+
+00:17:05.059 --> 00:17:05.069 align:start position:0%
+rispetto alla prova avevo fatto un paio
+ 
+
+00:17:05.069 --> 00:17:08.329 align:start position:0%
+rispetto alla prova avevo fatto un paio
+di<00:17:05.310><c> giorni</c><00:17:05.850><c> fa</c><00:17:06.140><c> siamo</c><00:17:07.140><c> molto</c><00:17:07.530><c> più</c><00:17:07.740><c> avanti</c><00:17:07.800><c> per</c>
+
+00:17:08.329 --> 00:17:08.339 align:start position:0%
+di giorni fa siamo molto più avanti per
+ 
+
+00:17:08.339 --> 00:17:10.429 align:start position:0%
+di giorni fa siamo molto più avanti per
+cui<00:17:08.550><c> sono</c><00:17:08.760><c> già</c><00:17:09.060><c> da</c><00:17:09.420><c> qui</c><00:17:09.600><c> soddisfatto</c><00:17:10.290><c> del</c>
+
+00:17:10.429 --> 00:17:10.439 align:start position:0%
+cui sono già da qui soddisfatto del
+ 
+
+00:17:10.439 --> 00:17:11.120 align:start position:0%
+cui sono già da qui soddisfatto del
+risultato
+
+00:17:11.120 --> 00:17:11.130 align:start position:0%
+risultato
+ 
+
+00:17:11.130 --> 00:17:14.230 align:start position:0%
+risultato
+in<00:17:11.730><c> realtà</c><00:17:11.939><c> leggo</c><00:17:12.270><c> adesso</c><00:17:12.660><c> tusk</c><00:17:13.140><c> ok</c><00:17:13.470><c> sono</c>
+
+00:17:14.230 --> 00:17:14.240 align:start position:0%
+in realtà leggo adesso tusk ok sono
+ 
+
+00:17:14.240 --> 00:17:17.620 align:start position:0%
+in realtà leggo adesso tusk ok sono
+entusiasta<00:17:15.260><c> del</c><00:17:16.260><c> risultato</c>
+
+00:17:17.620 --> 00:17:17.630 align:start position:0%
+entusiasta del risultato
+ 
+
+00:17:17.630 --> 00:17:19.840 align:start position:0%
+entusiasta del risultato
+proviamo<00:17:18.630><c> a</c>
+
+00:17:19.840 --> 00:17:19.850 align:start position:0%
+proviamo a
+ 
+
+00:17:19.850 --> 00:17:22.699 align:start position:0%
+proviamo a
+farlo<00:17:20.850><c> partire</c>
+
+00:17:22.699 --> 00:17:22.709 align:start position:0%
+farlo partire
+ 
+
+00:17:22.709 --> 00:17:25.819 align:start position:0%
+farlo partire
+allora
+
+00:17:25.819 --> 00:17:25.829 align:start position:0%
+ 
+ 
+
+00:17:25.829 --> 00:17:26.860 align:start position:0%
+ 
+il<00:17:26.069><c> nostro</c>
+
+00:17:26.860 --> 00:17:26.870 align:start position:0%
+il nostro
+ 
+
+00:17:26.870 --> 00:17:31.690 align:start position:0%
+il nostro
+container<00:17:27.870><c> è</c><00:17:28.740><c> finito</c><00:17:29.370><c> qui</c><00:17:29.549><c> davanti</c><00:17:29.809><c> 108</c>
+
+00:17:31.690 --> 00:17:31.700 align:start position:0%
+container è finito qui davanti 108
+ 
+
+00:17:31.700 --> 00:17:41.310 align:start position:0%
+container è finito qui davanti 108
+facciamo<00:17:32.700><c> start</c><00:17:33.500><c> e</c><00:17:34.500><c> apriamo</c><00:17:34.799><c> la</c><00:17:35.010><c> console</c>
+
+00:17:41.310 --> 00:17:41.320 align:start position:0%
+ 
+ 
+
+00:17:41.320 --> 00:17:42.799 align:start position:0%
+ 
+il<00:17:41.470><c> nostro</c><00:17:41.620><c> linux</c><00:17:42.100><c> di</c>
+
+00:17:42.799 --> 00:17:42.809 align:start position:0%
+il nostro linux di
+ 
+
+00:17:42.809 --> 00:17:43.810 align:start position:0%
+il nostro linux di
+02
+
+00:17:43.810 --> 00:17:43.820 align:start position:0%
+02
+ 
+
+00:17:43.820 --> 00:17:49.740 align:start position:0%
+02
+brut<00:17:44.960><c> la</c><00:17:45.960><c> password</c><00:17:46.320><c> che</c><00:17:46.470><c> ho</c><00:17:46.529><c> impostato</c><00:17:46.830><c> prima</c>
+
+00:17:49.740 --> 00:17:49.750 align:start position:0%
+ 
+ 
+
+00:17:49.750 --> 00:17:54.210 align:start position:0%
+ 
+e<00:17:50.750><c> adesso</c><00:17:50.990><c> lsb</c><00:17:52.210><c> underscore</c><00:17:53.210><c> release</c><00:17:53.600><c> mena</c>
+
+00:17:54.210 --> 00:17:54.220 align:start position:0%
+e adesso lsb underscore release mena
+ 
+
+00:17:54.220 --> 00:17:58.000 align:start position:0%
+e adesso lsb underscore release mena
+ciao<00:17:55.220><c> sono</c><00:17:55.580><c> un</c><00:17:55.760><c> punto</c><00:17:55.940><c> per</c><00:17:56.660><c> finta</c>
+
+00:17:58.000 --> 00:17:58.010 align:start position:0%
+ciao sono un punto per finta
+ 
+
+00:17:58.010 --> 00:17:59.680 align:start position:0%
+ciao sono un punto per finta
+abbiamo<00:17:58.460><c> la</c><00:17:58.580><c> nostra</c><00:17:58.670><c> macchina</c>
+
+00:17:59.680 --> 00:17:59.690 align:start position:0%
+abbiamo la nostra macchina
+ 
+
+00:17:59.690 --> 00:18:02.620 align:start position:0%
+abbiamo la nostra macchina
+la<00:17:59.840><c> nostra</c><00:18:00.110><c> container</c><00:18:00.970><c> che</c><00:18:01.970><c> dire</c><00:18:02.180><c> macchina</c><00:18:02.540><c> mi</c>
+
+00:18:02.620 --> 00:18:02.630 align:start position:0%
+la nostra container che dire macchina mi
+ 
+
+00:18:02.630 --> 00:18:06.690 align:start position:0%
+la nostra container che dire macchina mi
+dovrei<00:18:02.870><c> darle</c><00:18:03.110><c> emanate</c><00:18:03.560><c> inter</c><00:18:04.190><c> punizione</c>
+
+00:18:06.690 --> 00:18:06.700 align:start position:0%
+dovrei darle emanate inter punizione
+ 
+
+00:18:06.700 --> 00:18:08.830 align:start position:0%
+dovrei darle emanate inter punizione
+sulle<00:18:07.700><c> mani</c><00:18:08.000><c> colpi</c><00:18:08.270><c> sulle</c><00:18:08.510><c> mani</c><00:18:08.720><c> così</c>
+
+00:18:08.830 --> 00:18:08.840 align:start position:0%
+sulle mani colpi sulle mani così
+ 
+
+00:18:08.840 --> 00:18:12.540 align:start position:0%
+sulle mani colpi sulle mani così
+negativo<00:18:09.470><c> bambini</c><00:18:09.920><c> che</c><00:18:10.730><c> non</c><00:18:10.850><c> si</c><00:18:11.000><c> fa</c>
+
+00:18:12.540 --> 00:18:12.550 align:start position:0%
+negativo bambini che non si fa
+ 
+
+00:18:12.550 --> 00:18:15.640 align:start position:0%
+negativo bambini che non si fa
+comunque<00:18:13.550><c> sono</c><00:18:14.300><c> contento</c><00:18:15.170><c> dell'esperimento</c>
+
+00:18:15.640 --> 00:18:15.650 align:start position:0%
+comunque sono contento dell'esperimento
+ 
+
+00:18:15.650 --> 00:18:18.130 align:start position:0%
+comunque sono contento dell'esperimento
+è<00:18:15.890><c> perfettamente</c><00:18:16.250><c> riuscito</c><00:18:17.030><c> e</c><00:18:17.450><c> il</c><00:18:17.480><c> paziente</c>
+
+00:18:18.130 --> 00:18:18.140 align:start position:0%
+è perfettamente riuscito e il paziente
+ 
+
+00:18:18.140 --> 00:18:21.220 align:start position:0%
+è perfettamente riuscito e il paziente
+morto<00:18:19.010><c> no</c><00:18:19.130><c> è</c><00:18:19.160><c> vivo</c><00:18:19.520><c> e</c><00:18:19.550><c> qua</c><00:18:19.820><c> ce</c><00:18:20.480><c> l'abbiamo</c>
+
+00:18:21.220 --> 00:18:21.230 align:start position:0%
+morto no è vivo e qua ce l'abbiamo
+ 
+
+00:18:21.230 --> 00:18:23.700 align:start position:0%
+morto no è vivo e qua ce l'abbiamo
+abbiamo<00:18:21.560><c> il</c><00:18:21.650><c> nostro</c><00:18:21.710><c> mint</c><00:18:22.460><c> in</c><00:18:22.790><c> cui</c><00:18:23.030><c> container</c>
+
+00:18:23.700 --> 00:18:23.710 align:start position:0%
+abbiamo il nostro mint in cui container
+ 
+
+00:18:23.710 --> 00:18:25.320 align:start position:0%
+abbiamo il nostro mint in cui container
+sulla
+
+00:18:25.320 --> 00:18:25.330 align:start position:0%
+sulla
+ 
+
+00:18:25.330 --> 00:18:27.030 align:start position:0%
+sulla
+nostra<00:18:26.330><c> piattaforma</c>
+
+00:18:27.030 --> 00:18:27.040 align:start position:0%
+nostra piattaforma
+ 
+
+00:18:27.040 --> 00:18:30.690 align:start position:0%
+nostra piattaforma
+prosperi<00:18:28.040><c> possiamo</c><00:18:28.570><c> giocare</c><00:18:29.570><c> con</c><00:18:29.780><c> le</c>
+
+00:18:30.690 --> 00:18:30.700 align:start position:0%
+prosperi possiamo giocare con le
+ 
+
+00:18:30.700 --> 00:18:33.790 align:start position:0%
+prosperi possiamo giocare con le
+macchine<00:18:31.700><c> virtuali</c><00:18:31.850><c> mint</c><00:18:32.750><c> e</c><00:18:33.230><c> adesso</c><00:18:33.500><c> anche</c>
+
+00:18:33.790 --> 00:18:33.800 align:start position:0%
+macchine virtuali mint e adesso anche
+ 
+
+00:18:33.800 --> 00:18:38.280 align:start position:0%
+macchine virtuali mint e adesso anche
+con<00:18:34.160><c> i</c><00:18:34.280><c> container</c><00:18:34.700><c> mint</c><00:18:35.450><c> per</c><00:18:36.380><c> questo</c><00:18:36.980><c> video</c><00:18:37.670><c> di</c>
+
+00:18:38.280 --> 00:18:38.290 align:start position:0%
+con i container mint per questo video di
+ 
+
+00:18:38.290 --> 00:18:40.960 align:start position:0%
+con i container mint per questo video di
+sperimentazione<00:18:39.290><c> assieme</c><00:18:39.560><c> è</c><00:18:39.830><c> tutto</c><00:18:40.580><c> vi</c>
+
+00:18:40.960 --> 00:18:40.970 align:start position:0%
+sperimentazione assieme è tutto vi
+ 
+
+00:18:40.970 --> 00:18:43.270 align:start position:0%
+sperimentazione assieme è tutto vi
+ringrazio<00:18:41.570><c> per</c><00:18:41.750><c> avermi</c><00:18:42.050><c> seguito</c><00:18:42.290><c> fin</c><00:18:42.800><c> qui</c><00:18:42.980><c> ci</c>
+
+00:18:43.270 --> 00:18:43.280 align:start position:0%
+ringrazio per avermi seguito fin qui ci
+ 
+
+00:18:43.280 --> 00:18:46.510 align:start position:0%
+ringrazio per avermi seguito fin qui ci
+vediamo<00:18:43.550><c> settimana</c><00:18:44.360><c> prossima</c><00:18:44.900><c> vi</c><00:18:45.830><c> ricordo</c>
+
+00:18:46.510 --> 00:18:46.520 align:start position:0%
+vediamo settimana prossima vi ricordo
+ 
+
+00:18:46.520 --> 00:18:50.290 align:start position:0%
+vediamo settimana prossima vi ricordo
+che<00:18:47.740><c> potete</c><00:18:48.740><c> iscrivere</c><00:18:49.460><c> anzil</c><00:18:49.910><c> invito</c>
+
+00:18:50.290 --> 00:18:50.300 align:start position:0%
+che potete iscrivere anzil invito
+ 
+
+00:18:50.300 --> 00:18:52.450 align:start position:0%
+che potete iscrivere anzil invito
+caldamente<00:18:50.540><c> esprimervi</c><00:18:51.380><c> al</c><00:18:51.500><c> canale</c><00:18:52.010><c> a</c>
+
+00:18:52.450 --> 00:18:52.460 align:start position:0%
+caldamente esprimervi al canale a
+ 
+
+00:18:52.460 --> 00:18:55.420 align:start position:0%
+caldamente esprimervi al canale a
+lasciarmi<00:18:52.940><c> vostri</c><00:18:53.270><c> commenti</c><00:18:53.780><c> qui</c><00:18:53.840><c> sotto</c><00:18:54.020><c> e</c><00:18:55.010><c> a</c>
+
+00:18:55.420 --> 00:18:55.430 align:start position:0%
+lasciarmi vostri commenti qui sotto e a
+ 
+
+00:18:55.430 --> 00:18:57.550 align:start position:0%
+lasciarmi vostri commenti qui sotto e a
+cliccare<00:18:56.390><c> se</c><00:18:56.510><c> vi</c><00:18:56.630><c> è</c><00:18:56.660><c> piaciuto</c><00:18:57.020><c> il</c><00:18:57.080><c> video</c><00:18:57.380><c> sul</c>
+
+00:18:57.550 --> 00:18:57.560 align:start position:0%
+cliccare se vi è piaciuto il video sul
+ 
+
+00:18:57.560 --> 00:19:00.280 align:start position:0%
+cliccare se vi è piaciuto il video sul
+pollice<00:18:58.010><c> in</c><00:18:58.250><c> su</c><00:18:58.430><c> con</c><00:18:59.300><c> questo</c><00:18:59.660><c> mi</c><00:18:59.840><c> aiuterà</c><00:19:00.110><c> a</c>
+
+00:19:00.280 --> 00:19:00.290 align:start position:0%
+pollice in su con questo mi aiuterà a
+ 
+
+00:19:00.290 --> 00:19:03.310 align:start position:0%
+pollice in su con questo mi aiuterà a
+fare<00:19:00.890><c> ncar</c><00:19:01.160><c> e</c><00:19:01.460><c> quindi</c><00:19:01.760><c> crescere</c><00:19:02.270><c> la</c><00:19:03.080><c> notorietà</c>
+
+00:19:03.310 --> 00:19:03.320 align:start position:0%
+fare ncar e quindi crescere la notorietà
+ 
+
+00:19:03.320 --> 00:19:04.930 align:start position:0%
+fare ncar e quindi crescere la notorietà
+dei<00:19:03.770><c> miei</c><00:19:03.950><c> video</c><00:19:04.100><c> all'interno</c><00:19:04.520><c> della</c>
+
+00:19:04.930 --> 00:19:04.940 align:start position:0%
+dei miei video all'interno della
+ 
+
+00:19:04.940 --> 00:19:06.750 align:start position:0%
+dei miei video all'interno della
+piattaforma<00:19:05.120><c> youtube</c>
+
+00:19:06.750 --> 00:19:06.760 align:start position:0%
+piattaforma youtube
+ 
+
+00:19:06.760 --> 00:19:09.790 align:start position:0%
+piattaforma youtube
+alla<00:19:07.760><c> fine</c><00:19:08.060><c> se</c><00:19:08.270><c> proprio</c><00:19:08.630><c> volete</c><00:19:09.200><c> seguirmi</c>
+
+00:19:09.790 --> 00:19:09.800 align:start position:0%
+alla fine se proprio volete seguirmi
+ 
+
+00:19:09.800 --> 00:19:11.800 align:start position:0%
+alla fine se proprio volete seguirmi
+seguirmi<00:19:10.400><c> cliccate</c><00:19:11.390><c> pure</c><00:19:11.510><c> sulla</c>
+
+00:19:11.800 --> 00:19:11.810 align:start position:0%
+seguirmi cliccate pure sulla
+ 
+
+00:19:11.810 --> 00:19:13.780 align:start position:0%
+seguirmi cliccate pure sulla
+campanellina<00:19:12.500><c> perché</c><00:19:13.220><c> ho</c><00:19:13.250><c> deciso</c><00:19:13.400><c> di</c>
+
+00:19:13.780 --> 00:19:13.790 align:start position:0%
+campanellina perché ho deciso di
+ 
+
+00:19:13.790 --> 00:19:15.340 align:start position:0%
+campanellina perché ho deciso di
+produrre<00:19:14.120><c> più</c><00:19:14.420><c> video</c><00:19:14.750><c> e</c><00:19:14.840><c> già</c><00:19:15.050><c> questa</c>
+
+00:19:15.340 --> 00:19:15.350 align:start position:0%
+produrre più video e già questa
+ 
+
+00:19:15.350 --> 00:19:17.110 align:start position:0%
+produrre più video e già questa
+settimana<00:19:15.500><c> oltre</c><00:19:15.920><c> al</c><00:19:16.400><c> solito</c><00:19:16.550><c> video</c><00:19:17.030><c> del</c>
+
+00:19:17.110 --> 00:19:17.120 align:start position:0%
+settimana oltre al solito video del
+ 
+
+00:19:17.120 --> 00:19:19.390 align:start position:0%
+settimana oltre al solito video del
+giovedì<00:19:17.510><c> ieri</c><00:19:18.200><c> ne</c><00:19:18.320><c> ho</c><00:19:18.350><c> rilasciato</c><00:19:18.620><c> un</c><00:19:19.010><c> altro</c>
+
+00:19:19.390 --> 00:19:19.400 align:start position:0%
+giovedì ieri ne ho rilasciato un altro
+ 
+
+00:19:19.400 --> 00:19:22.060 align:start position:0%
+giovedì ieri ne ho rilasciato un altro
+chiesto<00:19:20.150><c> da</c><00:19:20.270><c> uno</c><00:19:20.480><c> di</c><00:19:20.600><c> voi</c><00:19:20.750><c> che</c><00:19:21.650><c> aveva</c><00:19:21.920><c> dei</c>
+
+00:19:22.060 --> 00:19:22.070 align:start position:0%
+chiesto da uno di voi che aveva dei
+ 
+
+00:19:22.070 --> 00:19:24.370 align:start position:0%
+chiesto da uno di voi che aveva dei
+piccoli<00:19:22.250><c> problemi</c><00:19:22.790><c> a</c><00:19:23.150><c> far</c><00:19:23.480><c> comunicare</c><00:19:24.020><c> le</c>
+
+00:19:24.370 --> 00:19:24.380 align:start position:0%
+piccoli problemi a far comunicare le
+ 
+
+00:19:24.380 --> 00:19:26.500 align:start position:0%
+piccoli problemi a far comunicare le
+macchine<00:19:24.830><c> e</c><00:19:24.860><c> quindi</c><00:19:25.340><c> gli</c><00:19:25.640><c> abbiamo</c><00:19:25.970><c> dato</c><00:19:26.210><c> la</c>
+
+00:19:26.500 --> 00:19:26.510 align:start position:0%
+macchine e quindi gli abbiamo dato la
+ 
+
+00:19:26.510 --> 00:19:28.000 align:start position:0%
+macchine e quindi gli abbiamo dato la
+soluzione
+
+00:19:28.000 --> 00:19:28.010 align:start position:0%
+soluzione
+ 
+
+00:19:28.010 --> 00:19:29.710 align:start position:0%
+soluzione
+aspetto<00:19:28.370><c> le</c><00:19:28.460><c> vostre</c><00:19:28.490><c> richieste</c><00:19:28.940><c> vi</c><00:19:29.270><c> ringrazio</c>
+
+00:19:29.710 --> 00:19:29.720 align:start position:0%
+aspetto le vostre richieste vi ringrazio
+ 
+
+00:19:29.720 --> 00:19:31.270 align:start position:0%
+aspetto le vostre richieste vi ringrazio
+tantissimo<00:19:29.900><c> e</c><00:19:30.260><c> vi</c><00:19:30.440><c> lascio</c><00:19:30.680><c> la</c><00:19:30.800><c> visione</c><00:19:31.190><c> di</c>
+
+00:19:31.270 --> 00:19:31.280 align:start position:0%
+tantissimo e vi lascio la visione di
+ 
+
+00:19:31.280 --> 00:19:33.400 align:start position:0%
+tantissimo e vi lascio la visione di
+tutti<00:19:31.520><c> gli</c><00:19:31.970><c> altri</c><00:19:32.180><c> meravigliosi</c><00:19:32.540><c> video</c><00:19:33.230><c> che</c>
+
+00:19:33.400 --> 00:19:33.410 align:start position:0%
+tutti gli altri meravigliosi video che
+ 
+
+00:19:33.410 --> 00:19:37.450 align:start position:0%
+tutti gli altri meravigliosi video che
+ci<00:19:33.560><c> sono</c><00:19:33.740><c> qui</c><00:19:34.010><c> su</c><00:19:34.130><c> youtube</c><00:19:34.450><c> presto</c>
+

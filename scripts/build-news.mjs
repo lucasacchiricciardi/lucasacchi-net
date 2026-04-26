@@ -191,6 +191,16 @@ function assembleDist() {
     console.warn(`Warning: ${i18nSrc} not found, skipping`);
   }
 
+  // Copy secret.json if exists
+  const secretSrc = join(process.cwd(), 'src', 'secret.json');
+  const secretDst = join(DIST, 'secret.json');
+  if (existsSync(secretSrc)) {
+    copyFileSync(secretSrc, secretDst);
+    console.log('Copied secret.json to dist/');
+  } else {
+    console.log('secret.json not found, auth disabled');
+  }
+
 
   // Copy subpages
   const subpagesDir = 'src';

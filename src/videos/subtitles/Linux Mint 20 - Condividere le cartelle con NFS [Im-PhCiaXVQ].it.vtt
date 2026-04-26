@@ -1,0 +1,3664 @@
+WEBVTT
+Kind: captions
+Language: it
+
+00:00:00.949 --> 00:00:04.579 align:start position:0%
+ 
+ciao<00:00:01.949><c> benvenuto</c><00:00:02.730><c> benvenuta</c><00:00:03.360><c> io</c><00:00:03.540><c> sono</c><00:00:03.990><c> luca</c><00:00:04.140><c> di</c>
+
+00:00:04.579 --> 00:00:04.589 align:start position:0%
+ciao benvenuto benvenuta io sono luca di
+ 
+
+00:00:04.589 --> 00:00:07.249 align:start position:0%
+ciao benvenuto benvenuta io sono luca di
+luca<00:00:04.830><c> sacchi</c><00:00:05.160><c> puntonet</c><00:00:05.609><c> oggi</c><00:00:06.299><c> parliamo</c><00:00:06.720><c> di</c>
+
+00:00:07.249 --> 00:00:07.259 align:start position:0%
+luca sacchi puntonet oggi parliamo di
+ 
+
+00:00:07.259 --> 00:00:09.560 align:start position:0%
+luca sacchi puntonet oggi parliamo di
+linux<00:00:07.649><c> mint</c><00:00:07.890><c> e</c><00:00:08.730><c> di</c><00:00:09.059><c> come</c><00:00:09.389><c> è</c><00:00:09.420><c> possibile</c>
+
+00:00:09.560 --> 00:00:09.570 align:start position:0%
+linux mint e di come è possibile
+ 
+
+00:00:09.570 --> 00:00:12.680 align:start position:0%
+linux mint e di come è possibile
+condividere<00:00:10.349><c> le</c><00:00:10.889><c> cartelle</c><00:00:11.309><c> del</c><00:00:11.759><c> nostro</c><00:00:12.150><c> linux</c>
+
+00:00:12.680 --> 00:00:12.690 align:start position:0%
+condividere le cartelle del nostro linux
+ 
+
+00:00:12.690 --> 00:00:15.650 align:start position:0%
+condividere le cartelle del nostro linux
+su<00:00:13.019><c> una</c><00:00:13.290><c> rete</c><00:00:13.679><c> con</c><00:00:13.950><c> altri</c><00:00:14.309><c> linux</c><00:00:14.790><c> e</c><00:00:14.820><c> altri</c><00:00:14.969><c> unix</c>
+
+00:00:15.650 --> 00:00:15.660 align:start position:0%
+su una rete con altri linux e altri unix
+ 
+
+00:00:15.660 --> 00:00:23.370 align:start position:0%
+su una rete con altri linux e altri unix
+ad<00:00:15.900><c> esempio</c><00:00:16.470><c> meco</c><00:00:16.949><c> s</c><00:00:17.460><c> con</c><00:00:18.180><c> il</c><00:00:18.359><c> protocollo</c><00:00:18.570><c> nfs</c>
+
+00:00:23.370 --> 00:00:23.380 align:start position:0%
+ 
+ 
+
+00:00:23.380 --> 00:00:26.920 align:start position:0%
+ 
+sono<00:00:24.380><c> luca</c><00:00:24.500><c> e</c><00:00:24.700><c> su</c><00:00:25.700><c> questo</c><00:00:25.970><c> canale</c><00:00:26.150><c> troverai</c>
+
+00:00:26.920 --> 00:00:26.930 align:start position:0%
+sono luca e su questo canale troverai
+ 
+
+00:00:26.930 --> 00:00:28.930 align:start position:0%
+sono luca e su questo canale troverai
+informazioni<00:00:27.380><c> che</c><00:00:28.070><c> ti</c><00:00:28.190><c> permetteranno</c><00:00:28.820><c> di</c>
+
+00:00:28.930 --> 00:00:28.940 align:start position:0%
+informazioni che ti permetteranno di
+ 
+
+00:00:28.940 --> 00:00:31.979 align:start position:0%
+informazioni che ti permetteranno di
+conoscere<00:00:29.300><c> meglio</c><00:00:29.840><c> linux</c><00:00:30.619><c> e</c>
+
+00:00:31.979 --> 00:00:31.989 align:start position:0%
+conoscere meglio linux e
+ 
+
+00:00:31.989 --> 00:00:35.470 align:start position:0%
+conoscere meglio linux e
+usarlo<00:00:32.989><c> in</c><00:00:33.020><c> maniera</c><00:00:33.559><c> approfondita</c><00:00:34.059><c> e</c><00:00:35.059><c> non</c><00:00:35.090><c> da</c>
+
+00:00:35.470 --> 00:00:35.480 align:start position:0%
+usarlo in maniera approfondita e non da
+ 
+
+00:00:35.480 --> 00:00:40.200 align:start position:0%
+usarlo in maniera approfondita e non da
+semplice<00:00:36.050><c> neofita</c>
+
+00:00:40.200 --> 00:00:40.210 align:start position:0%
+ 
+ 
+
+00:00:40.210 --> 00:00:43.540 align:start position:0%
+ 
+iniziamo<00:00:41.210><c> con</c><00:00:41.690><c> il</c><00:00:42.080><c> nostro</c><00:00:42.680><c> laboratorio</c>
+
+00:00:43.540 --> 00:00:43.550 align:start position:0%
+iniziamo con il nostro laboratorio
+ 
+
+00:00:43.550 --> 00:00:48.960 align:start position:0%
+iniziamo con il nostro laboratorio
+colleghiamoci<00:00:44.300><c> alla</c><00:00:44.540><c> macchina</c>
+
+00:00:48.960 --> 00:00:48.970 align:start position:0%
+ 
+ 
+
+00:00:48.970 --> 00:00:52.479 align:start position:0%
+ 
+ingrandiamo<00:00:49.970><c> un</c><00:00:50.360><c> po</c><00:00:50.510><c> questa</c><00:00:51.460><c> macchina</c><00:00:52.460><c> e</c>
+
+00:00:52.479 --> 00:00:52.489 align:start position:0%
+ingrandiamo un po questa macchina e
+ 
+
+00:00:52.489 --> 00:00:55.750 align:start position:0%
+ingrandiamo un po questa macchina e
+andiamo<00:00:53.030><c> aprire</c><00:00:53.449><c> il</c><00:00:53.570><c> terminale</c><00:00:54.460><c> perfetto</c>
+
+00:00:55.750 --> 00:00:55.760 align:start position:0%
+andiamo aprire il terminale perfetto
+ 
+
+00:00:55.760 --> 00:00:58.210 align:start position:0%
+andiamo aprire il terminale perfetto
+prima<00:00:56.659><c> di</c><00:00:56.750><c> tutto</c><00:00:56.780><c> diventiamo</c><00:00:57.559><c> amministratori</c>
+
+00:00:58.210 --> 00:00:58.220 align:start position:0%
+prima di tutto diventiamo amministratori
+ 
+
+00:00:58.220 --> 00:01:00.670 align:start position:0%
+prima di tutto diventiamo amministratori
+di<00:00:58.309><c> sistema</c><00:00:58.850><c> con</c><00:00:59.059><c> sudo</c><00:00:59.780><c> meno</c><00:01:00.110><c> io</c><00:01:00.260><c> e</c><00:01:00.379><c> diamo</c><00:01:00.620><c> la</c>
+
+00:01:00.670 --> 00:01:00.680 align:start position:0%
+di sistema con sudo meno io e diamo la
+ 
+
+00:01:00.680 --> 00:01:02.590 align:start position:0%
+di sistema con sudo meno io e diamo la
+nostra<00:01:00.799><c> password</c><00:01:01.460><c> di</c><00:01:01.760><c> amministratore</c><00:01:02.299><c> da</c>
+
+00:01:02.590 --> 00:01:02.600 align:start position:0%
+nostra password di amministratore da
+ 
+
+00:01:02.600 --> 00:01:03.880 align:start position:0%
+nostra password di amministratore da
+nostra<00:01:02.870><c> password</c><00:01:03.140><c> di</c><00:01:03.320><c> utenti</c><00:01:03.470><c> ci</c>
+
+00:01:03.880 --> 00:01:03.890 align:start position:0%
+nostra password di utenti ci
+ 
+
+00:01:03.890 --> 00:01:06.610 align:start position:0%
+nostra password di utenti ci
+trasformiamo<00:01:04.309><c> in</c><00:01:04.489><c> amministratori</c><00:01:05.360><c> ecco</c><00:01:05.990><c> da</c>
+
+00:01:06.610 --> 00:01:06.620 align:start position:0%
+trasformiamo in amministratori ecco da
+ 
+
+00:01:06.620 --> 00:01:09.580 align:start position:0%
+trasformiamo in amministratori ecco da
+notarsi<00:01:07.130><c> il</c><00:01:07.760><c> prompt</c><00:01:08.479><c> prima</c><00:01:08.870><c> terminava</c><00:01:09.409><c> per</c>
+
+00:01:09.580 --> 00:01:09.590 align:start position:0%
+notarsi il prompt prima terminava per
+ 
+
+00:01:09.590 --> 00:01:11.740 align:start position:0%
+notarsi il prompt prima terminava per
+dollaro<00:01:10.070><c> adesso</c><00:01:10.460><c> terminate</c><00:01:10.970><c> cancelletto</c>
+
+00:01:11.740 --> 00:01:11.750 align:start position:0%
+dollaro adesso terminate cancelletto
+ 
+
+00:01:11.750 --> 00:01:14.250 align:start position:0%
+dollaro adesso terminate cancelletto
+questo<00:01:12.049><c> ci</c><00:01:12.200><c> dà</c><00:01:12.320><c> la</c><00:01:12.440><c> conferma</c><00:01:12.740><c> che</c><00:01:13.070><c> siamo</c>
+
+00:01:14.250 --> 00:01:14.260 align:start position:0%
+questo ci dà la conferma che siamo
+ 
+
+00:01:14.260 --> 00:01:17.350 align:start position:0%
+questo ci dà la conferma che siamo
+utenti<00:01:15.260><c> con</c><00:01:15.440><c> diritti</c><00:01:15.979><c> di</c><00:01:16.270><c> amministrazione</c><00:01:17.270><c> in</c>
+
+00:01:17.350 --> 00:01:17.360 align:start position:0%
+utenti con diritti di amministrazione in
+ 
+
+00:01:17.360 --> 00:01:19.510 align:start position:0%
+utenti con diritti di amministrazione in
+più<00:01:17.450><c> il</c><00:01:17.600><c> prompt</c><00:01:17.930><c> da</c><00:01:18.170><c> adesso</c><00:01:18.440><c> inizia</c><00:01:18.710><c> come</c><00:01:19.190><c> root</c>
+
+00:01:19.510 --> 00:01:19.520 align:start position:0%
+più il prompt da adesso inizia come root
+ 
+
+00:01:19.520 --> 00:01:24.780 align:start position:0%
+più il prompt da adesso inizia come root
+e<00:01:20.299><c> non</c><00:01:20.510><c> più</c><00:01:20.659><c> come</c><00:01:20.930><c> tilde</c><00:01:21.920><c> basta</c><00:01:22.430><c> detto</c><00:01:23.360><c> questo</c>
+
+00:01:24.780 --> 00:01:24.790 align:start position:0%
+e non più come tilde basta detto questo
+ 
+
+00:01:24.790 --> 00:01:27.899 align:start position:0%
+e non più come tilde basta detto questo
+andiamo<00:01:25.790><c> a</c><00:01:26.119><c> cercare</c><00:01:26.450><c> e</c>
+
+00:01:27.899 --> 00:01:27.909 align:start position:0%
+andiamo a cercare e
+ 
+
+00:01:27.909 --> 00:01:30.819 align:start position:0%
+andiamo a cercare e
+installiamo<00:01:28.909><c> quindi</c><00:01:29.780><c> prima</c><00:01:29.960><c> la</c><00:01:30.289><c> ricerca</c>
+
+00:01:30.819 --> 00:01:30.829 align:start position:0%
+installiamo quindi prima la ricerca
+ 
+
+00:01:30.829 --> 00:01:32.429 align:start position:0%
+installiamo quindi prima la ricerca
+search
+
+00:01:32.429 --> 00:01:32.439 align:start position:0%
+search
+ 
+
+00:01:32.439 --> 00:01:34.319 align:start position:0%
+search
+nfs
+
+00:01:34.319 --> 00:01:34.329 align:start position:0%
+nfs
+ 
+
+00:01:34.329 --> 00:01:36.840 align:start position:0%
+nfs
+kerr<00:01:35.329><c> nella</c>
+
+00:01:36.840 --> 00:01:36.850 align:start position:0%
+kerr nella
+ 
+
+00:01:36.850 --> 00:01:40.469 align:start position:0%
+kerr nella
+server<00:01:37.869><c> e</c><00:01:38.869><c> diamo</c><00:01:39.200><c> invio</c>
+
+00:01:40.469 --> 00:01:40.479 align:start position:0%
+server e diamo invio
+ 
+
+00:01:40.479 --> 00:01:43.149 align:start position:0%
+server e diamo invio
+e<00:01:41.479><c> verifichiamo</c><00:01:41.990><c> il</c><00:01:42.259><c> nome</c><00:01:42.500><c> corretto</c><00:01:42.740><c> del</c>
+
+00:01:43.149 --> 00:01:43.159 align:start position:0%
+e verifichiamo il nome corretto del
+ 
+
+00:01:43.159 --> 00:01:45.520 align:start position:0%
+e verifichiamo il nome corretto del
+pacchetto<00:01:43.429><c> dovrebbe</c><00:01:43.850><c> essere</c><00:01:44.329><c> questo</c><00:01:44.780><c> allora</c>
+
+00:01:45.520 --> 00:01:45.530 align:start position:0%
+pacchetto dovrebbe essere questo allora
+ 
+
+00:01:45.530 --> 00:01:47.980 align:start position:0%
+pacchetto dovrebbe essere questo allora
+lui<00:01:45.619><c> adesso</c><00:01:45.859><c> sta</c><00:01:46.310><c> leggendo</c><00:01:47.000><c> nel</c><00:01:47.329><c> suo</c><00:01:47.509><c> database</c>
+
+00:01:47.980 --> 00:01:47.990 align:start position:0%
+lui adesso sta leggendo nel suo database
+ 
+
+00:01:47.990 --> 00:01:51.700 align:start position:0%
+lui adesso sta leggendo nel suo database
+interno<00:01:48.320><c> dei</c><00:01:49.189><c> pacchetti</c><00:01:49.490><c> disponibili</c><00:01:49.789><c> e</c><00:01:50.710><c> sta</c>
+
+00:01:51.700 --> 00:01:51.710 align:start position:0%
+interno dei pacchetti disponibili e sta
+ 
+
+00:01:51.710 --> 00:01:54.849 align:start position:0%
+interno dei pacchetti disponibili e sta
+cercando<00:01:51.740><c> appunto</c><00:01:52.640><c> se</c><00:01:53.030><c> esiste</c><00:01:53.659><c> un</c><00:01:54.350><c> pacchetto</c>
+
+00:01:54.849 --> 00:01:54.859 align:start position:0%
+cercando appunto se esiste un pacchetto
+ 
+
+00:01:54.859 --> 00:01:58.660 align:start position:0%
+cercando appunto se esiste un pacchetto
+che<00:01:55.280><c> parla</c><00:01:56.030><c> di</c><00:01:56.210><c> network</c><00:01:56.929><c> file</c><00:01:57.170><c> system</c><00:01:57.670><c> server</c>
+
+00:01:58.660 --> 00:01:58.670 align:start position:0%
+che parla di network file system server
+ 
+
+00:01:58.670 --> 00:02:02.109 align:start position:0%
+che parla di network file system server
+a<00:01:59.119><c> livello</c><00:01:59.570><c> di</c><00:01:59.719><c> kernel</c><00:01:59.990><c> space</c><00:02:00.649><c> quindi</c><00:02:01.640><c> il</c>
+
+00:02:02.109 --> 00:02:02.119 align:start position:0%
+a livello di kernel space quindi il
+ 
+
+00:02:02.119 --> 00:02:04.660 align:start position:0%
+a livello di kernel space quindi il
+livello<00:02:02.299><c> più</c><00:02:02.600><c> basso</c><00:02:02.710><c> di</c><00:02:03.710><c> accesso</c><00:02:04.310><c> alle</c>
+
+00:02:04.660 --> 00:02:04.670 align:start position:0%
+livello più basso di accesso alle
+ 
+
+00:02:04.670 --> 00:02:08.300 align:start position:0%
+livello più basso di accesso alle
+risorse<00:02:04.820><c> quindi</c><00:02:05.450><c> più</c><00:02:05.810><c> veloce</c>
+
+00:02:08.300 --> 00:02:08.310 align:start position:0%
+risorse quindi più veloce
+ 
+
+00:02:08.310 --> 00:02:12.140 align:start position:0%
+risorse quindi più veloce
+bene<00:02:08.970><c> abbiamo</c><00:02:09.450><c> il</c><00:02:09.780><c> risultato</c><00:02:10.500><c> ho</c><00:02:11.190><c> imbroccato</c>
+
+00:02:12.140 --> 00:02:12.150 align:start position:0%
+bene abbiamo il risultato ho imbroccato
+ 
+
+00:02:12.150 --> 00:02:14.479 align:start position:0%
+bene abbiamo il risultato ho imbroccato
+per<00:02:12.660><c> una</c><00:02:12.810><c> volta</c><00:02:12.900><c> tanto</c><00:02:13.170><c> nella</c><00:02:13.530><c> vita</c><00:02:13.620><c> il</c><00:02:13.950><c> nome</c>
+
+00:02:14.479 --> 00:02:14.489 align:start position:0%
+per una volta tanto nella vita il nome
+ 
+
+00:02:14.489 --> 00:02:16.400 align:start position:0%
+per una volta tanto nella vita il nome
+del<00:02:14.819><c> pacchetto</c><00:02:15.090><c> corretto</c><00:02:15.720><c> quindi</c><00:02:15.840><c> andiamo</c><00:02:16.380><c> a</c>
+
+00:02:16.400 --> 00:02:16.410 align:start position:0%
+del pacchetto corretto quindi andiamo a
+ 
+
+00:02:16.410 --> 00:02:24.370 align:start position:0%
+del pacchetto corretto quindi andiamo a
+installarlo<00:02:17.250><c> con</c><00:02:17.910><c> apt</c><00:02:19.010><c> in</c><00:02:20.010><c> stroll</c>
+
+00:02:24.370 --> 00:02:24.380 align:start position:0%
+ 
+ 
+
+00:02:24.380 --> 00:02:28.750 align:start position:0%
+ 
+nfs<00:02:25.380><c> meno</c><00:02:26.040><c> kernel</c><00:02:26.730><c> meno</c><00:02:27.330><c> server</c>
+
+00:02:28.750 --> 00:02:28.760 align:start position:0%
+nfs meno kernel meno server
+ 
+
+00:02:28.760 --> 00:02:32.780 align:start position:0%
+nfs meno kernel meno server
+quindio<00:02:30.140><c> al</c><00:02:31.140><c> solito</c><00:02:31.590><c> ci</c><00:02:31.800><c> chiede</c><00:02:32.099><c> conferma</c><00:02:32.670><c> li</c>
+
+00:02:32.780 --> 00:02:32.790 align:start position:0%
+quindio al solito ci chiede conferma li
+ 
+
+00:02:32.790 --> 00:02:35.470 align:start position:0%
+quindio al solito ci chiede conferma li
+amo<00:02:32.970><c> li</c><00:02:33.000><c> s</c><00:02:33.690><c> percy</c>
+
+00:02:35.470 --> 00:02:35.480 align:start position:0%
+amo li s percy
+ 
+
+00:02:35.480 --> 00:02:39.410 align:start position:0%
+amo li s percy
+lui<00:02:36.480><c> scarica</c><00:02:37.319><c> tutte</c><00:02:37.560><c> le</c><00:02:37.590><c> dipendenze</c><00:02:38.459><c> l'unica</c>
+
+00:02:39.410 --> 00:02:39.420 align:start position:0%
+lui scarica tutte le dipendenze l'unica
+ 
+
+00:02:39.420 --> 00:02:41.840 align:start position:0%
+lui scarica tutte le dipendenze l'unica
+altra<00:02:39.660><c> cosa</c><00:02:39.870><c> che</c><00:02:40.170><c> dovremmo</c><00:02:40.470><c> andare</c><00:02:41.130><c> a</c><00:02:41.160><c> fare</c>
+
+00:02:41.840 --> 00:02:41.850 align:start position:0%
+altra cosa che dovremmo andare a fare
+ 
+
+00:02:41.850 --> 00:02:44.240 align:start position:0%
+altra cosa che dovremmo andare a fare
+sarà<00:02:42.299><c> poi</c><00:02:42.540><c> definire</c><00:02:43.200><c> la</c><00:02:43.590><c> cartella</c><00:02:43.890><c> da</c>
+
+00:02:44.240 --> 00:02:44.250 align:start position:0%
+sarà poi definire la cartella da
+ 
+
+00:02:44.250 --> 00:02:46.880 align:start position:0%
+sarà poi definire la cartella da
+condividere<00:02:45.030><c> con</c><00:02:45.390><c> chi</c><00:02:45.630><c> condividerla</c><00:02:46.500><c> e</c><00:02:46.530><c> con</c>
+
+00:02:46.880 --> 00:02:46.890 align:start position:0%
+condividere con chi condividerla e con
+ 
+
+00:02:46.890 --> 00:02:48.520 align:start position:0%
+condividere con chi condividerla e con
+che<00:02:47.100><c> permessi</c>
+
+00:02:48.520 --> 00:02:48.530 align:start position:0%
+che permessi
+ 
+
+00:02:48.530 --> 00:02:51.740 align:start position:0%
+che permessi
+questo<00:02:49.530><c> si</c><00:02:49.680><c> farà</c><00:02:49.950><c> semplicemente</c><00:02:50.850><c> editando</c><00:02:51.330><c> un</c>
+
+00:02:51.740 --> 00:02:51.750 align:start position:0%
+questo si farà semplicemente editando un
+ 
+
+00:02:51.750 --> 00:02:56.120 align:start position:0%
+questo si farà semplicemente editando un
+file<00:02:52.549><c> che</c><00:02:53.549><c> si</c><00:02:53.670><c> chiama</c><00:02:54.150><c> export</c><00:02:54.860><c> quelle</c><00:02:55.860><c> per</c><00:02:56.010><c> le</c>
+
+00:02:56.120 --> 00:02:56.130 align:start position:0%
+file che si chiama export quelle per le
+ 
+
+00:02:56.130 --> 00:02:58.699 align:start position:0%
+file che si chiama export quelle per le
+cartelle<00:02:56.400><c> esportate</c><00:02:57.200><c> dentro</c><00:02:58.200><c> nella</c>
+
+00:02:58.699 --> 00:02:58.709 align:start position:0%
+cartelle esportate dentro nella
+ 
+
+00:02:58.709 --> 00:03:01.130 align:start position:0%
+cartelle esportate dentro nella
+directory<00:02:58.980><c> etici</c><00:02:59.760><c> che</c><00:03:00.030><c> vi</c><00:03:00.390><c> ricordo</c><00:03:00.900><c> è</c><00:03:00.930><c> la</c>
+
+00:03:01.130 --> 00:03:01.140 align:start position:0%
+directory etici che vi ricordo è la
+ 
+
+00:03:01.140 --> 00:03:03.320 align:start position:0%
+directory etici che vi ricordo è la
+cartella<00:03:01.410><c> che</c><00:03:01.650><c> contiene</c><00:03:02.010><c> tutti</c><00:03:02.730><c> i</c><00:03:02.760><c> file</c><00:03:03.209><c> di</c>
+
+00:03:03.320 --> 00:03:03.330 align:start position:0%
+cartella che contiene tutti i file di
+ 
+
+00:03:03.330 --> 00:03:07.449 align:start position:0%
+cartella che contiene tutti i file di
+configurazione<00:03:03.480><c> del</c><00:03:04.440><c> sistema</c>
+
+00:03:07.449 --> 00:03:07.459 align:start position:0%
+ 
+ 
+
+00:03:07.459 --> 00:03:10.820 align:start position:0%
+ 
+che<00:03:08.459><c> vedete</c><00:03:08.819><c> qui</c><00:03:09.150><c> la</c><00:03:09.299><c> sta</c><00:03:09.540><c> creando</c><00:03:09.900><c> creati</c><00:03:10.680><c> con</c>
+
+00:03:10.820 --> 00:03:10.830 align:start position:0%
+che vedete qui la sta creando creati con
+ 
+
+00:03:10.830 --> 00:03:14.590 align:start position:0%
+che vedete qui la sta creando creati con
+film<00:03:11.099><c> file</c><00:03:11.580><c> etici</c><00:03:12.120><c> export</c>
+
+00:03:14.590 --> 00:03:14.600 align:start position:0%
+film file etici export
+ 
+
+00:03:14.600 --> 00:03:16.240 align:start position:0%
+film file etici export
+bene
+
+00:03:16.240 --> 00:03:16.250 align:start position:0%
+bene
+ 
+
+00:03:16.250 --> 00:03:21.130 align:start position:0%
+bene
+andiamo<00:03:17.250><c> in</c><00:03:17.670><c> etcc</c><00:03:18.150><c> di</c><00:03:18.510><c> slash</c><00:03:18.959><c> etici</c>
+
+00:03:21.130 --> 00:03:21.140 align:start position:0%
+andiamo in etcc di slash etici
+ 
+
+00:03:21.140 --> 00:03:24.009 align:start position:0%
+andiamo in etcc di slash etici
+facciamo<00:03:22.140><c> un</c><00:03:22.260><c> bel</c><00:03:22.380><c> moro</c>
+
+00:03:24.009 --> 00:03:24.019 align:start position:0%
+facciamo un bel moro
+ 
+
+00:03:24.019 --> 00:03:31.390 align:start position:0%
+facciamo un bel moro
+di<00:03:25.430><c> expo</c><00:03:26.430><c> luxe</c>
+
+00:03:31.390 --> 00:03:31.400 align:start position:0%
+ 
+ 
+
+00:03:31.400 --> 00:03:35.479 align:start position:0%
+ 
+vediamo<00:03:32.400><c> degli</c><00:03:32.640><c> esempi</c><00:03:33.090><c> allora</c><00:03:33.750><c> nfs</c><00:03:34.380><c> viene</c><00:03:35.310><c> su</c>
+
+00:03:35.479 --> 00:03:35.489 align:start position:0%
+vediamo degli esempi allora nfs viene su
+ 
+
+00:03:35.489 --> 00:03:40.190 align:start position:0%
+vediamo degli esempi allora nfs viene su
+in<00:03:35.840><c> due</c><00:03:36.840><c> versioni</c><00:03:37.500><c> attualmente</c><00:03:38.150><c> la</c><00:03:39.150><c> 3</c><00:03:39.299><c> e</c><00:03:39.569><c> la</c><00:03:39.600><c> 4</c>
+
+00:03:40.190 --> 00:03:40.200 align:start position:0%
+in due versioni attualmente la 3 e la 4
+ 
+
+00:03:40.200 --> 00:03:44.059 align:start position:0%
+in due versioni attualmente la 3 e la 4
+l'a2<00:03:41.190><c> compatibile</c><00:03:41.940><c> con</c><00:03:42.090><c> la</c><00:03:42.180><c> 3</c><00:03:42.420><c> diciamo</c><00:03:43.069><c> le</c>
+
+00:03:44.059 --> 00:03:44.069 align:start position:0%
+l'a2 compatibile con la 3 diciamo le
+ 
+
+00:03:44.069 --> 00:03:46.940 align:start position:0%
+l'a2 compatibile con la 3 diciamo le
+versioni<00:03:44.430><c> precedenti</c><00:03:44.790><c> alla</c><00:03:45.510><c> 4</c><00:03:45.959><c> finiscono</c>
+
+00:03:46.940 --> 00:03:46.950 align:start position:0%
+versioni precedenti alla 4 finiscono
+ 
+
+00:03:46.950 --> 00:03:48.910 align:start position:0%
+versioni precedenti alla 4 finiscono
+tutte<00:03:47.549><c> dentro</c><00:03:47.850><c> nella</c><00:03:48.090><c> pre</c>
+
+00:03:48.910 --> 00:03:48.920 align:start position:0%
+tutte dentro nella pre
+ 
+
+00:03:48.920 --> 00:03:54.220 align:start position:0%
+tutte dentro nella pre
+nome<00:03:49.920><c> cartella</c><00:03:50.750><c> spazio</c><00:03:51.750><c> nome</c><00:03:52.620><c> del</c><00:03:52.769><c> server</c><00:03:53.639><c> o</c>
+
+00:03:54.220 --> 00:03:54.230 align:start position:0%
+nome cartella spazio nome del server o
+ 
+
+00:03:54.230 --> 00:03:56.470 align:start position:0%
+nome cartella spazio nome del server o
+una
+
+00:03:56.470 --> 00:03:56.480 align:start position:0%
+una
+ 
+
+00:03:56.480 --> 00:03:59.000 align:start position:0%
+una
+una<00:03:57.480><c> wild</c><00:03:57.840><c> card</c><00:03:57.870><c> quindi</c><00:03:58.319><c> un</c><00:03:58.410><c> asterisco</c><00:03:58.709><c> per</c>
+
+00:03:59.000 --> 00:03:59.010 align:start position:0%
+una wild card quindi un asterisco per
+ 
+
+00:03:59.010 --> 00:04:00.349 align:start position:0%
+una wild card quindi un asterisco per
+dire<00:03:59.250><c> tutti</c><00:03:59.519><c> i</c><00:03:59.549><c> server</c><00:03:59.819><c> che</c><00:03:59.940><c> si</c><00:04:00.090><c> possono</c>
+
+00:04:00.349 --> 00:04:00.359 align:start position:0%
+dire tutti i server che si possono
+ 
+
+00:04:00.359 --> 00:04:04.190 align:start position:0%
+dire tutti i server che si possono
+collegare<00:04:00.720><c> o</c><00:04:01.290><c> un</c><00:04:02.100><c> indirizzo</c><00:04:02.670><c> ip</c><00:04:02.760><c> o</c><00:04:03.120><c> una</c><00:04:03.720><c> sauna</c>
+
+00:04:04.190 --> 00:04:04.200 align:start position:0%
+collegare o un indirizzo ip o una sauna
+ 
+
+00:04:04.200 --> 00:04:07.099 align:start position:0%
+collegare o un indirizzo ip o una sauna
+subnet<00:04:05.100><c> di</c><00:04:05.400><c> indirizzi</c><00:04:05.940><c> ip</c><00:04:06.150><c> che</c><00:04:06.840><c> potrà</c>
+
+00:04:07.099 --> 00:04:07.109 align:start position:0%
+subnet di indirizzi ip che potrà
+ 
+
+00:04:07.109 --> 00:04:10.520 align:start position:0%
+subnet di indirizzi ip che potrà
+accedere<00:04:07.590><c> poi</c><00:04:08.459><c> c'è</c><00:04:08.609><c> il</c><00:04:08.880><c> come</c><00:04:09.420><c> accede</c><00:04:10.049><c> quindi</c><00:04:10.230><c> è</c>
+
+00:04:10.520 --> 00:04:10.530 align:start position:0%
+accedere poi c'è il come accede quindi è
+ 
+
+00:04:10.530 --> 00:04:15.289 align:start position:0%
+accedere poi c'è il come accede quindi è
+cosa<00:04:11.340><c> chi</c><00:04:12.709><c> come</c><00:04:13.709><c> è</c><00:04:14.160><c> il</c><00:04:14.370><c> formato</c><00:04:14.880><c> di</c><00:04:15.000><c> questo</c>
+
+00:04:15.289 --> 00:04:15.299 align:start position:0%
+cosa chi come è il formato di questo
+ 
+
+00:04:15.299 --> 00:04:18.890 align:start position:0%
+cosa chi come è il formato di questo
+file<00:04:15.530><c> come</c><00:04:16.530><c> accede</c><00:04:16.979><c> read</c><00:04:17.370><c> write</c><00:04:17.489><c> in</c><00:04:18.419><c> maniera</c>
+
+00:04:18.890 --> 00:04:18.900 align:start position:0%
+file come accede read write in maniera
+ 
+
+00:04:18.900 --> 00:04:21.800 align:start position:0%
+file come accede read write in maniera
+che<00:04:19.680><c> i</c><00:04:20.070><c> dati</c><00:04:20.459><c> vengono</c><00:04:20.760><c> scritti</c>
+
+00:04:21.800 --> 00:04:21.810 align:start position:0%
+che i dati vengono scritti
+ 
+
+00:04:21.810 --> 00:04:24.860 align:start position:0%
+che i dati vengono scritti
+sincrono<00:04:22.470><c> appena</c><00:04:22.889><c> arrivano</c><00:04:23.550><c> li</c><00:04:24.419><c> tengo</c><00:04:24.780><c> un</c>
+
+00:04:24.860 --> 00:04:24.870 align:start position:0%
+sincrono appena arrivano li tengo un
+ 
+
+00:04:24.870 --> 00:04:27.740 align:start position:0%
+sincrono appena arrivano li tengo un
+attimo<00:04:25.230><c> in</c><00:04:25.320><c> memoria</c><00:04:25.860><c> li</c><00:04:26.280><c> scrivo</c><00:04:26.760><c> sul</c><00:04:27.120><c> pil</c>
+
+00:04:27.740 --> 00:04:27.750 align:start position:0%
+attimo in memoria li scrivo sul pil
+ 
+
+00:04:27.750 --> 00:04:32.090 align:start position:0%
+attimo in memoria li scrivo sul pil
+sistemando<00:04:28.650><c> la</c><00:04:29.340><c> knowledge</c><00:04:29.990><c> quindi</c><00:04:30.990><c> il</c><00:04:31.139><c> ok</c><00:04:31.950><c> ho</c>
+
+00:04:32.090 --> 00:04:32.100 align:start position:0%
+sistemando la knowledge quindi il ok ho
+ 
+
+00:04:32.100 --> 00:04:34.820 align:start position:0%
+sistemando la knowledge quindi il ok ho
+fatto<00:04:32.639><c> al</c><00:04:32.910><c> mio</c><00:04:33.150><c> client</c><00:04:33.840><c> così</c><00:04:34.440><c> che</c><00:04:34.560><c> lui</c><00:04:34.680><c> possa</c>
+
+00:04:34.820 --> 00:04:34.830 align:start position:0%
+fatto al mio client così che lui possa
+ 
+
+00:04:34.830 --> 00:04:37.970 align:start position:0%
+fatto al mio client così che lui possa
+continuare<00:04:35.430><c> a</c><00:04:35.639><c> darmi</c><00:04:36.210><c> altri</c><00:04:36.510><c> dati</c><00:04:36.980><c> questa</c>
+
+00:04:37.970 --> 00:04:37.980 align:start position:0%
+continuare a darmi altri dati questa
+ 
+
+00:04:37.980 --> 00:04:40.909 align:start position:0%
+continuare a darmi altri dati questa
+cosa<00:04:38.100><c> mi</c><00:04:38.760><c> garantisce</c><00:04:39.630><c> il</c><00:04:39.840><c> fatto</c><00:04:40.350><c> che</c><00:04:40.500><c> i</c><00:04:40.530><c> dati</c>
+
+00:04:40.909 --> 00:04:40.919 align:start position:0%
+cosa mi garantisce il fatto che i dati
+ 
+
+00:04:40.919 --> 00:04:43.220 align:start position:0%
+cosa mi garantisce il fatto che i dati
+siano<00:04:41.100><c> trasmessi</c><00:04:41.880><c> e</c><00:04:41.910><c> scritti</c><00:04:42.480><c> per</c><00:04:42.660><c> intero</c>
+
+00:04:43.220 --> 00:04:43.230 align:start position:0%
+siano trasmessi e scritti per intero
+ 
+
+00:04:43.230 --> 00:04:45.220 align:start position:0%
+siano trasmessi e scritti per intero
+come<00:04:43.919><c> client</c>
+
+00:04:45.220 --> 00:04:45.230 align:start position:0%
+come client
+ 
+
+00:04:45.230 --> 00:04:49.340 align:start position:0%
+come client
+ma<00:04:46.230><c> è</c><00:04:46.260><c> più</c><00:04:46.710><c> lento</c><00:04:47.550><c> oppure</c><00:04:47.790><c> c'è</c><00:04:48.180><c> la</c><00:04:48.900><c> modalità</c>
+
+00:04:49.340 --> 00:04:49.350 align:start position:0%
+ma è più lento oppure c'è la modalità
+ 
+
+00:04:49.350 --> 00:04:52.820 align:start position:0%
+ma è più lento oppure c'è la modalità
+asincrona<00:04:49.830><c> cioè</c><00:04:50.490><c> il</c><00:04:50.820><c> client</c><00:04:51.360><c> lancia</c><00:04:52.320><c> verso</c><00:04:52.530><c> il</c>
+
+00:04:52.820 --> 00:04:52.830 align:start position:0%
+asincrona cioè il client lancia verso il
+ 
+
+00:04:52.830 --> 00:04:56.750 align:start position:0%
+asincrona cioè il client lancia verso il
+server<00:04:53.400><c> i</c><00:04:53.520><c> dati</c><00:04:53.940><c> il</c><00:04:54.450><c> server</c><00:04:55.080><c> li</c><00:04:55.650><c> cattura</c><00:04:56.310><c> se</c><00:04:56.580><c> li</c>
+
+00:04:56.750 --> 00:04:56.760 align:start position:0%
+server i dati il server li cattura se li
+ 
+
+00:04:56.760 --> 00:04:59.870 align:start position:0%
+server i dati il server li cattura se li
+tiene<00:04:56.940><c> e</c><00:04:57.300><c> poi</c><00:04:58.110><c> coi</c><00:04:58.380><c> suoi</c><00:04:58.740><c> tempi</c><00:04:59.310><c> quindi</c><00:04:59.760><c> in</c>
+
+00:04:59.870 --> 00:04:59.880 align:start position:0%
+tiene e poi coi suoi tempi quindi in
+ 
+
+00:04:59.880 --> 00:05:02.360 align:start position:0%
+tiene e poi coi suoi tempi quindi in
+maniera<00:05:00.180><c> asincrona</c><00:05:00.810><c> li</c><00:05:01.590><c> scrive</c><00:05:02.010><c> sull'hard</c>
+
+00:05:02.360 --> 00:05:02.370 align:start position:0%
+maniera asincrona li scrive sull'hard
+ 
+
+00:05:02.370 --> 00:05:05.800 align:start position:0%
+maniera asincrona li scrive sull'hard
+disk<00:05:02.520><c> sullo</c><00:05:03.360><c> storage</c>
+
+00:05:05.800 --> 00:05:05.810 align:start position:0%
+ 
+ 
+
+00:05:05.810 --> 00:05:10.150 align:start position:0%
+ 
+qui<00:05:06.810><c> andiamo</c><00:05:07.050><c> a</c><00:05:07.350><c> vedere</c><00:05:08.040><c> un</c><00:05:08.780><c> opzione</c><00:05:09.780><c> che</c>
+
+00:05:10.150 --> 00:05:10.160 align:start position:0%
+qui andiamo a vedere un opzione che
+ 
+
+00:05:10.160 --> 00:05:15.190 align:start position:0%
+qui andiamo a vedere un opzione che
+nostri<00:05:11.160><c> check</c><00:05:11.690><c> che</c><00:05:12.690><c> in</c><00:05:12.810><c> pratica</c><00:05:12.930><c> va</c><00:05:13.590><c> a</c><00:05:13.910><c> dire</c><00:05:14.910><c> al</c>
+
+00:05:15.190 --> 00:05:15.200 align:start position:0%
+nostri check che in pratica va a dire al
+ 
+
+00:05:15.200 --> 00:05:19.129 align:start position:0%
+nostri check che in pratica va a dire al
+feff<00:05:16.280><c> kernel</c><00:05:17.280><c> server</c><00:05:17.820><c> di</c><00:05:18.180><c> non</c><00:05:18.570><c> andare</c><00:05:19.110><c> a</c>
+
+00:05:19.129 --> 00:05:19.139 align:start position:0%
+feff kernel server di non andare a
+ 
+
+00:05:19.139 --> 00:05:22.030 align:start position:0%
+feff kernel server di non andare a
+verificare<00:05:19.940><c> i</c><00:05:20.940><c> parametri</c>
+
+00:05:22.030 --> 00:05:22.040 align:start position:0%
+verificare i parametri
+ 
+
+00:05:22.040 --> 00:05:25.060 align:start position:0%
+verificare i parametri
+di<00:05:23.040><c> permission</c>
+
+00:05:25.060 --> 00:05:25.070 align:start position:0%
+di permission
+ 
+
+00:05:25.070 --> 00:05:27.920 align:start position:0%
+di permission
+nelle<00:05:26.090><c> sottocartelle</c><00:05:27.090><c> quindi</c><00:05:27.570><c> non</c><00:05:27.780><c> va</c>
+
+00:05:27.920 --> 00:05:27.930 align:start position:0%
+nelle sottocartelle quindi non va
+ 
+
+00:05:27.930 --> 00:05:31.100 align:start position:0%
+nelle sottocartelle quindi non va
+applicare<00:05:28.770><c> delle</c><00:05:29.640><c> restrizioni</c><00:05:29.910><c> di</c><00:05:30.419><c> sicurezza</c>
+
+00:05:31.100 --> 00:05:31.110 align:start position:0%
+applicare delle restrizioni di sicurezza
+ 
+
+00:05:31.110 --> 00:05:33.980 align:start position:0%
+applicare delle restrizioni di sicurezza
+quindi<00:05:31.470><c> è</c><00:05:31.890><c> una</c><00:05:32.370><c> modalità</c><00:05:32.850><c> di</c><00:05:33.210><c> accesso</c><00:05:33.419><c> più</c>
+
+00:05:33.980 --> 00:05:33.990 align:start position:0%
+quindi è una modalità di accesso più
+ 
+
+00:05:33.990 --> 00:05:36.890 align:start position:0%
+quindi è una modalità di accesso più
+libera<00:05:34.590><c> andiamo</c><00:05:35.039><c> a</c><00:05:35.070><c> vedere</c><00:05:35.400><c> nel</c><00:05:35.430><c> dettaglio</c><00:05:35.900><c> di</c>
+
+00:05:36.890 --> 00:05:36.900 align:start position:0%
+libera andiamo a vedere nel dettaglio di
+ 
+
+00:05:36.900 --> 00:05:40.690 align:start position:0%
+libera andiamo a vedere nel dettaglio di
+cosa<00:05:37.080><c> si</c><00:05:37.229><c> parla</c><00:05:37.800><c> quindi</c><00:05:38.070><c> man</c><00:05:38.430><c> export</c>
+
+00:05:40.690 --> 00:05:40.700 align:start position:0%
+cosa si parla quindi man export
+ 
+
+00:05:40.700 --> 00:05:44.180 align:start position:0%
+cosa si parla quindi man export
+e<00:05:41.700><c> apriamo</c><00:05:42.030><c> quindi</c><00:05:42.300><c> il</c><00:05:42.690><c> manuale</c><00:05:43.410><c> che</c><00:05:43.560><c> riguarda</c>
+
+00:05:44.180 --> 00:05:44.190 align:start position:0%
+e apriamo quindi il manuale che riguarda
+ 
+
+00:05:44.190 --> 00:05:47.510 align:start position:0%
+e apriamo quindi il manuale che riguarda
+il<00:05:44.789><c> questo</c><00:05:45.660><c> file</c><00:05:46.020><c> e</c><00:05:46.140><c> vedete</c><00:05:46.410><c> in</c><00:05:47.039><c> alto</c><00:05:47.220><c> a</c>
+
+00:05:47.510 --> 00:05:47.520 align:start position:0%
+il questo file e vedete in alto a
+ 
+
+00:05:47.520 --> 00:05:49.820 align:start position:0%
+il questo file e vedete in alto a
+sinistra<00:05:47.669><c> qui</c><00:05:48.300><c> questo</c><00:05:48.600><c> 5</c><00:05:49.050><c> rappresenta</c><00:05:49.440><c> il</c>
+
+00:05:49.820 --> 00:05:49.830 align:start position:0%
+sinistra qui questo 5 rappresenta il
+ 
+
+00:05:49.830 --> 00:05:53.450 align:start position:0%
+sinistra qui questo 5 rappresenta il
+numero<00:05:50.070><c> di</c><00:05:50.430><c> sezione</c><00:05:51.120><c> del</c><00:05:51.450><c> manuale</c><00:05:52.169><c> e</c><00:05:53.010><c> andiamo</c>
+
+00:05:53.450 --> 00:05:53.460 align:start position:0%
+numero di sezione del manuale e andiamo
+ 
+
+00:05:53.460 --> 00:05:56.770 align:start position:0%
+numero di sezione del manuale e andiamo
+a<00:05:53.490><c> vedere</c>
+
+00:05:56.770 --> 00:05:56.780 align:start position:0%
+ 
+ 
+
+00:05:56.780 --> 00:06:00.790 align:start position:0%
+ 
+qual<00:05:57.230><c> è</c><00:05:57.320><c> il</c><00:05:57.470><c> formato</c><00:05:58.210><c> single</c><00:05:59.210><c> post.it</c><00:05:59.930><c> network</c>
+
+00:06:00.790 --> 00:06:00.800 align:start position:0%
+qual è il formato single post.it network
+ 
+
+00:06:00.800 --> 00:06:03.520 align:start position:0%
+qual è il formato single post.it network
+wild<00:06:01.280><c> card</c><00:06:01.550><c> o</c><00:06:01.790><c> gruppi</c>
+
+00:06:03.520 --> 00:06:03.530 align:start position:0%
+wild card o gruppi
+ 
+
+00:06:03.530 --> 00:06:08.100 align:start position:0%
+wild card o gruppi
+se<00:06:03.710><c> è</c><00:06:03.740><c> presente</c><00:06:04.160><c> una</c><00:06:04.970><c> nice</c><00:06:05.210><c> server</c>
+
+00:06:08.100 --> 00:06:08.110 align:start position:0%
+se è presente una nice server
+ 
+
+00:06:08.110 --> 00:06:10.080 align:start position:0%
+se è presente una nice server
+poi
+
+00:06:10.080 --> 00:06:10.090 align:start position:0%
+poi
+ 
+
+00:06:10.090 --> 00:06:13.780 align:start position:0%
+poi
+scendiamo<00:06:11.090><c> a</c><00:06:11.840><c> vedere</c>
+
+00:06:13.780 --> 00:06:13.790 align:start position:0%
+scendiamo a vedere
+ 
+
+00:06:13.790 --> 00:06:16.780 align:start position:0%
+scendiamo a vedere
+r<00:06:14.090><c> v</c><00:06:14.350><c> abilità</c><00:06:15.350><c> entrambi</c><00:06:15.950><c> lettura</c><00:06:16.610><c> e</c><00:06:16.639><c> scrittura</c>
+
+00:06:16.780 --> 00:06:16.790 align:start position:0%
+r v abilità entrambi lettura e scrittura
+ 
+
+00:06:16.790 --> 00:06:20.770 align:start position:0%
+r v abilità entrambi lettura e scrittura
+su<00:06:17.510><c> un</c><00:06:17.660><c> volume</c><00:06:17.930><c> fs</c><00:06:18.889><c> asincrono</c><00:06:19.880><c> per</c><00:06:20.090><c> i</c><00:06:20.270><c> viola</c><00:06:20.660><c> le</c>
+
+00:06:20.770 --> 00:06:20.780 align:start position:0%
+su un volume fs asincrono per i viola le
+ 
+
+00:06:20.780 --> 00:06:23.379 align:start position:0%
+su un volume fs asincrono per i viola le
+regole<00:06:20.900><c> del</c><00:06:21.169><c> protocollo</c><00:06:21.610><c> però</c><00:06:22.610><c> lo</c><00:06:22.910><c> rende</c><00:06:23.240><c> più</c>
+
+00:06:23.379 --> 00:06:23.389 align:start position:0%
+regole del protocollo però lo rende più
+ 
+
+00:06:23.389 --> 00:06:24.690 align:start position:0%
+regole del protocollo però lo rende più
+veloce
+
+00:06:24.690 --> 00:06:24.700 align:start position:0%
+veloce
+ 
+
+00:06:24.700 --> 00:06:28.440 align:start position:0%
+veloce
+sincrono<00:06:25.700><c> le</c><00:06:26.600><c> richieste</c><00:06:27.020><c> vengono</c><00:06:27.320><c> fatte</c>
+
+00:06:28.440 --> 00:06:28.450 align:start position:0%
+sincrono le richieste vengono fatte
+ 
+
+00:06:28.450 --> 00:06:33.460 align:start position:0%
+sincrono le richieste vengono fatte
+eseguite<00:06:29.450><c> e</c><00:06:29.480><c> scritte</c><00:06:30.080><c> sul</c><00:06:30.760><c> sullo</c><00:06:31.760><c> storage</c><00:06:32.470><c> in</c>
+
+00:06:33.460 --> 00:06:33.470 align:start position:0%
+eseguite e scritte sul sullo storage in
+ 
+
+00:06:33.470 --> 00:06:35.159 align:start position:0%
+eseguite e scritte sul sullo storage in
+maniera<00:06:33.950><c> puntuale</c>
+
+00:06:35.159 --> 00:06:35.169 align:start position:0%
+maniera puntuale
+ 
+
+00:06:35.169 --> 00:06:38.430 align:start position:0%
+maniera puntuale
+e<00:06:36.169><c> andiamo</c><00:06:37.070><c> a</c><00:06:37.100><c> vedere</c>
+
+00:06:38.430 --> 00:06:38.440 align:start position:0%
+e andiamo a vedere
+ 
+
+00:06:38.440 --> 00:06:40.900 align:start position:0%
+e andiamo a vedere
+opzione<00:06:39.440><c> che</c><00:06:39.590><c> dicevo</c><00:06:40.070><c> no</c><00:06:40.250><c> centre</c><00:06:40.669><c> i</c><00:06:40.700><c> check</c>
+
+00:06:40.900 --> 00:06:40.910 align:start position:0%
+opzione che dicevo no centre i check
+ 
+
+00:06:40.910 --> 00:06:44.860 align:start position:0%
+opzione che dicevo no centre i check
+disabilità<00:06:42.130><c> appunto</c><00:06:43.130><c> la</c><00:06:43.669><c> verifica</c><00:06:44.240><c> delle</c>
+
+00:06:44.860 --> 00:06:44.870 align:start position:0%
+disabilità appunto la verifica delle
+ 
+
+00:06:44.870 --> 00:06:46.170 align:start position:0%
+disabilità appunto la verifica delle
+sottocartelle
+
+00:06:46.170 --> 00:06:46.180 align:start position:0%
+sottocartelle
+ 
+
+00:06:46.180 --> 00:06:50.320 align:start position:0%
+sottocartelle
+questa<00:06:47.180><c> una</c><00:06:48.250><c> appunto</c><00:06:49.250><c> come</c><00:06:49.520><c> dicevo</c><00:06:50.000><c> visto</c><00:06:50.210><c> che</c>
+
+00:06:50.320 --> 00:06:50.330 align:start position:0%
+questa una appunto come dicevo visto che
+ 
+
+00:06:50.330 --> 00:06:54.219 align:start position:0%
+questa una appunto come dicevo visto che
+è<00:06:50.360><c> una</c><00:06:50.810><c> gestione</c><00:06:51.190><c> più</c><00:06:52.190><c> lasca</c><00:06:52.669><c> dei</c><00:06:52.850><c> permessi</c>
+
+00:06:54.219 --> 00:06:54.229 align:start position:0%
+è una gestione più lasca dei permessi
+ 
+
+00:06:54.229 --> 00:06:56.140 align:start position:0%
+è una gestione più lasca dei permessi
+ha<00:06:54.260><c> delle</c><00:06:54.860><c> implicazioni</c><00:06:55.220><c> per</c><00:06:55.850><c> quel</c><00:06:56.060><c> che</c>
+
+00:06:56.140 --> 00:06:56.150 align:start position:0%
+ha delle implicazioni per quel che
+ 
+
+00:06:56.150 --> 00:06:58.629 align:start position:0%
+ha delle implicazioni per quel che
+riguarda<00:06:56.720><c> la</c><00:06:56.990><c> sicurezza</c><00:06:57.350><c> e</c><00:06:57.560><c> vanno</c><00:06:57.860><c> valutate</c>
+
+00:06:58.629 --> 00:06:58.639 align:start position:0%
+riguarda la sicurezza e vanno valutate
+ 
+
+00:06:58.639 --> 00:07:01.450 align:start position:0%
+riguarda la sicurezza e vanno valutate
+share<00:06:59.030><c> per</c><00:06:59.419><c> share</c><00:07:00.080><c> vi</c><00:07:00.530><c> lascio</c><00:07:00.919><c> poi</c><00:07:01.130><c> alla</c>
+
+00:07:01.450 --> 00:07:01.460 align:start position:0%
+share per share vi lascio poi alla
+ 
+
+00:07:01.460 --> 00:07:02.580 align:start position:0%
+share per share vi lascio poi alla
+descrizione
+
+00:07:02.580 --> 00:07:02.590 align:start position:0%
+descrizione
+ 
+
+00:07:02.590 --> 00:07:05.830 align:start position:0%
+descrizione
+di<00:07:03.590><c> questo</c><00:07:04.010><c> comportamento</c><00:07:04.370><c> per</c><00:07:05.180><c> esteso</c><00:07:05.479><c> qui</c>
+
+00:07:05.830 --> 00:07:05.840 align:start position:0%
+di questo comportamento per esteso qui
+ 
+
+00:07:05.840 --> 00:07:09.780 align:start position:0%
+di questo comportamento per esteso qui
+nel<00:07:06.050><c> manuale</c><00:07:06.610><c> facciamo</c><00:07:07.610><c> q</c><00:07:07.930><c> andiamo</c><00:07:08.930><c> a</c><00:07:08.960><c> creare</c>
+
+00:07:09.780 --> 00:07:09.790 align:start position:0%
+nel manuale facciamo q andiamo a creare
+ 
+
+00:07:09.790 --> 00:07:15.420 align:start position:0%
+nel manuale facciamo q andiamo a creare
+sotto<00:07:10.790><c> varrà</c><00:07:11.950><c> mk</c><00:07:12.950><c> dir</c>
+
+00:07:15.420 --> 00:07:15.430 align:start position:0%
+ 
+ 
+
+00:07:15.430 --> 00:07:18.370 align:start position:0%
+ 
+meno<00:07:16.430><c> p3</c><00:07:16.880><c> cui</c><00:07:17.120><c> se</c><00:07:17.510><c> vado</c><00:07:17.840><c> a</c><00:07:17.870><c> mettere</c><00:07:18.350><c> qualche</c>
+
+00:07:18.370 --> 00:07:18.380 align:start position:0%
+meno p3 cui se vado a mettere qualche
+ 
+
+00:07:18.380 --> 00:07:20.159 align:start position:0%
+meno p3 cui se vado a mettere qualche
+cosa
+
+00:07:20.159 --> 00:07:20.169 align:start position:0%
+cosa
+ 
+
+00:07:20.169 --> 00:07:23.050 align:start position:0%
+cosa
+di<00:07:21.169><c> qualche</c><00:07:21.470><c> parte</c><00:07:21.860><c> non</c><00:07:21.979><c> esiste</c><00:07:22.520><c> melo</c><00:07:22.789><c> crea</c>
+
+00:07:23.050 --> 00:07:23.060 align:start position:0%
+di qualche parte non esiste melo crea
+ 
+
+00:07:23.060 --> 00:07:25.770 align:start position:0%
+di qualche parte non esiste melo crea
+comunque<00:07:23.979><c> varrà</c>
+
+00:07:25.770 --> 00:07:25.780 align:start position:0%
+comunque varrà
+ 
+
+00:07:25.780 --> 00:07:30.390 align:start position:0%
+comunque varrà
+la<00:07:26.780><c> metto</c><00:07:26.990><c> in</c><00:07:27.110><c> cash</c>
+
+00:07:30.390 --> 00:07:30.400 align:start position:0%
+ 
+ 
+
+00:07:30.400 --> 00:07:32.580 align:start position:0%
+ 
+ei<00:07:31.400><c> a</c>
+
+00:07:32.580 --> 00:07:32.590 align:start position:0%
+ei a
+ 
+
+00:07:32.590 --> 00:07:34.469 align:start position:0%
+ei a
+tess
+
+00:07:34.469 --> 00:07:34.479 align:start position:0%
+tess
+ 
+
+00:07:34.479 --> 00:07:38.719 align:start position:0%
+tess
+cher<00:07:35.479><c> ed</c>
+
+00:07:38.719 --> 00:07:38.729 align:start position:0%
+ 
+ 
+
+00:07:38.729 --> 00:07:41.980 align:start position:0%
+ 
+e<00:07:39.629><c> poi</c><00:07:39.870><c> faccio</c>
+
+00:07:41.980 --> 00:07:41.990 align:start position:0%
+e poi faccio
+ 
+
+00:07:41.990 --> 00:07:46.540 align:start position:0%
+e poi faccio
+public
+
+00:07:46.540 --> 00:07:46.550 align:start position:0%
+ 
+ 
+
+00:07:46.550 --> 00:07:49.689 align:start position:0%
+ 
+dando<00:07:47.550><c> invio</c><00:07:47.759><c> a</c><00:07:48.240><c> questo</c><00:07:48.539><c> punto</c><00:07:48.960><c> io</c>
+
+00:07:49.689 --> 00:07:49.699 align:start position:0%
+dando invio a questo punto io
+ 
+
+00:07:49.699 --> 00:07:56.670 align:start position:0%
+dando invio a questo punto io
+l<00:07:50.699><c> s</c><00:07:50.999><c> bar</c><00:07:51.409><c> cash</c><00:07:52.669><c> jared</c>
+
+00:07:56.670 --> 00:07:56.680 align:start position:0%
+ 
+ 
+
+00:07:56.680 --> 00:07:58.279 align:start position:0%
+ 
+una<00:07:56.770><c> cartella</c><00:07:57.160><c> public</c>
+
+00:07:58.279 --> 00:07:58.289 align:start position:0%
+una cartella public
+ 
+
+00:07:58.289 --> 00:08:02.270 align:start position:0%
+una cartella public
+questa<00:07:59.289><c> cartella</c><00:07:59.620><c> adesso</c><00:08:00.430><c> è</c><00:08:00.970><c> di</c><00:08:01.419><c> root</c>
+
+00:08:02.270 --> 00:08:02.280 align:start position:0%
+questa cartella adesso è di root
+ 
+
+00:08:02.280 --> 00:08:05.210 align:start position:0%
+questa cartella adesso è di root
+però<00:08:03.280><c> io</c><00:08:03.460><c> la</c><00:08:03.639><c> voglio</c><00:08:03.729><c> rendere</c><00:08:04.360><c> pubblica</c>
+
+00:08:05.210 --> 00:08:05.220 align:start position:0%
+però io la voglio rendere pubblica
+ 
+
+00:08:05.220 --> 00:08:08.580 align:start position:0%
+però io la voglio rendere pubblica
+per<00:08:06.220><c> tutta</c><00:08:06.580><c> la</c><00:08:06.669><c> mia</c><00:08:06.820><c> rete</c><00:08:07.840><c> sto</c><00:08:07.930><c> pensando</c><00:08:08.110><c> a</c><00:08:08.470><c> un</c>
+
+00:08:08.580 --> 00:08:08.590 align:start position:0%
+per tutta la mia rete sto pensando a un
+ 
+
+00:08:08.590 --> 00:08:10.770 align:start position:0%
+per tutta la mia rete sto pensando a un
+utilizzo<00:08:08.949><c> casalingo</c><00:08:09.280><c> o</c><00:08:09.789><c> di</c><00:08:10.330><c> un</c><00:08:10.449><c> piccolo</c>
+
+00:08:10.770 --> 00:08:10.780 align:start position:0%
+utilizzo casalingo o di un piccolo
+ 
+
+00:08:10.780 --> 00:08:12.719 align:start position:0%
+utilizzo casalingo o di un piccolo
+ufficio<00:08:10.930><c> voglio</c><00:08:11.500><c> che</c><00:08:11.650><c> questa</c><00:08:11.919><c> public</c><00:08:12.490><c> si</c>
+
+00:08:12.719 --> 00:08:12.729 align:start position:0%
+ufficio voglio che questa public si
+ 
+
+00:08:12.729 --> 00:08:14.540 align:start position:0%
+ufficio voglio che questa public si
+ascrivibile<00:08:13.449><c> da</c><00:08:13.570><c> tutti</c>
+
+00:08:14.540 --> 00:08:14.550 align:start position:0%
+ascrivibile da tutti
+ 
+
+00:08:14.550 --> 00:08:17.430 align:start position:0%
+ascrivibile da tutti
+per<00:08:15.550><c> cui</c><00:08:15.699><c> ne</c><00:08:15.880><c> devo</c><00:08:16.120><c> andare</c><00:08:16.270><c> a</c><00:08:16.539><c> modificare</c><00:08:16.810><c> i</c>
+
+00:08:17.430 --> 00:08:17.440 align:start position:0%
+per cui ne devo andare a modificare i
+ 
+
+00:08:17.440 --> 00:08:18.830 align:start position:0%
+per cui ne devo andare a modificare i
+permessi
+
+00:08:18.830 --> 00:08:18.840 align:start position:0%
+permessi
+ 
+
+00:08:18.840 --> 00:08:21.439 align:start position:0%
+permessi
+sappiamo<00:08:19.840><c> che</c>
+
+00:08:21.439 --> 00:08:21.449 align:start position:0%
+sappiamo che
+ 
+
+00:08:21.449 --> 00:08:25.249 align:start position:0%
+sappiamo che
+per<00:08:22.449><c> modificare</c><00:08:23.110><c> i</c><00:08:23.139><c> permessi</c>
+
+00:08:25.249 --> 00:08:25.259 align:start position:0%
+per modificare i permessi
+ 
+
+00:08:25.259 --> 00:08:28.939 align:start position:0%
+per modificare i permessi
+ci<00:08:26.259><c> basta</c><00:08:26.710><c> andare</c><00:08:27.250><c> a</c><00:08:27.280><c> fare</c><00:08:27.550><c> un</c><00:08:27.610><c> cerca</c><00:08:27.880><c> mode</c>
+
+00:08:28.939 --> 00:08:28.949 align:start position:0%
+ci basta andare a fare un cerca mode
+ 
+
+00:08:28.949 --> 00:08:31.190 align:start position:0%
+ci basta andare a fare un cerca mode
+15h<00:08:29.949><c> mode</c>
+
+00:08:31.190 --> 00:08:31.200 align:start position:0%
+15h mode
+ 
+
+00:08:31.200 --> 00:08:34.529 align:start position:0%
+15h mode
+il<00:08:32.200><c> più</c><00:08:32.409><c> aperto</c><00:08:32.560><c> possibile</c><00:08:33.149><c> 777</c><00:08:34.149><c> quindi</c><00:08:34.510><c> a</c>
+
+00:08:34.529 --> 00:08:34.539 align:start position:0%
+il più aperto possibile 777 quindi a
+ 
+
+00:08:34.539 --> 00:08:36.630 align:start position:0%
+il più aperto possibile 777 quindi a
+readwriteweb<00:08:34.899><c> si</c><00:08:35.229><c> chiude</c><00:08:35.620><c> per</c><00:08:35.800><c> user</c><00:08:36.279><c> group</c>
+
+00:08:36.630 --> 00:08:36.640 align:start position:0%
+readwriteweb si chiude per user group
+ 
+
+00:08:36.640 --> 00:08:38.029 align:start position:0%
+readwriteweb si chiude per user group
+and<00:08:37.000><c> other</c>
+
+00:08:38.029 --> 00:08:38.039 align:start position:0%
+and other
+ 
+
+00:08:38.039 --> 00:08:41.219 align:start position:0%
+and other
+abbiamo<00:08:39.039><c> preparato</c><00:08:39.669><c> il</c><00:08:39.940><c> nostro</c><00:08:40.510><c> per</c><00:08:41.080><c> il</c>
+
+00:08:41.219 --> 00:08:41.229 align:start position:0%
+abbiamo preparato il nostro per il
+ 
+
+00:08:41.229 --> 00:08:44.780 align:start position:0%
+abbiamo preparato il nostro per il
+nostro<00:08:41.760><c> percorso</c>
+
+00:08:44.780 --> 00:08:44.790 align:start position:0%
+ 
+ 
+
+00:08:44.790 --> 00:08:48.930 align:start position:0%
+ 
+si<00:08:45.790><c> dice</c><00:08:46.060><c> la</c><00:08:46.899><c> stanchezza</c><00:08:47.170><c> colpisce</c><00:08:47.830><c> ancora</c>
+
+00:08:48.930 --> 00:08:48.940 align:start position:0%
+si dice la stanchezza colpisce ancora
+ 
+
+00:08:48.940 --> 00:08:49.970 align:start position:0%
+si dice la stanchezza colpisce ancora
+andremo<00:08:49.420><c> a</c>
+
+00:08:49.970 --> 00:08:49.980 align:start position:0%
+andremo a
+ 
+
+00:08:49.980 --> 00:08:52.170 align:start position:0%
+andremo a
+depositare<00:08:50.980><c> i</c><00:08:51.010><c> file</c><00:08:51.580><c> in</c><00:08:51.730><c> questo</c><00:08:51.970><c> percorso</c>
+
+00:08:52.170 --> 00:08:52.180 align:start position:0%
+depositare i file in questo percorso
+ 
+
+00:08:52.180 --> 00:08:55.620 align:start position:0%
+depositare i file in questo percorso
+quindi<00:08:52.810><c> andiamo</c><00:08:53.110><c> aprire</c><00:08:53.470><c> il</c><00:08:53.680><c> file</c><00:08:53.980><c> export</c><00:08:54.630><c> con</c>
+
+00:08:55.620 --> 00:08:55.630 align:start position:0%
+quindi andiamo aprire il file export con
+ 
+
+00:08:55.630 --> 00:08:57.829 align:start position:0%
+quindi andiamo aprire il file export con
+nano
+
+00:08:57.829 --> 00:08:57.839 align:start position:0%
+nano
+ 
+
+00:08:57.839 --> 00:09:00.800 align:start position:0%
+nano
+ex
+
+00:09:00.800 --> 00:09:00.810 align:start position:0%
+ex
+ 
+
+00:09:00.810 --> 00:09:03.199 align:start position:0%
+ex
+boss
+
+00:09:03.199 --> 00:09:03.209 align:start position:0%
+boss
+ 
+
+00:09:03.209 --> 00:09:06.440 align:start position:0%
+boss
+andiamo<00:09:04.209><c> in</c><00:09:04.300><c> fondo</c>
+
+00:09:06.440 --> 00:09:06.450 align:start position:0%
+andiamo in fondo
+ 
+
+00:09:06.450 --> 00:09:09.540 align:start position:0%
+andiamo in fondo
+e<00:09:07.450><c> inseriamo</c><00:09:07.839><c> come</c><00:09:08.200><c> abbiamo</c><00:09:08.440><c> visto</c><00:09:08.589><c> il</c><00:09:09.190><c> primo</c>
+
+00:09:09.540 --> 00:09:09.550 align:start position:0%
+e inseriamo come abbiamo visto il primo
+ 
+
+00:09:09.550 --> 00:09:13.280 align:start position:0%
+e inseriamo come abbiamo visto il primo
+campo<00:09:10.000><c> quindi</c><00:09:10.930><c> sherpa</c><00:09:11.529><c> bit</c><00:09:11.770><c> la</c><00:09:12.070><c> voglio</c>
+
+00:09:13.280 --> 00:09:13.290 align:start position:0%
+campo quindi sherpa bit la voglio
+ 
+
+00:09:13.290 --> 00:09:16.280 align:start position:0%
+campo quindi sherpa bit la voglio
+condividere<00:09:14.290><c> quindi</c><00:09:14.680><c> cosa</c><00:09:15.190><c> chi</c>
+
+00:09:16.280 --> 00:09:16.290 align:start position:0%
+condividere quindi cosa chi
+ 
+
+00:09:16.290 --> 00:09:21.320 align:start position:0%
+condividere quindi cosa chi
+tutti<00:09:17.290><c> asterisco</c><00:09:18.450><c> in</c><00:09:19.450><c> lettura</c><00:09:20.170><c> e</c><00:09:20.200><c> scrittura</c>
+
+00:09:21.320 --> 00:09:21.330 align:start position:0%
+tutti asterisco in lettura e scrittura
+ 
+
+00:09:21.330 --> 00:09:24.150 align:start position:0%
+tutti asterisco in lettura e scrittura
+asincrona<00:09:22.330><c> perché</c><00:09:23.230><c> voglio</c><00:09:23.620><c> che</c><00:09:23.650><c> questa</c><00:09:23.950><c> share</c>
+
+00:09:24.150 --> 00:09:24.160 align:start position:0%
+asincrona perché voglio che questa share
+ 
+
+00:09:24.160 --> 00:09:25.670 align:start position:0%
+asincrona perché voglio che questa share
+sia<00:09:24.459><c> veloce</c>
+
+00:09:25.670 --> 00:09:25.680 align:start position:0%
+sia veloce
+ 
+
+00:09:25.680 --> 00:09:27.199 align:start position:0%
+sia veloce
+no
+
+00:09:27.199 --> 00:09:27.209 align:start position:0%
+no
+ 
+
+00:09:27.209 --> 00:09:29.690 align:start position:0%
+no
+sab<00:09:28.540><c> 3</c>
+
+00:09:29.690 --> 00:09:29.700 align:start position:0%
+sab 3
+ 
+
+00:09:29.700 --> 00:09:34.980 align:start position:0%
+sab 3
+cech
+
+00:09:34.980 --> 00:09:34.990 align:start position:0%
+ 
+ 
+
+00:09:34.990 --> 00:09:37.150 align:start position:0%
+ 
+e<00:09:35.990><c> dovrei</c><00:09:36.320><c> aver</c><00:09:36.560><c> scritto</c><00:09:36.890><c> tutto</c>
+
+00:09:37.150 --> 00:09:37.160 align:start position:0%
+e dovrei aver scritto tutto
+ 
+
+00:09:37.160 --> 00:09:40.120 align:start position:0%
+e dovrei aver scritto tutto
+correttamente<00:09:37.660><c> esco</c><00:09:38.660><c> con</c><00:09:39.260><c> control</c><00:09:39.830><c> hicks</c>
+
+00:09:40.120 --> 00:09:40.130 align:start position:0%
+correttamente esco con control hicks
+ 
+
+00:09:40.130 --> 00:09:42.780 align:start position:0%
+correttamente esco con control hicks
+salvo<00:09:40.940><c> ed</c><00:09:41.390><c> o</c><00:09:41.570><c> invio</c>
+
+00:09:42.780 --> 00:09:42.790 align:start position:0%
+salvo ed o invio
+ 
+
+00:09:42.790 --> 00:09:51.120 align:start position:0%
+salvo ed o invio
+e<00:09:43.790><c> a</c><00:09:44.090><c> questo</c><00:09:44.450><c> punto</c><00:09:44.630><c> do</c><00:09:45.290><c> il</c><00:09:45.560><c> comando</c><00:09:46.190><c> export</c><00:09:47.080><c> fs</c>
+
+00:09:51.120 --> 00:09:51.130 align:start position:0%
+ 
+ 
+
+00:09:51.130 --> 00:09:58.050 align:start position:0%
+ 
+meno<00:09:52.130><c> mi</c><00:09:52.880><c> pare</c><00:09:53.150><c> sia</c><00:09:53.360><c> esse</c><00:09:53.900><c> a</c><00:09:53.930><c> andiamo</c><00:09:54.710><c> a</c><00:09:54.740><c> vedere</c>
+
+00:09:58.050 --> 00:09:58.060 align:start position:0%
+ 
+ 
+
+00:09:58.060 --> 00:10:01.660 align:start position:0%
+ 
+il<00:09:59.060><c> manuale</c><00:09:59.830><c> meno</c><00:10:00.830><c> meno</c><00:10:01.100><c> a</c><00:10:01.130><c> ed</c><00:10:01.310><c> in</c><00:10:01.430><c> linea</c>
+
+00:10:01.660 --> 00:10:01.670 align:start position:0%
+il manuale meno meno a ed in linea
+ 
+
+00:10:01.670 --> 00:10:04.510 align:start position:0%
+il manuale meno meno a ed in linea
+quindi<00:10:02.270><c> meno</c><00:10:02.780><c> meno</c><00:10:03.020><c> help</c><00:10:03.800><c> sì</c><00:10:03.950><c> ci</c><00:10:04.100><c> sono</c><00:10:04.250><c> un</c><00:10:04.460><c> po</c>
+
+00:10:04.510 --> 00:10:04.520 align:start position:0%
+quindi meno meno help sì ci sono un po
+ 
+
+00:10:04.520 --> 00:10:07.030 align:start position:0%
+quindi meno meno help sì ci sono un po
+di<00:10:04.550><c> funzioni</c>
+
+00:10:07.030 --> 00:10:07.040 align:start position:0%
+di funzioni
+ 
+
+00:10:07.040 --> 00:10:09.690 align:start position:0%
+di funzioni
+andiamo<00:10:07.490><c> a</c><00:10:07.520><c> fare</c><00:10:07.790><c> il</c><00:10:07.880><c> man</c>
+
+00:10:09.690 --> 00:10:09.700 align:start position:0%
+andiamo a fare il man
+ 
+
+00:10:09.700 --> 00:10:15.310 align:start position:0%
+andiamo a fare il man
+allora<00:10:10.700><c> il</c><00:10:11.710><c> meno</c><00:10:12.710><c> a</c><00:10:12.740><c> export</c><00:10:13.520><c> o</c><00:10:13.910><c> un</c><00:10:14.450><c> export</c><00:10:15.020><c> all</c>
+
+00:10:15.310 --> 00:10:15.320 align:start position:0%
+allora il meno a export o un export all
+ 
+
+00:10:15.320 --> 00:10:19.060 align:start position:0%
+allora il meno a export o un export all
+directories<00:10:16.100><c> quindi</c><00:10:16.430><c> la</c><00:10:16.610><c> cera</c><00:10:17.090><c> e</c><00:10:17.900><c> la</c><00:10:18.110><c> s</c><00:10:18.560><c> è</c>
+
+00:10:19.060 --> 00:10:19.070 align:start position:0%
+directories quindi la cera e la s è
+ 
+
+00:10:19.070 --> 00:10:21.190 align:start position:0%
+directories quindi la cera e la s è
+display<00:10:19.820><c> the</c><00:10:19.940><c> current</c><00:10:20.360><c> exp</c><00:10:20.570><c> orleans</c><00:10:21.020><c> su</c>
+
+00:10:21.190 --> 00:10:21.200 align:start position:0%
+display the current exp orleans su
+ 
+
+00:10:21.200 --> 00:10:24.490 align:start position:0%
+display the current exp orleans su
+itable<00:10:21.410><c> forte</c><00:10:22.100><c> tc</c><00:10:22.370><c> export</c><00:10:22.910><c> e</c><00:10:23.720><c> quindi</c><00:10:24.200><c> ne</c>
+
+00:10:24.490 --> 00:10:24.500 align:start position:0%
+itable forte tc export e quindi ne
+ 
+
+00:10:24.500 --> 00:10:27.600 align:start position:0%
+itable forte tc export e quindi ne
+abbiamo<00:10:24.770><c> esportati</c><00:10:24.830><c> tutte</c>
+
+00:10:27.600 --> 00:10:27.610 align:start position:0%
+abbiamo esportati tutte
+ 
+
+00:10:27.610 --> 00:10:30.820 align:start position:0%
+abbiamo esportati tutte
+c'è<00:10:28.610><c> un</c><00:10:28.730><c> comando</c><00:10:29.270><c> che</c><00:10:29.870><c> possiamo</c><00:10:30.350><c> dare</c><00:10:30.590><c> per</c>
+
+00:10:30.820 --> 00:10:30.830 align:start position:0%
+c'è un comando che possiamo dare per
+ 
+
+00:10:30.830 --> 00:10:33.070 align:start position:0%
+c'è un comando che possiamo dare per
+vedere<00:10:31.460><c> se</c><00:10:31.670><c> sono</c><00:10:31.850><c> esportate</c><00:10:32.600><c> e</c><00:10:32.630><c> come</c><00:10:32.930><c> sono</c>
+
+00:10:33.070 --> 00:10:33.080 align:start position:0%
+vedere se sono esportate e come sono
+ 
+
+00:10:33.080 --> 00:10:37.590 align:start position:0%
+vedere se sono esportate e come sono
+esportate<00:10:33.800><c> si</c><00:10:33.950><c> chiama</c><00:10:34.370><c> show</c><00:10:34.700><c> mount</c><00:10:35.920><c> show</c>
+
+00:10:37.590 --> 00:10:37.600 align:start position:0%
+esportate si chiama show mount show
+ 
+
+00:10:37.600 --> 00:10:43.080 align:start position:0%
+esportate si chiama show mount show
+mount<00:10:39.010><c> meno</c><00:10:40.010><c> e</c><00:10:40.880><c> di</c><00:10:41.420><c> export</c><00:10:41.960><c> ed</c>
+
+00:10:43.080 --> 00:10:43.090 align:start position:0%
+mount meno e di export ed
+ 
+
+00:10:43.090 --> 00:10:46.960 align:start position:0%
+mount meno e di export ed
+è<00:10:44.090><c> in</c><00:10:44.410><c> server</c><00:10:45.410><c> dal</c><00:10:45.680><c> quale</c><00:10:45.830><c> vogliamo</c><00:10:46.490><c> andare</c><00:10:46.940><c> a</c>
+
+00:10:46.960 --> 00:10:46.970 align:start position:0%
+è in server dal quale vogliamo andare a
+ 
+
+00:10:46.970 --> 00:10:48.580 align:start position:0%
+è in server dal quale vogliamo andare a
+leggere<00:10:47.270><c> la</c><00:10:47.540><c> lista</c><00:10:47.630><c> delle</c><00:10:48.080><c> con</c><00:10:48.230><c> delle</c>
+
+00:10:48.580 --> 00:10:48.590 align:start position:0%
+leggere la lista delle con delle
+ 
+
+00:10:48.590 --> 00:10:51.850 align:start position:0%
+leggere la lista delle con delle
+cartelle<00:10:49.030><c> esportate</c><00:10:50.030><c> in</c><00:10:50.210><c> questo</c><00:10:50.600><c> caso</c><00:10:51.080><c> è</c><00:10:51.560><c> la</c>
+
+00:10:51.850 --> 00:10:51.860 align:start position:0%
+cartelle esportate in questo caso è la
+ 
+
+00:10:51.860 --> 00:10:53.500 align:start position:0%
+cartelle esportate in questo caso è la
+mia<00:10:52.010><c> macchina</c><00:10:52.160><c> e</c><00:10:52.550><c> quindi</c><00:10:52.700><c> utilizzo</c><00:10:53.360><c> la</c>
+
+00:10:53.500 --> 00:10:53.510 align:start position:0%
+mia macchina e quindi utilizzo la
+ 
+
+00:10:53.510 --> 00:10:56.880 align:start position:0%
+mia macchina e quindi utilizzo la
+interfaccia<00:10:54.350><c> di</c><00:10:54.530><c> lubec</c>
+
+00:10:56.880 --> 00:10:56.890 align:start position:0%
+interfaccia di lubec
+ 
+
+00:10:56.890 --> 00:10:59.830 align:start position:0%
+interfaccia di lubec
+per<00:10:57.890><c> vedere</c><00:10:58.280><c> cosa</c><00:10:58.400><c> esporta</c><00:10:59.030><c> e</c><00:10:59.240><c> come</c><00:10:59.600><c> vediamo</c>
+
+00:10:59.830 --> 00:10:59.840 align:start position:0%
+per vedere cosa esporta e come vediamo
+ 
+
+00:10:59.840 --> 00:11:03.400 align:start position:0%
+per vedere cosa esporta e come vediamo
+la<00:11:00.380><c> lista</c><00:11:00.740><c> mi</c><00:11:01.010><c> dice</c><00:11:01.370><c> perfetto</c><00:11:02.270><c> cioè</c><00:11:02.780><c> va</c><00:11:02.930><c> arkush</c>
+
+00:11:03.400 --> 00:11:03.410 align:start position:0%
+la lista mi dice perfetto cioè va arkush
+ 
+
+00:11:03.410 --> 00:11:06.930 align:start position:0%
+la lista mi dice perfetto cioè va arkush
+shirt<00:11:04.130><c> public</c><00:11:04.640><c> per</c><00:11:04.820><c> per</c><00:11:05.120><c> tutti</c><00:11:05.680><c> quindi</c>
+
+00:11:06.930 --> 00:11:06.940 align:start position:0%
+shirt public per per tutti quindi
+ 
+
+00:11:06.940 --> 00:11:09.760 align:start position:0%
+shirt public per per tutti quindi
+abbiamo<00:11:07.940><c> preparato</c><00:11:08.660><c> e</c><00:11:08.690><c> predisposto</c><00:11:09.560><c> la</c>
+
+00:11:09.760 --> 00:11:09.770 align:start position:0%
+abbiamo preparato e predisposto la
+ 
+
+00:11:09.770 --> 00:11:13.590 align:start position:0%
+abbiamo preparato e predisposto la
+nostra<00:11:10.450><c> share</c><00:11:11.800><c> ora</c>
+
+00:11:13.590 --> 00:11:13.600 align:start position:0%
+nostra share ora
+ 
+
+00:11:13.600 --> 00:11:16.210 align:start position:0%
+nostra share ora
+vi<00:11:14.600><c> sotto</c><00:11:14.900><c> sto</c><00:11:15.050><c> vedendo</c><00:11:15.230><c> che</c><00:11:15.500><c> il</c><00:11:15.650><c> clone</c><00:11:16.010><c> della</c>
+
+00:11:16.210 --> 00:11:16.220 align:start position:0%
+vi sotto sto vedendo che il clone della
+ 
+
+00:11:16.220 --> 00:11:17.710 align:start position:0%
+vi sotto sto vedendo che il clone della
+ste<00:11:16.340><c> di</c><00:11:16.460><c> questa</c><00:11:16.700><c> macchina</c><00:11:16.880><c> che</c><00:11:17.510><c> ho</c><00:11:17.540><c> lanciato</c>
+
+00:11:17.710 --> 00:11:17.720 align:start position:0%
+ste di questa macchina che ho lanciato
+ 
+
+00:11:17.720 --> 00:11:20.710 align:start position:0%
+ste di questa macchina che ho lanciato
+qualche<00:11:18.530><c> tempo</c><00:11:18.710><c> fa</c><00:11:19.040><c> non</c><00:11:19.850><c> è</c><00:11:19.940><c> ancora</c><00:11:20.090><c> terminato</c>
+
+00:11:20.710 --> 00:11:20.720 align:start position:0%
+qualche tempo fa non è ancora terminato
+ 
+
+00:11:20.720 --> 00:11:22.780 align:start position:0%
+qualche tempo fa non è ancora terminato
+quindi<00:11:21.200><c> non</c><00:11:21.410><c> ho</c><00:11:21.530><c> una</c><00:11:21.770><c> seconda</c><00:11:22.130><c> macchina</c><00:11:22.280><c> sulla</c>
+
+00:11:22.780 --> 00:11:22.790 align:start position:0%
+quindi non ho una seconda macchina sulla
+ 
+
+00:11:22.790 --> 00:11:27.160 align:start position:0%
+quindi non ho una seconda macchina sulla
+quale<00:11:23.180><c> fare</c><00:11:23.690><c> il</c><00:11:24.380><c> mount</c><00:11:25.240><c> quindi</c><00:11:26.240><c> farò</c><00:11:26.540><c> finta</c><00:11:26.930><c> di</c>
+
+00:11:27.160 --> 00:11:27.170 align:start position:0%
+quale fare il mount quindi farò finta di
+ 
+
+00:11:27.170 --> 00:11:30.550 align:start position:0%
+quale fare il mount quindi farò finta di
+essere<00:11:27.650><c> sulla</c><00:11:28.190><c> stessa</c><00:11:28.310><c> macchina</c><00:11:28.870><c> un</c><00:11:29.870><c> anche</c><00:11:30.470><c> un</c>
+
+00:11:30.550 --> 00:11:30.560 align:start position:0%
+essere sulla stessa macchina un anche un
+ 
+
+00:11:30.560 --> 00:11:32.430 align:start position:0%
+essere sulla stessa macchina un anche un
+client<00:11:30.950><c> quindi</c>
+
+00:11:32.430 --> 00:11:32.440 align:start position:0%
+client quindi
+ 
+
+00:11:32.440 --> 00:11:35.320 align:start position:0%
+client quindi
+andiamo<00:11:33.440><c> a</c><00:11:33.470><c> prepararci</c><00:11:34.250><c> per</c><00:11:34.460><c> adesso</c><00:11:34.700><c> facciamo</c>
+
+00:11:35.320 --> 00:11:35.330 align:start position:0%
+andiamo a prepararci per adesso facciamo
+ 
+
+00:11:35.330 --> 00:11:36.430 align:start position:0%
+andiamo a prepararci per adesso facciamo
+finta<00:11:35.570><c> di</c><00:11:35.630><c> essere</c><00:11:35.930><c> su</c><00:11:36.020><c> un'altra</c><00:11:36.320><c> macchina</c>
+
+00:11:36.430 --> 00:11:36.440 align:start position:0%
+finta di essere su un'altra macchina
+ 
+
+00:11:36.440 --> 00:11:39.330 align:start position:0%
+finta di essere su un'altra macchina
+andiamo<00:11:37.220><c> dove</c><00:11:37.610><c> si</c><00:11:37.850><c> montano</c><00:11:38.240><c> i</c><00:11:38.390><c> file</c><00:11:38.750><c> system</c>
+
+00:11:39.330 --> 00:11:39.340 align:start position:0%
+andiamo dove si montano i file system
+ 
+
+00:11:39.340 --> 00:11:45.470 align:start position:0%
+andiamo dove si montano i file system
+normalmente<00:11:40.340><c> in</c><00:11:40.850><c> mnt</c><00:11:41.890><c> quindi</c><00:11:42.890><c> vado</c><00:11:43.220><c> in</c><00:11:43.310><c> mnt</c>
+
+00:11:45.470 --> 00:11:45.480 align:start position:0%
+normalmente in mnt quindi vado in mnt
+ 
+
+00:11:45.480 --> 00:11:48.170 align:start position:0%
+normalmente in mnt quindi vado in mnt
+mi<00:11:45.690><c> crea</c><00:11:45.959><c> una</c><00:11:46.139><c> cartella</c><00:11:46.860><c> che</c><00:11:47.399><c> mi</c><00:11:47.550><c> faccia</c><00:11:47.940><c> da</c>
+
+00:11:48.170 --> 00:11:48.180 align:start position:0%
+mi crea una cartella che mi faccia da
+ 
+
+00:11:48.180 --> 00:11:52.340 align:start position:0%
+mi crea una cartella che mi faccia da
+punto<00:11:48.570><c> di</c><00:11:48.870><c> appoggio</c><00:11:49.459><c> e</c><00:11:50.459><c> vado</c><00:11:51.029><c> a</c><00:11:51.060><c> mettere</c><00:11:51.720><c> il</c>
+
+00:11:52.340 --> 00:11:52.350 align:start position:0%
+punto di appoggio e vado a mettere il
+ 
+
+00:11:52.350 --> 00:11:53.290 align:start position:0%
+punto di appoggio e vado a mettere il
+nome
+
+00:11:53.290 --> 00:11:53.300 align:start position:0%
+nome
+ 
+
+00:11:53.300 --> 00:11:55.600 align:start position:0%
+nome
+public
+
+00:11:55.600 --> 00:11:55.610 align:start position:0%
+public
+ 
+
+00:11:55.610 --> 00:11:57.889 align:start position:0%
+public
+poi<00:11:56.610><c> se</c><00:11:56.730><c> parrebbe</c><00:11:56.880><c> essere</c><00:11:57.269><c> anche</c><00:11:57.389><c> tipo</c><00:11:57.630><c> pluto</c>
+
+00:11:57.889 --> 00:11:57.899 align:start position:0%
+poi se parrebbe essere anche tipo pluto
+ 
+
+00:11:57.899 --> 00:12:00.019 align:start position:0%
+poi se parrebbe essere anche tipo pluto
+paperino<00:11:58.019><c> fa</c><00:11:58.529><c> nulla</c><00:11:58.680><c> qua</c><00:11:58.980><c> io</c><00:11:59.490><c> lo</c><00:11:59.639><c> faccio</c><00:11:59.850><c> per</c>
+
+00:12:00.019 --> 00:12:00.029 align:start position:0%
+paperino fa nulla qua io lo faccio per
+ 
+
+00:12:00.029 --> 00:12:03.319 align:start position:0%
+paperino fa nulla qua io lo faccio per
+ricordarmi<00:12:00.600><c> che</c><00:12:00.720><c> public</c><00:12:01.170><c> e</c><00:12:01.829><c> quell'altra</c>
+
+00:12:03.319 --> 00:12:03.329 align:start position:0%
+ricordarmi che public e quell'altra
+ 
+
+00:12:03.329 --> 00:12:05.930 align:start position:0%
+ricordarmi che public e quell'altra
+a<00:12:03.360><c> questo</c><00:12:03.690><c> punto</c><00:12:04.050><c> manualmente</c><00:12:04.560><c> faccio</c><00:12:05.220><c> mount</c>
+
+00:12:05.930 --> 00:12:05.940 align:start position:0%
+a questo punto manualmente faccio mount
+ 
+
+00:12:05.940 --> 00:12:08.689 align:start position:0%
+a questo punto manualmente faccio mount
+devo<00:12:06.930><c> farlo</c><00:12:07.199><c> da</c><00:12:07.320><c> ruth</c><00:12:07.440><c> ovviamente</c><00:12:08.250><c> oppure</c><00:12:08.579><c> con</c>
+
+00:12:08.689 --> 00:12:08.699 align:start position:0%
+devo farlo da ruth ovviamente oppure con
+ 
+
+00:12:08.699 --> 00:12:10.120 align:start position:0%
+devo farlo da ruth ovviamente oppure con
+un<00:12:08.820><c> sud</c><00:12:09.060><c> davanti</c>
+
+00:12:10.120 --> 00:12:10.130 align:start position:0%
+un sud davanti
+ 
+
+00:12:10.130 --> 00:12:16.960 align:start position:0%
+un sud davanti
+ma<00:12:11.130><c> out</c><00:12:11.399><c> meno</c><00:12:12.000><c> tipo</c><00:12:12.420><c> di</c><00:12:12.540><c> file</c><00:12:12.690><c> system</c><00:12:12.949><c> nfs</c><00:12:14.180><c> man</c>
+
+00:12:16.960 --> 00:12:16.970 align:start position:0%
+ma out meno tipo di file system nfs man
+ 
+
+00:12:16.970 --> 00:12:21.250 align:start position:0%
+ma out meno tipo di file system nfs man
+opzione<00:12:17.970><c> lo</c><00:12:18.120><c> voglio</c><00:12:18.360><c> aprire</c><00:12:18.570><c> in</c><00:12:19.079><c> reed</c><00:12:19.769><c> write</c>
+
+00:12:21.250 --> 00:12:21.260 align:start position:0%
+opzione lo voglio aprire in reed write
+ 
+
+00:12:21.260 --> 00:12:23.120 align:start position:0%
+opzione lo voglio aprire in reed write
+poi<00:12:22.260><c> si</c><00:12:22.380><c> possono</c><00:12:22.589><c> andare</c><00:12:22.800><c> anche</c><00:12:22.860><c> altre</c>
+
+00:12:23.120 --> 00:12:23.130 align:start position:0%
+poi si possono andare anche altre
+ 
+
+00:12:23.130 --> 00:12:25.129 align:start position:0%
+poi si possono andare anche altre
+opzioni<00:12:23.310><c> per</c><00:12:23.490><c> esempio</c><00:12:23.880><c> per</c><00:12:24.089><c> creare</c><00:12:24.660><c> una</c><00:12:24.899><c> cache</c>
+
+00:12:25.129 --> 00:12:25.139 align:start position:0%
+opzioni per esempio per creare una cache
+ 
+
+00:12:25.139 --> 00:12:30.310 align:start position:0%
+opzioni per esempio per creare una cache
+in<00:12:25.560><c> scrittura</c><00:12:26.519><c> e</c><00:12:26.550><c> in</c><00:12:27.000><c> lettura</c><00:12:27.870><c> sono</c><00:12:28.199><c> r</c><00:12:28.920><c> sales</c>
+
+00:12:30.310 --> 00:12:30.320 align:start position:0%
+in scrittura e in lettura sono r sales
+ 
+
+00:12:30.320 --> 00:12:33.250 align:start position:0%
+in scrittura e in lettura sono r sales
+uguale<00:12:31.320><c> ad</c><00:12:31.470><c> esempio</c><00:12:31.889><c> un</c><00:12:32.070><c> mega</c>
+
+00:12:33.250 --> 00:12:33.260 align:start position:0%
+uguale ad esempio un mega
+ 
+
+00:12:33.260 --> 00:12:38.259 align:start position:0%
+uguale ad esempio un mega
+1024<00:12:34.760><c> full</c><00:12:35.760><c> size</c><00:12:36.300><c> r</c><00:12:36.899><c> size</c>
+
+00:12:38.259 --> 00:12:38.269 align:start position:0%
+1024 full size r size
+ 
+
+00:12:38.269 --> 00:12:42.019 align:start position:0%
+1024 full size r size
+faccio<00:12:39.269><c> una</c><00:12:39.389><c> scheda</c><00:12:39.690><c> di</c><00:12:39.779><c> troppo</c><00:12:40.610><c> e</c><00:12:41.610><c> right</c>
+
+00:12:42.019 --> 00:12:42.029 align:start position:0%
+faccio una scheda di troppo e right
+ 
+
+00:12:42.029 --> 00:12:44.829 align:start position:0%
+faccio una scheda di troppo e right
+sized<00:12:43.010><c> uguale</c>
+
+00:12:44.829 --> 00:12:44.839 align:start position:0%
+sized uguale
+ 
+
+00:12:44.839 --> 00:12:49.069 align:start position:0%
+sized uguale
+1024<00:12:46.199><c> diamogli</c><00:12:46.440><c> un</c><00:12:46.560><c> po</c><00:12:46.620><c> di</c><00:12:46.740><c> cash</c><00:12:46.889><c> e</c><00:12:47.100><c> basta</c>
+
+00:12:49.069 --> 00:12:49.079 align:start position:0%
+1024 diamogli un po di cash e basta
+ 
+
+00:12:49.079 --> 00:12:52.400 align:start position:0%
+1024 diamogli un po di cash e basta
+adesso<00:12:49.290><c> bisogna</c><00:12:49.860><c> dirgli</c><00:12:50.250><c> da</c><00:12:50.730><c> dove</c><00:12:51.240><c> sa</c><00:12:51.959><c> dov'è</c>
+
+00:12:52.400 --> 00:12:52.410 align:start position:0%
+adesso bisogna dirgli da dove sa dov'è
+ 
+
+00:12:52.410 --> 00:12:56.120 align:start position:0%
+adesso bisogna dirgli da dove sa dov'è
+allora<00:12:52.980><c> nel</c><00:12:53.459><c> mio</c><00:12:53.639><c> caso</c><00:12:53.819><c> io</c><00:12:54.569><c> adesso</c><00:12:55.130><c> dovrei</c>
+
+00:12:56.120 --> 00:12:56.130 align:start position:0%
+allora nel mio caso io adesso dovrei
+ 
+
+00:12:56.130 --> 00:12:57.769 align:start position:0%
+allora nel mio caso io adesso dovrei
+avere<00:12:56.370><c> un</c><00:12:56.430><c> indirizzo</c><00:12:56.639><c> ip</c><00:12:57.060><c> non</c><00:12:57.420><c> lo</c><00:12:57.569><c> so</c><00:12:57.750><c> e</c>
+
+00:12:57.769 --> 00:12:57.779 align:start position:0%
+avere un indirizzo ip non lo so e
+ 
+
+00:12:57.779 --> 00:13:00.860 align:start position:0%
+avere un indirizzo ip non lo so e
+utilizzo<00:12:58.740><c> il</c><00:12:58.949><c> look</c><00:12:59.190><c> back</c><00:12:59.699><c> ma</c><00:13:00.389><c> questo</c><00:13:00.660><c> dovrebbe</c>
+
+00:13:00.860 --> 00:13:00.870 align:start position:0%
+utilizzo il look back ma questo dovrebbe
+ 
+
+00:13:00.870 --> 00:13:02.809 align:start position:0%
+utilizzo il look back ma questo dovrebbe
+in<00:13:01.170><c> realtà</c><00:13:01.260><c> essere</c><00:13:01.800><c> sostituito</c><00:13:02.579><c> in</c><00:13:02.730><c> un</c>
+
+00:13:02.809 --> 00:13:02.819 align:start position:0%
+in realtà essere sostituito in un
+ 
+
+00:13:02.819 --> 00:13:07.150 align:start position:0%
+in realtà essere sostituito in un
+ambiente<00:13:03.240><c> reale</c><00:13:03.420><c> con</c><00:13:03.870><c> che</c><00:13:04.230><c> ne</c><00:13:04.350><c> so</c><00:13:04.470><c> 19</c><00:13:04.980><c> duro</c><00:13:05.279><c> 168</c>
+
+00:13:07.150 --> 00:13:07.160 align:start position:0%
+ambiente reale con che ne so 19 duro 168
+ 
+
+00:13:07.160 --> 00:13:11.809 align:start position:0%
+ambiente reale con che ne so 19 duro 168
+cento<00:13:08.160><c> e</c><00:13:08.639><c> lippi</c><00:13:09.029><c> del</c><00:13:09.209><c> della</c><00:13:09.930><c> macchina</c><00:13:10.760><c> che</c><00:13:11.760><c> ne</c>
+
+00:13:11.809 --> 00:13:11.819 align:start position:0%
+cento e lippi del della macchina che ne
+ 
+
+00:13:11.819 --> 00:13:15.949 align:start position:0%
+cento e lippi del della macchina che ne
+sono<00:13:11.970><c> 12</c><00:13:12.290><c> e</c><00:13:13.290><c> poi</c><00:13:13.610><c> seguite</c><00:13:14.610><c> da</c><00:13:15.000><c> due</c><00:13:15.029><c> punti</c><00:13:15.329><c> e</c><00:13:15.690><c> il</c>
+
+00:13:15.949 --> 00:13:15.959 align:start position:0%
+sono 12 e poi seguite da due punti e il
+ 
+
+00:13:15.959 --> 00:13:18.980 align:start position:0%
+sono 12 e poi seguite da due punti e il
+percorso<00:13:16.290><c> che</c><00:13:17.160><c> vediamo</c><00:13:17.850><c> l'indicato</c><00:13:18.600><c> quello</c>
+
+00:13:18.980 --> 00:13:18.990 align:start position:0%
+percorso che vediamo l'indicato quello
+ 
+
+00:13:18.990 --> 00:13:21.319 align:start position:0%
+percorso che vediamo l'indicato quello
+della<00:13:19.260><c> share</c><00:13:19.500><c> quindi</c><00:13:20.069><c> in</c><00:13:20.220><c> questo</c><00:13:20.579><c> caso</c><00:13:20.819><c> scrivo</c>
+
+00:13:21.319 --> 00:13:21.329 align:start position:0%
+della share quindi in questo caso scrivo
+ 
+
+00:13:21.329 --> 00:13:27.519 align:start position:0%
+della share quindi in questo caso scrivo
+127<00:13:22.230><c> 0</c><00:13:22.790><c> 0</c><00:13:23.790><c> 1</c><00:13:24.470><c> in</c><00:13:25.470><c> questo</c><00:13:25.680><c> modo</c><00:13:25.800><c> potete</c><00:13:26.190><c> anche</c>
+
+00:13:27.519 --> 00:13:27.529 align:start position:0%
+127 0 0 1 in questo modo potete anche
+ 
+
+00:13:27.529 --> 00:13:32.800 align:start position:0%
+127 0 0 1 in questo modo potete anche
+fare<00:13:28.529><c> le</c><00:13:29.040><c> prove</c><00:13:29.279><c> anche</c><00:13:29.819><c> se</c><00:13:29.850><c> avete</c><00:13:30.269><c> un</c><00:13:30.360><c> solo</c><00:13:30.600><c> pc</c>
+
+00:13:32.800 --> 00:13:32.810 align:start position:0%
+ 
+ 
+
+00:13:32.810 --> 00:13:36.019 align:start position:0%
+ 
+ok<00:13:33.810><c> copia</c><00:13:34.410><c> e</c><00:13:34.889><c> incolla</c><00:13:34.920><c> così</c><00:13:35.910><c> l'abbiamo</c>
+
+00:13:36.019 --> 00:13:36.029 align:start position:0%
+ok copia e incolla così l'abbiamo
+ 
+
+00:13:36.029 --> 00:13:38.920 align:start position:0%
+ok copia e incolla così l'abbiamo
+scritto<00:13:36.660><c> bene</c>
+
+00:13:38.920 --> 00:13:38.930 align:start position:0%
+scritto bene
+ 
+
+00:13:38.930 --> 00:13:41.889 align:start position:0%
+scritto bene
+incolla<00:13:39.930><c> mai</c>
+
+00:13:41.889 --> 00:13:41.899 align:start position:0%
+incolla mai
+ 
+
+00:13:41.899 --> 00:13:46.309 align:start position:0%
+incolla mai
+e<00:13:42.899><c> poi</c><00:13:43.110><c> mnt</c><00:13:44.480><c> public</c><00:13:45.480><c> dove</c><00:13:45.839><c> lo</c><00:13:45.959><c> vogliamo</c>
+
+00:13:46.309 --> 00:13:46.319 align:start position:0%
+e poi mnt public dove lo vogliamo
+ 
+
+00:13:46.319 --> 00:13:49.420 align:start position:0%
+e poi mnt public dove lo vogliamo
+montato
+
+00:13:49.420 --> 00:13:49.430 align:start position:0%
+ 
+ 
+
+00:13:49.430 --> 00:13:54.350 align:start position:0%
+ 
+diamo<00:13:50.430><c> invio</c>
+
+00:13:54.350 --> 00:13:54.360 align:start position:0%
+ 
+ 
+
+00:13:54.360 --> 00:13:57.430 align:start position:0%
+ 
+per<00:13:55.260><c> size</c>
+
+00:13:57.430 --> 00:13:57.440 align:start position:0%
+per size
+ 
+
+00:13:57.440 --> 00:14:01.670 align:start position:0%
+per size
+la<00:13:58.440><c> sz</c><00:13:58.829><c> ogni</c><00:13:59.250><c> tanto</c><00:13:59.490><c> veramente</c><00:14:00.209><c> link</c><00:14:00.500><c> climi</c><00:14:01.500><c> le</c>
+
+00:14:01.670 --> 00:14:01.680 align:start position:0%
+la sz ogni tanto veramente link climi le
+ 
+
+00:14:01.680 --> 00:14:03.350 align:start position:0%
+la sz ogni tanto veramente link climi le
+mescole<00:14:02.100><c> per</c><00:14:02.190><c> benino</c><00:14:02.700><c> adesso</c><00:14:03.029><c> l'abbiamo</c>
+
+00:14:03.350 --> 00:14:03.360 align:start position:0%
+mescole per benino adesso l'abbiamo
+ 
+
+00:14:03.360 --> 00:14:05.170 align:start position:0%
+mescole per benino adesso l'abbiamo
+montato
+
+00:14:05.170 --> 00:14:05.180 align:start position:0%
+montato
+ 
+
+00:14:05.180 --> 00:14:08.660 align:start position:0%
+montato
+la<00:14:06.180><c> verifica</c><00:14:06.649><c> della</c><00:14:07.649><c> cosa</c><00:14:07.950><c> si</c><00:14:08.040><c> fa</c><00:14:08.190><c> sempre</c><00:14:08.370><c> con</c>
+
+00:14:08.660 --> 00:14:08.670 align:start position:0%
+la verifica della cosa si fa sempre con
+ 
+
+00:14:08.670 --> 00:14:12.759 align:start position:0%
+la verifica della cosa si fa sempre con
+mount<00:14:09.500><c> e</c><00:14:10.500><c> lo</c><00:14:10.680><c> vedremo</c><00:14:11.010><c> qui</c><00:14:11.370><c> in</c><00:14:11.519><c> fondo</c>
+
+00:14:12.759 --> 00:14:12.769 align:start position:0%
+mount e lo vedremo qui in fondo
+ 
+
+00:14:12.769 --> 00:14:18.190 align:start position:0%
+mount e lo vedremo qui in fondo
+il<00:14:13.769><c> percorso</c><00:14:14.130><c> che</c><00:14:14.490><c> è</c><00:14:14.519><c> montato</c>
+
+00:14:18.190 --> 00:14:18.200 align:start position:0%
+ 
+ 
+
+00:14:18.200 --> 00:14:20.630 align:start position:0%
+ 
+in<00:14:19.200><c> alternativa</c>
+
+00:14:20.630 --> 00:14:20.640 align:start position:0%
+in alternativa
+ 
+
+00:14:20.640 --> 00:14:22.690 align:start position:0%
+in alternativa
+df<00:14:21.180><c> meno</c><00:14:21.570><c> h</c>
+
+00:14:22.690 --> 00:14:22.700 align:start position:0%
+df meno h
+ 
+
+00:14:22.700 --> 00:14:25.850 align:start position:0%
+df meno h
+e<00:14:23.700><c> vediamo</c><00:14:24.120><c> che</c><00:14:24.420><c> il</c><00:14:24.750><c> computer</c><00:14:25.200><c> che</c><00:14:25.529><c> a</c><00:14:25.560><c> questo</c>
+
+00:14:25.850 --> 00:14:25.860 align:start position:0%
+e vediamo che il computer che a questo
+ 
+
+00:14:25.860 --> 00:14:27.639 align:start position:0%
+e vediamo che il computer che a questo
+indirizzo<00:14:25.950><c> ip</c>
+
+00:14:27.639 --> 00:14:27.649 align:start position:0%
+indirizzo ip
+ 
+
+00:14:27.649 --> 00:14:31.220 align:start position:0%
+indirizzo ip
+che<00:14:28.649><c> a</c><00:14:28.680><c> questa</c><00:14:29.160><c> cartella</c><00:14:29.490><c> è</c><00:14:29.820><c> montata</c><00:14:30.690><c> sotto</c>
+
+00:14:31.220 --> 00:14:31.230 align:start position:0%
+che a questa cartella è montata sotto
+ 
+
+00:14:31.230 --> 00:14:33.310 align:start position:0%
+che a questa cartella è montata sotto
+quest<00:14:31.680><c> altra</c><00:14:31.920><c> cartella</c><00:14:32.220><c> locale</c>
+
+00:14:33.310 --> 00:14:33.320 align:start position:0%
+quest altra cartella locale
+ 
+
+00:14:33.320 --> 00:14:36.860 align:start position:0%
+quest altra cartella locale
+quindi<00:14:34.320><c> se</c><00:14:34.440><c> io</c><00:14:34.560><c> adesso</c><00:14:34.740><c> vado</c><00:14:35.430><c> a</c><00:14:35.870><c> portarmi</c>
+
+00:14:36.860 --> 00:14:36.870 align:start position:0%
+quindi se io adesso vado a portarmi
+ 
+
+00:14:36.870 --> 00:14:39.170 align:start position:0%
+quindi se io adesso vado a portarmi
+dentro<00:14:37.350><c> in</c><00:14:37.800><c> quella</c><00:14:37.980><c> cartella</c><00:14:38.250><c> locale</c><00:14:38.579><c> quindi</c>
+
+00:14:39.170 --> 00:14:39.180 align:start position:0%
+dentro in quella cartella locale quindi
+ 
+
+00:14:39.180 --> 00:14:43.040 align:start position:0%
+dentro in quella cartella locale quindi
+mnt<00:14:39.870><c> public</c><00:14:40.500><c> e</c><00:14:41.339><c> crea</c><00:14:41.670><c> un</c><00:14:41.820><c> file</c><00:14:42.060><c> che</c><00:14:42.540><c> si</c><00:14:42.690><c> chiama</c>
+
+00:14:43.040 --> 00:14:43.050 align:start position:0%
+mnt public e crea un file che si chiama
+ 
+
+00:14:43.050 --> 00:14:45.340 align:start position:0%
+mnt public e crea un file che si chiama
+ad<00:14:43.140><c> esempio</c><00:14:43.620><c> luca</c>
+
+00:14:45.340 --> 00:14:45.350 align:start position:0%
+ad esempio luca
+ 
+
+00:14:45.350 --> 00:14:56.569 align:start position:0%
+ad esempio luca
+e<00:14:46.350><c> ci</c><00:14:46.589><c> scrivo</c><00:14:46.980><c> dentro</c><00:14:47.490><c> ciao</c>
+
+00:14:56.569 --> 00:14:56.579 align:start position:0%
+ 
+ 
+
+00:14:56.579 --> 00:15:00.999 align:start position:0%
+ 
+luca<00:14:57.559><c> mi</c><00:14:58.559><c> dice</c><00:14:58.860><c> ciao</c><00:14:59.309><c> adesso</c><00:14:59.610><c> mi</c><00:14:59.879><c> porto</c>
+
+00:15:00.999 --> 00:15:01.009 align:start position:0%
+luca mi dice ciao adesso mi porto
+ 
+
+00:15:01.009 --> 00:15:05.929 align:start position:0%
+luca mi dice ciao adesso mi porto
+nella<00:15:02.149><c> ops</c><00:15:03.589><c> mi</c><00:15:04.589><c> porto</c><00:15:05.160><c> facciamo</c><00:15:05.489><c> pulizia</c><00:15:05.670><c> un</c>
+
+00:15:05.929 --> 00:15:05.939 align:start position:0%
+nella ops mi porto facciamo pulizia un
+ 
+
+00:15:05.939 --> 00:15:07.960 align:start position:0%
+nella ops mi porto facciamo pulizia un
+po<00:15:05.999><c> di</c><00:15:06.119><c> qui</c><00:15:06.299><c> dentro</c><00:15:06.569><c> mi</c><00:15:06.749><c> portano</c><00:15:07.230><c> la</c><00:15:07.379><c> cartella</c>
+
+00:15:07.960 --> 00:15:07.970 align:start position:0%
+po di qui dentro mi portano la cartella
+ 
+
+00:15:07.970 --> 00:15:10.549 align:start position:0%
+po di qui dentro mi portano la cartella
+che<00:15:08.970><c> abbiamo</c><00:15:09.209><c> utilizzato</c><00:15:09.360><c> per</c><00:15:10.049><c> esportare</c>
+
+00:15:10.549 --> 00:15:10.559 align:start position:0%
+che abbiamo utilizzato per esportare
+ 
+
+00:15:10.559 --> 00:15:12.939 align:start position:0%
+che abbiamo utilizzato per esportare
+quindi<00:15:10.829><c> va</c>
+
+00:15:12.939 --> 00:15:12.949 align:start position:0%
+quindi va
+ 
+
+00:15:12.949 --> 00:15:15.889 align:start position:0%
+quindi va
+quindi<00:15:13.949><c> faccio</c><00:15:14.670><c> finta</c><00:15:14.910><c> di</c><00:15:14.970><c> essere</c><00:15:15.329><c> sul</c><00:15:15.449><c> server</c>
+
+00:15:15.889 --> 00:15:15.899 align:start position:0%
+quindi faccio finta di essere sul server
+ 
+
+00:15:15.899 --> 00:15:18.699 align:start position:0%
+quindi faccio finta di essere sul server
+a<00:15:16.049><c> sto</c><00:15:16.230><c> punto</c><00:15:16.259><c> va</c><00:15:17.069><c> cash</c>
+
+00:15:18.699 --> 00:15:18.709 align:start position:0%
+a sto punto va cash
+ 
+
+00:15:18.709 --> 00:15:23.079 align:start position:0%
+a sto punto va cash
+share<00:15:19.709><c> ed</c><00:15:20.509><c> public</c>
+
+00:15:23.079 --> 00:15:23.089 align:start position:0%
+share ed public
+ 
+
+00:15:23.089 --> 00:15:28.549 align:start position:0%
+share ed public
+e<00:15:24.089><c> vedo</c><00:15:24.600><c> che</c><00:15:25.589><c> il</c><00:15:25.860><c> client</c><00:15:26.399><c> ha</c><00:15:26.699><c> scritto</c><00:15:27.559><c> dentro</c>
+
+00:15:28.549 --> 00:15:28.559 align:start position:0%
+e vedo che il client ha scritto dentro
+ 
+
+00:15:28.559 --> 00:15:29.979 align:start position:0%
+e vedo che il client ha scritto dentro
+in<00:15:28.709><c> questa</c><00:15:28.980><c> cartella</c>
+
+00:15:29.979 --> 00:15:29.989 align:start position:0%
+in questa cartella
+ 
+
+00:15:29.989 --> 00:15:32.359 align:start position:0%
+in questa cartella
+avete<00:15:30.989><c> visto</c><00:15:31.230><c> che</c><00:15:31.350><c> tutte</c><00:15:31.529><c> le</c><00:15:31.619><c> operazioni</c><00:15:31.739><c> io</c>
+
+00:15:32.359 --> 00:15:32.369 align:start position:0%
+avete visto che tutte le operazioni io
+ 
+
+00:15:32.369 --> 00:15:35.559 align:start position:0%
+avete visto che tutte le operazioni io
+le<00:15:32.790><c> ho</c><00:15:32.819><c> fatte</c><00:15:33.449><c> da</c><00:15:34.079><c> ruth</c>
+
+00:15:35.559 --> 00:15:35.569 align:start position:0%
+le ho fatte da ruth
+ 
+
+00:15:35.569 --> 00:15:38.269 align:start position:0%
+le ho fatte da ruth
+e<00:15:36.569><c> quindi</c><00:15:36.899><c> il</c><00:15:36.989><c> file</c><00:15:37.259><c> dovrebbe</c><00:15:37.619><c> essere</c><00:15:38.009><c> di</c><00:15:38.100><c> root</c>
+
+00:15:38.269 --> 00:15:38.279 align:start position:0%
+e quindi il file dovrebbe essere di root
+ 
+
+00:15:38.279 --> 00:15:43.900 align:start position:0%
+e quindi il file dovrebbe essere di root
+invece<00:15:39.209><c> il</c><00:15:39.480><c> software</c><00:15:40.019><c> nfs</c><00:15:40.739><c> mi</c><00:15:41.519><c> protegge</c><00:15:42.379><c> e</c>
+
+00:15:43.900 --> 00:15:43.910 align:start position:0%
+invece il software nfs mi protegge e
+ 
+
+00:15:43.910 --> 00:15:48.169 align:start position:0%
+invece il software nfs mi protegge e
+riassegna<00:15:44.910><c> ciò</c><00:15:45.389><c> che</c><00:15:45.980><c> dell'utente</c><00:15:47.279><c> ruth</c><00:15:47.459><c> al</c>
+
+00:15:48.169 --> 00:15:48.179 align:start position:0%
+riassegna ciò che dell'utente ruth al
+ 
+
+00:15:48.179 --> 00:15:52.879 align:start position:0%
+riassegna ciò che dell'utente ruth al
+gruppo<00:15:48.809><c> non</c><00:15:49.559><c> group</c><00:15:49.799><c> e</c><00:15:50.309><c> all'utente</c><00:15:51.149><c> nobody</c><00:15:51.889><c> in</c>
+
+00:15:52.879 --> 00:15:52.889 align:start position:0%
+gruppo non group e all'utente nobody in
+ 
+
+00:15:52.889 --> 00:15:55.400 align:start position:0%
+gruppo non group e all'utente nobody in
+maniera<00:15:53.309><c> tale</c><00:15:53.670><c> che</c><00:15:53.869><c> non</c><00:15:54.869><c> possono</c><00:15:55.290><c> essere</c>
+
+00:15:55.400 --> 00:15:55.410 align:start position:0%
+maniera tale che non possono essere
+ 
+
+00:15:55.410 --> 00:15:59.449 align:start position:0%
+maniera tale che non possono essere
+portati<00:15:56.369><c> file</c><00:15:57.049><c> con</c><00:15:58.049><c> diritti</c><00:15:58.649><c> di</c><00:15:58.799><c> root</c><00:15:58.949><c> su</c>
+
+00:15:59.449 --> 00:15:59.459 align:start position:0%
+portati file con diritti di root su
+ 
+
+00:15:59.459 --> 00:16:01.659 align:start position:0%
+portati file con diritti di root su
+questa<00:15:59.850><c> macchina</c>
+
+00:16:01.659 --> 00:16:01.669 align:start position:0%
+questa macchina
+ 
+
+00:16:01.669 --> 00:16:05.299 align:start position:0%
+questa macchina
+cosa<00:16:02.669><c> succede</c><00:16:03.209><c> e</c><00:16:04.139><c> bisogna</c><00:16:04.649><c> stare</c><00:16:04.679><c> bene</c>
+
+00:16:05.299 --> 00:16:05.309 align:start position:0%
+cosa succede e bisogna stare bene
+ 
+
+00:16:05.309 --> 00:16:08.419 align:start position:0%
+cosa succede e bisogna stare bene
+attenti<00:16:06.029><c> ogni</c><00:16:06.989><c> utente</c><00:16:07.230><c> ha</c><00:16:07.559><c> il</c><00:16:08.040><c> proprio</c>
+
+00:16:08.419 --> 00:16:08.429 align:start position:0%
+attenti ogni utente ha il proprio
+ 
+
+00:16:08.429 --> 00:16:10.189 align:start position:0%
+attenti ogni utente ha il proprio
+identificativo
+
+00:16:10.189 --> 00:16:10.199 align:start position:0%
+identificativo
+ 
+
+00:16:10.199 --> 00:16:12.379 align:start position:0%
+identificativo
+quindi<00:16:10.439><c> il</c><00:16:10.529><c> mio</c><00:16:10.649><c> utente</c><00:16:11.040><c> luca</c><00:16:11.459><c> sulla</c><00:16:11.939><c> macchina</c>
+
+00:16:12.379 --> 00:16:12.389 align:start position:0%
+quindi il mio utente luca sulla macchina
+ 
+
+00:16:12.389 --> 00:16:15.799 align:start position:0%
+quindi il mio utente luca sulla macchina
+server<00:16:12.869><c> a</c><00:16:13.069><c> identificativo</c><00:16:14.069><c> mille</c><00:16:14.549><c> il</c><00:16:15.480><c> mio</c>
+
+00:16:15.799 --> 00:16:15.809 align:start position:0%
+server a identificativo mille il mio
+ 
+
+00:16:15.809 --> 00:16:19.689 align:start position:0%
+server a identificativo mille il mio
+utente<00:16:16.790><c> luca</c><00:16:17.790><c> sulla</c><00:16:18.119><c> macchina</c><00:16:18.660><c> client</c><00:16:19.350><c> a</c>
+
+00:16:19.689 --> 00:16:19.699 align:start position:0%
+utente luca sulla macchina client a
+ 
+
+00:16:19.699 --> 00:16:23.210 align:start position:0%
+utente luca sulla macchina client a
+identificativo<00:16:20.699><c> 2000</c><00:16:21.350><c> non</c><00:16:22.350><c> corrispondono</c>
+
+00:16:23.210 --> 00:16:23.220 align:start position:0%
+identificativo 2000 non corrispondono
+ 
+
+00:16:23.220 --> 00:16:27.229 align:start position:0%
+identificativo 2000 non corrispondono
+gli<00:16:23.489><c> di</c><00:16:23.899><c> quindi</c><00:16:24.899><c> mi</c><00:16:25.079><c> ritroverò</c><00:16:25.679><c> i</c><00:16:25.709><c> nomi</c><00:16:26.639><c> tra</c><00:16:27.179><c> i</c>
+
+00:16:27.229 --> 00:16:27.239 align:start position:0%
+gli di quindi mi ritroverò i nomi tra i
+ 
+
+00:16:27.239 --> 00:16:30.009 align:start position:0%
+gli di quindi mi ritroverò i nomi tra i
+gruppi<00:16:27.589><c> sulla</c><00:16:28.589><c> macchina</c><00:16:29.220><c> che</c><00:16:29.669><c> non</c>
+
+00:16:30.009 --> 00:16:30.019 align:start position:0%
+gruppi sulla macchina che non
+ 
+
+00:16:30.019 --> 00:16:33.559 align:start position:0%
+gruppi sulla macchina che non
+corrispondono<00:16:31.019><c> l'uno</c><00:16:31.709><c> all'altro</c><00:16:32.339><c> e</c><00:16:33.089><c> questo</c><00:16:33.540><c> è</c>
+
+00:16:33.559 --> 00:16:33.569 align:start position:0%
+corrispondono l'uno all'altro e questo è
+ 
+
+00:16:33.569 --> 00:16:35.019 align:start position:0%
+corrispondono l'uno all'altro e questo è
+male
+
+00:16:35.019 --> 00:16:35.029 align:start position:0%
+male
+ 
+
+00:16:35.029 --> 00:16:38.090 align:start position:0%
+male
+è<00:16:36.029><c> perché</c><00:16:36.239><c> perché</c><00:16:37.049><c> una</c><00:16:37.439><c> volta</c><00:16:37.559><c> che</c><00:16:37.799><c> io</c><00:16:38.040><c> ho</c>
+
+00:16:38.090 --> 00:16:38.100 align:start position:0%
+è perché perché una volta che io ho
+ 
+
+00:16:38.100 --> 00:16:40.129 align:start position:0%
+è perché perché una volta che io ho
+scritto<00:16:38.249><c> perde</c><00:16:38.939><c> i</c><00:16:38.970><c> diritti</c><00:16:39.149><c> perché</c><00:16:39.809><c> non</c><00:16:39.959><c> sono</c>
+
+00:16:40.129 --> 00:16:40.139 align:start position:0%
+scritto perde i diritti perché non sono
+ 
+
+00:16:40.139 --> 00:16:41.780 align:start position:0%
+scritto perde i diritti perché non sono
+più<00:16:40.259><c> io</c><00:16:40.499><c> il</c><00:16:40.619><c> proprietario</c><00:16:41.100><c> di</c><00:16:41.399><c> quel</c><00:16:41.579><c> file</c>
+
+00:16:41.780 --> 00:16:41.790 align:start position:0%
+più io il proprietario di quel file
+ 
+
+00:16:41.790 --> 00:16:43.609 align:start position:0%
+più io il proprietario di quel file
+perché<00:16:42.299><c> da</c><00:16:42.389><c> una</c><00:16:42.509><c> parte</c><00:16:42.540><c> sono</c><00:16:42.989><c> 2000</c><00:16:43.589><c> e</c>
+
+00:16:43.609 --> 00:16:43.619 align:start position:0%
+perché da una parte sono 2000 e
+ 
+
+00:16:43.619 --> 00:16:45.710 align:start position:0%
+perché da una parte sono 2000 e
+dall'altra<00:16:44.189><c> parte</c><00:16:44.519><c> sul</c><00:16:44.669><c> server</c><00:16:44.999><c> sono</c><00:16:45.329><c> mille</c>
+
+00:16:45.710 --> 00:16:45.720 align:start position:0%
+dall'altra parte sul server sono mille
+ 
+
+00:16:45.720 --> 00:16:47.769 align:start position:0%
+dall'altra parte sul server sono mille
+quindi<00:16:46.649><c> è</c>
+
+00:16:47.769 --> 00:16:47.779 align:start position:0%
+quindi è
+ 
+
+00:16:47.779 --> 00:16:52.309 align:start position:0%
+quindi è
+buona<00:16:48.779><c> cosa</c><00:16:49.249><c> allineare</c><00:16:50.249><c> gli</c><00:16:50.279><c> id</c><00:16:51.119><c> dei</c><00:16:51.959><c> propri</c>
+
+00:16:52.309 --> 00:16:52.319 align:start position:0%
+buona cosa allineare gli id dei propri
+ 
+
+00:16:52.319 --> 00:16:54.400 align:start position:0%
+buona cosa allineare gli id dei propri
+utenti<00:16:52.529><c> su</c><00:16:53.160><c> tutte</c><00:16:53.579><c> le</c><00:16:53.730><c> macchine</c>
+
+00:16:54.400 --> 00:16:54.410 align:start position:0%
+utenti su tutte le macchine
+ 
+
+00:16:54.410 --> 00:16:58.340 align:start position:0%
+utenti su tutte le macchine
+come<00:16:55.410><c> si</c><00:16:55.499><c> fa</c><00:16:55.850><c> creandoli</c><00:16:56.850><c> e</c><00:16:57.360><c> impostando</c><00:16:57.959><c> da</c>
+
+00:16:58.340 --> 00:16:58.350 align:start position:0%
+come si fa creandoli e impostando da
+ 
+
+00:16:58.350 --> 00:17:02.229 align:start position:0%
+come si fa creandoli e impostando da
+user<00:16:58.889><c> ed</c><00:16:59.209><c> il</c><00:17:00.209><c> lidi</c><00:17:00.899><c> di</c><00:17:01.019><c> partenza</c><00:17:01.679><c> quindi</c>
+
+00:17:02.229 --> 00:17:02.239 align:start position:0%
+user ed il lidi di partenza quindi
+ 
+
+00:17:02.239 --> 00:17:05.000 align:start position:0%
+user ed il lidi di partenza quindi
+normalmente<00:17:03.239><c> su</c><00:17:03.569><c> linux</c><00:17:03.809><c> mint</c><00:17:04.019><c> è</c><00:17:04.350><c> il</c><00:17:04.529><c> mille</c><00:17:04.860><c> per</c>
+
+00:17:05.000 --> 00:17:05.010 align:start position:0%
+normalmente su linux mint è il mille per
+ 
+
+00:17:05.010 --> 00:17:06.549 align:start position:0%
+normalmente su linux mint è il mille per
+tutti<00:17:05.309><c> gli</c><00:17:05.339><c> utenti</c><00:17:05.579><c> e</c><00:17:05.850><c> quindi</c><00:17:06.029><c> occorre</c>
+
+00:17:06.549 --> 00:17:06.559 align:start position:0%
+tutti gli utenti e quindi occorre
+ 
+
+00:17:06.559 --> 00:17:10.460 align:start position:0%
+tutti gli utenti e quindi occorre
+ricreare<00:17:07.559><c> gli</c><00:17:07.860><c> utenti</c><00:17:08.339><c> nello</c><00:17:09.120><c> stesso</c><00:17:09.539><c> ordine</c>
+
+00:17:10.460 --> 00:17:10.470 align:start position:0%
+ricreare gli utenti nello stesso ordine
+ 
+
+00:17:10.470 --> 00:17:13.260 align:start position:0%
+ricreare gli utenti nello stesso ordine
+si<00:17:11.470><c> fa</c><00:17:11.589><c> velocemente</c><00:17:12.220><c> anche</c><00:17:12.520><c> un</c><00:17:12.670><c> editing</c><00:17:13.000><c> del</c>
+
+00:17:13.260 --> 00:17:13.270 align:start position:0%
+si fa velocemente anche un editing del
+ 
+
+00:17:13.270 --> 00:17:17.340 align:start position:0%
+si fa velocemente anche un editing del
+puzzle<00:17:13.569><c> di</c><00:17:13.780><c> e</c><00:17:14.290><c> del</c><00:17:14.530><c> gruppo</c><00:17:15.040><c> e</c><00:17:15.339><c> dello</c><00:17:15.640><c> shadow</c><00:17:16.350><c> ok</c>
+
+00:17:17.340 --> 00:17:17.350 align:start position:0%
+puzzle di e del gruppo e dello shadow ok
+ 
+
+00:17:17.350 --> 00:17:20.360 align:start position:0%
+puzzle di e del gruppo e dello shadow ok
+quindi<00:17:17.709><c> lo</c><00:17:18.520><c> si</c><00:17:18.640><c> può</c><00:17:18.760><c> aggiustare</c>
+
+00:17:20.360 --> 00:17:20.370 align:start position:0%
+quindi lo si può aggiustare
+ 
+
+00:17:20.370 --> 00:17:23.699 align:start position:0%
+quindi lo si può aggiustare
+però<00:17:21.370><c> è</c><00:17:21.699><c> meglio</c><00:17:22.300><c> già</c><00:17:22.420><c> a</c><00:17:22.449><c> partire</c><00:17:22.540><c> sapendo</c><00:17:23.410><c> che</c>
+
+00:17:23.699 --> 00:17:23.709 align:start position:0%
+però è meglio già a partire sapendo che
+ 
+
+00:17:23.709 --> 00:17:27.000 align:start position:0%
+però è meglio già a partire sapendo che
+bisogna<00:17:24.069><c> organizzare</c><00:17:24.880><c> la</c><00:17:24.970><c> rete</c><00:17:25.120><c> che</c><00:17:26.010><c> numeri</c>
+
+00:17:27.000 --> 00:17:27.010 align:start position:0%
+bisogna organizzare la rete che numeri
+ 
+
+00:17:27.010 --> 00:17:28.770 align:start position:0%
+bisogna organizzare la rete che numeri
+nomi<00:17:27.250><c> degli</c><00:17:27.430><c> utenti</c><00:17:27.939><c> e</c><00:17:28.240><c> i</c><00:17:28.360><c> numeri</c><00:17:28.480><c> degli</c>
+
+00:17:28.770 --> 00:17:28.780 align:start position:0%
+nomi degli utenti e i numeri degli
+ 
+
+00:17:28.780 --> 00:17:31.320 align:start position:0%
+nomi degli utenti e i numeri degli
+utenti<00:17:29.260><c> in</c><00:17:30.190><c> un</c><00:17:30.340><c> certo</c><00:17:30.460><c> modo</c><00:17:30.760><c> la</c>
+
+00:17:31.320 --> 00:17:31.330 align:start position:0%
+utenti in un certo modo la
+ 
+
+00:17:31.330 --> 00:17:34.290 align:start position:0%
+utenti in un certo modo la
+pianificazione<00:17:31.780><c> salva</c><00:17:32.470><c> dagli</c><00:17:32.770><c> errori</c>
+
+00:17:34.290 --> 00:17:34.300 align:start position:0%
+pianificazione salva dagli errori
+ 
+
+00:17:34.300 --> 00:17:36.290 align:start position:0%
+pianificazione salva dagli errori
+ora<00:17:34.570><c> torniamo</c><00:17:35.080><c> a</c><00:17:35.320><c> essere</c>
+
+00:17:36.290 --> 00:17:36.300 align:start position:0%
+ora torniamo a essere
+ 
+
+00:17:36.300 --> 00:17:39.390 align:start position:0%
+ora torniamo a essere
+l'utente<00:17:37.300><c> luca</c><00:17:38.050><c> ok</c>
+
+00:17:39.390 --> 00:17:39.400 align:start position:0%
+l'utente luca ok
+ 
+
+00:17:39.400 --> 00:17:41.460 align:start position:0%
+l'utente luca ok
+e<00:17:39.430><c> a</c><00:17:39.850><c> far</c><00:17:40.090><c> finta</c><00:17:40.390><c> di</c><00:17:40.450><c> essere</c><00:17:40.600><c> sul</c><00:17:41.050><c> client</c>
+
+00:17:41.460 --> 00:17:41.470 align:start position:0%
+e a far finta di essere sul client
+ 
+
+00:17:41.470 --> 00:17:45.770 align:start position:0%
+e a far finta di essere sul client
+quindi<00:17:41.920><c> me</c><00:17:42.040><c> ne</c><00:17:42.070><c> vado</c><00:17:42.580><c> in</c><00:17:42.610><c> mnt</c><00:17:43.540><c> public</c>
+
+00:17:45.770 --> 00:17:45.780 align:start position:0%
+quindi me ne vado in mnt public
+ 
+
+00:17:45.780 --> 00:17:49.250 align:start position:0%
+quindi me ne vado in mnt public
+faccio<00:17:46.780><c> un</c><00:17:46.840><c> bel</c><00:17:46.929><c> lsm</c><00:17:47.559><c> nelle</c><00:17:47.890><c> a</c><00:17:47.920><c> e</c><00:17:48.160><c> vedo</c><00:17:48.580><c> che</c><00:17:48.610><c> c'è</c>
+
+00:17:49.250 --> 00:17:49.260 align:start position:0%
+faccio un bel lsm nelle a e vedo che c'è
+ 
+
+00:17:49.260 --> 00:17:51.799 align:start position:0%
+faccio un bel lsm nelle a e vedo che c'è
+questa<00:17:50.260><c> cartella</c>
+
+00:17:51.799 --> 00:17:51.809 align:start position:0%
+questa cartella
+ 
+
+00:17:51.809 --> 00:17:56.220 align:start position:0%
+questa cartella
+con<00:17:52.809><c> l</c><00:17:53.470><c> aa</c><00:17:53.620><c> vedo</c><00:17:54.010><c> che</c><00:17:54.190><c> sulla</c><00:17:54.610><c> cartella</c><00:17:55.030><c> o</c><00:17:55.929><c> in</c>
+
+00:17:56.220 --> 00:17:56.230 align:start position:0%
+con l aa vedo che sulla cartella o in
+ 
+
+00:17:56.230 --> 00:17:59.130 align:start position:0%
+con l aa vedo che sulla cartella o in
+diritti<00:17:56.620><c> di</c><00:17:56.710><c> scrittura</c><00:17:57.309><c> perché</c><00:17:57.640><c> c'è</c><00:17:58.420><c> il</c><00:17:58.570><c> 777</c>
+
+00:17:59.130 --> 00:17:59.140 align:start position:0%
+diritti di scrittura perché c'è il 777
+ 
+
+00:17:59.140 --> 00:18:01.740 align:start position:0%
+diritti di scrittura perché c'è il 777
+quindi<00:17:59.830><c> posso</c><00:18:00.100><c> scrivere</c><00:18:00.610><c> e</c><00:18:00.730><c> addirittura</c><00:18:01.480><c> come</c>
+
+00:18:01.740 --> 00:18:01.750 align:start position:0%
+quindi posso scrivere e addirittura come
+ 
+
+00:18:01.750 --> 00:18:03.620 align:start position:0%
+quindi posso scrivere e addirittura come
+utente<00:18:02.170><c> mk</c><00:18:02.770><c> dir</c>
+
+00:18:03.620 --> 00:18:03.630 align:start position:0%
+utente mk dir
+ 
+
+00:18:03.630 --> 00:18:06.590 align:start position:0%
+utente mk dir
+pray<00:18:04.630><c> that</c>
+
+00:18:06.590 --> 00:18:06.600 align:start position:0%
+pray that
+ 
+
+00:18:06.600 --> 00:18:09.480 align:start position:0%
+pray that
+per<00:18:07.600><c> avermi</c><00:18:07.990><c> vede</c><00:18:08.500><c> dei</c><00:18:08.679><c> file</c><00:18:09.010><c> che</c><00:18:09.070><c> metto</c><00:18:09.340><c> lì</c>
+
+00:18:09.480 --> 00:18:09.490 align:start position:0%
+per avermi vede dei file che metto lì
+ 
+
+00:18:09.490 --> 00:18:12.090 align:start position:0%
+per avermi vede dei file che metto lì
+dentro<00:18:10.000><c> faccio</c><00:18:10.540><c> nell'essere</c><00:18:11.140><c> nelle</c><00:18:11.440><c> a</c><00:18:11.470><c> e</c>
+
+00:18:12.090 --> 00:18:12.100 align:start position:0%
+dentro faccio nell'essere nelle a e
+ 
+
+00:18:12.100 --> 00:18:14.700 align:start position:0%
+dentro faccio nell'essere nelle a e
+vedete<00:18:12.400><c> che</c><00:18:12.610><c> questa</c><00:18:12.970><c> volta</c><00:18:13.150><c> non</c><00:18:13.929><c> essendo</c><00:18:14.530><c> ruth</c>
+
+00:18:14.700 --> 00:18:14.710 align:start position:0%
+vedete che questa volta non essendo ruth
+ 
+
+00:18:14.710 --> 00:18:17.330 align:start position:0%
+vedete che questa volta non essendo ruth
+ma<00:18:14.980><c> vende</c><00:18:15.250><c> un</c><00:18:15.340><c> mio</c><00:18:15.460><c> e</c><00:18:15.580><c> di</c><00:18:15.790><c> diverso</c><00:18:16.540><c> da</c><00:18:16.690><c> zero</c>
+
+00:18:17.330 --> 00:18:17.340 align:start position:0%
+ma vende un mio e di diverso da zero
+ 
+
+00:18:17.340 --> 00:18:21.750 align:start position:0%
+ma vende un mio e di diverso da zero
+viene<00:18:18.340><c> riportato</c><00:18:19.150><c> la</c><00:18:19.630><c> mail</c><00:18:19.840><c> file</c><00:18:20.610><c> e</c><00:18:21.610><c> la</c>
+
+00:18:21.750 --> 00:18:21.760 align:start position:0%
+viene riportato la mail file e la
+ 
+
+00:18:21.760 --> 00:18:24.570 align:start position:0%
+viene riportato la mail file e la
+directory<00:18:22.000><c> e</c><00:18:22.240><c> un</c><00:18:22.330><c> file</c><00:18:22.510><c> speciale</c><00:18:22.990><c> con</c><00:18:23.580><c> questa</c>
+
+00:18:24.570 --> 00:18:24.580 align:start position:0%
+directory e un file speciale con questa
+ 
+
+00:18:24.580 --> 00:18:27.600 align:start position:0%
+directory e un file speciale con questa
+proprietà<00:18:25.150><c> cioè</c><00:18:25.870><c> il</c><00:18:25.990><c> possesso</c><00:18:26.380><c> dell'utente</c><00:18:27.280><c> e</c>
+
+00:18:27.600 --> 00:18:27.610 align:start position:0%
+proprietà cioè il possesso dell'utente e
+ 
+
+00:18:27.610 --> 00:18:30.390 align:start position:0%
+proprietà cioè il possesso dell'utente e
+il<00:18:27.850><c> possesso</c><00:18:28.120><c> del</c><00:18:28.390><c> gruppo</c><00:18:29.190><c> con</c><00:18:30.190><c> il</c><00:18:30.309><c> nome</c>
+
+00:18:30.390 --> 00:18:30.400 align:start position:0%
+il possesso del gruppo con il nome
+ 
+
+00:18:30.400 --> 00:18:32.910 align:start position:0%
+il possesso del gruppo con il nome
+corretto<00:18:31.050><c> qui</c><00:18:32.050><c> dentro</c><00:18:32.170><c> quindi</c><00:18:32.440><c> posso</c><00:18:32.800><c> poi</c>
+
+00:18:32.910 --> 00:18:32.920 align:start position:0%
+corretto qui dentro quindi posso poi
+ 
+
+00:18:32.920 --> 00:18:35.060 align:start position:0%
+corretto qui dentro quindi posso poi
+andare<00:18:33.250><c> a</c><00:18:33.280><c> creare</c><00:18:33.429><c> i</c><00:18:33.820><c> miei</c><00:18:34.179><c> file</c>
+
+00:18:35.060 --> 00:18:35.070 align:start position:0%
+andare a creare i miei file
+ 
+
+00:18:35.070 --> 00:18:37.190 align:start position:0%
+andare a creare i miei file
+e
+
+00:18:37.190 --> 00:18:37.200 align:start position:0%
+e
+ 
+
+00:18:37.200 --> 00:18:39.990 align:start position:0%
+e
+adesso<00:18:38.200><c> la</c><00:18:38.590><c> cosa</c><00:18:38.980><c> che</c><00:18:39.250><c> dobbiamo</c><00:18:39.400><c> andare</c><00:18:39.730><c> a</c>
+
+00:18:39.990 --> 00:18:40.000 align:start position:0%
+adesso la cosa che dobbiamo andare a
+ 
+
+00:18:40.000 --> 00:18:42.720 align:start position:0%
+adesso la cosa che dobbiamo andare a
+esplorare<00:18:40.510><c> vedere</c><00:18:41.410><c> come</c><00:18:41.710><c> rendere</c><00:18:42.100><c> permanente</c>
+
+00:18:42.720 --> 00:18:42.730 align:start position:0%
+esplorare vedere come rendere permanente
+ 
+
+00:18:42.730 --> 00:18:44.510 align:start position:0%
+esplorare vedere come rendere permanente
+questa<00:18:43.240><c> configurazione</c>
+
+00:18:44.510 --> 00:18:44.520 align:start position:0%
+questa configurazione
+ 
+
+00:18:44.520 --> 00:18:46.890 align:start position:0%
+questa configurazione
+vigo<00:18:45.520><c> permanente</c><00:18:46.210><c> perché</c><00:18:46.570><c> al</c><00:18:46.720><c> momento</c>
+
+00:18:46.890 --> 00:18:46.900 align:start position:0%
+vigo permanente perché al momento
+ 
+
+00:18:46.900 --> 00:18:50.250 align:start position:0%
+vigo permanente perché al momento
+abbiamo<00:18:47.350><c> fatto</c><00:18:48.040><c> semplicemente</c><00:18:48.460><c> un</c><00:18:48.820><c> mouse</c><00:18:49.270><c> con</c>
+
+00:18:50.250 --> 00:18:50.260 align:start position:0%
+abbiamo fatto semplicemente un mouse con
+ 
+
+00:18:50.260 --> 00:18:52.610 align:start position:0%
+abbiamo fatto semplicemente un mouse con
+l'utenza<00:18:51.130><c> di</c><00:18:51.490><c> root</c>
+
+00:18:52.610 --> 00:18:52.620 align:start position:0%
+l'utenza di root
+ 
+
+00:18:52.620 --> 00:18:55.340 align:start position:0%
+l'utenza di root
+tutti<00:18:53.620><c> i</c><00:18:53.980><c> file</c><00:18:54.610><c> system</c>
+
+00:18:55.340 --> 00:18:55.350 align:start position:0%
+tutti i file system
+ 
+
+00:18:55.350 --> 00:18:58.280 align:start position:0%
+tutti i file system
+locali<00:18:56.350><c> e</c><00:18:56.380><c> remoti</c><00:18:56.980><c> vengono</c>
+
+00:18:58.280 --> 00:18:58.290 align:start position:0%
+locali e remoti vengono
+ 
+
+00:18:58.290 --> 00:19:02.610 align:start position:0%
+locali e remoti vengono
+caricati<00:18:59.700><c> dall'avvio</c><00:19:00.700><c> del</c><00:19:00.850><c> sistema</c><00:19:01.179><c> da</c><00:19:01.690><c> una</c>
+
+00:19:02.610 --> 00:19:02.620 align:start position:0%
+caricati dall'avvio del sistema da una
+ 
+
+00:19:02.620 --> 00:19:05.010 align:start position:0%
+caricati dall'avvio del sistema da una
+lista<00:19:02.770><c> che</c><00:19:03.280><c> è</c><00:19:03.309><c> presente</c><00:19:03.700><c> in</c><00:19:04.000><c> etici</c><00:19:04.570><c> e</c><00:19:04.840><c> si</c>
+
+00:19:05.010 --> 00:19:05.020 align:start position:0%
+lista che è presente in etici e si
+ 
+
+00:19:05.020 --> 00:19:12.190 align:start position:0%
+lista che è presente in etici e si
+chiama<00:19:05.380><c> fs</c><00:19:06.100><c> tab</c><00:19:06.610><c> andiamo</c><00:19:07.240><c> a</c><00:19:07.270><c> vedere</c><00:19:07.830><c> etici</c>
+
+00:19:12.190 --> 00:19:12.200 align:start position:0%
+ 
+ 
+
+00:19:12.200 --> 00:19:17.680 align:start position:0%
+ 
+e<00:19:12.320><c> facciamo</c><00:19:13.039><c> nano</c><00:19:13.669><c> di</c><00:19:14.409><c> fs</c><00:19:15.409><c> tab</c>
+
+00:19:17.680 --> 00:19:17.690 align:start position:0%
+ 
+ 
+
+00:19:17.690 --> 00:19:19.840 align:start position:0%
+ 
+qui<00:19:17.809><c> abbiamo</c><00:19:17.960><c> che</c><00:19:18.590><c> la</c><00:19:18.889><c> partizione</c><00:19:19.250><c> che</c><00:19:19.820><c> a</c>
+
+00:19:19.840 --> 00:19:19.850 align:start position:0%
+qui abbiamo che la partizione che a
+ 
+
+00:19:19.850 --> 00:19:23.080 align:start position:0%
+qui abbiamo che la partizione che a
+quell<00:19:20.230><c> identificativo</c><00:19:21.230><c> lunghissimo</c><00:19:21.889><c> 18</c><00:19:22.429><c> 631</c>
+
+00:19:23.080 --> 00:19:23.090 align:start position:0%
+quell identificativo lunghissimo 18 631
+ 
+
+00:19:23.090 --> 00:19:24.299 align:start position:0%
+quell identificativo lunghissimo 18 631
+eccetera<00:19:23.360><c> eccetera</c>
+
+00:19:24.299 --> 00:19:24.309 align:start position:0%
+eccetera eccetera
+ 
+
+00:19:24.309 --> 00:19:28.149 align:start position:0%
+eccetera eccetera
+viene<00:19:25.309><c> montata</c><00:19:26.090><c> sotto</c><00:19:26.840><c> la</c><00:19:27.320><c> slash</c><00:19:27.590><c> quindi</c>
+
+00:19:28.149 --> 00:19:28.159 align:start position:0%
+viene montata sotto la slash quindi
+ 
+
+00:19:28.159 --> 00:19:33.370 align:start position:0%
+viene montata sotto la slash quindi
+sulla<00:19:28.399><c> route</c><00:19:28.690><c> è</c><00:19:29.690><c> di</c><00:19:30.200><c> tipo</c><00:19:30.679><c> ext4</c><00:19:31.580><c> e</c><00:19:32.510><c> a</c><00:19:32.870><c> queste</c>
+
+00:19:33.370 --> 00:19:33.380 align:start position:0%
+sulla route è di tipo ext4 e a queste
+ 
+
+00:19:33.380 --> 00:19:35.850 align:start position:0%
+sulla route è di tipo ext4 e a queste
+opzioni<00:19:33.649><c> in</c><00:19:34.010><c> caso</c><00:19:34.340><c> di</c><00:19:34.490><c> errore</c><00:19:35.029><c> viene</c>
+
+00:19:35.850 --> 00:19:35.860 align:start position:0%
+opzioni in caso di errore viene
+ 
+
+00:19:35.860 --> 00:19:39.399 align:start position:0%
+opzioni in caso di errore viene
+rimontata<00:19:37.059><c> come</c><00:19:38.059><c> read</c><00:19:38.360><c> only</c><00:19:38.480><c> in</c><00:19:38.929><c> maniera</c><00:19:39.200><c> tale</c>
+
+00:19:39.399 --> 00:19:39.409 align:start position:0%
+rimontata come read only in maniera tale
+ 
+
+00:19:39.409 --> 00:19:41.680 align:start position:0%
+rimontata come read only in maniera tale
+da<00:19:39.529><c> non</c><00:19:39.710><c> rovinare</c><00:19:40.279><c> ulteriormente</c><00:19:40.419><c> il</c><00:19:41.419><c> file</c>
+
+00:19:41.680 --> 00:19:41.690 align:start position:0%
+da non rovinare ulteriormente il file
+ 
+
+00:19:41.690 --> 00:19:42.480 align:start position:0%
+da non rovinare ulteriormente il file
+system
+
+00:19:42.480 --> 00:19:42.490 align:start position:0%
+system
+ 
+
+00:19:42.490 --> 00:19:49.480 align:start position:0%
+system
+e<00:19:43.490><c> poi</c><00:19:43.730><c> in</c><00:19:44.090><c> caso</c><00:19:44.779><c> di</c><00:19:45.789><c> backup</c><00:19:46.960><c> si</c><00:19:47.960><c> deve</c><00:19:48.200><c> il</c><00:19:49.010><c> dump</c>
+
+00:19:49.480 --> 00:19:49.490 align:start position:0%
+e poi in caso di backup si deve il dump
+ 
+
+00:19:49.490 --> 00:19:52.090 align:start position:0%
+e poi in caso di backup si deve il dump
+è<00:19:49.549><c> un</c><00:19:49.820><c> backup</c><00:19:50.090><c> del</c><00:19:50.809><c> file</c><00:19:50.960><c> system</c><00:19:51.169><c> si</c><00:19:51.860><c> deve</c>
+
+00:19:52.090 --> 00:19:52.100 align:start position:0%
+è un backup del file system si deve
+ 
+
+00:19:52.100 --> 00:19:55.690 align:start position:0%
+è un backup del file system si deve
+comportare<00:19:52.340><c> con</c><00:19:52.880><c> quel</c><00:19:53.269><c> codice</c><00:19:53.389><c> zero</c><00:19:54.260><c> in</c><00:19:55.039><c> caso</c>
+
+00:19:55.690 --> 00:19:55.700 align:start position:0%
+comportare con quel codice zero in caso
+ 
+
+00:19:55.700 --> 00:19:58.830 align:start position:0%
+comportare con quel codice zero in caso
+di<00:19:56.000><c> passo</c><00:19:56.960><c> dovrebbero</c><00:19:57.440><c> essere</c><00:19:57.740><c> gli</c><00:19:57.769><c> errori</c>
+
+00:19:58.830 --> 00:19:58.840 align:start position:0%
+di passo dovrebbero essere gli errori
+ 
+
+00:19:58.840 --> 00:20:00.690 align:start position:0%
+di passo dovrebbero essere gli errori
+possibili<00:19:59.840><c> sul</c>
+
+00:20:00.690 --> 00:20:00.700 align:start position:0%
+possibili sul
+ 
+
+00:20:00.700 --> 00:20:04.180 align:start position:0%
+possibili sul
+file<00:20:01.700><c> system</c><00:20:01.880><c> all'avvio</c><00:20:02.590><c> si</c><00:20:03.590><c> comporta</c><00:20:04.070><c> con</c>
+
+00:20:04.180 --> 00:20:04.190 align:start position:0%
+file system all'avvio si comporta con
+ 
+
+00:20:04.190 --> 00:20:06.610 align:start position:0%
+file system all'avvio si comporta con
+quel<00:20:04.399><c> codice</c><00:20:04.519><c> 1</c><00:20:05.269><c> a</c><00:20:05.299><c> dirti</c><00:20:05.899><c> a</c><00:20:05.929><c> dirvi</c><00:20:06.320><c> tutta</c><00:20:06.529><c> la</c>
+
+00:20:06.610 --> 00:20:06.620 align:start position:0%
+quel codice 1 a dirti a dirvi tutta la
+ 
+
+00:20:06.620 --> 00:20:08.379 align:start position:0%
+quel codice 1 a dirti a dirvi tutta la
+verità<00:20:06.919><c> in</c><00:20:07.070><c> questo</c><00:20:07.279><c> momento</c><00:20:07.730><c> non</c><00:20:07.970><c> mi</c><00:20:08.149><c> ricordo</c>
+
+00:20:08.379 --> 00:20:08.389 align:start position:0%
+verità in questo momento non mi ricordo
+ 
+
+00:20:08.389 --> 00:20:10.330 align:start position:0%
+verità in questo momento non mi ricordo
+cosa<00:20:08.809><c> corrispondono</c><00:20:09.500><c> quei</c><00:20:09.799><c> codici</c><00:20:09.919><c> ma</c>
+
+00:20:10.330 --> 00:20:10.340 align:start position:0%
+cosa corrispondono quei codici ma
+ 
+
+00:20:10.340 --> 00:20:16.840 align:start position:0%
+cosa corrispondono quei codici ma
+sappiamo<00:20:10.760><c> che</c><00:20:11.090><c> al</c><00:20:11.929><c> solito</c><00:20:12.200><c> man</c><00:20:12.740><c> fs</c><00:20:13.610><c> tab</c>
+
+00:20:16.840 --> 00:20:16.850 align:start position:0%
+ 
+ 
+
+00:20:16.850 --> 00:20:19.120 align:start position:0%
+ 
+andiamo<00:20:17.240><c> a</c><00:20:17.269><c> vedere</c><00:20:17.330><c> appunto</c><00:20:18.289><c> qui</c><00:20:18.649><c> l'esempio</c><00:20:18.889><c> è</c>
+
+00:20:19.120 --> 00:20:19.130 align:start position:0%
+andiamo a vedere appunto qui l'esempio è
+ 
+
+00:20:19.130 --> 00:20:20.519 align:start position:0%
+andiamo a vedere appunto qui l'esempio è
+0<00:20:19.460><c> 2</c>
+
+00:20:20.519 --> 00:20:20.529 align:start position:0%
+0 2
+ 
+
+00:20:20.529 --> 00:20:25.519 align:start position:0%
+0 2
+il<00:20:21.529><c> quarto</c><00:20:22.130><c> campo</c>
+
+00:20:25.519 --> 00:20:25.529 align:start position:0%
+ 
+ 
+
+00:20:25.529 --> 00:20:30.859 align:start position:0%
+ 
+allora<00:20:26.999><c> sì</c><00:20:28.379><c> field</c><00:20:29.379><c> questo</c><00:20:29.859><c> campo</c><00:20:30.189><c> è</c><00:20:30.219><c> usato</c><00:20:30.579><c> dal</c>
+
+00:20:30.859 --> 00:20:30.869 align:start position:0%
+allora sì field questo campo è usato dal
+ 
+
+00:20:30.869 --> 00:20:33.809 align:start position:0%
+allora sì field questo campo è usato dal
+programma<00:20:31.869><c> dame</c><00:20:32.049><c> per</c><00:20:32.429><c> determinare</c><00:20:33.429><c> quale</c>
+
+00:20:33.809 --> 00:20:33.819 align:start position:0%
+programma dame per determinare quale
+ 
+
+00:20:33.819 --> 00:20:38.039 align:start position:0%
+programma dame per determinare quale
+file<00:20:34.059><c> system</c><00:20:34.349><c> deve</c><00:20:35.349><c> essere</c><00:20:35.859><c> de</c><00:20:36.789><c> cappato</c><00:20:37.449><c> il</c>
+
+00:20:38.039 --> 00:20:38.049 align:start position:0%
+file system deve essere de cappato il
+ 
+
+00:20:38.049 --> 00:20:41.669 align:start position:0%
+file system deve essere de cappato il
+default<00:20:38.669><c> 0</c><00:20:39.669><c> non</c><00:20:40.029><c> fare</c><00:20:40.509><c> un</c><00:20:40.659><c> backup</c><00:20:41.049><c> di</c><00:20:41.409><c> questo</c>
+
+00:20:41.669 --> 00:20:41.679 align:start position:0%
+default 0 non fare un backup di questo
+ 
+
+00:20:41.679 --> 00:20:45.059 align:start position:0%
+default 0 non fare un backup di questo
+file<00:20:41.859><c> system</c><00:20:42.359><c> il</c><00:20:43.359><c> sesto</c><00:20:43.689><c> campo</c><00:20:44.169><c> è</c><00:20:44.199><c> usato</c><00:20:44.919><c> dalle</c>
+
+00:20:45.059 --> 00:20:45.069 align:start position:0%
+file system il sesto campo è usato dalle
+ 
+
+00:20:45.069 --> 00:20:47.609 align:start position:0%
+file system il sesto campo è usato dalle
+file<00:20:45.369><c> system</c><00:20:45.489><c> check</c><00:20:45.939><c> in</c><00:20:46.869><c> e</c><00:20:47.049><c> il</c><00:20:47.139><c> programmino</c>
+
+00:20:47.609 --> 00:20:47.619 align:start position:0%
+file system check in e il programmino
+ 
+
+00:20:47.619 --> 00:20:49.529 align:start position:0%
+file system check in e il programmino
+che<00:20:47.859><c> c'è</c><00:20:48.069><c> giusto</c><00:20:48.429><c> il</c><00:20:48.459><c> file</c><00:20:48.669><c> system</c><00:20:48.729><c> in</c><00:20:49.029><c> caso</c><00:20:49.389><c> di</c>
+
+00:20:49.529 --> 00:20:49.539 align:start position:0%
+che c'è giusto il file system in caso di
+ 
+
+00:20:49.539 --> 00:20:51.259 align:start position:0%
+che c'è giusto il file system in caso di
+errori<00:20:49.989><c> e</c>
+
+00:20:51.259 --> 00:20:51.269 align:start position:0%
+errori e
+ 
+
+00:20:51.269 --> 00:20:54.869 align:start position:0%
+errori e
+che<00:20:52.269><c> viene</c><00:20:52.419><c> eseguito</c><00:20:53.049><c> all'avvio</c><00:20:53.879><c> della</c>
+
+00:20:54.869 --> 00:20:54.879 align:start position:0%
+che viene eseguito all'avvio della
+ 
+
+00:20:54.879 --> 00:20:56.669 align:start position:0%
+che viene eseguito all'avvio della
+macchina<00:20:55.389><c> il</c><00:20:55.539><c> root</c><00:20:55.719><c> del</c><00:20:55.869><c> sistema</c><00:20:56.439><c> deve</c><00:20:56.649><c> essere</c>
+
+00:20:56.669 --> 00:20:56.679 align:start position:0%
+macchina il root del sistema deve essere
+ 
+
+00:20:56.679 --> 00:20:59.509 align:start position:0%
+macchina il root del sistema deve essere
+specificato<00:20:57.069><c> con</c>
+
+00:20:59.509 --> 00:20:59.519 align:start position:0%
+specificato con
+ 
+
+00:20:59.519 --> 00:21:01.939 align:start position:0%
+specificato con
+fs<00:21:00.519><c> passno</c>
+
+00:21:01.939 --> 00:21:01.949 align:start position:0%
+fs passno
+ 
+
+00:21:01.949 --> 00:21:05.249 align:start position:0%
+fs passno
+impostato<00:21:02.949><c> a</c><00:21:02.979><c> uno</c><00:21:03.879><c> gli</c><00:21:04.509><c> altri</c><00:21:04.809><c> file</c><00:21:05.109><c> system</c>
+
+00:21:05.249 --> 00:21:05.259 align:start position:0%
+impostato a uno gli altri file system
+ 
+
+00:21:05.259 --> 00:21:07.789 align:start position:0%
+impostato a uno gli altri file system
+devono<00:21:05.949><c> avere</c><00:21:06.279><c> invece</c><00:21:06.459><c> il</c><00:21:06.669><c> valore</c><00:21:06.759><c> e</c><00:21:07.059><c> 2</c>
+
+00:21:07.789 --> 00:21:07.799 align:start position:0%
+devono avere invece il valore e 2
+ 
+
+00:21:07.799 --> 00:21:10.249 align:start position:0%
+devono avere invece il valore e 2
+il<00:21:08.799><c> filesystem</c>
+
+00:21:10.249 --> 00:21:10.259 align:start position:0%
+il filesystem
+ 
+
+00:21:10.259 --> 00:21:12.709 align:start position:0%
+il filesystem
+verrà
+
+00:21:12.709 --> 00:21:12.719 align:start position:0%
+verrà
+ 
+
+00:21:12.719 --> 00:21:15.809 align:start position:0%
+verrà
+verificato<00:21:13.719><c> sequenzialmente</c><00:21:14.549><c> ma</c><00:21:15.549><c> file</c>
+
+00:21:15.809 --> 00:21:15.819 align:start position:0%
+verificato sequenzialmente ma file
+ 
+
+00:21:15.819 --> 00:21:18.529 align:start position:0%
+verificato sequenzialmente ma file
+system<00:21:15.969><c> su</c><00:21:16.359><c> dischi</c><00:21:16.779><c> differenti</c><00:21:17.469><c> saranno</c>
+
+00:21:18.529 --> 00:21:18.539 align:start position:0%
+system su dischi differenti saranno
+ 
+
+00:21:18.539 --> 00:21:21.539 align:start position:0%
+system su dischi differenti saranno
+verificati<00:21:19.539><c> allo</c><00:21:20.289><c> stesso</c><00:21:20.619><c> tempo</c><00:21:21.069><c> per</c>
+
+00:21:21.539 --> 00:21:21.549 align:start position:0%
+verificati allo stesso tempo per
+ 
+
+00:21:21.549 --> 00:21:24.389 align:start position:0%
+verificati allo stesso tempo per
+utilizzare<00:21:22.389><c> il</c><00:21:22.599><c> parallelismo</c><00:21:23.529><c> fornito</c><00:21:24.249><c> dall</c>
+
+00:21:24.389 --> 00:21:24.399 align:start position:0%
+utilizzare il parallelismo fornito dall
+ 
+
+00:21:24.399 --> 00:21:26.599 align:start position:0%
+utilizzare il parallelismo fornito dall
+hardware
+
+00:21:26.599 --> 00:21:26.609 align:start position:0%
+hardware
+ 
+
+00:21:26.609 --> 00:21:30.929 align:start position:0%
+hardware
+il<00:21:27.609><c> default</c><00:21:27.969><c> e</c><00:21:28.209><c> 0</c><00:21:28.829><c> che</c><00:21:29.829><c> significa</c><00:21:29.979><c> che</c><00:21:30.579><c> il</c><00:21:30.729><c> file</c>
+
+00:21:30.929 --> 00:21:30.939 align:start position:0%
+il default e 0 che significa che il file
+ 
+
+00:21:30.939 --> 00:21:33.659 align:start position:0%
+il default e 0 che significa che il file
+system<00:21:31.059><c> non</c><00:21:31.799><c> esiste</c><00:21:32.829><c> jack</c><00:21:33.039><c> non</c><00:21:33.339><c> viene</c>
+
+00:21:33.659 --> 00:21:33.669 align:start position:0%
+system non esiste jack non viene
+ 
+
+00:21:33.669 --> 00:21:34.729 align:start position:0%
+system non esiste jack non viene
+eseguito
+
+00:21:34.729 --> 00:21:34.739 align:start position:0%
+eseguito
+ 
+
+00:21:34.739 --> 00:21:38.849 align:start position:0%
+eseguito
+invece<00:21:35.739><c> qui</c><00:21:35.949><c> dice</c><00:21:36.279><c> se</c><00:21:37.209><c> ci</c><00:21:38.079><c> deve</c><00:21:38.319><c> fare</c><00:21:38.589><c> un</c><00:21:38.679><c> file</c>
+
+00:21:38.849 --> 00:21:38.859 align:start position:0%
+invece qui dice se ci deve fare un file
+ 
+
+00:21:38.859 --> 00:21:42.979 align:start position:0%
+invece qui dice se ci deve fare un file
+system<00:21:38.949><c> shock</c><00:21:39.309><c> al</c><00:21:39.729><c> boot</c><00:21:39.969><c> fallo</c><00:21:40.719><c> e</c>
+
+00:21:42.979 --> 00:21:42.989 align:start position:0%
+system shock al boot fallo e
+ 
+
+00:21:42.989 --> 00:21:47.329 align:start position:0%
+system shock al boot fallo e
+si<00:21:43.989><c> dice</c><00:21:44.199><c> fai</c><00:21:45.069><c> il</c><00:21:45.489><c> file</c><00:21:45.849><c> system</c><00:21:45.969><c> shock</c>
+
+00:21:47.329 --> 00:21:47.339 align:start position:0%
+si dice fai il file system shock
+ 
+
+00:21:47.339 --> 00:21:51.109 align:start position:0%
+si dice fai il file system shock
+della<00:21:48.339><c> della</c><00:21:49.149><c> route</c><00:21:49.269><c> come</c><00:21:50.019><c> primo</c>
+
+00:21:51.109 --> 00:21:51.119 align:start position:0%
+della della route come primo
+ 
+
+00:21:51.119 --> 00:21:55.669 align:start position:0%
+della della route come primo
+bene<00:21:52.119><c> ritorniamo</c><00:21:52.449><c> al</c><00:21:52.719><c> nostro</c><00:21:53.109><c> e</c><00:21:53.199><c> feste</c><00:21:53.499><c> tab</c>
+
+00:21:55.669 --> 00:21:55.679 align:start position:0%
+bene ritorniamo al nostro e feste tab
+ 
+
+00:21:55.679 --> 00:21:59.569 align:start position:0%
+bene ritorniamo al nostro e feste tab
+e<00:21:56.679><c> andiamo</c><00:21:57.309><c> a</c><00:21:57.339><c> inserire</c>
+
+00:21:59.569 --> 00:21:59.579 align:start position:0%
+e andiamo a inserire
+ 
+
+00:21:59.579 --> 00:22:03.419 align:start position:0%
+e andiamo a inserire
+il<00:22:00.579><c> la</c><00:22:01.419><c> configurazione</c><00:22:01.949><c> permanente</c><00:22:02.949><c> quindi</c>
+
+00:22:03.419 --> 00:22:03.429 align:start position:0%
+il la configurazione permanente quindi
+ 
+
+00:22:03.429 --> 00:22:06.299 align:start position:0%
+il la configurazione permanente quindi
+sappiamo<00:22:03.969><c> che</c><00:22:04.299><c> si</c><00:22:04.989><c> inizia</c><00:22:05.289><c> da</c><00:22:05.379><c> lippi</c><00:22:05.649><c> si</c><00:22:06.009><c> mette</c>
+
+00:22:06.299 --> 00:22:06.309 align:start position:0%
+sappiamo che si inizia da lippi si mette
+ 
+
+00:22:06.309 --> 00:22:11.689 align:start position:0%
+sappiamo che si inizia da lippi si mette
+il<00:22:06.429><c> percorso</c><00:22:06.759><c> var</c><00:22:07.799><c> cash</c>
+
+00:22:11.689 --> 00:22:11.699 align:start position:0%
+ 
+ 
+
+00:22:11.699 --> 00:22:15.919 align:start position:0%
+ 
+jared<00:22:12.869><c> public</c>
+
+00:22:15.919 --> 00:22:15.929 align:start position:0%
+ 
+ 
+
+00:22:15.929 --> 00:22:19.049 align:start position:0%
+ 
+dove<00:22:16.929><c> lo</c><00:22:17.319><c> dobbiamo</c><00:22:17.649><c> andare</c><00:22:17.979><c> a</c><00:22:18.009><c> votare</c><00:22:18.549><c> montare</c>
+
+00:22:19.049 --> 00:22:19.059 align:start position:0%
+dove lo dobbiamo andare a votare montare
+ 
+
+00:22:19.059 --> 00:22:23.479 align:start position:0%
+dove lo dobbiamo andare a votare montare
+mnt<00:22:19.839><c> public</c>
+
+00:22:23.479 --> 00:22:23.489 align:start position:0%
+ 
+ 
+
+00:22:23.489 --> 00:22:26.339 align:start position:0%
+ 
+come<00:22:24.489><c> lo</c><00:22:24.759><c> dobbiamo</c><00:22:24.999><c> montare</c><00:22:25.629><c> con</c><00:22:25.809><c> che</c><00:22:25.989><c> tipo</c><00:22:26.169><c> di</c>
+
+00:22:26.339 --> 00:22:26.349 align:start position:0%
+come lo dobbiamo montare con che tipo di
+ 
+
+00:22:26.349 --> 00:22:29.329 align:start position:0%
+come lo dobbiamo montare con che tipo di
+file<00:22:26.649><c> system</c><00:22:27.209><c> nfs</c>
+
+00:22:29.329 --> 00:22:29.339 align:start position:0%
+file system nfs
+ 
+
+00:22:29.339 --> 00:22:31.360 align:start position:0%
+file system nfs
+perfetto
+
+00:22:31.360 --> 00:22:31.370 align:start position:0%
+perfetto
+ 
+
+00:22:31.370 --> 00:22:35.140 align:start position:0%
+perfetto
+come<00:22:32.090><c> parametri</c><00:22:32.900><c> possiamo</c><00:22:33.620><c> dargli</c><00:22:34.160><c> r</c><00:22:34.580><c> size</c>
+
+00:22:35.140 --> 00:22:35.150 align:start position:0%
+come parametri possiamo dargli r size
+ 
+
+00:22:35.150 --> 00:22:41.530 align:start position:0%
+come parametri possiamo dargli r size
+uguale<00:22:36.280><c> 1024</c><00:22:37.280><c> virgola</c><00:22:38.120><c> v</c><00:22:38.450><c> size</c><00:22:39.400><c> uguale</c><00:22:40.540><c> 1024</c>
+
+00:22:41.530 --> 00:22:41.540 align:start position:0%
+uguale 1024 virgola v size uguale 1024
+ 
+
+00:22:41.540 --> 00:22:44.140 align:start position:0%
+uguale 1024 virgola v size uguale 1024
+come<00:22:41.750><c> abbiamo</c><00:22:41.990><c> fatto</c><00:22:42.140><c> poc'anzi</c>
+
+00:22:44.140 --> 00:22:44.150 align:start position:0%
+come abbiamo fatto poc'anzi
+ 
+
+00:22:44.150 --> 00:22:47.980 align:start position:0%
+come abbiamo fatto poc'anzi
+e<00:22:44.180><c> poi</c><00:22:44.450><c> gli</c><00:22:44.630><c> diciamo</c><00:22:45.020><c> che</c><00:22:45.590><c> all'avvio</c><00:22:46.480><c> non</c><00:22:47.480><c> c'è</c>
+
+00:22:47.980 --> 00:22:47.990 align:start position:0%
+e poi gli diciamo che all'avvio non c'è
+ 
+
+00:22:47.990 --> 00:22:51.549 align:start position:0%
+e poi gli diciamo che all'avvio non c'è
+per<00:22:48.200><c> i</c><00:22:48.230><c> dump</c><00:22:48.650><c> non</c><00:22:48.920><c> deve</c><00:22:49.220><c> fare</c><00:22:49.610><c> nulla</c><00:22:50.120><c> e</c><00:22:50.660><c> per</c><00:22:51.080><c> il</c>
+
+00:22:51.549 --> 00:22:51.559 align:start position:0%
+per i dump non deve fare nulla e per il
+ 
+
+00:22:51.559 --> 00:22:54.280 align:start position:0%
+per i dump non deve fare nulla e per il
+filesystem<00:22:52.040><c> check</c><00:22:52.580><c> lo</c><00:22:53.240><c> deve</c><00:22:53.600><c> ignorare</c>
+
+00:22:54.280 --> 00:22:54.290 align:start position:0%
+filesystem check lo deve ignorare
+ 
+
+00:22:54.290 --> 00:22:58.210 align:start position:0%
+filesystem check lo deve ignorare
+quindi<00:22:54.770><c> facciamo</c><00:22:55.190><c> contro</c><00:22:55.670><c> leaks</c><00:22:56.000><c> usciamo</c><00:22:57.220><c> e</c>
+
+00:22:58.210 --> 00:22:58.220 align:start position:0%
+quindi facciamo contro leaks usciamo e
+ 
+
+00:22:58.220 --> 00:23:01.390 align:start position:0%
+quindi facciamo contro leaks usciamo e
+adesso<00:22:58.460><c> per</c><00:22:59.240><c> verificare</c><00:23:00.170><c> che</c><00:23:00.320><c> il</c><00:23:00.620><c> mount</c>
+
+00:23:01.390 --> 00:23:01.400 align:start position:0%
+adesso per verificare che il mount
+ 
+
+00:23:01.400 --> 00:23:05.970 align:start position:0%
+adesso per verificare che il mount
+funzioni<00:23:02.210><c> smontiamo</c><00:23:03.250><c> manualmente</c><00:23:04.630><c> la</c><00:23:05.630><c> share</c>
+
+00:23:05.970 --> 00:23:05.980 align:start position:0%
+funzioni smontiamo manualmente la share
+ 
+
+00:23:05.980 --> 00:23:10.919 align:start position:0%
+funzioni smontiamo manualmente la share
+montata<00:23:06.980><c> in</c><00:23:07.100><c> mnt</c><00:23:07.610><c> quindi</c><00:23:08.300><c> ma</c><00:23:08.750><c> un</c>
+
+00:23:10.919 --> 00:23:10.929 align:start position:0%
+montata in mnt quindi ma un
+ 
+
+00:23:10.929 --> 00:23:14.970 align:start position:0%
+montata in mnt quindi ma un
+spazio<00:23:12.160><c> mnt</c><00:23:13.160><c> public</c>
+
+00:23:14.970 --> 00:23:14.980 align:start position:0%
+spazio mnt public
+ 
+
+00:23:14.980 --> 00:23:19.710 align:start position:0%
+spazio mnt public
+fatto<00:23:15.980><c> questo</c><00:23:16.429><c> il</c><00:23:16.670><c> device</c><00:23:17.360><c> ed</c><00:23:17.720><c> easy</c><00:23:18.260><c> perché</c>
+
+00:23:19.710 --> 00:23:19.720 align:start position:0%
+fatto questo il device ed easy perché
+ 
+
+00:23:19.720 --> 00:23:24.490 align:start position:0%
+fatto questo il device ed easy perché
+perché<00:23:20.720><c> sicuramente</c><00:23:21.320><c> mi</c><00:23:22.280><c> sono</c><00:23:23.170><c> me</c><00:23:24.170><c> ne</c><00:23:24.260><c> sono</c>
+
+00:23:24.490 --> 00:23:24.500 align:start position:0%
+perché sicuramente mi sono me ne sono
+ 
+
+00:23:24.500 --> 00:23:26.590 align:start position:0%
+perché sicuramente mi sono me ne sono
+ecco<00:23:24.830><c> sono</c><00:23:25.040><c> uscito</c><00:23:25.370><c> da</c><00:23:25.490><c> ruth</c><00:23:25.640><c> ed</c><00:23:26.030><c> ero</c><00:23:26.420><c> ancora</c>
+
+00:23:26.590 --> 00:23:26.600 align:start position:0%
+ecco sono uscito da ruth ed ero ancora
+ 
+
+00:23:26.600 --> 00:23:28.419 align:start position:0%
+ecco sono uscito da ruth ed ero ancora
+dentro<00:23:27.080><c> col</c><00:23:27.320><c> mio</c><00:23:27.500><c> utente</c><00:23:27.830><c> in</c><00:23:27.920><c> quella</c><00:23:28.130><c> cartella</c>
+
+00:23:28.419 --> 00:23:28.429 align:start position:0%
+dentro col mio utente in quella cartella
+ 
+
+00:23:28.429 --> 00:23:30.330 align:start position:0%
+dentro col mio utente in quella cartella
+ritorna<00:23:29.210><c> nella</c><00:23:29.480><c> mia</c><00:23:29.630><c> home</c>
+
+00:23:30.330 --> 00:23:30.340 align:start position:0%
+ritorna nella mia home
+ 
+
+00:23:30.340 --> 00:23:33.910 align:start position:0%
+ritorna nella mia home
+ritorno<00:23:31.340><c> root</c><00:23:31.520><c> e</c><00:23:32.510><c> abbiamo</c><00:23:32.840><c> visto</c><00:23:32.960><c> un</c><00:23:33.260><c> caso</c><00:23:33.650><c> di</c>
+
+00:23:33.910 --> 00:23:33.920 align:start position:0%
+ritorno root e abbiamo visto un caso di
+ 
+
+00:23:33.920 --> 00:23:38.220 align:start position:0%
+ritorno root e abbiamo visto un caso di
+errore<00:23:34.460><c> è</c><00:23:35.240><c> ridotto</c><00:23:36.020><c> il</c><00:23:36.140><c> comando</c><00:23:36.650><c> o</c><00:23:36.920><c> mount</c>
+
+00:23:38.220 --> 00:23:38.230 align:start position:0%
+errore è ridotto il comando o mount
+ 
+
+00:23:38.230 --> 00:23:40.419 align:start position:0%
+errore è ridotto il comando o mount
+per<00:23:39.230><c> verificare</c><00:23:39.830><c> che</c><00:23:39.950><c> sia</c><00:23:40.160><c> andato</c>
+
+00:23:40.419 --> 00:23:40.429 align:start position:0%
+per verificare che sia andato
+ 
+
+00:23:40.429 --> 00:23:43.419 align:start position:0%
+per verificare che sia andato
+correttamente<00:23:41.330><c> e</c><00:23:41.900><c> faccio</c><00:23:42.620><c> un</c><00:23:42.650><c> df</c><00:23:43.040><c> meno</c><00:23:43.280><c> hack</c>
+
+00:23:43.419 --> 00:23:43.429 align:start position:0%
+correttamente e faccio un df meno hack
+ 
+
+00:23:43.429 --> 00:23:46.380 align:start position:0%
+correttamente e faccio un df meno hack
+non<00:23:43.880><c> ha</c><00:23:44.000><c> dato</c><00:23:44.150><c> errori</c><00:23:44.630><c> non</c><00:23:45.200><c> è</c><00:23:45.320><c> più</c><00:23:45.530><c> lì</c><00:23:45.740><c> stato</c>
+
+00:23:46.380 --> 00:23:46.390 align:start position:0%
+non ha dato errori non è più lì stato
+ 
+
+00:23:46.390 --> 00:23:51.880 align:start position:0%
+non ha dato errori non è più lì stato
+adesso<00:23:47.390><c> voglio</c><00:23:48.370><c> forzare</c><00:23:49.690><c> la</c><00:23:50.690><c> il</c><00:23:51.380><c> mounting</c>
+
+00:23:51.880 --> 00:23:51.890 align:start position:0%
+adesso voglio forzare la il mounting
+ 
+
+00:23:51.890 --> 00:23:54.220 align:start position:0%
+adesso voglio forzare la il mounting
+senza<00:23:52.880><c> dover</c><00:23:53.120><c> fare</c><00:23:53.450><c> il</c><00:23:53.510><c> riavvio</c><00:23:53.809><c> si</c><00:23:54.080><c> fa</c>
+
+00:23:54.220 --> 00:23:54.230 align:start position:0%
+senza dover fare il riavvio si fa
+ 
+
+00:23:54.230 --> 00:23:57.060 align:start position:0%
+senza dover fare il riavvio si fa
+semplicemente<00:23:54.580><c> scrivendo</c><00:23:55.580><c> mount</c><00:23:56.510><c> all</c>
+
+00:23:57.060 --> 00:23:57.070 align:start position:0%
+semplicemente scrivendo mount all
+ 
+
+00:23:57.070 --> 00:24:02.210 align:start position:0%
+semplicemente scrivendo mount all
+pensieri<00:23:58.330><c> mount</c><00:23:59.330><c> meno</c><00:23:59.750><c> a</c>
+
+00:24:02.210 --> 00:24:02.220 align:start position:0%
+ 
+ 
+
+00:24:02.220 --> 00:24:05.690 align:start position:0%
+ 
+df<00:24:02.850><c> di</c><00:24:03.000><c> nuovo</c><00:24:03.240><c> meno</c><00:24:03.510><c> h</c><00:24:03.870><c> e</c><00:24:04.710><c> vediamo</c><00:24:05.190><c> che</c><00:24:05.549><c> la</c>
+
+00:24:05.690 --> 00:24:05.700 align:start position:0%
+df di nuovo meno h e vediamo che la
+ 
+
+00:24:05.700 --> 00:24:09.020 align:start position:0%
+df di nuovo meno h e vediamo che la
+sintassi<00:24:06.030><c> correte</c><00:24:06.840><c> mi</c><00:24:07.049><c> ha</c><00:24:07.080><c> rimontato</c><00:24:07.760><c> mnt</c><00:24:08.760><c> in</c>
+
+00:24:09.020 --> 00:24:09.030 align:start position:0%
+sintassi correte mi ha rimontato mnt in
+ 
+
+00:24:09.030 --> 00:24:10.539 align:start position:0%
+sintassi correte mi ha rimontato mnt in
+public
+
+00:24:10.539 --> 00:24:10.549 align:start position:0%
+public
+ 
+
+00:24:10.549 --> 00:24:12.549 align:start position:0%
+public
+bene
+
+00:24:12.549 --> 00:24:12.559 align:start position:0%
+bene
+ 
+
+00:24:12.559 --> 00:24:15.049 align:start position:0%
+bene
+tirando<00:24:13.559><c> le</c><00:24:13.620><c> somme</c><00:24:13.740><c> quindi</c><00:24:14.220><c> anche</c><00:24:14.730><c> con</c><00:24:14.880><c> una</c>
+
+00:24:15.049 --> 00:24:15.059 align:start position:0%
+tirando le somme quindi anche con una
+ 
+
+00:24:15.059 --> 00:24:19.960 align:start position:0%
+tirando le somme quindi anche con una
+semplice<00:24:15.270><c> macchina</c><00:24:15.750><c> posso</c><00:24:16.380><c> giocare</c><00:24:17.039><c> con</c><00:24:17.640><c> le</c>
+
+00:24:19.960 --> 00:24:19.970 align:start position:0%
+semplice macchina posso giocare con le
+ 
+
+00:24:19.970 --> 00:24:23.240 align:start position:0%
+semplice macchina posso giocare con le
+impostazioni<00:24:20.970><c> di</c><00:24:21.690><c> rete</c>
+
+00:24:23.240 --> 00:24:23.250 align:start position:0%
+impostazioni di rete
+ 
+
+00:24:23.250 --> 00:24:25.480 align:start position:0%
+impostazioni di rete
+vi<00:24:23.340><c> lascio</c><00:24:23.760><c> a</c><00:24:23.789><c> questi</c><00:24:24.419><c> due</c><00:24:24.690><c> video</c><00:24:24.929><c> che</c>
+
+00:24:25.480 --> 00:24:25.490 align:start position:0%
+vi lascio a questi due video che
+ 
+
+00:24:25.490 --> 00:24:27.890 align:start position:0%
+vi lascio a questi due video che
+compariranno<00:24:26.490><c> sopra</c><00:24:26.909><c> le</c><00:24:27.030><c> mie</c><00:24:27.179><c> dita</c><00:24:27.299><c> tra</c><00:24:27.510><c> poco</c>
+
+00:24:27.890 --> 00:24:27.900 align:start position:0%
+compariranno sopra le mie dita tra poco
+ 
+
+00:24:27.900 --> 00:24:31.310 align:start position:0%
+compariranno sopra le mie dita tra poco
+e<00:24:28.559><c> vi</c><00:24:29.400><c> ringrazio</c><00:24:29.549><c> per</c><00:24:30.030><c> avermi</c><00:24:30.360><c> seguito</c><00:24:30.570><c> fino</c><00:24:31.289><c> a</c>
+
+00:24:31.310 --> 00:24:31.320 align:start position:0%
+e vi ringrazio per avermi seguito fino a
+ 
+
+00:24:31.320 --> 00:24:35.780 align:start position:0%
+e vi ringrazio per avermi seguito fino a
+qui<00:24:31.590><c> ci</c><00:24:32.490><c> vediamo</c><00:24:32.789><c> giovedì</c><00:24:33.390><c> prossimo</c>
+

@@ -1,0 +1,912 @@
+WEBVTT
+Kind: captions
+Language: it
+
+00:00:01.350 --> 00:00:04.230 align:start position:0%
+ 
+Benvenuto<00:00:02.350><c> o</c><00:00:02.379><c> Benvenuta</c><00:00:02.649><c> Io</c><00:00:03.399><c> sono</c><00:00:03.729><c> Luca</c><00:00:04.120><c> e</c>
+
+00:00:04.230 --> 00:00:04.240 align:start position:0%
+Benvenuto o Benvenuta Io sono Luca e
+ 
+
+00:00:04.240 --> 00:00:06.570 align:start position:0%
+Benvenuto o Benvenuta Io sono Luca e
+questo<00:00:04.600><c> è</c><00:00:04.629><c> il</c><00:00:04.690><c> canale</c><00:00:05.049><c> YouTube</c><00:00:05.250><c> Luca</c><00:00:06.250><c> sacchi</c>
+
+00:00:06.570 --> 00:00:06.580 align:start position:0%
+questo è il canale YouTube Luca sacchi
+ 
+
+00:00:06.580 --> 00:00:10.890 align:start position:0%
+questo è il canale YouTube Luca sacchi
+netta<00:00:07.080><c> oggi</c><00:00:08.080><c> parliamo</c><00:00:08.679><c> di</c><00:00:08.980><c> Come</c><00:00:09.910><c> integrare</c>
+
+00:00:10.890 --> 00:00:10.900 align:start position:0%
+netta oggi parliamo di Come integrare
+ 
+
+00:00:10.900 --> 00:00:14.299 align:start position:0%
+netta oggi parliamo di Come integrare
+meglio<00:00:11.139><c> Debian</c><00:00:11.860><c> 11</c><00:00:12.219><c> con</c><00:00:12.969><c> nostro</c><00:00:13.360><c> proxmox</c>
+
+00:00:14.299 --> 00:00:14.309 align:start position:0%
+meglio Debian 11 con nostro proxmox
+ 
+
+00:00:14.309 --> 00:00:17.359 align:start position:0%
+meglio Debian 11 con nostro proxmox
+andiamo<00:00:15.309><c> a</c><00:00:15.429><c> vedere</c>
+
+00:00:17.359 --> 00:00:17.369 align:start position:0%
+andiamo a vedere
+ 
+
+00:00:17.369 --> 00:00:22.050 align:start position:0%
+andiamo a vedere
+la<00:00:18.369><c> installazione</c><00:00:19.210><c> del</c><00:00:19.960><c> guest</c><00:00:20.410><c> Agent</c><00:00:21.070><c> quindi</c>
+
+00:00:22.050 --> 00:00:22.060 align:start position:0%
+la installazione del guest Agent quindi
+ 
+
+00:00:22.060 --> 00:00:24.929 align:start position:0%
+la installazione del guest Agent quindi
+devi<00:00:22.689><c> strumenti</c><00:00:23.109><c> che</c><00:00:23.199><c> permettono</c><00:00:23.500><c> proxmox</c><00:00:24.189><c> di</c>
+
+00:00:24.929 --> 00:00:24.939 align:start position:0%
+devi strumenti che permettono proxmox di
+ 
+
+00:00:24.939 --> 00:00:27.509 align:start position:0%
+devi strumenti che permettono proxmox di
+gestire<00:00:25.390><c> meglio</c><00:00:25.570><c> la</c><00:00:26.199><c> macchina</c><00:00:26.519><c> virtualizzata</c>
+
+00:00:27.509 --> 00:00:27.519 align:start position:0%
+gestire meglio la macchina virtualizzata
+ 
+
+00:00:27.519 --> 00:00:29.720 align:start position:0%
+gestire meglio la macchina virtualizzata
+colleghiamo<00:00:28.330><c> c'è</c><00:00:28.480><c> la</c><00:00:28.599><c> console</c>
+
+00:00:29.720 --> 00:00:29.730 align:start position:0%
+colleghiamo c'è la console
+ 
+
+00:00:29.730 --> 00:00:37.550 align:start position:0%
+colleghiamo c'è la console
+ingrandiamo<00:00:31.080><c> entriamo</c><00:00:32.080><c> come</c><00:00:32.410><c> root</c>
+
+00:00:37.550 --> 00:00:37.560 align:start position:0%
+ 
+ 
+
+00:00:37.560 --> 00:00:39.390 align:start position:0%
+ 
+Allora<00:00:38.560><c> prima</c><00:00:38.800><c> di</c><00:00:38.890><c> tutto</c><00:00:38.950><c> Dobbiamo</c>
+
+00:00:39.390 --> 00:00:39.400 align:start position:0%
+Allora prima di tutto Dobbiamo
+ 
+
+00:00:39.400 --> 00:00:41.670 align:start position:0%
+Allora prima di tutto Dobbiamo
+verificare<00:00:39.760><c> se</c><00:00:40.420><c> si</c><00:00:40.570><c> è</c><00:00:40.660><c> installato</c><00:00:41.440><c> il</c>
+
+00:00:41.670 --> 00:00:41.680 align:start position:0%
+verificare se si è installato il
+ 
+
+00:00:41.680 --> 00:00:45.710 align:start position:0%
+verificare se si è installato il
+pacchetto<00:00:42.540><c> cura</c><00:00:43.540><c> eremo</c><00:00:43.630><c> guest</c><00:00:44.380><c> Agent</c><00:00:44.740><c> Quindi</c>
+
+00:00:45.710 --> 00:00:45.720 align:start position:0%
+pacchetto cura eremo guest Agent Quindi
+ 
+
+00:00:45.720 --> 00:00:48.200 align:start position:0%
+pacchetto cura eremo guest Agent Quindi
+facciamo<00:00:46.720><c> un</c><00:00:46.870><c> bel</c>
+
+00:00:48.200 --> 00:00:48.210 align:start position:0%
+facciamo un bel
+ 
+
+00:00:48.210 --> 00:00:59.570 align:start position:0%
+facciamo un bel
+dpkg<00:00:49.210><c> meno</c><00:00:50.080><c> l</c><00:00:50.800><c> minuscolo</c><00:00:51.790><c> b</c><00:00:52.720><c> rap</c>
+
+00:00:59.570 --> 00:00:59.580 align:start position:0%
+ 
+ 
+
+00:00:59.580 --> 00:01:01.340 align:start position:0%
+ 
+gente
+
+00:01:01.340 --> 00:01:01.350 align:start position:0%
+gente
+ 
+
+00:01:01.350 --> 00:01:06.820 align:start position:0%
+gente
+non<00:01:02.790><c> andiamo</c><00:01:03.790><c> lì</c>
+
+00:01:06.820 --> 00:01:06.830 align:start position:0%
+ 
+ 
+
+00:01:06.830 --> 00:01:08.030 align:start position:0%
+ 
+[Musica]
+
+00:01:08.030 --> 00:01:08.040 align:start position:0%
+[Musica]
+ 
+
+00:01:08.040 --> 00:01:13.820 align:start position:0%
+[Musica]
+trattino<00:01:09.040><c> direste</c><00:01:10.110><c> agente</c>
+
+00:01:13.820 --> 00:01:13.830 align:start position:0%
+ 
+ 
+
+00:01:13.830 --> 00:01:18.270 align:start position:0%
+ 
+non<00:01:14.830><c> funziona</c><00:01:15.780><c> ma</c><00:01:16.780><c> io</c><00:01:16.990><c> so</c><00:01:17.200><c> il</c><00:01:17.290><c> perché</c><00:01:17.620><c> non</c>
+
+00:01:18.270 --> 00:01:18.280 align:start position:0%
+non funziona ma io so il perché non
+ 
+
+00:01:18.280 --> 00:01:21.320 align:start position:0%
+non funziona ma io so il perché non
+riesci<00:01:18.700><c> a</c><00:01:18.760><c> trovare</c><00:01:19.330><c> i</c><00:01:19.510><c> pacchetti</c><00:01:20.040><c> perché</c>
+
+00:01:21.320 --> 00:01:21.330 align:start position:0%
+riesci a trovare i pacchetti perché
+ 
+
+00:01:21.330 --> 00:01:23.030 align:start position:0%
+riesci a trovare i pacchetti perché
+Debian
+
+00:01:23.030 --> 00:01:23.040 align:start position:0%
+Debian
+ 
+
+00:01:23.040 --> 00:01:26.550 align:start position:0%
+Debian
+simpaticone<00:01:24.060><c> quando</c><00:01:25.060><c> si</c><00:01:25.210><c> installa</c><00:01:25.750><c> da</c><00:01:26.050><c> cd</c><00:01:26.380><c> rom</c>
+
+00:01:26.550 --> 00:01:26.560 align:start position:0%
+simpaticone quando si installa da cd rom
+ 
+
+00:01:26.560 --> 00:01:28.160 align:start position:0%
+simpaticone quando si installa da cd rom
+come<00:01:26.950><c> abbiamo</c><00:01:27.190><c> installato</c><00:01:27.400><c> qui</c><00:01:27.730><c> dalla</c><00:01:28.000><c> Iso</c>
+
+00:01:28.160 --> 00:01:28.170 align:start position:0%
+come abbiamo installato qui dalla Iso
+ 
+
+00:01:28.170 --> 00:01:32.610 align:start position:0%
+come abbiamo installato qui dalla Iso
+non<00:01:29.170><c> ha</c><00:01:29.290><c> i</c><00:01:30.100><c> repository</c><00:01:30.790><c> impostati</c><00:01:31.720><c> andiamo</c><00:01:32.320><c> in</c>
+
+00:01:32.610 --> 00:01:32.620 align:start position:0%
+non ha i repository impostati andiamo in
+ 
+
+00:01:32.620 --> 00:01:35.090 align:start position:0%
+non ha i repository impostati andiamo in
+etici<00:01:33.280><c> abiti</c>
+
+00:01:35.090 --> 00:01:35.100 align:start position:0%
+etici abiti
+ 
+
+00:01:35.100 --> 00:01:40.740 align:start position:0%
+etici abiti
+e<00:01:36.100><c> proviamo</c><00:01:36.880><c> il</c><00:01:37.000><c> file</c><00:01:37.659><c> sul</c><00:01:38.320><c> Swift</c><00:01:38.970><c> decroly</c><00:01:39.970><c> via</c>
+
+00:01:40.740 --> 00:01:40.750 align:start position:0%
+e proviamo il file sul Swift decroly via
+ 
+
+00:01:40.750 --> 00:01:44.219 align:start position:0%
+e proviamo il file sul Swift decroly via
+hai<00:01:40.990><c> Source</c><00:01:41.650><c> list</c><00:01:42.300><c> Ops</c><00:01:43.300><c> L'ho</c><00:01:43.510><c> aperto</c><00:01:43.840><c> con</c><00:01:43.960><c> via</c>
+
+00:01:44.219 --> 00:01:44.229 align:start position:0%
+hai Source list Ops L'ho aperto con via
+ 
+
+00:01:44.229 --> 00:01:46.860 align:start position:0%
+hai Source list Ops L'ho aperto con via
+hai<00:01:44.409><c> non</c><00:01:44.590><c> vi</c><00:01:44.680><c> spaventate</c><00:01:45.280><c> è</c><00:01:46.090><c> uguale</c><00:01:46.450><c> al</c><00:01:46.540><c> nano</c>
+
+00:01:46.860 --> 00:01:46.870 align:start position:0%
+hai non vi spaventate è uguale al nano
+ 
+
+00:01:46.870 --> 00:01:48.810 align:start position:0%
+hai non vi spaventate è uguale al nano
+Anzi<00:01:47.260><c> visto</c><00:01:47.470><c> che</c><00:01:47.530><c> non</c><00:01:48.010><c> abbiamo</c><00:01:48.100><c> fatto</c><00:01:48.400><c> tutti</c><00:01:48.760><c> i</c>
+
+00:01:48.810 --> 00:01:48.820 align:start position:0%
+Anzi visto che non abbiamo fatto tutti i
+ 
+
+00:01:48.820 --> 00:01:52.910 align:start position:0%
+Anzi visto che non abbiamo fatto tutti i
+video<00:01:49.090><c> con</c><00:01:49.270><c> Nano</c><00:01:49.630><c> esco</c>
+
+00:01:52.910 --> 00:01:52.920 align:start position:0%
+ 
+ 
+
+00:01:52.920 --> 00:01:56.820 align:start position:0%
+ 
+esclamativo<00:01:53.920><c> e</c><00:01:54.520><c> portiamo</c><00:01:55.270><c> a</c><00:01:55.900><c> tutto</c><00:01:56.320><c> schermo</c>
+
+00:01:56.820 --> 00:01:56.830 align:start position:0%
+esclamativo e portiamo a tutto schermo
+ 
+
+00:01:56.830 --> 00:01:59.850 align:start position:0%
+esclamativo e portiamo a tutto schermo
+Perché<00:01:57.299><c> il</c><00:01:58.299><c> nostro</c><00:01:58.540><c> Bravo</c><00:01:59.110><c> proprio</c><00:01:59.440><c> Spa</c>
+
+00:01:59.850 --> 00:01:59.860 align:start position:0%
+Perché il nostro Bravo proprio Spa
+ 
+
+00:01:59.860 --> 00:02:02.149 align:start position:0%
+Perché il nostro Bravo proprio Spa
+intercettato<00:02:00.610><c> l'est</c>
+
+00:02:02.149 --> 00:02:02.159 align:start position:0%
+intercettato l'est
+ 
+
+00:02:02.159 --> 00:02:04.550 align:start position:0%
+intercettato l'est
+suonano
+
+00:02:04.550 --> 00:02:04.560 align:start position:0%
+suonano
+ 
+
+00:02:04.560 --> 00:02:07.649 align:start position:0%
+suonano
+sursee<00:02:05.560><c> sta</c><00:02:06.010><c> perfetto</c><00:02:06.820><c> vediamo</c><00:02:07.270><c> che</c><00:02:07.540><c> sono</c>
+
+00:02:07.649 --> 00:02:07.659 align:start position:0%
+sursee sta perfetto vediamo che sono
+ 
+
+00:02:07.659 --> 00:02:09.419 align:start position:0%
+sursee sta perfetto vediamo che sono
+tanto<00:02:07.960><c> il</c><00:02:08.049><c> cd-rom</c><00:02:08.379><c> attivo</c><00:02:08.830><c> come</c><00:02:09.039><c> fonte</c>
+
+00:02:09.419 --> 00:02:09.429 align:start position:0%
+tanto il cd-rom attivo come fonte
+ 
+
+00:02:09.429 --> 00:02:13.110 align:start position:0%
+tanto il cd-rom attivo come fonte
+l'installazione<00:02:10.260><c> perfetto</c><00:02:11.640><c> lo</c><00:02:12.640><c> togliamo</c><00:02:12.880><c> di</c>
+
+00:02:13.110 --> 00:02:13.120 align:start position:0%
+l'installazione perfetto lo togliamo di
+ 
+
+00:02:13.120 --> 00:02:18.590 align:start position:0%
+l'installazione perfetto lo togliamo di
+mezzo<00:02:13.350><c> abilitiamo</c><00:02:14.350><c> gli</c><00:02:15.040><c> aggiornamenti</c>
+
+00:02:18.590 --> 00:02:18.600 align:start position:0%
+ 
+ 
+
+00:02:18.600 --> 00:02:26.150 align:start position:0%
+ 
+abilitiamo<00:02:19.950><c> anche</c><00:02:21.450><c> gli</c><00:02:22.450><c> update</c>
+
+00:02:26.150 --> 00:02:26.160 align:start position:0%
+ 
+ 
+
+00:02:26.160 --> 00:02:31.040 align:start position:0%
+ 
+ci<00:02:27.160><c> facciamo</c><00:02:27.760><c> un</c>
+
+00:02:31.040 --> 00:02:31.050 align:start position:0%
+ 
+ 
+
+00:02:31.050 --> 00:02:35.930 align:start position:0%
+ 
+control<00:02:32.050><c> K</c><00:02:32.830><c> per</c><00:02:33.400><c> copiare</c><00:02:33.970><c> questo</c><00:02:34.540><c> un</c><00:02:34.810><c> control</c>
+
+00:02:35.930 --> 00:02:35.940 align:start position:0%
+control K per copiare questo un control
+ 
+
+00:02:35.940 --> 00:02:39.210 align:start position:0%
+control K per copiare questo un control
+per<00:02:36.940><c> rimetterlo</c><00:02:37.480><c> a</c><00:02:37.540><c> posto</c><00:02:37.690><c> per</c><00:02:38.590><c> inserire</c><00:02:38.800><c> un</c>
+
+00:02:39.210 --> 00:02:39.220 align:start position:0%
+per rimetterlo a posto per inserire un
+ 
+
+00:02:39.220 --> 00:02:41.690 align:start position:0%
+per rimetterlo a posto per inserire un
+ultimo<00:02:40.050><c> e</c>
+
+00:02:41.690 --> 00:02:41.700 align:start position:0%
+ultimo e
+ 
+
+00:02:41.700 --> 00:02:45.150 align:start position:0%
+ultimo e
+togliamo<00:02:42.700><c> dei</c><00:02:43.360><c> lasciamo</c><00:02:43.930><c> soltanto</c><00:02:44.500><c> bonsai</c>
+
+00:02:45.150 --> 00:02:45.160 align:start position:0%
+togliamo dei lasciamo soltanto bonsai
+ 
+
+00:02:45.160 --> 00:02:47.850 align:start position:0%
+togliamo dei lasciamo soltanto bonsai
+Mame<00:02:45.670><c> fatto</c><00:02:46.540><c> queste</c><00:02:46.959><c> piccole</c><00:02:47.440><c> configurazioni</c>
+
+00:02:47.850 --> 00:02:47.860 align:start position:0%
+Mame fatto queste piccole configurazioni
+ 
+
+00:02:47.860 --> 00:02:50.040 align:start position:0%
+Mame fatto queste piccole configurazioni
+del<00:02:48.310><c> cambio</c><00:02:48.610><c> di</c><00:02:48.700><c> configurazione</c><00:02:49.690><c> a</c><00:02:49.750><c> questo</c>
+
+00:02:50.040 --> 00:02:50.050 align:start position:0%
+del cambio di configurazione a questo
+ 
+
+00:02:50.050 --> 00:02:54.350 align:start position:0%
+del cambio di configurazione a questo
+file<00:02:50.580><c> Salviamo</c><00:02:51.580><c> porno</c><00:02:52.180><c> control</c><00:02:52.959><c> x</c><00:02:53.230><c> o</c><00:02:53.770><c> fermiamo</c>
+
+00:02:54.350 --> 00:02:54.360 align:start position:0%
+file Salviamo porno control x o fermiamo
+ 
+
+00:02:54.360 --> 00:02:57.030 align:start position:0%
+file Salviamo porno control x o fermiamo
+diamo<00:02:55.360><c> invio</c><00:02:55.599><c> Abbiamo</c><00:02:56.410><c> rimesso</c><00:02:56.890><c> a</c><00:02:56.920><c> posto</c>
+
+00:02:57.030 --> 00:02:57.040 align:start position:0%
+diamo invio Abbiamo rimesso a posto
+ 
+
+00:02:57.040 --> 00:03:00.089 align:start position:0%
+diamo invio Abbiamo rimesso a posto
+questo<00:02:57.640><c> ora</c><00:02:58.300><c> con</c><00:02:58.690><c> il</c><00:02:59.050><c> magico</c><00:02:59.440><c> comando</c>
+
+00:03:00.089 --> 00:03:00.099 align:start position:0%
+questo ora con il magico comando
+ 
+
+00:03:00.099 --> 00:03:01.910 align:start position:0%
+questo ora con il magico comando
+apt-update
+
+00:03:01.910 --> 00:03:01.920 align:start position:0%
+apt-update
+ 
+
+00:03:01.920 --> 00:03:04.760 align:start position:0%
+apt-update
+andiamo<00:03:02.920><c> a</c><00:03:03.069><c> contattare</c><00:03:04.000><c> i</c>
+
+00:03:04.760 --> 00:03:04.770 align:start position:0%
+andiamo a contattare i
+ 
+
+00:03:04.770 --> 00:03:09.740 align:start position:0%
+andiamo a contattare i
+repository<00:03:05.770><c> dei</c><00:03:06.040><c> pacchetti</c><00:03:06.420><c> e</c><00:03:07.420><c> poi</c><00:03:07.840><c> possiamo</c>
+
+00:03:09.740 --> 00:03:09.750 align:start position:0%
+repository dei pacchetti e poi possiamo
+ 
+
+00:03:09.750 --> 00:03:12.260 align:start position:0%
+repository dei pacchetti e poi possiamo
+installare<00:03:10.750><c> il</c><00:03:11.110><c> nostro</c>
+
+00:03:12.260 --> 00:03:12.270 align:start position:0%
+installare il nostro
+ 
+
+00:03:12.270 --> 00:03:17.940 align:start position:0%
+installare il nostro
+agente
+
+00:03:17.940 --> 00:03:17.950 align:start position:0%
+ 
+ 
+
+00:03:17.950 --> 00:03:20.270 align:start position:0%
+ 
+che<00:03:18.610><c> viene</c><00:03:18.880><c> scaricato</c>
+
+00:03:20.270 --> 00:03:20.280 align:start position:0%
+che viene scaricato
+ 
+
+00:03:20.280 --> 00:03:25.350 align:start position:0%
+che viene scaricato
+problema<00:03:21.280><c> la</c><00:03:22.120><c> macchina</c><00:03:22.380><c> era</c><00:03:23.380><c> partita</c><00:03:24.010><c> e</c><00:03:24.730><c> il</c>
+
+00:03:25.350 --> 00:03:25.360 align:start position:0%
+problema la macchina era partita e il
+ 
+
+00:03:25.360 --> 00:03:29.940 align:start position:0%
+problema la macchina era partita e il
+sistema<00:03:26.400><c> box</c><00:03:27.599><c> Quando</c><00:03:28.599><c> ho</c><00:03:29.140><c> impostato</c><00:03:29.500><c> la</c>
+
+00:03:29.940 --> 00:03:29.950 align:start position:0%
+sistema box Quando ho impostato la
+ 
+
+00:03:29.950 --> 00:03:32.160 align:start position:0%
+sistema box Quando ho impostato la
+macchina<00:03:30.340><c> virtuale</c><00:03:30.520><c> non</c><00:03:31.510><c> l'ho</c><00:03:31.840><c> configurato</c>
+
+00:03:32.160 --> 00:03:32.170 align:start position:0%
+macchina virtuale non l'ho configurato
+ 
+
+00:03:32.170 --> 00:03:35.490 align:start position:0%
+macchina virtuale non l'ho configurato
+opportunamente<00:03:33.120><c> non</c><00:03:34.120><c> ho</c><00:03:34.239><c> abilitato</c><00:03:34.840><c> a</c>
+
+00:03:35.490 --> 00:03:35.500 align:start position:0%
+opportunamente non ho abilitato a
+ 
+
+00:03:35.500 --> 00:03:39.180 align:start position:0%
+opportunamente non ho abilitato a
+livello<00:03:35.920><c> di</c><00:03:36.040><c> proxmox</c><00:03:36.550><c> la</c><00:03:37.000><c> connessione</c><00:03:37.840><c> tra</c><00:03:38.650><c> il</c>
+
+00:03:39.180 --> 00:03:39.190 align:start position:0%
+livello di proxmox la connessione tra il
+ 
+
+00:03:39.190 --> 00:03:41.540 align:start position:0%
+livello di proxmox la connessione tra il
+pre<00:03:39.370><c> virtualizzatore</c><00:03:40.300><c> e</c><00:03:40.360><c> la</c><00:03:40.480><c> macchina</c><00:03:40.840><c> Grazie</c>
+
+00:03:41.540 --> 00:03:41.550 align:start position:0%
+pre virtualizzatore e la macchina Grazie
+ 
+
+00:03:41.550 --> 00:03:45.059 align:start position:0%
+pre virtualizzatore e la macchina Grazie
+attraverso<00:03:42.550><c> iqm</c><00:03:43.360><c> Agent</c><00:03:44.290><c> come</c><00:03:44.560><c> canale</c><00:03:45.010><c> di</c>
+
+00:03:45.059 --> 00:03:45.069 align:start position:0%
+attraverso iqm Agent come canale di
+ 
+
+00:03:45.069 --> 00:03:47.760 align:start position:0%
+attraverso iqm Agent come canale di
+comunicazione<00:03:45.629><c> Come</c><00:03:46.629><c> si</c><00:03:46.750><c> fa</c><00:03:46.930><c> allora</c><00:03:47.500><c> si</c>
+
+00:03:47.760 --> 00:03:47.770 align:start position:0%
+comunicazione Come si fa allora si
+ 
+
+00:03:47.770 --> 00:03:50.240 align:start position:0%
+comunicazione Come si fa allora si
+spegne<00:03:48.160><c> la</c><00:03:48.280><c> macchina</c>
+
+00:03:50.240 --> 00:03:50.250 align:start position:0%
+spegne la macchina
+ 
+
+00:03:50.250 --> 00:03:54.869 align:start position:0%
+spegne la macchina
+un<00:03:51.250><c> solo</c><00:03:51.580><c> due</c><00:03:52.230><c> riesce</c>
+
+00:03:54.869 --> 00:03:54.879 align:start position:0%
+un solo due riesce
+ 
+
+00:03:54.879 --> 00:03:58.170 align:start position:0%
+un solo due riesce
+quando<00:03:55.840><c> si</c><00:03:56.140><c> sarà</c><00:03:56.379><c> spenta</c><00:03:56.970><c> benissimo</c><00:03:57.970><c> già</c>
+
+00:03:58.170 --> 00:03:58.180 align:start position:0%
+quando si sarà spenta benissimo già
+ 
+
+00:03:58.180 --> 00:04:01.699 align:start position:0%
+quando si sarà spenta benissimo già
+spenta<00:03:58.690><c> Andiamo</c><00:03:59.110><c> su</c><00:03:59.290><c> Option</c><00:03:59.830><c> qui</c><00:04:00.340><c> troviamo</c>
+
+00:04:01.699 --> 00:04:01.709 align:start position:0%
+spenta Andiamo su Option qui troviamo
+ 
+
+00:04:01.709 --> 00:04:05.309 align:start position:0%
+spenta Andiamo su Option qui troviamo
+questa<00:04:02.709><c> voce</c><00:04:03.160><c> e</c><00:04:03.629><c> disabilitata</c><00:04:04.629><c> normalmente</c>
+
+00:04:05.309 --> 00:04:05.319 align:start position:0%
+questa voce e disabilitata normalmente
+ 
+
+00:04:05.319 --> 00:04:07.199 align:start position:0%
+questa voce e disabilitata normalmente
+c'è<00:04:05.500><c> scritto</c><00:04:05.800><c> disable</c><00:04:06.400><c> e</c><00:04:06.430><c> basta</c><00:04:06.849><c> Io</c><00:04:06.970><c> ho</c><00:04:07.000><c> fatto</c>
+
+00:04:07.199 --> 00:04:07.209 align:start position:0%
+c'è scritto disable e basta Io ho fatto
+ 
+
+00:04:07.209 --> 00:04:10.619 align:start position:0%
+c'è scritto disable e basta Io ho fatto
+un<00:04:07.300><c> po'</c><00:04:07.390><c> di</c><00:04:07.480><c> esperimenti</c><00:04:08.069><c> prima</c><00:04:09.069><c> di</c><00:04:09.540><c> te</c><00:04:10.540><c> quindi</c>
+
+00:04:10.619 --> 00:04:10.629 align:start position:0%
+un po' di esperimenti prima di te quindi
+ 
+
+00:04:10.629 --> 00:04:12.660 align:start position:0%
+un po' di esperimenti prima di te quindi
+prima<00:04:11.019><c> di</c><00:04:11.290><c> far</c><00:04:11.500><c> registrare</c><00:04:11.590><c> il</c><00:04:12.010><c> video</c><00:04:12.160><c> e</c>
+
+00:04:12.660 --> 00:04:12.670 align:start position:0%
+prima di far registrare il video e
+ 
+
+00:04:12.670 --> 00:04:15.449 align:start position:0%
+prima di far registrare il video e
+quindi<00:04:12.849><c> qui</c><00:04:13.709><c> trovate</c><00:04:14.709><c> che</c><00:04:14.860><c> ci</c><00:04:14.950><c> sono</c><00:04:15.160><c> alcune</c>
+
+00:04:15.449 --> 00:04:15.459 align:start position:0%
+quindi qui trovate che ci sono alcune
+ 
+
+00:04:15.459 --> 00:04:17.309 align:start position:0%
+quindi qui trovate che ci sono alcune
+scritte<00:04:15.910><c> ignorante</c><00:04:16.509><c> le</c><00:04:16.659><c> per</c><00:04:16.809><c> il</c><00:04:16.870><c> momento</c>
+
+00:04:17.309 --> 00:04:17.319 align:start position:0%
+scritte ignorante le per il momento
+ 
+
+00:04:17.319 --> 00:04:19.759 align:start position:0%
+scritte ignorante le per il momento
+dovete<00:04:17.620><c> cliccare</c><00:04:17.739><c> su</c>
+
+00:04:19.759 --> 00:04:19.769 align:start position:0%
+dovete cliccare su
+ 
+
+00:04:19.769 --> 00:04:22.890 align:start position:0%
+dovete cliccare su
+anche<00:04:20.769><c> il</c><00:04:20.859><c> secondo</c><00:04:21.159><c> sbaffo</c><00:04:21.849><c> per</c><00:04:22.539><c> quando</c>
+
+00:04:22.890 --> 00:04:22.900 align:start position:0%
+anche il secondo sbaffo per quando
+ 
+
+00:04:22.900 --> 00:04:24.929 align:start position:0%
+anche il secondo sbaffo per quando
+spostate<00:04:23.469><c> Eventualmente</c><00:04:23.979><c> le</c><00:04:24.309><c> macchine</c><00:04:24.669><c> da</c><00:04:24.819><c> un</c>
+
+00:04:24.929 --> 00:04:24.939 align:start position:0%
+spostate Eventualmente le macchine da un
+ 
+
+00:04:24.939 --> 00:04:26.299 align:start position:0%
+spostate Eventualmente le macchine da un
+nodo<00:04:25.089><c> all'altro</c>
+
+00:04:26.299 --> 00:04:26.309 align:start position:0%
+nodo all'altro
+ 
+
+00:04:26.309 --> 00:04:30.510 align:start position:0%
+nodo all'altro
+è<00:04:27.309><c> una</c><00:04:27.580><c> volta</c><00:04:27.939><c> che</c><00:04:28.029><c> è</c><00:04:28.210><c> abilitato</c><00:04:28.529><c> il</c><00:04:29.529><c> sistema</c>
+
+00:04:30.510 --> 00:04:30.520 align:start position:0%
+è una volta che è abilitato il sistema
+ 
+
+00:04:30.520 --> 00:04:31.969 align:start position:0%
+è una volta che è abilitato il sistema
+di
+
+00:04:31.969 --> 00:04:31.979 align:start position:0%
+di
+ 
+
+00:04:31.979 --> 00:04:37.249 align:start position:0%
+di
+comunicazione<00:04:32.979><c> abbiamo</c><00:04:33.759><c> di</c><00:04:34.089><c> nuovo</c>
+
+00:04:37.249 --> 00:04:37.259 align:start position:0%
+ 
+ 
+
+00:04:37.259 --> 00:04:39.980 align:start position:0%
+ 
+nel<00:04:38.259><c> summary</c>
+
+00:04:39.980 --> 00:04:39.990 align:start position:0%
+nel summary
+ 
+
+00:04:39.990 --> 00:04:44.129 align:start position:0%
+nel summary
+dove<00:04:41.069><c> dice</c><00:04:42.069><c> guest</c><00:04:42.699><c> Agent</c><00:04:42.879><c> not</c><00:04:43.389><c> running</c><00:04:43.449><c> troppo</c>
+
+00:04:44.129 --> 00:04:44.139 align:start position:0%
+dove dice guest Agent not running troppo
+ 
+
+00:04:44.139 --> 00:04:46.860 align:start position:0%
+dove dice guest Agent not running troppo
+Kiss<00:04:44.469><c> tanti</c><00:04:44.770><c> al</c><00:04:45.039><c> termine</c><00:04:45.400><c> del</c><00:04:45.550><c> Boot</c><00:04:45.849><c> vedremo</c><00:04:46.629><c> i</c>
+
+00:04:46.860 --> 00:04:46.870 align:start position:0%
+Kiss tanti al termine del Boot vedremo i
+ 
+
+00:04:46.870 --> 00:04:50.040 align:start position:0%
+Kiss tanti al termine del Boot vedremo i
+dati<00:04:47.430><c> visivi</c><00:04:48.430><c> della</c><00:04:48.939><c> macchina</c><00:04:49.449><c> e</c><00:04:49.539><c> questo</c><00:04:49.900><c> ci</c>
+
+00:04:50.040 --> 00:04:50.050 align:start position:0%
+dati visivi della macchina e questo ci
+ 
+
+00:04:50.050 --> 00:04:51.869 align:start position:0%
+dati visivi della macchina e questo ci
+garantirà<00:04:50.680><c> il</c><00:04:50.889><c> fatto</c><00:04:51.339><c> di</c><00:04:51.430><c> una</c><00:04:51.550><c> buona</c>
+
+00:04:51.869 --> 00:04:51.879 align:start position:0%
+garantirà il fatto di una buona
+ 
+
+00:04:51.879 --> 00:04:54.269 align:start position:0%
+garantirà il fatto di una buona
+comunicazione<00:04:52.120><c> tra</c><00:04:52.960><c> il</c><00:04:53.229><c> proemio</c><00:04:53.529><c> guest</c><00:04:54.009><c> Agent</c>
+
+00:04:54.269 --> 00:04:54.279 align:start position:0%
+comunicazione tra il proemio guest Agent
+ 
+
+00:04:54.279 --> 00:04:57.140 align:start position:0%
+comunicazione tra il proemio guest Agent
+è<00:04:55.199><c> il</c>
+
+00:04:57.140 --> 00:04:57.150 align:start position:0%
+è il
+ 
+
+00:04:57.150 --> 00:05:00.629 align:start position:0%
+è il
+hypervisor<00:04:58.469><c> perfetto</c><00:04:59.469><c> metto</c><00:04:59.740><c> questo</c><00:05:00.189><c> se</c>
+
+00:05:00.629 --> 00:05:00.639 align:start position:0%
+hypervisor perfetto metto questo se
+ 
+
+00:05:00.639 --> 00:05:02.579 align:start position:0%
+hypervisor perfetto metto questo se
+vogliamo<00:05:01.029><c> approfondire</c><00:05:01.389><c> la</c><00:05:01.900><c> conoscenza</c><00:05:02.259><c> di</c>
+
+00:05:02.579 --> 00:05:02.589 align:start position:0%
+vogliamo approfondire la conoscenza di
+ 
+
+00:05:02.589 --> 00:05:05.119 align:start position:0%
+vogliamo approfondire la conoscenza di
+cuore<00:05:03.039><c> Mo</c>
+
+00:05:05.119 --> 00:05:05.129 align:start position:0%
+cuore Mo
+ 
+
+00:05:05.129 --> 00:05:11.329 align:start position:0%
+cuore Mo
+basta<00:05:06.129><c> andare</c><00:05:06.580><c> a</c><00:05:06.639><c> prendere</c><00:05:07.270><c> pagina</c><00:05:08.110><c> relativa</c>
+
+00:05:11.329 --> 00:05:11.339 align:start position:0%
+ 
+ 
+
+00:05:11.339 --> 00:05:14.609 align:start position:0%
+ 
+ad<00:05:12.339><c> esempio</c><00:05:12.879><c> no</c><00:05:13.300><c> ho</c><00:05:13.539><c> sbagliato</c><00:05:14.050><c> scusate</c>
+
+00:05:14.609 --> 00:05:14.619 align:start position:0%
+ad esempio no ho sbagliato scusate
+ 
+
+00:05:14.619 --> 00:05:17.100 align:start position:0%
+ad esempio no ho sbagliato scusate
+questo<00:05:15.129><c> tanto</c><00:05:15.400><c> un</c><00:05:15.490><c> problema</c><00:05:15.699><c> cosa</c><00:05:16.150><c> che</c><00:05:16.270><c> mostra</c>
+
+00:05:17.100 --> 00:05:17.110 align:start position:0%
+questo tanto un problema cosa che mostra
+ 
+
+00:05:17.110 --> 00:05:20.549 align:start position:0%
+questo tanto un problema cosa che mostra
+come<00:05:17.490><c> installarlo</c><00:05:18.490><c> Ma</c><00:05:18.849><c> si</c><00:05:19.089><c> prossimo</c><00:05:19.629><c> c'è</c><00:05:20.409><c> una</c>
+
+00:05:20.549 --> 00:05:20.559 align:start position:0%
+come installarlo Ma si prossimo c'è una
+ 
+
+00:05:20.559 --> 00:05:23.760 align:start position:0%
+come installarlo Ma si prossimo c'è una
+pagina<00:05:20.800><c> apposta</c><00:05:21.189><c> che</c><00:05:21.719><c> appunto</c><00:05:22.719><c> questa</c><00:05:23.199><c> che</c><00:05:23.619><c> vi</c>
+
+00:05:23.760 --> 00:05:23.770 align:start position:0%
+pagina apposta che appunto questa che vi
+ 
+
+00:05:23.770 --> 00:05:28.459 align:start position:0%
+pagina apposta che appunto questa che vi
+lascio<00:05:24.129><c> nella</c><00:05:24.400><c> descrizione</c><00:05:25.389><c> del</c><00:05:25.599><c> video</c>
+
+00:05:28.459 --> 00:05:28.469 align:start position:0%
+ 
+ 
+
+00:05:28.469 --> 00:05:31.850 align:start position:0%
+ 
+Ecco<00:05:29.469><c> i</c><00:05:30.069><c> nostri</c><00:05:30.279><c> figli</c><00:05:30.610><c> adesso</c><00:05:30.909><c> è</c><00:05:31.029><c> stato</c>
+
+00:05:31.850 --> 00:05:31.860 align:start position:0%
+Ecco i nostri figli adesso è stato
+ 
+
+00:05:31.860 --> 00:05:35.879 align:start position:0%
+Ecco i nostri figli adesso è stato
+configurato<00:05:32.860><c> cliccando</c><00:05:33.849><c> su</c><00:05:34.029><c> more</c><00:05:34.210><c> vedo</c><00:05:34.930><c> anche</c>
+
+00:05:35.879 --> 00:05:35.889 align:start position:0%
+configurato cliccando su more vedo anche
+ 
+
+00:05:35.889 --> 00:05:38.369 align:start position:0%
+configurato cliccando su more vedo anche
+la<00:05:36.129><c> lubag</c><00:05:37.029><c> se</c><00:05:37.300><c> fossero</c><00:05:37.659><c> presenti</c><00:05:37.930><c> altre</c>
+
+00:05:38.369 --> 00:05:38.379 align:start position:0%
+la lubag se fossero presenti altre
+ 
+
+00:05:38.379 --> 00:05:39.959 align:start position:0%
+la lubag se fossero presenti altre
+schede<00:05:38.619><c> vedrai</c><00:05:39.039><c> anche</c><00:05:39.309><c> gli</c><00:05:39.430><c> IP</c><00:05:39.610><c> di</c><00:05:39.729><c> tutte</c>
+
+00:05:39.959 --> 00:05:39.969 align:start position:0%
+schede vedrai anche gli IP di tutte
+ 
+
+00:05:39.969 --> 00:05:43.829 align:start position:0%
+schede vedrai anche gli IP di tutte
+quante<00:05:40.210><c> le</c><00:05:40.449><c> spese</c><00:05:41.249><c> per</c><00:05:42.249><c> questo</c><00:05:42.879><c> velocissimo</c><00:05:43.509><c> e</c>
+
+00:05:43.829 --> 00:05:43.839 align:start position:0%
+quante le spese per questo velocissimo e
+ 
+
+00:05:43.839 --> 00:05:46.409 align:start position:0%
+quante le spese per questo velocissimo e
+rapidissimo<00:05:44.469><c> video</c><00:05:45.009><c> per</c><00:05:45.610><c> migliorare</c>
+
+00:05:46.409 --> 00:05:46.419 align:start position:0%
+rapidissimo video per migliorare
+ 
+
+00:05:46.419 --> 00:05:50.399 align:start position:0%
+rapidissimo video per migliorare
+l'integrazione<00:05:46.599><c> tra</c><00:05:47.559><c> la</c><00:05:47.860><c> guerra</c><00:05:48.869><c> ho</c><00:05:49.869><c> detto</c>
+
+00:05:50.399 --> 00:05:50.409 align:start position:0%
+l'integrazione tra la guerra ho detto
+ 
+
+00:05:50.409 --> 00:05:52.619 align:start position:0%
+l'integrazione tra la guerra ho detto
+Marco<00:05:50.710><c> che</c><00:05:50.860><c> non</c><00:05:50.979><c> dolori</c><00:05:51.309><c> tra</c><00:05:51.849><c> la</c><00:05:52.029><c> Viemme</c>
+
+00:05:52.619 --> 00:05:52.629 align:start position:0%
+Marco che non dolori tra la Viemme
+ 
+
+00:05:52.629 --> 00:05:54.980 align:start position:0%
+Marco che non dolori tra la Viemme
+Virtual<00:05:53.469><c> machine</c><00:05:53.650><c> è</c>
+
+00:05:54.980 --> 00:05:54.990 align:start position:0%
+Virtual machine è
+ 
+
+00:05:54.990 --> 00:05:58.619 align:start position:0%
+Virtual machine è
+il<00:05:55.990><c> sistema</c><00:05:56.379><c> di</c><00:05:56.680><c> virtualizzazione</c><00:05:56.909><c> proxmox</c><00:05:57.909><c> è</c>
+
+00:05:58.619 --> 00:05:58.629 align:start position:0%
+il sistema di virtualizzazione proxmox è
+ 
+
+00:05:58.629 --> 00:06:00.329 align:start position:0%
+il sistema di virtualizzazione proxmox è
+tutto
+
+00:06:00.329 --> 00:06:00.339 align:start position:0%
+tutto
+ 
+
+00:06:00.339 --> 00:06:03.869 align:start position:0%
+tutto
+il<00:06:01.089><c> prossimo</c><00:06:01.300><c> video</c><00:06:01.659><c> Vi</c><00:06:01.990><c> ricordo</c><00:06:02.680><c> di</c><00:06:02.919><c> cliccare</c>
+
+00:06:03.869 --> 00:06:03.879 align:start position:0%
+il prossimo video Vi ricordo di cliccare
+ 
+
+00:06:03.879 --> 00:06:05.249 align:start position:0%
+il prossimo video Vi ricordo di cliccare
+sul<00:06:04.059><c> pulsante</c><00:06:04.180><c> mi</c><00:06:04.599><c> piace</c><00:06:04.659><c> quello</c><00:06:05.139><c> col</c>
+
+00:06:05.249 --> 00:06:05.259 align:start position:0%
+sul pulsante mi piace quello col
+ 
+
+00:06:05.259 --> 00:06:07.260 align:start position:0%
+sul pulsante mi piace quello col
+pollicione<00:06:05.589><c> in</c><00:06:05.830><c> su</c><00:06:05.889><c> e</c><00:06:06.490><c> di</c><00:06:06.699><c> iscrivervi</c><00:06:07.149><c> al</c>
+
+00:06:07.260 --> 00:06:07.270 align:start position:0%
+pollicione in su e di iscrivervi al
+ 
+
+00:06:07.270 --> 00:06:09.570 align:start position:0%
+pollicione in su e di iscrivervi al
+canale<00:06:07.330><c> mi</c><00:06:08.319><c> lascio</c><00:06:08.649><c> arresto</c><00:06:09.009><c> dei</c><00:06:09.159><c> bellissimi</c>
+
+00:06:09.570 --> 00:06:09.580 align:start position:0%
+canale mi lascio arresto dei bellissimi
+ 
+
+00:06:09.580 --> 00:06:12.089 align:start position:0%
+canale mi lascio arresto dei bellissimi
+video<00:06:09.699><c> su</c><00:06:09.909><c> YouTube</c><00:06:10.379><c> e</c><00:06:11.379><c> ci</c><00:06:11.619><c> vediamo</c><00:06:11.800><c> nel</c>
+
+00:06:12.089 --> 00:06:12.099 align:start position:0%
+video su YouTube e ci vediamo nel
+ 
+
+00:06:12.099 --> 00:06:14.669 align:start position:0%
+video su YouTube e ci vediamo nel
+prossimo<00:06:12.279><c> video</c>
+

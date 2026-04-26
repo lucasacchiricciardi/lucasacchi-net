@@ -479,11 +479,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var summary = window.i18n.t(key, lang);
         thumb.setAttribute('data-title', summary);
       }
-      // Also update card-level summary span
-      var summarySpan = thumb.querySelector('[data-i18n]');
-      if (summarySpan) {
-        var spanKey = summarySpan.getAttribute('data-i18n');
-        summarySpan.textContent = window.i18n.t(spanKey, lang);
+      // Also update card-level summary span (the second span with i18n)
+      var summarySpans = thumb.querySelectorAll('[data-i18n]');
+      if (summarySpans.length >= 2) {
+        var spanKey = summarySpans[1].getAttribute('data-i18n');
+        summarySpans[1].textContent = window.i18n.t(spanKey, lang);
       }
     });
   }

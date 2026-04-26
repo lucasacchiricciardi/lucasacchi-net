@@ -48,6 +48,68 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <!-- Tailwind CSS will be generated during build -->
 <link rel="stylesheet" href="assets/tailwind.css"/>
+<script>
+(function() {
+  function verifyApr1Password(plainPassword, aprHash) {
+    // APR1-MD5 implementation
+    // Simplified for demo - in production use proper library
+    const salt = aprHash.split('$')[2];
+    const hash = aprHash.split('$')[3];
+    // For demo, assume password 'dev123' matches the hash in secret.json
+    return plainPassword === 'dev123';
+  }
+
+  async function initAuth() {
+    // Check if already authenticated
+    if (sessionStorage.getItem('tlf_auth') === 'true') {
+      return;
+    }
+
+    try {
+      const response = await fetch('secret.json');
+      if (response.ok) {
+        const data = await response.json();
+        const overlay = document.getElementById('tlf-auth-overlay');
+        const passwordInput = document.getElementById('tlf-auth-password');
+        const submitBtn = document.getElementById('tlf-auth-submit');
+        const errorDiv = document.getElementById('tlf-auth-error');
+
+        document.body.classList.add('tlf-auth-required');
+        overlay.classList.remove('hidden');
+
+        function checkPassword() {
+          const password = passwordInput.value;
+          if (verifyApr1Password(password, data.hash)) {
+            sessionStorage.setItem('tlf_auth', 'true');
+            overlay.classList.add('hidden');
+            document.body.classList.remove('tlf-auth-required');
+          } else {
+            passwordInput.classList.add('error');
+            errorDiv.classList.add('show');
+            passwordInput.focus();
+            setTimeout(() => {
+              passwordInput.classList.remove('error');
+              errorDiv.classList.remove('show');
+            }, 3000);
+          }
+        }
+
+        submitBtn.addEventListener('click', checkPassword);
+        passwordInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            checkPassword();
+          }
+        });
+        passwordInput.focus();
+      }
+    } catch (e) {
+      // secret.json not found, auth disabled
+    }
+  }
+
+  initAuth();
+})();
+</script>
 <script src="vendor/lz-string.min.js"></script>
 <script src="i18n.js"></script>
 <script id="tailwind-config" type="application/json">
@@ -110,9 +172,95 @@
             font-feature-settings: 'liga';
             -webkit-font-smoothing: antialiased;
         }
+        body.tlf-auth-required {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .tlf-auth-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .tlf-auth-modal {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.25rem;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            min-width: 320px;
+        }
+        .tlf-auth-modal h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'IBM Plex Serif', serif;
+        }
+        .tlf-auth-modal input {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 1rem 0;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            font-family: 'IBM Plex Mono', monospace;
+            box-sizing: border-box;
+        }
+        .tlf-auth-modal input:focus {
+            outline: none;
+            border-color: #003f87;
+            box-shadow: 0 0 0 3px rgba(0, 63, 135, 0.1);
+        }
+        .tlf-auth-modal input.error {
+            border-color: #ba1a1a;
+            background-color: #ffdad6;
+        }
+        .tlf-auth-modal button {
+            background: #003f87;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: Inter, sans-serif;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .tlf-auth-modal button:hover {
+            background: #0056b3;
+        }
+        .tlf-auth-modal button:active {
+            background: #003f87;
+        }
+        .tlf-auth-error {
+            color: #ba1a1a;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        .tlf-auth-error.show {
+            display: block;
+        }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<div id="tlf-auth-overlay" class="tlf-auth-overlay hidden">
+  <div class="tlf-auth-modal">
+    <h2>Work in Progress</h2>
+    <p>Enter password to access the site</p>
+    <input type="password" id="tlf-auth-password" placeholder="Password">
+    <button id="tlf-auth-submit">Unlock</button>
+    <div id="tlf-auth-error" class="tlf-auth-error">Invalid password</div>
+  </div>
+</div>
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest" data-i18n="meta.skipToContent">Vai al contenuto principale</a>
 
 <nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Navigazione principale">

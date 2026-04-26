@@ -1,0 +1,1960 @@
+WEBVTT
+Kind: captions
+Language: it
+
+00:00:00.439 --> 00:00:03.230 align:start position:0%
+ 
+benvenuto<00:00:01.439><c> benvenuta</c><00:00:02.159><c> io</c><00:00:02.399><c> sono</c><00:00:02.850><c> luca</c><00:00:03.030><c> e</c>
+
+00:00:03.230 --> 00:00:03.240 align:start position:0%
+benvenuto benvenuta io sono luca e
+ 
+
+00:00:03.240 --> 00:00:05.720 align:start position:0%
+benvenuto benvenuta io sono luca e
+questo<00:00:03.750><c> è</c><00:00:03.780><c> il</c><00:00:03.840><c> canale</c><00:00:04.049><c> youtube</c><00:00:04.370><c> luca</c><00:00:05.370><c> sacchi</c>
+
+00:00:05.720 --> 00:00:05.730 align:start position:0%
+questo è il canale youtube luca sacchi
+ 
+
+00:00:05.730 --> 00:00:06.800 align:start position:0%
+questo è il canale youtube luca sacchi
+net
+
+00:00:06.800 --> 00:00:06.810 align:start position:0%
+net
+ 
+
+00:00:06.810 --> 00:00:10.600 align:start position:0%
+net
+oggi<00:00:07.200><c> parliamo</c><00:00:07.680><c> di</c><00:00:08.210><c> switch</c><00:00:09.210><c> virtuali</c><00:00:09.540><c> in</c>
+
+00:00:10.600 --> 00:00:10.610 align:start position:0%
+oggi parliamo di switch virtuali in
+ 
+
+00:00:10.610 --> 00:00:12.129 align:start position:0%
+oggi parliamo di switch virtuali in
+proximus
+
+00:00:12.129 --> 00:00:12.139 align:start position:0%
+proximus
+ 
+
+00:00:12.139 --> 00:00:16.400 align:start position:0%
+proximus
+questo<00:00:13.139><c> video</c><00:00:13.500><c> va</c><00:00:14.280><c> a</c><00:00:14.330><c> rispondere</c><00:00:15.330><c> a</c><00:00:15.360><c> un</c><00:00:15.990><c> utente</c>
+
+00:00:16.400 --> 00:00:16.410 align:start position:0%
+questo video va a rispondere a un utente
+ 
+
+00:00:16.410 --> 00:00:18.650 align:start position:0%
+questo video va a rispondere a un utente
+del<00:00:16.770><c> nostro</c><00:00:16.890><c> canale</c><00:00:17.460><c> che</c><00:00:17.730><c> si</c><00:00:17.850><c> chiama</c><00:00:18.150><c> damien</c>
+
+00:00:18.650 --> 00:00:18.660 align:start position:0%
+del nostro canale che si chiama damien
+ 
+
+00:00:18.660 --> 00:00:21.470 align:start position:0%
+del nostro canale che si chiama damien
+da<00:00:19.289><c> me</c><00:00:19.470><c> l'ha</c><00:00:19.590><c> chiesto</c><00:00:19.740><c> come</c><00:00:20.520><c> collegare</c><00:00:21.029><c> una</c>
+
+00:00:21.470 --> 00:00:21.480 align:start position:0%
+da me l'ha chiesto come collegare una
+ 
+
+00:00:21.480 --> 00:00:24.710 align:start position:0%
+da me l'ha chiesto come collegare una
+macchina<00:00:21.960><c> virtuale</c><00:00:22.080><c> parrotto</c><00:00:23.070><c> s</c><00:00:23.519><c> a</c><00:00:24.300><c> una</c>
+
+00:00:24.710 --> 00:00:24.720 align:start position:0%
+macchina virtuale parrotto s a una
+ 
+
+00:00:24.720 --> 00:00:27.740 align:start position:0%
+macchina virtuale parrotto s a una
+macchina<00:00:24.900><c> debian</c><00:00:25.800><c> 11</c><00:00:26.210><c> isolata</c><00:00:27.210><c> cioè</c><00:00:27.599><c> che</c>
+
+00:00:27.740 --> 00:00:27.750 align:start position:0%
+macchina debian 11 isolata cioè che
+ 
+
+00:00:27.750 --> 00:00:29.900 align:start position:0%
+macchina debian 11 isolata cioè che
+parli<00:00:28.170><c> solo</c><00:00:28.560><c> e</c><00:00:28.590><c> unicamente</c><00:00:28.859><c> con</c><00:00:29.400><c> questa</c>
+
+00:00:29.900 --> 00:00:29.910 align:start position:0%
+parli solo e unicamente con questa
+ 
+
+00:00:29.910 --> 00:00:30.919 align:start position:0%
+parli solo e unicamente con questa
+parrot
+
+00:00:30.919 --> 00:00:30.929 align:start position:0%
+parrot
+ 
+
+00:00:30.929 --> 00:00:32.780 align:start position:0%
+parrot
+allora<00:00:31.289><c> io</c><00:00:31.410><c> al</c><00:00:31.619><c> momento</c><00:00:31.740><c> non</c><00:00:31.980><c> ho</c><00:00:32.219><c> scaricato</c>
+
+00:00:32.780 --> 00:00:32.790 align:start position:0%
+allora io al momento non ho scaricato
+ 
+
+00:00:32.790 --> 00:00:35.569 align:start position:0%
+allora io al momento non ho scaricato
+parroc<00:00:33.239><c> ma</c><00:00:33.989><c> ho</c><00:00:34.020><c> creato</c><00:00:34.649><c> partendo</c><00:00:35.040><c> da</c><00:00:35.370><c> un</c>
+
+00:00:35.569 --> 00:00:35.579 align:start position:0%
+parroc ma ho creato partendo da un
+ 
+
+00:00:35.579 --> 00:00:38.150 align:start position:0%
+parroc ma ho creato partendo da un
+template<00:00:35.940><c> linux</c><00:00:36.690><c> mint</c><00:00:36.809><c> una</c><00:00:37.680><c> macchina</c><00:00:38.040><c> che</c><00:00:38.129><c> ho</c>
+
+00:00:38.150 --> 00:00:38.160 align:start position:0%
+template linux mint una macchina che ho
+ 
+
+00:00:38.160 --> 00:00:39.920 align:start position:0%
+template linux mint una macchina che ho
+chiamato<00:00:38.309><c> parrot</c><00:00:39.030><c> è</c><00:00:39.300><c> una</c><00:00:39.510><c> macchina</c><00:00:39.719><c> che</c><00:00:39.840><c> ho</c>
+
+00:00:39.920 --> 00:00:39.930 align:start position:0%
+chiamato parrot è una macchina che ho
+ 
+
+00:00:39.930 --> 00:00:42.920 align:start position:0%
+chiamato parrot è una macchina che ho
+chiamato<00:00:40.050><c> target</c><00:00:41.180><c> queste</c><00:00:42.180><c> se</c><00:00:42.540><c> andiamo</c><00:00:42.660><c> a</c>
+
+00:00:42.920 --> 00:00:42.930 align:start position:0%
+chiamato target queste se andiamo a
+ 
+
+00:00:42.930 --> 00:00:45.340 align:start position:0%
+chiamato target queste se andiamo a
+vedere<00:00:43.079><c> uno</c><00:00:43.739><c> all</c><00:00:43.860><c> altra</c><00:00:44.190><c> la</c><00:00:44.309><c> stessa</c><00:00:44.670><c> cosa</c>
+
+00:00:45.340 --> 00:00:45.350 align:start position:0%
+vedere uno all altra la stessa cosa
+ 
+
+00:00:45.350 --> 00:00:50.500 align:start position:0%
+vedere uno all altra la stessa cosa
+come<00:00:46.350><c> hardware</c><00:00:46.890><c> cos'hanno</c><00:00:47.360><c> ram</c><00:00:48.360><c> processore</c>
+
+00:00:50.500 --> 00:00:50.510 align:start position:0%
+come hardware cos'hanno ram processore
+ 
+
+00:00:50.510 --> 00:00:53.389 align:start position:0%
+come hardware cos'hanno ram processore
+display<00:00:51.510><c> controller</c><00:00:52.500><c> e</c><00:00:52.770><c> l'ultima</c><00:00:53.250><c> voce</c>
+
+00:00:53.389 --> 00:00:53.399 align:start position:0%
+display controller e l'ultima voce
+ 
+
+00:00:53.399 --> 00:00:55.130 align:start position:0%
+display controller e l'ultima voce
+saltando<00:00:54.180><c> le</c><00:00:54.300><c> altre</c><00:00:54.600><c> per</c><00:00:54.719><c> essere</c><00:00:55.020><c> un</c><00:00:55.079><c> po</c>
+
+00:00:55.130 --> 00:00:55.140 align:start position:0%
+saltando le altre per essere un po
+ 
+
+00:00:55.140 --> 00:00:58.160 align:start position:0%
+saltando le altre per essere un po
+stanco<00:00:55.649><c> e</c><00:00:56.399><c> la</c><00:00:56.730><c> scheda</c><00:00:56.910><c> di</c><00:00:57.149><c> rete</c><00:00:57.329><c> quindi</c><00:00:57.750><c> nel</c>
+
+00:00:58.160 --> 00:00:58.170 align:start position:0%
+stanco e la scheda di rete quindi nel
+ 
+
+00:00:58.170 --> 00:01:00.049 align:start position:0%
+stanco e la scheda di rete quindi nel
+nostro<00:00:58.500><c> progetto</c><00:00:59.010><c> questa</c><00:00:59.399><c> macchina</c><00:00:59.520><c> dovrà</c>
+
+00:01:00.049 --> 00:01:00.059 align:start position:0%
+nostro progetto questa macchina dovrà
+ 
+
+00:01:00.059 --> 00:01:02.360 align:start position:0%
+nostro progetto questa macchina dovrà
+avere<00:01:00.539><c> due</c><00:01:00.690><c> schede</c><00:01:00.960><c> di</c><00:01:01.170><c> rete</c><00:01:01.350><c> una</c><00:01:01.920><c> verso</c><00:01:02.250><c> il</c>
+
+00:01:02.360 --> 00:01:02.370 align:start position:0%
+avere due schede di rete una verso il
+ 
+
+00:01:02.370 --> 00:01:04.280 align:start position:0%
+avere due schede di rete una verso il
+mondo<00:01:02.640><c> esterno</c><00:01:02.690><c> che</c><00:01:03.690><c> ci</c><00:01:03.780><c> permette</c><00:01:04.260><c> di</c>
+
+00:01:04.280 --> 00:01:04.290 align:start position:0%
+mondo esterno che ci permette di
+ 
+
+00:01:04.290 --> 00:01:06.230 align:start position:0%
+mondo esterno che ci permette di
+raggiungerla<00:01:05.129><c> comandarla</c><00:01:05.820><c> fare</c><00:01:06.030><c> quello</c><00:01:06.210><c> che</c>
+
+00:01:06.230 --> 00:01:06.240 align:start position:0%
+raggiungerla comandarla fare quello che
+ 
+
+00:01:06.240 --> 00:01:08.960 align:start position:0%
+raggiungerla comandarla fare quello che
+vogliamo<00:01:06.710><c> è</c><00:01:07.710><c> un'altra</c><00:01:08.340><c> verso</c><00:01:08.729><c> un</c><00:01:08.820><c> mondo</c>
+
+00:01:08.960 --> 00:01:08.970 align:start position:0%
+vogliamo è un'altra verso un mondo
+ 
+
+00:01:08.970 --> 00:01:11.719 align:start position:0%
+vogliamo è un'altra verso un mondo
+interno<00:01:09.659><c> che</c><00:01:09.840><c> andremo</c><00:01:10.200><c> a</c><00:01:10.229><c> creare</c><00:01:10.350><c> adesso</c><00:01:11.040><c> è</c><00:01:11.070><c> in</c>
+
+00:01:11.719 --> 00:01:11.729 align:start position:0%
+interno che andremo a creare adesso è in
+ 
+
+00:01:11.729 --> 00:01:14.859 align:start position:0%
+interno che andremo a creare adesso è in
+questo<00:01:12.119><c> mondo</c><00:01:12.479><c> andremo</c><00:01:12.869><c> a</c><00:01:12.900><c> collegare</c><00:01:13.760><c> la</c>
+
+00:01:14.859 --> 00:01:14.869 align:start position:0%
+questo mondo andremo a collegare la
+ 
+
+00:01:14.869 --> 00:01:18.140 align:start position:0%
+questo mondo andremo a collegare la
+macchina<00:01:15.869><c> target</c><00:01:16.470><c> io</c><00:01:17.130><c> chiamo</c><00:01:17.549><c> mondo</c><00:01:17.970><c> ma</c>
+
+00:01:18.140 --> 00:01:18.150 align:start position:0%
+macchina target io chiamo mondo ma
+ 
+
+00:01:18.150 --> 00:01:20.330 align:start position:0%
+macchina target io chiamo mondo ma
+leggete<00:01:18.540><c> tranquillamente</c><00:01:19.500><c> virtual</c><00:01:20.040><c> switch</c>
+
+00:01:20.330 --> 00:01:20.340 align:start position:0%
+leggete tranquillamente virtual switch
+ 
+
+00:01:20.340 --> 00:01:24.609 align:start position:0%
+leggete tranquillamente virtual switch
+quindi<00:01:21.060><c> switch</c><00:01:21.869><c> virtuali</c>
+
+00:01:24.609 --> 00:01:24.619 align:start position:0%
+ 
+ 
+
+00:01:24.619 --> 00:01:28.429 align:start position:0%
+ 
+andiamo<00:01:25.619><c> adesso</c><00:01:25.979><c> a</c><00:01:26.460><c> livello</c><00:01:26.939><c> di</c><00:01:27.060><c> nodo</c><00:01:27.439><c> e</c>
+
+00:01:28.429 --> 00:01:28.439 align:start position:0%
+andiamo adesso a livello di nodo e
+ 
+
+00:01:28.439 --> 00:01:31.550 align:start position:0%
+andiamo adesso a livello di nodo e
+scendendo<00:01:29.250><c> a</c><00:01:29.490><c> vedere</c><00:01:30.180><c> il</c><00:01:30.299><c> network</c>
+
+00:01:31.550 --> 00:01:31.560 align:start position:0%
+scendendo a vedere il network
+ 
+
+00:01:31.560 --> 00:01:33.380 align:start position:0%
+scendendo a vedere il network
+vediamo<00:01:32.070><c> che</c><00:01:32.250><c> c'è</c><00:01:32.430><c> una</c><00:01:32.759><c> scheda</c><00:01:33.090><c> di</c><00:01:33.240><c> rete</c>
+
+00:01:33.380 --> 00:01:33.390 align:start position:0%
+vediamo che c'è una scheda di rete
+ 
+
+00:01:33.390 --> 00:01:36.530 align:start position:0%
+vediamo che c'è una scheda di rete
+fisica<00:01:33.780><c> del</c><00:01:34.229><c> nostro</c><00:01:34.380><c> nodo</c><00:01:34.979><c> è</c><00:01:35.520><c> uno</c><00:01:36.210><c> switch</c>
+
+00:01:36.530 --> 00:01:36.540 align:start position:0%
+fisica del nostro nodo è uno switch
+ 
+
+00:01:36.540 --> 00:01:38.660 align:start position:0%
+fisica del nostro nodo è uno switch
+virtuale<00:01:37.530><c> questo</c><00:01:37.799><c> switch</c><00:01:38.130><c> virtuali</c><00:01:38.189><c> c'è</c>
+
+00:01:38.660 --> 00:01:38.670 align:start position:0%
+virtuale questo switch virtuali c'è
+ 
+
+00:01:38.670 --> 00:01:40.700 align:start position:0%
+virtuale questo switch virtuali c'è
+stato<00:01:38.939><c> creato</c><00:01:39.360><c> durante</c><00:01:39.509><c> l'installazione</c><00:01:39.990><c> di</c>
+
+00:01:40.700 --> 00:01:40.710 align:start position:0%
+stato creato durante l'installazione di
+ 
+
+00:01:40.710 --> 00:01:44.240 align:start position:0%
+stato creato durante l'installazione di
+proxy<00:01:41.100><c> mox</c><00:01:41.820><c> e</c><00:01:41.850><c> su</c><00:01:42.030><c> questo</c><00:01:42.450><c> si</c><00:01:42.630><c> attestano</c><00:01:43.290><c> tutte</c>
+
+00:01:44.240 --> 00:01:44.250 align:start position:0%
+proxy mox e su questo si attestano tutte
+ 
+
+00:01:44.250 --> 00:01:46.490 align:start position:0%
+proxy mox e su questo si attestano tutte
+quante<00:01:44.579><c> le</c><00:01:44.640><c> nostre</c><00:01:45.060><c> macchine</c><00:01:45.240><c> virtuali</c><00:01:45.659><c> e</c><00:01:46.079><c> gli</c>
+
+00:01:46.490 --> 00:01:46.500 align:start position:0%
+quante le nostre macchine virtuali e gli
+ 
+
+00:01:46.500 --> 00:01:50.060 align:start position:0%
+quante le nostre macchine virtuali e gli
+eventuali<00:01:46.829><c> container</c><00:01:47.899><c> bene</c><00:01:49.070><c> andiamo</c>
+
+00:01:50.060 --> 00:01:50.070 align:start position:0%
+eventuali container bene andiamo
+ 
+
+00:01:50.070 --> 00:01:53.450 align:start position:0%
+eventuali container bene andiamo
+cliccare<00:01:50.640><c> su</c><00:01:50.759><c> create</c><00:01:51.060><c> e</c><00:01:52.020><c> possiamo</c><00:01:52.500><c> creare</c><00:01:53.220><c> un</c>
+
+00:01:53.450 --> 00:01:53.460 align:start position:0%
+cliccare su create e possiamo creare un
+ 
+
+00:01:53.460 --> 00:01:57.670 align:start position:0%
+cliccare su create e possiamo creare un
+bridge<00:01:53.790><c> un</c><00:01:54.360><c> bond</c><00:01:54.960><c> una</c><00:01:55.439><c> wlan</c><00:01:55.740><c> a</c><00:01:56.310><c> livello</c><00:01:56.790><c> linux</c>
+
+00:01:57.670 --> 00:01:57.680 align:start position:0%
+bridge un bond una wlan a livello linux
+ 
+
+00:01:57.680 --> 00:02:02.749 align:start position:0%
+bridge un bond una wlan a livello linux
+o<00:01:58.680><c> vs</c><00:01:59.340><c> come</c><00:02:00.530><c> nomenclatura</c><00:02:01.530><c> sta</c><00:02:01.710><c> per</c><00:02:02.219><c> open</c>
+
+00:02:02.749 --> 00:02:02.759 align:start position:0%
+o vs come nomenclatura sta per open
+ 
+
+00:02:02.759 --> 00:02:04.670 align:start position:0%
+o vs come nomenclatura sta per open
+switch<00:02:03.210><c> che</c><00:02:03.750><c> ha</c><00:02:03.780><c> un'altra</c><00:02:04.170><c> cosa</c><00:02:04.320><c> che</c><00:02:04.530><c> magari</c>
+
+00:02:04.670 --> 00:02:04.680 align:start position:0%
+switch che ha un'altra cosa che magari
+ 
+
+00:02:04.680 --> 00:02:08.059 align:start position:0%
+switch che ha un'altra cosa che magari
+vedremo<00:02:05.100><c> chi</c><00:02:05.670><c> in</c><00:02:05.759><c> un</c><00:02:06.090><c> altro</c><00:02:06.270><c> video</c><00:02:06.750><c> a</c><00:02:07.649><c> livello</c>
+
+00:02:08.059 --> 00:02:08.069 align:start position:0%
+vedremo chi in un altro video a livello
+ 
+
+00:02:08.069 --> 00:02:10.669 align:start position:0%
+vedremo chi in un altro video a livello
+di<00:02:08.220><c> sistema</c><00:02:08.520><c> operativo</c><00:02:09.060><c> linux</c><00:02:09.179><c> possiamo</c><00:02:09.840><c> fare</c>
+
+00:02:10.669 --> 00:02:10.679 align:start position:0%
+di sistema operativo linux possiamo fare
+ 
+
+00:02:10.679 --> 00:02:14.289 align:start position:0%
+di sistema operativo linux possiamo fare
+il<00:02:10.800><c> bridge</c><00:02:11.370><c> quindi</c><00:02:12.030><c> uno</c><00:02:12.390><c> switch</c><00:02:13.040><c> virtuale</c><00:02:13.670><c> che</c>
+
+00:02:14.289 --> 00:02:14.299 align:start position:0%
+il bridge quindi uno switch virtuale che
+ 
+
+00:02:14.299 --> 00:02:17.199 align:start position:0%
+il bridge quindi uno switch virtuale che
+si<00:02:14.750><c> attesti</c><00:02:15.349><c> o</c><00:02:15.379><c> meno</c><00:02:15.829><c> anche</c><00:02:16.730><c> su</c><00:02:16.909><c> una</c><00:02:17.030><c> scheda</c>
+
+00:02:17.199 --> 00:02:17.209 align:start position:0%
+si attesti o meno anche su una scheda
+ 
+
+00:02:17.209 --> 00:02:20.110 align:start position:0%
+si attesti o meno anche su una scheda
+fisica<00:02:17.810><c> un</c><00:02:18.349><c> bond</c><00:02:18.859><c> cioè</c><00:02:19.040><c> prendere</c><00:02:19.280><c> due</c><00:02:19.790><c> schede</c>
+
+00:02:20.110 --> 00:02:20.120 align:start position:0%
+fisica un bond cioè prendere due schede
+ 
+
+00:02:20.120 --> 00:02:22.240 align:start position:0%
+fisica un bond cioè prendere due schede
+di<00:02:20.390><c> rete</c><00:02:20.569><c> fare</c><00:02:21.019><c> lavorare</c><00:02:21.409><c> come</c><00:02:21.680><c> se</c><00:02:21.799><c> fossero</c>
+
+00:02:22.240 --> 00:02:22.250 align:start position:0%
+di rete fare lavorare come se fossero
+ 
+
+00:02:22.250 --> 00:02:25.660 align:start position:0%
+di rete fare lavorare come se fossero
+un'unica<00:02:22.790><c> scheda</c><00:02:23.299><c> e</c><00:02:24.200><c> possiamo</c><00:02:24.650><c> andare</c><00:02:25.310><c> a</c>
+
+00:02:25.660 --> 00:02:25.670 align:start position:0%
+un'unica scheda e possiamo andare a
+ 
+
+00:02:25.670 --> 00:02:29.500 align:start position:0%
+un'unica scheda e possiamo andare a
+creare<00:02:26.030><c> una</c><00:02:26.959><c> organizzazione</c><00:02:27.950><c> logica</c><00:02:28.670><c> che</c><00:02:29.359><c> si</c>
+
+00:02:29.500 --> 00:02:29.510 align:start position:0%
+creare una organizzazione logica che si
+ 
+
+00:02:29.510 --> 00:02:33.250 align:start position:0%
+creare una organizzazione logica che si
+chiama<00:02:29.810><c> wlan</c><00:02:30.230><c> per</c><00:02:31.030><c> separare</c><00:02:32.030><c> sullo</c><00:02:32.959><c> stesso</c>
+
+00:02:33.250 --> 00:02:33.260 align:start position:0%
+chiama wlan per separare sullo stesso
+ 
+
+00:02:33.260 --> 00:02:35.890 align:start position:0%
+chiama wlan per separare sullo stesso
+cavo<00:02:33.560><c> di</c><00:02:33.680><c> rete</c><00:02:33.829><c> anche</c><00:02:34.340><c> virtuale</c><00:02:35.000><c> il</c><00:02:35.359><c> traffico</c>
+
+00:02:35.890 --> 00:02:35.900 align:start position:0%
+cavo di rete anche virtuale il traffico
+ 
+
+00:02:35.900 --> 00:02:40.360 align:start position:0%
+cavo di rete anche virtuale il traffico
+di<00:02:35.989><c> più</c><00:02:36.140><c> macchine</c><00:02:36.650><c> ok</c><00:02:37.489><c> quindi</c><00:02:38.560><c> le</c><00:02:39.560><c> rendiamo</c><00:02:39.950><c> il</c>
+
+00:02:40.360 --> 00:02:40.370 align:start position:0%
+di più macchine ok quindi le rendiamo il
+ 
+
+00:02:40.370 --> 00:02:42.099 align:start position:0%
+di più macchine ok quindi le rendiamo il
+traffico<00:02:40.879><c> che</c><00:02:41.030><c> passa</c><00:02:41.209><c> come</c><00:02:41.659><c> se</c><00:02:41.750><c> fossero</c>
+
+00:02:42.099 --> 00:02:42.109 align:start position:0%
+traffico che passa come se fossero
+ 
+
+00:02:42.109 --> 00:02:45.729 align:start position:0%
+traffico che passa come se fossero
+fantasmi<00:02:42.459><c> e</c><00:02:43.459><c> umani</c><00:02:44.090><c> nella</c><00:02:44.359><c> stessa</c><00:02:44.689><c> stanza</c><00:02:44.900><c> e</c>
+
+00:02:45.729 --> 00:02:45.739 align:start position:0%
+fantasmi e umani nella stessa stanza e
+ 
+
+00:02:45.739 --> 00:02:48.000 align:start position:0%
+fantasmi e umani nella stessa stanza e
+ognuno<00:02:46.189><c> non</c><00:02:46.310><c> vede</c><00:02:46.609><c> l'altro</c>
+
+00:02:48.000 --> 00:02:48.010 align:start position:0%
+ognuno non vede l'altro
+ 
+
+00:02:48.010 --> 00:02:50.349 align:start position:0%
+ognuno non vede l'altro
+diciamo<00:02:49.010><c> per</c><00:02:49.310><c> fantasmi</c><00:02:49.760><c> non</c><00:02:49.849><c> esistono</c><00:02:49.939><c> lo</c>
+
+00:02:50.349 --> 00:02:50.359 align:start position:0%
+diciamo per fantasmi non esistono lo
+ 
+
+00:02:50.359 --> 00:02:52.119 align:start position:0%
+diciamo per fantasmi non esistono lo
+sappiamo<00:02:50.629><c> perfettamente</c><00:02:50.780><c> prima</c><00:02:51.739><c> che</c><00:02:51.829><c> passo</c>
+
+00:02:52.119 --> 00:02:52.129 align:start position:0%
+sappiamo perfettamente prima che passo
+ 
+
+00:02:52.129 --> 00:02:55.539 align:start position:0%
+sappiamo perfettamente prima che passo
+per<00:02:52.159><c> uno</c><00:02:52.430><c> spiritista</c><00:02:53.260><c> allora</c><00:02:54.260><c> bridge</c><00:02:54.799><c> che</c><00:02:55.519><c> è</c>
+
+00:02:55.539 --> 00:02:55.549 align:start position:0%
+per uno spiritista allora bridge che è
+ 
+
+00:02:55.549 --> 00:02:57.240 align:start position:0%
+per uno spiritista allora bridge che è
+quello<00:02:55.790><c> che</c><00:02:55.819><c> ci</c><00:02:56.030><c> serve</c>
+
+00:02:57.240 --> 00:02:57.250 align:start position:0%
+quello che ci serve
+ 
+
+00:02:57.250 --> 00:03:00.360 align:start position:0%
+quello che ci serve
+possiamo<00:02:58.250><c> addirittura</c><00:02:58.669><c> andare</c><00:02:59.000><c> a</c><00:02:59.510><c> un</c><00:02:59.810><c> bridge</c>
+
+00:03:00.360 --> 00:03:00.370 align:start position:0%
+possiamo addirittura andare a un bridge
+ 
+
+00:03:00.370 --> 00:03:05.520 align:start position:0%
+possiamo addirittura andare a un bridge
+un<00:03:01.370><c> suo</c><00:03:01.909><c> ip</c><00:03:02.299><c> a</c><00:03:02.510><c> nomi</c><00:03:02.810><c> non</c><00:03:02.989><c> serve</c><00:03:03.579><c> e</c>
+
+00:03:05.520 --> 00:03:05.530 align:start position:0%
+un suo ip a nomi non serve e
+ 
+
+00:03:05.530 --> 00:03:08.710 align:start position:0%
+un suo ip a nomi non serve e
+andiamo<00:03:06.530><c> direttamente</c><00:03:06.680><c> a</c><00:03:07.189><c> crearlo</c><00:03:08.150><c> vuoto</c>
+
+00:03:08.710 --> 00:03:08.720 align:start position:0%
+andiamo direttamente a crearlo vuoto
+ 
+
+00:03:08.720 --> 00:03:12.369 align:start position:0%
+andiamo direttamente a crearlo vuoto
+senza<00:03:09.730><c> porte</c><00:03:10.730><c> sulle</c><00:03:11.060><c> quali</c><00:03:11.419><c> posso</c><00:03:12.109><c> andare</c>
+
+00:03:12.369 --> 00:03:12.379 align:start position:0%
+senza porte sulle quali posso andare
+ 
+
+00:03:12.379 --> 00:03:13.960 align:start position:0%
+senza porte sulle quali posso andare
+appoggiarsi<00:03:12.950><c> per</c><00:03:13.010><c> raggiungere</c><00:03:13.669><c> il</c><00:03:13.760><c> mondo</c>
+
+00:03:13.960 --> 00:03:13.970 align:start position:0%
+appoggiarsi per raggiungere il mondo
+ 
+
+00:03:13.970 --> 00:03:17.199 align:start position:0%
+appoggiarsi per raggiungere il mondo
+esterno<00:03:14.510><c> quindi</c><00:03:15.459><c> fondamentalmente</c><00:03:16.459><c> abbiamo</c>
+
+00:03:17.199 --> 00:03:17.209 align:start position:0%
+esterno quindi fondamentalmente abbiamo
+ 
+
+00:03:17.209 --> 00:03:20.080 align:start position:0%
+esterno quindi fondamentalmente abbiamo
+il<00:03:17.479><c> nostro</c><00:03:17.659><c> apparato</c><00:03:18.280><c> di</c><00:03:19.280><c> rete</c><00:03:19.310><c> con</c><00:03:19.819><c> le</c><00:03:19.940><c> sue</c>
+
+00:03:20.080 --> 00:03:20.090 align:start position:0%
+il nostro apparato di rete con le sue
+ 
+
+00:03:20.090 --> 00:03:22.349 align:start position:0%
+il nostro apparato di rete con le sue
+porte<00:03:20.239><c> pronto</c><00:03:20.870><c> a</c><00:03:20.900><c> essere</c><00:03:20.989><c> placcato</c>
+
+00:03:22.349 --> 00:03:22.359 align:start position:0%
+porte pronto a essere placcato
+ 
+
+00:03:22.359 --> 00:03:26.680 align:start position:0%
+porte pronto a essere placcato
+andiamo<00:03:23.359><c> sul</c><00:03:23.540><c> nostro</c><00:03:23.900><c> target</c><00:03:24.699><c> qua</c><00:03:25.699><c> in</c>
+
+00:03:26.680 --> 00:03:26.690 align:start position:0%
+andiamo sul nostro target qua in
+ 
+
+00:03:26.690 --> 00:03:29.800 align:start position:0%
+andiamo sul nostro target qua in
+hardware<00:03:27.199><c> andiamo</c><00:03:28.099><c> sulla</c><00:03:28.459><c> scheda</c>
+
+00:03:29.800 --> 00:03:29.810 align:start position:0%
+hardware andiamo sulla scheda
+ 
+
+00:03:29.810 --> 00:03:31.960 align:start position:0%
+hardware andiamo sulla scheda
+e<00:03:29.840><c> invece</c><00:03:30.290><c> di</c><00:03:30.680><c> essere</c><00:03:31.040><c> attaccato</c><00:03:31.639><c> quello</c>
+
+00:03:31.960 --> 00:03:31.970 align:start position:0%
+e invece di essere attaccato quello
+ 
+
+00:03:31.970 --> 00:03:34.509 align:start position:0%
+e invece di essere attaccato quello
+creato<00:03:32.840><c> in</c><00:03:32.930><c> installazione</c><00:03:33.769><c> che</c><00:03:34.010><c> spira</c><00:03:34.430><c> lo</c>
+
+00:03:34.509 --> 00:03:34.519 align:start position:0%
+creato in installazione che spira lo
+ 
+
+00:03:34.519 --> 00:03:36.430 align:start position:0%
+creato in installazione che spira lo
+zero<00:03:34.849><c> lo</c><00:03:34.940><c> portiamo</c><00:03:35.299><c> essere</c><00:03:35.690><c> collegato</c><00:03:36.260><c> sul</c>
+
+00:03:36.430 --> 00:03:36.440 align:start position:0%
+zero lo portiamo essere collegato sul
+ 
+
+00:03:36.440 --> 00:03:37.860 align:start position:0%
+zero lo portiamo essere collegato sul
+bridge<00:03:36.709><c> uno</c>
+
+00:03:37.860 --> 00:03:37.870 align:start position:0%
+bridge uno
+ 
+
+00:03:37.870 --> 00:03:40.089 align:start position:0%
+bridge uno
+perfetto
+
+00:03:40.089 --> 00:03:40.099 align:start position:0%
+perfetto
+ 
+
+00:03:40.099 --> 00:03:41.979 align:start position:0%
+perfetto
+accendiamo<00:03:40.489><c> la</c><00:03:40.760><c> nostra</c><00:03:41.120><c> macchina</c><00:03:41.299><c> gli</c>
+
+00:03:41.979 --> 00:03:41.989 align:start position:0%
+accendiamo la nostra macchina gli
+ 
+
+00:03:41.989 --> 00:03:43.210 align:start position:0%
+accendiamo la nostra macchina gli
+dovremmo<00:03:42.319><c> poi</c><00:03:42.530><c> andare</c><00:03:42.829><c> a</c><00:03:42.859><c> dare</c><00:03:42.949><c> un</c><00:03:43.069><c> indirizzo</c>
+
+00:03:43.210 --> 00:03:43.220 align:start position:0%
+dovremmo poi andare a dare un indirizzo
+ 
+
+00:03:43.220 --> 00:03:45.719 align:start position:0%
+dovremmo poi andare a dare un indirizzo
+ip<00:03:43.579><c> statico</c><00:03:44.120><c> perché</c><00:03:44.540><c> su</c><00:03:44.690><c> questa</c><00:03:45.199><c> interfaccia</c>
+
+00:03:45.719 --> 00:03:45.729 align:start position:0%
+ip statico perché su questa interfaccia
+ 
+
+00:03:45.729 --> 00:03:50.039 align:start position:0%
+ip statico perché su questa interfaccia
+non<00:03:46.729><c> esiste</c><00:03:47.299><c> un</c>
+
+00:03:50.039 --> 00:03:50.049 align:start position:0%
+ 
+ 
+
+00:03:50.049 --> 00:03:51.729 align:start position:0%
+ 
+dhcp<00:03:51.049><c> server</c>
+
+00:03:51.729 --> 00:03:51.739 align:start position:0%
+dhcp server
+ 
+
+00:03:51.739 --> 00:03:53.649 align:start position:0%
+dhcp server
+quindi<00:03:52.310><c> non</c><00:03:52.459><c> c'è</c><00:03:52.549><c> nessuno</c><00:03:52.940><c> che</c><00:03:53.060><c> da</c><00:03:53.209><c> questa</c>
+
+00:03:53.649 --> 00:03:53.659 align:start position:0%
+quindi non c'è nessuno che da questa
+ 
+
+00:03:53.659 --> 00:03:57.330 align:start position:0%
+quindi non c'è nessuno che da questa
+povera<00:03:53.840><c> macchina</c><00:03:54.470><c> un</c><00:03:54.709><c> indirizzo</c><00:03:55.310><c> ip</c><00:03:55.579><c> va</c><00:03:56.540><c> bene</c>
+
+00:03:57.330 --> 00:03:57.340 align:start position:0%
+povera macchina un indirizzo ip va bene
+ 
+
+00:03:57.340 --> 00:03:59.949 align:start position:0%
+povera macchina un indirizzo ip va bene
+adesso<00:03:58.340><c> andiamo</c><00:03:58.760><c> a</c><00:03:58.939><c> prendere</c><00:03:59.359><c> la</c><00:03:59.419><c> nostra</c><00:03:59.510><c> sim</c>
+
+00:03:59.949 --> 00:03:59.959 align:start position:0%
+adesso andiamo a prendere la nostra sim
+ 
+
+00:03:59.959 --> 00:04:03.009 align:start position:0%
+adesso andiamo a prendere la nostra sim
+il<00:04:00.109><c> parrot</c><00:04:00.620><c> finta</c><00:04:01.220><c> e</c><00:04:02.000><c> aggiungiamo</c><00:04:02.720><c> una</c>
+
+00:04:03.009 --> 00:04:03.019 align:start position:0%
+il parrot finta e aggiungiamo una
+ 
+
+00:04:03.019 --> 00:04:05.770 align:start position:0%
+il parrot finta e aggiungiamo una
+seconda<00:04:03.470><c> scheda</c><00:04:03.680><c> di</c><00:04:03.949><c> rete</c><00:04:04.129><c> quindi</c><00:04:04.790><c> ad</c><00:04:05.209><c> le</c>
+
+00:04:05.770 --> 00:04:05.780 align:start position:0%
+seconda scheda di rete quindi ad le
+ 
+
+00:04:05.780 --> 00:04:08.710 align:start position:0%
+seconda scheda di rete quindi ad le
+torri<00:04:06.079><c> device</c><00:04:06.560><c> che</c><00:04:07.370><c> sarà</c><00:04:07.669><c> collegato</c><00:04:08.359><c> al</c>
+
+00:04:08.710 --> 00:04:08.720 align:start position:0%
+torri device che sarà collegato al
+ 
+
+00:04:08.720 --> 00:04:11.470 align:start position:0%
+torri device che sarà collegato al
+bridge<00:04:09.049><c> 1</c>
+
+00:04:11.470 --> 00:04:11.480 align:start position:0%
+bridge 1
+ 
+
+00:04:11.480 --> 00:04:14.470 align:start position:0%
+bridge 1
+perfetto<00:04:12.010><c> allora</c><00:04:13.010><c> accendiamo</c><00:04:13.819><c> anche</c><00:04:14.330><c> la</c>
+
+00:04:14.470 --> 00:04:14.480 align:start position:0%
+perfetto allora accendiamo anche la
+ 
+
+00:04:14.480 --> 00:04:18.509 align:start position:0%
+perfetto allora accendiamo anche la
+nostra<00:04:14.629><c> macchina</c><00:04:15.140><c> parrot</c>
+
+00:04:18.509 --> 00:04:18.519 align:start position:0%
+ 
+ 
+
+00:04:18.519 --> 00:04:23.620 align:start position:0%
+ 
+e<00:04:19.519><c> pre</c><00:04:19.790><c> assumiamo</c><00:04:20.510><c> tornando</c><00:04:21.199><c> qui</c><00:04:21.970><c> nel</c><00:04:22.970><c> network</c>
+
+00:04:23.620 --> 00:04:23.630 align:start position:0%
+e pre assumiamo tornando qui nel network
+ 
+
+00:04:23.630 --> 00:04:26.170 align:start position:0%
+e pre assumiamo tornando qui nel network
+chi<00:04:24.229><c> è</c><00:04:24.260><c> attaccato</c><00:04:24.500><c> al</c><00:04:24.979><c> bridge</c><00:04:25.220><c> zero</c><00:04:25.820><c> e</c><00:04:25.850><c> quindi</c>
+
+00:04:26.170 --> 00:04:26.180 align:start position:0%
+chi è attaccato al bridge zero e quindi
+ 
+
+00:04:26.180 --> 00:04:30.300 align:start position:0%
+chi è attaccato al bridge zero e quindi
+parrot<00:04:26.900><c> otterrà</c><00:04:27.710><c> un</c><00:04:28.460><c> indirizzo</c><00:04:29.030><c> ip</c>
+
+00:04:30.300 --> 00:04:30.310 align:start position:0%
+parrot otterrà un indirizzo ip
+ 
+
+00:04:30.310 --> 00:04:34.900 align:start position:0%
+parrot otterrà un indirizzo ip
+della<00:04:31.310><c> classe</c><00:04:31.790><c> 1921</c><00:04:32.660><c> 6</c><00:04:32.930><c> 800</c><00:04:33.590><c> nel</c><00:04:33.919><c> mio</c><00:04:34.310><c> caso</c><00:04:34.520><c> nel</c>
+
+00:04:34.900 --> 00:04:34.910 align:start position:0%
+della classe 1921 6 800 nel mio caso nel
+ 
+
+00:04:34.910 --> 00:04:36.820 align:start position:0%
+della classe 1921 6 800 nel mio caso nel
+vostro<00:04:35.090><c> dipende</c><00:04:35.690><c> da</c><00:04:35.780><c> come</c><00:04:35.930><c> avete</c><00:04:36.080><c> configurato</c>
+
+00:04:36.820 --> 00:04:36.830 align:start position:0%
+vostro dipende da come avete configurato
+ 
+
+00:04:36.830 --> 00:04:40.360 align:start position:0%
+vostro dipende da come avete configurato
+prox<00:04:37.190><c> box</c><00:04:37.750><c> e</c><00:04:38.750><c> poi</c><00:04:39.350><c> ci</c><00:04:39.560><c> sarà</c><00:04:39.860><c> invece</c><00:04:40.100><c> una</c>
+
+00:04:40.360 --> 00:04:40.370 align:start position:0%
+prox box e poi ci sarà invece una
+ 
+
+00:04:40.370 --> 00:04:42.730 align:start position:0%
+prox box e poi ci sarà invece una
+macchina<00:04:40.760><c> target</c><00:04:41.180><c> che</c><00:04:41.419><c> poverina</c><00:04:41.960><c> collegata</c>
+
+00:04:42.730 --> 00:04:42.740 align:start position:0%
+macchina target che poverina collegata
+ 
+
+00:04:42.740 --> 00:04:45.300 align:start position:0%
+macchina target che poverina collegata
+allo<00:04:43.160><c> stesso</c><00:04:43.520><c> allo</c><00:04:44.510><c> switch</c>
+
+00:04:45.300 --> 00:04:45.310 align:start position:0%
+allo stesso allo switch
+ 
+
+00:04:45.310 --> 00:04:48.100 align:start position:0%
+allo stesso allo switch
+virtuale<00:04:46.310><c> non</c><00:04:46.580><c> troverà</c><00:04:46.940><c> nessuno</c><00:04:47.449><c> che</c><00:04:47.690><c> gli</c><00:04:47.930><c> dia</c>
+
+00:04:48.100 --> 00:04:48.110 align:start position:0%
+virtuale non troverà nessuno che gli dia
+ 
+
+00:04:48.110 --> 00:04:51.820 align:start position:0%
+virtuale non troverà nessuno che gli dia
+il<00:04:49.120><c> all'indirizzo</c><00:04:50.120><c> ip</c><00:04:50.330><c> andiamo</c><00:04:51.320><c> a</c><00:04:51.350><c> prendere</c>
+
+00:04:51.820 --> 00:04:51.830 align:start position:0%
+il all'indirizzo ip andiamo a prendere
+ 
+
+00:04:51.830 --> 00:04:55.860 align:start position:0%
+il all'indirizzo ip andiamo a prendere
+questa<00:04:52.010><c> macchina</c><00:04:52.699><c> target</c><00:04:53.860><c> e</c><00:04:54.860><c> ci</c><00:04:55.070><c> andiamo</c>
+
+00:04:55.860 --> 00:04:55.870 align:start position:0%
+questa macchina target e ci andiamo
+ 
+
+00:04:55.870 --> 00:05:02.730 align:start position:0%
+questa macchina target e ci andiamo
+a<00:04:56.870><c> posizionare</c><00:04:57.680><c> in</c><00:04:57.770><c> consolle</c>
+
+00:05:02.730 --> 00:05:02.740 align:start position:0%
+ 
+ 
+
+00:05:02.740 --> 00:05:10.570 align:start position:0%
+ 
+vediamo<00:05:03.740><c> a</c><00:05:03.770><c> che</c><00:05:03.889><c> punto</c><00:05:03.919><c> è</c><00:05:04.250><c> arrivata</c>
+
+00:05:10.570 --> 00:05:10.580 align:start position:0%
+ 
+ 
+
+00:05:10.580 --> 00:05:12.480 align:start position:0%
+ 
+allora<00:05:11.180><c> c'è</c><00:05:11.300><c> un</c><00:05:11.470><c> ma</c><00:05:11.590><c> ultimi</c><00:05:11.920><c> se</c><00:05:12.070><c> quindi</c>
+
+00:05:12.480 --> 00:05:12.490 align:start position:0%
+allora c'è un ma ultimi se quindi
+ 
+
+00:05:12.490 --> 00:05:16.500 align:start position:0%
+allora c'è un ma ultimi se quindi
+interfaccia<00:05:13.060><c> grafica</c><00:05:13.180><c> c'è</c>
+
+00:05:16.500 --> 00:05:16.510 align:start position:0%
+ 
+ 
+
+00:05:16.510 --> 00:05:19.840 align:start position:0%
+ 
+però<00:05:17.670><c> e</c><00:05:17.700><c> ancora</c><00:05:18.090><c> pronto</c>
+
+00:05:19.840 --> 00:05:19.850 align:start position:0%
+però e ancora pronto
+ 
+
+00:05:19.850 --> 00:05:24.580 align:start position:0%
+però e ancora pronto
+proviamo<00:05:20.850><c> a</c><00:05:20.880><c> dare</c><00:05:21.360><c> un</c><00:05:21.600><c> control</c><00:05:22.170><c> alt</c><00:05:22.380><c> f1</c>
+
+00:05:24.580 --> 00:05:24.590 align:start position:0%
+proviamo a dare un control alt f1
+ 
+
+00:05:24.590 --> 00:05:27.710 align:start position:0%
+proviamo a dare un control alt f1
+ah<00:05:25.590><c> no</c><00:05:25.650><c> si</c><00:05:26.280><c> è</c><00:05:26.310><c> svegliato</c><00:05:26.880><c> io</c><00:05:27.060><c> volevo</c><00:05:27.240><c> andare</c>
+
+00:05:27.710 --> 00:05:27.720 align:start position:0%
+ah no si è svegliato io volevo andare
+ 
+
+00:05:27.720 --> 00:05:30.250 align:start position:0%
+ah no si è svegliato io volevo andare
+nel<00:05:27.900><c> primo</c><00:05:28.170><c> terminale</c><00:05:28.860><c> va</c><00:05:29.070><c> bene</c>
+
+00:05:30.250 --> 00:05:30.260 align:start position:0%
+nel primo terminale va bene
+ 
+
+00:05:30.260 --> 00:05:33.110 align:start position:0%
+nel primo terminale va bene
+sono<00:05:31.260><c> troppo</c><00:05:31.680><c> frettoloso</c><00:05:32.430><c> stasera</c><00:05:32.970><c> sono</c>
+
+00:05:33.110 --> 00:05:33.120 align:start position:0%
+sono troppo frettoloso stasera sono
+ 
+
+00:05:33.120 --> 00:05:36.050 align:start position:0%
+sono troppo frettoloso stasera sono
+stanco<00:05:33.720><c> e</c><00:05:34.410><c> via</c><00:05:34.950><c> infatti</c><00:05:35.580><c> ho</c><00:05:35.730><c> fatto</c><00:05:35.970><c> il</c>
+
+00:05:36.050 --> 00:05:36.060 align:start position:0%
+stanco e via infatti ho fatto il
+ 
+
+00:05:36.060 --> 00:05:41.940 align:start position:0%
+stanco e via infatti ho fatto il
+controllo<00:05:36.300><c> alte</c><00:05:36.570><c> f1</c><00:05:37.110><c> è</c><00:05:37.590><c> uguale</c>
+
+00:05:41.940 --> 00:05:41.950 align:start position:0%
+ 
+ 
+
+00:05:41.950 --> 00:05:45.430 align:start position:0%
+ 
+p<00:05:42.990><c> l'output</c><00:05:43.590><c> per</c><00:05:43.950><c> favore</c>
+
+00:05:45.430 --> 00:05:45.440 align:start position:0%
+p l'output per favore
+ 
+
+00:05:45.440 --> 00:05:52.830 align:start position:0%
+p l'output per favore
+control<00:05:46.440><c> alt</c><00:05:47.150><c> f6</c>
+
+00:05:52.830 --> 00:05:52.840 align:start position:0%
+ 
+ 
+
+00:05:52.840 --> 00:05:54.900 align:start position:0%
+ 
+no
+
+00:05:54.900 --> 00:05:54.910 align:start position:0%
+no
+ 
+
+00:05:54.910 --> 00:05:59.150 align:start position:0%
+ 
+non<00:05:55.480><c> gli</c><00:05:55.630><c> è</c><00:05:55.660><c> piaciuto</c>
+
+00:05:59.150 --> 00:05:59.160 align:start position:0%
+ 
+ 
+
+00:05:59.160 --> 00:06:02.510 align:start position:0%
+ 
+f77<00:06:00.160><c> perfetti</c><00:06:01.150><c> sappiate</c><00:06:01.630><c> che</c><00:06:01.750><c> per</c><00:06:01.900><c> passare</c>
+
+00:06:02.510 --> 00:06:02.520 align:start position:0%
+f77 perfetti sappiate che per passare
+ 
+
+00:06:02.520 --> 00:06:05.160 align:start position:0%
+f77 perfetti sappiate che per passare
+dalla<00:06:03.520><c> modalità</c><00:06:03.640><c> grafica</c><00:06:04.480><c> quella</c><00:06:04.720><c> terminale</c>
+
+00:06:05.160 --> 00:06:05.170 align:start position:0%
+dalla modalità grafica quella terminale
+ 
+
+00:06:05.170 --> 00:06:09.030 align:start position:0%
+dalla modalità grafica quella terminale
+control<00:06:05.890><c> alt</c><00:06:06.280><c> f1</c><00:06:07.030><c> f2</c><00:06:07.090><c> f3</c><00:06:07.450><c> f4</c><00:06:07.840><c> avrei</c><00:06:08.740><c> quattro</c>
+
+00:06:09.030 --> 00:06:09.040 align:start position:0%
+control alt f1 f2 f3 f4 avrei quattro
+ 
+
+00:06:09.040 --> 00:06:12.240 align:start position:0%
+control alt f1 f2 f3 f4 avrei quattro
+terminali<00:06:09.340><c> virtuali</c><00:06:10.120><c> control</c><00:06:11.110><c> alt</c><00:06:11.470><c> f7</c>
+
+00:06:12.240 --> 00:06:12.250 align:start position:0%
+terminali virtuali control alt f7
+ 
+
+00:06:12.250 --> 00:06:14.610 align:start position:0%
+terminali virtuali control alt f7
+riporta<00:06:12.910><c> sul</c><00:06:13.300><c> terminale</c><00:06:14.200><c> al</c><00:06:14.380><c> quale</c>
+
+00:06:14.610 --> 00:06:14.620 align:start position:0%
+riporta sul terminale al quale
+ 
+
+00:06:14.620 --> 00:06:18.260 align:start position:0%
+riporta sul terminale al quale
+agganciato<00:06:15.190><c> l'ambiente</c><00:06:16.150><c> grafico</c>
+
+00:06:18.260 --> 00:06:18.270 align:start position:0%
+agganciato l'ambiente grafico
+ 
+
+00:06:18.270 --> 00:06:22.279 align:start position:0%
+agganciato l'ambiente grafico
+ok<00:06:18.630><c> andiamo</c><00:06:19.050><c> a</c><00:06:19.260><c> chiudere</c><00:06:19.680><c> un</c><00:06:19.710><c> po</c><00:06:19.830><c> di</c><00:06:20.010><c> cose</c>
+
+00:06:22.279 --> 00:06:22.289 align:start position:0%
+ok andiamo a chiudere un po di cose
+ 
+
+00:06:22.289 --> 00:06:24.230 align:start position:0%
+ok andiamo a chiudere un po di cose
+questa<00:06:22.619><c> macchina</c><00:06:22.800><c> ci</c><00:06:23.729><c> dice</c><00:06:23.969><c> siamo</c>
+
+00:06:24.230 --> 00:06:24.240 align:start position:0%
+questa macchina ci dice siamo
+ 
+
+00:06:24.240 --> 00:06:26.389 align:start position:0%
+questa macchina ci dice siamo
+disconnessi<00:06:24.930><c> dalla</c><00:06:24.960><c> rete</c><00:06:25.199><c> in</c><00:06:25.559><c> realtà</c><00:06:25.949><c> il</c><00:06:26.129><c> cavo</c>
+
+00:06:26.389 --> 00:06:26.399 align:start position:0%
+disconnessi dalla rete in realtà il cavo
+ 
+
+00:06:26.399 --> 00:06:33.250 align:start position:0%
+disconnessi dalla rete in realtà il cavo
+di<00:06:26.520><c> rete</c><00:06:26.639><c> cell</c>
+
+00:06:33.250 --> 00:06:33.260 align:start position:0%
+ 
+ 
+
+00:06:33.260 --> 00:06:36.060 align:start position:0%
+ 
+comunque<00:06:33.530><c> il</c><00:06:33.860><c> perché</c><00:06:34.280><c> no</c>
+
+00:06:36.060 --> 00:06:36.070 align:start position:0%
+comunque il perché no
+ 
+
+00:06:36.070 --> 00:06:43.600 align:start position:0%
+comunque il perché no
+troubleshooting<00:06:37.300><c> momento</c><00:06:38.300><c> troubleshooting</c>
+
+00:06:43.600 --> 00:06:43.610 align:start position:0%
+ 
+ 
+
+00:06:43.610 --> 00:06:47.760 align:start position:0%
+ 
+l'azione<00:06:44.060><c> è</c><00:06:44.090><c> evidente</c>
+
+00:06:47.760 --> 00:06:47.770 align:start position:0%
+ 
+ 
+
+00:06:47.770 --> 00:06:50.939 align:start position:0%
+ 
+il<00:06:47.979><c> cavo</c><00:06:48.460><c> cioè</c><00:06:49.229><c> giustamente</c><00:06:50.229><c> lo</c><00:06:50.319><c> dice</c><00:06:50.530><c> non</c>
+
+00:06:50.939 --> 00:06:50.949 align:start position:0%
+il cavo cioè giustamente lo dice non
+ 
+
+00:06:50.949 --> 00:06:53.159 align:start position:0%
+il cavo cioè giustamente lo dice non
+trovo<00:06:51.280><c> la</c><00:06:51.400><c> rete</c><00:06:51.699><c> ma</c><00:06:52.389><c> il</c><00:06:52.419><c> cavo</c><00:06:52.690><c> cioè</c><00:06:52.900><c> e</c>
+
+00:06:53.159 --> 00:06:53.169 align:start position:0%
+trovo la rete ma il cavo cioè e
+ 
+
+00:06:53.169 --> 00:06:55.320 align:start position:0%
+trovo la rete ma il cavo cioè e
+attaccato<00:06:53.860><c> è</c><00:06:54.069><c> in</c><00:06:54.250><c> connessione</c><00:06:54.520><c> perché</c><00:06:55.060><c> non</c><00:06:55.210><c> ho</c>
+
+00:06:55.320 --> 00:06:55.330 align:start position:0%
+attaccato è in connessione perché non ho
+ 
+
+00:06:55.330 --> 00:06:57.300 align:start position:0%
+attaccato è in connessione perché non ho
+non<00:06:55.539><c> trovo</c><00:06:55.900><c> a</c><00:06:55.930><c> chi</c><00:06:56.349><c> da</c><00:06:56.620><c> chi</c><00:06:56.740><c> farmi</c><00:06:57.039><c> dare</c><00:06:57.159><c> un</c>
+
+00:06:57.300 --> 00:06:57.310 align:start position:0%
+non trovo a chi da chi farmi dare un
+ 
+
+00:06:57.310 --> 00:07:00.210 align:start position:0%
+non trovo a chi da chi farmi dare un
+indirizzo<00:06:57.819><c> clicco</c><00:06:58.210><c> sulla</c><00:06:58.449><c> rotellina</c><00:06:59.069><c> vado</c><00:07:00.069><c> mi</c>
+
+00:07:00.210 --> 00:07:00.220 align:start position:0%
+indirizzo clicco sulla rotellina vado mi
+ 
+
+00:07:00.220 --> 00:07:04.080 align:start position:0%
+indirizzo clicco sulla rotellina vado mi
+devi<00:07:00.490><c> 4</c><00:07:00.990><c> e</c><00:07:01.990><c> da</c><00:07:02.199><c> qui</c><00:07:02.379><c> dico</c><00:07:02.830><c> manuale</c><00:07:03.460><c> quindi</c>
+
+00:07:04.080 --> 00:07:04.090 align:start position:0%
+devi 4 e da qui dico manuale quindi
+ 
+
+00:07:04.090 --> 00:07:07.490 align:start position:0%
+devi 4 e da qui dico manuale quindi
+assegno<00:07:04.720><c> io</c><00:07:04.900><c> il</c><00:07:05.139><c> numero</c>
+
+00:07:07.490 --> 00:07:07.500 align:start position:0%
+assegno io il numero
+ 
+
+00:07:07.500 --> 00:07:11.050 align:start position:0%
+assegno io il numero
+le<00:07:07.800><c> classi</c><00:07:08.220><c> utilizzabili</c><00:07:09.440><c> da</c>
+
+00:07:11.050 --> 00:07:11.060 align:start position:0%
+le classi utilizzabili da
+ 
+
+00:07:11.060 --> 00:07:15.770 align:start position:0%
+le classi utilizzabili da
+manuale<00:07:12.060><c> da</c><00:07:12.150><c> rfc</c><00:07:12.540><c> cioè</c><00:07:13.350><c> la</c><00:07:13.800><c> standard</c><00:07:14.520><c> per</c><00:07:14.820><c> hera</c>
+
+00:07:15.770 --> 00:07:15.780 align:start position:0%
+manuale da rfc cioè la standard per hera
+ 
+
+00:07:15.780 --> 00:07:18.970 align:start position:0%
+manuale da rfc cioè la standard per hera
+per<00:07:15.870><c> le</c><00:07:16.050><c> reti</c><00:07:16.380><c> locali</c><00:07:16.500><c> sono</c><00:07:17.100><c> la</c>
+
+00:07:18.970 --> 00:07:18.980 align:start position:0%
+per le reti locali sono la
+ 
+
+00:07:18.980 --> 00:07:24.260 align:start position:0%
+per le reti locali sono la
+10.0<00:07:19.980><c> appunto</c><00:07:20.270><c> 0.0</c><00:07:21.270><c> in</c><00:07:22.110><c> cui</c><00:07:22.320><c> sono</c><00:07:22.530><c> validi</c><00:07:23.270><c> non</c>
+
+00:07:24.260 --> 00:07:24.270 align:start position:0%
+10.0 appunto 0.0 in cui sono validi non
+ 
+
+00:07:24.270 --> 00:07:26.240 align:start position:0%
+10.0 appunto 0.0 in cui sono validi non
+utilizzabili<00:07:24.930><c> per</c><00:07:25.050><c> che</c><00:07:25.560><c> indicano</c><00:07:25.920><c> la</c><00:07:26.010><c> rete</c>
+
+00:07:26.240 --> 00:07:26.250 align:start position:0%
+utilizzabili per che indicano la rete
+ 
+
+00:07:26.250 --> 00:07:29.830 align:start position:0%
+utilizzabili per che indicano la rete
+cioè<00:07:26.450><c> i</c><00:07:27.450><c> primi</c><00:07:27.930><c> il</c><00:07:28.890><c> primo</c>
+
+00:07:29.830 --> 00:07:29.840 align:start position:0%
+cioè i primi il primo
+ 
+
+00:07:29.840 --> 00:07:34.070 align:start position:0%
+cioè i primi il primo
+oggetto<00:07:30.840><c> del</c><00:07:31.680><c> primo</c><00:07:31.830><c> byte</c><00:07:32.310><c> quindi</c><00:07:32.760><c> barra</c><00:07:33.120><c> 8</c><00:07:33.480><c> e</c>
+
+00:07:34.070 --> 00:07:34.080 align:start position:0%
+oggetto del primo byte quindi barra 8 e
+ 
+
+00:07:34.080 --> 00:07:35.360 align:start position:0%
+oggetto del primo byte quindi barra 8 e
+quindi<00:07:34.380><c> avremmo</c><00:07:34.590><c> su</c><00:07:34.980><c> questa</c><00:07:35.220><c> rete</c>
+
+00:07:35.360 --> 00:07:35.370 align:start position:0%
+quindi avremmo su questa rete
+ 
+
+00:07:35.370 --> 00:07:40.580 align:start position:0%
+quindi avremmo su questa rete
+utilizzabili<00:07:36.650><c> 255</c><00:07:37.650><c> per</c><00:07:37.770><c> 255</c><00:07:38.760><c> per</c><00:07:38.990><c> 255</c><00:07:39.990><c> meno</c><00:07:40.410><c> il</c>
+
+00:07:40.580 --> 00:07:40.590 align:start position:0%
+utilizzabili 255 per 255 per 255 meno il
+ 
+
+00:07:40.590 --> 00:07:43.990 align:start position:0%
+utilizzabili 255 per 255 per 255 meno il
+primo<00:07:41.040><c> e</c><00:07:41.070><c> l'ultimo</c><00:07:41.130><c> indirizzo</c>
+
+00:07:43.990 --> 00:07:44.000 align:start position:0%
+ 
+ 
+
+00:07:44.000 --> 00:07:49.670 align:start position:0%
+ 
+oppure<00:07:45.000><c> al</c><00:07:45.360><c> 172</c><00:07:46.050><c> 16</c><00:07:46.530><c> barra</c><00:07:46.800><c> 24</c><00:07:47.520><c> o</c><00:07:47.790><c> la</c><00:07:47.970><c> 190</c><00:07:48.650><c> 268</c>
+
+00:07:49.670 --> 00:07:49.680 align:start position:0%
+oppure al 172 16 barra 24 o la 190 268
+ 
+
+00:07:49.680 --> 00:07:51.780 align:start position:0%
+oppure al 172 16 barra 24 o la 190 268
+io<00:07:49.830><c> sono</c><00:07:50.250><c> pigro</c>
+
+00:07:51.780 --> 00:07:51.790 align:start position:0%
+io sono pigro
+ 
+
+00:07:51.790 --> 00:07:55.250 align:start position:0%
+io sono pigro
+a<00:07:52.120><c> me</c><00:07:52.270><c> piace</c><00:07:52.630><c> molto</c><00:07:53.140><c> il</c><00:07:53.920><c> classe</c><00:07:54.400><c> 10</c>
+
+00:07:55.250 --> 00:07:55.260 align:start position:0%
+a me piace molto il classe 10
+ 
+
+00:07:55.260 --> 00:07:59.780 align:start position:0%
+a me piace molto il classe 10
+e<00:07:56.260><c> gli</c><00:07:56.290><c> do</c><00:07:56.560><c> il</c><00:07:56.920><c> 10</c><00:07:57.370><c> 00</c>
+
+00:07:59.780 --> 00:07:59.790 align:start position:0%
+e gli do il 10 00
+ 
+
+00:07:59.790 --> 00:08:02.990 align:start position:0%
+e gli do il 10 00
+200
+
+00:08:02.990 --> 00:08:03.000 align:start position:0%
+ 
+ 
+
+00:08:03.000 --> 00:08:06.860 align:start position:0%
+ 
+mi<00:08:04.000><c> va</c><00:08:04.120><c> bene</c><00:08:04.420><c> invece</c><00:08:04.480><c> dall'imballo</c><00:08:05.470><c> 8</c><00:08:05.860><c> dargli</c>
+
+00:08:06.860 --> 00:08:06.870 align:start position:0%
+mi va bene invece dall'imballo 8 dargli
+ 
+
+00:08:06.870 --> 00:08:10.820 align:start position:0%
+mi va bene invece dall'imballo 8 dargli
+invece<00:08:07.870><c> un</c><00:08:08.770><c> vano</c><00:08:09.190><c> a</c><00:08:09.220><c> 24</c>
+
+00:08:10.820 --> 00:08:10.830 align:start position:0%
+invece un vano a 24
+ 
+
+00:08:10.830 --> 00:08:13.530 align:start position:0%
+invece un vano a 24
+questo<00:08:11.830><c> sarebbe</c><00:08:12.040><c> un</c><00:08:12.190><c> bar</c><00:08:12.280><c> a</c><00:08:12.370><c> 32</c><00:08:12.850><c> o</c><00:08:13.180><c> questo</c>
+
+00:08:13.530 --> 00:08:13.540 align:start position:0%
+questo sarebbe un bar a 32 o questo
+ 
+
+00:08:13.540 --> 00:08:17.220 align:start position:0%
+questo sarebbe un bar a 32 o questo
+parlamento<00:08:13.930><c> 4</c><00:08:15.060><c> il</c><00:08:16.060><c> gateway</c><00:08:16.540><c> posso</c><00:08:16.930><c> darglielo</c>
+
+00:08:17.220 --> 00:08:17.230 align:start position:0%
+parlamento 4 il gateway posso darglielo
+ 
+
+00:08:17.230 --> 00:08:18.990 align:start position:0%
+parlamento 4 il gateway posso darglielo
+non<00:08:17.470><c> darglielo</c><00:08:18.010><c> se</c><00:08:18.130><c> voglio</c><00:08:18.400><c> permettere</c><00:08:18.970><c> o</c>
+
+00:08:18.990 --> 00:08:19.000 align:start position:0%
+non darglielo se voglio permettere o
+ 
+
+00:08:19.000 --> 00:08:20.790 align:start position:0%
+non darglielo se voglio permettere o
+meno<00:08:19.120><c> questa</c><00:08:19.630><c> macchina</c><00:08:20.050><c> di</c><00:08:20.200><c> uscire</c>
+
+00:08:20.790 --> 00:08:20.800 align:start position:0%
+meno questa macchina di uscire
+ 
+
+00:08:20.800 --> 00:08:24.410 align:start position:0%
+meno questa macchina di uscire
+attraverso<00:08:21.510><c> la</c><00:08:22.510><c> mia</c><00:08:22.630><c> macchina</c><00:08:22.840><c> simil</c><00:08:23.710><c> parrot</c>
+
+00:08:24.410 --> 00:08:24.420 align:start position:0%
+attraverso la mia macchina simil parrot
+ 
+
+00:08:24.420 --> 00:08:28.290 align:start position:0%
+attraverso la mia macchina simil parrot
+glielo<00:08:25.420><c> imposto</c><00:08:25.960><c> comunque</c><00:08:26.620><c> perché</c><00:08:26.890><c> magari</c><00:08:27.300><c> in</c>
+
+00:08:28.290 --> 00:08:28.300 align:start position:0%
+glielo imposto comunque perché magari in
+ 
+
+00:08:28.300 --> 00:08:30.960 align:start position:0%
+glielo imposto comunque perché magari in
+un<00:08:28.480><c> futuro</c><00:08:29.080><c> caro</c><00:08:29.890><c> damiano</c><00:08:30.430><c> ti</c><00:08:30.550><c> potrebbe</c>
+
+00:08:30.960 --> 00:08:30.970 align:start position:0%
+un futuro caro damiano ti potrebbe
+ 
+
+00:08:30.970 --> 00:08:32.510 align:start position:0%
+un futuro caro damiano ti potrebbe
+essere<00:08:31.390><c> utile</c>
+
+00:08:32.510 --> 00:08:32.520 align:start position:0%
+essere utile
+ 
+
+00:08:32.520 --> 00:08:37.610 align:start position:0%
+essere utile
+stessa<00:08:33.520><c> cosa</c><00:08:33.700><c> per</c><00:08:34.710><c> il</c><00:08:35.710><c> dns</c><00:08:36.490><c> potrai</c><00:08:37.210><c> utilizzare</c>
+
+00:08:37.610 --> 00:08:37.620 align:start position:0%
+stessa cosa per il dns potrai utilizzare
+ 
+
+00:08:37.620 --> 00:08:41.280 align:start position:0%
+stessa cosa per il dns potrai utilizzare
+la<00:08:38.620><c> macchina</c><00:08:39.010><c> simil</c><00:08:39.820><c> parrot</c><00:08:40.300><c> come</c><00:08:40.630><c> dns</c><00:08:41.020><c> per</c>
+
+00:08:41.280 --> 00:08:41.290 align:start position:0%
+la macchina simil parrot come dns per
+ 
+
+00:08:41.290 --> 00:08:44.870 align:start position:0%
+la macchina simil parrot come dns per
+questa<00:08:41.770><c> o</c><00:08:42.250><c> permettere</c><00:08:42.880><c> attraverso</c><00:08:43.740><c> un</c>
+
+00:08:44.870 --> 00:08:44.880 align:start position:0%
+questa o permettere attraverso un
+ 
+
+00:08:44.880 --> 00:08:46.970 align:start position:0%
+questa o permettere attraverso un
+routing<00:08:45.880><c> o</c><00:08:46.030><c> un</c>
+
+00:08:46.970 --> 00:08:46.980 align:start position:0%
+routing o un
+ 
+
+00:08:46.980 --> 00:08:50.640 align:start position:0%
+routing o un
+altra<00:08:47.980><c> macchina</c><00:08:48.450><c> target</c><00:08:49.450><c> la</c><00:08:49.660><c> tua</c><00:08:49.840><c> debian</c><00:08:50.260><c> 10</c><00:08:50.620><c> e</c>
+
+00:08:50.640 --> 00:08:50.650 align:start position:0%
+altra macchina target la tua debian 10 e
+ 
+
+00:08:50.650 --> 00:08:53.280 align:start position:0%
+altra macchina target la tua debian 10 e
+di<00:08:50.770><c> andare</c><00:08:51.040><c> verso</c><00:08:51.340><c> internet</c><00:08:52.360><c> facciamo</c><00:08:53.140><c> finta</c>
+
+00:08:53.280 --> 00:08:53.290 align:start position:0%
+di andare verso internet facciamo finta
+ 
+
+00:08:53.290 --> 00:08:54.930 align:start position:0%
+di andare verso internet facciamo finta
+che<00:08:53.530><c> sia</c><00:08:53.830><c> così</c><00:08:54.130><c> quindi</c><00:08:54.490><c> mettiamo</c><00:08:54.880><c> un</c>
+
+00:08:54.930 --> 00:08:54.940 align:start position:0%
+che sia così quindi mettiamo un
+ 
+
+00:08:54.940 --> 00:08:58.350 align:start position:0%
+che sia così quindi mettiamo un
+indirizzo<00:08:55.450><c> in</c><00:08:55.600><c> dvd</c><00:08:55.870><c> ns</c><00:08:56.410><c> pubblico</c><00:08:57.240><c> quello</c><00:08:58.240><c> di</c>
+
+00:08:58.350 --> 00:08:58.360 align:start position:0%
+indirizzo in dvd ns pubblico quello di
+ 
+
+00:08:58.360 --> 00:09:00.300 align:start position:0%
+indirizzo in dvd ns pubblico quello di
+google<00:08:58.510><c> e</c><00:08:58.840><c> mi</c><00:08:59.080><c> sta</c><00:08:59.260><c> bene</c>
+
+00:09:00.300 --> 00:09:00.310 align:start position:0%
+google e mi sta bene
+ 
+
+00:09:00.310 --> 00:09:03.120 align:start position:0%
+google e mi sta bene
+a<00:09:00.340><c> questo</c><00:09:00.730><c> punto</c><00:09:01.180><c> magicamente</c><00:09:02.130><c> l'interfaccia</c>
+
+00:09:03.120 --> 00:09:03.130 align:start position:0%
+a questo punto magicamente l'interfaccia
+ 
+
+00:09:03.130 --> 00:09:05.970 align:start position:0%
+a questo punto magicamente l'interfaccia
+capisce<00:09:03.820><c> che</c><00:09:04.000><c> ha</c><00:09:04.030><c> la</c><00:09:04.390><c> rete</c><00:09:04.540><c> a</c><00:09:04.720><c> disposizione</c><00:09:04.980><c> e</c>
+
+00:09:05.970 --> 00:09:05.980 align:start position:0%
+capisce che ha la rete a disposizione e
+ 
+
+00:09:05.980 --> 00:09:07.830 align:start position:0%
+capisce che ha la rete a disposizione e
+su<00:09:06.160><c> questa</c><00:09:06.460><c> macchina</c><00:09:06.610><c> per</c><00:09:07.210><c> il</c><00:09:07.360><c> momento</c>
+
+00:09:07.830 --> 00:09:07.840 align:start position:0%
+su questa macchina per il momento
+ 
+
+00:09:07.840 --> 00:09:10.980 align:start position:0%
+su questa macchina per il momento
+abbiamo<00:09:08.110><c> finito</c>
+
+00:09:10.980 --> 00:09:10.990 align:start position:0%
+abbiamo finito
+ 
+
+00:09:10.990 --> 00:09:13.680 align:start position:0%
+ 
+adesso<00:09:11.470><c> andiamo</c><00:09:12.040><c> sulla</c><00:09:12.490><c> macchina</c><00:09:12.880><c> parrot</c><00:09:13.360><c> che</c>
+
+00:09:13.680 --> 00:09:13.690 align:start position:0%
+adesso andiamo sulla macchina parrot che
+ 
+
+00:09:13.690 --> 00:09:16.560 align:start position:0%
+adesso andiamo sulla macchina parrot che
+è<00:09:13.720><c> quella</c><00:09:14.520><c> dall'attuale</c><00:09:15.520><c> in</c><00:09:15.730><c> teoria</c><00:09:16.089><c> dobbiamo</c>
+
+00:09:16.560 --> 00:09:16.570 align:start position:0%
+è quella dall'attuale in teoria dobbiamo
+ 
+
+00:09:16.570 --> 00:09:20.090 align:start position:0%
+è quella dall'attuale in teoria dobbiamo
+fare<00:09:17.020><c> tutte</c><00:09:17.860><c> le</c><00:09:17.890><c> nostre</c><00:09:18.130><c> espressioni</c><00:09:18.930><c> apriamo</c>
+
+00:09:20.090 --> 00:09:20.100 align:start position:0%
+fare tutte le nostre espressioni apriamo
+ 
+
+00:09:20.100 --> 00:09:23.600 align:start position:0%
+fare tutte le nostre espressioni apriamo
+la<00:09:21.100><c> scheda</c><00:09:21.580><c> che</c><00:09:22.060><c> lo</c><00:09:22.209><c> riguarda</c>
+
+00:09:23.600 --> 00:09:23.610 align:start position:0%
+la scheda che lo riguarda
+ 
+
+00:09:23.610 --> 00:09:27.860 align:start position:0%
+la scheda che lo riguarda
+la<00:09:24.610><c> mettiamo</c><00:09:25.000><c> a</c><00:09:25.149><c> schermo</c><00:09:25.540><c> intero</c>
+
+00:09:27.860 --> 00:09:27.870 align:start position:0%
+la mettiamo a schermo intero
+ 
+
+00:09:27.870 --> 00:09:32.310 align:start position:0%
+la mettiamo a schermo intero
+perfetto<00:09:29.279><c> e</c><00:09:30.279><c> andando</c><00:09:31.149><c> nelle</c><00:09:31.510><c> impostazioni</c><00:09:31.839><c> di</c>
+
+00:09:32.310 --> 00:09:32.320 align:start position:0%
+perfetto e andando nelle impostazioni di
+ 
+
+00:09:32.320 --> 00:09:35.210 align:start position:0%
+perfetto e andando nelle impostazioni di
+rete
+
+00:09:35.210 --> 00:09:35.220 align:start position:0%
+ 
+ 
+
+00:09:35.220 --> 00:09:37.769 align:start position:0%
+ 
+come<00:09:36.220><c> al</c><00:09:36.370><c> solito</c><00:09:36.490><c> non</c><00:09:36.730><c> ci</c><00:09:36.880><c> azzecco</c><00:09:37.240><c> mai</c><00:09:37.270><c> giusto</c>
+
+00:09:37.769 --> 00:09:37.779 align:start position:0%
+come al solito non ci azzecco mai giusto
+ 
+
+00:09:37.779 --> 00:09:42.389 align:start position:0%
+come al solito non ci azzecco mai giusto
+menu<00:09:38.490><c> lato</c><00:09:39.490><c> destro</c><00:09:40.290><c> tasto</c><00:09:41.290><c> sinistro</c><00:09:41.470><c> ecco</c><00:09:42.220><c> le</c>
+
+00:09:42.389 --> 00:09:42.399 align:start position:0%
+menu lato destro tasto sinistro ecco le
+ 
+
+00:09:42.399 --> 00:09:44.060 align:start position:0%
+menu lato destro tasto sinistro ecco le
+impostazioni<00:09:43.029><c> di</c><00:09:43.149><c> rete</c>
+
+00:09:44.060 --> 00:09:44.070 align:start position:0%
+impostazioni di rete
+ 
+
+00:09:44.070 --> 00:09:48.300 align:start position:0%
+impostazioni di rete
+mi<00:09:45.070><c> troverò</c><00:09:45.459><c> due</c><00:09:45.670><c> schede</c><00:09:46.020><c> la</c><00:09:47.020><c> prima</c><00:09:47.380><c> che</c><00:09:48.160><c> va</c>
+
+00:09:48.300 --> 00:09:48.310 align:start position:0%
+mi troverò due schede la prima che va
+ 
+
+00:09:48.310 --> 00:09:50.940 align:start position:0%
+mi troverò due schede la prima che va
+verso<00:09:48.670><c> il</c><00:09:48.910><c> mondo</c><00:09:49.450><c> e</c><00:09:49.660><c> la</c><00:09:49.870><c> seconda</c><00:09:50.380><c> che</c><00:09:50.500><c> va</c><00:09:50.649><c> sul</c>
+
+00:09:50.940 --> 00:09:50.950 align:start position:0%
+verso il mondo e la seconda che va sul
+ 
+
+00:09:50.950 --> 00:09:55.079 align:start position:0%
+verso il mondo e la seconda che va sul
+nuovo<00:09:51.190><c> virtual</c><00:09:51.700><c> switch</c><00:09:52.050><c> la</c><00:09:53.050><c> abilito</c><00:09:54.089><c> filippo</c>
+
+00:09:55.079 --> 00:09:55.089 align:start position:0%
+nuovo virtual switch la abilito filippo
+ 
+
+00:09:55.089 --> 00:09:56.510 align:start position:0%
+nuovo virtual switch la abilito filippo
+sulla<00:09:55.360><c> rotella</c>
+
+00:09:56.510 --> 00:09:56.520 align:start position:0%
+sulla rotella
+ 
+
+00:09:56.520 --> 00:09:58.470 align:start position:0%
+sulla rotella
+vado<00:09:57.520><c> in</c><00:09:57.580><c> ipv4</c>
+
+00:09:58.470 --> 00:09:58.480 align:start position:0%
+vado in ipv4
+ 
+
+00:09:58.480 --> 00:10:00.510 align:start position:0%
+vado in ipv4
+quindi<00:09:59.170><c> dico</c><00:09:59.290><c> che</c><00:09:59.440><c> lo</c><00:09:59.740><c> deve</c><00:09:59.950><c> fare</c><00:09:59.980><c> manualmente</c>
+
+00:10:00.510 --> 00:10:00.520 align:start position:0%
+quindi dico che lo deve fare manualmente
+ 
+
+00:10:00.520 --> 00:10:02.970 align:start position:0%
+quindi dico che lo deve fare manualmente
+quindi<00:10:01.270><c> ripeto</c><00:10:01.630><c> la</c><00:10:02.290><c> procedura</c><00:10:02.709><c> che</c><00:10:02.800><c> ho</c><00:10:02.830><c> fatto</c>
+
+00:10:02.970 --> 00:10:02.980 align:start position:0%
+quindi ripeto la procedura che ho fatto
+ 
+
+00:10:02.980 --> 00:10:06.950 align:start position:0%
+quindi ripeto la procedura che ho fatto
+prima<00:10:03.459><c> soltanto</c><00:10:04.180><c> la</c><00:10:04.360><c> differenza</c><00:10:04.930><c> 10</c><00:10:05.200><c> 0</c><00:10:05.470><c> 0</c><00:10:05.740><c> 1</c>
+
+00:10:06.950 --> 00:10:06.960 align:start position:0%
+prima soltanto la differenza 10 0 0 1
+ 
+
+00:10:06.960 --> 00:10:11.369 align:start position:0%
+prima soltanto la differenza 10 0 0 1
+[Musica]
+
+00:10:11.369 --> 00:10:11.379 align:start position:0%
+ 
+ 
+
+00:10:11.379 --> 00:10:14.009 align:start position:0%
+ 
+il<00:10:11.559><c> rito</c><00:10:11.799><c> e</c><00:10:11.829><c> non</c><00:10:11.979><c> ne</c><00:10:12.099><c> ho</c><00:10:12.220><c> bisogno</c><00:10:12.249><c> di</c><00:10:13.119><c> ns</c><00:10:13.689><c> non</c><00:10:13.899><c> ne</c>
+
+00:10:14.009 --> 00:10:14.019 align:start position:0%
+il rito e non ne ho bisogno di ns non ne
+ 
+
+00:10:14.019 --> 00:10:16.139 align:start position:0%
+il rito e non ne ho bisogno di ns non ne
+ho<00:10:14.049><c> bisogno</c><00:10:14.139><c> perché</c><00:10:15.129><c> tanto</c><00:10:15.399><c> li</c><00:10:15.579><c> ho</c><00:10:15.609><c> già</c><00:10:15.789><c> queste</c>
+
+00:10:16.139 --> 00:10:16.149 align:start position:0%
+ho bisogno perché tanto li ho già queste
+ 
+
+00:10:16.149 --> 00:10:19.949 align:start position:0%
+ho bisogno perché tanto li ho già queste
+cose<00:10:16.539><c> sulla</c><00:10:17.289><c> mia</c><00:10:17.410><c> scheda</c><00:10:17.649><c> principale</c>
+
+00:10:19.949 --> 00:10:19.959 align:start position:0%
+cose sulla mia scheda principale
+ 
+
+00:10:19.959 --> 00:10:21.779 align:start position:0%
+cose sulla mia scheda principale
+una<00:10:20.169><c> volta</c><00:10:20.289><c> fatto</c><00:10:20.709><c> questo</c><00:10:20.739><c> siamo</c><00:10:21.489><c> sempre</c>
+
+00:10:21.779 --> 00:10:21.789 align:start position:0%
+una volta fatto questo siamo sempre
+ 
+
+00:10:21.789 --> 00:10:23.489 align:start position:0%
+una volta fatto questo siamo sempre
+sulla<00:10:22.419><c> macchina</c>
+
+00:10:23.489 --> 00:10:23.499 align:start position:0%
+sulla macchina
+ 
+
+00:10:23.499 --> 00:10:26.309 align:start position:0%
+sulla macchina
+parrot<00:10:23.889><c> sì</c><00:10:24.160><c> mi</c><00:10:24.279><c> parlò</c><00:10:24.639><c> mai</c><00:10:24.879><c> finta</c><00:10:25.299><c> ok</c><00:10:25.779><c> perché</c>
+
+00:10:26.309 --> 00:10:26.319 align:start position:0%
+parrot sì mi parlò mai finta ok perché
+ 
+
+00:10:26.319 --> 00:10:28.649 align:start position:0%
+parrot sì mi parlò mai finta ok perché
+un<00:10:26.769><c> menù</c><00:10:27.459><c> linux</c><00:10:27.819><c> mint</c>
+
+00:10:28.649 --> 00:10:28.659 align:start position:0%
+un menù linux mint
+ 
+
+00:10:28.659 --> 00:10:31.199 align:start position:0%
+un menù linux mint
+iniziamo<00:10:29.079><c> a</c><00:10:29.169><c> fare</c><00:10:29.199><c> la</c><00:10:29.829><c> verifica</c><00:10:30.039><c> che</c><00:10:30.489><c> tutto</c><00:10:30.970><c> si</c>
+
+00:10:31.199 --> 00:10:31.209 align:start position:0%
+iniziamo a fare la verifica che tutto si
+ 
+
+00:10:31.209 --> 00:10:34.729 align:start position:0%
+iniziamo a fare la verifica che tutto si
+è<00:10:31.239><c> corretto</c><00:10:31.869><c> allora</c><00:10:32.859><c> prima</c><00:10:33.729><c> di</c><00:10:33.759><c> tutto</c><00:10:34.179><c> vediamo</c>
+
+00:10:34.729 --> 00:10:34.739 align:start position:0%
+è corretto allora prima di tutto vediamo
+ 
+
+00:10:34.739 --> 00:10:36.589 align:start position:0%
+è corretto allora prima di tutto vediamo
+le<00:10:35.739><c> schede</c>
+
+00:10:36.589 --> 00:10:36.599 align:start position:0%
+le schede
+ 
+
+00:10:36.599 --> 00:10:40.169 align:start position:0%
+le schede
+ritrovo<00:10:37.599><c> delle</c><00:10:37.929><c> vedo</c><00:10:38.259><c> puliamo</c><00:10:39.159><c> con</c><00:10:39.309><c> control</c><00:10:39.759><c> l</c>
+
+00:10:40.169 --> 00:10:40.179 align:start position:0%
+ritrovo delle vedo puliamo con control l
+ 
+
+00:10:40.179 --> 00:10:44.279 align:start position:0%
+ritrovo delle vedo puliamo con control l
+le<00:10:40.659><c> faccio</c><00:10:41.049><c> un</c><00:10:41.079><c> pd</c><00:10:41.859><c> ha</c><00:10:42.009><c> la</c><00:10:42.639><c> dress</c><00:10:42.959><c> e</c><00:10:43.959><c> vedo</c><00:10:44.259><c> che</c>
+
+00:10:44.279 --> 00:10:44.289 align:start position:0%
+le faccio un pd ha la dress e vedo che
+ 
+
+00:10:44.289 --> 00:10:45.229 align:start position:0%
+le faccio un pd ha la dress e vedo che
+ho
+
+00:10:45.229 --> 00:10:45.239 align:start position:0%
+ho
+ 
+
+00:10:45.239 --> 00:10:48.389 align:start position:0%
+ho
+il<00:10:46.239><c> mio</c><00:10:46.389><c> primo</c><00:10:46.569><c> indirizzo</c><00:10:46.779><c> sulla</c><00:10:47.649><c> lan</c><00:10:47.799><c> e</c>
+
+00:10:48.389 --> 00:10:48.399 align:start position:0%
+il mio primo indirizzo sulla lan e
+ 
+
+00:10:48.399 --> 00:10:53.669 align:start position:0%
+il mio primo indirizzo sulla lan e
+l'indirizzo<00:10:49.269><c> sulla</c><00:10:50.099><c> rete</c><00:10:51.149><c> isolata</c><00:10:52.499><c> e</c><00:10:53.499><c> adesso</c>
+
+00:10:53.669 --> 00:10:53.679 align:start position:0%
+l'indirizzo sulla rete isolata e adesso
+ 
+
+00:10:53.679 --> 00:10:55.919 align:start position:0%
+l'indirizzo sulla rete isolata e adesso
+andiamo<00:10:53.919><c> a</c><00:10:54.069><c> fare</c><00:10:54.279><c> un</c><00:10:54.369><c> ping</c><00:10:54.729><c> per</c><00:10:55.359><c> vedere</c><00:10:55.749><c> se</c>
+
+00:10:55.919 --> 00:10:55.929 align:start position:0%
+andiamo a fare un ping per vedere se
+ 
+
+00:10:55.929 --> 00:10:58.969 align:start position:0%
+andiamo a fare un ping per vedere se
+l'altra<00:10:56.319><c> macchina</c><00:10:56.470><c> ci</c><00:10:57.249><c> risponde</c><00:10:57.849><c> o</c>
+
+00:10:58.969 --> 00:10:58.979 align:start position:0%
+l'altra macchina ci risponde o
+ 
+
+00:10:58.979 --> 00:11:03.570 align:start position:0%
+l'altra macchina ci risponde o
+sbagliando<00:10:59.979><c> 10</c><00:11:00.459><c> 0</c><00:11:00.909><c> 0</c><00:11:01.449><c> 2</c>
+
+00:11:03.570 --> 00:11:03.580 align:start position:0%
+sbagliando 10 0 0 2
+ 
+
+00:11:03.580 --> 00:11:06.000 align:start position:0%
+sbagliando 10 0 0 2
+e<00:11:04.270><c> l'altra</c><00:11:04.630><c> macchina</c><00:11:04.780><c> ci</c><00:11:05.140><c> risponde</c><00:11:05.650><c> quindi</c><00:11:05.860><c> il</c>
+
+00:11:06.000 --> 00:11:06.010 align:start position:0%
+e l'altra macchina ci risponde quindi il
+ 
+
+00:11:06.010 --> 00:11:09.300 align:start position:0%
+e l'altra macchina ci risponde quindi il
+nostro<00:11:06.070><c> traffico</c><00:11:06.550><c> passa</c><00:11:07.680><c> da</c><00:11:08.680><c> una</c><00:11:08.890><c> parte</c>
+
+00:11:09.300 --> 00:11:09.310 align:start position:0%
+nostro traffico passa da una parte
+ 
+
+00:11:09.310 --> 00:11:11.900 align:start position:0%
+nostro traffico passa da una parte
+all'altra<00:11:09.430><c> attraverso</c><00:11:10.000><c> il</c><00:11:10.540><c> virtual</c><00:11:10.900><c> switch</c>
+
+00:11:11.900 --> 00:11:11.910 align:start position:0%
+all'altra attraverso il virtual switch
+ 
+
+00:11:11.910 --> 00:11:15.810 align:start position:0%
+all'altra attraverso il virtual switch
+allora<00:11:12.910><c> su</c><00:11:13.900><c> parrot</c><00:11:14.410><c> ci</c><00:11:14.920><c> sono</c><00:11:15.220><c> tutti</c><00:11:15.460><c> quanti</c>
+
+00:11:15.810 --> 00:11:15.820 align:start position:0%
+allora su parrot ci sono tutti quanti
+ 
+
+00:11:15.820 --> 00:11:19.380 align:start position:0%
+allora su parrot ci sono tutti quanti
+gli<00:11:15.850><c> strumenti</c><00:11:16.660><c> come</c><00:11:17.560><c> su</c><00:11:17.710><c> cali</c><00:11:18.160><c> per</c><00:11:18.460><c> fare</c>
+
+00:11:19.380 --> 00:11:19.390 align:start position:0%
+gli strumenti come su cali per fare
+ 
+
+00:11:19.390 --> 00:11:23.570 align:start position:0%
+gli strumenti come su cali per fare
+petre<00:11:20.020><c> shaun</c><00:11:20.230><c> testing</c><00:11:20.920><c> di</c><00:11:21.010><c> rete</c><00:11:21.460><c> e</c>
+
+00:11:23.570 --> 00:11:23.580 align:start position:0%
+petre shaun testing di rete e
+ 
+
+00:11:23.580 --> 00:11:26.340 align:start position:0%
+petre shaun testing di rete e
+il<00:11:24.580><c> penetration</c><00:11:25.090><c> testing</c><00:11:25.570><c> applicativo</c>
+
+00:11:26.340 --> 00:11:26.350 align:start position:0%
+il penetration testing applicativo
+ 
+
+00:11:26.350 --> 00:11:31.460 align:start position:0%
+il penetration testing applicativo
+quindi<00:11:26.830><c> di</c><00:11:26.980><c> una</c><00:11:27.130><c> web</c><00:11:27.310><c> app</c>
+
+00:11:31.460 --> 00:11:31.470 align:start position:0%
+ 
+ 
+
+00:11:31.470 --> 00:11:34.930 align:start position:0%
+ 
+the<00:11:31.800><c> game</c><00:11:32.690><c> damien</c><00:11:33.080><c> a</c><00:11:33.200><c> giocare</c><00:11:33.770><c> con</c><00:11:34.010><c> poi</c><00:11:34.580><c> tutti</c>
+
+00:11:34.930 --> 00:11:34.940 align:start position:0%
+the game damien a giocare con poi tutti
+ 
+
+00:11:34.940 --> 00:11:37.810 align:start position:0%
+the game damien a giocare con poi tutti
+quanti<00:11:35.330><c> i</c><00:11:35.360><c> tuoi</c><00:11:35.630><c> tullo</c><00:11:36.110><c> io</c><00:11:36.680><c> volevo</c><00:11:37.160><c> arrivare</c><00:11:37.790><c> a</c>
+
+00:11:37.810 --> 00:11:37.820 align:start position:0%
+quanti i tuoi tullo io volevo arrivare a
+ 
+
+00:11:37.820 --> 00:11:39.820 align:start position:0%
+quanti i tuoi tullo io volevo arrivare a
+darti<00:11:38.270><c> la</c><00:11:38.420><c> soluzione</c><00:11:38.870><c> di</c><00:11:38.930><c> come</c><00:11:39.200><c> configurare</c>
+
+00:11:39.820 --> 00:11:39.830 align:start position:0%
+darti la soluzione di come configurare
+ 
+
+00:11:39.830 --> 00:11:43.300 align:start position:0%
+darti la soluzione di come configurare
+prossimo<00:11:40.430><c> in</c><00:11:41.270><c> maniera</c><00:11:41.990><c> da</c><00:11:42.470><c> permetterti</c><00:11:43.100><c> di</c>
+
+00:11:43.300 --> 00:11:43.310 align:start position:0%
+prossimo in maniera da permetterti di
+ 
+
+00:11:43.310 --> 00:11:46.120 align:start position:0%
+prossimo in maniera da permetterti di
+creative<00:11:43.790><c> to</c><00:11:43.940><c> laboratorio</c><00:11:44.720><c> in</c><00:11:45.200><c> quattro</c><00:11:46.070><c> e</c>
+
+00:11:46.120 --> 00:11:46.130 align:start position:0%
+creative to laboratorio in quattro e
+ 
+
+00:11:46.130 --> 00:11:48.670 align:start position:0%
+creative to laboratorio in quattro e
+quattr'otto<00:11:46.670><c> ti</c><00:11:47.420><c> ringrazio</c><00:11:47.840><c> per</c><00:11:48.020><c> l'occasione</c>
+
+00:11:48.670 --> 00:11:48.680 align:start position:0%
+quattr'otto ti ringrazio per l'occasione
+ 
+
+00:11:48.680 --> 00:11:50.620 align:start position:0%
+quattr'otto ti ringrazio per l'occasione
+che<00:11:48.800><c> mi</c><00:11:48.830><c> hai</c><00:11:49.040><c> dato</c><00:11:49.070><c> per</c><00:11:49.550><c> un</c><00:11:49.850><c> argomento</c><00:11:50.390><c> così</c>
+
+00:11:50.620 --> 00:11:50.630 align:start position:0%
+che mi hai dato per un argomento così
+ 
+
+00:11:50.630 --> 00:11:53.010 align:start position:0%
+che mi hai dato per un argomento così
+interessante<00:11:51.470><c> e</c>
+
+00:11:53.010 --> 00:11:53.020 align:start position:0%
+interessante e
+ 
+
+00:11:53.020 --> 00:11:55.780 align:start position:0%
+interessante e
+invito<00:11:54.020><c> te</c><00:11:54.170><c> e</c><00:11:54.200><c> tutti</c><00:11:54.560><c> gli</c><00:11:54.590><c> altri</c><00:11:54.800><c> a</c><00:11:55.070><c> iscrivervi</c>
+
+00:11:55.780 --> 00:11:55.790 align:start position:0%
+invito te e tutti gli altri a iscrivervi
+ 
+
+00:11:55.790 --> 00:11:58.900 align:start position:0%
+invito te e tutti gli altri a iscrivervi
+al<00:11:55.910><c> canale</c><00:11:56.860><c> che</c><00:11:57.860><c> schiacciare</c><00:11:58.310><c> sulla</c><00:11:58.610><c> conte</c>
+
+00:11:58.900 --> 00:11:58.910 align:start position:0%
+al canale che schiacciare sulla conte
+ 
+
+00:11:58.910 --> 00:12:01.510 align:start position:0%
+al canale che schiacciare sulla conte
+sul<00:11:59.120><c> pollice</c><00:12:00.110><c> in</c><00:12:00.320><c> su</c><00:12:00.410><c> per</c><00:12:00.440><c> dirmi</c><00:12:00.980><c> che</c><00:12:01.010><c> mi</c><00:12:01.130><c> è</c>
+
+00:12:01.510 --> 00:12:01.520 align:start position:0%
+sul pollice in su per dirmi che mi è
+ 
+
+00:12:01.520 --> 00:12:03.280 align:start position:0%
+sul pollice in su per dirmi che mi è
+piaciuto<00:12:01.880><c> questo</c><00:12:02.060><c> video</c><00:12:02.510><c> che</c><00:12:02.570><c> mi</c><00:12:02.930><c> così</c><00:12:03.170><c> mi</c>
+
+00:12:03.280 --> 00:12:03.290 align:start position:0%
+piaciuto questo video che mi così mi
+ 
+
+00:12:03.290 --> 00:12:06.690 align:start position:0%
+piaciuto questo video che mi così mi
+aiutate<00:12:03.680><c> a</c><00:12:03.710><c> crescere</c><00:12:03.830><c> con</c><00:12:04.390><c> il</c>
+
+00:12:06.690 --> 00:12:06.700 align:start position:0%
+aiutate a crescere con il
+ 
+
+00:12:06.700 --> 00:12:09.940 align:start position:0%
+aiutate a crescere con il
+ranking<00:12:07.700><c> dei</c><00:12:07.880><c> miei</c><00:12:08.060><c> video</c><00:12:08.240><c> su</c><00:12:08.570><c> youtube</c><00:12:08.780><c> e</c><00:12:09.560><c> di</c>
+
+00:12:09.940 --> 00:12:09.950 align:start position:0%
+ranking dei miei video su youtube e di
+ 
+
+00:12:09.950 --> 00:12:13.030 align:start position:0%
+ranking dei miei video su youtube e di
+selezionare<00:12:10.850><c> la</c><00:12:11.120><c> la</c><00:12:11.450><c> campanellina</c><00:12:12.410><c> per</c>
+
+00:12:13.030 --> 00:12:13.040 align:start position:0%
+selezionare la la campanellina per
+ 
+
+00:12:13.040 --> 00:12:15.640 align:start position:0%
+selezionare la la campanellina per
+rimanere<00:12:13.520><c> sempre</c><00:12:13.700><c> aggiornati</c><00:12:14.630><c> sui</c><00:12:15.200><c> nuovo</c><00:12:15.560><c> su</c>
+
+00:12:15.640 --> 00:12:15.650 align:start position:0%
+rimanere sempre aggiornati sui nuovo su
+ 
+
+00:12:15.650 --> 00:12:18.220 align:start position:0%
+rimanere sempre aggiornati sui nuovo su
+nuove<00:12:15.920><c> pubblicazioni</c><00:12:16.750><c> storica</c><00:12:17.750><c> van</c><00:12:17.900><c> domi</c><00:12:18.110><c> del</c>
+
+00:12:18.220 --> 00:12:18.230 align:start position:0%
+nuove pubblicazioni storica van domi del
+ 
+
+00:12:18.230 --> 00:12:19.930 align:start position:0%
+nuove pubblicazioni storica van domi del
+tempo<00:12:18.500><c> libero</c><00:12:18.680><c> per</c><00:12:19.010><c> riuscire</c><00:12:19.430><c> a</c><00:12:19.460><c> fare</c><00:12:19.700><c> anche</c>
+
+00:12:19.930 --> 00:12:19.940 align:start position:0%
+tempo libero per riuscire a fare anche
+ 
+
+00:12:19.940 --> 00:12:21.940 align:start position:0%
+tempo libero per riuscire a fare anche
+video<00:12:20.300><c> oltre</c><00:12:20.750><c> il</c><00:12:20.960><c> giovedì</c><00:12:21.350><c> quindi</c>
+
+00:12:21.940 --> 00:12:21.950 align:start position:0%
+video oltre il giovedì quindi
+ 
+
+00:12:21.950 --> 00:12:23.400 align:start position:0%
+video oltre il giovedì quindi
+probabilmente
+
+00:12:23.400 --> 00:12:23.410 align:start position:0%
+probabilmente
+ 
+
+00:12:23.410 --> 00:12:26.920 align:start position:0%
+probabilmente
+a<00:12:24.410><c> breve</c><00:12:24.650><c> vedrete</c><00:12:25.460><c> anche</c><00:12:25.760><c> dei</c><00:12:25.940><c> video</c><00:12:26.090><c> in</c><00:12:26.420><c> altri</c>
+
+00:12:26.920 --> 00:12:26.930 align:start position:0%
+a breve vedrete anche dei video in altri
+ 
+
+00:12:26.930 --> 00:12:29.740 align:start position:0%
+a breve vedrete anche dei video in altri
+giorni<00:12:27.290><c> di</c><00:12:27.380><c> una</c><00:12:27.470><c> settimana</c><00:12:28.030><c> vi</c><00:12:29.030><c> saluto</c><00:12:29.570><c> e</c><00:12:29.600><c> vi</c>
+
+00:12:29.740 --> 00:12:29.750 align:start position:0%
+giorni di una settimana vi saluto e vi
+ 
+
+00:12:29.750 --> 00:12:32.110 align:start position:0%
+giorni di una settimana vi saluto e vi
+lascio<00:12:30.410><c> al</c><00:12:30.590><c> resto</c><00:12:30.890><c> del</c><00:12:31.010><c> mondo</c><00:12:31.190><c> bellissimo</c><00:12:31.580><c> di</c>
+
+00:12:32.110 --> 00:12:32.120 align:start position:0%
+lascio al resto del mondo bellissimo di
+ 
+
+00:12:32.120 --> 00:12:36.400 align:start position:0%
+lascio al resto del mondo bellissimo di
+youtube<00:12:32.720><c> augurandovi</c><00:12:33.620><c> una</c><00:12:33.830><c> buona</c><00:12:33.860><c> visione</c>
+
