@@ -1,0 +1,1113 @@
+align:start position:0%
+ 
+Non fidarti di te stesso, beh, è un
+align:start position:0%
+Non fidarti di te stesso, beh, è un
+ 
+align:start position:0%
+Non fidarti di te stesso, beh, è un
+titolo un po' provocatorio, no? Eppure
+align:start position:0%
+titolo un po' provocatorio, no? Eppure
+ 
+align:start position:0%
+titolo un po' provocatorio, no? Eppure
+cattura un'idea che è assolutamente
+align:start position:0%
+cattura un'idea che è assolutamente
+ 
+align:start position:0%
+cattura un'idea che è assolutamente
+centrale quando si scrive documentazione
+align:start position:0%
+centrale quando si scrive documentazione
+ 
+align:start position:0%
+centrale quando si scrive documentazione
+tecnica. L'automazione non è solo una
+align:start position:0%
+tecnica. L'automazione non è solo una
+ 
+align:start position:0%
+tecnica. L'automazione non è solo una
+bella comodità, è la nostra migliore
+align:start position:0%
+bella comodità, è la nostra migliore
+ 
+align:start position:0%
+bella comodità, è la nostra migliore
+alleata. Vediamo subito perché. Allora,
+align:start position:0%
+alleata. Vediamo subito perché. Allora,
+ 
+align:start position:0%
+alleata. Vediamo subito perché. Allora,
+partiamo da una verità che conosciamo
+align:start position:0%
+partiamo da una verità che conosciamo
+ 
+align:start position:0%
+partiamo da una verità che conosciamo
+fin troppo bene. Siamo umani. È la fine
+align:start position:0%
+fin troppo bene. Siamo umani. È la fine
+ 
+align:start position:0%
+fin troppo bene. Siamo umani. È la fine
+di una giornata pesante, gli occhi sono
+align:start position:0%
+di una giornata pesante, gli occhi sono
+ 
+align:start position:0%
+di una giornata pesante, gli occhi sono
+stanchi e quell'errore di battitura.
+align:start position:0%
+stanchi e quell'errore di battitura.
+ 
+align:start position:0%
+stanchi e quell'errore di battitura.
+quel link che non funziona, quel piccolo
+align:start position:0%
+quel link che non funziona, quel piccolo
+ 
+align:start position:0%
+quel link che non funziona, quel piccolo
+dettaglio semplicemente ci sfugge,
+align:start position:0%
+dettaglio semplicemente ci sfugge,
+ 
+align:start position:0%
+dettaglio semplicemente ci sfugge,
+capita a tutti. Affidarsi solo alla
+align:start position:0%
+capita a tutti. Affidarsi solo alla
+ 
+align:start position:0%
+capita a tutti. Affidarsi solo alla
+nostra rilettura manuale non è una
+align:start position:0%
+nostra rilettura manuale non è una
+ 
+align:start position:0%
+nostra rilettura manuale non è una
+strategia, è una vera e propria
+align:start position:0%
+strategia, è una vera e propria
+ 
+align:start position:0%
+strategia, è una vera e propria
+scommessa. Ed è proprio qui che entra in
+align:start position:0%
+scommessa. Ed è proprio qui che entra in
+ 
+align:start position:0%
+scommessa. Ed è proprio qui che entra in
+gioco l'automazione. E qui arriviamo al
+align:start position:0%
+gioco l'automazione. E qui arriviamo al
+ 
+align:start position:0%
+gioco l'automazione. E qui arriviamo al
+punto cruciale. Nel mondo dello sviluppo
+align:start position:0%
+punto cruciale. Nel mondo dello sviluppo
+ 
+align:start position:0%
+punto cruciale. Nel mondo dello sviluppo
+software abbiamo una regola d'oro. Per
+align:start position:0%
+software abbiamo una regola d'oro. Per
+ 
+align:start position:0%
+software abbiamo una regola d'oro. Per
+assicurarsi che il codice funzioni si
+align:start position:0%
+assicurarsi che il codice funzioni si
+ 
+align:start position:0%
+assicurarsi che il codice funzioni si
+scrivono testi unitari. è una prassi,
+align:start position:0%
+scrivono testi unitari. è una prassi,
+ 
+align:start position:0%
+scrivono testi unitari. è una prassi,
+nessuno la mette in discussione. E se
+align:start position:0%
+nessuno la mette in discussione. E se
+ 
+align:start position:0%
+nessuno la mette in discussione. E se
+esistesse un concetto identico per la
+align:start position:0%
+esistesse un concetto identico per la
+ 
+align:start position:0%
+esistesse un concetto identico per la
+documentazione, uno strumento per
+align:start position:0%
+documentazione, uno strumento per
+ 
+align:start position:0%
+documentazione, uno strumento per
+garantirne la qualità e la coerenza?
+align:start position:0%
+garantirne la qualità e la coerenza?
+ 
+align:start position:0%
+garantirne la qualità e la coerenza?
+Beh, esiste. E questi strumenti si
+align:start position:0%
+Beh, esiste. E questi strumenti si
+ 
+align:start position:0%
+Beh, esiste. E questi strumenti si
+chiamano l'Inter. Ok? L'Inter. Chi
+align:start position:0%
+chiamano l'Inter. Ok? L'Inter. Chi
+ 
+align:start position:0%
+chiamano l'Inter. Ok? L'Inter. Chi
+programma, specialmente in JavaScript o
+align:start position:0%
+programma, specialmente in JavaScript o
+ 
+align:start position:0%
+programma, specialmente in JavaScript o
+Python, conosce bene nomi come IS Lint o
+align:start position:0%
+Python, conosce bene nomi come IS Lint o
+ 
+align:start position:0%
+Python, conosce bene nomi come IS Lint o
+Pil. Ecco, l'idea è esattamente la
+align:start position:0%
+Pil. Ecco, l'idea è esattamente la
+ 
+align:start position:0%
+Pil. Ecco, l'idea è esattamente la
+stessa. Un Linter per la documentazione,
+align:start position:0%
+stessa. Un Linter per la documentazione,
+ 
+align:start position:0%
+stessa. Un Linter per la documentazione,
+in pratica, fa la stessa cosa, ma invece
+align:start position:0%
+in pratica, fa la stessa cosa, ma invece
+ 
+align:start position:0%
+in pratica, fa la stessa cosa, ma invece
+di analizzare il codice analizza il
+align:start position:0%
+di analizzare il codice analizza il
+ 
+align:start position:0%
+di analizzare il codice analizza il
+testo. Va a caccia di errori di
+align:start position:0%
+testo. Va a caccia di errori di
+ 
+align:start position:0%
+testo. Va a caccia di errori di
+sintassi, di stile, di ortografia, ma
+align:start position:0%
+sintassi, di stile, di ortografia, ma
+ 
+align:start position:0%
+sintassi, di stile, di ortografia, ma
+applicati alla prosa e nel nostro caso
+align:start position:0%
+applicati alla prosa e nel nostro caso
+ 
+align:start position:0%
+applicati alla prosa e nel nostro caso
+al formato markdown. Certo, non tutti
+align:start position:0%
+al formato markdown. Certo, non tutti
+ 
+align:start position:0%
+al formato markdown. Certo, non tutti
+gli Inter sono uguali. Ci sono strumenti
+align:start position:0%
+gli Inter sono uguali. Ci sono strumenti
+ 
+align:start position:0%
+gli Inter sono uguali. Ci sono strumenti
+super specifici come Mark Linter che è
+align:start position:0%
+super specifici come Mark Linter che è
+ 
+align:start position:0%
+super specifici come Mark Linter che è
+il guardiano inflessibile della sintassi
+align:start position:0%
+il guardiano inflessibile della sintassi
+ 
+align:start position:0%
+il guardiano inflessibile della sintassi
+Mark si assicura che ogni cancelletto,
+align:start position:0%
+Mark si assicura che ogni cancelletto,
+ 
+align:start position:0%
+Mark si assicura che ogni cancelletto,
+ogni asterisco sia esattamente dove deve
+align:start position:0%
+ogni asterisco sia esattamente dove deve
+ 
+align:start position:0%
+ogni asterisco sia esattamente dove deve
+essere. Poi ovviamente c'è il classico
+align:start position:0%
+essere. Poi ovviamente c'è il classico
+ 
+align:start position:0%
+essere. Poi ovviamente c'è il classico
+spell checker, la nostra prima linea di
+align:start position:0%
+spell checker, la nostra prima linea di
+ 
+align:start position:0%
+spell checker, la nostra prima linea di
+difesa contro i refusi. E infine abbiamo
+align:start position:0%
+difesa contro i refusi. E infine abbiamo
+ 
+align:start position:0%
+difesa contro i refusi. E infine abbiamo
+strumenti potentissimi come Vale, che è
+align:start position:0%
+strumenti potentissimi come Vale, che è
+ 
+align:start position:0%
+strumenti potentissimi come Vale, che è
+quasi un editor automatico capace di far
+align:start position:0%
+quasi un editor automatico capace di far
+ 
+align:start position:0%
+quasi un editor automatico capace di far
+rispettare una guida di stile completa
+align:start position:0%
+rispettare una guida di stile completa
+ 
+align:start position:0%
+rispettare una guida di stile completa
+dal tono di voce che vogliamo usare fino
+align:start position:0%
+dal tono di voce che vogliamo usare fino
+ 
+align:start position:0%
+dal tono di voce che vogliamo usare fino
+all'impiego di un linguaggio più
+align:start position:0%
+all'impiego di un linguaggio più
+ 
+align:start position:0%
+all'impiego di un linguaggio più
+inclusivo. Ma per capire davvero perché
+align:start position:0%
+inclusivo. Ma per capire davvero perché
+ 
+align:start position:0%
+inclusivo. Ma per capire davvero perché
+tutto questo è così importante, facciamo
+align:start position:0%
+tutto questo è così importante, facciamo
+ 
+align:start position:0%
+tutto questo è così importante, facciamo
+un esempio pratico. Guardiamo questo
+align:start position:0%
+un esempio pratico. Guardiamo questo
+ 
+align:start position:0%
+un esempio pratico. Guardiamo questo
+pezzetto di markdown. C'è un titolo
+align:start position:0%
+pezzetto di markdown. C'è un titolo
+ 
+align:start position:0%
+pezzetto di markdown. C'è un titolo
+principale di livello 1 e subito sotto
+align:start position:0%
+principale di livello 1 e subito sotto
+ 
+align:start position:0%
+principale di livello 1 e subito sotto
+una sottosezione di livello 3. A una
+align:start position:0%
+una sottosezione di livello 3. A una
+ 
+align:start position:0%
+una sottosezione di livello 3. A una
+prima occhiata. Che c'è di strano?
+align:start position:0%
+prima occhiata. Che c'è di strano?
+ 
+align:start position:0%
+prima occhiata. Che c'è di strano?
+Sembra tutto a posto, no? E invece un
+align:start position:0%
+Sembra tutto a posto, no? E invece un
+ 
+align:start position:0%
+Sembra tutto a posto, no? E invece un
+linter come Markdown Lint ci
+align:start position:0%
+linter come Markdown Lint ci
+ 
+align:start position:0%
+linter come Markdown Lint ci
+segnalerebbe subito un errore. Ehi, i
+align:start position:0%
+segnalerebbe subito un errore. Ehi, i
+ 
+align:start position:0%
+segnalerebbe subito un errore. Ehi, i
+livelli dei titoli devono essere
+align:start position:0%
+livelli dei titoli devono essere
+ 
+align:start position:0%
+livelli dei titoli devono essere
+sequenziali. Ma il punto non è la
+align:start position:0%
+sequenziali. Ma il punto non è la
+ 
+align:start position:0%
+sequenziali. Ma il punto non è la
+pignolleria formale. La domanda vera è
+align:start position:0%
+pignolleria formale. La domanda vera è
+ 
+align:start position:0%
+pignolleria formale. La domanda vera è
+perché esiste questa regola? E la
+align:start position:0%
+perché esiste questa regola? E la
+ 
+align:start position:0%
+perché esiste questa regola? E la
+risposta è fondamentale, si chiama
+align:start position:0%
+risposta è fondamentale, si chiama
+ 
+align:start position:0%
+risposta è fondamentale, si chiama
+accessibilità. Saltare i livelli dei
+align:start position:0%
+accessibilità. Saltare i livelli dei
+ 
+align:start position:0%
+accessibilità. Saltare i livelli dei
+titoli di fatto rompe la struttura
+align:start position:0%
+titoli di fatto rompe la struttura
+ 
+align:start position:0%
+titoli di fatto rompe la struttura
+logica della pagina, la trasforma in un
+align:start position:0%
+logica della pagina, la trasforma in un
+ 
+align:start position:0%
+logica della pagina, la trasforma in un
+labirinto illeggibile per chi usa uno
+align:start position:0%
+labirinto illeggibile per chi usa uno
+ 
+align:start position:0%
+labirinto illeggibile per chi usa uno
+screen reader per navigare il web. Un
+align:start position:0%
+screen reader per navigare il web. Un
+ 
+align:start position:0%
+screen reader per navigare il web. Un
+piccolo errore con un impatto enorme.
+align:start position:0%
+piccolo errore con un impatto enorme.
+ 
+align:start position:0%
+piccolo errore con un impatto enorme.
+Fantastico. Grazie ai adesso il nostro
+align:start position:0%
+Fantastico. Grazie ai adesso il nostro
+ 
+align:start position:0%
+Fantastico. Grazie ai adesso il nostro
+testo è pulito, corretto, impeccabile.
+align:start position:0%
+testo è pulito, corretto, impeccabile.
+ 
+align:start position:0%
+testo è pulito, corretto, impeccabile.
+Missione compiuta? Non proprio. C'è un
+align:start position:0%
+Missione compiuta? Non proprio. C'è un
+ 
+align:start position:0%
+Missione compiuta? Non proprio. C'è un
+altro problema. Non possiamo mica
+align:start position:0%
+altro problema. Non possiamo mica
+ 
+align:start position:0%
+altro problema. Non possiamo mica
+presentare ai nostri clienti o utenti
+align:start position:0%
+presentare ai nostri clienti o utenti
+ 
+align:start position:0%
+presentare ai nostri clienti o utenti
+una cartella piena di file di testo su
+align:start position:0%
+una cartella piena di file di testo su
+ 
+align:start position:0%
+una cartella piena di file di testo su
+GitHub. Serve un sito web vero,
+align:start position:0%
+GitHub. Serve un sito web vero,
+ 
+align:start position:0%
+GitHub. Serve un sito web vero,
+professionale, con una navigazione, una
+align:start position:0%
+professionale, con una navigazione, una
+ 
+align:start position:0%
+professionale, con una navigazione, una
+ricerca, insomma tutto il pacchetto. La
+align:start position:0%
+ricerca, insomma tutto il pacchetto. La
+ 
+align:start position:0%
+ricerca, insomma tutto il pacchetto. La
+domanda è come si ottiene tutto questo
+align:start position:0%
+domanda è come si ottiene tutto questo
+ 
+align:start position:0%
+domanda è come si ottiene tutto questo
+senza dover diventare web developer e
+align:start position:0%
+senza dover diventare web developer e
+ 
+align:start position:0%
+senza dover diventare web developer e
+scrivere righe e righe di HTML e CSS? La
+align:start position:0%
+scrivere righe e righe di HTML e CSS? La
+ 
+align:start position:0%
+scrivere righe e righe di HTML e CSS? La
+risposta ha un nome, generatore di siti
+align:start position:0%
+risposta ha un nome, generatore di siti
+ 
+align:start position:0%
+risposta ha un nome, generatore di siti
+statici OSSG.
+align:start position:0%
+statici OSSG.
+ 
+align:start position:0%
+statici OSSG.
+Possiamo immaginarlo come una specie di
+align:start position:0%
+Possiamo immaginarlo come una specie di
+ 
+align:start position:0%
+Possiamo immaginarlo come una specie di
+fabbrica magica. Da una parte mettiamo
+align:start position:0%
+fabbrica magica. Da una parte mettiamo
+ 
+align:start position:0%
+fabbrica magica. Da una parte mettiamo
+dentro i nostri semplici file di testo
+align:start position:0%
+dentro i nostri semplici file di testo
+ 
+align:start position:0%
+dentro i nostri semplici file di testo
+in markdown e dall'altra esce un sito
+align:start position:0%
+in markdown e dall'altra esce un sito
+ 
+align:start position:0%
+in markdown e dall'altra esce un sito
+web completo, velocissimo e pronto per
+align:start position:0%
+web completo, velocissimo e pronto per
+ 
+align:start position:0%
+web completo, velocissimo e pronto per
+essere pubblicato. In pratica è un
+align:start position:0%
+essere pubblicato. In pratica è un
+ 
+align:start position:0%
+essere pubblicato. In pratica è un
+processo di compilazione ma per i
+align:start position:0%
+processo di compilazione ma per i
+ 
+align:start position:0%
+processo di compilazione ma per i
+contenuti e questa analogia con la
+align:start position:0%
+contenuti e questa analogia con la
+ 
+align:start position:0%
+contenuti e questa analogia con la
+compilazione del software è
+align:start position:0%
+compilazione del software è
+ 
+align:start position:0%
+compilazione del software è
+assolutamente perfetta. Guardiamo qui i
+align:start position:0%
+assolutamente perfetta. Guardiamo qui i
+ 
+align:start position:0%
+assolutamente perfetta. Guardiamo qui i
+nostri file markdown sono il codice
+align:start position:0%
+nostri file markdown sono il codice
+ 
+align:start position:0%
+nostri file markdown sono il codice
+sorgente. L'SSG, che sia MKDOX o un
+align:start position:0%
+sorgente. L'SSG, che sia MKDOX o un
+ 
+align:start position:0%
+sorgente. L'SSG, che sia MKDOX o un
+altro, è il nostro compilatore e il
+align:start position:0%
+altro, è il nostro compilatore e il
+ 
+align:start position:0%
+altro, è il nostro compilatore e il
+risultato finale, il sito web fatto di
+align:start position:0%
+risultato finale, il sito web fatto di
+ 
+align:start position:0%
+risultato finale, il sito web fatto di
+HTML e CSS, è il nostro eseguibile, il
+align:start position:0%
+HTML e CSS, è il nostro eseguibile, il
+ 
+align:start position:0%
+HTML e CSS, è il nostro eseguibile, il
+prodotto finito, pronto per l'uso. È
+align:start position:0%
+prodotto finito, pronto per l'uso. È
+ 
+align:start position:0%
+prodotto finito, pronto per l'uso. È
+esattamente lo stesso processo mentale
+align:start position:0%
+esattamente lo stesso processo mentale
+ 
+align:start position:0%
+esattamente lo stesso processo mentale
+che usiamo quando scriviamo codice.
+align:start position:0%
+che usiamo quando scriviamo codice.
+ 
+align:start position:0%
+che usiamo quando scriviamo codice.
+Questo cosa significa? che l'intero
+align:start position:0%
+Questo cosa significa? che l'intero
+ 
+align:start position:0%
+Questo cosa significa? che l'intero
+flusso di lavoro si riduce a quattro
+align:start position:0%
+flusso di lavoro si riduce a quattro
+ 
+align:start position:0%
+flusso di lavoro si riduce a quattro
+passaggi incredibilmente semplici.
+align:start position:0%
+passaggi incredibilmente semplici.
+ 
+align:start position:0%
+passaggi incredibilmente semplici.
+Primo, si scrive markdown concentrandosi
+align:start position:0%
+Primo, si scrive markdown concentrandosi
+ 
+align:start position:0%
+Primo, si scrive markdown concentrandosi
+solo sul contenuto. Secondo, si lancia
+align:start position:0%
+solo sul contenuto. Secondo, si lancia
+ 
+align:start position:0%
+solo sul contenuto. Secondo, si lancia
+un singolo comando da terminale. Terzo,
+align:start position:0%
+un singolo comando da terminale. Terzo,
+ 
+align:start position:0%
+un singolo comando da terminale. Terzo,
+si ottiene una cartella pulita con
+align:start position:0%
+si ottiene una cartella pulita con
+ 
+align:start position:0%
+si ottiene una cartella pulita con
+dentro tutto il sito web bello e pronto.
+align:start position:0%
+dentro tutto il sito web bello e pronto.
+ 
+align:start position:0%
+dentro tutto il sito web bello e pronto.
+Quarto, si carica quella cartella su un
+align:start position:0%
+Quarto, si carica quella cartella su un
+ 
+align:start position:0%
+Quarto, si carica quella cartella su un
+server finito. Certo, il mondo degli SSG
+align:start position:0%
+server finito. Certo, il mondo degli SSG
+ 
+align:start position:0%
+server finito. Certo, il mondo degli SSG
+è vastissimo, ma quando si parla
+align:start position:0%
+è vastissimo, ma quando si parla
+ 
+align:start position:0%
+è vastissimo, ma quando si parla
+specificamente di documentazione
+align:start position:0%
+specificamente di documentazione
+ 
+align:start position:0%
+specificamente di documentazione
+tecnica, la partita si gioca
+align:start position:0%
+tecnica, la partita si gioca
+ 
+align:start position:0%
+tecnica, la partita si gioca
+principalmente tra tre grandi nomi. C'è
+align:start position:0%
+principalmente tra tre grandi nomi. C'è
+ 
+align:start position:0%
+principalmente tra tre grandi nomi. C'è
+MK Docs, il veterano solido e affidabile
+align:start position:0%
+MK Docs, il veterano solido e affidabile
+ 
+align:start position:0%
+MK Docs, il veterano solido e affidabile
+basato su Python. C'è Ugo, il velocista
+align:start position:0%
+basato su Python. C'è Ugo, il velocista
+ 
+align:start position:0%
+basato su Python. C'è Ugo, il velocista
+scritto in go e famoso per le sue
+align:start position:0%
+scritto in go e famoso per le sue
+ 
+align:start position:0%
+scritto in go e famoso per le sue
+performance pazzesche. E poi c'è
+align:start position:0%
+performance pazzesche. E poi c'è
+ 
+align:start position:0%
+performance pazzesche. E poi c'è
+Dokuorus, la scelta più moderna creata
+align:start position:0%
+Dokuorus, la scelta più moderna creata
+ 
+align:start position:0%
+Dokuorus, la scelta più moderna creata
+da Facebook e costruita su React. Per
+align:start position:0%
+da Facebook e costruita su React. Per
+ 
+align:start position:0%
+da Facebook e costruita su React. Per
+quello che dobbiamo fare noi, la scelta
+align:start position:0%
+quello che dobbiamo fare noi, la scelta
+ 
+align:start position:0%
+quello che dobbiamo fare noi, la scelta
+ricade su MK Doc e non è una scelta
+align:start position:0%
+ricade su MK Doc e non è una scelta
+ 
+align:start position:0%
+ricade su MK Doc e non è una scelta
+casuale. I motivi sono tre molto
+align:start position:0%
+casuale. I motivi sono tre molto
+ 
+align:start position:0%
+casuale. I motivi sono tre molto
+strategici. Primo è basato su Python,
+align:start position:0%
+strategici. Primo è basato su Python,
+ 
+align:start position:0%
+strategici. Primo è basato su Python,
+quindi si integra la perfezione in un
+align:start position:0%
+quindi si integra la perfezione in un
+ 
+align:start position:0%
+quindi si integra la perfezione in un
+ecosistema dove Python è già presente.
+align:start position:0%
+ecosistema dove Python è già presente.
+ 
+align:start position:0%
+ecosistema dove Python è già presente.
+Secondo, la sua semplicità di
+align:start position:0%
+Secondo, la sua semplicità di
+ 
+align:start position:0%
+Secondo, la sua semplicità di
+configurazione è quasi disarmante. E
+align:start position:0%
+configurazione è quasi disarmante. E
+ 
+align:start position:0%
+configurazione è quasi disarmante. E
+terzo, con un tema come material for MK
+align:start position:0%
+terzo, con un tema come material for MK
+ 
+align:start position:0%
+terzo, con un tema come material for MK
+Docs si ottiene un sito dall'aspetto
+align:start position:0%
+Docs si ottiene un sito dall'aspetto
+ 
+align:start position:0%
+Docs si ottiene un sito dall'aspetto
+super professionale con uno sforzo che è
+align:start position:0%
+super professionale con uno sforzo che è
+ 
+align:start position:0%
+super professionale con uno sforzo che è
+praticamente nullo. E quando dico
+align:start position:0%
+praticamente nullo. E quando dico
+ 
+align:start position:0%
+praticamente nullo. E quando dico
+semplicità intendo proprio questo. Il
+align:start position:0%
+semplicità intendo proprio questo. Il
+ 
+align:start position:0%
+semplicità intendo proprio questo. Il
+centro di controllo di un intero sito
+align:start position:0%
+centro di controllo di un intero sito
+ 
+align:start position:0%
+centro di controllo di un intero sito
+fatto con MKDO è un singolo banalissimo
+align:start position:0%
+fatto con MKDO è un singolo banalissimo
+ 
+align:start position:0%
+fatto con MKDO è un singolo banalissimo
+file di testo mkadox.YML.
+align:start position:0%
+file di testo mkadox.YML.
+ 
+align:start position:0%
+file di testo mkadox.YML.
+Guardate la sezione nav in questo
+align:start position:0%
+Guardate la sezione nav in questo
+ 
+align:start position:0%
+Guardate la sezione nav in questo
+esempio. Ogni riga definisce una voce
+align:start position:0%
+esempio. Ogni riga definisce una voce
+ 
+align:start position:0%
+esempio. Ogni riga definisce una voce
+nel menù di navigazione e la collega
+align:start position:0%
+nel menù di navigazione e la collega
+ 
+align:start position:0%
+nel menù di navigazione e la collega
+direttamente a un file. Home punalfile
+align:start position:0%
+direttamente a un file. Home punalfile
+ 
+align:start position:0%
+direttamente a un file. Home punalfile
+index.md. Installation al fileinstall.
+align:start position:0%
+index.md. Installation al fileinstall.
+ 
+align:start position:0%
+index.md. Installation al fileinstall.
+La struttura del sito è tutta qui,
+align:start position:0%
+La struttura del sito è tutta qui,
+ 
+align:start position:0%
+La struttura del sito è tutta qui,
+pulita, leggibile, ma la vera chicca, la
+align:start position:0%
+pulita, leggibile, ma la vera chicca, la
+ 
+align:start position:0%
+pulita, leggibile, ma la vera chicca, la
+funzione che davvero cambia il modo di
+align:start position:0%
+funzione che davvero cambia il modo di
+ 
+align:start position:0%
+funzione che davvero cambia il modo di
+lavorare si chiama hot reloading. Che
+align:start position:0%
+lavorare si chiama hot reloading. Che
+ 
+align:start position:0%
+lavorare si chiama hot reloading. Che
+cosa significa? Significa che mentre si
+align:start position:0%
+cosa significa? Significa che mentre si
+ 
+align:start position:0%
+cosa significa? Significa che mentre si
+scrive nell'editor, non appena si salva
+align:start position:0%
+scrive nell'editor, non appena si salva
+ 
+align:start position:0%
+scrive nell'editor, non appena si salva
+il file, il sito web nel browser si
+align:start position:0%
+il file, il sito web nel browser si
+ 
+align:start position:0%
+il file, il sito web nel browser si
+aggiorna da solo, istantaneamente.
+align:start position:0%
+aggiorna da solo, istantaneamente.
+ 
+align:start position:0%
+aggiorna da solo, istantaneamente.
+Niente più F5, niente più ricarica
+align:start position:0%
+Niente più F5, niente più ricarica
+ 
+align:start position:0%
+Niente più F5, niente più ricarica
+manuale della pagina, è un ciclo di
+align:start position:0%
+manuale della pagina, è un ciclo di
+ 
+align:start position:0%
+manuale della pagina, è un ciclo di
+feedback immediato che velocizza tutto
+align:start position:0%
+feedback immediato che velocizza tutto
+ 
+align:start position:0%
+feedback immediato che velocizza tutto
+in modo incredibile. E questo è il
+align:start position:0%
+in modo incredibile. E questo è il
+ 
+align:start position:0%
+in modo incredibile. E questo è il
+risultato. Fermiamoci un attimo a
+align:start position:0%
+risultato. Fermiamoci un attimo a
+ 
+align:start position:0%
+risultato. Fermiamoci un attimo a
+riflettere. Senza aver scritto una
+align:start position:0%
+riflettere. Senza aver scritto una
+ 
+align:start position:0%
+riflettere. Senza aver scritto una
+singola riga di HTML o di CSS, abbiamo
+align:start position:0%
+singola riga di HTML o di CSS, abbiamo
+ 
+align:start position:0%
+singola riga di HTML o di CSS, abbiamo
+ottenuto un sito completo con una
+align:start position:0%
+ottenuto un sito completo con una
+ 
+align:start position:0%
+ottenuto un sito completo con una
+navigazione chiara, una barra di ricerca
+align:start position:0%
+navigazione chiara, una barra di ricerca
+ 
+align:start position:0%
+navigazione chiara, una barra di ricerca
+che funziona alla grande e un design che
+align:start position:0%
+che funziona alla grande e un design che
+ 
+align:start position:0%
+che funziona alla grande e un design che
+si adatta perfettamente a computer e
+align:start position:0%
+si adatta perfettamente a computer e
+ 
+align:start position:0%
+si adatta perfettamente a computer e
+smartphone. Ecco, questo è il potere
+align:start position:0%
+smartphone. Ecco, questo è il potere
+ 
+align:start position:0%
+smartphone. Ecco, questo è il potere
+dell'automazione quando l'applichiamo
+align:start position:0%
+dell'automazione quando l'applichiamo
+ 
+align:start position:0%
+dell'automazione quando l'applichiamo
+alla documentazione.
+align:start position:0%
+alla documentazione.
+ 
+align:start position:0%
+alla documentazione.
+A questo punto il prossimo passo è quasi
+align:start position:0%
+A questo punto il prossimo passo è quasi
+ 
+align:start position:0%
+A questo punto il prossimo passo è quasi
+scontato, no? Si tratta di prendere
+align:start position:0%
+scontato, no? Si tratta di prendere
+ 
+align:start position:0%
+scontato, no? Si tratta di prendere
+questi concetti e metterli in pratica.
+align:start position:0%
+questi concetti e metterli in pratica.
+ 
+align:start position:0%
+questi concetti e metterli in pratica.
+installare MKDS, prendere una manciata
+align:start position:0%
+installare MKDS, prendere una manciata
+ 
+align:start position:0%
+installare MKDS, prendere una manciata
+di file di testo e assistere alla
+align:start position:0%
+di file di testo e assistere alla
+ 
+align:start position:0%
+di file di testo e assistere alla
+trasformazione, da semplici appunti a un
+align:start position:0%
+trasformazione, da semplici appunti a un
+ 
+align:start position:0%
+trasformazione, da semplici appunti a un
+vero e proprio portale di documentazione
+align:start position:0%
+vero e proprio portale di documentazione
+ 
+align:start position:0%
+vero e proprio portale di documentazione
+professionale. In definitiva, tutto si
+align:start position:0%
+professionale. In definitiva, tutto si
+ 
+align:start position:0%
+professionale. In definitiva, tutto si
+riduce a una scelta. Si può continuare a
+align:start position:0%
+riduce a una scelta. Si può continuare a
+ 
+align:start position:0%
+riduce a una scelta. Si può continuare a
+investire tempo ed energia in compiti
+align:start position:0%
+investire tempo ed energia in compiti
+ 
+align:start position:0%
+investire tempo ed energia in compiti
+ripetitivi e manuali come la rilettura
+align:start position:0%
+ripetitivi e manuali come la rilettura
+ 
+align:start position:0%
+ripetitivi e manuali come la rilettura
+ossessiva e la formattazione. Oppure si
+align:start position:0%
+ossessiva e la formattazione. Oppure si
+ 
+align:start position:0%
+ossessiva e la formattazione. Oppure si
+può delegare tutto il lavoro pesante ai
+align:start position:0%
+può delegare tutto il lavoro pesante ai
+ 
+align:start position:0%
+può delegare tutto il lavoro pesante ai
+robot e concentrarsi su ciò che conta
+align:start position:0%
+robot e concentrarsi su ciò che conta
+ 
+align:start position:0%
+robot e concentrarsi su ciò che conta
+davvero, scrivere contenuti chiari,
+align:start position:0%
+davvero, scrivere contenuti chiari,
+ 
+align:start position:0%
+davvero, scrivere contenuti chiari,
+utili e di alta qualità. La domanda che
+align:start position:0%
+utili e di alta qualità. La domanda che
+ 
+align:start position:0%
+utili e di alta qualità. La domanda che
+resta, quindi, è: siamo pronti a
+align:start position:0%
+resta, quindi, è: siamo pronti a
+ 
+align:start position:0%
+resta, quindi, è: siamo pronti a
+lasciare che i robot facciano il lavoro
+align:start position:0%
+lasciare che i robot facciano il lavoro
+ 
+align:start position:0%
+lasciare che i robot facciano il lavoro
+pesante?

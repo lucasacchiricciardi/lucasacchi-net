@@ -1,0 +1,1680 @@
+WEBVTT
+Kind: captions
+Language: it
+
+00:00:04.240 --> 00:00:06.590 align:start position:0%
+ 
+Ok,<00:00:04.600><c> oggi</c><00:00:04.960><c> parliamo</c><00:00:05.400><c> di</c><00:00:05.600><c> uno</c><00:00:05.839><c> strumento</c><00:00:06.359><c> che</c>
+
+00:00:06.590 --> 00:00:06.600 align:start position:0%
+Ok, oggi parliamo di uno strumento che
+ 
+
+00:00:06.600 --> 00:00:09.030 align:start position:0%
+Ok, oggi parliamo di uno strumento che
+ogni<00:00:06.879><c> sviluppatore</c><00:00:07.720><c> dovrebbe</c><00:00:08.280><c> conoscere</c><00:00:08.920><c> a</c>
+
+00:00:09.030 --> 00:00:09.040 align:start position:0%
+ogni sviluppatore dovrebbe conoscere a
+ 
+
+00:00:09.040 --> 00:00:11.789 align:start position:0%
+ogni sviluppatore dovrebbe conoscere a
+mena<00:00:09.280><c> dito.</c><00:00:10.000><c> E</c><00:00:10.160><c> no,</c><00:00:10.599><c> non</c><00:00:10.840><c> è</c><00:00:10.960><c> un</c><00:00:11.120><c> linguaggio</c><00:00:11.599><c> di</c>
+
+00:00:11.789 --> 00:00:11.799 align:start position:0%
+mena dito. E no, non è un linguaggio di
+ 
+
+00:00:11.799 --> 00:00:14.230 align:start position:0%
+mena dito. E no, non è un linguaggio di
+programmazione,<00:00:12.840><c> ma</c><00:00:13.000><c> è</c><00:00:13.160><c> ciò</c><00:00:13.360><c> che</c><00:00:13.480><c> dà</c><00:00:13.719><c> voce</c><00:00:14.000><c> al</c>
+
+00:00:14.230 --> 00:00:14.240 align:start position:0%
+programmazione, ma è ciò che dà voce al
+ 
+
+00:00:14.240 --> 00:00:16.950 align:start position:0%
+programmazione, ma è ciò che dà voce al
+nostro<00:00:14.559><c> codice.</c><00:00:15.559><c> Esatto,</c><00:00:16.119><c> stiamo</c><00:00:16.520><c> parlando</c>
+
+00:00:16.950 --> 00:00:16.960 align:start position:0%
+nostro codice. Esatto, stiamo parlando
+ 
+
+00:00:16.960 --> 00:00:18.830 align:start position:0%
+nostro codice. Esatto, stiamo parlando
+di<00:00:17.240><c> Markdown.</c>
+
+00:00:18.830 --> 00:00:18.840 align:start position:0%
+di Markdown.
+ 
+
+00:00:18.840 --> 00:00:21.189 align:start position:0%
+di Markdown.
+Allora,<00:00:19.560><c> partiamo</c><00:00:20.039><c> subito</c><00:00:20.400><c> da</c><00:00:20.600><c> un</c><00:00:20.760><c> problema</c>
+
+00:00:21.189 --> 00:00:21.199 align:start position:0%
+Allora, partiamo subito da un problema
+ 
+
+00:00:21.199 --> 00:00:23.630 align:start position:0%
+Allora, partiamo subito da un problema
+che,<00:00:21.480><c> ammettiamolo,</c><00:00:22.240><c> abbiamo</c><00:00:22.600><c> avuto</c><00:00:22.920><c> tutti,</c>
+
+00:00:23.630 --> 00:00:23.640 align:start position:0%
+che, ammettiamolo, abbiamo avuto tutti,
+ 
+
+00:00:23.640 --> 00:00:25.990 align:start position:0%
+che, ammettiamolo, abbiamo avuto tutti,
+scrivere<00:00:24.080><c> la</c><00:00:24.279><c> documentazione.</c><00:00:25.480><c> E</c><00:00:25.599><c> la</c><00:00:25.760><c> prima</c>
+
+00:00:25.990 --> 00:00:26.000 align:start position:0%
+scrivere la documentazione. E la prima
+ 
+
+00:00:26.000 --> 00:00:28.429 align:start position:0%
+scrivere la documentazione. E la prima
+idea<00:00:26.279><c> che</c><00:00:26.439><c> magari</c><00:00:26.760><c> viene</c><00:00:26.960><c> in</c><00:00:27.080><c> mente</c><00:00:27.439><c> è</c><00:00:28.080><c> beh,</c>
+
+00:00:28.429 --> 00:00:28.439 align:start position:0%
+idea che magari viene in mente è beh,
+ 
+
+00:00:28.439 --> 00:00:32.069 align:start position:0%
+idea che magari viene in mente è beh,
+uso<00:00:28.760><c> Word,</c><00:00:29.119><c> no?</c><00:00:29.840><c> Ecco,</c><00:00:30.400><c> fermi</c><00:00:30.759><c> tutti.</c><00:00:31.640><c> Word</c><00:00:31.960><c> e</c>
+
+00:00:32.069 --> 00:00:32.079 align:start position:0%
+uso Word, no? Ecco, fermi tutti. Word e
+ 
+
+00:00:32.079 --> 00:00:34.630 align:start position:0%
+uso Word, no? Ecco, fermi tutti. Word e
+Git,<00:00:32.640><c> il</c><00:00:32.840><c> nostro</c><00:00:33.160><c> pane</c><00:00:33.399><c> quotidiano,</c><00:00:34.360><c> sono</c>
+
+00:00:34.630 --> 00:00:34.640 align:start position:0%
+Git, il nostro pane quotidiano, sono
+ 
+
+00:00:34.640 --> 00:00:37.110 align:start position:0%
+Git, il nostro pane quotidiano, sono
+come<00:00:34.879><c> l'olio</c><00:00:35.200><c> e</c><00:00:35.360><c> l'acqua,</c><00:00:36.000><c> semplicemente</c><00:00:36.840><c> non</c>
+
+00:00:37.110 --> 00:00:37.120 align:start position:0%
+come l'olio e l'acqua, semplicemente non
+ 
+
+00:00:37.120 --> 00:00:39.990 align:start position:0%
+come l'olio e l'acqua, semplicemente non
+funzionano<00:00:37.640><c> insieme.</c><00:00:38.879><c> E</c><00:00:39.040><c> guardate</c><00:00:39.520><c> qui,</c>
+
+00:00:39.990 --> 00:00:40.000 align:start position:0%
+funzionano insieme. E guardate qui,
+ 
+
+00:00:40.000 --> 00:00:42.910 align:start position:0%
+funzionano insieme. E guardate qui,
+l'immagine<00:00:40.879><c> parla</c><00:00:41.280><c> da</c><00:00:41.480><c> sola.</c><00:00:42.280><c> A</c><00:00:42.440><c> sinistra</c>
+
+00:00:42.910 --> 00:00:42.920 align:start position:0%
+l'immagine parla da sola. A sinistra
+ 
+
+00:00:42.920 --> 00:00:45.790 align:start position:0%
+l'immagine parla da sola. A sinistra
+proviamo<00:00:43.280><c> a</c><00:00:43.399><c> fare</c><00:00:43.600><c> un</c><00:00:43.760><c> git</c><00:00:44.480><c> su</c><00:00:44.640><c> un</c><00:00:44.800><c> file</c><00:00:45.079><c> Word.</c>
+
+00:00:45.790 --> 00:00:45.800 align:start position:0%
+proviamo a fare un git su un file Word.
+ 
+
+00:00:45.800 --> 00:00:48.350 align:start position:0%
+proviamo a fare un git su un file Word.
+Il<00:00:45.960><c> risultato?</c><00:00:46.920><c> Un</c><00:00:47.079><c> messaggio</c><00:00:47.719><c> completamente</c>
+
+00:00:48.350 --> 00:00:48.360 align:start position:0%
+Il risultato? Un messaggio completamente
+ 
+
+00:00:48.360 --> 00:00:51.229 align:start position:0%
+Il risultato? Un messaggio completamente
+inutile.<00:00:49.239><c> Binary</c><00:00:49.760><c> file</c><00:00:50.120><c> differs.</c><00:00:50.879><c> E</c><00:00:51.000><c> che</c><00:00:51.120><c> ce</c>
+
+00:00:51.229 --> 00:00:51.239 align:start position:0%
+inutile. Binary file differs. E che ce
+ 
+
+00:00:51.239 --> 00:00:53.310 align:start position:0%
+inutile. Binary file differs. E che ce
+ne<00:00:51.399><c> facciamo?</c><00:00:52.199><c> Non</c><00:00:52.320><c> sappiamo</c><00:00:52.879><c> cosa</c><00:00:53.160><c> è</c>
+
+00:00:53.310 --> 00:00:53.320 align:start position:0%
+ne facciamo? Non sappiamo cosa è
+ 
+
+00:00:53.320 --> 00:00:56.069 align:start position:0%
+ne facciamo? Non sappiamo cosa è
+cambiato,<00:00:54.039><c> dove</c><00:00:54.320><c> è</c><00:00:54.480><c> cambiato.</c><00:00:55.320><c> Niente,</c><00:00:55.879><c> un</c>
+
+00:00:56.069 --> 00:00:56.079 align:start position:0%
+cambiato, dove è cambiato. Niente, un
+ 
+
+00:00:56.079 --> 00:00:59.110 align:start position:0%
+cambiato, dove è cambiato. Niente, un
+buco<00:00:56.320><c> nero.</c><00:00:57.239><c> Ora</c><00:00:57.440><c> guardate</c><00:00:57.879><c> a</c><00:00:58.039><c> destra.</c><00:00:58.840><c> Stessa</c>
+
+00:00:59.110 --> 00:00:59.120 align:start position:0%
+buco nero. Ora guardate a destra. Stessa
+ 
+
+00:00:59.120 --> 00:01:02.110 align:start position:0%
+buco nero. Ora guardate a destra. Stessa
+operazione<00:00:59.680><c> su</c><00:00:59.879><c> un</c><00:01:00.000><c> file</c><00:01:00.280><c> markdown.</c><00:01:01.359><c> Boom!</c>
+
+00:01:02.110 --> 00:01:02.120 align:start position:0%
+operazione su un file markdown. Boom!
+ 
+
+00:01:02.120 --> 00:01:04.950 align:start position:0%
+operazione su un file markdown. Boom!
+Git<00:01:02.440><c> ci</c><00:01:02.640><c> dice</c><00:01:02.960><c> esattamente</c><00:01:03.760><c> cosa</c><00:01:04.040><c> è</c><00:01:04.239><c> successo.</c>
+
+00:01:04.950 --> 00:01:04.960 align:start position:0%
+Git ci dice esattamente cosa è successo.
+ 
+
+00:01:04.960 --> 00:01:07.190 align:start position:0%
+Git ci dice esattamente cosa è successo.
+Ehi,<00:01:05.239><c> hai</c><00:01:05.439><c> aggiunto</c><00:01:05.880><c> una</c><00:01:06.119><c> nuova</c><00:01:06.400><c> sezione.</c>
+
+00:01:07.190 --> 00:01:07.200 align:start position:0%
+Ehi, hai aggiunto una nuova sezione.
+ 
+
+00:01:07.200 --> 00:01:09.310 align:start position:0%
+Ehi, hai aggiunto una nuova sezione.
+Chiaro,<00:01:07.720><c> pulito,</c><00:01:08.119><c> tracciabile.</c><00:01:09.000><c> E</c><00:01:09.119><c> non</c>
+
+00:01:09.310 --> 00:01:09.320 align:start position:0%
+Chiaro, pulito, tracciabile. E non
+ 
+
+00:01:09.320 --> 00:01:11.550 align:start position:0%
+Chiaro, pulito, tracciabile. E non
+parliamo<00:01:09.680><c> neanche</c><00:01:10.040><c> dei</c><00:01:10.240><c> merge</c><00:01:10.680><c> conflict.</c><00:01:11.439><c> Su</c>
+
+00:01:11.550 --> 00:01:11.560 align:start position:0%
+parliamo neanche dei merge conflict. Su
+ 
+
+00:01:11.560 --> 00:01:13.469 align:start position:0%
+parliamo neanche dei merge conflict. Su
+un<00:01:11.640><c> file</c><00:01:11.880><c> binario</c><00:01:12.360><c> sono</c><00:01:12.560><c> un</c><00:01:12.759><c> vero</c><00:01:12.960><c> e</c><00:01:13.159><c> proprio</c>
+
+00:01:13.469 --> 00:01:13.479 align:start position:0%
+un file binario sono un vero e proprio
+ 
+
+00:01:13.479 --> 00:01:15.550 align:start position:0%
+un file binario sono un vero e proprio
+incubo,<00:01:14.040><c> mentre</c><00:01:14.320><c> su</c><00:01:14.439><c> un</c><00:01:14.560><c> file</c><00:01:14.759><c> di</c><00:01:14.920><c> testo,</c><00:01:15.360><c> beh,</c>
+
+00:01:15.550 --> 00:01:15.560 align:start position:0%
+incubo, mentre su un file di testo, beh,
+ 
+
+00:01:15.560 --> 00:01:18.109 align:start position:0%
+incubo, mentre su un file di testo, beh,
+è<00:01:15.720><c> tutta</c><00:01:15.960><c> un'altra</c><00:01:16.320><c> storia.</c><00:01:17.360><c> E</c><00:01:17.560><c> questo</c><00:01:17.880><c> ci</c>
+
+00:01:18.109 --> 00:01:18.119 align:start position:0%
+è tutta un'altra storia. E questo ci
+ 
+
+00:01:18.119 --> 00:01:19.950 align:start position:0%
+è tutta un'altra storia. E questo ci
+porta<00:01:18.400><c> a</c><00:01:18.520><c> una</c><00:01:18.720><c> frase</c><00:01:19.040><c> che,</c><00:01:19.360><c> secondo</c><00:01:19.720><c> me,</c>
+
+00:01:19.950 --> 00:01:19.960 align:start position:0%
+porta a una frase che, secondo me,
+ 
+
+00:01:19.960 --> 00:01:22.429 align:start position:0%
+porta a una frase che, secondo me,
+c'entra<00:01:20.360><c> il</c><00:01:20.520><c> punto</c><00:01:20.799><c> in</c><00:01:20.920><c> pieno.</c><00:01:21.680><c> Se</c><00:01:21.799><c> il</c><00:01:22.000><c> codice</c>
+
+00:01:22.429 --> 00:01:22.439 align:start position:0%
+c'entra il punto in pieno. Se il codice
+ 
+
+00:01:22.439 --> 00:01:25.670 align:start position:0%
+c'entra il punto in pieno. Se il codice
+è<00:01:22.640><c> la</c><00:01:22.799><c> logica,</c><00:01:23.560><c> Mark</c><00:01:24.240><c> è</c><00:01:24.439><c> la</c><00:01:24.600><c> sua</c><00:01:24.799><c> voce.</c>
+
+00:01:25.670 --> 00:01:25.680 align:start position:0%
+è la logica, Mark è la sua voce.
+ 
+
+00:01:25.680 --> 00:01:28.270 align:start position:0%
+è la logica, Mark è la sua voce.
+Pensateci,<00:01:26.280><c> Vattimo</c><00:01:26.799><c> è</c><00:01:27.040><c> perfetto.</c><00:01:28.119><c> La</c>
+
+00:01:28.270 --> 00:01:28.280 align:start position:0%
+Pensateci, Vattimo è perfetto. La
+ 
+
+00:01:28.280 --> 00:01:30.350 align:start position:0%
+Pensateci, Vattimo è perfetto. La
+documentazione<00:01:29.360><c> non</c><00:01:29.560><c> è</c><00:01:29.720><c> più</c><00:01:29.880><c> una</c><00:01:30.079><c> cosa</c>
+
+00:01:30.350 --> 00:01:30.360 align:start position:0%
+documentazione non è più una cosa
+ 
+
+00:01:30.360 --> 00:01:32.389 align:start position:0%
+documentazione non è più una cosa
+separata,<00:01:31.079><c> un</c><00:01:31.240><c> documento</c><00:01:31.759><c> perso</c><00:01:32.040><c> chissà</c>
+
+00:01:32.389 --> 00:01:32.399 align:start position:0%
+separata, un documento perso chissà
+ 
+
+00:01:32.399 --> 00:01:35.230 align:start position:0%
+separata, un documento perso chissà
+dove.<00:01:33.079><c> Vive</c><00:01:33.360><c> insieme</c><00:01:33.680><c> al</c><00:01:33.880><c> codice,</c><00:01:34.560><c> evolve</c><00:01:35.040><c> con</c>
+
+00:01:35.230 --> 00:01:35.240 align:start position:0%
+dove. Vive insieme al codice, evolve con
+ 
+
+00:01:35.240 --> 00:01:37.910 align:start position:0%
+dove. Vive insieme al codice, evolve con
+il<00:01:35.399><c> codice.</c><00:01:36.360><c> Logica</c><00:01:36.759><c> e</c><00:01:36.960><c> spiegazione</c>
+
+00:01:37.910 --> 00:01:37.920 align:start position:0%
+il codice. Logica e spiegazione
+ 
+
+00:01:37.920 --> 00:01:40.590 align:start position:0%
+il codice. Logica e spiegazione
+finalmente<00:01:38.600><c> vanno</c><00:01:38.880><c> a</c><00:01:39.040><c> braccetto.</c>
+
+00:01:40.590 --> 00:01:40.600 align:start position:0%
+finalmente vanno a braccetto.
+ 
+
+00:01:40.600 --> 00:01:43.149 align:start position:0%
+finalmente vanno a braccetto.
+Ok?<00:01:41.000><c> Quindi</c><00:01:41.360><c> qual</c><00:01:41.560><c> è</c><00:01:41.720><c> l'alternativa?</c><00:01:42.840><c> Qual</c><00:01:43.040><c> è</c>
+
+00:01:43.149 --> 00:01:43.159 align:start position:0%
+Ok? Quindi qual è l'alternativa? Qual è
+ 
+
+00:01:43.159 --> 00:01:45.469 align:start position:0%
+Ok? Quindi qual è l'alternativa? Qual è
+questo<00:01:43.560><c> strumento</c><00:01:44.200><c> magico</c><00:01:44.719><c> che</c><00:01:44.960><c> risolto</c><00:01:45.320><c> il</c>
+
+00:01:45.469 --> 00:01:45.479 align:start position:0%
+questo strumento magico che risolto il
+ 
+
+00:01:45.479 --> 00:01:47.510 align:start position:0%
+questo strumento magico che risolto il
+problema<00:01:45.840><c> e</c><00:01:46.000><c> che</c><00:01:46.200><c> oggi</c><00:01:46.439><c> è</c><00:01:46.640><c> praticamente</c><00:01:47.280><c> lo</c>
+
+00:01:47.510 --> 00:01:47.520 align:start position:0%
+problema e che oggi è praticamente lo
+ 
+
+00:01:47.520 --> 00:01:51.149 align:start position:0%
+problema e che oggi è praticamente lo
+standard<00:01:48.119><c> de</c><00:01:48.240><c> facto?</c><00:01:49.320><c> È</c><00:01:49.439><c> lui,</c><00:01:50.000><c> Mark.</c><00:01:51.040><c> Ma</c>
+
+00:01:51.149 --> 00:01:51.159 align:start position:0%
+standard de facto? È lui, Mark. Ma
+ 
+
+00:01:51.159 --> 00:01:53.230 align:start position:0%
+standard de facto? È lui, Mark. Ma
+cerchiamo<00:01:51.560><c> di</c><00:01:51.719><c> capire</c><00:01:52.159><c> perché</c><00:01:52.600><c> ha</c><00:01:52.799><c> vinto</c><00:01:53.040><c> su</c>
+
+00:01:53.230 --> 00:01:53.240 align:start position:0%
+cerchiamo di capire perché ha vinto su
+ 
+
+00:01:53.240 --> 00:01:55.389 align:start position:0%
+cerchiamo di capire perché ha vinto su
+tutta<00:01:53.479><c> la</c><00:01:53.640><c> linea,</c><00:01:54.200><c> perché</c><00:01:54.479><c> è</c><00:01:54.640><c> diventato</c><00:01:55.079><c> così</c>
+
+00:01:55.389 --> 00:01:55.399 align:start position:0%
+tutta la linea, perché è diventato così
+ 
+
+00:01:55.399 --> 00:01:56.950 align:start position:0%
+tutta la linea, perché è diventato così
+indispensabile.
+
+00:01:56.950 --> 00:01:56.960 align:start position:0%
+indispensabile.
+ 
+
+00:01:56.960 --> 00:01:58.709 align:start position:0%
+indispensabile.
+Le<00:01:57.079><c> ragioni</c><00:01:57.439><c> del</c><00:01:57.640><c> suo</c><00:01:57.840><c> successo</c><00:01:58.439><c> sono</c>
+
+00:01:58.709 --> 00:01:58.719 align:start position:0%
+Le ragioni del suo successo sono
+ 
+
+00:01:58.719 --> 00:02:00.709 align:start position:0%
+Le ragioni del suo successo sono
+fondamentalmente<00:01:59.680><c> tre</c><00:02:00.200><c> e</c><00:02:00.399><c> sono</c>
+
+00:02:00.709 --> 00:02:00.719 align:start position:0%
+fondamentalmente tre e sono
+ 
+
+00:02:00.719 --> 00:02:04.069 align:start position:0%
+fondamentalmente tre e sono
+potentissime.<00:02:01.920><c> La</c><00:02:02.079><c> prima</c><00:02:02.719><c> è</c><00:02:03.000><c> solo</c><00:02:03.360><c> testo,</c>
+
+00:02:04.069 --> 00:02:04.079 align:start position:0%
+potentissime. La prima è solo testo,
+ 
+
+00:02:04.079 --> 00:02:06.590 align:start position:0%
+potentissime. La prima è solo testo,
+puro<00:02:04.439><c> e</c><00:02:04.640><c> semplice</c><00:02:05.119><c> testo.</c><00:02:05.840><c> Significa</c><00:02:06.280><c> che</c><00:02:06.439><c> si</c>
+
+00:02:06.590 --> 00:02:06.600 align:start position:0%
+puro e semplice testo. Significa che si
+ 
+
+00:02:06.600 --> 00:02:08.350 align:start position:0%
+puro e semplice testo. Significa che si
+può<00:02:06.759><c> aprire</c><00:02:07.039><c> con</c><00:02:07.240><c> qualsiasi</c><00:02:07.680><c> cosa,</c><00:02:08.160><c> dal</c>
+
+00:02:08.350 --> 00:02:08.360 align:start position:0%
+può aprire con qualsiasi cosa, dal
+ 
+
+00:02:08.360 --> 00:02:10.910 align:start position:0%
+può aprire con qualsiasi cosa, dal
+blocco<00:02:08.679><c> note</c><00:02:09.000><c> a</c><00:02:09.119><c> VS</c><00:02:09.479><c> Code</c><00:02:09.959><c> e</c><00:02:10.160><c> sarà</c><00:02:10.520><c> sempre</c>
+
+00:02:10.910 --> 00:02:10.920 align:start position:0%
+blocco note a VS Code e sarà sempre
+ 
+
+00:02:10.920 --> 00:02:13.430 align:start position:0%
+blocco note a VS Code e sarà sempre
+leggibile.<00:02:12.040><c> La</c><00:02:12.200><c> seconda</c><00:02:12.879><c> va</c><00:02:13.040><c> d'amore</c>
+
+00:02:13.430 --> 00:02:13.440 align:start position:0%
+leggibile. La seconda va d'amore
+ 
+
+00:02:13.440 --> 00:02:15.309 align:start position:0%
+leggibile. La seconda va d'amore
+d'accordo<00:02:13.840><c> con</c><00:02:14.000><c> Git</c><00:02:14.519><c> e</c><00:02:14.720><c> questo</c><00:02:14.920><c> l'abbiamo</c>
+
+00:02:15.309 --> 00:02:15.319 align:start position:0%
+d'accordo con Git e questo l'abbiamo
+ 
+
+00:02:15.319 --> 00:02:18.070 align:start position:0%
+d'accordo con Git e questo l'abbiamo
+appena<00:02:15.599><c> visto.</c><00:02:16.519><c> E</c><00:02:16.640><c> la</c><00:02:16.800><c> terza,</c><00:02:17.120><c> che</c><00:02:17.280><c> è</c><00:02:17.400><c> geniale,</c>
+
+00:02:18.070 --> 00:02:18.080 align:start position:0%
+appena visto. E la terza, che è geniale,
+ 
+
+00:02:18.080 --> 00:02:20.910 align:start position:0%
+appena visto. E la terza, che è geniale,
+è<00:02:18.239><c> la</c><00:02:18.400><c> separazione</c><00:02:19.040><c> tra</c><00:02:19.319><c> contenuto</c><00:02:19.920><c> e</c><00:02:20.160><c> forma.</c>
+
+00:02:20.910 --> 00:02:20.920 align:start position:0%
+è la separazione tra contenuto e forma.
+ 
+
+00:02:20.920 --> 00:02:22.229 align:start position:0%
+è la separazione tra contenuto e forma.
+Si<00:02:21.000><c> scrive</c><00:02:21.280><c> il</c><00:02:21.400><c> testo</c><00:02:21.640><c> una</c><00:02:21.879><c> volta</c>
+
+00:02:22.229 --> 00:02:22.239 align:start position:0%
+Si scrive il testo una volta
+ 
+
+00:02:22.239 --> 00:02:24.710 align:start position:0%
+Si scrive il testo una volta
+concentrandosi<00:02:23.000><c> su</c><00:02:23.239><c> cosa</c><00:02:23.519><c> dire</c><00:02:24.040><c> e</c><00:02:24.239><c> poi</c><00:02:24.519><c> quel</c>
+
+00:02:24.710 --> 00:02:24.720 align:start position:0%
+concentrandosi su cosa dire e poi quel
+ 
+
+00:02:24.720 --> 00:02:26.750 align:start position:0%
+concentrandosi su cosa dire e poi quel
+testo<00:02:25.040><c> può</c><00:02:25.239><c> diventare</c><00:02:25.720><c> una</c><00:02:25.879><c> pagina</c><00:02:26.200><c> web,</c><00:02:26.640><c> un</c>
+
+00:02:26.750 --> 00:02:26.760 align:start position:0%
+testo può diventare una pagina web, un
+ 
+
+00:02:26.760 --> 00:02:29.030 align:start position:0%
+testo può diventare una pagina web, un
+PDF,<00:02:27.400><c> quello</c><00:02:27.599><c> che</c><00:02:27.760><c> si</c><00:02:27.879><c> vuole,</c><00:02:28.440><c> senza</c><00:02:28.720><c> dover</c>
+
+00:02:29.030 --> 00:02:29.040 align:start position:0%
+PDF, quello che si vuole, senza dover
+ 
+
+00:02:29.040 --> 00:02:31.869 align:start position:0%
+PDF, quello che si vuole, senza dover
+cambiare<00:02:29.480><c> una</c><00:02:29.720><c> sola</c><00:02:30.000><c> parola.</c><00:02:31.160><c> Una</c><00:02:31.360><c> cosa</c>
+
+00:02:31.869 --> 00:02:31.879 align:start position:0%
+cambiare una sola parola. Una cosa
+ 
+
+00:02:31.879 --> 00:02:34.589 align:start position:0%
+cambiare una sola parola. Una cosa
+importante<00:02:32.319><c> da</c><00:02:32.519><c> sapere</c><00:02:32.920><c> però,</c><00:02:33.519><c> non</c><00:02:33.760><c> esiste</c><00:02:34.319><c> un</c>
+
+00:02:34.589 --> 00:02:34.599 align:start position:0%
+importante da sapere però, non esiste un
+ 
+
+00:02:34.599 --> 00:02:37.509 align:start position:0%
+importante da sapere però, non esiste un
+solo<00:02:35.040><c> markdown,</c><00:02:35.959><c> è</c><00:02:36.160><c> un</c><00:02:36.280><c> po'</c><00:02:36.440><c> come</c><00:02:36.640><c> per</c><00:02:36.840><c> Linux,</c>
+
+00:02:37.509 --> 00:02:37.519 align:start position:0%
+solo markdown, è un po' come per Linux,
+ 
+
+00:02:37.519 --> 00:02:40.110 align:start position:0%
+solo markdown, è un po' come per Linux,
+ci<00:02:37.720><c> sono</c><00:02:38.000><c> diverse</c><00:02:38.560><c> distribuzioni</c><00:02:39.400><c> o,</c><00:02:39.720><c> come</c><00:02:39.959><c> si</c>
+
+00:02:40.110 --> 00:02:40.120 align:start position:0%
+ci sono diverse distribuzioni o, come si
+ 
+
+00:02:40.120 --> 00:02:43.229 align:start position:0%
+ci sono diverse distribuzioni o, come si
+dice<00:02:40.319><c> in</c><00:02:40.560><c> gergo</c><00:02:41.000><c> flavor,</c><00:02:41.720><c> cioè</c><00:02:42.080><c> gusti.</c><00:02:42.959><c> Quello</c>
+
+00:02:43.229 --> 00:02:43.239 align:start position:0%
+dice in gergo flavor, cioè gusti. Quello
+ 
+
+00:02:43.239 --> 00:02:45.390 align:start position:0%
+dice in gergo flavor, cioè gusti. Quello
+che<00:02:43.360><c> useremo</c><00:02:43.760><c> noi</c><00:02:44.080><c> è</c><00:02:44.239><c> che</c><00:02:44.360><c> è</c><00:02:44.480><c> di</c><00:02:44.680><c> gran</c><00:02:44.879><c> lunga</c><00:02:45.239><c> il</c>
+
+00:02:45.390 --> 00:02:45.400 align:start position:0%
+che useremo noi è che è di gran lunga il
+ 
+
+00:02:45.400 --> 00:02:48.110 align:start position:0%
+che useremo noi è che è di gran lunga il
+più<00:02:45.640><c> diffuso</c><00:02:46.000><c> nel</c><00:02:46.239><c> nostro</c><00:02:46.480><c> mondo</c><00:02:47.040><c> è</c><00:02:47.319><c> il</c><00:02:47.560><c> GitHub</c>
+
+00:02:48.110 --> 00:02:48.120 align:start position:0%
+più diffuso nel nostro mondo è il GitHub
+ 
+
+00:02:48.120 --> 00:02:50.430 align:start position:0%
+più diffuso nel nostro mondo è il GitHub
+Flavored<00:02:48.760><c> Marktwn</c>
+
+00:02:50.430 --> 00:02:50.440 align:start position:0%
+Flavored Marktwn
+ 
+
+00:02:50.440 --> 00:02:52.830 align:start position:0%
+Flavored Marktwn
+per<00:02:50.560><c> gli</c><00:02:50.720><c> amici.</c><00:02:51.560><c> Perché</c><00:02:51.920><c> proprio</c><00:02:52.239><c> questo?</c>
+
+00:02:52.830 --> 00:02:52.840 align:start position:0%
+per gli amici. Perché proprio questo?
+ 
+
+00:02:52.840 --> 00:02:54.790 align:start position:0%
+per gli amici. Perché proprio questo?
+Semplice,<00:02:53.680><c> aggiunge</c><00:02:54.120><c> delle</c><00:02:54.319><c> chicche</c>
+
+00:02:54.790 --> 00:02:54.800 align:start position:0%
+Semplice, aggiunge delle chicche
+ 
+
+00:02:54.800 --> 00:02:56.710 align:start position:0%
+Semplice, aggiunge delle chicche
+utilissime<00:02:55.519><c> come</c><00:02:55.800><c> le</c><00:02:55.959><c> tabelle</c><00:02:56.400><c> o</c><00:02:56.599><c> le</c>
+
+00:02:56.710 --> 00:02:56.720 align:start position:0%
+utilissime come le tabelle o le
+ 
+
+00:02:56.720 --> 00:02:58.910 align:start position:0%
+utilissime come le tabelle o le
+checklist<00:02:57.440><c> che</c><00:02:57.640><c> sono</c><00:02:57.959><c> oro</c><00:02:58.200><c> colato</c><00:02:58.599><c> per</c><00:02:58.720><c> chi</c>
+
+00:02:58.910 --> 00:02:58.920 align:start position:0%
+checklist che sono oro colato per chi
+ 
+
+00:02:58.920 --> 00:03:01.990 align:start position:0%
+checklist che sono oro colato per chi
+sviluppa.<00:03:00.400><c> Bene,</c><00:03:00.760><c> è</c><00:03:00.959><c> ora</c><00:03:01.120><c> di</c><00:03:01.280><c> sporcarsi</c><00:03:01.840><c> le</c>
+
+00:03:01.990 --> 00:03:02.000 align:start position:0%
+sviluppa. Bene, è ora di sporcarsi le
+ 
+
+00:03:02.000 --> 00:03:04.390 align:start position:0%
+sviluppa. Bene, è ora di sporcarsi le
+mani.<00:03:02.360><c> Parliamo</c><00:03:02.879><c> di</c><00:03:03.080><c> sintassi</c><00:03:03.840><c> e</c><00:03:04.000><c> la</c><00:03:04.159><c> buona</c>
+
+00:03:04.390 --> 00:03:04.400 align:start position:0%
+mani. Parliamo di sintassi e la buona
+ 
+
+00:03:04.400 --> 00:03:06.229 align:start position:0%
+mani. Parliamo di sintassi e la buona
+notizia<00:03:04.840><c> è</c><00:03:05.040><c> che</c><00:03:05.200><c> non</c><00:03:05.400><c> serve</c><00:03:05.760><c> imparare</c><00:03:06.120><c> un</c>
+
+00:03:06.229 --> 00:03:06.239 align:start position:0%
+notizia è che non serve imparare un
+ 
+
+00:03:06.239 --> 00:03:08.789 align:start position:0%
+notizia è che non serve imparare un
+manuale<00:03:06.720><c> intero.</c><00:03:07.360><c> Bastano</c><00:03:07.799><c> quattro</c><00:03:08.280><c> e</c><00:03:08.440><c> dico</c>
+
+00:03:08.789 --> 00:03:08.799 align:start position:0%
+manuale intero. Bastano quattro e dico
+ 
+
+00:03:08.799 --> 00:03:11.589 align:start position:0%
+manuale intero. Bastano quattro e dico
+quattro<00:03:09.360><c> concetti</c><00:03:09.920><c> per</c><00:03:10.120><c> gestire</c><00:03:10.480><c> il</c><00:03:10.640><c> 90%</c><00:03:11.440><c> di</c>
+
+00:03:11.589 --> 00:03:11.599 align:start position:0%
+quattro concetti per gestire il 90% di
+ 
+
+00:03:11.599 --> 00:03:13.470 align:start position:0%
+quattro concetti per gestire il 90% di
+tutto<00:03:11.879><c> quello</c><00:03:12.159><c> che</c><00:03:12.360><c> servirà.</c><00:03:13.159><c> Stiamo</c>
+
+00:03:13.470 --> 00:03:13.480 align:start position:0%
+tutto quello che servirà. Stiamo
+ 
+
+00:03:13.480 --> 00:03:15.630 align:start position:0%
+tutto quello che servirà. Stiamo
+parlando<00:03:13.840><c> di</c><00:03:14.040><c> titoli,</c><00:03:14.519><c> blocchi</c><00:03:14.840><c> di</c><00:03:15.000><c> codice,</c>
+
+00:03:15.630 --> 00:03:15.640 align:start position:0%
+parlando di titoli, blocchi di codice,
+ 
+
+00:03:15.640 --> 00:03:19.149 align:start position:0%
+parlando di titoli, blocchi di codice,
+liste<00:03:16.080><c> e</c><00:03:16.319><c> link.</c><00:03:16.959><c> Pronti?</c><00:03:17.640><c> Via!</c><00:03:18.560><c> Partiamo</c><00:03:18.959><c> dai</c>
+
+00:03:19.149 --> 00:03:19.159 align:start position:0%
+liste e link. Pronti? Via! Partiamo dai
+ 
+
+00:03:19.159 --> 00:03:21.789 align:start position:0%
+liste e link. Pronti? Via! Partiamo dai
+titoli,<00:03:19.680><c> gli</c><00:03:19.879><c> headers.</c><00:03:20.799><c> E</c><00:03:20.920><c> qui</c><00:03:21.280><c> subito</c>
+
+00:03:21.789 --> 00:03:21.799 align:start position:0%
+titoli, gli headers. E qui subito
+ 
+
+00:03:21.799 --> 00:03:24.309 align:start position:0%
+titoli, gli headers. E qui subito
+sfatiamo<00:03:22.280><c> un</c><00:03:22.440><c> mito.</c><00:03:23.159><c> Il</c><00:03:23.319><c> cancelletto,</c><00:03:24.120><c> il</c>
+
+00:03:24.309 --> 00:03:24.319 align:start position:0%
+sfatiamo un mito. Il cancelletto, il
+ 
+
+00:03:24.319 --> 00:03:26.750 align:start position:0%
+sfatiamo un mito. Il cancelletto, il
+simbolo<00:03:24.840><c> hashtag,</c><00:03:25.680><c> non</c><00:03:25.959><c> sarde</c><00:03:26.280><c> per</c><00:03:26.440><c> fare</c><00:03:26.640><c> il</c>
+
+00:03:26.750 --> 00:03:26.760 align:start position:0%
+simbolo hashtag, non sarde per fare il
+ 
+
+00:03:26.760 --> 00:03:28.710 align:start position:0%
+simbolo hashtag, non sarde per fare il
+testo<00:03:27.080><c> più</c><00:03:27.280><c> grande.</c><00:03:27.920><c> È</c><00:03:27.959><c> un</c><00:03:28.080><c> errore</c><00:03:28.360><c> che</c><00:03:28.519><c> vedo</c>
+
+00:03:28.710 --> 00:03:28.720 align:start position:0%
+testo più grande. È un errore che vedo
+ 
+
+00:03:28.720 --> 00:03:30.830 align:start position:0%
+testo più grande. È un errore che vedo
+fare<00:03:28.959><c> spessissimo.</c><00:03:29.879><c> Il</c><00:03:30.040><c> suo</c><00:03:30.239><c> unico</c><00:03:30.599><c> vero</c>
+
+00:03:30.830 --> 00:03:30.840 align:start position:0%
+fare spessissimo. Il suo unico vero
+ 
+
+00:03:30.840 --> 00:03:32.830 align:start position:0%
+fare spessissimo. Il suo unico vero
+scopo<00:03:31.280><c> è</c><00:03:31.439><c> dare</c><00:03:31.680><c> una</c><00:03:31.840><c> struttura</c><00:03:32.360><c> logica</c><00:03:32.680><c> al</c>
+
+00:03:32.830 --> 00:03:32.840 align:start position:0%
+scopo è dare una struttura logica al
+ 
+
+00:03:32.840 --> 00:03:34.910 align:start position:0%
+scopo è dare una struttura logica al
+documento.<00:03:33.760><c> È</c><00:03:33.799><c> come</c><00:03:33.959><c> costruire</c><00:03:34.400><c> l'indice</c><00:03:34.799><c> di</c>
+
+00:03:34.910 --> 00:03:34.920 align:start position:0%
+documento. È come costruire l'indice di
+ 
+
+00:03:34.920 --> 00:03:37.789 align:start position:0%
+documento. È come costruire l'indice di
+un<00:03:35.080><c> libro,</c><00:03:35.519><c> non</c><00:03:35.720><c> è</c><00:03:35.879><c> una</c><00:03:36.040><c> questione</c><00:03:36.400><c> di</c><00:03:36.560><c> font.</c><00:03:37.640><c> E</c>
+
+00:03:37.789 --> 00:03:37.799 align:start position:0%
+un libro, non è una questione di font. E
+ 
+
+00:03:37.799 --> 00:03:40.509 align:start position:0%
+un libro, non è una questione di font. E
+a<00:03:37.959><c> proposito</c><00:03:38.400><c> di</c><00:03:38.640><c> errori,</c><00:03:39.319><c> guardate</c><00:03:39.799><c> qua.</c>
+
+00:03:40.509 --> 00:03:40.519 align:start position:0%
+a proposito di errori, guardate qua.
+ 
+
+00:03:40.519 --> 00:03:42.110 align:start position:0%
+a proposito di errori, guardate qua.
+Questo<00:03:40.680><c> è</c><00:03:40.840><c> l'errore</c><00:03:41.200><c> da</c><00:03:41.439><c> un</c><00:03:41.599><c> milione</c><00:03:41.959><c> di</c>
+
+00:03:42.110 --> 00:03:42.120 align:start position:0%
+Questo è l'errore da un milione di
+ 
+
+00:03:42.120 --> 00:03:44.270 align:start position:0%
+Questo è l'errore da un milione di
+dollari,<00:03:42.760><c> quello</c><00:03:43.040><c> che</c><00:03:43.159><c> fa</c><00:03:43.360><c> perdere</c><00:03:43.879><c> minuti</c>
+
+00:03:44.270 --> 00:03:44.280 align:start position:0%
+dollari, quello che fa perdere minuti
+ 
+
+00:03:44.280 --> 00:03:46.630 align:start position:0%
+dollari, quello che fa perdere minuti
+preziosi.<00:03:45.360><c> Vedete</c><00:03:45.680><c> a</c><00:03:45.840><c> sinistra</c><00:03:46.439><c> il</c>
+
+00:03:46.630 --> 00:03:46.640 align:start position:0%
+preziosi. Vedete a sinistra il
+ 
+
+00:03:46.640 --> 00:03:48.750 align:start position:0%
+preziosi. Vedete a sinistra il
+cancelletto<00:03:47.159><c> è</c><00:03:47.360><c> attaccato</c><00:03:47.760><c> alla</c><00:03:48.040><c> parola.</c>
+
+00:03:48.750 --> 00:03:48.760 align:start position:0%
+cancelletto è attaccato alla parola.
+ 
+
+00:03:48.760 --> 00:03:50.789 align:start position:0%
+cancelletto è attaccato alla parola.
+Sbagliato,<00:03:49.720><c> molti</c><00:03:50.159><c> sistemi</c><00:03:50.480><c> non</c><00:03:50.640><c> lo</c>
+
+00:03:50.789 --> 00:03:50.799 align:start position:0%
+Sbagliato, molti sistemi non lo
+ 
+
+00:03:50.799 --> 00:03:53.229 align:start position:0%
+Sbagliato, molti sistemi non lo
+interpreteranno<00:03:51.560><c> come</c><00:03:51.760><c> un</c><00:03:51.920><c> titolo.</c><00:03:52.760><c> A</c><00:03:52.920><c> destra</c>
+
+00:03:53.229 --> 00:03:53.239 align:start position:0%
+interpreteranno come un titolo. A destra
+ 
+
+00:03:53.239 --> 00:03:55.789 align:start position:0%
+interpreteranno come un titolo. A destra
+invece<00:03:53.720><c> c'è</c><00:03:53.959><c> lo</c><00:03:54.120><c> spazio.</c><00:03:55.000><c> Ecco,</c><00:03:55.400><c> così</c>
+
+00:03:55.789 --> 00:03:55.799 align:start position:0%
+invece c'è lo spazio. Ecco, così
+ 
+
+00:03:55.799 --> 00:03:58.270 align:start position:0%
+invece c'è lo spazio. Ecco, così
+funziona.<00:03:56.599><c> Un</c><00:03:56.799><c> piccolo</c><00:03:57.159><c> banalissimo</c><00:03:57.799><c> spazio</c>
+
+00:03:58.270 --> 00:03:58.280 align:start position:0%
+funziona. Un piccolo banalissimo spazio
+ 
+
+00:03:58.280 --> 00:04:00.589 align:start position:0%
+funziona. Un piccolo banalissimo spazio
+che<00:03:58.480><c> fa</c><00:03:58.680><c> tutta</c><00:03:58.959><c> la</c><00:03:59.159><c> differenza</c><00:03:59.599><c> del</c><00:03:59.799><c> mondo.</c><00:04:00.480><c> Da</c>
+
+00:04:00.589 --> 00:04:00.599 align:start position:0%
+che fa tutta la differenza del mondo. Da
+ 
+
+00:04:00.599 --> 00:04:03.509 align:start position:0%
+che fa tutta la differenza del mondo. Da
+ricordare<00:04:01.879><c> la</c><00:04:02.120><c> gerarchia</c><00:04:02.599><c> da</c><00:04:02.760><c> seguire</c><00:04:03.200><c> è</c>
+
+00:04:03.509 --> 00:04:03.519 align:start position:0%
+ricordare la gerarchia da seguire è
+ 
+
+00:04:03.519 --> 00:04:07.030 align:start position:0%
+ricordare la gerarchia da seguire è
+super<00:04:03.920><c> semplice,</c><00:04:04.840><c> un</c><00:04:05.120><c> solo</c><00:04:05.599><c> H1,</c><00:04:06.319><c> cioè</c><00:04:06.799><c> un</c>
+
+00:04:07.030 --> 00:04:07.040 align:start position:0%
+super semplice, un solo H1, cioè un
+ 
+
+00:04:07.040 --> 00:04:09.589 align:start position:0%
+super semplice, un solo H1, cioè un
+cancelletto<00:04:08.079><c> per</c><00:04:08.280><c> il</c><00:04:08.439><c> titolo</c><00:04:08.840><c> principale</c><00:04:09.360><c> del</c>
+
+00:04:09.589 --> 00:04:09.599 align:start position:0%
+cancelletto per il titolo principale del
+ 
+
+00:04:09.599 --> 00:04:12.789 align:start position:0%
+cancelletto per il titolo principale del
+file,<00:04:10.239><c> non</c><00:04:10.439><c> di</c><00:04:10.599><c> più.</c><00:04:11.280><c> Poi</c><00:04:11.519><c> si</c><00:04:11.680><c> usano</c><00:04:11.959><c> gli</c><00:04:12.120><c> H2,</c>
+
+00:04:12.789 --> 00:04:12.799 align:start position:0%
+file, non di più. Poi si usano gli H2,
+ 
+
+00:04:12.799 --> 00:04:14.589 align:start position:0%
+file, non di più. Poi si usano gli H2,
+due<00:04:13.040><c> cancelletti</c><00:04:13.840><c> per</c><00:04:14.000><c> i</c><00:04:14.120><c> capitali</c>
+
+00:04:14.589 --> 00:04:14.599 align:start position:0%
+due cancelletti per i capitali
+ 
+
+00:04:14.599 --> 00:04:17.150 align:start position:0%
+due cancelletti per i capitali
+principali<00:04:15.480><c> e</c><00:04:15.680><c> gli</c><00:04:15.879><c> H3</c><00:04:16.320><c> per</c><00:04:16.519><c> i</c><00:04:16.639><c> paragrafi</c>
+
+00:04:17.150 --> 00:04:17.160 align:start position:0%
+principali e gli H3 per i paragrafi
+ 
+
+00:04:17.160 --> 00:04:19.710 align:start position:0%
+principali e gli H3 per i paragrafi
+interni.<00:04:18.079><c> Regola</c><00:04:18.400><c> d'oro,</c><00:04:18.959><c> se</c><00:04:19.120><c> ci</c><00:04:19.280><c> si</c><00:04:19.400><c> ritrova</c>
+
+00:04:19.710 --> 00:04:19.720 align:start position:0%
+interni. Regola d'oro, se ci si ritrova
+ 
+
+00:04:19.720 --> 00:04:22.430 align:start position:0%
+interni. Regola d'oro, se ci si ritrova
+a<00:04:19.799><c> dover</c><00:04:20.079><c> usare</c><00:04:20.320><c> un</c><00:04:20.519><c> H5</c><00:04:21.040><c> o</c><00:04:21.199><c> un</c><00:04:21.320><c> H6,</c><00:04:22.040><c> bisogna</c>
+
+00:04:22.430 --> 00:04:22.440 align:start position:0%
+a dover usare un H5 o un H6, bisogna
+ 
+
+00:04:22.440 --> 00:04:24.550 align:start position:0%
+a dover usare un H5 o un H6, bisogna
+fermarsi.<00:04:23.360><c> Probabilmente</c><00:04:23.919><c> il</c><00:04:24.080><c> documento</c><00:04:24.440><c> è</c>
+
+00:04:24.550 --> 00:04:24.560 align:start position:0%
+fermarsi. Probabilmente il documento è
+ 
+
+00:04:24.560 --> 00:04:26.510 align:start position:0%
+fermarsi. Probabilmente il documento è
+troppo<00:04:24.880><c> complesso</c><00:04:25.400><c> e</c><00:04:25.560><c> va</c><00:04:25.720><c> spezzato</c><00:04:26.160><c> in</c><00:04:26.320><c> più</c>
+
+00:04:26.510 --> 00:04:26.520 align:start position:0%
+troppo complesso e va spezzato in più
+ 
+
+00:04:26.520 --> 00:04:30.150 align:start position:0%
+troppo complesso e va spezzato in più
+file.<00:04:27.840><c> Ok,</c><00:04:28.320><c> adesso</c><00:04:28.880><c> tenetevi</c><00:04:29.400><c> forte</c><00:04:29.840><c> perché</c>
+
+00:04:30.150 --> 00:04:30.160 align:start position:0%
+file. Ok, adesso tenetevi forte perché
+ 
+
+00:04:30.160 --> 00:04:31.990 align:start position:0%
+file. Ok, adesso tenetevi forte perché
+arriviamo<00:04:30.560><c> a</c><00:04:30.720><c> quella</c><00:04:30.960><c> che</c><00:04:31.160><c> per</c><00:04:31.360><c> me</c><00:04:31.639><c> è</c><00:04:31.800><c> la</c>
+
+00:04:31.990 --> 00:04:32.000 align:start position:0%
+arriviamo a quella che per me è la
+ 
+
+00:04:32.000 --> 00:04:34.230 align:start position:0%
+arriviamo a quella che per me è la
+killer<00:04:32.400><c> feature</c><00:04:32.840><c> assoluta</c><00:04:33.280><c> di</c><00:04:33.479><c> Markdown</c><00:04:34.080><c> per</c>
+
+00:04:34.230 --> 00:04:34.240 align:start position:0%
+killer feature assoluta di Markdown per
+ 
+
+00:04:34.240 --> 00:04:36.510 align:start position:0%
+killer feature assoluta di Markdown per
+chiunque<00:04:34.720><c> scriva</c><00:04:35.000><c> codice.</c><00:04:35.840><c> La</c><00:04:35.960><c> cosa</c><00:04:36.160><c> che</c><00:04:36.360><c> da</c>
+
+00:04:36.510 --> 00:04:36.520 align:start position:0%
+chiunque scriva codice. La cosa che da
+ 
+
+00:04:36.520 --> 00:04:38.430 align:start position:0%
+chiunque scriva codice. La cosa che da
+sola<00:04:36.800><c> vale</c><00:04:37.080><c> il</c><00:04:37.199><c> prezzo</c><00:04:37.479><c> del</c><00:04:37.680><c> biglietto,</c><00:04:38.240><c> anche</c>
+
+00:04:38.430 --> 00:04:38.440 align:start position:0%
+sola vale il prezzo del biglietto, anche
+ 
+
+00:04:38.440 --> 00:04:41.150 align:start position:0%
+sola vale il prezzo del biglietto, anche
+se<00:04:38.560><c> è</c><00:04:38.720><c> gratis.</c><00:04:39.520><c> Sto</c><00:04:39.800><c> parlando</c><00:04:40.320><c> dei</c><00:04:40.560><c> blocchi</c><00:04:40.960><c> di</c>
+
+00:04:41.150 --> 00:04:41.160 align:start position:0%
+se è gratis. Sto parlando dei blocchi di
+ 
+
+00:04:41.160 --> 00:04:43.670 align:start position:0%
+se è gratis. Sto parlando dei blocchi di
+codice.<00:04:42.280><c> Allora,</c><00:04:42.600><c> per</c><00:04:42.800><c> inserire</c><00:04:43.199><c> un</c><00:04:43.360><c> blocco</c>
+
+00:04:43.670 --> 00:04:43.680 align:start position:0%
+codice. Allora, per inserire un blocco
+ 
+
+00:04:43.680 --> 00:04:46.150 align:start position:0%
+codice. Allora, per inserire un blocco
+di<00:04:43.800><c> codice</c><00:04:44.280><c> si</c><00:04:44.440><c> usano</c><00:04:44.880><c> tre</c><00:04:45.199><c> backtick,</c><00:04:45.960><c> quegli</c>
+
+00:04:46.150 --> 00:04:46.160 align:start position:0%
+di codice si usano tre backtick, quegli
+ 
+
+00:04:46.160 --> 00:04:48.830 align:start position:0%
+di codice si usano tre backtick, quegli
+accenti<00:04:46.520><c> gravi</c><00:04:47.039><c> all'inizio</c><00:04:47.560><c> e</c><00:04:47.759><c> alla</c><00:04:47.960><c> fine.</c><00:04:48.639><c> E</c>
+
+00:04:48.830 --> 00:04:48.840 align:start position:0%
+accenti gravi all'inizio e alla fine. E
+ 
+
+00:04:48.840 --> 00:04:51.270 align:start position:0%
+accenti gravi all'inizio e alla fine. E
+vedete,<00:04:49.479><c> funziona.</c><00:04:50.280><c> Il</c><00:04:50.440><c> testo</c><00:04:50.720><c> ha</c><00:04:50.880><c> un</c><00:04:50.960><c> font</c>
+
+00:04:51.270 --> 00:04:51.280 align:start position:0%
+vedete, funziona. Il testo ha un font
+ 
+
+00:04:51.280 --> 00:04:54.189 align:start position:0%
+vedete, funziona. Il testo ha un font
+monospazio,<00:04:52.080><c> è</c><00:04:52.280><c> chiaramente</c><00:04:52.720><c> codice,</c><00:04:53.479><c> però</c><00:04:54.000><c> è</c>
+
+00:04:54.189 --> 00:04:54.199 align:start position:0%
+monospazio, è chiaramente codice, però è
+ 
+
+00:04:54.199 --> 00:04:56.469 align:start position:0%
+monospazio, è chiaramente codice, però è
+un<00:04:54.320><c> po'</c><00:04:54.479><c> triste,</c><00:04:54.840><c> no?</c><00:04:55.360><c> Tutto</c><00:04:55.600><c> di</c><00:04:55.720><c> un</c><00:04:55.919><c> colore,</c>
+
+00:04:56.469 --> 00:04:56.479 align:start position:0%
+un po' triste, no? Tutto di un colore,
+ 
+
+00:04:56.479 --> 00:04:58.150 align:start position:0%
+un po' triste, no? Tutto di un colore,
+si<00:04:56.639><c> fa</c><00:04:56.759><c> fatica</c><00:04:57.039><c> a</c><00:04:57.199><c> distinguere</c><00:04:57.680><c> le</c><00:04:57.840><c> parole</c>
+
+00:04:58.150 --> 00:04:58.160 align:start position:0%
+si fa fatica a distinguere le parole
+ 
+
+00:04:58.160 --> 00:05:01.870 align:start position:0%
+si fa fatica a distinguere le parole
+chiave,<00:04:58.840><c> le</c><00:04:59.039><c> stringhe.</c><00:05:00.479><c> Ma</c><00:05:00.639><c> ora</c><00:05:01.240><c> guardate</c>
+
+00:05:01.870 --> 00:05:01.880 align:start position:0%
+chiave, le stringhe. Ma ora guardate
+ 
+
+00:05:01.880 --> 00:05:03.550 align:start position:0%
+chiave, le stringhe. Ma ora guardate
+cosa<00:05:02.199><c> succede</c><00:05:02.680><c> se</c><00:05:02.880><c> dopo</c><00:05:03.080><c> i</c><00:05:03.199><c> primi</c><00:05:03.400><c> tre</c>
+
+00:05:03.550 --> 00:05:03.560 align:start position:0%
+cosa succede se dopo i primi tre
+ 
+
+00:05:03.560 --> 00:05:05.310 align:start position:0%
+cosa succede se dopo i primi tre
+backtick<00:05:04.280><c> aggiungiamo</c><00:05:04.800><c> il</c><00:05:04.919><c> nome</c><00:05:05.160><c> del</c>
+
+00:05:05.310 --> 00:05:05.320 align:start position:0%
+backtick aggiungiamo il nome del
+ 
+
+00:05:05.320 --> 00:05:08.550 align:start position:0%
+backtick aggiungiamo il nome del
+linguaggio<00:05:06.160><c> tipo</c><00:05:06.680><c> Python</c><00:05:07.400><c> o</c><00:05:07.639><c> JavaScript.</c>
+
+00:05:08.550 --> 00:05:08.560 align:start position:0%
+linguaggio tipo Python o JavaScript.
+ 
+
+00:05:08.560 --> 00:05:12.550 align:start position:0%
+linguaggio tipo Python o JavaScript.
+Pronti?<00:05:10.000><c> Taranna!</c><00:05:10.960><c> Ecco</c><00:05:11.280><c> la</c><00:05:11.440><c> magia!</c><00:05:12.280><c> Appare</c>
+
+00:05:12.550 --> 00:05:12.560 align:start position:0%
+Pronti? Taranna! Ecco la magia! Appare
+ 
+
+00:05:12.560 --> 00:05:14.909 align:start position:0%
+Pronti? Taranna! Ecco la magia! Appare
+il<00:05:12.720><c> Syntax</c><00:05:13.080><c> Highlighting,</c><00:05:13.840><c> i</c><00:05:14.039><c> colori.</c>
+
+00:05:14.909 --> 00:05:14.919 align:start position:0%
+il Syntax Highlighting, i colori.
+ 
+
+00:05:14.919 --> 00:05:17.310 align:start position:0%
+il Syntax Highlighting, i colori.
+Improvvisamente<00:05:15.800><c> il</c><00:05:16.000><c> codice</c><00:05:16.440><c> prende</c><00:05:16.759><c> vita,</c>
+
+00:05:17.310 --> 00:05:17.320 align:start position:0%
+Improvvisamente il codice prende vita,
+ 
+
+00:05:17.320 --> 00:05:19.670 align:start position:0%
+Improvvisamente il codice prende vita,
+diventa<00:05:17.720><c> leggibile,</c><00:05:18.440><c> professionale.</c><00:05:19.440><c> È</c><00:05:19.479><c> una</c>
+
+00:05:19.670 --> 00:05:19.680 align:start position:0%
+diventa leggibile, professionale. È una
+ 
+
+00:05:19.680 --> 00:05:22.029 align:start position:0%
+diventa leggibile, professionale. È una
+differenza<00:05:20.240><c> dal</c><00:05:20.479><c> giorno</c><00:05:20.759><c> alla</c><00:05:20.960><c> notte.</c>
+
+00:05:22.029 --> 00:05:22.039 align:start position:0%
+differenza dal giorno alla notte.
+ 
+
+00:05:22.039 --> 00:05:24.590 align:start position:0%
+differenza dal giorno alla notte.
+Passiamo<00:05:22.600><c> alle</c><00:05:22.919><c> liste.</c><00:05:23.720><c> Se</c><00:05:23.840><c> si</c><00:05:23.960><c> deve</c><00:05:24.240><c> scrivere</c>
+
+00:05:24.590 --> 00:05:24.600 align:start position:0%
+Passiamo alle liste. Se si deve scrivere
+ 
+
+00:05:24.600 --> 00:05:27.469 align:start position:0%
+Passiamo alle liste. Se si deve scrivere
+una<00:05:24.800><c> guida,</c><00:05:25.360><c> una</c><00:05:25.600><c> procedura,</c><00:05:26.199><c> tipo</c><00:05:26.840><c> passo</c><00:05:27.199><c> 1,</c>
+
+00:05:27.469 --> 00:05:27.479 align:start position:0%
+una guida, una procedura, tipo passo 1,
+ 
+
+00:05:27.479 --> 00:05:29.670 align:start position:0%
+una guida, una procedura, tipo passo 1,
+passo<00:05:27.800><c> 2,</c><00:05:28.280><c> le</c><00:05:28.479><c> liste</c><00:05:28.800><c> numerate</c><00:05:29.360><c> sono</c>
+
+00:05:29.670 --> 00:05:29.680 align:start position:0%
+passo 2, le liste numerate sono
+ 
+
+00:05:29.680 --> 00:05:31.710 align:start position:0%
+passo 2, le liste numerate sono
+essenziali<00:05:30.440><c> e</c><00:05:30.639><c> qui</c><00:05:30.800><c> c'è</c><00:05:30.960><c> un</c><00:05:31.080><c> trucco</c><00:05:31.319><c> da</c><00:05:31.520><c> pro</c>
+
+00:05:31.710 --> 00:05:31.720 align:start position:0%
+essenziali e qui c'è un trucco da pro
+ 
+
+00:05:31.720 --> 00:05:33.590 align:start position:0%
+essenziali e qui c'è un trucco da pro
+per<00:05:31.840><c> risparmiare</c><00:05:32.360><c> un</c><00:05:32.520><c> sacco</c><00:05:32.800><c> di</c><00:05:32.960><c> tempo.</c>
+
+00:05:33.590 --> 00:05:33.600 align:start position:0%
+per risparmiare un sacco di tempo.
+ 
+
+00:05:33.600 --> 00:05:36.749 align:start position:0%
+per risparmiare un sacco di tempo.
+Invece<00:05:33.960><c> di</c><00:05:34.120><c> scrivere</c><00:05:34.600><c> 1</c><00:05:34.960><c> 2</c><00:05:35.319><c> 3</c><00:05:35.759><c> scrivete</c><00:05:36.360><c> sempre</c>
+
+00:05:36.749 --> 00:05:36.759 align:start position:0%
+Invece di scrivere 1 2 3 scrivete sempre
+ 
+
+00:05:36.759 --> 00:05:39.590 align:start position:0%
+Invece di scrivere 1 2 3 scrivete sempre
+e<00:05:36.960><c> solo</c><00:05:37.440><c> uno</c><00:05:37.880><c> primo</c><00:05:38.199><c> passo,</c><00:05:38.800><c> uno</c><00:05:39.199><c> secondo</c>
+
+00:05:39.590 --> 00:05:39.600 align:start position:0%
+e solo uno primo passo, uno secondo
+ 
+
+00:05:39.600 --> 00:05:41.909 align:start position:0%
+e solo uno primo passo, uno secondo
+passo,<00:05:40.280><c> uno</c><00:05:40.680><c> terzo</c><00:05:41.039><c> passo.</c><00:05:41.800><c> Non</c>
+
+00:05:41.909 --> 00:05:41.919 align:start position:0%
+passo, uno terzo passo. Non
+ 
+
+00:05:41.919 --> 00:05:43.590 align:start position:0%
+passo, uno terzo passo. Non
+preoccupatevi,<00:05:42.840><c> al</c><00:05:43.039><c> momento</c><00:05:43.280><c> della</c>
+
+00:05:43.590 --> 00:05:43.600 align:start position:0%
+preoccupatevi, al momento della
+ 
+
+00:05:43.600 --> 00:05:46.350 align:start position:0%
+preoccupatevi, al momento della
+visualizzazione<00:05:44.520><c> Markà</c><00:05:45.360><c> la</c><00:05:45.520><c> magia</c><00:05:45.880><c> e</c><00:05:46.039><c> metterà</c>
+
+00:05:46.350 --> 00:05:46.360 align:start position:0%
+visualizzazione Markà la magia e metterà
+ 
+
+00:05:46.360 --> 00:05:48.469 align:start position:0%
+visualizzazione Markà la magia e metterà
+i<00:05:46.479><c> numeri</c><00:05:46.759><c> giusti</c><00:05:47.039><c> in</c><00:05:47.199><c> automatico.</c><00:05:48.120><c> Comodo</c>
+
+00:05:48.469 --> 00:05:48.479 align:start position:0%
+i numeri giusti in automatico. Comodo
+ 
+
+00:05:48.479 --> 00:05:52.150 align:start position:0%
+i numeri giusti in automatico. Comodo
+no?<00:05:49.520><c> E</c><00:05:49.600><c> i</c><00:05:49.720><c> link.</c><00:05:50.520><c> Facilissimo</c><00:05:51.160><c> anche</c><00:05:51.360><c> quello.</c>
+
+00:05:52.150 --> 00:05:52.160 align:start position:0%
+no? E i link. Facilissimo anche quello.
+ 
+
+00:05:52.160 --> 00:05:54.469 align:start position:0%
+no? E i link. Facilissimo anche quello.
+La<00:05:52.319><c> sintassi</c><00:05:52.840><c> è</c><00:05:53.160><c> parentesi</c><00:05:53.680><c> quadre</c><00:05:54.160><c> per</c><00:05:54.319><c> il</c>
+
+00:05:54.469 --> 00:05:54.479 align:start position:0%
+La sintassi è parentesi quadre per il
+ 
+
+00:05:54.479 --> 00:05:56.670 align:start position:0%
+La sintassi è parentesi quadre per il
+testo<00:05:54.720><c> che</c><00:05:54.880><c> si</c><00:05:55.000><c> vede</c><00:05:55.520><c> e</c><00:05:55.720><c> parentesi</c><00:05:56.280><c> tonde</c>
+
+00:05:56.670 --> 00:05:56.680 align:start position:0%
+testo che si vede e parentesi tonde
+ 
+
+00:05:56.680 --> 00:05:59.029 align:start position:0%
+testo che si vede e parentesi tonde
+subito<00:05:57.039><c> dopo</c><00:05:57.319><c> per</c><00:05:57.479><c> l'URL</c><00:05:58.120><c> vero</c><00:05:58.319><c> e</c><00:05:58.479><c> proprio.</c>
+
+00:05:59.029 --> 00:05:59.039 align:start position:0%
+subito dopo per l'URL vero e proprio.
+ 
+
+00:05:59.039 --> 00:06:00.790 align:start position:0%
+subito dopo per l'URL vero e proprio.
+C'è<00:05:59.280><c> un</c><00:05:59.319><c> trucchetto</c><00:05:59.720><c> mnemonico</c><00:06:00.199><c> che</c><00:06:00.319><c> aiuta</c><00:06:00.639><c> un</c>
+
+00:06:00.790 --> 00:06:00.800 align:start position:0%
+C'è un trucchetto mnemonico che aiuta un
+ 
+
+00:06:00.800 --> 00:06:03.350 align:start position:0%
+C'è un trucchetto mnemonico che aiuta un
+sacco.<00:06:01.520><c> Le</c><00:06:01.639><c> parentesi</c><00:06:02.160><c> quadre</c><00:06:02.720><c> contengono</c>
+
+00:06:03.350 --> 00:06:03.360 align:start position:0%
+sacco. Le parentesi quadre contengono
+ 
+
+00:06:03.360 --> 00:06:05.390 align:start position:0%
+sacco. Le parentesi quadre contengono
+quello<00:06:03.680><c> che</c><00:06:03.840><c> si</c><00:06:04.039><c> vede,</c><00:06:04.680><c> semplice</c><00:06:05.199><c> ed</c>
+
+00:06:05.390 --> 00:06:05.400 align:start position:0%
+quello che si vede, semplice ed
+ 
+
+00:06:05.400 --> 00:06:06.950 align:start position:0%
+quello che si vede, semplice ed
+efficace.
+
+00:06:06.950 --> 00:06:06.960 align:start position:0%
+efficace.
+ 
+
+00:06:06.960 --> 00:06:10.110 align:start position:0%
+efficace.
+Ok,<00:06:07.759><c> la</c><00:06:08.000><c> sintassi</c><00:06:08.479><c> di</c><00:06:08.599><c> base</c><00:06:08.880><c> l'abbiamo</c><00:06:09.360><c> vista,</c>
+
+00:06:10.110 --> 00:06:10.120 align:start position:0%
+Ok, la sintassi di base l'abbiamo vista,
+ 
+
+00:06:10.120 --> 00:06:12.430 align:start position:0%
+Ok, la sintassi di base l'abbiamo vista,
+ma<00:06:10.400><c> saper</c><00:06:10.759><c> scrivere</c><00:06:11.160><c> le</c><00:06:11.360><c> singole</c><00:06:11.800><c> righe</c><00:06:12.160><c> non</c>
+
+00:06:12.430 --> 00:06:12.440 align:start position:0%
+ma saper scrivere le singole righe non
+ 
+
+00:06:12.440 --> 00:06:14.550 align:start position:0%
+ma saper scrivere le singole righe non
+basta.<00:06:13.240><c> Dobbiamo</c><00:06:13.639><c> parlare</c><00:06:13.960><c> di</c><00:06:14.120><c> una</c><00:06:14.280><c> cosa</c>
+
+00:06:14.550 --> 00:06:14.560 align:start position:0%
+basta. Dobbiamo parlare di una cosa
+ 
+
+00:06:14.560 --> 00:06:16.629 align:start position:0%
+basta. Dobbiamo parlare di una cosa
+forse<00:06:14.880><c> ancora</c><00:06:15.199><c> più</c><00:06:15.560><c> importante,</c><00:06:16.440><c> la</c>
+
+00:06:16.629 --> 00:06:16.639 align:start position:0%
+forse ancora più importante, la
+ 
+
+00:06:16.639 --> 00:06:18.950 align:start position:0%
+forse ancora più importante, la
+struttura.<00:06:17.720><c> Come</c><00:06:17.960><c> organizziamo</c><00:06:18.520><c> i</c><00:06:18.680><c> nostri</c>
+
+00:06:18.950 --> 00:06:18.960 align:start position:0%
+struttura. Come organizziamo i nostri
+ 
+
+00:06:18.960 --> 00:06:21.670 align:start position:0%
+struttura. Come organizziamo i nostri
+file<00:06:19.280><c> per</c><00:06:19.479><c> non</c><00:06:19.680><c> creare</c><00:06:20.400><c> il</c><00:06:20.599><c> temutissimo</c><00:06:21.400><c> muro</c>
+
+00:06:21.670 --> 00:06:21.680 align:start position:0%
+file per non creare il temutissimo muro
+ 
+
+00:06:21.680 --> 00:06:24.830 align:start position:0%
+file per non creare il temutissimo muro
+di<00:06:21.840><c> testo?</c><00:06:22.880><c> Ecco,</c><00:06:23.400><c> questo</c><00:06:23.840><c> è</c><00:06:24.080><c> l'incubo</c><00:06:24.639><c> di</c>
+
+00:06:24.830 --> 00:06:24.840 align:start position:0%
+di testo? Ecco, questo è l'incubo di
+ 
+
+00:06:24.840 --> 00:06:27.629 align:start position:0%
+di testo? Ecco, questo è l'incubo di
+ogni<00:06:25.120><c> utente,</c><00:06:26.000><c> un</c><00:06:26.240><c> file</c><00:06:26.560><c> unico</c><00:06:26.960><c> chiamato</c>
+
+00:06:27.629 --> 00:06:27.639 align:start position:0%
+ogni utente, un file unico chiamato
+ 
+
+00:06:27.639 --> 00:06:30.029 align:start position:0%
+ogni utente, un file unico chiamato
+manualecompleto.
+
+00:06:30.029 --> 00:06:30.039 align:start position:0%
+manualecompleto.
+ 
+
+00:06:30.039 --> 00:06:32.430 align:start position:0%
+manualecompleto.
+Con<00:06:30.120><c> dentro</c><00:06:30.560><c> migliaia</c><00:06:31.120><c> di</c><00:06:31.319><c> righe.</c><00:06:32.080><c> Chi</c><00:06:32.280><c> ha</c>
+
+00:06:32.430 --> 00:06:32.440 align:start position:0%
+Con dentro migliaia di righe. Chi ha
+ 
+
+00:06:32.440 --> 00:06:34.550 align:start position:0%
+Con dentro migliaia di righe. Chi ha
+voglia<00:06:32.759><c> di</c><00:06:32.880><c> leggere</c><00:06:33.240><c> una</c><00:06:33.440><c> roba</c><00:06:33.639><c> del</c><00:06:33.880><c> genere?</c>
+
+00:06:34.550 --> 00:06:34.560 align:start position:0%
+voglia di leggere una roba del genere?
+ 
+
+00:06:34.560 --> 00:06:36.950 align:start position:0%
+voglia di leggere una roba del genere?
+Nessuno.<00:06:35.400><c> La</c><00:06:35.599><c> gente</c><00:06:35.840><c> non</c><00:06:36.039><c> legge</c><00:06:36.360><c> manuali,</c>
+
+00:06:36.950 --> 00:06:36.960 align:start position:0%
+Nessuno. La gente non legge manuali,
+ 
+
+00:06:36.960 --> 00:06:38.749 align:start position:0%
+Nessuno. La gente non legge manuali,
+cerca<00:06:37.280><c> soluzioni</c><00:06:37.759><c> veloci</c><00:06:38.199><c> a</c><00:06:38.360><c> problemi</c>
+
+00:06:38.749 --> 00:06:38.759 align:start position:0%
+cerca soluzioni veloci a problemi
+ 
+
+00:06:38.759 --> 00:06:41.390 align:start position:0%
+cerca soluzioni veloci a problemi
+specifici.<00:06:40.000><c> Un</c><00:06:40.160><c> muro</c><00:06:40.400><c> di</c><00:06:40.560><c> testo</c><00:06:40.840><c> così</c><00:06:41.199><c> non</c>
+
+00:06:41.390 --> 00:06:41.400 align:start position:0%
+specifici. Un muro di testo così non
+ 
+
+00:06:41.400 --> 00:06:44.430 align:start position:0%
+specifici. Un muro di testo così non
+aiuta<00:06:41.759><c> nessuno,</c><00:06:42.440><c> anzi</c><00:06:42.919><c> spaventa.</c><00:06:44.280><c> La</c>
+
+00:06:44.430 --> 00:06:44.440 align:start position:0%
+aiuta nessuno, anzi spaventa. La
+ 
+
+00:06:44.440 --> 00:06:46.629 align:start position:0%
+aiuta nessuno, anzi spaventa. La
+soluzione<00:06:44.960><c> quindi</c><00:06:45.280><c> qual</c><00:06:45.440><c> è?</c><00:06:45.840><c> è</c><00:06:46.080><c> pensare</c><00:06:46.479><c> a</c>
+
+00:06:46.629 --> 00:06:46.639 align:start position:0%
+soluzione quindi qual è? è pensare a
+ 
+
+00:06:46.639 --> 00:06:48.790 align:start position:0%
+soluzione quindi qual è? è pensare a
+mattoncini<00:06:47.240><c> Lego.</c><00:06:47.919><c> Invece</c><00:06:48.240><c> di</c><00:06:48.360><c> un</c><00:06:48.440><c> blocco</c>
+
+00:06:48.790 --> 00:06:48.800 align:start position:0%
+mattoncini Lego. Invece di un blocco
+ 
+
+00:06:48.800 --> 00:06:51.070 align:start position:0%
+mattoncini Lego. Invece di un blocco
+unico,<00:06:49.240><c> spezziamo</c><00:06:49.800><c> tutto</c><00:06:50.120><c> in</c><00:06:50.319><c> tanti</c><00:06:50.639><c> piccoli</c>
+
+00:06:51.070 --> 00:06:51.080 align:start position:0%
+unico, spezziamo tutto in tanti piccoli
+ 
+
+00:06:51.080 --> 00:06:53.430 align:start position:0%
+unico, spezziamo tutto in tanti piccoli
+file<00:06:51.360><c> indipendenti,</c><00:06:52.360><c> ognuno</c><00:06:52.800><c> che</c><00:06:52.960><c> tratta</c><00:06:53.280><c> un</c>
+
+00:06:53.430 --> 00:06:53.440 align:start position:0%
+file indipendenti, ognuno che tratta un
+ 
+
+00:06:53.440 --> 00:06:56.830 align:start position:0%
+file indipendenti, ognuno che tratta un
+singolo<00:06:53.800><c> argomento.</c><00:06:54.720><c> Avremo</c><00:06:55.240><c> installazione.</c>
+
+00:06:56.830 --> 00:06:56.840 align:start position:0%
+singolo argomento. Avremo installazione.
+ 
+
+00:06:56.840 --> 00:07:00.189 align:start position:0%
+singolo argomento. Avremo installazione.
+Configurazione.<00:06:58.000><c> MD,</c><00:06:58.639><c> apirference.md</c>
+
+00:07:00.189 --> 00:07:00.199 align:start position:0%
+Configurazione. MD, apirference.md
+ 
+
+00:07:00.199 --> 00:07:02.469 align:start position:0%
+Configurazione. MD, apirference.md
+e<00:07:00.360><c> così</c><00:07:00.599><c> via.</c><00:07:01.160><c> Questo</c><00:07:01.400><c> approccio</c><00:07:01.919><c> chiamato</c>
+
+00:07:02.469 --> 00:07:02.479 align:start position:0%
+e così via. Questo approccio chiamato
+ 
+
+00:07:02.479 --> 00:07:04.869 align:start position:0%
+e così via. Questo approccio chiamato
+topic<00:07:02.879><c> based</c><00:07:03.520><c> rende</c><00:07:03.879><c> tutto</c><00:07:04.160><c> più</c><00:07:04.360><c> facile</c><00:07:04.720><c> da</c>
+
+00:07:04.869 --> 00:07:04.879 align:start position:0%
+topic based rende tutto più facile da
+ 
+
+00:07:04.879 --> 00:07:07.309 align:start position:0%
+topic based rende tutto più facile da
+trovare,<00:07:05.360><c> da</c><00:07:05.560><c> linkare,</c><00:07:06.080><c> da</c><00:07:06.240><c> aggiornare.</c><00:07:07.160><c> È</c><00:07:07.199><c> un</c>
+
+00:07:07.309 --> 00:07:07.319 align:start position:0%
+trovare, da linkare, da aggiornare. È un
+ 
+
+00:07:07.319 --> 00:07:10.350 align:start position:0%
+trovare, da linkare, da aggiornare. È un
+cambio<00:07:07.560><c> di</c><00:07:07.720><c> mentalità</c><00:07:08.360><c> totale.</c><00:07:09.720><c> E</c><00:07:09.960><c> parlando</c>
+
+00:07:10.350 --> 00:07:10.360 align:start position:0%
+cambio di mentalità totale. E parlando
+ 
+
+00:07:10.360 --> 00:07:13.550 align:start position:0%
+cambio di mentalità totale. E parlando
+di<00:07:10.599><c> file,</c><00:07:11.319><c> parliamo</c><00:07:11.840><c> dei</c><00:07:12.080><c> loro</c><00:07:12.360><c> nomi.</c><00:07:13.160><c> Questa</c>
+
+00:07:13.550 --> 00:07:13.560 align:start position:0%
+di file, parliamo dei loro nomi. Questa
+ 
+
+00:07:13.560 --> 00:07:16.510 align:start position:0%
+di file, parliamo dei loro nomi. Questa
+è<00:07:13.759><c> una</c><00:07:13.960><c> regola</c><00:07:14.479><c> non</c><00:07:14.759><c> negoziabile.</c><00:07:15.919><c> I</c><00:07:16.080><c> nomi</c><00:07:16.319><c> dei</c>
+
+00:07:16.510 --> 00:07:16.520 align:start position:0%
+è una regola non negoziabile. I nomi dei
+ 
+
+00:07:16.520 --> 00:07:19.469 align:start position:0%
+è una regola non negoziabile. I nomi dei
+file<00:07:16.879><c> devono</c><00:07:17.319><c> essere</c><00:07:17.560><c> in</c><00:07:17.960><c> kebab</c><00:07:18.440><c> case.</c><00:07:19.199><c> Cosa</c>
+
+00:07:19.469 --> 00:07:19.479 align:start position:0%
+file devono essere in kebab case. Cosa
+ 
+
+00:07:19.479 --> 00:07:22.189 align:start position:0%
+file devono essere in kebab case. Cosa
+significa?<00:07:20.360><c> Tutto</c><00:07:20.879><c> minuscolo</c><00:07:21.639><c> e</c><00:07:21.840><c> parole</c>
+
+00:07:22.189 --> 00:07:22.199 align:start position:0%
+significa? Tutto minuscolo e parole
+ 
+
+00:07:22.199 --> 00:07:24.670 align:start position:0%
+significa? Tutto minuscolo e parole
+separate<00:07:22.639><c> da</c><00:07:22.759><c> un</c><00:07:22.919><c> trattino.</c><00:07:23.759><c> Niente</c><00:07:24.120><c> spazi,</c>
+
+00:07:24.670 --> 00:07:24.680 align:start position:0%
+separate da un trattino. Niente spazi,
+ 
+
+00:07:24.680 --> 00:07:27.350 align:start position:0%
+separate da un trattino. Niente spazi,
+niente<00:07:25.080><c> maiuscole,</c><00:07:25.879><c> niente</c><00:07:26.319><c> underscore.</c>
+
+00:07:27.350 --> 00:07:27.360 align:start position:0%
+niente maiuscole, niente underscore.
+ 
+
+00:07:27.360 --> 00:07:29.830 align:start position:0%
+niente maiuscole, niente underscore.
+Perché<00:07:27.680><c> questa</c><00:07:27.960><c> fiscalità</c><00:07:28.879><c> semplice?</c><00:07:29.639><c> Gli</c>
+
+00:07:29.830 --> 00:07:29.840 align:start position:0%
+Perché questa fiscalità semplice? Gli
+ 
+
+00:07:29.840 --> 00:07:31.790 align:start position:0%
+Perché questa fiscalità semplice? Gli
+spazi<00:07:30.240><c> e</c><00:07:30.360><c> le</c><00:07:30.479><c> maiuscole</c><00:07:31.000><c> sono</c><00:07:31.199><c> un</c><00:07:31.360><c> disastro</c>
+
+00:07:31.790 --> 00:07:31.800 align:start position:0%
+spazi e le maiuscole sono un disastro
+ 
+
+00:07:31.800 --> 00:07:34.589 align:start position:0%
+spazi e le maiuscole sono un disastro
+sui<00:07:32.039><c> server</c><00:07:32.360><c> web</c><00:07:32.800><c> e</c><00:07:32.960><c> negli</c><00:07:33.199><c> URL.</c><00:07:34.080><c> Il</c><00:07:34.240><c> Kebab</c>
+
+00:07:34.589 --> 00:07:34.599 align:start position:0%
+sui server web e negli URL. Il Kebab
+ 
+
+00:07:34.599 --> 00:07:36.790 align:start position:0%
+sui server web e negli URL. Il Kebab
+case<00:07:34.879><c> è</c><00:07:35.039><c> pulito,</c><00:07:35.639><c> leggibile</c><00:07:36.199><c> e</c><00:07:36.360><c> a</c><00:07:36.479><c> prova</c><00:07:36.680><c> di</c>
+
+00:07:36.790 --> 00:07:36.800 align:start position:0%
+case è pulito, leggibile e a prova di
+ 
+
+00:07:36.800 --> 00:07:38.670 align:start position:0%
+case è pulito, leggibile e a prova di
+bomba<00:07:37.319><c> perché</c><00:07:37.800><c> perché</c><00:07:38.039><c> il</c><00:07:38.160><c> tuo</c><00:07:38.280><c> marketing</c>
+
+00:07:38.670 --> 00:07:38.680 align:start position:0%
+bomba perché perché il tuo marketing
+ 
+
+00:07:38.680 --> 00:07:43.029 align:start position:0%
+bomba perché perché il tuo marketing
+plano<00:07:40.000><c> se</c><00:07:40.199><c> non</c><00:07:40.319><c> è</c><00:07:40.479><c> in</c><00:07:40.800><c> kebab</c><00:07:41.240><c> case.</c><00:07:42.639><c> E</c><00:07:42.800><c> siamo</c>
+
+00:07:43.029 --> 00:07:43.039 align:start position:0%
+plano se non è in kebab case. E siamo
+ 
+
+00:07:43.039 --> 00:07:45.430 align:start position:0%
+plano se non è in kebab case. E siamo
+quasi<00:07:43.360><c> alla</c><00:07:43.599><c> fine.</c><00:07:44.199><c> Voglio</c><00:07:44.520><c> lasciarvi</c><00:07:44.960><c> con</c><00:07:45.159><c> un</c>
+
+00:07:45.430 --> 00:07:45.440 align:start position:0%
+quasi alla fine. Voglio lasciarvi con un
+ 
+
+00:07:45.440 --> 00:07:47.790 align:start position:0%
+quasi alla fine. Voglio lasciarvi con un
+ultimo<00:07:45.720><c> trucco,</c><00:07:46.400><c> una</c><00:07:46.639><c> vera</c><00:07:46.879><c> e</c><00:07:47.039><c> propria</c><00:07:47.440><c> chicca</c>
+
+00:07:47.790 --> 00:07:47.800 align:start position:0%
+ultimo trucco, una vera e propria chicca
+ 
+
+00:07:47.800 --> 00:07:50.469 align:start position:0%
+ultimo trucco, una vera e propria chicca
+per<00:07:48.000><c> chiunque</c><00:07:48.560><c> usi</c><00:07:48.840><c> Visual</c><00:07:49.240><c> Studio</c><00:07:49.599><c> Code.</c><00:07:50.440><c> È</c>
+
+00:07:50.469 --> 00:07:50.479 align:start position:0%
+per chiunque usi Visual Studio Code. È
+ 
+
+00:07:50.479 --> 00:07:51.869 align:start position:0%
+per chiunque usi Visual Studio Code. È
+una<00:07:50.599><c> di</c><00:07:50.759><c> quelle</c><00:07:51.000><c> cose</c><00:07:51.240><c> che</c><00:07:51.400><c> una</c><00:07:51.599><c> volta</c>
+
+00:07:51.869 --> 00:07:51.879 align:start position:0%
+una di quelle cose che una volta
+ 
+
+00:07:51.879 --> 00:07:54.029 align:start position:0%
+una di quelle cose che una volta
+scoperte<00:07:52.599><c> ci</c><00:07:52.759><c> si</c><00:07:52.919><c> chiede</c><00:07:53.199><c> come</c><00:07:53.400><c> si</c><00:07:53.560><c> faceva</c><00:07:53.919><c> a</c>
+
+00:07:54.029 --> 00:07:54.039 align:start position:0%
+scoperte ci si chiede come si faceva a
+ 
+
+00:07:54.039 --> 00:07:57.189 align:start position:0%
+scoperte ci si chiede come si faceva a
+vivere<00:07:54.479><c> senza.</c><00:07:55.560><c> La</c><00:07:55.720><c> combinazione</c><00:07:56.280><c> magica</c><00:07:56.639><c> è</c>
+
+00:07:57.189 --> 00:07:57.199 align:start position:0%
+vivere senza. La combinazione magica è
+ 
+
+00:07:57.199 --> 00:08:01.189 align:start position:0%
+vivere senza. La combinazione magica è
+Crl<00:07:57.680><c> K</c><00:07:58.199><c> e</c><00:07:58.400><c> subito</c><00:07:58.759><c> dopo</c><00:07:59.199><c> V.</c><00:07:59.919><c> Cosa</c><00:08:00.199><c> fa?</c><00:08:00.879><c> Apre</c><00:08:01.080><c> un</c>
+
+00:08:01.189 --> 00:08:01.199 align:start position:0%
+Crl K e subito dopo V. Cosa fa? Apre un
+ 
+
+00:08:01.199 --> 00:08:02.869 align:start position:0%
+Crl K e subito dopo V. Cosa fa? Apre un
+pannello<00:08:01.560><c> di</c><00:08:01.720><c> fianco</c><00:08:02.000><c> al</c><00:08:02.199><c> codice</c><00:08:02.720><c> con</c>
+
+00:08:02.869 --> 00:08:02.879 align:start position:0%
+pannello di fianco al codice con
+ 
+
+00:08:02.879 --> 00:08:04.950 align:start position:0%
+pannello di fianco al codice con
+l'anteprima<00:08:03.520><c> in</c><00:08:03.680><c> tempo</c><00:08:04.000><c> reale</c><00:08:04.479><c> di</c><00:08:04.720><c> come</c>
+
+00:08:04.950 --> 00:08:04.960 align:start position:0%
+l'anteprima in tempo reale di come
+ 
+
+00:08:04.960 --> 00:08:07.270 align:start position:0%
+l'anteprima in tempo reale di come
+apparirà<00:08:05.479><c> il</c><00:08:05.639><c> markdown.</c><00:08:06.680><c> Si</c><00:08:06.800><c> scrive</c><00:08:07.120><c> a</c>
+
+00:08:07.270 --> 00:08:07.280 align:start position:0%
+apparirà il markdown. Si scrive a
+ 
+
+00:08:07.280 --> 00:08:09.469 align:start position:0%
+apparirà il markdown. Si scrive a
+sinistra<00:08:07.879><c> e</c><00:08:08.080><c> a</c><00:08:08.240><c> destra</c><00:08:08.599><c> si</c><00:08:08.759><c> vede</c><00:08:08.919><c> il</c><00:08:09.000><c> risultato</c>
+
+00:08:09.469 --> 00:08:09.479 align:start position:0%
+sinistra e a destra si vede il risultato
+ 
+
+00:08:09.479 --> 00:08:12.029 align:start position:0%
+sinistra e a destra si vede il risultato
+finale<00:08:10.080><c> aggiornarsi</c><00:08:10.639><c> all'istante.</c><00:08:11.720><c> Niente</c>
+
+00:08:12.029 --> 00:08:12.039 align:start position:0%
+finale aggiornarsi all'istante. Niente
+ 
+
+00:08:12.039 --> 00:08:14.749 align:start position:0%
+finale aggiornarsi all'istante. Niente
+più<00:08:12.319><c> salva,</c><00:08:12.800><c> cambia</c><00:08:13.159><c> finestra,</c><00:08:13.840><c> aggiorna.</c><00:08:14.720><c> È</c>
+
+00:08:14.749 --> 00:08:14.759 align:start position:0%
+più salva, cambia finestra, aggiorna. È
+ 
+
+00:08:14.759 --> 00:08:17.149 align:start position:0%
+più salva, cambia finestra, aggiorna. È
+un<00:08:14.919><c> punto</c><00:08:15.120><c> di</c><00:08:15.280><c> svolta</c><00:08:15.599><c> per</c><00:08:15.720><c> la</c><00:08:15.840><c> produttività.</c>
+
+00:08:17.149 --> 00:08:17.159 align:start position:0%
+un punto di svolta per la produttività.
+ 
+
+00:08:17.159 --> 00:08:19.790 align:start position:0%
+un punto di svolta per la produttività.
+Bene,<00:08:17.759><c> ora</c><00:08:18.039><c> abbiamo</c><00:08:18.360><c> visto</c><00:08:18.680><c> la</c><00:08:18.960><c> sintassi,</c><00:08:19.639><c> la</c>
+
+00:08:19.790 --> 00:08:19.800 align:start position:0%
+Bene, ora abbiamo visto la sintassi, la
+ 
+
+00:08:19.800 --> 00:08:22.070 align:start position:0%
+Bene, ora abbiamo visto la sintassi, la
+struttura<00:08:20.560><c> e</c><00:08:20.759><c> anche</c><00:08:21.000><c> un</c><00:08:21.199><c> paio</c><00:08:21.440><c> di</c><00:08:21.599><c> trucchi</c><00:08:21.879><c> del</c>
+
+00:08:22.070 --> 00:08:22.080 align:start position:0%
+struttura e anche un paio di trucchi del
+ 
+
+00:08:22.080 --> 00:08:24.950 align:start position:0%
+struttura e anche un paio di trucchi del
+mestiere.<00:08:23.000><c> La</c><00:08:23.159><c> base</c><00:08:23.560><c> c'è.</c><00:08:24.319><c> La</c><00:08:24.479><c> domanda</c><00:08:24.800><c> che</c>
+
+00:08:24.950 --> 00:08:24.960 align:start position:0%
+mestiere. La base c'è. La domanda che
+ 
+
+00:08:24.960 --> 00:08:28.029 align:start position:0%
+mestiere. La base c'è. La domanda che
+rimane<00:08:25.319><c> è:</c><00:08:25.800><c> "Ok,</c><00:08:26.479><c> e</c><00:08:26.680><c> adesso</c><00:08:27.319><c> come</c><00:08:27.599><c> prendiamo</c>
+
+00:08:28.029 --> 00:08:28.039 align:start position:0%
+rimane è: "Ok, e adesso come prendiamo
+ 
+
+00:08:28.039 --> 00:08:29.550 align:start position:0%
+rimane è: "Ok, e adesso come prendiamo
+tutti<00:08:28.280><c> questi</c><00:08:28.560><c> pezzi</c><00:08:28.840><c> e</c><00:08:28.960><c> li</c><00:08:29.080><c> usiamo</c><00:08:29.400><c> per</c>
+
+00:08:29.550 --> 00:08:29.560 align:start position:0%
+tutti questi pezzi e li usiamo per
+ 
+
+00:08:29.560 --> 00:08:32.070 align:start position:0%
+tutti questi pezzi e li usiamo per
+documentare<00:08:30.120><c> un</c><00:08:30.280><c> progetto</c><00:08:30.720><c> vero,</c><00:08:31.360><c> complesso,</c>
+
+00:08:32.070 --> 00:08:32.080 align:start position:0%
+documentare un progetto vero, complesso,
+ 
+
+00:08:32.080 --> 00:08:34.709 align:start position:0%
+documentare un progetto vero, complesso,
+da<00:08:32.279><c> zero?</c><00:08:33.200><c> Perché</c><00:08:33.440><c> è</c><00:08:33.640><c> questo</c><00:08:33.880><c> il</c><00:08:34.039><c> punto,</c>
+
+00:08:34.709 --> 00:08:34.719 align:start position:0%
+da zero? Perché è questo il punto,
+ 
+
+00:08:34.719 --> 00:08:36.509 align:start position:0%
+da zero? Perché è questo il punto,
+trasformare<00:08:35.320><c> la</c><00:08:35.479><c> documentazione</c><00:08:36.200><c> da</c><00:08:36.399><c> un</c>
+
+00:08:36.509 --> 00:08:36.519 align:start position:0%
+trasformare la documentazione da un
+ 
+
+00:08:36.519 --> 00:08:38.829 align:start position:0%
+trasformare la documentazione da un
+obbligo<00:08:36.880><c> noioso</c><00:08:37.320><c> a</c><00:08:37.440><c> una</c><00:08:37.599><c> risorsa</c><00:08:38.039><c> preziosa</c>
+
+00:08:38.829 --> 00:08:38.839 align:start position:0%
+obbligo noioso a una risorsa preziosa
+ 
+
+00:08:38.839 --> 00:08:40.829 align:start position:0%
+obbligo noioso a una risorsa preziosa
+che<00:08:39.039><c> vive</c><00:08:39.320><c> e</c><00:08:39.519><c> respira</c><00:08:39.959><c> insieme</c><00:08:40.360><c> al</c><00:08:40.560><c> nostro</c>
+
+00:08:40.829 --> 00:08:40.839 align:start position:0%
+che vive e respira insieme al nostro
+ 
+
+00:08:40.839 --> 00:08:43.039 align:start position:0%
+che vive e respira insieme al nostro
+codice.
+

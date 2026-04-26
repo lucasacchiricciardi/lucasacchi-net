@@ -1,0 +1,927 @@
+align:start position:0%
+ 
+Parliamoci chiaro, la documentazione
+align:start position:0%
+Parliamoci chiaro, la documentazione
+ 
+align:start position:0%
+Parliamoci chiaro, la documentazione
+tecnica per tantissimi sviluppatori è la
+align:start position:0%
+tecnica per tantissimi sviluppatori è la
+ 
+align:start position:0%
+tecnica per tantissimi sviluppatori è la
+parte meno divertente del lavoro, quel
+align:start position:0%
+parte meno divertente del lavoro, quel
+ 
+align:start position:0%
+parte meno divertente del lavoro, quel
+compito che si rimanda sempre, che
+align:start position:0%
+compito che si rimanda sempre, che
+ 
+align:start position:0%
+compito che si rimanda sempre, che
+sembra non stare mai al passo con il
+align:start position:0%
+sembra non stare mai al passo con il
+ 
+align:start position:0%
+sembra non stare mai al passo con il
+codice, vero? E se invece ci fosse un
+align:start position:0%
+codice, vero? E se invece ci fosse un
+ 
+align:start position:0%
+codice, vero? E se invece ci fosse un
+modo per cambiare tutto questo, per
+align:start position:0%
+modo per cambiare tutto questo, per
+ 
+align:start position:0%
+modo per cambiare tutto questo, per
+trasformare questa frustrazione in
+align:start position:0%
+trasformare questa frustrazione in
+ 
+align:start position:0%
+trasformare questa frustrazione in
+qualcosa di eh persino gratificante,
+align:start position:0%
+qualcosa di eh persino gratificante,
+ 
+align:start position:0%
+qualcosa di eh persino gratificante,
+vedremo proprio come fare trattando i
+align:start position:0%
+vedremo proprio come fare trattando i
+ 
+align:start position:0%
+vedremo proprio come fare trattando i
+documenti con la stessa professionalità
+align:start position:0%
+documenti con la stessa professionalità
+ 
+align:start position:0%
+documenti con la stessa professionalità
+che dedichiamo al codice. Allora, ecco
+align:start position:0%
+che dedichiamo al codice. Allora, ecco
+ 
+align:start position:0%
+che dedichiamo al codice. Allora, ecco
+il nostro percorso. Partiremo dal
+align:start position:0%
+il nostro percorso. Partiremo dal
+ 
+align:start position:0%
+il nostro percorso. Partiremo dal
+problema che conosciamo fin troppo bene
+align:start position:0%
+problema che conosciamo fin troppo bene
+ 
+align:start position:0%
+problema che conosciamo fin troppo bene
+per poi vedere la soluzione, questo
+align:start position:0%
+per poi vedere la soluzione, questo
+ 
+align:start position:0%
+per poi vedere la soluzione, questo
+approccio chiamato Doxals Crowd. Poi
+align:start position:0%
+approccio chiamato Doxals Crowd. Poi
+ 
+align:start position:0%
+approccio chiamato Doxals Crowd. Poi
+capiremo come dargli una struttura seria
+align:start position:0%
+capiremo come dargli una struttura seria
+ 
+align:start position:0%
+capiremo come dargli una struttura seria
+con un processo chiamato DDLC. Vedremo
+align:start position:0%
+con un processo chiamato DDLC. Vedremo
+ 
+align:start position:0%
+con un processo chiamato DDLC. Vedremo
+quanto sia fondamentale capire per chi
+align:start position:0%
+quanto sia fondamentale capire per chi
+ 
+align:start position:0%
+quanto sia fondamentale capire per chi
+stiamo scrivendo e alla fine
+align:start position:0%
+stiamo scrivendo e alla fine
+ 
+align:start position:0%
+stiamo scrivendo e alla fine
+collegheremo tutto in un modo che vi
+align:start position:0%
+collegheremo tutto in un modo che vi
+ 
+align:start position:0%
+collegheremo tutto in un modo che vi
+assicuro ha molto senso. Ok, partiamo da
+align:start position:0%
+assicuro ha molto senso. Ok, partiamo da
+ 
+align:start position:0%
+assicuro ha molto senso. Ok, partiamo da
+una sensazione che è quasi universale
+align:start position:0%
+una sensazione che è quasi universale
+ 
+align:start position:0%
+una sensazione che è quasi universale
+nel nostro campo. L'idea che scrivere
+align:start position:0%
+nel nostro campo. L'idea che scrivere
+ 
+align:start position:0%
+nel nostro campo. L'idea che scrivere
+documentazione sia una perdita di tempo,
+align:start position:0%
+documentazione sia una perdita di tempo,
+ 
+align:start position:0%
+documentazione sia una perdita di tempo,
+che sia noioso e che alla fine tanto non
+align:start position:0%
+che sia noioso e che alla fine tanto non
+ 
+align:start position:0%
+che sia noioso e che alla fine tanto non
+la legge nessuno. Ma le cose stanno
+align:start position:0%
+la legge nessuno. Ma le cose stanno
+ 
+align:start position:0%
+la legge nessuno. Ma le cose stanno
+davvero così. La verità a pensarci bene
+align:start position:0%
+davvero così. La verità a pensarci bene
+ 
+align:start position:0%
+davvero così. La verità a pensarci bene
+è che il problema non è la scrittura in
+align:start position:0%
+è che il problema non è la scrittura in
+ 
+align:start position:0%
+è che il problema non è la scrittura in
+sé. Il problema sono gli strumenti, i
+align:start position:0%
+sé. Il problema sono gli strumenti, i
+ 
+align:start position:0%
+sé. Il problema sono gli strumenti, i
+processi che usiamo, spesso vecchi e
+align:start position:0%
+processi che usiamo, spesso vecchi e
+ 
+align:start position:0%
+processi che usiamo, spesso vecchi e
+inadeguati. Insomma, chi non ha mai
+align:start position:0%
+inadeguati. Insomma, chi non ha mai
+ 
+align:start position:0%
+inadeguati. Insomma, chi non ha mai
+avuto a che fare con un file dal nome
+align:start position:0%
+avuto a che fare con un file dal nome
+ 
+align:start position:0%
+avuto a che fare con un file dal nome
+simile scambiato via email con 1le
+align:start position:0%
+simile scambiato via email con 1le
+ 
+align:start position:0%
+simile scambiato via email con 1le
+versioni che si accavallano e una
+align:start position:0%
+versioni che si accavallano e una
+ 
+align:start position:0%
+versioni che si accavallano e una
+formattazione del codice che è un vero
+align:start position:0%
+formattazione del codice che è un vero
+ 
+align:start position:0%
+formattazione del codice che è un vero
+disastro. È proprio qui che nasce la
+align:start position:0%
+disastro. È proprio qui che nasce la
+ 
+align:start position:0%
+disastro. È proprio qui che nasce la
+frustrazione e questo ci porta dritti al
+align:start position:0%
+frustrazione e questo ci porta dritti al
+ 
+align:start position:0%
+frustrazione e questo ci porta dritti al
+punto. Questa non è solo una frase a
+align:start position:0%
+punto. Questa non è solo una frase a
+ 
+align:start position:0%
+punto. Questa non è solo una frase a
+effetto, è una vera e propria
+align:start position:0%
+effetto, è una vera e propria
+ 
+align:start position:0%
+effetto, è una vera e propria
+dichiarazione di principio. La
+align:start position:0%
+dichiarazione di principio. La
+ 
+align:start position:0%
+dichiarazione di principio. La
+documentazione non è un accessorio, è
+align:start position:0%
+documentazione non è un accessorio, è
+ 
+align:start position:0%
+documentazione non è un accessorio, è
+una parte fondamentale del prodotto e se
+align:start position:0%
+una parte fondamentale del prodotto e se
+ 
+align:start position:0%
+una parte fondamentale del prodotto e se
+è sbagliata, incompleta o fuorviante,
+align:start position:0%
+è sbagliata, incompleta o fuorviante,
+ 
+align:start position:0%
+è sbagliata, incompleta o fuorviante,
+beh, quello è un bug a tutti gli
+align:start position:0%
+beh, quello è un bug a tutti gli
+ 
+align:start position:0%
+beh, quello è un bug a tutti gli
+effetti. E quindi come se ne esce? La
+align:start position:0%
+effetti. E quindi come se ne esce? La
+ 
+align:start position:0%
+effetti. E quindi come se ne esce? La
+soluzione sta in un cambio di
+align:start position:0%
+soluzione sta in un cambio di
+ 
+align:start position:0%
+soluzione sta in un cambio di
+prospettiva totale, un approccio che si
+align:start position:0%
+prospettiva totale, un approccio che si
+ 
+align:start position:0%
+prospettiva totale, un approccio che si
+chiama doc.
+align:start position:0%
+chiama doc.
+ 
+align:start position:0%
+chiama doc.
+L'idea di fondo è tanto semplice quanto
+align:start position:0%
+L'idea di fondo è tanto semplice quanto
+ 
+align:start position:0%
+L'idea di fondo è tanto semplice quanto
+potente. Iniziamo a trattare i documenti
+align:start position:0%
+potente. Iniziamo a trattare i documenti
+ 
+align:start position:0%
+potente. Iniziamo a trattare i documenti
+con lo stesso rigore, gli stessi
+align:start position:0%
+con lo stesso rigore, gli stessi
+ 
+align:start position:0%
+con lo stesso rigore, gli stessi
+strumenti e gli stessi processi che
+align:start position:0%
+strumenti e gli stessi processi che
+ 
+align:start position:0%
+strumenti e gli stessi processi che
+usiamo ogni giorno per il codice. Ecco,
+align:start position:0%
+usiamo ogni giorno per il codice. Ecco,
+ 
+align:start position:0%
+usiamo ogni giorno per il codice. Ecco,
+il cambiamento è tutto qui. Si passa dal
+align:start position:0%
+il cambiamento è tutto qui. Si passa dal
+ 
+align:start position:0%
+il cambiamento è tutto qui. Si passa dal
+caos di Word e dei wiki disordinati a un
+align:start position:0%
+caos di Word e dei wiki disordinati a un
+ 
+align:start position:0%
+caos di Word e dei wiki disordinati a un
+flusso di lavoro che per chi sviluppa è
+align:start position:0%
+flusso di lavoro che per chi sviluppa è
+ 
+align:start position:0%
+flusso di lavoro che per chi sviluppa è
+pane quotidiano. Basta file binari
+align:start position:0%
+pane quotidiano. Basta file binari
+ 
+align:start position:0%
+pane quotidiano. Basta file binari
+scambiati via mail, si usa testo
+align:start position:0%
+scambiati via mail, si usa testo
+ 
+align:start position:0%
+scambiati via mail, si usa testo
+semplice e lo si mette sotto controllo
+align:start position:0%
+semplice e lo si mette sotto controllo
+ 
+align:start position:0%
+semplice e lo si mette sotto controllo
+di versione con Git. Le lamentele vaghe
+align:start position:0%
+di versione con Git. Le lamentele vaghe
+ 
+align:start position:0%
+di versione con Git. Le lamentele vaghe
+diventano ticket tracciabili. I
+align:start position:0%
+diventano ticket tracciabili. I
+ 
+align:start position:0%
+diventano ticket tracciabili. I
+controlli manuali e noiosi,
+align:start position:0%
+controlli manuali e noiosi,
+ 
+align:start position:0%
+controlli manuali e noiosi,
+automatizzati come in una qualsiasi
+align:start position:0%
+automatizzati come in una qualsiasi
+ 
+align:start position:0%
+automatizzati come in una qualsiasi
+pipeline di CD, è un altro mondo
+align:start position:0%
+pipeline di CD, è un altro mondo
+ 
+align:start position:0%
+pipeline di CD, è un altro mondo
+davvero. Questi sono i quattro pilastri
+align:start position:0%
+davvero. Questi sono i quattro pilastri
+ 
+align:start position:0%
+davvero. Questi sono i quattro pilastri
+su cui si regge tutta questa filosofia.
+align:start position:0%
+su cui si regge tutta questa filosofia.
+ 
+align:start position:0%
+su cui si regge tutta questa filosofia.
+Punto primo, si scrive in testo semplice
+align:start position:0%
+Punto primo, si scrive in testo semplice
+ 
+align:start position:0%
+Punto primo, si scrive in testo semplice
+come Markown, niente formati
+align:start position:0%
+come Markown, niente formati
+ 
+align:start position:0%
+come Markown, niente formati
+proprietari. Secondo, si usa Git, così
+align:start position:0%
+proprietari. Secondo, si usa Git, così
+ 
+align:start position:0%
+proprietari. Secondo, si usa Git, così
+ogni singola modifica è tracciata e
+align:start position:0%
+ogni singola modifica è tracciata e
+ 
+align:start position:0%
+ogni singola modifica è tracciata e
+riversibile. Terzo, si gestiscono i
+align:start position:0%
+riversibile. Terzo, si gestiscono i
+ 
+align:start position:0%
+riversibile. Terzo, si gestiscono i
+problemi e i feedback in modo
+align:start position:0%
+problemi e i feedback in modo
+ 
+align:start position:0%
+problemi e i feedback in modo
+strutturato con un issue tracker e in
+align:start position:0%
+strutturato con un issue tracker e in
+ 
+align:start position:0%
+strutturato con un issue tracker e in
+Fim quarto si automatizza il più
+align:start position:0%
+Fim quarto si automatizza il più
+ 
+align:start position:0%
+Fim quarto si automatizza il più
+possibile dal controllo ortografico fino
+align:start position:0%
+possibile dal controllo ortografico fino
+ 
+align:start position:0%
+possibile dal controllo ortografico fino
+alla pubblicazione finale. Avere gli
+align:start position:0%
+alla pubblicazione finale. Avere gli
+ 
+align:start position:0%
+alla pubblicazione finale. Avere gli
+strumenti giusti però è solo metà della
+align:start position:0%
+strumenti giusti però è solo metà della
+ 
+align:start position:0%
+strumenti giusti però è solo metà della
+storia, serve anche un processo. Proprio
+align:start position:0%
+storia, serve anche un processo. Proprio
+ 
+align:start position:0%
+storia, serve anche un processo. Proprio
+come per il software esiste l'SDLC, il
+align:start position:0%
+come per il software esiste l'SDLC, il
+ 
+align:start position:0%
+come per il software esiste l'SDLC, il
+ciclo di vita dello sviluppo, anche per
+align:start position:0%
+ciclo di vita dello sviluppo, anche per
+ 
+align:start position:0%
+ciclo di vita dello sviluppo, anche per
+la documentazione fatta bene esiste un
+align:start position:0%
+la documentazione fatta bene esiste un
+ 
+align:start position:0%
+la documentazione fatta bene esiste un
+percorso ben definito, il Document
+align:start position:0%
+percorso ben definito, il Document
+ 
+align:start position:0%
+percorso ben definito, il Document
+Development Life Cycle o più
+align:start position:0%
+Development Life Cycle o più
+ 
+align:start position:0%
+Development Life Cycle o più
+semplicemente DDLC.
+align:start position:0%
+semplicemente DDLC.
+ 
+align:start position:0%
+semplicemente DDLC.
+Non si inizia a scrivere a casaccio, si
+align:start position:0%
+Non si inizia a scrivere a casaccio, si
+ 
+align:start position:0%
+Non si inizia a scrivere a casaccio, si
+parte dalla pianificazione, per chi sto
+align:start position:0%
+parte dalla pianificazione, per chi sto
+ 
+align:start position:0%
+parte dalla pianificazione, per chi sto
+scrivendo e perché. Poi si passa alla
+align:start position:0%
+scrivendo e perché. Poi si passa alla
+ 
+align:start position:0%
+scrivendo e perché. Poi si passa alla
+progettazione definendo la struttura,
+align:start position:0%
+progettazione definendo la struttura,
+ 
+align:start position:0%
+progettazione definendo la struttura,
+l'indice. Solo a questo punto si
+align:start position:0%
+l'indice. Solo a questo punto si
+ 
+align:start position:0%
+l'indice. Solo a questo punto si
+comincia a scrivere il contenuto.
+align:start position:0%
+comincia a scrivere il contenuto.
+ 
+align:start position:0%
+comincia a scrivere il contenuto.
+Dopodiché c'è una fase fondamentale, la
+align:start position:0%
+Dopodiché c'è una fase fondamentale, la
+ 
+align:start position:0%
+Dopodiché c'è una fase fondamentale, la
+revisione e infine la pubblicazione e la
+align:start position:0%
+revisione e infine la pubblicazione e la
+ 
+align:start position:0%
+revisione e infine la pubblicazione e la
+manutenzione nel tempo. Ed ecco la vera
+align:start position:0%
+manutenzione nel tempo. Ed ecco la vera
+ 
+align:start position:0%
+manutenzione nel tempo. Ed ecco la vera
+svolta per chi viene dal mondo dello
+align:start position:0%
+svolta per chi viene dal mondo dello
+ 
+align:start position:0%
+svolta per chi viene dal mondo dello
+sviluppo, la revisione. Non parliamo più
+align:start position:0%
+sviluppo, la revisione. Non parliamo più
+ 
+align:start position:0%
+sviluppo, la revisione. Non parliamo più
+di un controllo editoriale fatto da
+align:start position:0%
+di un controllo editoriale fatto da
+ 
+align:start position:0%
+di un controllo editoriale fatto da
+chissà chi, parliamo di una vera e
+align:start position:0%
+chissà chi, parliamo di una vera e
+ 
+align:start position:0%
+chissà chi, parliamo di una vera e
+propria pe review tecnica gestita
+align:start position:0%
+propria pe review tecnica gestita
+ 
+align:start position:0%
+propria pe review tecnica gestita
+tramite pool request su Git. Un collega
+align:start position:0%
+tramite pool request su Git. Un collega
+ 
+align:start position:0%
+tramite pool request su Git. Un collega
+può commentare ogni singola riga,
+align:start position:0%
+può commentare ogni singola riga,
+ 
+align:start position:0%
+può commentare ogni singola riga,
+suggerire modifiche e approvare il tutto
+align:start position:0%
+suggerire modifiche e approvare il tutto
+ 
+align:start position:0%
+suggerire modifiche e approvare il tutto
+prima del merge, esattamente come si fa
+align:start position:0%
+prima del merge, esattamente come si fa
+ 
+align:start position:0%
+prima del merge, esattamente come si fa
+con il codice. Ricordate la prima fase,
+align:start position:0%
+con il codice. Ricordate la prima fase,
+ 
+align:start position:0%
+con il codice. Ricordate la prima fase,
+la pianificazione?
+align:start position:0%
+la pianificazione?
+ 
+align:start position:0%
+la pianificazione?
+Ecco, qui si vince o si perde la
+align:start position:0%
+Ecco, qui si vince o si perde la
+ 
+align:start position:0%
+Ecco, qui si vince o si perde la
+partita. L'errore più comune che si
+align:start position:0%
+partita. L'errore più comune che si
+ 
+align:start position:0%
+partita. L'errore più comune che si
+possa fare è scrivere pensando che chi
+align:start position:0%
+possa fare è scrivere pensando che chi
+ 
+align:start position:0%
+possa fare è scrivere pensando che chi
+legge abbia le nostre stesse conoscenze.
+align:start position:0%
+legge abbia le nostre stesse conoscenze.
+ 
+align:start position:0%
+legge abbia le nostre stesse conoscenze.
+Capire il pubblico non è un dettaglio, è
+align:start position:0%
+Capire il pubblico non è un dettaglio, è
+ 
+align:start position:0%
+Capire il pubblico non è un dettaglio, è
+la base per scrivere una documentazione
+align:start position:0%
+la base per scrivere una documentazione
+ 
+align:start position:0%
+la base per scrivere una documentazione
+che sia davvero utile. Questa è la
+align:start position:0%
+che sia davvero utile. Questa è la
+ 
+align:start position:0%
+che sia davvero utile. Questa è la
+domanda da un milione di dollari. La
+align:start position:0%
+domanda da un milione di dollari. La
+ 
+align:start position:0%
+domanda da un milione di dollari. La
+risposta a questa domanda influenza
+align:start position:0%
+risposta a questa domanda influenza
+ 
+align:start position:0%
+risposta a questa domanda influenza
+tutto. Cosa scrivere, come scriverlo, il
+align:start position:0%
+tutto. Cosa scrivere, come scriverlo, il
+ 
+align:start position:0%
+tutto. Cosa scrivere, come scriverlo, il
+tono da usare, il livello di
+align:start position:0%
+tono da usare, il livello di
+ 
+align:start position:0%
+tono da usare, il livello di
+approfondimento tecnico. Tutto parte da
+align:start position:0%
+approfondimento tecnico. Tutto parte da
+ 
+align:start position:0%
+approfondimento tecnico. Tutto parte da
+qui. Per capirci meglio, l'analogia
+align:start position:0%
+qui. Per capirci meglio, l'analogia
+ 
+align:start position:0%
+qui. Per capirci meglio, l'analogia
+dell'automobile è perfetta. All'utente
+align:start position:0%
+dell'automobile è perfetta. All'utente
+ 
+align:start position:0%
+dell'automobile è perfetta. All'utente
+finale, che vuole solo guidare,
+align:start position:0%
+finale, che vuole solo guidare,
+ 
+align:start position:0%
+finale, che vuole solo guidare,
+spieghiamo come usare il volante e i
+align:start position:0%
+spieghiamo come usare il volante e i
+ 
+align:start position:0%
+spieghiamo come usare il volante e i
+pedali, semplice e diretto. Allo
+align:start position:0%
+pedali, semplice e diretto. Allo
+ 
+align:start position:0%
+pedali, semplice e diretto. Allo
+sviluppatore, che è il nostro meccanico
+align:start position:0%
+sviluppatore, che è il nostro meccanico
+ 
+align:start position:0%
+sviluppatore, che è il nostro meccanico
+e deve integrare un pezzo, diamo lo
+align:start position:0%
+e deve integrare un pezzo, diamo lo
+ 
+align:start position:0%
+e deve integrare un pezzo, diamo lo
+schema del motore, cioè le nostre AP. Al
+align:start position:0%
+schema del motore, cioè le nostre AP. Al
+ 
+align:start position:0%
+schema del motore, cioè le nostre AP. Al
+manager che deve decidere se comprare
+align:start position:0%
+manager che deve decidere se comprare
+ 
+align:start position:0%
+manager che deve decidere se comprare
+l'auto parliamo di consumi e sicurezza,
+align:start position:0%
+l'auto parliamo di consumi e sicurezza,
+ 
+align:start position:0%
+l'auto parliamo di consumi e sicurezza,
+cioè del valore per il business. Stesso
+align:start position:0%
+cioè del valore per il business. Stesso
+ 
+align:start position:0%
+cioè del valore per il business. Stesso
+prodotto, tre pubblici, tre tipi di
+align:start position:0%
+prodotto, tre pubblici, tre tipi di
+ 
+align:start position:0%
+prodotto, tre pubblici, tre tipi di
+documentazione completamente diversi. E
+align:start position:0%
+documentazione completamente diversi. E
+ 
+align:start position:0%
+documentazione completamente diversi. E
+adesso tiriamo le somme. Vediamo come
+align:start position:0%
+adesso tiriamo le somme. Vediamo come
+ 
+align:start position:0%
+adesso tiriamo le somme. Vediamo come
+tutti questi pezzi si incastrano alla
+align:start position:0%
+tutti questi pezzi si incastrano alla
+ 
+align:start position:0%
+tutti questi pezzi si incastrano alla
+perfezione nel mondo dello sviluppo
+align:start position:0%
+perfezione nel mondo dello sviluppo
+ 
+align:start position:0%
+perfezione nel mondo dello sviluppo
+software, creando un parallelismo che è
+align:start position:0%
+software, creando un parallelismo che è
+ 
+align:start position:0%
+software, creando un parallelismo che è
+quasi poetico. Questo per me è il
+align:start position:0%
+quasi poetico. Questo per me è il
+ 
+align:start position:0%
+quasi poetico. Questo per me è il
+momento ah, guardate qui. Il nostro
+align:start position:0%
+momento ah, guardate qui. Il nostro
+ 
+align:start position:0%
+momento ah, guardate qui. Il nostro
+codice sorgente viene dato impasto a un
+align:start position:0%
+codice sorgente viene dato impasto a un
+ 
+align:start position:0%
+codice sorgente viene dato impasto a un
+compilatore e diventa un file
+align:start position:0%
+compilatore e diventa un file
+ 
+align:start position:0%
+compilatore e diventa un file
+eseguibile. Allo stesso identico modo, i
+align:start position:0%
+eseguibile. Allo stesso identico modo, i
+ 
+align:start position:0%
+eseguibile. Allo stesso identico modo, i
+nostri file di testo in Markdown vengono
+align:start position:0%
+nostri file di testo in Markdown vengono
+ 
+align:start position:0%
+nostri file di testo in Markdown vengono
+processati da un generatore di siti
+align:start position:0%
+processati da un generatore di siti
+ 
+align:start position:0%
+processati da un generatore di siti
+statici e diventano un sito web
+align:start position:0%
+statici e diventano un sito web
+ 
+align:start position:0%
+statici e diventano un sito web
+navigabile. è lo stesso identico
+align:start position:0%
+navigabile. è lo stesso identico
+ 
+align:start position:0%
+navigabile. è lo stesso identico
+concetto applicato a due cose
+align:start position:0%
+concetto applicato a due cose
+ 
+align:start position:0%
+concetto applicato a due cose
+apparentemente diverse. Quindi il
+align:start position:0%
+apparentemente diverse. Quindi il
+ 
+align:start position:0%
+apparentemente diverse. Quindi il
+messaggio da portare a casa è questo:
+align:start position:0%
+messaggio da portare a casa è questo:
+ 
+align:start position:0%
+messaggio da portare a casa è questo:
+smettiamola di pensare alla
+align:start position:0%
+smettiamola di pensare alla
+ 
+align:start position:0%
+smettiamola di pensare alla
+documentazione come a un competo di
+align:start position:0%
+documentazione come a un competo di
+ 
+align:start position:0%
+documentazione come a un competo di
+Serie B. È un'attività di ingegneria a
+align:start position:0%
+Serie B. È un'attività di ingegneria a
+ 
+align:start position:0%
+Serie B. È un'attività di ingegneria a
+tutti gli effetti che merita strumenti e
+align:start position:0%
+tutti gli effetti che merita strumenti e
+ 
+align:start position:0%
+tutti gli effetti che merita strumenti e
+processi professionali. trattiamo il
+align:start position:0%
+processi professionali. trattiamo il
+ 
+align:start position:0%
+processi professionali. trattiamo il
+testo con la stessa cura e lo stesso
+align:start position:0%
+testo con la stessa cura e lo stesso
+ 
+align:start position:0%
+testo con la stessa cura e lo stesso
+rigore che riserviamo al codice perché
+align:start position:0%
+rigore che riserviamo al codice perché
+ 
+align:start position:0%
+rigore che riserviamo al codice perché
+con l'approccio docode finalmente
+align:start position:0%
+con l'approccio docode finalmente
+ 
+align:start position:0%
+con l'approccio docode finalmente
+possiamo farlo.

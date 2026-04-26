@@ -1,0 +1,1071 @@
+align:start position:0%
+ 
+Parliamoci chiaro, la documentazione di
+align:start position:0%
+Parliamoci chiaro, la documentazione di
+ 
+align:start position:0%
+Parliamoci chiaro, la documentazione di
+un software non è un monolite scolpito
+align:start position:0%
+un software non è un monolite scolpito
+ 
+align:start position:0%
+un software non è un monolite scolpito
+nella pietra, no, è un'entità viva che
+align:start position:0%
+nella pietra, no, è un'entità viva che
+ 
+align:start position:0%
+nella pietra, no, è un'entità viva che
+cambia e si evolve e per gestirla senza
+align:start position:0%
+cambia e si evolve e per gestirla senza
+ 
+align:start position:0%
+cambia e si evolve e per gestirla senza
+impazzire serve una vera e propria
+align:start position:0%
+impazzire serve una vera e propria
+ 
+align:start position:0%
+impazzire serve una vera e propria
+macchina del tempo. Oggi vedremo proprio
+align:start position:0%
+macchina del tempo. Oggi vedremo proprio
+ 
+align:start position:0%
+macchina del tempo. Oggi vedremo proprio
+come costruirne una. Dai, ammettiamolo,
+align:start position:0%
+come costruirne una. Dai, ammettiamolo,
+ 
+align:start position:0%
+come costruirne una. Dai, ammettiamolo,
+il primo rilascio è sempre una festa,
+align:start position:0%
+il primo rilascio è sempre una festa,
+ 
+align:start position:0%
+il primo rilascio è sempre una festa,
+c'è euforia, un senso di liberazione,
+align:start position:0%
+c'è euforia, un senso di liberazione,
+ 
+align:start position:0%
+c'è euforia, un senso di liberazione,
+tutto è nuovo di zecca, tutto funziona
+align:start position:0%
+tutto è nuovo di zecca, tutto funziona
+ 
+align:start position:0%
+tutto è nuovo di zecca, tutto funziona
+alla perfezione. Sembra la parte facile,
+align:start position:0%
+alla perfezione. Sembra la parte facile,
+ 
+align:start position:0%
+alla perfezione. Sembra la parte facile,
+no? E invece è proprio qui che il sogno
+align:start position:0%
+no? E invece è proprio qui che il sogno
+ 
+align:start position:0%
+no? E invece è proprio qui che il sogno
+rischia di trasformarsi in un incubo,
+align:start position:0%
+rischia di trasformarsi in un incubo,
+ 
+align:start position:0%
+rischia di trasformarsi in un incubo,
+perché il software va avanti, ma non
+align:start position:0%
+perché il software va avanti, ma non
+ 
+align:start position:0%
+perché il software va avanti, ma non
+tutti gli utenti tengono il passo e in
+align:start position:0%
+tutti gli utenti tengono il passo e in
+ 
+align:start position:0%
+tutti gli utenti tengono il passo e in
+questo sfasamento, in questa specie di
+align:start position:0%
+questo sfasamento, in questa specie di
+ 
+align:start position:0%
+questo sfasamento, in questa specie di
+paradosso temporale, si nasconde il
+align:start position:0%
+paradosso temporale, si nasconde il
+ 
+align:start position:0%
+paradosso temporale, si nasconde il
+disastro. Facciamo un esempio pratico.
+align:start position:0%
+disastro. Facciamo un esempio pratico.
+ 
+align:start position:0%
+disastro. Facciamo un esempio pratico.
+Immaginiamo che nella nostra nuova
+align:start position:0%
+Immaginiamo che nella nostra nuova
+ 
+align:start position:0%
+Immaginiamo che nella nostra nuova
+versione 2.0 una funzione che si
+align:start position:0%
+versione 2.0 una funzione che si
+ 
+align:start position:0%
+versione 2.0 una funzione che si
+chiamava Process data venga rinominata
+align:start position:0%
+chiamava Process data venga rinominata
+ 
+align:start position:0%
+chiamava Process data venga rinominata
+in munch data. Ora un utente ancora
+align:start position:0%
+in munch data. Ora un utente ancora
+ 
+align:start position:0%
+in munch data. Ora un utente ancora
+fermo alla versione 1.0 apre la
+align:start position:0%
+fermo alla versione 1.0 apre la
+ 
+align:start position:0%
+fermo alla versione 1.0 apre la
+documentazione nuova di pacca, vede
+align:start position:0%
+documentazione nuova di pacca, vede
+ 
+align:start position:0%
+documentazione nuova di pacca, vede
+questa funzione munch data, la usa e
+align:start position:0%
+questa funzione munch data, la usa e
+ 
+align:start position:0%
+questa funzione munch data, la usa e
+bom, il suo codice esplode. Di chi è la
+align:start position:0%
+bom, il suo codice esplode. Di chi è la
+ 
+align:start position:0%
+bom, il suo codice esplode. Di chi è la
+colpa? non sua, ovviamente. È colpa
+align:start position:0%
+colpa? non sua, ovviamente. È colpa
+ 
+align:start position:0%
+colpa? non sua, ovviamente. È colpa
+nostra, perché la nostra documentazione
+align:start position:0%
+nostra, perché la nostra documentazione
+ 
+align:start position:0%
+nostra, perché la nostra documentazione
+non sa viaggiare nel tempo. Bene, ecco
+align:start position:0%
+non sa viaggiare nel tempo. Bene, ecco
+ 
+align:start position:0%
+non sa viaggiare nel tempo. Bene, ecco
+il nostro piano di battaglia per
+align:start position:0%
+il nostro piano di battaglia per
+ 
+align:start position:0%
+il nostro piano di battaglia per
+sconfiggere questo incubo. Partiremo
+align:start position:0%
+sconfiggere questo incubo. Partiremo
+ 
+align:start position:0%
+sconfiggere questo incubo. Partiremo
+proprio dallo scenario peggiore per poi
+align:start position:0%
+proprio dallo scenario peggiore per poi
+ 
+align:start position:0%
+proprio dallo scenario peggiore per poi
+costruire la nostra macchina del tempo.
+align:start position:0%
+costruire la nostra macchina del tempo.
+ 
+align:start position:0%
+costruire la nostra macchina del tempo.
+Impereremo un codice segreto per
+align:start position:0%
+Impereremo un codice segreto per
+ 
+align:start position:0%
+Impereremo un codice segreto per
+scrittori, il senver, e capiremo come
+align:start position:0%
+scrittori, il senver, e capiremo come
+ 
+align:start position:0%
+scrittori, il senver, e capiremo come
+tenere un diario di bordo per chi ci
+align:start position:0%
+tenere un diario di bordo per chi ci
+ 
+align:start position:0%
+tenere un diario di bordo per chi ci
+usa. Vedremo anche come dire addio alle
+align:start position:0%
+usa. Vedremo anche come dire addio alle
+ 
+align:start position:0%
+usa. Vedremo anche come dire addio alle
+vecchie funzioni con un po' di grazia e
+align:start position:0%
+vecchie funzioni con un po' di grazia e
+ 
+align:start position:0%
+vecchie funzioni con un po' di grazia e
+alla fine saremo pronti per il decolo.
+align:start position:0%
+alla fine saremo pronti per il decolo.
+ 
+align:start position:0%
+alla fine saremo pronti per il decolo.
+Perfetto, mettiamoci al lavoro. È ora di
+align:start position:0%
+Perfetto, mettiamoci al lavoro. È ora di
+ 
+align:start position:0%
+Perfetto, mettiamoci al lavoro. È ora di
+costruire questa macchina. Per farlo,
+align:start position:0%
+costruire questa macchina. Per farlo,
+ 
+align:start position:0%
+costruire questa macchina. Per farlo,
+per dare alla nostra documentazione la
+align:start position:0%
+per dare alla nostra documentazione la
+ 
+align:start position:0%
+per dare alla nostra documentazione la
+capacità di viaggiare nel tempo, abbiamo
+align:start position:0%
+capacità di viaggiare nel tempo, abbiamo
+ 
+align:start position:0%
+capacità di viaggiare nel tempo, abbiamo
+davanti a noi due strade principali.
+align:start position:0%
+davanti a noi due strade principali.
+ 
+align:start position:0%
+davanti a noi due strade principali.
+Allora, da un lato c'è l'approccio che
+align:start position:0%
+Allora, da un lato c'è l'approccio che
+ 
+align:start position:0%
+Allora, da un lato c'è l'approccio che
+potremmo chiamare rolling, dove si vede
+align:start position:0%
+potremmo chiamare rolling, dove si vede
+ 
+align:start position:0%
+potremmo chiamare rolling, dove si vede
+sempre e solo l'ultima versione.
+align:start position:0%
+sempre e solo l'ultima versione.
+ 
+align:start position:0%
+sempre e solo l'ultima versione.
+Semplice per noi, certo, ma un vero
+align:start position:0%
+Semplice per noi, certo, ma un vero
+ 
+align:start position:0%
+Semplice per noi, certo, ma un vero
+disastro per, ad esempio, clienti
+align:start position:0%
+disastro per, ad esempio, clienti
+ 
+align:start position:0%
+disastro per, ad esempio, clienti
+Enterprise che sono bloccati su versioni
+align:start position:0%
+Enterprise che sono bloccati su versioni
+ 
+align:start position:0%
+Enterprise che sono bloccati su versioni
+più vecchie. Dall'altro lato c'è
+align:start position:0%
+più vecchie. Dall'altro lato c'è
+ 
+align:start position:0%
+più vecchie. Dall'altro lato c'è
+l'approccio multiversion che con un
+align:start position:0%
+l'approccio multiversion che con un
+ 
+align:start position:0%
+l'approccio multiversion che con un
+semplice menù a tendina permette di
+align:start position:0%
+semplice menù a tendina permette di
+ 
+align:start position:0%
+semplice menù a tendina permette di
+saltare da una versione all'altra della
+align:start position:0%
+saltare da una versione all'altra della
+ 
+align:start position:0%
+saltare da una versione all'altra della
+documentazione. Certo è un po' più di
+align:start position:0%
+documentazione. Certo è un po' più di
+ 
+align:start position:0%
+documentazione. Certo è un po' più di
+lavoro all'inizio, ma è l'unica scelta
+align:start position:0%
+lavoro all'inizio, ma è l'unica scelta
+ 
+align:start position:0%
+lavoro all'inizio, ma è l'unica scelta
+davvero professionale, è quella che
+align:start position:0%
+davvero professionale, è quella che
+ 
+align:start position:0%
+davvero professionale, è quella che
+costruisce fiducia e la buona notizia è
+align:start position:0%
+costruisce fiducia e la buona notizia è
+ 
+align:start position:0%
+costruisce fiducia e la buona notizia è
+che non dobbiamo inventarci niente.
+align:start position:0%
+che non dobbiamo inventarci niente.
+ 
+align:start position:0%
+che non dobbiamo inventarci niente.
+Esistono strumenti fantastici come Mike
+align:start position:0%
+Esistono strumenti fantastici come Mike
+ 
+align:start position:0%
+Esistono strumenti fantastici come Mike
+per chi usa MKDS che fanno tutto il
+align:start position:0%
+per chi usa MKDS che fanno tutto il
+ 
+align:start position:0%
+per chi usa MKDS che fanno tutto il
+lavoro sporco. In pratica creano delle
+align:start position:0%
+lavoro sporco. In pratica creano delle
+ 
+align:start position:0%
+lavoro sporco. In pratica creano delle
+cartelle separate per ogni singola
+align:start position:0%
+cartelle separate per ogni singola
+ 
+align:start position:0%
+cartelle separate per ogni singola
+versione. Ecco, è questa la meccanica di
+align:start position:0%
+versione. Ecco, è questa la meccanica di
+ 
+align:start position:0%
+versione. Ecco, è questa la meccanica di
+base della nostra macchina del tempo.
+align:start position:0%
+base della nostra macchina del tempo.
+ 
+align:start position:0%
+base della nostra macchina del tempo.
+Semplice, no? Ok, la macchina del tempo
+align:start position:0%
+Semplice, no? Ok, la macchina del tempo
+ 
+align:start position:0%
+Semplice, no? Ok, la macchina del tempo
+è costruita. Adesso però ci serve un
+align:start position:0%
+è costruita. Adesso però ci serve un
+ 
+align:start position:0%
+è costruita. Adesso però ci serve un
+pannello di controllo per pilotarla e
+align:start position:0%
+pannello di controllo per pilotarla e
+ 
+align:start position:0%
+pannello di controllo per pilotarla e
+questo pannello di controllo ha un nome,
+align:start position:0%
+questo pannello di controllo ha un nome,
+ 
+align:start position:0%
+questo pannello di controllo ha un nome,
+versionamento semantico o senver. È una
+align:start position:0%
+versionamento semantico o senver. È una
+ 
+align:start position:0%
+versionamento semantico o senver. È una
+specie di linguaggio universale per
+align:start position:0%
+specie di linguaggio universale per
+ 
+align:start position:0%
+specie di linguaggio universale per
+comunicare i cambiamenti. Vedete, senver
+align:start position:0%
+comunicare i cambiamenti. Vedete, senver
+ 
+align:start position:0%
+comunicare i cambiamenti. Vedete, senver
+non è solo una sfilza di numeri tipo
+align:start position:0%
+non è solo una sfilza di numeri tipo
+ 
+align:start position:0%
+non è solo una sfilza di numeri tipo
+1.23, no, è molto di più. È un vero e
+align:start position:0%
+1.23, no, è molto di più. È un vero e
+ 
+align:start position:0%
+1.23, no, è molto di più. È un vero e
+proprio patto di fiducia. Ogni numero,
+align:start position:0%
+proprio patto di fiducia. Ogni numero,
+ 
+align:start position:0%
+proprio patto di fiducia. Ogni numero,
+major, minor e patch, ha un significato
+align:start position:0%
+major, minor e patch, ha un significato
+ 
+align:start position:0%
+major, minor e patch, ha un significato
+potentissimo. Dice a chi ci legge cosa
+align:start position:0%
+potentissimo. Dice a chi ci legge cosa
+ 
+align:start position:0%
+potentissimo. Dice a chi ci legge cosa
+deve aspettarsi prima ancora di leggere
+align:start position:0%
+deve aspettarsi prima ancora di leggere
+ 
+align:start position:0%
+deve aspettarsi prima ancora di leggere
+una singola riga di testo. Ed è qui che
+align:start position:0%
+una singola riga di testo. Ed è qui che
+ 
+align:start position:0%
+una singola riga di testo. Ed è qui che
+le cose si fanno interessanti per chi
+align:start position:0%
+le cose si fanno interessanti per chi
+ 
+align:start position:0%
+le cose si fanno interessanti per chi
+scrive. Ogni numero corrisponde a
+align:start position:0%
+scrive. Ogni numero corrisponde a
+ 
+align:start position:0%
+scrive. Ogni numero corrisponde a
+un'azione precisa. Se cambia il numero
+align:start position:0%
+un'azione precisa. Se cambia il numero
+ 
+align:start position:0%
+un'azione precisa. Se cambia il numero
+maggior da 1 a 2, significa che qualcosa
+align:start position:0%
+maggior da 1 a 2, significa che qualcosa
+ 
+align:start position:0%
+maggior da 1 a 2, significa che qualcosa
+si è rotto. Dobbiamo riscrivere le
+align:start position:0%
+si è rotto. Dobbiamo riscrivere le
+ 
+align:start position:0%
+si è rotto. Dobbiamo riscrivere le
+guide. Se cambia il minor è stata
+align:start position:0%
+guide. Se cambia il minor è stata
+ 
+align:start position:0%
+guide. Se cambia il minor è stata
+aggiunta una nuova funzione, quindi
+align:start position:0%
+aggiunta una nuova funzione, quindi
+ 
+align:start position:0%
+aggiunta una nuova funzione, quindi
+dobbiamo creare nuove pagine. Se invece
+align:start position:0%
+dobbiamo creare nuove pagine. Se invece
+ 
+align:start position:0%
+dobbiamo creare nuove pagine. Se invece
+cambia solo il patch è una semplice
+align:start position:0%
+cambia solo il patch è una semplice
+ 
+align:start position:0%
+cambia solo il patch è una semplice
+correzione, magari un refuso, è un
+align:start position:0%
+correzione, magari un refuso, è un
+ 
+align:start position:0%
+correzione, magari un refuso, è un
+codice d'azione chiaro e diretto. Bene,
+align:start position:0%
+codice d'azione chiaro e diretto. Bene,
+ 
+align:start position:0%
+codice d'azione chiaro e diretto. Bene,
+passiamo al diario di bordo. Se la
+align:start position:0%
+passiamo al diario di bordo. Se la
+ 
+align:start position:0%
+passiamo al diario di bordo. Se la
+documentazione è la mappa completa del
+align:start position:0%
+documentazione è la mappa completa del
+ 
+align:start position:0%
+documentazione è la mappa completa del
+nostro software, il changelog è il
+align:start position:0%
+nostro software, il changelog è il
+ 
+align:start position:0%
+nostro software, il changelog è il
+racconto del viaggio, ma attenzione, è
+align:start position:0%
+racconto del viaggio, ma attenzione, è
+ 
+align:start position:0%
+racconto del viaggio, ma attenzione, è
+un racconto scritto non per
+align:start position:0%
+un racconto scritto non per
+ 
+align:start position:0%
+un racconto scritto non per
+l'equipaggio, cioè gli sviluppatori, ma
+align:start position:0%
+l'equipaggio, cioè gli sviluppatori, ma
+ 
+align:start position:0%
+l'equipaggio, cioè gli sviluppatori, ma
+per i passeggeri, ovvero i nostri
+align:start position:0%
+per i passeggeri, ovvero i nostri
+ 
+align:start position:0%
+per i passeggeri, ovvero i nostri
+utenti. Ecco, questo è quello che si
+align:start position:0%
+utenti. Ecco, questo è quello che si
+ 
+align:start position:0%
+utenti. Ecco, questo è quello che si
+trova in un log di git. Messaggi come
+align:start position:0%
+trova in un log di git. Messaggi come
+ 
+align:start position:0%
+trova in un log di git. Messaggi come
+wip, ups, fix, another fixo messaggi
+align:start position:0%
+wip, ups, fix, another fixo messaggi
+ 
+align:start position:0%
+wip, ups, fix, another fixo messaggi
+criptici, utili forse solo a chi li ha
+align:start position:0%
+criptici, utili forse solo a chi li ha
+ 
+align:start position:0%
+criptici, utili forse solo a chi li ha
+scritti. è un diario segreto, non un
+align:start position:0%
+scritti. è un diario segreto, non un
+ 
+align:start position:0%
+scritti. è un diario segreto, non un
+documento pubblico. E questo è
+align:start position:0%
+documento pubblico. E questo è
+ 
+align:start position:0%
+documento pubblico. E questo è
+esattamente quello che i nostri utenti
+align:start position:0%
+esattamente quello che i nostri utenti
+ 
+align:start position:0%
+esattamente quello che i nostri utenti
+non dovrebbero mai, e dico mai, vedere.
+align:start position:0%
+non dovrebbero mai, e dico mai, vedere.
+ 
+align:start position:0%
+non dovrebbero mai, e dico mai, vedere.
+E il punto è tutto qui. C'è solo una e
+align:start position:0%
+E il punto è tutto qui. C'è solo una e
+ 
+align:start position:0%
+E il punto è tutto qui. C'è solo una e
+una sola domanda a cui un changelog deve
+align:start position:0%
+una sola domanda a cui un changelog deve
+ 
+align:start position:0%
+una sola domanda a cui un changelog deve
+rispondere. Ok, bello, ma cosa c'è di
+align:start position:0%
+rispondere. Ok, bello, ma cosa c'è di
+ 
+align:start position:0%
+rispondere. Ok, bello, ma cosa c'è di
+nuovo e di utile per me in questa
+align:start position:0%
+nuovo e di utile per me in questa
+ 
+align:start position:0%
+nuovo e di utile per me in questa
+versione? Tutto il resto semplicemente è
+align:start position:0%
+versione? Tutto il resto semplicemente è
+ 
+align:start position:0%
+versione? Tutto il resto semplicemente è
+rumore. Per fortuna, anche qui qualcuno
+align:start position:0%
+rumore. Per fortuna, anche qui qualcuno
+ 
+align:start position:0%
+rumore. Per fortuna, anche qui qualcuno
+ha già risolto il problema per noi e in
+align:start position:0%
+ha già risolto il problema per noi e in
+ 
+align:start position:0%
+ha già risolto il problema per noi e in
+modo molto elegante. Esiste uno standard
+align:start position:0%
+modo molto elegante. Esiste uno standard
+ 
+align:start position:0%
+modo molto elegante. Esiste uno standard
+che si chiama keep a change log e ci dà
+align:start position:0%
+che si chiama keep a change log e ci dà
+ 
+align:start position:0%
+che si chiama keep a change log e ci dà
+una struttura semplicissima ma
+align:start position:0%
+una struttura semplicissima ma
+ 
+align:start position:0%
+una struttura semplicissima ma
+incredibilmente potente per comunicare.
+align:start position:0%
+incredibilmente potente per comunicare.
+ 
+align:start position:0%
+incredibilmente potente per comunicare.
+Lo standard si basa su sei categorie che
+align:start position:0%
+Lo standard si basa su sei categorie che
+ 
+align:start position:0%
+Lo standard si basa su sei categorie che
+si spiegano da sole: aggiunto per le
+align:start position:0%
+si spiegano da sole: aggiunto per le
+ 
+align:start position:0%
+si spiegano da sole: aggiunto per le
+novità, modificato per i cambiamenti,
+align:start position:0%
+novità, modificato per i cambiamenti,
+ 
+align:start position:0%
+novità, modificato per i cambiamenti,
+deprecato per le funzioni in via di
+align:start position:0%
+deprecato per le funzioni in via di
+ 
+align:start position:0%
+deprecato per le funzioni in via di
+pensionamento, rimosso per quelle già
+align:start position:0%
+pensionamento, rimosso per quelle già
+ 
+align:start position:0%
+pensionamento, rimosso per quelle già
+eliminate, corretto per i bug fix e
+align:start position:0%
+eliminate, corretto per i bug fix e
+ 
+align:start position:0%
+eliminate, corretto per i bug fix e
+sicurezza. Questa struttura trasforma un
+align:start position:0%
+sicurezza. Questa struttura trasforma un
+ 
+align:start position:0%
+sicurezza. Questa struttura trasforma un
+caos di modifiche in un resoconto
+align:start position:0%
+caos di modifiche in un resoconto
+ 
+align:start position:0%
+caos di modifiche in un resoconto
+pulito, ordinato e subito comprensibile.
+align:start position:0%
+pulito, ordinato e subito comprensibile.
+ 
+align:start position:0%
+pulito, ordinato e subito comprensibile.
+Arriva sempre il momento in cui una
+align:start position:0%
+Arriva sempre il momento in cui una
+ 
+align:start position:0%
+Arriva sempre il momento in cui una
+funzione deve essere rimossa. Ma come si
+align:start position:0%
+funzione deve essere rimossa. Ma come si
+ 
+align:start position:0%
+funzione deve essere rimossa. Ma come si
+fa a farlo senza tradire la fiducia di
+align:start position:0%
+fa a farlo senza tradire la fiducia di
+ 
+align:start position:0%
+fa a farlo senza tradire la fiducia di
+chi la sta ancora usando? Beh, non è una
+align:start position:0%
+chi la sta ancora usando? Beh, non è una
+ 
+align:start position:0%
+chi la sta ancora usando? Beh, non è una
+demolizione, è un'arte, l'arte della
+align:start position:0%
+demolizione, è un'arte, l'arte della
+ 
+align:start position:0%
+demolizione, è un'arte, l'arte della
+deprecazione.
+align:start position:0%
+deprecazione.
+ 
+align:start position:0%
+deprecazione.
+E la regola numero uno, la regola d'oro,
+align:start position:0%
+E la regola numero uno, la regola d'oro,
+ 
+align:start position:0%
+E la regola numero uno, la regola d'oro,
+è questa: mai, mai e poi mai cancellare
+align:start position:0%
+è questa: mai, mai e poi mai cancellare
+ 
+align:start position:0%
+è questa: mai, mai e poi mai cancellare
+qualcosa di punto in bianco. Bisogna
+align:start position:0%
+qualcosa di punto in bianco. Bisogna
+ 
+align:start position:0%
+qualcosa di punto in bianco. Bisogna
+accompagnare le persone in questa
+align:start position:0%
+accompagnare le persone in questa
+ 
+align:start position:0%
+accompagnare le persone in questa
+transizione con calma e con una
+align:start position:0%
+transizione con calma e con una
+ 
+align:start position:0%
+transizione con calma e con una
+comunicazione impeccabile. Il processo è
+align:start position:0%
+comunicazione impeccabile. Il processo è
+ 
+align:start position:0%
+comunicazione impeccabile. Il processo è
+un ciclo in due fasi, molto semplice.
+align:start position:0%
+un ciclo in due fasi, molto semplice.
+ 
+align:start position:0%
+un ciclo in due fasi, molto semplice.
+Primo passo, l'avvertimento. Nella
+align:start position:0%
+Primo passo, l'avvertimento. Nella
+ 
+align:start position:0%
+Primo passo, l'avvertimento. Nella
+versione 1.5, 5, per esempio, mettiamo
+align:start position:0%
+versione 1.5, 5, per esempio, mettiamo
+ 
+align:start position:0%
+versione 1.5, 5, per esempio, mettiamo
+un bel banner giallo con scritto
+align:start position:0%
+un bel banner giallo con scritto
+ 
+align:start position:0%
+un bel banner giallo con scritto
+deprecated spiegando cosa usare al suo
+align:start position:0%
+deprecated spiegando cosa usare al suo
+ 
+align:start position:0%
+deprecated spiegando cosa usare al suo
+posto. Secondo passo, la rimozione.
+align:start position:0%
+posto. Secondo passo, la rimozione.
+ 
+align:start position:0%
+posto. Secondo passo, la rimozione.
+Nella versione 2.0 la vecchia pagina
+align:start position:0%
+Nella versione 2.0 la vecchia pagina
+ 
+align:start position:0%
+Nella versione 2.0 la vecchia pagina
+sparisce, ma attenzione, si imposta un
+align:start position:0%
+sparisce, ma attenzione, si imposta un
+ 
+align:start position:0%
+sparisce, ma attenzione, si imposta un
+redirect automatico alla nuova guida,
+align:start position:0%
+redirect automatico alla nuova guida,
+ 
+align:start position:0%
+redirect automatico alla nuova guida,
+così anche chi ha un vecchio link non si
+align:start position:0%
+così anche chi ha un vecchio link non si
+ 
+align:start position:0%
+così anche chi ha un vecchio link non si
+perde, non finisce mai su un veicolo
+align:start position:0%
+perde, non finisce mai su un veicolo
+ 
+align:start position:0%
+perde, non finisce mai su un veicolo
+cieco. Bene, ci siamo. Abbiamo tutti i
+align:start position:0%
+cieco. Bene, ci siamo. Abbiamo tutti i
+ 
+align:start position:0%
+cieco. Bene, ci siamo. Abbiamo tutti i
+pezzi del puzzle, una macchina del tempo
+align:start position:0%
+pezzi del puzzle, una macchina del tempo
+ 
+align:start position:0%
+pezzi del puzzle, una macchina del tempo
+per le versioni, un linguaggio comune
+align:start position:0%
+per le versioni, un linguaggio comune
+ 
+align:start position:0%
+per le versioni, un linguaggio comune
+per comunicare i cambiamenti e un
+align:start position:0%
+per comunicare i cambiamenti e un
+ 
+align:start position:0%
+per comunicare i cambiamenti e un
+processo elegante per gestire tutto il
+align:start position:0%
+processo elegante per gestire tutto il
+ 
+align:start position:0%
+processo elegante per gestire tutto il
+ciclo di vita. Facciamo un ultimo rapido
+align:start position:0%
+ciclo di vita. Facciamo un ultimo rapido
+ 
+align:start position:0%
+ciclo di vita. Facciamo un ultimo rapido
+controllo prima di partire. Allora,
+align:start position:0%
+controllo prima di partire. Allora,
+ 
+align:start position:0%
+controllo prima di partire. Allora,
+piccolo quiz, abbiamo corretto un refuso
+align:start position:0%
+piccolo quiz, abbiamo corretto un refuso
+ 
+align:start position:0%
+piccolo quiz, abbiamo corretto un refuso
+nel file Ridmi. Che tipo di modifica è?
+align:start position:0%
+nel file Ridmi. Che tipo di modifica è?
+ 
+align:start position:0%
+nel file Ridmi. Che tipo di modifica è?
+Pensiamoci, non rompe niente, non
+align:start position:0%
+Pensiamoci, non rompe niente, non
+ 
+align:start position:0%
+Pensiamoci, non rompe niente, non
+aggiunge niente, è una piccola
+align:start position:0%
+aggiunge niente, è una piccola
+ 
+align:start position:0%
+aggiunge niente, è una piccola
+lucidatura, quindi esatto, è una
+align:start position:0%
+lucidatura, quindi esatto, è una
+ 
+align:start position:0%
+lucidatura, quindi esatto, è una
+modifica di tipo patch.
+align:start position:0%
+modifica di tipo patch.
+ 
+align:start position:0%
+modifica di tipo patch.
+Ok, seconda domanda, questa è un po' più
+align:start position:0%
+Ok, seconda domanda, questa è un po' più
+ 
+align:start position:0%
+Ok, seconda domanda, questa è un po' più
+tosta. Abbiamo cancellato un'intera
+align:start position:0%
+tosta. Abbiamo cancellato un'intera
+ 
+align:start position:0%
+tosta. Abbiamo cancellato un'intera
+guida perché la funzione a cui si
+align:start position:0%
+guida perché la funzione a cui si
+ 
+align:start position:0%
+guida perché la funzione a cui si
+riferiva è stata rimossa dal software.
+align:start position:0%
+riferiva è stata rimossa dal software.
+ 
+align:start position:0%
+riferiva è stata rimossa dal software.
+Che tipo di cambiamento è questo? Beh,
+align:start position:0%
+Che tipo di cambiamento è questo? Beh,
+ 
+align:start position:0%
+Che tipo di cambiamento è questo? Beh,
+qui abbiamo rotto la compatibilità con
+align:start position:0%
+qui abbiamo rotto la compatibilità con
+ 
+align:start position:0%
+qui abbiamo rotto la compatibilità con
+le versioni precedenti. È una breaking
+align:start position:0%
+le versioni precedenti. È una breaking
+ 
+align:start position:0%
+le versioni precedenti. È una breaking
+change e questo significa solo una cosa,
+align:start position:0%
+change e questo significa solo una cosa,
+ 
+align:start position:0%
+change e questo significa solo una cosa,
+major. Fantastico. Adesso abbiamo tutto:
+align:start position:0%
+major. Fantastico. Adesso abbiamo tutto:
+ 
+align:start position:0%
+major. Fantastico. Adesso abbiamo tutto:
+il codice, la documentazione allineata,
+align:start position:0%
+il codice, la documentazione allineata,
+ 
+align:start position:0%
+il codice, la documentazione allineata,
+la strategia di rilascio. La nostra
+align:start position:0%
+la strategia di rilascio. La nostra
+ 
+align:start position:0%
+la strategia di rilascio. La nostra
+macchina è pronta e perfettamente
+align:start position:0%
+macchina è pronta e perfettamente
+ 
+align:start position:0%
+macchina è pronta e perfettamente
+oliata. Manca davvero solo una cosa da
+align:start position:0%
+oliata. Manca davvero solo una cosa da
+ 
+align:start position:0%
+oliata. Manca davvero solo una cosa da
+fare, premere il pulsante rosso. Con
+align:start position:0%
+fare, premere il pulsante rosso. Con
+ 
+align:start position:0%
+fare, premere il pulsante rosso. Con
+questa nuova consapevolezza e con questi
+align:start position:0%
+questa nuova consapevolezza e con questi
+ 
+align:start position:0%
+questa nuova consapevolezza e con questi
+strumenti, il deploy non è più un
+align:start position:0%
+strumenti, il deploy non è più un
+ 
+align:start position:0%
+strumenti, il deploy non è più un
+incubo, è solo il prossimo passo.
+align:start position:0%
+incubo, è solo il prossimo passo.
+ 
+align:start position:0%
+incubo, è solo il prossimo passo.
+Andiamo a pranzo e poi si parte. M.

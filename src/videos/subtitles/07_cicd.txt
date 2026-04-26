@@ -1,0 +1,1155 @@
+align:start position:0%
+ 
+Allora, benvenuti. Oggi parliamo di
+align:start position:0%
+Allora, benvenuti. Oggi parliamo di
+ 
+align:start position:0%
+Allora, benvenuti. Oggi parliamo di
+qualcosa che, fidatevi, può davvero
+align:start position:0%
+qualcosa che, fidatevi, può davvero
+ 
+align:start position:0%
+qualcosa che, fidatevi, può davvero
+cambiare il modo in cui si mettono onine
+align:start position:0%
+cambiare il modo in cui si mettono onine
+ 
+align:start position:0%
+cambiare il modo in cui si mettono onine
+i progetti web. Parliamo di come dire
+align:start position:0%
+i progetti web. Parliamo di come dire
+ 
+align:start position:0%
+i progetti web. Parliamo di come dire
+addio al noiosissimo processo di
+align:start position:0%
+addio al noiosissimo processo di
+ 
+align:start position:0%
+addio al noiosissimo processo di
+pubblicazione manuale e di come farlo
+align:start position:0%
+pubblicazione manuale e di come farlo
+ 
+align:start position:0%
+pubblicazione manuale e di come farlo
+usando un assistente che non si stanca
+align:start position:0%
+usando un assistente che non si stanca
+ 
+align:start position:0%
+usando un assistente che non si stanca
+mai, un robot. Quante volte abbiamo
+align:start position:0%
+mai, un robot. Quante volte abbiamo
+ 
+align:start position:0%
+mai, un robot. Quante volte abbiamo
+sentito questa frase: "Works on my
+align:start position:0%
+sentito questa frase: "Works on my
+ 
+align:start position:0%
+sentito questa frase: "Works on my
+machine". Sul mio computer funziona. È
+align:start position:0%
+machine". Sul mio computer funziona. È
+ 
+align:start position:0%
+machine". Sul mio computer funziona. È
+il classico classicissimo problema di
+align:start position:0%
+il classico classicissimo problema di
+ 
+align:start position:0%
+il classico classicissimo problema di
+chi sviluppa. Si lancia un comando tipo
+align:start position:0%
+chi sviluppa. Si lancia un comando tipo
+ 
+align:start position:0%
+chi sviluppa. Si lancia un comando tipo
+MK Docs serve, si inizia a lavorare al
+align:start position:0%
+MK Docs serve, si inizia a lavorare al
+ 
+align:start position:0%
+MK Docs serve, si inizia a lavorare al
+sito e tutto sembra perfetto, una
+align:start position:0%
+sito e tutto sembra perfetto, una
+ 
+align:start position:0%
+sito e tutto sembra perfetto, una
+meraviglia. Peccato che funzioni solo su
+align:start position:0%
+meraviglia. Peccato che funzioni solo su
+ 
+align:start position:0%
+meraviglia. Peccato che funzioni solo su
+quel computer. È una specie di magia che
+align:start position:0%
+quel computer. È una specie di magia che
+ 
+align:start position:0%
+quel computer. È una specie di magia che
+però ha un pubblico di una persona sola,
+align:start position:0%
+però ha un pubblico di una persona sola,
+ 
+align:start position:0%
+però ha un pubblico di una persona sola,
+chi sta scrivendo il codice. Esatto. Il
+align:start position:0%
+chi sta scrivendo il codice. Esatto. Il
+ 
+align:start position:0%
+chi sta scrivendo il codice. Esatto. Il
+punto è che quel server locale è una
+align:start position:0%
+punto è che quel server locale è una
+ 
+align:start position:0%
+punto è che quel server locale è una
+cosa temporanea. Vive a un indirizzo
+align:start position:0%
+cosa temporanea. Vive a un indirizzo
+ 
+align:start position:0%
+cosa temporanea. Vive a un indirizzo
+molto particolare, 127.0. 0.0.1 un che
+align:start position:0%
+molto particolare, 127.0. 0.0.1 un che
+ 
+align:start position:0%
+molto particolare, 127.0. 0.0.1 un che
+nel mondo di internet è come dire a casa
+align:start position:0%
+nel mondo di internet è come dire a casa
+ 
+align:start position:0%
+nel mondo di internet è come dire a casa
+mia, perfetto per fare le prove, per
+align:start position:0%
+mia, perfetto per fare le prove, per
+ 
+align:start position:0%
+mia, perfetto per fare le prove, per
+sviluppare, certo, ma del tutto inutile
+align:start position:0%
+sviluppare, certo, ma del tutto inutile
+ 
+align:start position:0%
+sviluppare, certo, ma del tutto inutile
+se l'obiettivo è far vedere il nostro
+align:start position:0%
+se l'obiettivo è far vedere il nostro
+ 
+align:start position:0%
+se l'obiettivo è far vedere il nostro
+lavoro al resto del mondo. Quindi il
+align:start position:0%
+lavoro al resto del mondo. Quindi il
+ 
+align:start position:0%
+lavoro al resto del mondo. Quindi il
+problema da risolvere è proprio questo.
+align:start position:0%
+problema da risolvere è proprio questo.
+ 
+align:start position:0%
+problema da risolvere è proprio questo.
+Da una parte abbiamo i nostri file
+align:start position:0%
+Da una parte abbiamo i nostri file
+ 
+align:start position:0%
+Da una parte abbiamo i nostri file
+sorgente, il nostro prezioso markdown,
+align:start position:0%
+sorgente, il nostro prezioso markdown,
+ 
+align:start position:0%
+sorgente, il nostro prezioso markdown,
+dall'altra il bisogno di trasformare
+align:start position:0%
+dall'altra il bisogno di trasformare
+ 
+align:start position:0%
+dall'altra il bisogno di trasformare
+tutto questo in qualcosa di eh di
+align:start position:0%
+tutto questo in qualcosa di eh di
+ 
+align:start position:0%
+tutto questo in qualcosa di eh di
+permanente, di solido, qualcosa a cui
+align:start position:0%
+permanente, di solido, qualcosa a cui
+ 
+align:start position:0%
+permanente, di solido, qualcosa a cui
+chiunque possa accedere da qualsiasi
+align:start position:0%
+chiunque possa accedere da qualsiasi
+ 
+align:start position:0%
+chiunque possa accedere da qualsiasi
+parte del mondo. Questa è la domanda da
+align:start position:0%
+parte del mondo. Questa è la domanda da
+ 
+align:start position:0%
+parte del mondo. Questa è la domanda da
+un milione di dollari, no? La risposta
+align:start position:0%
+un milione di dollari, no? La risposta
+ 
+align:start position:0%
+un milione di dollari, no? La risposta
+sta tutta in un concetto che è
+align:start position:0%
+sta tutta in un concetto che è
+ 
+align:start position:0%
+sta tutta in un concetto che è
+fondamentale, direi alla base di quasi
+align:start position:0%
+fondamentale, direi alla base di quasi
+ 
+align:start position:0%
+fondamentale, direi alla base di quasi
+tutto lo sviluppo software di oggi.
+align:start position:0%
+tutto lo sviluppo software di oggi.
+ 
+align:start position:0%
+tutto lo sviluppo software di oggi.
+Stiamo parlando dell'idea di artefatto
+align:start position:0%
+Stiamo parlando dell'idea di artefatto
+ 
+align:start position:0%
+Stiamo parlando dell'idea di artefatto
+di build. Proviamo a pensarci così. Se
+align:start position:0%
+di build. Proviamo a pensarci così. Se
+ 
+align:start position:0%
+di build. Proviamo a pensarci così. Se
+si scrive del codice che so in CP+ non è
+align:start position:0%
+si scrive del codice che so in CP+ non è
+ 
+align:start position:0%
+si scrive del codice che so in CP+ non è
+che poi si va a distribuire il file di
+align:start position:0%
+che poi si va a distribuire il file di
+ 
+align:start position:0%
+che poi si va a distribuire il file di
+testo con il codice sorgente, no, lo si
+align:start position:0%
+testo con il codice sorgente, no, lo si
+ 
+align:start position:0%
+testo con il codice sorgente, no, lo si
+compila. E cosa si ottiene? Un file
+align:start position:0%
+compila. E cosa si ottiene? Un file
+ 
+align:start position:0%
+compila. E cosa si ottiene? Un file
+eseguibile, un dots. Ecco, quello è
+align:start position:0%
+eseguibile, un dots. Ecco, quello è
+ 
+align:start position:0%
+eseguibile, un dots. Ecco, quello è
+l'artefatto. E per il nostro sito il
+align:start position:0%
+l'artefatto. E per il nostro sito il
+ 
+align:start position:0%
+l'artefatto. E per il nostro sito il
+concetto è esattamente, ma esattamente
+align:start position:0%
+concetto è esattamente, ma esattamente
+ 
+align:start position:0%
+concetto è esattamente, ma esattamente
+lo stesso. E qui vediamo proprio questa
+align:start position:0%
+lo stesso. E qui vediamo proprio questa
+ 
+align:start position:0%
+lo stesso. E qui vediamo proprio questa
+trasformazione in atto. È un prima e un
+align:start position:0%
+trasformazione in atto. È un prima e un
+ 
+align:start position:0%
+trasformazione in atto. È un prima e un
+dopo. A sinistra il prima. la nostra
+align:start position:0%
+dopo. A sinistra il prima. la nostra
+ 
+align:start position:0%
+dopo. A sinistra il prima. la nostra
+sorgente, la cartella Doc/ra con dentro
+align:start position:0%
+sorgente, la cartella Doc/ra con dentro
+ 
+align:start position:0%
+sorgente, la cartella Doc/ra con dentro
+tutti i file markdown che scriviamo e
+align:start position:0%
+tutti i file markdown che scriviamo e
+ 
+align:start position:0%
+tutti i file markdown che scriviamo e
+modifichiamo e a destra il dopo,
+align:start position:0%
+modifichiamo e a destra il dopo,
+ 
+align:start position:0%
+modifichiamo e a destra il dopo,
+l'artefatto, una cartella nuova di zecca
+align:start position:0%
+l'artefatto, una cartella nuova di zecca
+ 
+align:start position:0%
+l'artefatto, una cartella nuova di zecca
+site barra piena zeppa di HTML, CSS e
+align:start position:0%
+site barra piena zeppa di HTML, CSS e
+ 
+align:start position:0%
+site barra piena zeppa di HTML, CSS e
+JavaScript puri. Il comando che fa
+align:start position:0%
+JavaScript puri. Il comando che fa
+ 
+align:start position:0%
+JavaScript puri. Il comando che fa
+questa magia è MK Docs Build. Lui prende
+align:start position:0%
+questa magia è MK Docs Build. Lui prende
+ 
+align:start position:0%
+questa magia è MK Docs Build. Lui prende
+la sorgente e sputa fuori il prodotto
+align:start position:0%
+la sorgente e sputa fuori il prodotto
+ 
+align:start position:0%
+la sorgente e sputa fuori il prodotto
+finale, quello che qualsiasi browser del
+align:start position:0%
+finale, quello che qualsiasi browser del
+ 
+align:start position:0%
+finale, quello che qualsiasi browser del
+mondo può capire.
+align:start position:0%
+mondo può capire.
+ 
+align:start position:0%
+mondo può capire.
+Attenzione però, c'è una regola d'oro,
+align:start position:0%
+Attenzione però, c'è una regola d'oro,
+ 
+align:start position:0%
+Attenzione però, c'è una regola d'oro,
+una cosa da non fare mai. L'artefatto,
+align:start position:0%
+una cosa da non fare mai. L'artefatto,
+ 
+align:start position:0%
+una cosa da non fare mai. L'artefatto,
+cioè la cartella site, non va mai e dico
+align:start position:0%
+cioè la cartella site, non va mai e dico
+ 
+align:start position:0%
+cioè la cartella site, non va mai e dico
+mai, committata nel repository
+align:start position:0%
+mai, committata nel repository
+ 
+align:start position:0%
+mai, committata nel repository
+principale perché? Beh, perché è un
+align:start position:0%
+principale perché? Beh, perché è un
+ 
+align:start position:0%
+principale perché? Beh, perché è un
+prodotto derivato, viene generato in
+align:start position:0%
+prodotto derivato, viene generato in
+ 
+align:start position:0%
+prodotto derivato, viene generato in
+automatico. Metterlo insieme al codice
+align:start position:0%
+automatico. Metterlo insieme al codice
+ 
+align:start position:0%
+automatico. Metterlo insieme al codice
+sorgente sarebbe come tenere la farina e
+align:start position:0%
+sorgente sarebbe come tenere la farina e
+ 
+align:start position:0%
+sorgente sarebbe come tenere la farina e
+la torta già cotta nello stesso
+align:start position:0%
+la torta già cotta nello stesso
+ 
+align:start position:0%
+la torta già cotta nello stesso
+sacchetto. Si fa solo una gran
+align:start position:0%
+sacchetto. Si fa solo una gran
+ 
+align:start position:0%
+sacchetto. Si fa solo una gran
+confusione e si appesantisce inutilmente
+align:start position:0%
+confusione e si appesantisce inutilmente
+ 
+align:start position:0%
+confusione e si appesantisce inutilmente
+tutta la storia del progetto. Ok,
+align:start position:0%
+tutta la storia del progetto. Ok,
+ 
+align:start position:0%
+tutta la storia del progetto. Ok,
+perfetto. Adesso abbiamo il nostro
+align:start position:0%
+perfetto. Adesso abbiamo il nostro
+ 
+align:start position:0%
+perfetto. Adesso abbiamo il nostro
+artefatto pronto all'uso. E ora come lo
+align:start position:0%
+artefatto pronto all'uso. E ora come lo
+ 
+align:start position:0%
+artefatto pronto all'uso. E ora come lo
+mettiamo on? Beh, per capirlo facciamo
+align:start position:0%
+mettiamo on? Beh, per capirlo facciamo
+ 
+align:start position:0%
+mettiamo on? Beh, per capirlo facciamo
+un piccolo viaggio indietro nel tempo.
+align:start position:0%
+un piccolo viaggio indietro nel tempo.
+ 
+align:start position:0%
+un piccolo viaggio indietro nel tempo.
+Entriamo in quello che potremmo definire
+align:start position:0%
+Entriamo in quello che potremmo definire
+ 
+align:start position:0%
+Entriamo in quello che potremmo definire
+il museo del deployment, dove sono
+align:start position:0%
+il museo del deployment, dove sono
+ 
+align:start position:0%
+il museo del deployment, dove sono
+esposti tutti i metodi, diciamo, un po'
+align:start position:0%
+esposti tutti i metodi, diciamo, un po'
+ 
+align:start position:0%
+esposti tutti i metodi, diciamo, un po'
+polverosi. All'inizio dei tempi c'era
+align:start position:0%
+polverosi. All'inizio dei tempi c'era
+ 
+align:start position:0%
+polverosi. All'inizio dei tempi c'era
+l'FTP, si apriva un programma tipo File
+align:start position:0%
+l'FTP, si apriva un programma tipo File
+ 
+align:start position:0%
+l'FTP, si apriva un programma tipo File
+Zal e via a trascinare i file uno per
+align:start position:0%
+Zal e via a trascinare i file uno per
+ 
+align:start position:0%
+Zal e via a trascinare i file uno per
+uno sul server, un processo lento,
+align:start position:0%
+uno sul server, un processo lento,
+ 
+align:start position:0%
+uno sul server, un processo lento,
+noiosissimo e dove era facilissimo
+align:start position:0%
+noiosissimo e dove era facilissimo
+ 
+align:start position:0%
+noiosissimo e dove era facilissimo
+dimenticarsi un file o sbagliare
+align:start position:0%
+dimenticarsi un file o sbagliare
+ 
+align:start position:0%
+dimenticarsi un file o sbagliare
+qualcosa. Poi un'evoluzione, il drag and
+align:start position:0%
+qualcosa. Poi un'evoluzione, il drag and
+ 
+align:start position:0%
+qualcosa. Poi un'evoluzione, il drag and
+drop su piattaforme come Netlify,
+align:start position:0%
+drop su piattaforme come Netlify,
+ 
+align:start position:0%
+drop su piattaforme come Netlify,
+decisamente meglio, ma sempre manuale.
+align:start position:0%
+decisamente meglio, ma sempre manuale.
+ 
+align:start position:0%
+decisamente meglio, ma sempre manuale.
+C'è un piccolo errore di battitura da
+align:start position:0%
+C'è un piccolo errore di battitura da
+ 
+align:start position:0%
+C'è un piccolo errore di battitura da
+correggere, ok, si rifà tutto da capo. E
+align:start position:0%
+correggere, ok, si rifà tutto da capo. E
+ 
+align:start position:0%
+correggere, ok, si rifà tutto da capo. E
+poi finalmente è arrivato il metodo
+align:start position:0%
+poi finalmente è arrivato il metodo
+ 
+align:start position:0%
+poi finalmente è arrivato il metodo
+DevOps. Insomma, ci doveva essere per
+align:start position:0%
+DevOps. Insomma, ci doveva essere per
+ 
+align:start position:0%
+DevOps. Insomma, ci doveva essere per
+forza un modo migliore, giusto? L'idea
+align:start position:0%
+forza un modo migliore, giusto? L'idea
+ 
+align:start position:0%
+forza un modo migliore, giusto? L'idea
+stessa di ripetere un processo a mano
+align:start position:0%
+stessa di ripetere un processo a mano
+ 
+align:start position:0%
+stessa di ripetere un processo a mano
+ogni santa volta è il contrario
+align:start position:0%
+ogni santa volta è il contrario
+ 
+align:start position:0%
+ogni santa volta è il contrario
+dell'efficienza. E se e se si potesse
+align:start position:0%
+dell'efficienza. E se e se si potesse
+ 
+align:start position:0%
+dell'efficienza. E se e se si potesse
+delegare tutto questo lavoro a qualcun
+align:start position:0%
+delegare tutto questo lavoro a qualcun
+ 
+align:start position:0%
+delegare tutto questo lavoro a qualcun
+altro? o magari a qualcos'altro.
+align:start position:0%
+altro? o magari a qualcos'altro.
+ 
+align:start position:0%
+altro? o magari a qualcos'altro.
+Ed è qui che entra in scena l'eroe della
+align:start position:0%
+Ed è qui che entra in scena l'eroe della
+ 
+align:start position:0%
+Ed è qui che entra in scena l'eroe della
+nostra storia, l'automazione.
+align:start position:0%
+nostra storia, l'automazione.
+ 
+align:start position:0%
+nostra storia, l'automazione.
+Immaginiamo un robot che fa tutto il
+align:start position:0%
+Immaginiamo un robot che fa tutto il
+ 
+align:start position:0%
+Immaginiamo un robot che fa tutto il
+lavoro sporco per noi. Nel nostro caso
+align:start position:0%
+lavoro sporco per noi. Nel nostro caso
+ 
+align:start position:0%
+lavoro sporco per noi. Nel nostro caso
+specifico, questo robot ha un nome, CD,
+align:start position:0%
+specifico, questo robot ha un nome, CD,
+ 
+align:start position:0%
+specifico, questo robot ha un nome, CD,
+e lo strumento che useremo per
+align:start position:0%
+e lo strumento che useremo per
+ 
+align:start position:0%
+e lo strumento che useremo per
+costruirlo si chiama GitHub Actions. Ok,
+align:start position:0%
+costruirlo si chiama GitHub Actions. Ok,
+ 
+align:start position:0%
+costruirlo si chiama GitHub Actions. Ok,
+proviamo a immaginarcelo. C'è questo
+align:start position:0%
+proviamo a immaginarcelo. C'è questo
+ 
+align:start position:0%
+proviamo a immaginarcelo. C'è questo
+robot seduto lì che sorveglia
+align:start position:0%
+robot seduto lì che sorveglia
+ 
+align:start position:0%
+robot seduto lì che sorveglia
+pazientemente il nostro progetto, il
+align:start position:0%
+pazientemente il nostro progetto, il
+ 
+align:start position:0%
+pazientemente il nostro progetto, il
+nostro repository di codice. non fa
+align:start position:0%
+nostro repository di codice. non fa
+ 
+align:start position:0%
+nostro repository di codice. non fa
+assolutamente nulla, sta solo
+align:start position:0%
+assolutamente nulla, sta solo
+ 
+align:start position:0%
+assolutamente nulla, sta solo
+aspettando. Aspetta un segnale ben
+align:start position:0%
+aspettando. Aspetta un segnale ben
+ 
+align:start position:0%
+aspettando. Aspetta un segnale ben
+preciso, un evento che lo faccia
+align:start position:0%
+preciso, un evento che lo faccia
+ 
+align:start position:0%
+preciso, un evento che lo faccia
+scattare. E qual è questo segnale?
+align:start position:0%
+scattare. E qual è questo segnale?
+ 
+align:start position:0%
+scattare. E qual è questo segnale?
+Semplice, un git push. Nel momento
+align:start position:0%
+Semplice, un git push. Nel momento
+ 
+align:start position:0%
+Semplice, un git push. Nel momento
+esatto in cui inviamo una modifica a
+align:start position:0%
+esatto in cui inviamo una modifica a
+ 
+align:start position:0%
+esatto in cui inviamo una modifica a
+Repository, zac, il robot si sveglia, si
+align:start position:0%
+Repository, zac, il robot si sveglia, si
+ 
+align:start position:0%
+Repository, zac, il robot si sveglia, si
+sgranchisce i circuiti e inizia a
+align:start position:0%
+sgranchisce i circuiti e inizia a
+ 
+align:start position:0%
+sgranchisce i circuiti e inizia a
+eseguire, passo dopo passo, una lista di
+align:start position:0%
+eseguire, passo dopo passo, una lista di
+ 
+align:start position:0%
+eseguire, passo dopo passo, una lista di
+istruzioni che noi abbiamo fornito. Però
+align:start position:0%
+istruzioni che noi abbiamo fornito. Però
+ 
+align:start position:0%
+istruzioni che noi abbiamo fornito. Però
+attenzione, non c'è nessuna magia nera
+align:start position:0%
+attenzione, non c'è nessuna magia nera
+ 
+align:start position:0%
+attenzione, non c'è nessuna magia nera
+qui. Questo robot non è che improvvisa o
+align:start position:0%
+qui. Questo robot non è che improvvisa o
+ 
+align:start position:0%
+qui. Questo robot non è che improvvisa o
+decide cosa fare, no. Lui segue
+align:start position:0%
+decide cosa fare, no. Lui segue
+ 
+align:start position:0%
+decide cosa fare, no. Lui segue
+meticolosamente una ricetta, un piano di
+align:start position:0%
+meticolosamente una ricetta, un piano di
+ 
+align:start position:0%
+meticolosamente una ricetta, un piano di
+lavoro preciso che siamo stati noi a
+align:start position:0%
+lavoro preciso che siamo stati noi a
+ 
+align:start position:0%
+lavoro preciso che siamo stati noi a
+scrivere per lui. E questa ricetta non è
+align:start position:0%
+scrivere per lui. E questa ricetta non è
+ 
+align:start position:0%
+scrivere per lui. E questa ricetta non è
+altro che un semplice file di testo. È
+align:start position:0%
+altro che un semplice file di testo. È
+ 
+align:start position:0%
+altro che un semplice file di testo. È
+scritto in un formato che si chiama
+align:start position:0%
+scritto in un formato che si chiama
+ 
+align:start position:0%
+scritto in un formato che si chiama
+Yamel e si trova in una cartella molto
+align:start position:0%
+Yamel e si trova in una cartella molto
+ 
+align:start position:0%
+Yamel e si trova in una cartella molto
+specifica del progetto. È lì dentro che
+align:start position:0%
+specifica del progetto. È lì dentro che
+ 
+align:start position:0%
+specifica del progetto. È lì dentro che
+andiamo a definire nero su bianco ogni
+align:start position:0%
+andiamo a definire nero su bianco ogni
+ 
+align:start position:0%
+andiamo a definire nero su bianco ogni
+singola azione che il nostro robot dovrà
+align:start position:0%
+singola azione che il nostro robot dovrà
+ 
+align:start position:0%
+singola azione che il nostro robot dovrà
+compiere. E la cosa bella è che la
+align:start position:0%
+compiere. E la cosa bella è che la
+ 
+align:start position:0%
+compiere. E la cosa bella è che la
+ricetta è sorprendentemente logica.
+align:start position:0%
+ricetta è sorprendentemente logica.
+ 
+align:start position:0%
+ricetta è sorprendentemente logica.
+Punto primo, il trigger, gli diciamo
+align:start position:0%
+Punto primo, il trigger, gli diciamo
+ 
+align:start position:0%
+Punto primo, il trigger, gli diciamo
+quando deve partire. Punto secondo,
+align:start position:0%
+quando deve partire. Punto secondo,
+ 
+align:start position:0%
+quando deve partire. Punto secondo,
+l'ambiente. Gli diciamo di prepararsi
+align:start position:0%
+l'ambiente. Gli diciamo di prepararsi
+ 
+align:start position:0%
+l'ambiente. Gli diciamo di prepararsi
+uno spazio di lavoro pulito, una
+align:start position:0%
+uno spazio di lavoro pulito, una
+ 
+align:start position:0%
+uno spazio di lavoro pulito, una
+macchina virtuale fresca fresca. Terzo,
+align:start position:0%
+macchina virtuale fresca fresca. Terzo,
+ 
+align:start position:0%
+macchina virtuale fresca fresca. Terzo,
+il setup installa tutti gli attrezzi del
+align:start position:0%
+il setup installa tutti gli attrezzi del
+ 
+align:start position:0%
+il setup installa tutti gli attrezzi del
+mestiere. Quarto, il build. Esegue quel
+align:start position:0%
+mestiere. Quarto, il build. Esegue quel
+ 
+align:start position:0%
+mestiere. Quarto, il build. Esegue quel
+famoso comando per creare l'artefatto. E
+align:start position:0%
+famoso comando per creare l'artefatto. E
+ 
+align:start position:0%
+famoso comando per creare l'artefatto. E
+infine, quinto, il deploy. Prende
+align:start position:0%
+infine, quinto, il deploy. Prende
+ 
+align:start position:0%
+infine, quinto, il deploy. Prende
+l'artefatto e lo pubblica online.
+align:start position:0%
+l'artefatto e lo pubblica online.
+ 
+align:start position:0%
+l'artefatto e lo pubblica online.
+Finito. Ok. Domanda lecita. Il robot ha
+align:start position:0%
+Finito. Ok. Domanda lecita. Il robot ha
+ 
+align:start position:0%
+Finito. Ok. Domanda lecita. Il robot ha
+fatto il suo lavoro, ha costruito il
+align:start position:0%
+fatto il suo lavoro, ha costruito il
+ 
+align:start position:0%
+fatto il suo lavoro, ha costruito il
+sito e adesso dove lo mette? Qual è la
+align:start position:0%
+sito e adesso dove lo mette? Qual è la
+ 
+align:start position:0%
+sito e adesso dove lo mette? Qual è la
+destinazione finale di tutto questo
+align:start position:0%
+destinazione finale di tutto questo
+ 
+align:start position:0%
+destinazione finale di tutto questo
+processo automatico? La risposta sta in
+align:start position:0%
+processo automatico? La risposta sta in
+ 
+align:start position:0%
+processo automatico? La risposta sta in
+una convenzione davvero furba di Gitab.
+align:start position:0%
+una convenzione davvero furba di Gitab.
+ 
+align:start position:0%
+una convenzione davvero furba di Gitab.
+Esiste un tipo di branch speciale che si
+align:start position:0%
+Esiste un tipo di branch speciale che si
+ 
+align:start position:0%
+Esiste un tipo di branch speciale che si
+chiama GH Pages. Viene chiamato orfano
+align:start position:0%
+chiama GH Pages. Viene chiamato orfano
+ 
+align:start position:0%
+chiama GH Pages. Viene chiamato orfano
+perché in pratica non ha nulla a che
+align:start position:0%
+perché in pratica non ha nulla a che
+ 
+align:start position:0%
+perché in pratica non ha nulla a che
+vedere con la cronologia del nostro
+align:start position:0%
+vedere con la cronologia del nostro
+ 
+align:start position:0%
+vedere con la cronologia del nostro
+codice sorgente. Il suo unico singolo
+align:start position:0%
+codice sorgente. Il suo unico singolo
+ 
+align:start position:0%
+codice sorgente. Il suo unico singolo
+scopo è contenere i file HTML finali
+align:start position:0%
+scopo è contenere i file HTML finali
+ 
+align:start position:0%
+scopo è contenere i file HTML finali
+pronti per essere mostrati al mondo.
+align:start position:0%
+pronti per essere mostrati al mondo.
+ 
+align:start position:0%
+pronti per essere mostrati al mondo.
+Proviamo a visualizzare tutto il flusso
+align:start position:0%
+Proviamo a visualizzare tutto il flusso
+ 
+align:start position:0%
+Proviamo a visualizzare tutto il flusso
+dall'inizio alla fine. Si parte da qui,
+align:start position:0%
+dall'inizio alla fine. Si parte da qui,
+ 
+align:start position:0%
+dall'inizio alla fine. Si parte da qui,
+dal branch main. Lì c'è il nostro codice
+align:start position:0%
+dal branch main. Lì c'è il nostro codice
+ 
+align:start position:0%
+dal branch main. Lì c'è il nostro codice
+sorgente, i nostri file markdown. Questo
+align:start position:0%
+sorgente, i nostri file markdown. Questo
+ 
+align:start position:0%
+sorgente, i nostri file markdown. Questo
+codice sorgente viene poi preso in
+align:start position:0%
+codice sorgente viene poi preso in
+ 
+align:start position:0%
+codice sorgente viene poi preso in
+consegna dal nostro robot che funziona
+align:start position:0%
+consegna dal nostro robot che funziona
+ 
+align:start position:0%
+consegna dal nostro robot che funziona
+un po' come una fabbrica. prende
+align:start position:0%
+un po' come una fabbrica. prende
+ 
+align:start position:0%
+un po' come una fabbrica. prende
+l'input, lo lavora, lo trasforma e
+align:start position:0%
+l'input, lo lavora, lo trasforma e
+ 
+align:start position:0%
+l'input, lo lavora, lo trasforma e
+deposita il prodotto finito, l'artefatto
+align:start position:0%
+deposita il prodotto finito, l'artefatto
+ 
+align:start position:0%
+deposita il prodotto finito, l'artefatto
+HTML puro, in quel famoso branch GH
+align:start position:0%
+HTML puro, in quel famoso branch GH
+ 
+align:start position:0%
+HTML puro, in quel famoso branch GH
+Pages. A quel punto il gioco è fatto.
+align:start position:0%
+Pages. A quel punto il gioco è fatto.
+ 
+align:start position:0%
+Pages. A quel punto il gioco è fatto.
+Gitab vede quel branch e automaticamente
+align:start position:0%
+Gitab vede quel branch e automaticamente
+ 
+align:start position:0%
+Gitab vede quel branch e automaticamente
+pubblica il suo contenuto come un sito
+align:start position:0%
+pubblica il suo contenuto come un sito
+ 
+align:start position:0%
+pubblica il suo contenuto come un sito
+web, semplice, pulito, efficiente,
+align:start position:0%
+web, semplice, pulito, efficiente,
+ 
+align:start position:0%
+web, semplice, pulito, efficiente,
+fantastico. Quindi, ricapitolando, quali
+align:start position:0%
+fantastico. Quindi, ricapitolando, quali
+ 
+align:start position:0%
+fantastico. Quindi, ricapitolando, quali
+sono i vantaggi? Primo, un risparmio di
+align:start position:0%
+sono i vantaggi? Primo, un risparmio di
+ 
+align:start position:0%
+sono i vantaggi? Primo, un risparmio di
+tempo pazzesco e l'eliminazione quasi
+align:start position:0%
+tempo pazzesco e l'eliminazione quasi
+ 
+align:start position:0%
+tempo pazzesco e l'eliminazione quasi
+totale degli errori umani. Secondo, il
+align:start position:0%
+totale degli errori umani. Secondo, il
+ 
+align:start position:0%
+totale degli errori umani. Secondo, il
+processo diventa affidabile e ripetibile
+align:start position:0%
+processo diventa affidabile e ripetibile
+ 
+align:start position:0%
+processo diventa affidabile e ripetibile
+all'infinito. E terzo, che non è affatto
+align:start position:0%
+all'infinito. E terzo, che non è affatto
+ 
+align:start position:0%
+all'infinito. E terzo, che non è affatto
+un dettaglio, c'è un enorme bonus per la
+align:start position:0%
+un dettaglio, c'è un enorme bonus per la
+ 
+align:start position:0%
+un dettaglio, c'è un enorme bonus per la
+sicurezza. Niente più password FTP
+align:start position:0%
+sicurezza. Niente più password FTP
+ 
+align:start position:0%
+sicurezza. Niente più password FTP
+salvate in giro sui computer. Le
+align:start position:0%
+salvate in giro sui computer. Le
+ 
+align:start position:0%
+salvate in giro sui computer. Le
+credenziali sono al sicuro custodite nei
+align:start position:0%
+credenziali sono al sicuro custodite nei
+ 
+align:start position:0%
+credenziali sono al sicuro custodite nei
+secrets di GitHub e solo il nostro robot
+align:start position:0%
+secrets di GitHub e solo il nostro robot
+ 
+align:start position:0%
+secrets di GitHub e solo il nostro robot
+ha il permesso di usarle.
+align:start position:0%
+ha il permesso di usarle.
+ 
+align:start position:0%
+ha il permesso di usarle.
+Bene, adesso abbiamo capito la teoria,
+align:start position:0%
+Bene, adesso abbiamo capito la teoria,
+ 
+align:start position:0%
+Bene, adesso abbiamo capito la teoria,
+il perché e il come funziona a Grande
+align:start position:0%
+il perché e il come funziona a Grande
+ 
+align:start position:0%
+il perché e il come funziona a Grande
+Line. Abbiamo il progetto,
+align:start position:0%
+Line. Abbiamo il progetto,
+ 
+align:start position:0%
+Line. Abbiamo il progetto,
+l'architettura in mente. Che cosa manca
+align:start position:0%
+l'architettura in mente. Che cosa manca
+ 
+align:start position:0%
+l'architettura in mente. Che cosa manca
+per passare dalle parole ai fatti? Manca
+align:start position:0%
+per passare dalle parole ai fatti? Manca
+ 
+align:start position:0%
+per passare dalle parole ai fatti? Manca
+la parte più divertente, la pratica. Nel
+align:start position:0%
+la parte più divertente, la pratica. Nel
+ 
+align:start position:0%
+la parte più divertente, la pratica. Nel
+nostro prossimo incontro passeremo dalla
+align:start position:0%
+nostro prossimo incontro passeremo dalla
+ 
+align:start position:0%
+nostro prossimo incontro passeremo dalla
+teoria all'azione vera e propria.
+align:start position:0%
+teoria all'azione vera e propria.
+ 
+align:start position:0%
+teoria all'azione vera e propria.
+Scriveremo insieme, riga per riga, quel
+align:start position:0%
+Scriveremo insieme, riga per riga, quel
+ 
+align:start position:0%
+Scriveremo insieme, riga per riga, quel
+famoso file yamel che darà finalmente
+align:start position:0%
+famoso file yamel che darà finalmente
+ 
+align:start position:0%
+famoso file yamel che darà finalmente
+vita al nostro robot. Non mancate? M.

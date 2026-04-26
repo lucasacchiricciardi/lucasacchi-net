@@ -1,0 +1,1023 @@
+align:start position:0%
+ 
+Allora, a che non è mai capitato di
+align:start position:0%
+Allora, a che non è mai capitato di
+ 
+align:start position:0%
+Allora, a che non è mai capitato di
+aprire la documentazione di un progetto
+align:start position:0%
+aprire la documentazione di un progetto
+ 
+align:start position:0%
+aprire la documentazione di un progetto
+e sentirsi completamente persi come in
+align:start position:0%
+e sentirsi completamente persi come in
+ 
+align:start position:0%
+e sentirsi completamente persi come in
+un labirinto? Ecco, questa analisi è
+align:start position:0%
+un labirinto? Ecco, questa analisi è
+ 
+align:start position:0%
+un labirinto? Ecco, questa analisi è
+pensata proprio per risolvere quel
+align:start position:0%
+pensata proprio per risolvere quel
+ 
+align:start position:0%
+pensata proprio per risolvere quel
+problema. Oggi vediamo come domare il
+align:start position:0%
+problema. Oggi vediamo come domare il
+ 
+align:start position:0%
+problema. Oggi vediamo come domare il
+caos e mettere finalmente ordine nelle
+align:start position:0%
+caos e mettere finalmente ordine nelle
+ 
+align:start position:0%
+caos e mettere finalmente ordine nelle
+informazioni usando un metodo, direi,
+align:start position:0%
+informazioni usando un metodo, direi,
+ 
+align:start position:0%
+informazioni usando un metodo, direi,
+chirurgico. Bene, partiamo subito dal
+align:start position:0%
+chirurgico. Bene, partiamo subito dal
+ 
+align:start position:0%
+chirurgico. Bene, partiamo subito dal
+problema. un problema che, diciamocelo,
+align:start position:0%
+problema. un problema che, diciamocelo,
+ 
+align:start position:0%
+problema. un problema che, diciamocelo,
+chiunque lavori su un progetto software
+align:start position:0%
+chiunque lavori su un progetto software
+ 
+align:start position:0%
+chiunque lavori su un progetto software
+conosce fin troppo bene. E tutto inizia
+align:start position:0%
+conosce fin troppo bene. E tutto inizia
+ 
+align:start position:0%
+conosce fin troppo bene. E tutto inizia
+quasi sempre da qui. Un singolo file
+align:start position:0%
+quasi sempre da qui. Un singolo file
+ 
+align:start position:0%
+quasi sempre da qui. Un singolo file
+Ridmi. All'inizio sembra innocuo, no? Ma
+align:start position:0%
+Ridmi. All'inizio sembra innocuo, no? Ma
+ 
+align:start position:0%
+Ridmi. All'inizio sembra innocuo, no? Ma
+poi quasi senza accorgersi inizia a
+align:start position:0%
+poi quasi senza accorgersi inizia a
+ 
+align:start position:0%
+poi quasi senza accorgersi inizia a
+crescere, a gonfiarsi fino a
+align:start position:0%
+crescere, a gonfiarsi fino a
+ 
+align:start position:0%
+crescere, a gonfiarsi fino a
+trasformarsi in un vero e proprio
+align:start position:0%
+trasformarsi in un vero e proprio
+ 
+align:start position:0%
+trasformarsi in un vero e proprio
+mostro. E dentro, bah, dentro ci
+align:start position:0%
+mostro. E dentro, bah, dentro ci
+ 
+align:start position:0%
+mostro. E dentro, bah, dentro ci
+troviamo letteralmente di tutto, per
+align:start position:0%
+troviamo letteralmente di tutto, per
+ 
+align:start position:0%
+troviamo letteralmente di tutto, per
+esempio la storia dell'azienda che
+align:start position:0%
+esempio la storia dell'azienda che
+ 
+align:start position:0%
+esempio la storia dell'azienda che
+magari sta mischiata così, senza un
+align:start position:0%
+magari sta mischiata così, senza un
+ 
+align:start position:0%
+magari sta mischiata così, senza un
+senso, proprio accanto a delle
+align:start position:0%
+senso, proprio accanto a delle
+ 
+align:start position:0%
+senso, proprio accanto a delle
+istruzioni di installazione che sono
+align:start position:0%
+istruzioni di installazione che sono
+ 
+align:start position:0%
+istruzioni di installazione che sono
+fondamentali, critiche.
+align:start position:0%
+fondamentali, critiche.
+ 
+align:start position:0%
+fondamentali, critiche.
+E poi, ovviamente, sepolto da qualche
+align:start position:0%
+E poi, ovviamente, sepolto da qualche
+ 
+align:start position:0%
+E poi, ovviamente, sepolto da qualche
+parte là in mezzo c'è il riferimento
+align:start position:0%
+parte là in mezzo c'è il riferimento
+ 
+align:start position:0%
+parte là in mezzo c'è il riferimento
+alle api. Indispensabile ma introvabile.
+align:start position:0%
+alle api. Indispensabile ma introvabile.
+ 
+align:start position:0%
+alle api. Indispensabile ma introvabile.
+Parliamo di file che possono superare
+align:start position:0%
+Parliamo di file che possono superare
+ 
+align:start position:0%
+Parliamo di file che possono superare
+tranquillamente le 5000 righe.
+align:start position:0%
+tranquillamente le 5000 righe.
+ 
+align:start position:0%
+tranquillamente le 5000 righe.
+Pensiamoci un attimo. 5.000 righe è un
+align:start position:0%
+Pensiamoci un attimo. 5.000 righe è un
+ 
+align:start position:0%
+Pensiamoci un attimo. 5.000 righe è un
+muro di testo confuso, disordinato.
+align:start position:0%
+muro di testo confuso, disordinato.
+ 
+align:start position:0%
+muro di testo confuso, disordinato.
+E il risultato? Beh, il risultato è
+align:start position:0%
+E il risultato? Beh, il risultato è
+ 
+align:start position:0%
+E il risultato? Beh, il risultato è
+sempre lo stesso. Chiunque provi a usare
+align:start position:0%
+sempre lo stesso. Chiunque provi a usare
+ 
+align:start position:0%
+sempre lo stesso. Chiunque provi a usare
+il progetto si sente sopraffatto e alla
+align:start position:0%
+il progetto si sente sopraffatto e alla
+ 
+align:start position:0%
+il progetto si sente sopraffatto e alla
+fine scappa via frustrato. E questo cosa
+align:start position:0%
+fine scappa via frustrato. E questo cosa
+ 
+align:start position:0%
+fine scappa via frustrato. E questo cosa
+significa per un team? Onboarding lenti,
+align:start position:0%
+significa per un team? Onboarding lenti,
+ 
+align:start position:0%
+significa per un team? Onboarding lenti,
+un sacco di richieste di supporto
+align:start position:0%
+un sacco di richieste di supporto
+ 
+align:start position:0%
+un sacco di richieste di supporto
+inutili, un disastro. E qui arriviamo al
+align:start position:0%
+inutili, un disastro. E qui arriviamo al
+ 
+align:start position:0%
+inutili, un disastro. E qui arriviamo al
+punto cruciale. Il problema quasi mai è
+align:start position:0%
+punto cruciale. Il problema quasi mai è
+ 
+align:start position:0%
+punto cruciale. Il problema quasi mai è
+che le cose sono scritte male. No, il
+align:start position:0%
+che le cose sono scritte male. No, il
+ 
+align:start position:0%
+che le cose sono scritte male. No, il
+problema è un fallimento di tassonomia.
+align:start position:0%
+problema è un fallimento di tassonomia.
+ 
+align:start position:0%
+problema è un fallimento di tassonomia.
+è un problema di classificazione delle
+align:start position:0%
+è un problema di classificazione delle
+ 
+align:start position:0%
+è un problema di classificazione delle
+informazioni. Serve un cambio di
+align:start position:0%
+informazioni. Serve un cambio di
+ 
+align:start position:0%
+informazioni. Serve un cambio di
+mentalità, ma uno di quelli
+align:start position:0%
+mentalità, ma uno di quelli
+ 
+align:start position:0%
+mentalità, ma uno di quelli
+fondamentali. Dobbiamo smetterla di
+align:start position:0%
+fondamentali. Dobbiamo smetterla di
+ 
+align:start position:0%
+fondamentali. Dobbiamo smetterla di
+pensare in termini di file e iniziare a
+align:start position:0%
+pensare in termini di file e iniziare a
+ 
+align:start position:0%
+pensare in termini di file e iniziare a
+ragionare per tipi di informazione.
+align:start position:0%
+ragionare per tipi di informazione.
+ 
+align:start position:0%
+ragionare per tipi di informazione.
+L'idea è semplice, a ogni domanda
+align:start position:0%
+L'idea è semplice, a ogni domanda
+ 
+align:start position:0%
+L'idea è semplice, a ogni domanda
+specifica deve corrispondere una
+align:start position:0%
+specifica deve corrispondere una
+ 
+align:start position:0%
+specifica deve corrispondere una
+risposta specifica. Per chi sviluppa c'è
+align:start position:0%
+risposta specifica. Per chi sviluppa c'è
+ 
+align:start position:0%
+risposta specifica. Per chi sviluppa c'è
+un'analogia perfetta, è un po' come il
+align:start position:0%
+un'analogia perfetta, è un po' come il
+ 
+align:start position:0%
+un'analogia perfetta, è un po' come il
+pattern MVC, il Model View Controller.
+align:start position:0%
+pattern MVC, il Model View Controller.
+ 
+align:start position:0%
+pattern MVC, il Model View Controller.
+Si separano le cose non in base a dove
+align:start position:0%
+Si separano le cose non in base a dove
+ 
+align:start position:0%
+Si separano le cose non in base a dove
+stanno, ma in base al loro intento, a
+align:start position:0%
+stanno, ma in base al loro intento, a
+ 
+align:start position:0%
+stanno, ma in base al loro intento, a
+quello che l'utente vuole fare in quel
+align:start position:0%
+quello che l'utente vuole fare in quel
+ 
+align:start position:0%
+quello che l'utente vuole fare in quel
+momento. La buona notizia è che non
+align:start position:0%
+momento. La buona notizia è che non
+ 
+align:start position:0%
+momento. La buona notizia è che non
+dobbiamo inventarci niente da capo.
+align:start position:0%
+dobbiamo inventarci niente da capo.
+ 
+align:start position:0%
+dobbiamo inventarci niente da capo.
+Esiste già uno standard di settore che
+align:start position:0%
+Esiste già uno standard di settore che
+ 
+align:start position:0%
+Esiste già uno standard di settore che
+fa questo per noi. si chiama Framework
+align:start position:0%
+fa questo per noi. si chiama Framework
+ 
+align:start position:0%
+fa questo per noi. si chiama Framework
+Diataxis e la sua bellezza è che
+align:start position:0%
+Diataxis e la sua bellezza è che
+ 
+align:start position:0%
+Diataxis e la sua bellezza è che
+classifica tutta la documentazione
+align:start position:0%
+classifica tutta la documentazione
+ 
+align:start position:0%
+classifica tutta la documentazione
+tecnica in quattro e solo quattro
+align:start position:0%
+tecnica in quattro e solo quattro
+ 
+align:start position:0%
+tecnica in quattro e solo quattro
+categorie chiarissime. Allora, partiamo
+align:start position:0%
+categorie chiarissime. Allora, partiamo
+ 
+align:start position:0%
+categorie chiarissime. Allora, partiamo
+dal primo tipo, i tutorial. L'obiettivo
+align:start position:0%
+dal primo tipo, i tutorial. L'obiettivo
+ 
+align:start position:0%
+dal primo tipo, i tutorial. L'obiettivo
+qui è uno solo, insegnare. È come una
+align:start position:0%
+qui è uno solo, insegnare. È come una
+ 
+align:start position:0%
+qui è uno solo, insegnare. È come una
+lezione di cucina. Ti prendo per mano e
+align:start position:0%
+lezione di cucina. Ti prendo per mano e
+ 
+align:start position:0%
+lezione di cucina. Ti prendo per mano e
+ti guido, passo dopo passo per farti
+align:start position:0%
+ti guido, passo dopo passo per farti
+ 
+align:start position:0%
+ti guido, passo dopo passo per farti
+preparare la tua prima carbonara
+align:start position:0%
+preparare la tua prima carbonara
+ 
+align:start position:0%
+preparare la tua prima carbonara
+perfetta da zero a un risultato
+align:start position:0%
+perfetta da zero a un risultato
+ 
+align:start position:0%
+perfetta da zero a un risultato
+funzionante. La parola chiave qui è
+align:start position:0%
+funzionante. La parola chiave qui è
+ 
+align:start position:0%
+funzionante. La parola chiave qui è
+fiducia. Un tutorial fatto bene è
+align:start position:0%
+fiducia. Un tutorial fatto bene è
+ 
+align:start position:0%
+fiducia. Un tutorial fatto bene è
+guidato, sì, ma è anche opinionated. Ti
+align:start position:0%
+guidato, sì, ma è anche opinionated. Ti
+ 
+align:start position:0%
+guidato, sì, ma è anche opinionated. Ti
+dice fai così e non preoccuparti del
+align:start position:0%
+dice fai così e non preoccuparti del
+ 
+align:start position:0%
+dice fai così e non preoccuparti del
+resto per ora. È rassicurante, deve dare
+align:start position:0%
+resto per ora. È rassicurante, deve dare
+ 
+align:start position:0%
+resto per ora. È rassicurante, deve dare
+a chi sta imparando una vittoria piccola
+align:start position:0%
+a chi sta imparando una vittoria piccola
+ 
+align:start position:0%
+a chi sta imparando una vittoria piccola
+ma concreta e immediata. E poi poi ci
+align:start position:0%
+ma concreta e immediata. E poi poi ci
+ 
+align:start position:0%
+ma concreta e immediata. E poi poi ci
+sono le guide pratiche, le cosiddette
+align:start position:0%
+sono le guide pratiche, le cosiddette
+ 
+align:start position:0%
+sono le guide pratiche, le cosiddette
+how to. Attenzione, qui il pubblico
+align:start position:0%
+how to. Attenzione, qui il pubblico
+ 
+align:start position:0%
+how to. Attenzione, qui il pubblico
+cambia, non siamo più con i
+align:start position:0%
+cambia, non siamo più con i
+ 
+align:start position:0%
+cambia, non siamo più con i
+principianti. Qui ci rivolgiamo a chi ha
+align:start position:0%
+principianti. Qui ci rivolgiamo a chi ha
+ 
+align:start position:0%
+principianti. Qui ci rivolgiamo a chi ha
+già le basi, ma deve risolvere un
+align:start position:0%
+già le basi, ma deve risolvere un
+ 
+align:start position:0%
+già le basi, ma deve risolvere un
+problema specifico, tipo ok, come
+align:start position:0%
+problema specifico, tipo ok, come
+ 
+align:start position:0%
+problema specifico, tipo ok, come
+configuro questa cosa?
+align:start position:0%
+configuro questa cosa?
+ 
+align:start position:0%
+configuro questa cosa?
+Infatti queste non sono lezioni, sono
+align:start position:0%
+Infatti queste non sono lezioni, sono
+ 
+align:start position:0%
+Infatti queste non sono lezioni, sono
+più simili a delle checklist, una serie
+align:start position:0%
+più simili a delle checklist, una serie
+ 
+align:start position:0%
+più simili a delle checklist, una serie
+di passaggi. Punto. Spesso il titolo
+align:start position:0%
+di passaggi. Punto. Spesso il titolo
+ 
+align:start position:0%
+di passaggi. Punto. Spesso il titolo
+inizia con un verbo configurare,
+align:start position:0%
+inizia con un verbo configurare,
+ 
+align:start position:0%
+inizia con un verbo configurare,
+resettare, niente fronzoli, dritti al
+align:start position:0%
+resettare, niente fronzoli, dritti al
+ 
+align:start position:0%
+resettare, niente fronzoli, dritti al
+sodo. Terzo tipo, il riferimento. Qui
+align:start position:0%
+sodo. Terzo tipo, il riferimento. Qui
+ 
+align:start position:0%
+sodo. Terzo tipo, il riferimento. Qui
+l'obiettivo cambia ancora. Descrivere.
+align:start position:0%
+l'obiettivo cambia ancora. Descrivere.
+ 
+align:start position:0%
+l'obiettivo cambia ancora. Descrivere.
+Immaginiamo una lista di ingredienti, un
+align:start position:0%
+Immaginiamo una lista di ingredienti, un
+ 
+align:start position:0%
+Immaginiamo una lista di ingredienti, un
+dizionario, freddo, preciso, fattuale.
+align:start position:0%
+dizionario, freddo, preciso, fattuale.
+ 
+align:start position:0%
+dizionario, freddo, preciso, fattuale.
+L'enciclopedia del nostro progetto. Qui
+align:start position:0%
+L'enciclopedia del nostro progetto. Qui
+ 
+align:start position:0%
+L'enciclopedia del nostro progetto. Qui
+non troveremo mai incoraggiamenti o
+align:start position:0%
+non troveremo mai incoraggiamenti o
+ 
+align:start position:0%
+non troveremo mai incoraggiamenti o
+spiegazioni complesse. No, qui ci sono
+align:start position:0%
+spiegazioni complesse. No, qui ci sono
+ 
+align:start position:0%
+spiegazioni complesse. No, qui ci sono
+solo dati, parametri, firme delle
+align:start position:0%
+solo dati, parametri, firme delle
+ 
+align:start position:0%
+solo dati, parametri, firme delle
+funzioni, codici di errore. Deve essere
+align:start position:0%
+funzioni, codici di errore. Deve essere
+ 
+align:start position:0%
+funzioni, codici di errore. Deve essere
+tecnico, preciso e soprattutto completo.
+align:start position:0%
+tecnico, preciso e soprattutto completo.
+ 
+align:start position:0%
+tecnico, preciso e soprattutto completo.
+Spesso, infatti, questa parte viene
+align:start position:0%
+Spesso, infatti, questa parte viene
+ 
+align:start position:0%
+Spesso, infatti, questa parte viene
+generata direttamente dal codice. E
+align:start position:0%
+generata direttamente dal codice. E
+ 
+align:start position:0%
+generata direttamente dal codice. E
+arriviamo al quarto e ultimo tipo, la
+align:start position:0%
+arriviamo al quarto e ultimo tipo, la
+ 
+align:start position:0%
+arriviamo al quarto e ultimo tipo, la
+spiegazione. Qui non si impara a fare
+align:start position:0%
+spiegazione. Qui non si impara a fare
+ 
+align:start position:0%
+spiegazione. Qui non si impara a fare
+qualcosa, ma a capire il perché. È il
+align:start position:0%
+qualcosa, ma a capire il perché. È il
+ 
+align:start position:0%
+qualcosa, ma a capire il perché. È il
+libro di chimica che ti spiega perché le
+align:start position:0%
+libro di chimica che ti spiega perché le
+ 
+align:start position:0%
+libro di chimica che ti spiega perché le
+proteine si denaturano col calore. Non
+align:start position:0%
+proteine si denaturano col calore. Non
+ 
+align:start position:0%
+proteine si denaturano col calore. Non
+solo come cuocere un uovo, fornisce il
+align:start position:0%
+solo come cuocere un uovo, fornisce il
+ 
+align:start position:0%
+solo come cuocere un uovo, fornisce il
+contesto. È qui che si discute dei
+align:start position:0%
+contesto. È qui che si discute dei
+ 
+align:start position:0%
+contesto. È qui che si discute dei
+concetti di alto livello che si
+align:start position:0%
+concetti di alto livello che si
+ 
+align:start position:0%
+concetti di alto livello che si
+collegano i vari pezzi del sistema. Qui
+align:start position:0%
+collegano i vari pezzi del sistema. Qui
+ 
+align:start position:0%
+collegano i vari pezzi del sistema. Qui
+si trova la risposta a domande come
+align:start position:0%
+si trova la risposta a domande come
+ 
+align:start position:0%
+si trova la risposta a domande come
+perché è stata fatta questa scelta di
+align:start position:0%
+perché è stata fatta questa scelta di
+ 
+align:start position:0%
+perché è stata fatta questa scelta di
+architettura oppure quali sono i pro e i
+align:start position:0%
+architettura oppure quali sono i pro e i
+ 
+align:start position:0%
+architettura oppure quali sono i pro e i
+contro di questo approccio? Si
+align:start position:0%
+contro di questo approccio? Si
+ 
+align:start position:0%
+contro di questo approccio? Si
+approfondisce la comprensione.
+align:start position:0%
+approfondisce la comprensione.
+ 
+align:start position:0%
+approfondisce la comprensione.
+Ok, bellissima la teoria, ma in pratica
+align:start position:0%
+Ok, bellissima la teoria, ma in pratica
+ 
+align:start position:0%
+Ok, bellissima la teoria, ma in pratica
+come si traduce tutto questo in una
+align:start position:0%
+come si traduce tutto questo in una
+ 
+align:start position:0%
+come si traduce tutto questo in una
+struttura di cartelle reale? Andiamo a
+align:start position:0%
+struttura di cartelle reale? Andiamo a
+ 
+align:start position:0%
+struttura di cartelle reale? Andiamo a
+vedere come si passa dalla teoria
+align:start position:0%
+vedere come si passa dalla teoria
+ 
+align:start position:0%
+vedere come si passa dalla teoria
+all'architettura vera e propria di un
+align:start position:0%
+all'architettura vera e propria di un
+ 
+align:start position:0%
+all'architettura vera e propria di un
+progetto. Ed ecco qui la magia sta tutta
+align:start position:0%
+progetto. Ed ecco qui la magia sta tutta
+ 
+align:start position:0%
+progetto. Ed ecco qui la magia sta tutta
+qua. Invece di avere una cartella doc
+align:start position:0%
+qua. Invece di avere una cartella doc
+ 
+align:start position:0%
+qua. Invece di avere una cartella doc
+dentro un caos di file si creano quattro
+align:start position:0%
+dentro un caos di file si creano quattro
+ 
+align:start position:0%
+dentro un caos di file si creano quattro
+sottocartelle. E quali sono? Esatto,
+align:start position:0%
+sottocartelle. E quali sono? Esatto,
+ 
+align:start position:0%
+sottocartelle. E quali sono? Esatto,
+tutorials, guides, reference ed
+align:start position:0%
+tutorials, guides, reference ed
+ 
+align:start position:0%
+tutorials, guides, reference ed
+explanations. Ognuna rispecchia
+align:start position:0%
+explanations. Ognuna rispecchia
+ 
+align:start position:0%
+explanations. Ognuna rispecchia
+perfettamente le categorie che abbiamo
+align:start position:0%
+perfettamente le categorie che abbiamo
+ 
+align:start position:0%
+perfettamente le categorie che abbiamo
+appena visto. È così semplice e pure
+align:start position:0%
+appena visto. È così semplice e pure
+ 
+align:start position:0%
+appena visto. È così semplice e pure
+così potente. Bene, una volta che
+align:start position:0%
+così potente. Bene, una volta che
+ 
+align:start position:0%
+così potente. Bene, una volta che
+abbiamo questa bellissima struttura
+align:start position:0%
+abbiamo questa bellissima struttura
+ 
+align:start position:0%
+abbiamo questa bellissima struttura
+ordinata, c'è solo una regola d'oro da
+align:start position:0%
+ordinata, c'è solo una regola d'oro da
+ 
+align:start position:0%
+ordinata, c'è solo una regola d'oro da
+seguire per non rovinare tutto, una
+align:start position:0%
+seguire per non rovinare tutto, una
+ 
+align:start position:0%
+seguire per non rovinare tutto, una
+regola fondamentale.
+align:start position:0%
+regola fondamentale.
+ 
+align:start position:0%
+regola fondamentale.
+E questo ci porta dritti a quello che è
+align:start position:0%
+E questo ci porta dritti a quello che è
+ 
+align:start position:0%
+E questo ci porta dritti a quello che è
+l'errore numero uno, l'errore che da
+align:start position:0%
+l'errore numero uno, l'errore che da
+ 
+align:start position:0%
+l'errore numero uno, l'errore che da
+solo può vanificare tutto questo
+align:start position:0%
+solo può vanificare tutto questo
+ 
+align:start position:0%
+solo può vanificare tutto questo
+bellissimo lavoro di organizzazione.
+align:start position:0%
+bellissimo lavoro di organizzazione.
+ 
+align:start position:0%
+bellissimo lavoro di organizzazione.
+Qual è?
+align:start position:0%
+Qual è?
+ 
+align:start position:0%
+Qual è?
+L'errore è mescolare i tipi. Immaginiamo
+align:start position:0%
+L'errore è mescolare i tipi. Immaginiamo
+ 
+align:start position:0%
+L'errore è mescolare i tipi. Immaginiamo
+questo scenorio. Un bel tutorial Hello
+align:start position:0%
+questo scenorio. Un bel tutorial Hello
+ 
+align:start position:0%
+questo scenorio. Un bel tutorial Hello
+World semplice per principianti e a metà
+align:start position:0%
+World semplice per principianti e a metà
+ 
+align:start position:0%
+World semplice per principianti e a metà
+all'improvviso bam lista di 50 parametri
+align:start position:0%
+all'improvviso bam lista di 50 parametri
+ 
+align:start position:0%
+all'improvviso bam lista di 50 parametri
+del compilatore. È un disastro. si è
+align:start position:0%
+del compilatore. È un disastro. si è
+ 
+align:start position:0%
+del compilatore. È un disastro. si è
+appena preso un pezzo di reference e lo
+align:start position:0%
+appena preso un pezzo di reference e lo
+ 
+align:start position:0%
+appena preso un pezzo di reference e lo
+si è ficcato dentro a un tutorial,
+align:start position:0%
+si è ficcato dentro a un tutorial,
+ 
+align:start position:0%
+si è ficcato dentro a un tutorial,
+spezzando completamente il flusso e
+align:start position:0%
+spezzando completamente il flusso e
+ 
+align:start position:0%
+spezzando completamente il flusso e
+mandando in confusione chi sta
+align:start position:0%
+mandando in confusione chi sta
+ 
+align:start position:0%
+mandando in confusione chi sta
+imparando. Il modo giusto, invece è
+align:start position:0%
+imparando. Il modo giusto, invece è
+ 
+align:start position:0%
+imparando. Il modo giusto, invece è
+molto più elegante, si mantiene il
+align:start position:0%
+molto più elegante, si mantiene il
+ 
+align:start position:0%
+molto più elegante, si mantiene il
+tutorial pulito, focalizzato sul suo
+align:start position:0%
+tutorial pulito, focalizzato sul suo
+ 
+align:start position:0%
+tutorial pulito, focalizzato sul suo
+obiettivo e se servono dettagli tecnici
+align:start position:0%
+obiettivo e se servono dettagli tecnici
+ 
+align:start position:0%
+obiettivo e se servono dettagli tecnici
+si mette un semplice link. Per la lista
+align:start position:0%
+si mette un semplice link. Per la lista
+ 
+align:start position:0%
+si mette un semplice link. Per la lista
+completa dei parametri consulta la
+align:start position:0%
+completa dei parametri consulta la
+ 
+align:start position:0%
+completa dei parametri consulta la
+sezione di riferimento, così ogni cosa
+align:start position:0%
+sezione di riferimento, così ogni cosa
+ 
+align:start position:0%
+sezione di riferimento, così ogni cosa
+resta al suo posto, pura e con un solo
+align:start position:0%
+resta al suo posto, pura e con un solo
+ 
+align:start position:0%
+resta al suo posto, pura e con un solo
+scopo. Perfetto, ora che la teoria è
+align:start position:0%
+scopo. Perfetto, ora che la teoria è
+ 
+align:start position:0%
+scopo. Perfetto, ora che la teoria è
+chiara, che il modello è definito, qual
+align:start position:0%
+chiara, che il modello è definito, qual
+ 
+align:start position:0%
+chiara, che il modello è definito, qual
+è il prossimo passo? Il punto da
+align:start position:0%
+è il prossimo passo? Il punto da
+ 
+align:start position:0%
+è il prossimo passo? Il punto da
+portarsi a casa è proprio questo.
+align:start position:0%
+portarsi a casa è proprio questo.
+ 
+align:start position:0%
+portarsi a casa è proprio questo.
+L'ordine non è solo una bella idea
+align:start position:0%
+L'ordine non è solo una bella idea
+ 
+align:start position:0%
+L'ordine non è solo una bella idea
+astratta, si comincia applicando la
+align:start position:0%
+astratta, si comincia applicando la
+ 
+align:start position:0%
+astratta, si comincia applicando la
+teoria. In un progetto reale, il
+align:start position:0%
+teoria. In un progetto reale, il
+ 
+align:start position:0%
+teoria. In un progetto reale, il
+prossimo passo sarebbe proprio questo,
+align:start position:0%
+prossimo passo sarebbe proprio questo,
+ 
+align:start position:0%
+prossimo passo sarebbe proprio questo,
+creare queste quattro cartelle e
+align:start position:0%
+creare queste quattro cartelle e
+ 
+align:start position:0%
+creare queste quattro cartelle e
+iniziare a spostare i contenuti. E con
+align:start position:0%
+iniziare a spostare i contenuti. E con
+ 
+align:start position:0%
+iniziare a spostare i contenuti. E con
+questo lascio una domanda finale. Qual è
+align:start position:0%
+questo lascio una domanda finale. Qual è
+ 
+align:start position:0%
+questo lascio una domanda finale. Qual è
+quel pezzo di documentazione, quel
+align:start position:0%
+quel pezzo di documentazione, quel
+ 
+align:start position:0%
+quel pezzo di documentazione, quel
+progetto caotico a cui questa struttura
+align:start position:0%
+progetto caotico a cui questa struttura
+ 
+align:start position:0%
+progetto caotico a cui questa struttura
+potrebbe portare un po' di ordine?
+align:start position:0%
+potrebbe portare un po' di ordine?
+ 
+align:start position:0%
+potrebbe portare un po' di ordine?
+Subito proviamo a pensarci.
+align:start position:0%
+Subito proviamo a pensarci.
+ 
+align:start position:0%
+Subito proviamo a pensarci.
+Probabilmente la risposta è già chiara
+align:start position:0%
+Probabilmente la risposta è già chiara
+ 
+align:start position:0%
+Probabilmente la risposta è già chiara
+nella mente di ognuno.

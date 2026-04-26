@@ -1,0 +1,843 @@
+align:start position:0%
+ 
+E se vi dicessi che esiste un modo per
+align:start position:0%
+E se vi dicessi che esiste un modo per
+ 
+align:start position:0%
+E se vi dicessi che esiste un modo per
+scrivere, cancellare, fare esperimenti,
+align:start position:0%
+scrivere, cancellare, fare esperimenti,
+ 
+align:start position:0%
+scrivere, cancellare, fare esperimenti,
+persino sbagliare, tutto in un universo
+align:start position:0%
+persino sbagliare, tutto in un universo
+ 
+align:start position:0%
+persino sbagliare, tutto in un universo
+parallelo, senza mai toccare la realtà?
+align:start position:0%
+parallelo, senza mai toccare la realtà?
+ 
+align:start position:0%
+parallelo, senza mai toccare la realtà?
+Beh, è esattamente di questo che
+align:start position:0%
+Beh, è esattamente di questo che
+ 
+align:start position:0%
+Beh, è esattamente di questo che
+parliamo oggi. Vedremo come questa idea
+align:start position:0%
+parliamo oggi. Vedremo come questa idea
+ 
+align:start position:0%
+parliamo oggi. Vedremo come questa idea
+quasi da fantascienza si ha in realtà il
+align:start position:0%
+quasi da fantascienza si ha in realtà il
+ 
+align:start position:0%
+quasi da fantascienza si ha in realtà il
+cuore di come si collabora oggi nello
+align:start position:0%
+cuore di come si collabora oggi nello
+ 
+align:start position:0%
+cuore di come si collabora oggi nello
+sviluppo e non solo. Ok, partiamo subito
+align:start position:0%
+sviluppo e non solo. Ok, partiamo subito
+ 
+align:start position:0%
+sviluppo e non solo. Ok, partiamo subito
+con la regola numero uno, la più
+align:start position:0%
+con la regola numero uno, la più
+ 
+align:start position:0%
+con la regola numero uno, la più
+importante di tutte. E questa frase la
+align:start position:0%
+importante di tutte. E questa frase la
+ 
+align:start position:0%
+importante di tutte. E questa frase la
+riassume alla perfezione. L'idea di
+align:start position:0%
+riassume alla perfezione. L'idea di
+ 
+align:start position:0%
+riassume alla perfezione. L'idea di
+fondo è semplicissima, il prodotto
+align:start position:0%
+fondo è semplicissima, il prodotto
+ 
+align:start position:0%
+fondo è semplicissima, il prodotto
+finito, quello che tutti vedono, non si
+align:start position:0%
+finito, quello che tutti vedono, non si
+ 
+align:start position:0%
+finito, quello che tutti vedono, non si
+tocca mai. Perché? Beh, perché fare
+align:start position:0%
+tocca mai. Perché? Beh, perché fare
+ 
+align:start position:0%
+tocca mai. Perché? Beh, perché fare
+modifiche al volo è come rischiare di
+align:start position:0%
+modifiche al volo è come rischiare di
+ 
+align:start position:0%
+modifiche al volo è come rischiare di
+rovinare il libro per tutti i lettori.
+align:start position:0%
+rovinare il libro per tutti i lettori.
+ 
+align:start position:0%
+rovinare il libro per tutti i lettori.
+Entriamo un po' più nel tecnico. Il
+align:start position:0%
+Entriamo un po' più nel tecnico. Il
+ 
+align:start position:0%
+Entriamo un po' più nel tecnico. Il
+primo concetto chiave da capire è
+align:start position:0%
+primo concetto chiave da capire è
+ 
+align:start position:0%
+primo concetto chiave da capire è
+questo: il branch main è sacro,
+align:start position:0%
+questo: il branch main è sacro,
+ 
+align:start position:0%
+questo: il branch main è sacro,
+pensiamolo come la nostra unica sola
+align:start position:0%
+pensiamolo come la nostra unica sola
+ 
+align:start position:0%
+pensiamolo come la nostra unica sola
+fonte di verità. è la versione ufficiale
+align:start position:0%
+fonte di verità. è la versione ufficiale
+ 
+align:start position:0%
+fonte di verità. è la versione ufficiale
+del progetto, quella pubblicata, quella
+align:start position:0%
+del progetto, quella pubblicata, quella
+ 
+align:start position:0%
+del progetto, quella pubblicata, quella
+che chiunque usa. Mettere le mani
+align:start position:0%
+che chiunque usa. Mettere le mani
+ 
+align:start position:0%
+che chiunque usa. Mettere le mani
+direttamente qui, beh, è un po' come
+align:start position:0%
+direttamente qui, beh, è un po' come
+ 
+align:start position:0%
+direttamente qui, beh, è un po' come
+giocare a Genga con la versione live del
+align:start position:0%
+giocare a Genga con la versione live del
+ 
+align:start position:0%
+giocare a Genga con la versione live del
+nostro lavoro. Basta un picco errore,
+align:start position:0%
+nostro lavoro. Basta un picco errore,
+ 
+align:start position:0%
+nostro lavoro. Basta un picco errore,
+una mossa sbagliata e patat trck crolla
+align:start position:0%
+una mossa sbagliata e patat trck crolla
+ 
+align:start position:0%
+una mossa sbagliata e patat trck crolla
+tutto. E questo crea problemi non solo
+align:start position:0%
+tutto. E questo crea problemi non solo
+ 
+align:start position:0%
+tutto. E questo crea problemi non solo
+per chi lavora al progetto, ma per ogni
+align:start position:0%
+per chi lavora al progetto, ma per ogni
+ 
+align:start position:0%
+per chi lavora al progetto, ma per ogni
+singola persona che lo utilizza. E qui
+align:start position:0%
+singola persona che lo utilizza. E qui
+ 
+align:start position:0%
+singola persona che lo utilizza. E qui
+sorge spontanea una domanda, no? Se
+align:start position:0%
+sorge spontanea una domanda, no? Se
+ 
+align:start position:0%
+sorge spontanea una domanda, no? Se
+nessuno può toccare la versione
+align:start position:0%
+nessuno può toccare la versione
+ 
+align:start position:0%
+nessuno può toccare la versione
+principale, allora come si fa ad andare
+align:start position:0%
+principale, allora come si fa ad andare
+ 
+align:start position:0%
+principale, allora come si fa ad andare
+avanti? come si aggiungono nuove idee,
+align:start position:0%
+avanti? come si aggiungono nuove idee,
+ 
+align:start position:0%
+avanti? come si aggiungono nuove idee,
+come si correggono gli errori, insomma,
+align:start position:0%
+come si correggono gli errori, insomma,
+ 
+align:start position:0%
+come si correggono gli errori, insomma,
+come si fa a collaborare? Ecco, la
+align:start position:0%
+come si fa a collaborare? Ecco, la
+ 
+align:start position:0%
+come si fa a collaborare? Ecco, la
+risposta è quasi magica, sta tutta nel
+align:start position:0%
+risposta è quasi magica, sta tutta nel
+ 
+align:start position:0%
+risposta è quasi magica, sta tutta nel
+creare degli universi paralleli e nel
+align:start position:0%
+creare degli universi paralleli e nel
+ 
+align:start position:0%
+creare degli universi paralleli e nel
+mondo di Git questi universi paralleli
+align:start position:0%
+mondo di Git questi universi paralleli
+ 
+align:start position:0%
+mondo di Git questi universi paralleli
+hanno un nuovo e ben preciso branch. È
+align:start position:0%
+hanno un nuovo e ben preciso branch. È
+ 
+align:start position:0%
+hanno un nuovo e ben preciso branch. È
+proprio qui che inizia la vera
+align:start position:0%
+proprio qui che inizia la vera
+ 
+align:start position:0%
+proprio qui che inizia la vera
+collaborazione.
+align:start position:0%
+collaborazione.
+ 
+align:start position:0%
+collaborazione.
+Un branch in pratica, cos'è?
+align:start position:0%
+Un branch in pratica, cos'è?
+ 
+align:start position:0%
+Un branch in pratica, cos'è?
+Immaginiamolo come una fotocopia del
+align:start position:0%
+Immaginiamolo come una fotocopia del
+ 
+align:start position:0%
+Immaginiamolo come una fotocopia del
+nostro progetto, una copia tutta per noi
+align:start position:0%
+nostro progetto, una copia tutta per noi
+ 
+align:start position:0%
+nostro progetto, una copia tutta per noi
+dove siamo liberissimi di sperimentare,
+align:start position:0%
+dove siamo liberissimi di sperimentare,
+ 
+align:start position:0%
+dove siamo liberissimi di sperimentare,
+scrivere, cancellare, persino fare un
+align:start position:0%
+scrivere, cancellare, persino fare un
+ 
+align:start position:0%
+scrivere, cancellare, persino fare un
+pasticcio. Il bello, l'originale rimane
+align:start position:0%
+pasticcio. Il bello, l'originale rimane
+ 
+align:start position:0%
+pasticcio. Il bello, l'originale rimane
+intatto, al sicuro. Certo, con tutti
+align:start position:0%
+intatto, al sicuro. Certo, con tutti
+ 
+align:start position:0%
+intatto, al sicuro. Certo, con tutti
+questi universi paralleli si rischia di
+align:start position:0%
+questi universi paralleli si rischia di
+ 
+align:start position:0%
+questi universi paralleli si rischia di
+perdersi e per evitare questo si usa un
+align:start position:0%
+perdersi e per evitare questo si usa un
+ 
+align:start position:0%
+perdersi e per evitare questo si usa un
+sistema di nomi intelligente, diciamo
+align:start position:0%
+sistema di nomi intelligente, diciamo
+ 
+align:start position:0%
+sistema di nomi intelligente, diciamo
+delle etichette. Prefissi come doc/ per
+align:start position:0%
+delle etichette. Prefissi come doc/ per
+ 
+align:start position:0%
+delle etichette. Prefissi come doc/ per
+la documentazione o fix/per le
+align:start position:0%
+la documentazione o fix/per le
+ 
+align:start position:0%
+la documentazione o fix/per le
+correzioni ci dicono subito a cosa serve
+align:start position:0%
+correzioni ci dicono subito a cosa serve
+ 
+align:start position:0%
+correzioni ci dicono subito a cosa serve
+quel branch, un modo semplice per
+align:start position:0%
+quel branch, un modo semplice per
+ 
+align:start position:0%
+quel branch, un modo semplice per
+mettere ordine nel caos creativo. Ok, ma
+align:start position:0%
+mettere ordine nel caos creativo. Ok, ma
+ 
+align:start position:0%
+mettere ordine nel caos creativo. Ok, ma
+in pratica come funziona il flusso di
+align:start position:0%
+in pratica come funziona il flusso di
+ 
+align:start position:0%
+in pratica come funziona il flusso di
+lavoro? È davvero semplice, si riduce a
+align:start position:0%
+lavoro? È davvero semplice, si riduce a
+ 
+align:start position:0%
+lavoro? È davvero semplice, si riduce a
+tre passi. Uno, si crea il proprio
+align:start position:0%
+tre passi. Uno, si crea il proprio
+ 
+align:start position:0%
+tre passi. Uno, si crea il proprio
+universo personale. Due, ci si lavora in
+align:start position:0%
+universo personale. Due, ci si lavora in
+ 
+align:start position:0%
+universo personale. Due, ci si lavora in
+totale libertà. Tre, si salvano i
+align:start position:0%
+totale libertà. Tre, si salvano i
+ 
+align:start position:0%
+totale libertà. Tre, si salvano i
+progressi come una bozza al sicuro nel
+align:start position:0%
+progressi come una bozza al sicuro nel
+ 
+align:start position:0%
+progressi come una bozza al sicuro nel
+proprio branch. Tutto qui. Bene, il
+align:start position:0%
+proprio branch. Tutto qui. Bene, il
+ 
+align:start position:0%
+proprio branch. Tutto qui. Bene, il
+lavoro è pronto, siamo soddisfatti. Il
+align:start position:0%
+lavoro è pronto, siamo soddisfatti. Il
+ 
+align:start position:0%
+lavoro è pronto, siamo soddisfatti. Il
+nostro universo parallelo è perfetto.
+align:start position:0%
+nostro universo parallelo è perfetto.
+ 
+align:start position:0%
+nostro universo parallelo è perfetto.
+E adesso come lo portiamo nella realtà
+align:start position:0%
+E adesso come lo portiamo nella realtà
+ 
+align:start position:0%
+E adesso come lo portiamo nella realtà
+principale?
+align:start position:0%
+principale?
+ 
+align:start position:0%
+principale?
+Ecco, questo non è un passaggio
+align:start position:0%
+Ecco, questo non è un passaggio
+ 
+align:start position:0%
+Ecco, questo non è un passaggio
+automatico, è un momento,
+align:start position:0%
+automatico, è un momento,
+ 
+align:start position:0%
+automatico, è un momento,
+diciamo, sociale. E qui che entra in
+align:start position:0%
+diciamo, sociale. E qui che entra in
+ 
+align:start position:0%
+diciamo, sociale. E qui che entra in
+gioco la pool request OPR. è il cuore
+align:start position:0%
+gioco la pool request OPR. è il cuore
+ 
+align:start position:0%
+gioco la pool request OPR. è il cuore
+pulsante, l'aspetto sociale di tutto il
+align:start position:0%
+pulsante, l'aspetto sociale di tutto il
+ 
+align:start position:0%
+pulsante, l'aspetto sociale di tutto il
+processo. In pratica è come alzare la
+align:start position:0%
+processo. In pratica è come alzare la
+ 
+align:start position:0%
+processo. In pratica è come alzare la
+mano e dire "Ey Team, io avrei finito,
+align:start position:0%
+mano e dire "Ey Team, io avrei finito,
+ 
+align:start position:0%
+mano e dire "Ey Team, io avrei finito,
+potete dare un'occhiata prima che venga
+align:start position:0%
+potete dare un'occhiata prima che venga
+ 
+align:start position:0%
+potete dare un'occhiata prima che venga
+pubblicato?" E guardate che una P
+align:start position:0%
+pubblicato?" E guardate che una P
+ 
+align:start position:0%
+pubblicato?" E guardate che una P
+request fatta bene non è solo un ammasso
+align:start position:0%
+request fatta bene non è solo un ammasso
+ 
+align:start position:0%
+request fatta bene non è solo un ammasso
+di modifiche, no, racconta una storia,
+align:start position:0%
+di modifiche, no, racconta una storia,
+ 
+align:start position:0%
+di modifiche, no, racconta una storia,
+deve avere un titolo chiaro, una
+align:start position:0%
+deve avere un titolo chiaro, una
+ 
+align:start position:0%
+deve avere un titolo chiaro, una
+descrizione che spiega il perché di quel
+align:start position:0%
+descrizione che spiega il perché di quel
+ 
+align:start position:0%
+descrizione che spiega il perché di quel
+cambiamento e, se possibile, degli
+align:start position:0%
+cambiamento e, se possibile, degli
+ 
+align:start position:0%
+cambiamento e, se possibile, degli
+screenshot. Insomma, deve rendere la
+align:start position:0%
+screenshot. Insomma, deve rendere la
+ 
+align:start position:0%
+screenshot. Insomma, deve rendere la
+vita facile a chi deve revisionare. Il
+align:start position:0%
+vita facile a chi deve revisionare. Il
+ 
+align:start position:0%
+vita facile a chi deve revisionare. Il
+contesto qui è tutto. Ma c'è un ma
+align:start position:0%
+contesto qui è tutto. Ma c'è un ma
+ 
+align:start position:0%
+contesto qui è tutto. Ma c'è un ma
+ovviamente. Cosa succede se due persone
+align:start position:0%
+ovviamente. Cosa succede se due persone
+ 
+align:start position:0%
+ovviamente. Cosa succede se due persone
+in due universi paralleli diversi
+align:start position:0%
+in due universi paralleli diversi
+ 
+align:start position:0%
+in due universi paralleli diversi
+modificano la stessa identica cosa?
+align:start position:0%
+modificano la stessa identica cosa?
+ 
+align:start position:0%
+modificano la stessa identica cosa?
+Ecco, è qui che gli universi collidono.
+align:start position:0%
+Ecco, è qui che gli universi collidono.
+ 
+align:start position:0%
+Ecco, è qui che gli universi collidono.
+Facciamo un esempio. Alice modifica la
+align:start position:0%
+Facciamo un esempio. Alice modifica la
+ 
+align:start position:0%
+Facciamo un esempio. Alice modifica la
+riga 42 di un file. Contemporaneamente
+align:start position:0%
+riga 42 di un file. Contemporaneamente
+ 
+align:start position:0%
+riga 42 di un file. Contemporaneamente
+anche Bob modifica la stessa identica
+align:start position:0%
+anche Bob modifica la stessa identica
+ 
+align:start position:0%
+anche Bob modifica la stessa identica
+riga. Quando cercano di unire il loro
+align:start position:0%
+riga. Quando cercano di unire il loro
+ 
+align:start position:0%
+riga. Quando cercano di unire il loro
+lavoro, Git si blocca, va in panico
+align:start position:0%
+lavoro, Git si blocca, va in panico
+ 
+align:start position:0%
+lavoro, Git si blocca, va in panico
+perché non sa quale delle due versioni è
+align:start position:0%
+perché non sa quale delle due versioni è
+ 
+align:start position:0%
+perché non sa quale delle due versioni è
+quella giusta e ci segnala un conflitto.
+align:start position:0%
+quella giusta e ci segnala un conflitto.
+ 
+align:start position:0%
+quella giusta e ci segnala un conflitto.
+Però attenzione, niente panico. Un
+align:start position:0%
+Però attenzione, niente panico. Un
+ 
+align:start position:0%
+Però attenzione, niente panico. Un
+conflitto non è la fine del mondo, non è
+align:start position:0%
+conflitto non è la fine del mondo, non è
+ 
+align:start position:0%
+conflitto non è la fine del mondo, non è
+un errore fatale, è semplicemente il
+align:start position:0%
+un errore fatale, è semplicemente il
+ 
+align:start position:0%
+un errore fatale, è semplicemente il
+sistema che alza la mano e ci dice:
+align:start position:0%
+sistema che alza la mano e ci dice:
+ 
+align:start position:0%
+sistema che alza la mano e ci dice:
+"Ehi, io qui non so come decidere, serve
+align:start position:0%
+"Ehi, io qui non so come decidere, serve
+ 
+align:start position:0%
+"Ehi, io qui non so come decidere, serve
+un essere umano che faccia da arbitro".
+align:start position:0%
+un essere umano che faccia da arbitro".
+ 
+align:start position:0%
+un essere umano che faccia da arbitro".
+E risolvere il conflitto alla fine è
+align:start position:0%
+E risolvere il conflitto alla fine è
+ 
+align:start position:0%
+E risolvere il conflitto alla fine è
+proprio questo, un arbitraggio. Siamo
+align:start position:0%
+proprio questo, un arbitraggio. Siamo
+ 
+align:start position:0%
+proprio questo, un arbitraggio. Siamo
+noi a dover prendere la decisione
+align:start position:0%
+noi a dover prendere la decisione
+ 
+align:start position:0%
+noi a dover prendere la decisione
+finale. Possiamo scegliere una versione,
+align:start position:0%
+finale. Possiamo scegliere una versione,
+ 
+align:start position:0%
+finale. Possiamo scegliere una versione,
+l'altra o, come spesso accade,
+align:start position:0%
+l'altra o, come spesso accade,
+ 
+align:start position:0%
+l'altra o, come spesso accade,
+soprattutto con i testi, possiamo
+align:start position:0%
+soprattutto con i testi, possiamo
+ 
+align:start position:0%
+soprattutto con i testi, possiamo
+accettarle entrambe e poi fonderle
+align:start position:0%
+accettarle entrambe e poi fonderle
+ 
+align:start position:0%
+accettarle entrambe e poi fonderle
+insieme in una frase che abbia senso.
+align:start position:0%
+insieme in una frase che abbia senso.
+ 
+align:start position:0%
+insieme in una frase che abbia senso.
+Ok, ricapitoliamo un attimo, mettiamo
+align:start position:0%
+Ok, ricapitoliamo un attimo, mettiamo
+ 
+align:start position:0%
+Ok, ricapitoliamo un attimo, mettiamo
+insieme tutti i pezzi del puzzle.
+align:start position:0%
+insieme tutti i pezzi del puzzle.
+ 
+align:start position:0%
+insieme tutti i pezzi del puzzle.
+Torniamo per un secondo alla nostra
+align:start position:0%
+Torniamo per un secondo alla nostra
+ 
+align:start position:0%
+Torniamo per un secondo alla nostra
+metafora del mondo dell'editoria che ci
+align:start position:0%
+metafora del mondo dell'editoria che ci
+ 
+align:start position:0%
+metafora del mondo dell'editoria che ci
+aiuta a vedere tutto il processo
+align:start position:0%
+aiuta a vedere tutto il processo
+ 
+align:start position:0%
+aiuta a vedere tutto il processo
+dall'inizio alla fine. Il percorso è
+align:start position:0%
+dall'inizio alla fine. Il percorso è
+ 
+align:start position:0%
+dall'inizio alla fine. Il percorso è
+proprio questo. Si parte dalla bozza, il
+align:start position:0%
+proprio questo. Si parte dalla bozza, il
+ 
+align:start position:0%
+proprio questo. Si parte dalla bozza, il
+nostro branch è come una copia personale
+align:start position:0%
+nostro branch è come una copia personale
+ 
+align:start position:0%
+nostro branch è come una copia personale
+del manoscritto. Poi c'è la revisione
+align:start position:0%
+del manoscritto. Poi c'è la revisione
+ 
+align:start position:0%
+del manoscritto. Poi c'è la revisione
+editoriale, ovvero la pool request che
+align:start position:0%
+editoriale, ovvero la pool request che
+ 
+align:start position:0%
+editoriale, ovvero la pool request che
+inviamo al team e infine la stampa, il
+align:start position:0%
+inviamo al team e infine la stampa, il
+ 
+align:start position:0%
+inviamo al team e infine la stampa, il
+merge, quando le nostre modifiche
+align:start position:0%
+merge, quando le nostre modifiche
+ 
+align:start position:0%
+merge, quando le nostre modifiche
+vengono approvate e diventano parte del
+align:start position:0%
+vengono approvate e diventano parte del
+ 
+align:start position:0%
+vengono approvate e diventano parte del
+libro ufficiale. Vedete, quello che
+align:start position:0%
+libro ufficiale. Vedete, quello che
+ 
+align:start position:0%
+libro ufficiale. Vedete, quello che
+poteva essere un caos totale con persone
+align:start position:0%
+poteva essere un caos totale con persone
+ 
+align:start position:0%
+poteva essere un caos totale con persone
+che scrivono una sopra l'altra diventa
+align:start position:0%
+che scrivono una sopra l'altra diventa
+ 
+align:start position:0%
+che scrivono una sopra l'altra diventa
+un flusso di lavoro ordinato, sicuro e
+align:start position:0%
+un flusso di lavoro ordinato, sicuro e
+ 
+align:start position:0%
+un flusso di lavoro ordinato, sicuro e
+di alta qualità. è un sistema che
+align:start position:0%
+di alta qualità. è un sistema che
+ 
+align:start position:0%
+di alta qualità. è un sistema che
+permette a team, anche grandissimi, di
+align:start position:0%
+permette a team, anche grandissimi, di
+ 
+align:start position:0%
+permette a team, anche grandissimi, di
+collaborare e costruire cose
+align:start position:0%
+collaborare e costruire cose
+ 
+align:start position:0%
+collaborare e costruire cose
+incredibili, proteggendo sempre il
+align:start position:0%
+incredibili, proteggendo sempre il
+ 
+align:start position:0%
+incredibili, proteggendo sempre il
+risultato finale. E questo ci porta a
+align:start position:0%
+risultato finale. E questo ci porta a
+ 
+align:start position:0%
+risultato finale. E questo ci porta a
+un'ultima riflessione. Padroneggiare
+align:start position:0%
+un'ultima riflessione. Padroneggiare
+ 
+align:start position:0%
+un'ultima riflessione. Padroneggiare
+questo sistema non è solo una questione
+align:start position:0%
+questo sistema non è solo una questione
+ 
+align:start position:0%
+questo sistema non è solo una questione
+tecnica, non basta conoscere i comandi,
+align:start position:0%
+tecnica, non basta conoscere i comandi,
+ 
+align:start position:0%
+tecnica, non basta conoscere i comandi,
+significa anche imparare a dare e
+align:start position:0%
+significa anche imparare a dare e
+ 
+align:start position:0%
+significa anche imparare a dare e
+ricevere feedback in modo costruttivo.
+align:start position:0%
+ricevere feedback in modo costruttivo.
+ 
+align:start position:0%
+ricevere feedback in modo costruttivo.
+Ma di come si fa una revisione senza
+align:start position:0%
+Ma di come si fa una revisione senza
+ 
+align:start position:0%
+Ma di come si fa una revisione senza
+farsi dei nemici ne parleremo la
+align:start position:0%
+farsi dei nemici ne parleremo la
+ 
+align:start position:0%
+farsi dei nemici ne parleremo la
+prossima volta. M.

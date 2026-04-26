@@ -1,0 +1,1257 @@
+align:start position:0%
+ 
+Ok, oggi parliamo di uno strumento che
+align:start position:0%
+Ok, oggi parliamo di uno strumento che
+ 
+align:start position:0%
+Ok, oggi parliamo di uno strumento che
+ogni sviluppatore dovrebbe conoscere a
+align:start position:0%
+ogni sviluppatore dovrebbe conoscere a
+ 
+align:start position:0%
+ogni sviluppatore dovrebbe conoscere a
+mena dito. E no, non è un linguaggio di
+align:start position:0%
+mena dito. E no, non è un linguaggio di
+ 
+align:start position:0%
+mena dito. E no, non è un linguaggio di
+programmazione, ma è ciò che dà voce al
+align:start position:0%
+programmazione, ma è ciò che dà voce al
+ 
+align:start position:0%
+programmazione, ma è ciò che dà voce al
+nostro codice. Esatto, stiamo parlando
+align:start position:0%
+nostro codice. Esatto, stiamo parlando
+ 
+align:start position:0%
+nostro codice. Esatto, stiamo parlando
+di Markdown.
+align:start position:0%
+di Markdown.
+ 
+align:start position:0%
+di Markdown.
+Allora, partiamo subito da un problema
+align:start position:0%
+Allora, partiamo subito da un problema
+ 
+align:start position:0%
+Allora, partiamo subito da un problema
+che, ammettiamolo, abbiamo avuto tutti,
+align:start position:0%
+che, ammettiamolo, abbiamo avuto tutti,
+ 
+align:start position:0%
+che, ammettiamolo, abbiamo avuto tutti,
+scrivere la documentazione. E la prima
+align:start position:0%
+scrivere la documentazione. E la prima
+ 
+align:start position:0%
+scrivere la documentazione. E la prima
+idea che magari viene in mente è beh,
+align:start position:0%
+idea che magari viene in mente è beh,
+ 
+align:start position:0%
+idea che magari viene in mente è beh,
+uso Word, no? Ecco, fermi tutti. Word e
+align:start position:0%
+uso Word, no? Ecco, fermi tutti. Word e
+ 
+align:start position:0%
+uso Word, no? Ecco, fermi tutti. Word e
+Git, il nostro pane quotidiano, sono
+align:start position:0%
+Git, il nostro pane quotidiano, sono
+ 
+align:start position:0%
+Git, il nostro pane quotidiano, sono
+come l'olio e l'acqua, semplicemente non
+align:start position:0%
+come l'olio e l'acqua, semplicemente non
+ 
+align:start position:0%
+come l'olio e l'acqua, semplicemente non
+funzionano insieme. E guardate qui,
+align:start position:0%
+funzionano insieme. E guardate qui,
+ 
+align:start position:0%
+funzionano insieme. E guardate qui,
+l'immagine parla da sola. A sinistra
+align:start position:0%
+l'immagine parla da sola. A sinistra
+ 
+align:start position:0%
+l'immagine parla da sola. A sinistra
+proviamo a fare un git su un file Word.
+align:start position:0%
+proviamo a fare un git su un file Word.
+ 
+align:start position:0%
+proviamo a fare un git su un file Word.
+Il risultato? Un messaggio completamente
+align:start position:0%
+Il risultato? Un messaggio completamente
+ 
+align:start position:0%
+Il risultato? Un messaggio completamente
+inutile. Binary file differs. E che ce
+align:start position:0%
+inutile. Binary file differs. E che ce
+ 
+align:start position:0%
+inutile. Binary file differs. E che ce
+ne facciamo? Non sappiamo cosa è
+align:start position:0%
+ne facciamo? Non sappiamo cosa è
+ 
+align:start position:0%
+ne facciamo? Non sappiamo cosa è
+cambiato, dove è cambiato. Niente, un
+align:start position:0%
+cambiato, dove è cambiato. Niente, un
+ 
+align:start position:0%
+cambiato, dove è cambiato. Niente, un
+buco nero. Ora guardate a destra. Stessa
+align:start position:0%
+buco nero. Ora guardate a destra. Stessa
+ 
+align:start position:0%
+buco nero. Ora guardate a destra. Stessa
+operazione su un file markdown. Boom!
+align:start position:0%
+operazione su un file markdown. Boom!
+ 
+align:start position:0%
+operazione su un file markdown. Boom!
+Git ci dice esattamente cosa è successo.
+align:start position:0%
+Git ci dice esattamente cosa è successo.
+ 
+align:start position:0%
+Git ci dice esattamente cosa è successo.
+Ehi, hai aggiunto una nuova sezione.
+align:start position:0%
+Ehi, hai aggiunto una nuova sezione.
+ 
+align:start position:0%
+Ehi, hai aggiunto una nuova sezione.
+Chiaro, pulito, tracciabile. E non
+align:start position:0%
+Chiaro, pulito, tracciabile. E non
+ 
+align:start position:0%
+Chiaro, pulito, tracciabile. E non
+parliamo neanche dei merge conflict. Su
+align:start position:0%
+parliamo neanche dei merge conflict. Su
+ 
+align:start position:0%
+parliamo neanche dei merge conflict. Su
+un file binario sono un vero e proprio
+align:start position:0%
+un file binario sono un vero e proprio
+ 
+align:start position:0%
+un file binario sono un vero e proprio
+incubo, mentre su un file di testo, beh,
+align:start position:0%
+incubo, mentre su un file di testo, beh,
+ 
+align:start position:0%
+incubo, mentre su un file di testo, beh,
+è tutta un'altra storia. E questo ci
+align:start position:0%
+è tutta un'altra storia. E questo ci
+ 
+align:start position:0%
+è tutta un'altra storia. E questo ci
+porta a una frase che, secondo me,
+align:start position:0%
+porta a una frase che, secondo me,
+ 
+align:start position:0%
+porta a una frase che, secondo me,
+c'entra il punto in pieno. Se il codice
+align:start position:0%
+c'entra il punto in pieno. Se il codice
+ 
+align:start position:0%
+c'entra il punto in pieno. Se il codice
+è la logica, Mark è la sua voce.
+align:start position:0%
+è la logica, Mark è la sua voce.
+ 
+align:start position:0%
+è la logica, Mark è la sua voce.
+Pensateci, Vattimo è perfetto. La
+align:start position:0%
+Pensateci, Vattimo è perfetto. La
+ 
+align:start position:0%
+Pensateci, Vattimo è perfetto. La
+documentazione non è più una cosa
+align:start position:0%
+documentazione non è più una cosa
+ 
+align:start position:0%
+documentazione non è più una cosa
+separata, un documento perso chissà
+align:start position:0%
+separata, un documento perso chissà
+ 
+align:start position:0%
+separata, un documento perso chissà
+dove. Vive insieme al codice, evolve con
+align:start position:0%
+dove. Vive insieme al codice, evolve con
+ 
+align:start position:0%
+dove. Vive insieme al codice, evolve con
+il codice. Logica e spiegazione
+align:start position:0%
+il codice. Logica e spiegazione
+ 
+align:start position:0%
+il codice. Logica e spiegazione
+finalmente vanno a braccetto.
+align:start position:0%
+finalmente vanno a braccetto.
+ 
+align:start position:0%
+finalmente vanno a braccetto.
+Ok? Quindi qual è l'alternativa? Qual è
+align:start position:0%
+Ok? Quindi qual è l'alternativa? Qual è
+ 
+align:start position:0%
+Ok? Quindi qual è l'alternativa? Qual è
+questo strumento magico che risolto il
+align:start position:0%
+questo strumento magico che risolto il
+ 
+align:start position:0%
+questo strumento magico che risolto il
+problema e che oggi è praticamente lo
+align:start position:0%
+problema e che oggi è praticamente lo
+ 
+align:start position:0%
+problema e che oggi è praticamente lo
+standard de facto? È lui, Mark. Ma
+align:start position:0%
+standard de facto? È lui, Mark. Ma
+ 
+align:start position:0%
+standard de facto? È lui, Mark. Ma
+cerchiamo di capire perché ha vinto su
+align:start position:0%
+cerchiamo di capire perché ha vinto su
+ 
+align:start position:0%
+cerchiamo di capire perché ha vinto su
+tutta la linea, perché è diventato così
+align:start position:0%
+tutta la linea, perché è diventato così
+ 
+align:start position:0%
+tutta la linea, perché è diventato così
+indispensabile.
+align:start position:0%
+indispensabile.
+ 
+align:start position:0%
+indispensabile.
+Le ragioni del suo successo sono
+align:start position:0%
+Le ragioni del suo successo sono
+ 
+align:start position:0%
+Le ragioni del suo successo sono
+fondamentalmente tre e sono
+align:start position:0%
+fondamentalmente tre e sono
+ 
+align:start position:0%
+fondamentalmente tre e sono
+potentissime. La prima è solo testo,
+align:start position:0%
+potentissime. La prima è solo testo,
+ 
+align:start position:0%
+potentissime. La prima è solo testo,
+puro e semplice testo. Significa che si
+align:start position:0%
+puro e semplice testo. Significa che si
+ 
+align:start position:0%
+puro e semplice testo. Significa che si
+può aprire con qualsiasi cosa, dal
+align:start position:0%
+può aprire con qualsiasi cosa, dal
+ 
+align:start position:0%
+può aprire con qualsiasi cosa, dal
+blocco note a VS Code e sarà sempre
+align:start position:0%
+blocco note a VS Code e sarà sempre
+ 
+align:start position:0%
+blocco note a VS Code e sarà sempre
+leggibile. La seconda va d'amore
+align:start position:0%
+leggibile. La seconda va d'amore
+ 
+align:start position:0%
+leggibile. La seconda va d'amore
+d'accordo con Git e questo l'abbiamo
+align:start position:0%
+d'accordo con Git e questo l'abbiamo
+ 
+align:start position:0%
+d'accordo con Git e questo l'abbiamo
+appena visto. E la terza, che è geniale,
+align:start position:0%
+appena visto. E la terza, che è geniale,
+ 
+align:start position:0%
+appena visto. E la terza, che è geniale,
+è la separazione tra contenuto e forma.
+align:start position:0%
+è la separazione tra contenuto e forma.
+ 
+align:start position:0%
+è la separazione tra contenuto e forma.
+Si scrive il testo una volta
+align:start position:0%
+Si scrive il testo una volta
+ 
+align:start position:0%
+Si scrive il testo una volta
+concentrandosi su cosa dire e poi quel
+align:start position:0%
+concentrandosi su cosa dire e poi quel
+ 
+align:start position:0%
+concentrandosi su cosa dire e poi quel
+testo può diventare una pagina web, un
+align:start position:0%
+testo può diventare una pagina web, un
+ 
+align:start position:0%
+testo può diventare una pagina web, un
+PDF, quello che si vuole, senza dover
+align:start position:0%
+PDF, quello che si vuole, senza dover
+ 
+align:start position:0%
+PDF, quello che si vuole, senza dover
+cambiare una sola parola. Una cosa
+align:start position:0%
+cambiare una sola parola. Una cosa
+ 
+align:start position:0%
+cambiare una sola parola. Una cosa
+importante da sapere però, non esiste un
+align:start position:0%
+importante da sapere però, non esiste un
+ 
+align:start position:0%
+importante da sapere però, non esiste un
+solo markdown, è un po' come per Linux,
+align:start position:0%
+solo markdown, è un po' come per Linux,
+ 
+align:start position:0%
+solo markdown, è un po' come per Linux,
+ci sono diverse distribuzioni o, come si
+align:start position:0%
+ci sono diverse distribuzioni o, come si
+ 
+align:start position:0%
+ci sono diverse distribuzioni o, come si
+dice in gergo flavor, cioè gusti. Quello
+align:start position:0%
+dice in gergo flavor, cioè gusti. Quello
+ 
+align:start position:0%
+dice in gergo flavor, cioè gusti. Quello
+che useremo noi è che è di gran lunga il
+align:start position:0%
+che useremo noi è che è di gran lunga il
+ 
+align:start position:0%
+che useremo noi è che è di gran lunga il
+più diffuso nel nostro mondo è il GitHub
+align:start position:0%
+più diffuso nel nostro mondo è il GitHub
+ 
+align:start position:0%
+più diffuso nel nostro mondo è il GitHub
+Flavored Marktwn
+align:start position:0%
+Flavored Marktwn
+ 
+align:start position:0%
+Flavored Marktwn
+per gli amici. Perché proprio questo?
+align:start position:0%
+per gli amici. Perché proprio questo?
+ 
+align:start position:0%
+per gli amici. Perché proprio questo?
+Semplice, aggiunge delle chicche
+align:start position:0%
+Semplice, aggiunge delle chicche
+ 
+align:start position:0%
+Semplice, aggiunge delle chicche
+utilissime come le tabelle o le
+align:start position:0%
+utilissime come le tabelle o le
+ 
+align:start position:0%
+utilissime come le tabelle o le
+checklist che sono oro colato per chi
+align:start position:0%
+checklist che sono oro colato per chi
+ 
+align:start position:0%
+checklist che sono oro colato per chi
+sviluppa. Bene, è ora di sporcarsi le
+align:start position:0%
+sviluppa. Bene, è ora di sporcarsi le
+ 
+align:start position:0%
+sviluppa. Bene, è ora di sporcarsi le
+mani. Parliamo di sintassi e la buona
+align:start position:0%
+mani. Parliamo di sintassi e la buona
+ 
+align:start position:0%
+mani. Parliamo di sintassi e la buona
+notizia è che non serve imparare un
+align:start position:0%
+notizia è che non serve imparare un
+ 
+align:start position:0%
+notizia è che non serve imparare un
+manuale intero. Bastano quattro e dico
+align:start position:0%
+manuale intero. Bastano quattro e dico
+ 
+align:start position:0%
+manuale intero. Bastano quattro e dico
+quattro concetti per gestire il 90% di
+align:start position:0%
+quattro concetti per gestire il 90% di
+ 
+align:start position:0%
+quattro concetti per gestire il 90% di
+tutto quello che servirà. Stiamo
+align:start position:0%
+tutto quello che servirà. Stiamo
+ 
+align:start position:0%
+tutto quello che servirà. Stiamo
+parlando di titoli, blocchi di codice,
+align:start position:0%
+parlando di titoli, blocchi di codice,
+ 
+align:start position:0%
+parlando di titoli, blocchi di codice,
+liste e link. Pronti? Via! Partiamo dai
+align:start position:0%
+liste e link. Pronti? Via! Partiamo dai
+ 
+align:start position:0%
+liste e link. Pronti? Via! Partiamo dai
+titoli, gli headers. E qui subito
+align:start position:0%
+titoli, gli headers. E qui subito
+ 
+align:start position:0%
+titoli, gli headers. E qui subito
+sfatiamo un mito. Il cancelletto, il
+align:start position:0%
+sfatiamo un mito. Il cancelletto, il
+ 
+align:start position:0%
+sfatiamo un mito. Il cancelletto, il
+simbolo hashtag, non sarde per fare il
+align:start position:0%
+simbolo hashtag, non sarde per fare il
+ 
+align:start position:0%
+simbolo hashtag, non sarde per fare il
+testo più grande. È un errore che vedo
+align:start position:0%
+testo più grande. È un errore che vedo
+ 
+align:start position:0%
+testo più grande. È un errore che vedo
+fare spessissimo. Il suo unico vero
+align:start position:0%
+fare spessissimo. Il suo unico vero
+ 
+align:start position:0%
+fare spessissimo. Il suo unico vero
+scopo è dare una struttura logica al
+align:start position:0%
+scopo è dare una struttura logica al
+ 
+align:start position:0%
+scopo è dare una struttura logica al
+documento. È come costruire l'indice di
+align:start position:0%
+documento. È come costruire l'indice di
+ 
+align:start position:0%
+documento. È come costruire l'indice di
+un libro, non è una questione di font. E
+align:start position:0%
+un libro, non è una questione di font. E
+ 
+align:start position:0%
+un libro, non è una questione di font. E
+a proposito di errori, guardate qua.
+align:start position:0%
+a proposito di errori, guardate qua.
+ 
+align:start position:0%
+a proposito di errori, guardate qua.
+Questo è l'errore da un milione di
+align:start position:0%
+Questo è l'errore da un milione di
+ 
+align:start position:0%
+Questo è l'errore da un milione di
+dollari, quello che fa perdere minuti
+align:start position:0%
+dollari, quello che fa perdere minuti
+ 
+align:start position:0%
+dollari, quello che fa perdere minuti
+preziosi. Vedete a sinistra il
+align:start position:0%
+preziosi. Vedete a sinistra il
+ 
+align:start position:0%
+preziosi. Vedete a sinistra il
+cancelletto è attaccato alla parola.
+align:start position:0%
+cancelletto è attaccato alla parola.
+ 
+align:start position:0%
+cancelletto è attaccato alla parola.
+Sbagliato, molti sistemi non lo
+align:start position:0%
+Sbagliato, molti sistemi non lo
+ 
+align:start position:0%
+Sbagliato, molti sistemi non lo
+interpreteranno come un titolo. A destra
+align:start position:0%
+interpreteranno come un titolo. A destra
+ 
+align:start position:0%
+interpreteranno come un titolo. A destra
+invece c'è lo spazio. Ecco, così
+align:start position:0%
+invece c'è lo spazio. Ecco, così
+ 
+align:start position:0%
+invece c'è lo spazio. Ecco, così
+funziona. Un piccolo banalissimo spazio
+align:start position:0%
+funziona. Un piccolo banalissimo spazio
+ 
+align:start position:0%
+funziona. Un piccolo banalissimo spazio
+che fa tutta la differenza del mondo. Da
+align:start position:0%
+che fa tutta la differenza del mondo. Da
+ 
+align:start position:0%
+che fa tutta la differenza del mondo. Da
+ricordare la gerarchia da seguire è
+align:start position:0%
+ricordare la gerarchia da seguire è
+ 
+align:start position:0%
+ricordare la gerarchia da seguire è
+super semplice, un solo H1, cioè un
+align:start position:0%
+super semplice, un solo H1, cioè un
+ 
+align:start position:0%
+super semplice, un solo H1, cioè un
+cancelletto per il titolo principale del
+align:start position:0%
+cancelletto per il titolo principale del
+ 
+align:start position:0%
+cancelletto per il titolo principale del
+file, non di più. Poi si usano gli H2,
+align:start position:0%
+file, non di più. Poi si usano gli H2,
+ 
+align:start position:0%
+file, non di più. Poi si usano gli H2,
+due cancelletti per i capitali
+align:start position:0%
+due cancelletti per i capitali
+ 
+align:start position:0%
+due cancelletti per i capitali
+principali e gli H3 per i paragrafi
+align:start position:0%
+principali e gli H3 per i paragrafi
+ 
+align:start position:0%
+principali e gli H3 per i paragrafi
+interni. Regola d'oro, se ci si ritrova
+align:start position:0%
+interni. Regola d'oro, se ci si ritrova
+ 
+align:start position:0%
+interni. Regola d'oro, se ci si ritrova
+a dover usare un H5 o un H6, bisogna
+align:start position:0%
+a dover usare un H5 o un H6, bisogna
+ 
+align:start position:0%
+a dover usare un H5 o un H6, bisogna
+fermarsi. Probabilmente il documento è
+align:start position:0%
+fermarsi. Probabilmente il documento è
+ 
+align:start position:0%
+fermarsi. Probabilmente il documento è
+troppo complesso e va spezzato in più
+align:start position:0%
+troppo complesso e va spezzato in più
+ 
+align:start position:0%
+troppo complesso e va spezzato in più
+file. Ok, adesso tenetevi forte perché
+align:start position:0%
+file. Ok, adesso tenetevi forte perché
+ 
+align:start position:0%
+file. Ok, adesso tenetevi forte perché
+arriviamo a quella che per me è la
+align:start position:0%
+arriviamo a quella che per me è la
+ 
+align:start position:0%
+arriviamo a quella che per me è la
+killer feature assoluta di Markdown per
+align:start position:0%
+killer feature assoluta di Markdown per
+ 
+align:start position:0%
+killer feature assoluta di Markdown per
+chiunque scriva codice. La cosa che da
+align:start position:0%
+chiunque scriva codice. La cosa che da
+ 
+align:start position:0%
+chiunque scriva codice. La cosa che da
+sola vale il prezzo del biglietto, anche
+align:start position:0%
+sola vale il prezzo del biglietto, anche
+ 
+align:start position:0%
+sola vale il prezzo del biglietto, anche
+se è gratis. Sto parlando dei blocchi di
+align:start position:0%
+se è gratis. Sto parlando dei blocchi di
+ 
+align:start position:0%
+se è gratis. Sto parlando dei blocchi di
+codice. Allora, per inserire un blocco
+align:start position:0%
+codice. Allora, per inserire un blocco
+ 
+align:start position:0%
+codice. Allora, per inserire un blocco
+di codice si usano tre backtick, quegli
+align:start position:0%
+di codice si usano tre backtick, quegli
+ 
+align:start position:0%
+di codice si usano tre backtick, quegli
+accenti gravi all'inizio e alla fine. E
+align:start position:0%
+accenti gravi all'inizio e alla fine. E
+ 
+align:start position:0%
+accenti gravi all'inizio e alla fine. E
+vedete, funziona. Il testo ha un font
+align:start position:0%
+vedete, funziona. Il testo ha un font
+ 
+align:start position:0%
+vedete, funziona. Il testo ha un font
+monospazio, è chiaramente codice, però è
+align:start position:0%
+monospazio, è chiaramente codice, però è
+ 
+align:start position:0%
+monospazio, è chiaramente codice, però è
+un po' triste, no? Tutto di un colore,
+align:start position:0%
+un po' triste, no? Tutto di un colore,
+ 
+align:start position:0%
+un po' triste, no? Tutto di un colore,
+si fa fatica a distinguere le parole
+align:start position:0%
+si fa fatica a distinguere le parole
+ 
+align:start position:0%
+si fa fatica a distinguere le parole
+chiave, le stringhe. Ma ora guardate
+align:start position:0%
+chiave, le stringhe. Ma ora guardate
+ 
+align:start position:0%
+chiave, le stringhe. Ma ora guardate
+cosa succede se dopo i primi tre
+align:start position:0%
+cosa succede se dopo i primi tre
+ 
+align:start position:0%
+cosa succede se dopo i primi tre
+backtick aggiungiamo il nome del
+align:start position:0%
+backtick aggiungiamo il nome del
+ 
+align:start position:0%
+backtick aggiungiamo il nome del
+linguaggio tipo Python o JavaScript.
+align:start position:0%
+linguaggio tipo Python o JavaScript.
+ 
+align:start position:0%
+linguaggio tipo Python o JavaScript.
+Pronti? Taranna! Ecco la magia! Appare
+align:start position:0%
+Pronti? Taranna! Ecco la magia! Appare
+ 
+align:start position:0%
+Pronti? Taranna! Ecco la magia! Appare
+il Syntax Highlighting, i colori.
+align:start position:0%
+il Syntax Highlighting, i colori.
+ 
+align:start position:0%
+il Syntax Highlighting, i colori.
+Improvvisamente il codice prende vita,
+align:start position:0%
+Improvvisamente il codice prende vita,
+ 
+align:start position:0%
+Improvvisamente il codice prende vita,
+diventa leggibile, professionale. È una
+align:start position:0%
+diventa leggibile, professionale. È una
+ 
+align:start position:0%
+diventa leggibile, professionale. È una
+differenza dal giorno alla notte.
+align:start position:0%
+differenza dal giorno alla notte.
+ 
+align:start position:0%
+differenza dal giorno alla notte.
+Passiamo alle liste. Se si deve scrivere
+align:start position:0%
+Passiamo alle liste. Se si deve scrivere
+ 
+align:start position:0%
+Passiamo alle liste. Se si deve scrivere
+una guida, una procedura, tipo passo 1,
+align:start position:0%
+una guida, una procedura, tipo passo 1,
+ 
+align:start position:0%
+una guida, una procedura, tipo passo 1,
+passo 2, le liste numerate sono
+align:start position:0%
+passo 2, le liste numerate sono
+ 
+align:start position:0%
+passo 2, le liste numerate sono
+essenziali e qui c'è un trucco da pro
+align:start position:0%
+essenziali e qui c'è un trucco da pro
+ 
+align:start position:0%
+essenziali e qui c'è un trucco da pro
+per risparmiare un sacco di tempo.
+align:start position:0%
+per risparmiare un sacco di tempo.
+ 
+align:start position:0%
+per risparmiare un sacco di tempo.
+Invece di scrivere 1 2 3 scrivete sempre
+align:start position:0%
+Invece di scrivere 1 2 3 scrivete sempre
+ 
+align:start position:0%
+Invece di scrivere 1 2 3 scrivete sempre
+e solo uno primo passo, uno secondo
+align:start position:0%
+e solo uno primo passo, uno secondo
+ 
+align:start position:0%
+e solo uno primo passo, uno secondo
+passo, uno terzo passo. Non
+align:start position:0%
+passo, uno terzo passo. Non
+ 
+align:start position:0%
+passo, uno terzo passo. Non
+preoccupatevi, al momento della
+align:start position:0%
+preoccupatevi, al momento della
+ 
+align:start position:0%
+preoccupatevi, al momento della
+visualizzazione Markà la magia e metterà
+align:start position:0%
+visualizzazione Markà la magia e metterà
+ 
+align:start position:0%
+visualizzazione Markà la magia e metterà
+i numeri giusti in automatico. Comodo
+align:start position:0%
+i numeri giusti in automatico. Comodo
+ 
+align:start position:0%
+i numeri giusti in automatico. Comodo
+no? E i link. Facilissimo anche quello.
+align:start position:0%
+no? E i link. Facilissimo anche quello.
+ 
+align:start position:0%
+no? E i link. Facilissimo anche quello.
+La sintassi è parentesi quadre per il
+align:start position:0%
+La sintassi è parentesi quadre per il
+ 
+align:start position:0%
+La sintassi è parentesi quadre per il
+testo che si vede e parentesi tonde
+align:start position:0%
+testo che si vede e parentesi tonde
+ 
+align:start position:0%
+testo che si vede e parentesi tonde
+subito dopo per l'URL vero e proprio.
+align:start position:0%
+subito dopo per l'URL vero e proprio.
+ 
+align:start position:0%
+subito dopo per l'URL vero e proprio.
+C'è un trucchetto mnemonico che aiuta un
+align:start position:0%
+C'è un trucchetto mnemonico che aiuta un
+ 
+align:start position:0%
+C'è un trucchetto mnemonico che aiuta un
+sacco. Le parentesi quadre contengono
+align:start position:0%
+sacco. Le parentesi quadre contengono
+ 
+align:start position:0%
+sacco. Le parentesi quadre contengono
+quello che si vede, semplice ed
+align:start position:0%
+quello che si vede, semplice ed
+ 
+align:start position:0%
+quello che si vede, semplice ed
+efficace.
+align:start position:0%
+efficace.
+ 
+align:start position:0%
+efficace.
+Ok, la sintassi di base l'abbiamo vista,
+align:start position:0%
+Ok, la sintassi di base l'abbiamo vista,
+ 
+align:start position:0%
+Ok, la sintassi di base l'abbiamo vista,
+ma saper scrivere le singole righe non
+align:start position:0%
+ma saper scrivere le singole righe non
+ 
+align:start position:0%
+ma saper scrivere le singole righe non
+basta. Dobbiamo parlare di una cosa
+align:start position:0%
+basta. Dobbiamo parlare di una cosa
+ 
+align:start position:0%
+basta. Dobbiamo parlare di una cosa
+forse ancora più importante, la
+align:start position:0%
+forse ancora più importante, la
+ 
+align:start position:0%
+forse ancora più importante, la
+struttura. Come organizziamo i nostri
+align:start position:0%
+struttura. Come organizziamo i nostri
+ 
+align:start position:0%
+struttura. Come organizziamo i nostri
+file per non creare il temutissimo muro
+align:start position:0%
+file per non creare il temutissimo muro
+ 
+align:start position:0%
+file per non creare il temutissimo muro
+di testo? Ecco, questo è l'incubo di
+align:start position:0%
+di testo? Ecco, questo è l'incubo di
+ 
+align:start position:0%
+di testo? Ecco, questo è l'incubo di
+ogni utente, un file unico chiamato
+align:start position:0%
+ogni utente, un file unico chiamato
+ 
+align:start position:0%
+ogni utente, un file unico chiamato
+manualecompleto.
+align:start position:0%
+manualecompleto.
+ 
+align:start position:0%
+manualecompleto.
+Con dentro migliaia di righe. Chi ha
+align:start position:0%
+Con dentro migliaia di righe. Chi ha
+ 
+align:start position:0%
+Con dentro migliaia di righe. Chi ha
+voglia di leggere una roba del genere?
+align:start position:0%
+voglia di leggere una roba del genere?
+ 
+align:start position:0%
+voglia di leggere una roba del genere?
+Nessuno. La gente non legge manuali,
+align:start position:0%
+Nessuno. La gente non legge manuali,
+ 
+align:start position:0%
+Nessuno. La gente non legge manuali,
+cerca soluzioni veloci a problemi
+align:start position:0%
+cerca soluzioni veloci a problemi
+ 
+align:start position:0%
+cerca soluzioni veloci a problemi
+specifici. Un muro di testo così non
+align:start position:0%
+specifici. Un muro di testo così non
+ 
+align:start position:0%
+specifici. Un muro di testo così non
+aiuta nessuno, anzi spaventa. La
+align:start position:0%
+aiuta nessuno, anzi spaventa. La
+ 
+align:start position:0%
+aiuta nessuno, anzi spaventa. La
+soluzione quindi qual è? è pensare a
+align:start position:0%
+soluzione quindi qual è? è pensare a
+ 
+align:start position:0%
+soluzione quindi qual è? è pensare a
+mattoncini Lego. Invece di un blocco
+align:start position:0%
+mattoncini Lego. Invece di un blocco
+ 
+align:start position:0%
+mattoncini Lego. Invece di un blocco
+unico, spezziamo tutto in tanti piccoli
+align:start position:0%
+unico, spezziamo tutto in tanti piccoli
+ 
+align:start position:0%
+unico, spezziamo tutto in tanti piccoli
+file indipendenti, ognuno che tratta un
+align:start position:0%
+file indipendenti, ognuno che tratta un
+ 
+align:start position:0%
+file indipendenti, ognuno che tratta un
+singolo argomento. Avremo installazione.
+align:start position:0%
+singolo argomento. Avremo installazione.
+ 
+align:start position:0%
+singolo argomento. Avremo installazione.
+Configurazione. MD, apirference.md
+align:start position:0%
+Configurazione. MD, apirference.md
+ 
+align:start position:0%
+Configurazione. MD, apirference.md
+e così via. Questo approccio chiamato
+align:start position:0%
+e così via. Questo approccio chiamato
+ 
+align:start position:0%
+e così via. Questo approccio chiamato
+topic based rende tutto più facile da
+align:start position:0%
+topic based rende tutto più facile da
+ 
+align:start position:0%
+topic based rende tutto più facile da
+trovare, da linkare, da aggiornare. È un
+align:start position:0%
+trovare, da linkare, da aggiornare. È un
+ 
+align:start position:0%
+trovare, da linkare, da aggiornare. È un
+cambio di mentalità totale. E parlando
+align:start position:0%
+cambio di mentalità totale. E parlando
+ 
+align:start position:0%
+cambio di mentalità totale. E parlando
+di file, parliamo dei loro nomi. Questa
+align:start position:0%
+di file, parliamo dei loro nomi. Questa
+ 
+align:start position:0%
+di file, parliamo dei loro nomi. Questa
+è una regola non negoziabile. I nomi dei
+align:start position:0%
+è una regola non negoziabile. I nomi dei
+ 
+align:start position:0%
+è una regola non negoziabile. I nomi dei
+file devono essere in kebab case. Cosa
+align:start position:0%
+file devono essere in kebab case. Cosa
+ 
+align:start position:0%
+file devono essere in kebab case. Cosa
+significa? Tutto minuscolo e parole
+align:start position:0%
+significa? Tutto minuscolo e parole
+ 
+align:start position:0%
+significa? Tutto minuscolo e parole
+separate da un trattino. Niente spazi,
+align:start position:0%
+separate da un trattino. Niente spazi,
+ 
+align:start position:0%
+separate da un trattino. Niente spazi,
+niente maiuscole, niente underscore.
+align:start position:0%
+niente maiuscole, niente underscore.
+ 
+align:start position:0%
+niente maiuscole, niente underscore.
+Perché questa fiscalità semplice? Gli
+align:start position:0%
+Perché questa fiscalità semplice? Gli
+ 
+align:start position:0%
+Perché questa fiscalità semplice? Gli
+spazi e le maiuscole sono un disastro
+align:start position:0%
+spazi e le maiuscole sono un disastro
+ 
+align:start position:0%
+spazi e le maiuscole sono un disastro
+sui server web e negli URL. Il Kebab
+align:start position:0%
+sui server web e negli URL. Il Kebab
+ 
+align:start position:0%
+sui server web e negli URL. Il Kebab
+case è pulito, leggibile e a prova di
+align:start position:0%
+case è pulito, leggibile e a prova di
+ 
+align:start position:0%
+case è pulito, leggibile e a prova di
+bomba perché perché il tuo marketing
+align:start position:0%
+bomba perché perché il tuo marketing
+ 
+align:start position:0%
+bomba perché perché il tuo marketing
+plano se non è in kebab case. E siamo
+align:start position:0%
+plano se non è in kebab case. E siamo
+ 
+align:start position:0%
+plano se non è in kebab case. E siamo
+quasi alla fine. Voglio lasciarvi con un
+align:start position:0%
+quasi alla fine. Voglio lasciarvi con un
+ 
+align:start position:0%
+quasi alla fine. Voglio lasciarvi con un
+ultimo trucco, una vera e propria chicca
+align:start position:0%
+ultimo trucco, una vera e propria chicca
+ 
+align:start position:0%
+ultimo trucco, una vera e propria chicca
+per chiunque usi Visual Studio Code. È
+align:start position:0%
+per chiunque usi Visual Studio Code. È
+ 
+align:start position:0%
+per chiunque usi Visual Studio Code. È
+una di quelle cose che una volta
+align:start position:0%
+una di quelle cose che una volta
+ 
+align:start position:0%
+una di quelle cose che una volta
+scoperte ci si chiede come si faceva a
+align:start position:0%
+scoperte ci si chiede come si faceva a
+ 
+align:start position:0%
+scoperte ci si chiede come si faceva a
+vivere senza. La combinazione magica è
+align:start position:0%
+vivere senza. La combinazione magica è
+ 
+align:start position:0%
+vivere senza. La combinazione magica è
+Crl K e subito dopo V. Cosa fa? Apre un
+align:start position:0%
+Crl K e subito dopo V. Cosa fa? Apre un
+ 
+align:start position:0%
+Crl K e subito dopo V. Cosa fa? Apre un
+pannello di fianco al codice con
+align:start position:0%
+pannello di fianco al codice con
+ 
+align:start position:0%
+pannello di fianco al codice con
+l'anteprima in tempo reale di come
+align:start position:0%
+l'anteprima in tempo reale di come
+ 
+align:start position:0%
+l'anteprima in tempo reale di come
+apparirà il markdown. Si scrive a
+align:start position:0%
+apparirà il markdown. Si scrive a
+ 
+align:start position:0%
+apparirà il markdown. Si scrive a
+sinistra e a destra si vede il risultato
+align:start position:0%
+sinistra e a destra si vede il risultato
+ 
+align:start position:0%
+sinistra e a destra si vede il risultato
+finale aggiornarsi all'istante. Niente
+align:start position:0%
+finale aggiornarsi all'istante. Niente
+ 
+align:start position:0%
+finale aggiornarsi all'istante. Niente
+più salva, cambia finestra, aggiorna. È
+align:start position:0%
+più salva, cambia finestra, aggiorna. È
+ 
+align:start position:0%
+più salva, cambia finestra, aggiorna. È
+un punto di svolta per la produttività.
+align:start position:0%
+un punto di svolta per la produttività.
+ 
+align:start position:0%
+un punto di svolta per la produttività.
+Bene, ora abbiamo visto la sintassi, la
+align:start position:0%
+Bene, ora abbiamo visto la sintassi, la
+ 
+align:start position:0%
+Bene, ora abbiamo visto la sintassi, la
+struttura e anche un paio di trucchi del
+align:start position:0%
+struttura e anche un paio di trucchi del
+ 
+align:start position:0%
+struttura e anche un paio di trucchi del
+mestiere. La base c'è. La domanda che
+align:start position:0%
+mestiere. La base c'è. La domanda che
+ 
+align:start position:0%
+mestiere. La base c'è. La domanda che
+rimane è: "Ok, e adesso come prendiamo
+align:start position:0%
+rimane è: "Ok, e adesso come prendiamo
+ 
+align:start position:0%
+rimane è: "Ok, e adesso come prendiamo
+tutti questi pezzi e li usiamo per
+align:start position:0%
+tutti questi pezzi e li usiamo per
+ 
+align:start position:0%
+tutti questi pezzi e li usiamo per
+documentare un progetto vero, complesso,
+align:start position:0%
+documentare un progetto vero, complesso,
+ 
+align:start position:0%
+documentare un progetto vero, complesso,
+da zero? Perché è questo il punto,
+align:start position:0%
+da zero? Perché è questo il punto,
+ 
+align:start position:0%
+da zero? Perché è questo il punto,
+trasformare la documentazione da un
+align:start position:0%
+trasformare la documentazione da un
+ 
+align:start position:0%
+trasformare la documentazione da un
+obbligo noioso a una risorsa preziosa
+align:start position:0%
+obbligo noioso a una risorsa preziosa
+ 
+align:start position:0%
+obbligo noioso a una risorsa preziosa
+che vive e respira insieme al nostro
+align:start position:0%
+che vive e respira insieme al nostro
+ 
+align:start position:0%
+che vive e respira insieme al nostro
+codice.
