@@ -83,7 +83,10 @@ const itTranslations = {
     lm3s: "NFS - Condividere le cartelle in rete.",
     lm4s: "SSH/SFTP - Installare SnowFlake SSH/SFTP.",
     lm5s: "Aggiornamento - Aggiornare da 20.01 a 20.03.",
-    lm6s: "Journalctl - Gestione logs con journalctl e systemctl."
+    lm6s: "Journalctl - Gestione logs con journalctl e systemctl.",
+    // Development summaries
+    dev1s: "Formare programmatori - Come l'IA sta cambiando la formazione. Il valore si sposta sul 'perché'.",
+    development: "Development"
   },
   
   meta: {
@@ -177,7 +180,10 @@ const enTranslations = {
     lm3s: "NFS - Share folders over the network.",
     lm4s: "SSH/SFTP - Install SnowFlake SSH/SFTP.",
     lm5s: "Update - Update from 20.01 to 20.03.",
-    lm6s: "Journalctl - Manage logs with journalctl and systemctl."
+    lm6s: "Journalctl - Manage logs with journalctl and systemctl.",
+    // Development summaries
+    dev1s: "Programming Training - How AI is changing programmer training. Value shifts to the 'why'.",
+    development: "Development"
   },
   
   meta: {
