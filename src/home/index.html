@@ -136,6 +136,9 @@ body.tlf-auth-required #tlf-auth-overlay {
     align-items: center;
     z-index: 9999;
 }
+.tlf-auth-overlay.is-hidden {
+    display: none !important;
+}
 .tlf-auth-modal {
     background: white;
     padding: 2rem;
@@ -207,9 +210,11 @@ body.tlf-auth-required #tlf-auth-overlay {
   <div class="tlf-auth-modal">
     <h2>Work in Progress</h2>
     <p>Enter password to access the site</p>
-    <input type="password" id="tlf-auth-password" placeholder="Password">
-    <button id="tlf-auth-submit">Unlock</button>
-    <div id="tlf-auth-error" class="tlf-auth-error">Invalid password</div>
+    <form id="tlf-auth-form" novalidate>
+      <input type="password" id="tlf-auth-password" placeholder="Password" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off">
+      <button type="submit" id="tlf-auth-submit">Unlock</button>
+      <div id="tlf-auth-error" class="tlf-auth-error">Invalid password</div>
+    </form>
   </div>
 </div>
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest" data-i18n="meta.skipToContent">Vai al contenuto principale</a>
@@ -606,53 +611,82 @@ body.tlf-auth-required #tlf-auth-overlay {
 
   async function initAuth() {
     const overlay = document.getElementById('tlf-auth-overlay');
+    const authForm = document.getElementById('tlf-auth-form');
+    const passwordInput = document.getElementById('tlf-auth-password');
+    const errorDiv = document.getElementById('tlf-auth-error');
+
+    function lockSite() {
+      document.body.classList.add('tlf-auth-required');
+      overlay.classList.remove('is-hidden');
+      errorDiv.classList.remove('show');
+      passwordInput.classList.remove('error');
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+
+    function unlockSite() {
+      sessionStorage.setItem('tlf_auth', 'true');
+      overlay.classList.add('is-hidden');
+      document.body.classList.remove('tlf-auth-required');
+      errorDiv.classList.remove('show');
+      passwordInput.classList.remove('error');
+      passwordInput.value = '';
+    }
+
+    function failPassword() {
+      errorDiv.classList.add('show');
+      passwordInput.classList.add('error');
+      passwordInput.focus();
+      passwordInput.select();
+    }
+
+    function checkPassword(password, hash) {
+      if (verifyApr1Password((password || '').trim(), hash)) {
+        unlockSite();
+      } else {
+        failPassword();
+      }
+    }
+
+    passwordInput.addEventListener('input', function() {
+      errorDiv.classList.remove('show');
+      passwordInput.classList.remove('error');
+    });
+
     // Check if already authenticated
     if (sessionStorage.getItem('tlf_auth') === 'true') {
-      if (overlay) overlay.classList.add('hidden');
+      overlay.classList.add('is-hidden');
       document.body.classList.remove('tlf-auth-required');
       return;
     }
+
+    lockSite();
 
     try {
       const response = await fetch('secret.json?v=' + Date.now());
       if (response.ok) {
         const data = await response.json();
-        const passwordInput = document.getElementById('tlf-auth-password');
-        const submitBtn = document.getElementById('tlf-auth-submit');
-        const errorDiv = document.getElementById('tlf-auth-error');
+        authForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          checkPassword(passwordInput.value, data.hash);
+        });
 
-        overlay.classList.remove('hidden');
-
-        function checkPassword() {
-          const password = passwordInput.value;
-          if (verifyApr1Password(password, data.hash)) {
-            sessionStorage.setItem('tlf_auth', 'true');
-            overlay.classList.add('hidden');
-            document.body.classList.remove('tlf-auth-required');
-          } else {
-            passwordInput.classList.add('error');
-            errorDiv.classList.add('show');
-            passwordInput.focus();
-            setTimeout(() => {
-              passwordInput.classList.remove('error');
-              errorDiv.classList.remove('show');
-            }, 3000);
-          }
-        }
-
-        submitBtn.addEventListener('click', checkPassword);
-        passwordInput.addEventListener('keypress', function(e) {
+        passwordInput.addEventListener('keydown', function(e) {
           if (e.key === 'Enter') {
-            checkPassword();
+            e.preventDefault();
+            checkPassword(passwordInput.value, data.hash);
           }
         });
-        passwordInput.focus();
+      } else {
+        // secret.json unavailable => disable auth gate
+        overlay.classList.add('is-hidden');
+        document.body.classList.remove('tlf-auth-required');
       }
     } catch (e) {
       // secret.json not found, auth disabled
-      if (overlay) overlay.classList.add('hidden');
+      overlay.classList.add('is-hidden');
       document.body.classList.remove('tlf-auth-required');
-      }
+    }
   }
 
   initAuth();

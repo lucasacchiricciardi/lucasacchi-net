@@ -1,6 +1,8 @@
 // Test per il main thread - language switcher functionality
 import { test, describe } from 'node:test';
 import assert from 'node:assert';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 // Simula il DOM environment per i test
 global.document = {
@@ -189,5 +191,14 @@ describe('Main Thread - Existing Functionality Tests', () => {
     
     assert.strictEqual(typeof phoneEl, 'object', 'Phone element should exist');
     assert.strictEqual(typeof emailEl, 'object', 'Email element should exist');
+  });
+
+  test('AUTH MODAL: Auth form and fields should exist in HTML', () => {
+    // Source-level guard to keep auth modal structure stable
+    const html = readFileSync(join(process.cwd(), 'src', 'home', 'index.html'), 'utf-8');
+    assert.strictEqual(html.includes('id="tlf-auth-form"'), true, 'Auth form should exist');
+    assert.strictEqual(html.includes('id="tlf-auth-password"'), true, 'Auth password input should exist');
+    assert.strictEqual(html.includes('id="tlf-auth-submit"'), true, 'Auth submit button should exist');
+    assert.strictEqual(html.includes('.tlf-auth-overlay.is-hidden'), true, 'Auth overlay hidden class rule should exist');
   });
 });
