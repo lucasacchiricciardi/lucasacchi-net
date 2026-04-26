@@ -35,6 +35,13 @@ const itTranslations = {
     articlesNotFound: "No articles available in this language"
   },
   
+  article: {
+    readMore: "Leggi di più",
+    backToBlog: "Torna al Blog",
+    shareOn: "Condividi su",
+    copyLink: "Copia link"
+  },
+  
   externalVectors: {
     linkedin: "LinkedIn",
     youtube: "YouTube"
@@ -131,6 +138,13 @@ const enTranslations = {
     searchArticles: "Search articles",
     noArticlesFound: "No articles found for this language",
     articlesNotFound: "No articles available in this language"
+  },
+  
+  article: {
+    readMore: "Read more",
+    backToBlog: "Back to Blog",
+    shareOn: "Share on",
+    copyLink: "Copy link"
   },
   
   externalVectors: {

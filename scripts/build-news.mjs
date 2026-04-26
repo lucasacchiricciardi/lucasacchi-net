@@ -159,11 +159,59 @@ function generateTailwindCSS() {
   }
 }
 
+function generateArticlePage(article, template, translations) {
+  const slug = article.id;
+  const lang = article.lang || 'it';
+  const t = translations[lang];
+  
+  // Generate excerpt (first 150 chars)
+  const plainText = stripHtml(article.html || article.content);
+  const excerpt = plainText.slice(0, 150).trim() + (plainText.length > 150 ? '...' : '');
+  
+  // Generate ISO date
+  const dateISO = article.date || new Date().toISOString().split('T')[0];
+  
+  // Generate tags HTML
+  const tagsHtml = (article.tags || [])
+    .map(tag => `<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">${tag}</span>`)
+    .join('\n        ');
+  
+  // Generate OG tags for article tags
+  const ogTags = (article.tags || [])
+    .map(tag => `<meta property="article:tag" content="${tag}"/>`)
+    .join('\n');
+  
+  const articleUrl = `https://lucasacchi.net/blog/${slug}/`;
+  
+  // Replace placeholders
+  let html = template
+    .replace(/\{\{LANG\}\}/g, lang)
+    .replace(/\{\{TITLE\}\}/g, article.title)
+    .replace(/\{\{SLUG\}\}/g, slug)
+    .replace(/\{\{EXCERPT\}\}/g, excerpt)
+    .replace(/\{\{DATE\}\}/g, article.date || '')
+    .replace(/\{\{DATE_ISO\}\}/g, dateISO)
+    .replace(/\{\{CONTENT_HTML\}\}/g, article.html)
+    .replace(/\{\{TAGS_HTML\}\}/g, tagsHtml)
+    .replace(/\{\{OG_TAGS\}\}/g, ogTags)
+    .replace(/\{\{ARTICLE_URL\}\}/g, articleUrl)
+    .replace(/\{\{BACK_TO_BLOG\}\}/g, t.backToBlog)
+    .replace(/\{\{ABOUT\}\}/g, t.about)
+    .replace(/\{\{CONTACT\}\}/g, t.contact)
+    .replace(/\{\{COORDINATES\}\}/g, t.coordinates);
+  
+  return html;
+}
+
+function stripHtml(html) {
+  return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+}
+
 function assembleDist() {
   if (existsSync(DIST)) {
     for (const entry of readdirSync(DIST)) {
       const full = join(DIST, entry);
-      if (entry === 'news') continue;
+      if (entry === 'news' || entry === 'blog') continue;
       rmSync(full, { recursive: true, force: true });
     }
   }
@@ -245,6 +293,41 @@ function assembleDist() {
   const feed = buildNewsFeed(SRC_RAW);
   writeFileSync(FEED_OUTPUT, JSON.stringify(feed, null, 2) + '\n', 'utf-8');
 
+  // Generate individual article pages
+  const templatePath = join('src', 'article-template.html');
+  if (existsSync(templatePath)) {
+    const template = readFileSync(templatePath, 'utf-8');
+    const blogDir = join(DIST, 'blog');
+    mkdirSync(blogDir, { recursive: true });
+    
+    const translations = {
+      it: {
+        backToBlog: 'Torna al Blog',
+        about: 'Chi Sono',
+        contact: 'Contattami',
+        coordinates: 'Coordinates'
+      },
+      en: {
+        backToBlog: 'Back to Blog',
+        about: 'About Me',
+        contact: 'Contact Me',
+        coordinates: 'Coordinates'
+      }
+    };
+    
+    for (const article of feed.articles) {
+      const slug = article.id;
+      const articleDir = join(blogDir, slug);
+      mkdirSync(articleDir, { recursive: true });
+      
+      const articleHtml = generateArticlePage(article, template, translations);
+      writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
+      console.log(`Generated article page: blog/${slug}/index.html`);
+    }
+  } else {
+    console.warn(`Warning: ${templatePath} not found, skipping article page generation`);
+  }
+
   writeFileSync(join(DIST, 'version.txt'), APP_VERSION + '\n', 'utf-8');
 
   const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
@@ -252,7 +335,7 @@ function assembleDist() {
 
   const sitemapEntries = feed.articles
     .filter(a => a.date)
-    .map(a => `  <url>\n    <loc>${SITE_URL}/</loc>\n    <lastmod>${a.date}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
+    .map(a => `  <url>\n    <loc>${SITE_URL}/blog/${a.id}/</loc>\n    <lastmod>${a.date}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
     .join('\n');
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n${sitemapEntries}\n</urlset>\n`;
   writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml, 'utf-8');

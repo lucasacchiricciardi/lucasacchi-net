@@ -188,10 +188,23 @@ function retrieveAndDecompress(lang) {
 
       if (article.content) {
         var excerpt = document.createElement('p');
-        excerpt.className = 'font-body text-sm text-on-surface-variant leading-relaxed mt-3';
+        excerpt.className = 'font-body text-sm text-on-surface-variant leading-relaxed mt-3 mb-4';
         var text = stripHtml(article.html || article.content);
         excerpt.textContent = text.split(' ').slice(0, 50).join(' ') + '...';
         card.appendChild(excerpt);
+        
+        // Read more button
+        var readMoreBtn = document.createElement('a');
+        readMoreBtn.href = '/blog/' + article.id + '/';
+        readMoreBtn.className = 'inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-label text-sm uppercase tracking-wider';
+        var readMoreText = document.createElement('span');
+        readMoreText.textContent = window.i18n.t('article.readMore', currentLang);
+        readMoreBtn.appendChild(readMoreText);
+        var arrowIcon = document.createElement('span');
+        arrowIcon.className = 'material-symbols-outlined text-sm';
+        arrowIcon.textContent = 'arrow_forward';
+        readMoreBtn.appendChild(arrowIcon);
+        card.appendChild(readMoreBtn);
       }
 
       if (allArticles.length > 0) {

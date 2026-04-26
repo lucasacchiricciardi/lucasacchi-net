@@ -385,4 +385,23 @@ describe('markdownToHtml — unit tests', () => {
     assert.ok(html.includes('<p>Paragraph with <strong>bold</strong> and <a href="url">link</a>.</p>'));
     assert.ok(html.includes('<ul><li>List item</li></ul>'));
   });
+
+  it('should generate individual article pages in dist/blog/{slug}/', () => {
+    execSync(`node ${SCRIPT}`, { cwd: ROOT });
+    const blogDir = join(DIST, 'blog');
+    assert.ok(existsSync(blogDir), 'dist/blog/ directory should exist');
+    
+    // Check that at least one article page was generated
+    const feed = JSON.parse(readFileSync(FEED_OUTPUT, 'utf-8'));
+    if (feed.articles.length > 0) {
+      const firstArticle = feed.articles[0];
+      const articlePage = join(blogDir, firstArticle.id, 'index.html');
+      assert.ok(existsSync(articlePage), `Article page ${firstArticle.id}/index.html should exist`);
+      
+      const pageContent = readFileSync(articlePage, 'utf-8');
+      assert.ok(pageContent.includes(firstArticle.title), 'Article page should contain article title');
+      assert.ok(pageContent.includes('<!DOCTYPE html>'), 'Article page should be valid HTML');
+      assert.ok(pageContent.includes('article-content'), 'Article page should include article-content class');
+    }
+  });
 });
