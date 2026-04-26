@@ -49,68 +49,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <!-- Tailwind CSS will be generated during build -->
 <link rel="stylesheet" href="assets/tailwind.css"/>
-<script>
-(function() {
-  function verifyApr1Password(plainPassword, aprHash) {
-    // APR1-MD5 implementation
-    // Simplified for demo - in production use proper library
-    const salt = aprHash.split('$')[2];
-    const hash = aprHash.split('$')[3];
-    // For demo, assume password 'dev123' matches the hash in secret.json
-    return plainPassword === 'dev123';
-  }
-
-  async function initAuth() {
-    // Check if already authenticated
-    if (sessionStorage.getItem('tlf_auth') === 'true') {
-      return;
-    }
-
-    try {
-      const response = await fetch('secret.json');
-      if (response.ok) {
-        const data = await response.json();
-        const overlay = document.getElementById('tlf-auth-overlay');
-        const passwordInput = document.getElementById('tlf-auth-password');
-        const submitBtn = document.getElementById('tlf-auth-submit');
-        const errorDiv = document.getElementById('tlf-auth-error');
-
-        document.body.classList.add('tlf-auth-required');
-        overlay.classList.remove('hidden');
-
-        function checkPassword() {
-          const password = passwordInput.value;
-          if (verifyApr1Password(password, data.hash)) {
-            sessionStorage.setItem('tlf_auth', 'true');
-            overlay.classList.add('hidden');
-            document.body.classList.remove('tlf-auth-required');
-          } else {
-            passwordInput.classList.add('error');
-            errorDiv.classList.add('show');
-            passwordInput.focus();
-            setTimeout(() => {
-              passwordInput.classList.remove('error');
-              errorDiv.classList.remove('show');
-            }, 3000);
-          }
-        }
-
-        submitBtn.addEventListener('click', checkPassword);
-        passwordInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            checkPassword();
-          }
-        });
-        passwordInput.focus();
-      }
-    } catch (e) {
-      // secret.json not found, auth disabled
-    }
-  }
-
-  initAuth();
-})();
-</script>
 <script src="vendor/lz-string.min.js"></script>
 <script src="i18n.js"></script>
 <script id="tailwind-config" type="application/json">
@@ -641,4 +579,66 @@
 </footer>
 <script src="analytics.js"></script>
 <script src="main.js"></script>
+<script>
+(function() {
+  function verifyApr1Password(plainPassword, aprHash) {
+    // APR1-MD5 implementation
+    // Simplified for demo - in production use proper library
+    const salt = aprHash.split('$')[2];
+    const hash = aprHash.split('$')[3];
+    // For demo, assume password 'dev123' matches the hash in secret.json
+    return plainPassword === 'dev123';
+  }
+
+  async function initAuth() {
+    // Check if already authenticated
+    if (sessionStorage.getItem('tlf_auth') === 'true') {
+      return;
+    }
+
+    try {
+      const response = await fetch('secret.json');
+      if (response.ok) {
+        const data = await response.json();
+        const overlay = document.getElementById('tlf-auth-overlay');
+        const passwordInput = document.getElementById('tlf-auth-password');
+        const submitBtn = document.getElementById('tlf-auth-submit');
+        const errorDiv = document.getElementById('tlf-auth-error');
+
+        document.body.classList.add('tlf-auth-required');
+        overlay.classList.remove('hidden');
+
+        function checkPassword() {
+          const password = passwordInput.value;
+          if (verifyApr1Password(password, data.hash)) {
+            sessionStorage.setItem('tlf_auth', 'true');
+            overlay.classList.add('hidden');
+            document.body.classList.remove('tlf-auth-required');
+          } else {
+            passwordInput.classList.add('error');
+            errorDiv.classList.add('show');
+            passwordInput.focus();
+            setTimeout(() => {
+              passwordInput.classList.remove('error');
+              errorDiv.classList.remove('show');
+            }, 3000);
+          }
+        }
+
+        submitBtn.addEventListener('click', checkPassword);
+        passwordInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            checkPassword();
+          }
+        });
+        passwordInput.focus();
+      }
+    } catch (e) {
+      // secret.json not found, auth disabled
+    }
+  }
+
+  initAuth();
+})();
+</script>
 </body></html>
