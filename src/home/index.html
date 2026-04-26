@@ -576,7 +576,8 @@ body.tlf-auth-required #tlf-auth-overlay {
 </div>
 <div class="md:col-span-2">
 <span class="block text-on-surface font-semibold mb-4 border-b border-outline-variant/20 pb-2" data-i18n="footer.contact">Contact</span>
-<form id="contact-form" class="space-y-3">
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-3">
+<input type="hidden" name="access_key" value="6d6da097-4bf5-42e2-9091-8872ff3b535d">
 <input type="text" name="name" placeholder="Name" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none" data-i18n-placeholder="footer.name"/>
 <input type="email" name="email" placeholder="Email" required class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none" data-i18n-placeholder="footer.email"/>
 <textarea name="message" placeholder="Message" required rows="3" class="w-full bg-surface border border-outline-variant/20 text-on-surface px-3 py-2 text-xs font-label placeholder:text-on-surface-variant focus:border-primary focus:outline-none rounded-none resize-none" data-i18n-placeholder="footer.message"></textarea>
