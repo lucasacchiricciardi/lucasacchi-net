@@ -188,10 +188,24 @@ tailwind.config = {
       
       updateLanguageUI(currentLang);
       
-      var itBtn = document.getElementById('lang-it-btn');
-      var enBtn = document.getElementById('lang-en-btn');
-      if (itBtn) itBtn.addEventListener('click', function() { if (currentLang !== 'it') switchLanguage('it'); });
-      if (enBtn) enBtn.addEventListener('click', function() { if (currentLang !== 'en') switchLanguage('en'); });
+      function attachLangListeners() {
+        var itBtn = document.getElementById('lang-it-btn');
+        var enBtn = document.getElementById('lang-en-btn');
+        if (itBtn) itBtn.addEventListener('click', function() { 
+          if (currentLang !== 'it') switchLanguage('it'); 
+        });
+        if (enBtn) enBtn.addEventListener('click', function() { 
+          if (currentLang !== 'en') switchLanguage('en'); 
+        });
+      }
+      
+      // Attach listeners after i18n is ready
+      if (window.i18n) {
+        attachLangListeners();
+      } else {
+        // Retry if i18n not loaded yet
+        setTimeout(attachLangListeners, 500);
+      }
     }
   })();
 </script>
