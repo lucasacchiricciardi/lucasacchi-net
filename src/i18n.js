@@ -102,6 +102,16 @@ const itTranslations = {
     failedToInitializeNews: "Failed to initialize news. Please refresh the page.",
     unableToLoadNews: "Unable to load news feed. Please refresh.",
     newsUnavailable: "News temporarily unavailable. Please try again later."
+  },
+
+  thankYou: {
+    title: "Grazie — LucaSacchi.net",
+    pageTitle: "Grazie — LucaSacchi.net",
+    heading: "Grazie!",
+    subtitle: "Grazie per avermi contattato",
+    message: "Il tuo messaggio è stato ricevuto. Lo leggerò e ti risponderò il prima possibile.",
+    note: "Nota: controlla la tua casella email e la cartella spam per la mia risposta.",
+    backHome: "Torna alla Home"
   }
 };
 
@@ -207,6 +217,16 @@ const enTranslations = {
     failedToInitializeNews: "Failed to initialize news. Please refresh the page.",
     unableToLoadNews: "Unable to load news feed. Please refresh.",
     newsUnavailable: "News temporarily unavailable. Please try again later."
+  },
+
+  thankYou: {
+    title: "Thank You — LucaSacchi.net",
+    pageTitle: "Thank You — LucaSacchi.net",
+    heading: "Thank You!",
+    subtitle: "Thank you for reaching out",
+    message: "Your message has been received. I'll review it and get back to you as soon as possible.",
+    note: "Note: Please check your email inbox and spam folder for my response.",
+    backHome: "Back to Home"
   }
 };
 
