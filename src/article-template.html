@@ -268,6 +268,11 @@ body {
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
 <p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-white iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+</div>
 </div>
 </div>
 </footer>
@@ -298,6 +303,24 @@ if (copyLinkBtn && copyIcon) {
 </script>
 
 <script async src="/analytics.js"></script>
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
 
 </body>
 </html>

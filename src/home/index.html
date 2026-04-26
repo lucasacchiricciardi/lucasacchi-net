@@ -594,6 +594,11 @@ body.tlf-auth-required #tlf-auth-overlay {
 <p data-i18n="footer.allRightsReserved">All Rights Reserved.</p>
 <p class="mt-2" id="copyright-years"></p>
 <p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics: anonymous, cookie-free</p>
+<div class="mt-4 flex gap-3">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed text-[9px] hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+</div>
 </div>
 </div>
 </div>
@@ -693,5 +698,22 @@ body.tlf-auth-required #tlf-auth-overlay {
 
   initAuth();
 })();
+</script>
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
 </script>
 </body></html>
