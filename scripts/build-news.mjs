@@ -143,6 +143,22 @@ function buildNewsFeed(srcDir) {
   return { articles: sorted, version: APP_VERSION };
 }
 
+function groupArticlesBySlug(articles) {
+  const groups = {};
+  for (const article of articles) {
+    const baseSlug = article.id.replace(/-en$/, '');
+    if (!groups[baseSlug]) {
+      groups[baseSlug] = { it: null, en: null };
+    }
+    if (article.lang === 'en') {
+      groups[baseSlug].en = article;
+    } else {
+      groups[baseSlug].it = article;
+    }
+  }
+  return groups;
+}
+
 function generateTailwindCSS() {
   const assetsDir = join(DIST, 'assets');
   if (!existsSync(assetsDir)) {
@@ -159,8 +175,8 @@ function generateTailwindCSS() {
   }
 }
 
-function generateArticlePage(article, template, translations) {
-  const slug = article.id;
+function generateArticlePage(article, template, translations, italianFallback = null) {
+  const slug = article.id.replace(/-en$/, '');
   const lang = article.lang || 'it';
   const t = translations[lang];
   
@@ -183,6 +199,16 @@ function generateArticlePage(article, template, translations) {
   
   const articleUrl = `https://lucasacchi.net/blog/${slug}/`;
   
+  // Add i18n fallback wrapper if this is EN version and Italian fallback exists
+  let contentHtml = article.html;
+  if (lang === 'en' && italianFallback) {
+    // Wrap content in data-i18n div with Italian fallback text
+    contentHtml = `<div data-i18n-fallback="it">${italianFallback.html}</div>\n${contentHtml}`;
+  } else if (lang === 'it') {
+    // Italian content is the fallback
+    contentHtml = `<div data-i18n-primary="it">${contentHtml}</div>`;
+  }
+  
   // Replace placeholders
   let html = template
     .replace(/\{\{LANG\}\}/g, lang)
@@ -191,7 +217,7 @@ function generateArticlePage(article, template, translations) {
     .replace(/\{\{EXCERPT\}\}/g, excerpt)
     .replace(/\{\{DATE\}\}/g, article.date || '')
     .replace(/\{\{DATE_ISO\}\}/g, dateISO)
-    .replace(/\{\{CONTENT_HTML\}\}/g, article.html)
+    .replace(/\{\{CONTENT_HTML\}\}/g, contentHtml)
     .replace(/\{\{TAGS_HTML\}\}/g, tagsHtml)
     .replace(/\{\{OG_TAGS\}\}/g, ogTags)
     .replace(/\{\{ARTICLE_URL\}\}/g, articleUrl)
@@ -325,14 +351,32 @@ function assembleDist() {
       }
     };
     
-    for (const article of feed.articles) {
-      const slug = article.id;
-      const articleDir = join(blogDir, slug);
-      mkdirSync(articleDir, { recursive: true });
+    // Group articles by slug to pair IT/EN versions
+    const articleGroups = groupArticlesBySlug(feed.articles);
+    
+    for (const baseSlug in articleGroups) {
+      const group = articleGroups[baseSlug];
       
-      const articleHtml = generateArticlePage(article, template, translations);
-      writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
-      console.log(`Generated article page: blog/${slug}/index.html`);
+      // Generate Italian version (always at /blog/{slug}/)
+      if (group.it) {
+        const articleDir = join(blogDir, baseSlug);
+        mkdirSync(articleDir, { recursive: true });
+        
+        const articleHtml = generateArticlePage(group.it, template, translations, null);
+        writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
+        console.log(`Generated article page: blog/${baseSlug}/index.html (IT)`);
+      }
+      
+      // Generate English version (at /blog/{slug}-en/)
+      if (group.en) {
+        const articleDir = join(blogDir, baseSlug + '-en');
+        mkdirSync(articleDir, { recursive: true });
+        
+        // Pass Italian version as fallback for SEO
+        const articleHtml = generateArticlePage(group.en, template, translations, group.it);
+        writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
+        console.log(`Generated article page: blog/${baseSlug}-en/index.html (EN)`);
+      }
     }
   } else {
     console.warn(`Warning: ${templatePath} not found, skipping article page generation`);
@@ -343,11 +387,28 @@ function assembleDist() {
   const robotsTxt = `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
   writeFileSync(join(DIST, 'robots.txt'), robotsTxt, 'utf-8');
 
-  const sitemapEntries = feed.articles
-    .filter(a => a.date)
-    .map(a => `  <url>\n    <loc>${SITE_URL}/blog/${a.id}/</loc>\n    <lastmod>${a.date}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`)
-    .join('\n');
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n${sitemapEntries}\n</urlset>\n`;
+  // Generate sitemap entries for both IT and EN versions
+  const articleGroups = groupArticlesBySlug(feed.articles);
+  const sitemapEntries = [];
+  
+  for (const baseSlug in articleGroups) {
+    const group = articleGroups[baseSlug];
+    const date = group.it?.date || group.en?.date;
+    
+    if (date) {
+      // IT version
+      if (group.it) {
+        sitemapEntries.push(`  <url>\n    <loc>${SITE_URL}/blog/${baseSlug}/</loc>\n    <lastmod>${date}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`);
+      }
+      
+      // EN version
+      if (group.en) {
+        sitemapEntries.push(`  <url>\n    <loc>${SITE_URL}/blog/${baseSlug}-en/</loc>\n    <lastmod>${date}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`);
+      }
+    }
+  }
+  
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n${sitemapEntries.join('\n')}\n</urlset>\n`;
   writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml, 'utf-8');
 
   console.log(`Assembled ${DIST}/ with ${feed.articles.length} article(s)`);
