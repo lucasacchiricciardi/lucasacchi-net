@@ -597,7 +597,7 @@
     }
 
     try {
-      const response = await fetch('secret.json');
+      const response = await fetch('secret.json?v=' + Date.now());
       if (response.ok) {
         const data = await response.json();
         const overlay = document.getElementById('tlf-auth-overlay');
