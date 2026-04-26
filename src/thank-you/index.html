@@ -137,16 +137,19 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
   var currentLang = getPreferredLanguage();
   
   function initLanguage() {
-    if (!window.i18n || !window.i18n.initI18n) {
+    if (!window.i18n || !window.i18n.initI18n || !window.i18n.t) {
+      console.log('Waiting for i18n...', window.i18n);
       setTimeout(initLanguage, 100);
       return;
     }
     
+    console.log('i18n loaded, initializing with lang:', currentLang);
     window.i18n.initI18n(currentLang);
     
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
       var text = window.i18n.t(key, currentLang);
+      console.log('Init translate:', key, '→', text);
       if (text) el.textContent = text;
     });
 
@@ -187,6 +190,7 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
       var text = window.i18n.t(key, lang);
+      console.log('Translating:', key, '→', text, 'lang:', lang);
       if (text) {
         el.textContent = text;
       }
