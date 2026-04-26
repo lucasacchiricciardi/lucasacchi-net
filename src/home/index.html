@@ -111,8 +111,11 @@
             font-feature-settings: 'liga';
             -webkit-font-smoothing: antialiased;
         }
-        body.tlf-auth-required > :not(#tlf-auth-overlay) {
+        body.tlf-auth-required {
             opacity: 0;
+        }
+        body.tlf-auth-required #tlf-auth-overlay {
+            opacity: 1;
         }
         .tlf-auth-overlay {
             position: fixed;
