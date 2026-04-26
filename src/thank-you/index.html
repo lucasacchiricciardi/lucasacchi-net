@@ -138,7 +138,12 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 
   var currentLang = getPreferredLanguage();
   
-  if (window.i18n && window.i18n.initI18n) {
+  function initLanguage() {
+    if (!window.i18n || !window.i18n.initI18n) {
+      setTimeout(initLanguage, 100);
+      return;
+    }
+    
     window.i18n.initI18n(currentLang);
     
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
@@ -153,63 +158,61 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       if (text) el.placeholder = text;
     });
 
-      document.title = window.i18n.t('thankYou.pageTitle', currentLang, 'Thank You — LucaSacchi.net');
-      
-      // Language switching
-      function setLanguageCookie(lang) {
-        document.cookie = 'lsn_lang=' + lang + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
-      }
-      
-      function updateLanguageUI(lang) {
-        var itBtn = document.getElementById('lang-it-btn');
-        var enBtn = document.getElementById('lang-en-btn');
-        if (itBtn) {
-          itBtn.classList.toggle('border-primary', lang === 'it');
-          itBtn.classList.toggle('border-outline-variant/20', lang !== 'it');
-        }
-        if (enBtn) {
-          enBtn.classList.toggle('border-primary', lang === 'en');
-          enBtn.classList.toggle('border-outline-variant/20', lang !== 'en');
-        }
-      }
-      
-      function switchLanguage(lang) {
-        currentLang = lang;
-        setLanguageCookie(lang);
-        updateLanguageUI(lang);
-        window.i18n.initI18n(lang);
-        
-        document.querySelectorAll('[data-i18n]').forEach(function(el) {
-          var key = el.getAttribute('data-i18n');
-          var text = window.i18n.t(key, lang);
-          if (text) el.textContent = text;
-        });
-        
-        document.title = window.i18n.t('thankYou.pageTitle', lang, 'Thank You — LucaSacchi.net');
-      }
-      
-      updateLanguageUI(currentLang);
-      
-      function attachLangListeners() {
-        var itBtn = document.getElementById('lang-it-btn');
-        var enBtn = document.getElementById('lang-en-btn');
-        if (itBtn) itBtn.addEventListener('click', function() { 
-          if (currentLang !== 'it') switchLanguage('it'); 
-        });
-        if (enBtn) enBtn.addEventListener('click', function() { 
-          if (currentLang !== 'en') switchLanguage('en'); 
-        });
-      }
-      
-      // Attach listeners after i18n is ready
-      if (window.i18n) {
-        attachLangListeners();
-      } else {
-        // Retry if i18n not loaded yet
-        setTimeout(attachLangListeners, 500);
-      }
+    document.title = window.i18n.t('thankYou.pageTitle', currentLang, 'Thank You — LucaSacchi.net');
+    
+    attachLangListeners();
+  }
+  
+  function setLanguageCookie(lang) {
+    document.cookie = 'lsn_lang=' + lang + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+  }
+  
+  function updateLanguageUI(lang) {
+    var itBtn = document.getElementById('lang-it-btn');
+    var enBtn = document.getElementById('lang-en-btn');
+    if (itBtn) {
+      itBtn.classList.toggle('border-primary', lang === 'it');
+      itBtn.classList.toggle('border-outline-variant/20', lang !== 'it');
     }
-  })();
+    if (enBtn) {
+      enBtn.classList.toggle('border-primary', lang === 'en');
+      enBtn.classList.toggle('border-outline-variant/20', lang !== 'en');
+    }
+  }
+  
+  function switchLanguage(lang) {
+    currentLang = lang;
+    setLanguageCookie(lang);
+    updateLanguageUI(lang);
+    window.i18n.initI18n(lang);
+    
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      var text = window.i18n.t(key, lang);
+      if (text) el.textContent = text;
+    });
+    
+    document.title = window.i18n.t('thankYou.pageTitle', lang, 'Thank You — LucaSacchi.net');
+  }
+  
+  function attachLangListeners() {
+    var itBtn = document.getElementById('lang-it-btn');
+    var enBtn = document.getElementById('lang-en-btn');
+    if (itBtn) itBtn.addEventListener('click', function() { 
+      if (currentLang !== 'it') switchLanguage('it'); 
+    });
+    if (enBtn) enBtn.addEventListener('click', function() { 
+      if (currentLang !== 'en') switchLanguage('en'); 
+    });
+  }
+  
+  // Initialize after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguage);
+  } else {
+    initLanguage();
+  }
+})();
 </script>
 <!-- iubenda consent disabled due to CDN DNS issues on GitHub Pages -->
 <!-- Re-enable when self-hosting or using different CDN -->
