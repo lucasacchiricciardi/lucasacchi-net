@@ -306,9 +306,17 @@ function retrieveAndDecompress(lang) {
     function setupSearch() {
       var searchInput = document.getElementById('news-search');
       if (searchInput) {
+        // ⚡ Bolt Performance Optimization
+        // Impact: Reduces DOM re-renders and CPU usage by limiting filter/render
+        // frequency while typing. Debouncing the input by 300ms prevents unnecessary
+        // intermediate states from rendering.
+        var debounceTimeout;
         searchInput.addEventListener('input', function(e) {
-          var filtered = filterArticles(e.target.value);
-          renderArticles(filtered);
+          clearTimeout(debounceTimeout);
+          debounceTimeout = setTimeout(function() {
+            var filtered = filterArticles(e.target.value);
+            renderArticles(filtered);
+          }, 300);
         });
       }
     }
