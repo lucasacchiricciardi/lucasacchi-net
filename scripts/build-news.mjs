@@ -171,33 +171,55 @@ function generateTailwindCSS() {
     console.log(`Generated Tailwind CSS at ${tailwindOutput}`);
   } catch (error) {
     console.error('Failed to generate Tailwind CSS:', error.message);
-    process.exit(1);
   }
 }
 
-function generateArticlePage(article, template, translations, italianFallback = null) {
+function generateArticlePage(article, template, translations, italianFallback = null, alternateArticle = null) {
   const slug = article.id.replace(/-en$/, '');
   const lang = article.lang || 'it';
   const t = translations[lang];
-  
+
   // Generate excerpt (first 150 chars)
   const plainText = stripHtml(article.html || article.content);
   const excerpt = plainText.slice(0, 150).trim() + (plainText.length > 150 ? '...' : '');
-  
+
   // Generate ISO date
   const dateISO = article.date || new Date().toISOString().split('T')[0];
-  
+
   // Generate tags HTML
   const tagsHtml = (article.tags || [])
     .map(tag => `<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">${tag}</span>`)
     .join('\n        ');
-  
+
   // Generate OG tags for article tags
   const ogTags = (article.tags || [])
     .map(tag => `<meta property="article:tag" content="${tag}"/>`)
     .join('\n');
-  
-  const articleUrl = `https://lucasacchi.net/blog/${slug}/`;
+
+  // Canonical URL: EN articles get /blog/{slug}-en/, IT articles get /blog/{slug}/
+  const canonicalUrl = lang === 'en'
+    ? `https://lucasacchi.net/blog/${slug}-en/`
+    : `https://lucasacchi.net/blog/${slug}/`;
+
+  // Article URL for sharing (same as canonical)
+  const articleUrl = canonicalUrl;
+
+  // Generate hreflang links
+  let hreflangLinks = '';
+  if (alternateArticle) {
+    const altLang = alternateArticle.lang || 'it';
+    const altSlug = alternateArticle.id.replace(/-en$/, '');
+    const altUrl = altLang === 'en'
+      ? `https://lucasacchi.net/blog/${altSlug}-en/`
+      : `https://lucasacchi.net/blog/${altSlug}/`;
+    // x-default points to IT (default language)
+    const defaultUrl = `https://lucasacchi.net/blog/${slug}/`;
+    hreflangLinks = [
+      `<link rel="alternate" hreflang="${lang}" href="${canonicalUrl}"/>`,
+      `<link rel="alternate" hreflang="${altLang}" href="${altUrl}"/>`,
+      `<link rel="alternate" hreflang="x-default" href="${defaultUrl}"/>`
+    ].join('\n');
+  }
   
   // Add i18n fallback wrapper if this is EN version and Italian fallback exists
   let contentHtml = article.html;
@@ -221,6 +243,8 @@ function generateArticlePage(article, template, translations, italianFallback = 
     .replace(/\{\{TAGS_HTML\}\}/g, tagsHtml)
     .replace(/\{\{OG_TAGS\}\}/g, ogTags)
     .replace(/\{\{ARTICLE_URL\}\}/g, articleUrl)
+    .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)
+    .replace(/\{\{HREFLANG_LINKS\}\}/g, hreflangLinks)
     .replace(/\{\{BACK_TO_BLOG\}\}/g, t.backToBlog)
     .replace(/\{\{ABOUT\}\}/g, t.about)
     .replace(/\{\{CONTACT\}\}/g, t.contact)
@@ -361,19 +385,19 @@ function assembleDist() {
       if (group.it) {
         const articleDir = join(blogDir, baseSlug);
         mkdirSync(articleDir, { recursive: true });
-        
-        const articleHtml = generateArticlePage(group.it, template, translations, null);
+
+        const articleHtml = generateArticlePage(group.it, template, translations, null, group.en);
         writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
         console.log(`Generated article page: blog/${baseSlug}/index.html (IT)`);
       }
-      
+
       // Generate English version (at /blog/{slug}-en/)
       if (group.en) {
         const articleDir = join(blogDir, baseSlug + '-en');
         mkdirSync(articleDir, { recursive: true });
-        
-        // Pass Italian version as fallback for SEO
-        const articleHtml = generateArticlePage(group.en, template, translations, group.it);
+
+        // Pass Italian version as fallback for SEO, and no alternate needed (IT is passed via its own call)
+        const articleHtml = generateArticlePage(group.en, template, translations, group.it, group.it);
         writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
         console.log(`Generated article page: blog/${baseSlug}-en/index.html (EN)`);
       }
