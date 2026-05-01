@@ -19,6 +19,9 @@ Thumbs.db
 # Playwright MCP logs
 .playwright-mcp/
 
+# Project context (local only)
+_context/
+
 # Dev-only artifacts
 AGENTS.md
 docs/
