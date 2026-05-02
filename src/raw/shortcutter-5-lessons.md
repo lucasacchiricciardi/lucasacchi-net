@@ -4,52 +4,42 @@ date: 2026-05-02
 tags: [ai, llm, whisper, self-hosted, python, open-source]
 ---
 
-Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo, modelli che vorrei provare.
+Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
 
-Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi meta delle informazioni.
+Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.
 
-Così oggi mi sono detto: "costruisco una pipeline che li scarica, li analizza con AI locale, mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti."
+Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti.
 
-Stamattina credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti, e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.
+Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.
 
-5 lezioni dalla giornata.
+Ecco 5 cose che ho imparato.
 
 ### 1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa
 
-Sempre con "anthropics/" davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fai affidare dopo.
+Sempre con `anthropics/` davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fidati dopo.
 
-### 2. Il fixer LLM che corregge 19 errori Whisper su un transcript lungo diventa peggio del raw sotto i 1500 caratteri
+### 2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri
 
-"Troppo prompt per troppo poco lavoro." Lezione: skip e basta. Se il testo e troppo corto per il modello, il fix non aggiunge valore, solo rumore.
+"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore — aggiunge rumore.
 
 ### 3. Un sanity check di 5 righe ha salvato la giornata
 
-Il LLM ha provato a sostituire il transcript con la description del video. Un "se differenza > 30%, torna al raw" ha bloccato il disastro. Sembra banale. E oro.
+Il LLM ha provato a sostituire il transcript con la description del video. Un "se la differenza è sopra il 30%, torna al raw" ha bloccato il disastro. Sembra banale. È oro.
 
-### 4. A volte non e la pipeline a sbagliare: e il creator che carica un video con l'audio mescolato
+### 4. A volte non è la pipeline a sbagliare: è il creator che ha caricato un video con l'audio mescolato
 
-Caso reale trovato oggi. La cosa piu onesta che il mio sistema fa e dire "non lo so" quando i dati sono incoerenti.
+Caso reale trovato oggi. La cosa più onesta che il mio sistema fa è dire "non lo so" quando i dati sono incoerenti.
 
-### 5. Le 3 regole che ripeto sempre ai miei studenti hanno fatto la differenza piu di qualsiasi prompt o LLM
+### 5. Le 3 regole che ripeto ai miei studenti hanno fatto più differenza di qualsiasi prompt o modello
 
-Safety first — sanity check, validazioni, fallback.
-Little often — 9 piccole versioni invece di un big-bang.
-Double check — un occhio attento ha trovato un bug Python (variable shadowing) che riduceva un transcript di 3.400 caratteri a 3. "ola". Tre caratteri. Senza accorgermi.
-
----
-
-La cosa che mi porto a casa: quando costruisci un sistema basato su LLM, non puoi sperare che il modello "si comporti bene". Devi assumera che fara casino e progettare resilienza intorno.
-
-La pipeline robusta e quella che intercetta i suoi stessi errori prima che lo facciano i tuoi utenti.
-
-Stack: Python, Whisper, Ollama (qwen3.5:4b + llava:7b), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.
-
-Grazie a Ziobuddalabs per il contenuto quotidiano di qualita che mi ha fatto venire voglia di costruire questo sistema.
+**Safety first** — sanity check, validazioni, fallback.  
+**Little often** — 9 piccole versioni invece di un big-bang.  
+**Double check** — un'occhiata attenta ha trovato un bug Python (variable shadowing) che riduceva un transcript da 3.400 caratteri a 3. "ola". Tre caratteri. Senza che me ne accorgessi.
 
 ---
 
-YouTube: youtube.com/@ziobuddalabs
-Repo: https://lnkd.in/dYFiM884
-Demo: https://lnkd.in/dRbMimgn
+La cosa che mi porto a casa: quando costruisci un sistema basato su LLM non puoi sperare che il modello si comporti bene. Devi assumere che farà casino e progettare la resilienza intorno a quello.
 
-Chi ha esperienze simili con modelli piccoli? Scrivimi nei commenti.
+La pipeline robusta è quella che intercetta i suoi stessi errori prima che li vedano i tuoi utenti.
+
+Stack: Python, Whisper, Ollama (qwen 2.5 4B + llava 7B), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.
