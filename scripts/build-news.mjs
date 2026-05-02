@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, copyFileSync, rmSync, statSync } from 'node:fs';
 import { join, basename, extname } from 'node:path';
 import { execSync } from 'node:child_process';
+import { chromium } from 'playwright';
 
 function copyDirectoryRecursive(src, dst) {
   mkdirSync(dst, { recursive: true });
@@ -252,6 +253,11 @@ function generateArticlePage(article, template, translations, italianFallback = 
   // Article URL for sharing (same as canonical)
   const articleUrl = canonicalUrl;
 
+  // OG image URL — generated at build time alongside index.html
+  const ogImageUrl = lang === 'en'
+    ? `https://lucasacchi.net/blog/${slug}-en/og.png`
+    : `https://lucasacchi.net/blog/${slug}/og.png`;
+
   // Generate hreflang links
   let hreflangLinks = '';
   if (alternateArticle) {
@@ -284,6 +290,7 @@ function generateArticlePage(article, template, translations, italianFallback = 
     .replace(/\{\{OG_TAGS\}\}/g, ogTags)
     .replace(/\{\{ARTICLE_URL\}\}/g, articleUrl)
     .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)
+    .replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl)
     .replace(/\{\{HREFLANG_LINKS\}\}/g, hreflangLinks)
     .replace(/\{\{BACK_TO_BLOG\}\}/g, t.backToBlog)
     .replace(/\{\{ABOUT\}\}/g, t.about)
@@ -476,6 +483,61 @@ function assembleDist() {
   writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml, 'utf-8');
 
   console.log(`Assembled ${DIST}/ with ${feed.articles.length} article(s)`);
+  return feed;
 }
 
-assembleDist();
+async function generateOgImages(articles, blogDir) {
+  const ogTemplatePath = join('src', 'og-template.html');
+  if (!existsSync(ogTemplatePath)) {
+    console.warn('Warning: src/og-template.html not found, skipping OG image generation');
+    return;
+  }
+
+  const ogTemplate = readFileSync(ogTemplatePath, 'utf-8');
+  const articleGroups = groupArticlesBySlug(articles);
+
+  let browser;
+  try {
+    browser = await chromium.launch();
+    const page = await browser.newPage();
+    await page.setViewportSize({ width: 1200, height: 630 });
+
+    for (const baseSlug in articleGroups) {
+      const group = articleGroups[baseSlug];
+
+      const versions = [];
+      if (group.it) versions.push({ article: group.it, slug: baseSlug });
+      if (group.en) versions.push({ article: group.en, slug: baseSlug + '-en' });
+
+      for (const { article, slug } of versions) {
+        const lang = article.lang || 'it';
+        const label = lang === 'en' ? 'Blog Post' : 'Articolo';
+        const url = `lucasacchi.net/blog/${slug}/`;
+        const tagsHtml = (article.tags || [])
+          .slice(0, 5)
+          .map(t => `<span class="tag">${t}</span>`)
+          .join('');
+
+        const html = ogTemplate
+          .replace('{{TITLE}}', article.title)
+          .replace('{{LABEL}}', label)
+          .replace('{{TAGS}}', tagsHtml)
+          .replace('{{URL}}', url)
+          .replace('{{DATE}}', article.date || '');
+
+        await page.setContent(html, { waitUntil: 'networkidle' });
+
+        const outputPath = join(blogDir, slug, 'og.png');
+        await page.screenshot({ path: outputPath, type: 'png' });
+        console.log(`Generated OG image: blog/${slug}/og.png`);
+      }
+    }
+  } finally {
+    if (browser) await browser.close();
+  }
+}
+
+(async () => {
+  const feed = assembleDist();
+  await generateOgImages(feed.articles, join(DIST, 'blog'));
+})();
