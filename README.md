@@ -42,3 +42,5 @@ python3 -m http.server 8000 --directory dist  # Serve locale
 ## Licenza
 
 Vedere il file [LICENSE.txt](LICENSE.txt) per i termini completi.
+
+<!-- maintained by lucasacchiricciardi -->
