@@ -289,6 +289,18 @@ function retrieveAndDecompress(lang) {
 
     var allArticles = [];
     
+    // ⚡ Bolt: Added debounce to reduce unnecessary function calls on every keystroke
+    function debounce(func, wait) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
+
     function filterArticles(query) {
       var q = query.toLowerCase().trim();
       if (!q) {
@@ -306,10 +318,13 @@ function retrieveAndDecompress(lang) {
     function setupSearch() {
       var searchInput = document.getElementById('news-search');
       if (searchInput) {
-        searchInput.addEventListener('input', function(e) {
+        // ⚡ Bolt: Debounce the search input to reduce synchronous DOM re-renders
+        // Expected impact: Prevents unnecessary main thread blocking and DOM mutations
+        // on rapid keystrokes, improving perceived performance
+        searchInput.addEventListener('input', debounce(function(e) {
           var filtered = filterArticles(e.target.value);
           renderArticles(filtered);
-        });
+        }, 300));
       }
     }
     
