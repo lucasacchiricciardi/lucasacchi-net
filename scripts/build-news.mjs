@@ -1,5 +1,6 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, copyFileSync, rmSync, statSync } from 'node:fs';
 import { join, basename, extname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { chromium } from 'playwright';
 
@@ -537,7 +538,9 @@ async function generateOgImages(articles, blogDir) {
   }
 }
 
-(async () => {
-  const feed = assembleDist();
-  await generateOgImages(feed.articles, join(DIST, 'blog'));
-})();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  (async () => {
+    const feed = assembleDist();
+    await generateOgImages(feed.articles, join(DIST, 'blog'));
+  })();
+}

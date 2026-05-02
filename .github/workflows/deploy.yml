@@ -34,13 +34,13 @@ jobs:
           npm ci --force
           # Verify we're using Node 24
           node --version
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
       - name: Run tests
         run: |
           node --test scripts/build-news.test.mjs
           node --test src/home/newsWorker.test.mjs
           node --test src/home/main.test.mjs
-      - name: Install Playwright Chromium
-        run: npx playwright install chromium --with-deps
       - name: Build site
         run: node scripts/build-news.mjs
       - name: Start HTTP server for Lighthouse
