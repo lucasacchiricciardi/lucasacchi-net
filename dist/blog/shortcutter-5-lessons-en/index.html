@@ -10,19 +10,26 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="{{EXCERPT}}"/>
+<meta name="description" content="I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try. P..."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="{{TITLE}}"/>
-<meta property="og:description" content="{{EXCERPT}}"/>
+<meta property="og:title" content="Shortcutter — 5 lessons from a day of coding with local LLMs"/>
+<meta property="og:description" content="I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try. P..."/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="https://lucasacchi.net/favicon.svg"/>
-<meta property="og:url" content="https://lucasacchi.net/blog/{{SLUG}}/"/>
-<meta property="article:published_time" content="{{DATE_ISO}}"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
+<meta property="article:published_time" content="2026-05-02"/>
 <meta property="article:author" content="Luca Sacchi"/>
 <meta property="article:section" content="Technology"/>
-{{OG_TAGS}}
-<link rel="canonical" href="{{CANONICAL_URL}}"/>
-{{HREFLANG_LINKS}}
+<meta property="article:tag" content="ai"/>
+<meta property="article:tag" content="llm"/>
+<meta property="article:tag" content="whisper"/>
+<meta property="article:tag" content="self-hosted"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="open-source"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/shortcutter-5-lessons-en/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/shortcutter-5-lessons-en/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -31,13 +38,13 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>{{TITLE}} — LucaSacchi.net</title>
+<title>Shortcutter — 5 lessons from a day of coding with local LLMs — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{TITLE}}",
-  "datePublished": "{{DATE_ISO}}",
+  "headline": "Shortcutter — 5 lessons from a day of coding with local LLMs",
+  "datePublished": "2026-05-02",
   "author": {
     "@type": "Person",
     "name": "Luca Sacchi",
@@ -51,10 +58,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "{{EXCERPT}}",
+  "description": "I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try. P...",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lucasacchi.net/blog/{{SLUG}}/"
+    "@id": "https://lucasacchi.net/blog/shortcutter-5-lessons/"
   }
 }
 </script>
@@ -342,26 +349,52 @@ article > footer {
     <li><span class="text-outline-variant">/</span></li>
     <li><a href="/#blog" class="hover:text-primary transition-colors">Blog</a></li>
     <li><span class="text-outline-variant">/</span></li>
-    <li class="text-on-surface">{{SLUG}}</li>
+    <li class="text-on-surface">shortcutter-5-lessons-en</li>
   </ol>
 </nav>
 
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">{{TITLE}}</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Shortcutter — 5 lessons from a day of coding with local LLMs</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
-      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="{{DATE_ISO}}">{{DATE}}</time>
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-02">2026-05-02</time>
       
       <div class="flex flex-wrap gap-2">
-        {{TAGS_HTML}}
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span>
       </div>
     </div>
   </header>
   
   <div class="article-content">
-    {{CONTENT_HTML}}
+    <p>I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.</p>
+<p>Problem: the links aren't there. Not in the video description, not in the channel bio. Only spoken, in the short. And when you watch 30 videos a month, you lose half the information.</p>
+<p>So today I told myself: "I'll build a pipeline that downloads them, analyzes them with local AI, and produces a daily digest via email. All self-hosted, zero external APIs, zero recurring costs."</p>
+<p>This morning I thought it would take half a workday. Tonight I have 3 Python scripts, 9 iterative versions, 4 critical bugs fixed, and one certainty: small models betray you in creative ways.</p>
+<p>5 lessons from the day.</p>
+<h3>1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one</h3>
+<p>Always with "anthropics/" prepended. The fix: HEAD request. Does the repo exist? No? Drop the URL. Check first, trust after.</p>
+<h3>2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters</h3>
+<p>"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix adds noise, not value.</p>
+<h3>3. A 5-line sanity check saved the day.</h3>
+<p>The LLM tried to replace the transcript with the video description. A "if difference > 30%, fall back to raw" blocked the disaster. Sounds trivial. It's gold.</p>
+<h3>4. Sometimes it's not the pipeline that's wrong: it's the creator uploading a video with mixed audio.</h3>
+<p>Real case found today. The most honest thing my system does is say "I don't know" when the data is inconsistent.</p>
+<h3>5. The 3 rules I repeat to my students made more difference than any prompt or LLM</h3>
+<p>Safety first — sanity checks, validations, fallbacks.<br>Little often — 9 small versions instead of a big-bang.<br>Double check — a close look found a Python bug (variable shadowing) that reduced a 3,400-character transcript to 3. "ola". Three characters. Without exaggerating.</p>
+<hr>
+<p>What I take home: when you build an LLM-based system, you can't hope the model "behaves well." You have to assume it will mess up and build resilience around it.</p>
+<p>The robust pipeline is the one that intercepts its own errors before your users see them.</p>
+<p>Stack: Python, Whisper, Ollama (qwen3.5:4b + llava:7b), n8n, all on AMD 780M iGPU with ROCm. No cloud, no APIs.</p>
+<p>Thanks to Ziobuddalabs for the daily quality content that made me want to build this system.</p>
+<hr>
+<p>YouTube: youtube.com/@ziobuddalabs<br>Repo: https://lnkd.in/dYFiM884<br>Demo: https://lnkd.in/dRbMimgn</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -370,12 +403,12 @@ article > footer {
     <div class="flex flex-wrap gap-4 items-center justify-between">
       <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
-        <span>{{BACK_TO_BLOG}}</span>
+        <span>Back to Blog</span>
       </a>
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url={{ARTICLE_URL}}&title={{TITLE}}" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/shortcutter-5-lessons-en/&title=Shortcutter — 5 lessons from a day of coding with local LLMs" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -384,7 +417,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject={{TITLE}}&body={{TITLE}}%0A%0A{{ARTICLE_URL}}" 
+           href="mailto:?subject=Shortcutter — 5 lessons from a day of coding with local LLMs&body=Shortcutter — 5 lessons from a day of coding with local LLMs%0A%0Ahttps://lucasacchi.net/blog/shortcutter-5-lessons-en/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>
@@ -407,7 +440,7 @@ article > footer {
 <footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
 <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
 <div class="space-y-2">
-<span class="font-label text-[10px] uppercase tracking-widest text-outline">{{COORDINATES}}</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
 <p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
 </div>
 <div class="space-y-2">

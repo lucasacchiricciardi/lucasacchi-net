@@ -10,19 +10,27 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="{{EXCERPT}}"/>
+<meta name="description" content="Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se..."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="{{TITLE}}"/>
-<meta property="og:description" content="{{EXCERPT}}"/>
+<meta property="og:title" content="Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step"/>
+<meta property="og:description" content="Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se..."/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="https://lucasacchi.net/favicon.svg"/>
-<meta property="og:url" content="https://lucasacchi.net/blog/{{SLUG}}/"/>
-<meta property="article:published_time" content="{{DATE_ISO}}"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
+<meta property="article:published_time" content="2026-05-02"/>
 <meta property="article:author" content="Luca Sacchi"/>
 <meta property="article:section" content="Technology"/>
-{{OG_TAGS}}
-<link rel="canonical" href="{{CANONICAL_URL}}"/>
-{{HREFLANG_LINKS}}
+<meta property="article:tag" content="backup"/>
+<meta property="article:tag" content="sysadmin"/>
+<meta property="article:tag" content="docker"/>
+<meta property="article:tag" content="syncthing"/>
+<meta property="article:tag" content="qnap"/>
+<meta property="article:tag" content="disaster-recovery"/>
+<meta property="article:tag" content="wsl2"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline-en/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -31,13 +39,13 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>{{TITLE}} — LucaSacchi.net</title>
+<title>Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{TITLE}}",
-  "datePublished": "{{DATE_ISO}}",
+  "headline": "Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step",
+  "datePublished": "2026-05-02",
   "author": {
     "@type": "Person",
     "name": "Luca Sacchi",
@@ -51,10 +59,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "{{EXCERPT}}",
+  "description": "Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se...",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lucasacchi.net/blog/{{SLUG}}/"
+    "@id": "https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"
   }
 }
 </script>
@@ -342,26 +350,69 @@ article > footer {
     <li><span class="text-outline-variant">/</span></li>
     <li><a href="/#blog" class="hover:text-primary transition-colors">Blog</a></li>
     <li><span class="text-outline-variant">/</span></li>
-    <li class="text-on-surface">{{SLUG}}</li>
+    <li class="text-on-surface">claude-workspace-backup-pipeline</li>
   </ol>
 </nav>
 
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">{{TITLE}}</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
-      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="{{DATE_ISO}}">{{DATE}}</time>
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-02">2026-05-02</time>
       
       <div class="flex flex-wrap gap-2">
-        {{TAGS_HTML}}
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span>
       </div>
     </div>
   </header>
   
   <div class="article-content">
-    {{CONTENT_HTML}}
+    <div data-i18n-primary="it"><p>Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.</p>
+<p>Non mi andava di pensarci. Cosi ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.</p>
+<p>Ecco come.</p>
+<h3>L'architettura</h3>
+<p>Tre stadi, semplice:</p>
+<p>1. <strong>Produzione</strong>: WSL2 sul mio laptop<br>2. <strong>Staging</strong>: VM Docker (<code>dockerhost02</code>)<br>3. <strong>Cold storage</strong>: QNAP NAS in RAID</p>
+<p>Tutto parte da Syncthing, arriva a rsync via SSH, finisce in un backup deduplicato. Vediamo i passaggi.</p>
+<h3>Step 1: Sincronizzazione real-time con Syncthing</h3>
+<p>Syncthing monitora la cartella del workspace su WSL2 e la replica sulla VM in un container Docker dedicato.</p>
+<p>Primo controllo dopo il deploy: <code>ls -la</code> sul volume Docker. File presenti, permessi corretti (<code>abc:users</code>), metadati di Git intatti. Sincronizzazione sotto il secondo. Fatto.</p>
+<h3>Step 2: SSH passwordless verso il QNAP</h3>
+<p>Qui ho perso un po' di tempo. I QNAP non usano il path standard per le chiavi SSH autorizzate. Non e <code>~/.ssh/authorized_keys</code>, ma <code>/etc/config/ssh/authorized_keys</code>.</p>
+<p>Chiave ED25519 generata sulla VM, pubblica iniettata nel NAS, test di connessione. Ma il test di connessione e fallito per un motivo banale:</p>
+<pre><code>ssh admin@192.168.254.100 "echo 'Connessione riuscita!'"</code></pre>
+<p>La Bash interpreta il <code>!</code> come history expansion. Una virgletta che mi ha fatto perdere 10 minuti. Soluzione: virgolette singole intorno alla stringa. Mai sottovalutare i caratteri speciali.</p>
+<h3>Step 3: rsync + flock per lo sync al minuto</h3>
+<p>Lo script fa una cosa sola: rsync dalla VM al NAS ogni 60 secondi tramite crontab.</p>
+<p>Ma c'e un problema: se un sync impiega piu di un minuto, il processo successivo parte sopra e si sovrappongono. Entrambi scrivono sugli stessi file. Non e una bella idea.</p>
+<p>Soluzione: <code>flock</code>. Un file di lock a <code>/tmp/qnap_sync.lock</code>. Se un sync e gia in corso, il successivo aspetta educatamente il suo turno.</p>
+<pre><code>(
+  flock -n 200 || exit 1
+  rsync -avz -e "ssh -i /root/.ssh/id_rsa_qnap" \
+    "/var/lib/docker/volumes/syncthing_data/_data/Claude/" \
+    "admin@192.168.254.100:/share/CACHEDEV3_DATA/BackupClaude/"
+) 200&gt;"/tmp/qnap_sync.lock"</code></pre>
+<h3>Step 4: Logrotate per non annegare nei log</h3>
+<p>Uno sync al minuto genera log a velocita impressionante. In poche ore il file era gia a 1.2MB.</p>
+<p>Ho configurato logrotate: rotazione giornaliera, limite di 10MB, 7 copie compresse, permessi <code>0640</code>. Verificato con <code>logrotate -f</code> che il nuovo file log avesse i permessi corretti. Perche i log sbagliati non servono a nessuno.</p>
+<h3>Step 5: La cintura di sicurezza — deduplicazione su NAS</h3>
+<p>Ultimo strato: HBS 3 (Hybrid Backup Sync) sul QNAP. Un job che prende i dati dalla cartella di backup e li sposta su un volume separato, in formato <code>.qdff</code> con deduplicazione.</p>
+<p>Questo mi da una "macchina del tempo": se cancello un file per sbaglio oggi, lo recupero dalla versione di ieri. Se un ransomware mi cripta tutto, ho uno snapshot pulito su un volume diverso.</p>
+<h3>Il risultato</h3>
+<p>Ogni riga di codice si replica sulla VM in <strong>1 secondo</strong>.<br>Ogni cambiamento finisce sul NAS entro <strong>60 secondi</strong>.<br>Esiste uno storico deduplicato per il recupero di versioni precedenti.<br>L'intero sistema si mantiene da solo.</p>
+<p>Tre regole che hanno guidato tutto il lavoro:</p>
+<ul><li><strong>Safety first</strong> — flock per evitare corse parallele, permessi verificati, chiavi ED25519</li><li><strong>Little often</strong> — sync ogni minuto, non ogni ora</li><li><strong>Double check</strong> — logrotate forzato per verificare i permessi, integrita del file <code>.qdff</code> da controllare mensilmente</li></ul>
+<p>Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. Niente cloud, niente costi ricorrenti.</p>
+<hr>
+<p>Qualcuno ha pipeline di backup simili per i propri workspace di sviluppo? Scrivimi nei commenti.</p></div>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -370,12 +421,12 @@ article > footer {
     <div class="flex flex-wrap gap-4 items-center justify-between">
       <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
-        <span>{{BACK_TO_BLOG}}</span>
+        <span>Torna al Blog</span>
       </a>
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url={{ARTICLE_URL}}&title={{TITLE}}" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/claude-workspace-backup-pipeline/&title=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -384,7 +435,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject={{TITLE}}&body={{TITLE}}%0A%0A{{ARTICLE_URL}}" 
+           href="mailto:?subject=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step&body=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step%0A%0Ahttps://lucasacchi.net/blog/claude-workspace-backup-pipeline/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>
@@ -407,7 +458,7 @@ article > footer {
 <footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
 <div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
 <div class="space-y-2">
-<span class="font-label text-[10px] uppercase tracking-widest text-outline">{{COORDINATES}}</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
 <p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
 </div>
 <div class="space-y-2">

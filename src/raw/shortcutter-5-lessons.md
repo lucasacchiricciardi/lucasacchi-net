@@ -14,27 +14,29 @@ Stamattina credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9
 
 5 lezioni dalla giornata.
 
-### 1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa.
+### 1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa
 
 Sempre con "anthropics/" davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fai affidare dopo.
 
-### 2. Il fixer LLM che corregge 19 errori Whisper su un transcript lungo diventa peggio del raw sotto i 1500 caratteri.
+### 2. Il fixer LLM che corregge 19 errori Whisper su un transcript lungo diventa peggio del raw sotto i 1500 caratteri
 
 "Troppo prompt per troppo poco lavoro." Lezione: skip e basta. Se il testo e troppo corto per il modello, il fix non aggiunge valore, solo rumore.
 
-### 3. Un sanity check di 5 righe ha salvato la giornata.
+### 3. Un sanity check di 5 righe ha salvato la giornata
 
 Il LLM ha provato a sostituire il transcript con la description del video. Un "se differenza > 30%, torna al raw" ha bloccato il disastro. Sembra banale. E oro.
 
-### 4. A volte non e la pipeline a sbagliare: e il creator che carica un video con l'audio mescolato.
+### 4. A volte non e la pipeline a sbagliare: e il creator che carica un video con l'audio mescolato
 
 Caso reale trovato oggi. La cosa piu onesta che il mio sistema fa e dire "non lo so" quando i dati sono incoerenti.
 
-### 5. Le 3 regole che ripeto sempre ai miei studenti hanno fatto la differenza piu di qualsiasi prompt o LLM.
+### 5. Le 3 regole che ripeto sempre ai miei studenti hanno fatto la differenza piu di qualsiasi prompt o LLM
 
 Safety first — sanity check, validazioni, fallback.
 Little often — 9 piccole versioni invece di un big-bang.
 Double check — un occhio attento ha trovato un bug Python (variable shadowing) che riduceva un transcript di 3.400 caratteri a 3. "ola". Tre caratteri. Senza accorgermi.
+
+---
 
 La cosa che mi porto a casa: quando costruisci un sistema basato su LLM, non puoi sperare che il modello "si comporti bene". Devi assumera che fara casino e progettare resilienza intorno.
 
@@ -46,8 +48,8 @@ Grazie a Ziobuddalabs per il contenuto quotidiano di qualita che mi ha fatto ven
 
 ---
 
-👉 YouTube: youtube.com/@ziobuddalabs
-🤖 Repo: https://lnkd.in/dYFiM884
-💻 Demo: https://lnkd.in/dRbMimgn
+YouTube: youtube.com/@ziobuddalabs
+Repo: https://lnkd.in/dYFiM884
+Demo: https://lnkd.in/dRbMimgn
 
 Chi ha esperienze simili con modelli piccoli? Scrivimi nei commenti.

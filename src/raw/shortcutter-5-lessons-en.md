@@ -15,11 +15,11 @@ This morning I thought it would take half a workday. Tonight I have 3 Python scr
 
 5 lessons from the day.
 
-### 1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one.
+### 1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one
 
 Always with "anthropics/" prepended. The fix: HEAD request. Does the repo exist? No? Drop the URL. Check first, trust after.
 
-### 2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters.
+### 2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters
 
 "Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix adds noise, not value.
 
@@ -31,11 +31,13 @@ The LLM tried to replace the transcript with the video description. A "if differ
 
 Real case found today. The most honest thing my system does is say "I don't know" when the data is inconsistent.
 
-### 5. The 3 rules I repeat to my students made more difference than any prompt or LLM.
+### 5. The 3 rules I repeat to my students made more difference than any prompt or LLM
 
 Safety first — sanity checks, validations, fallbacks.
 Little often — 9 small versions instead of a big-bang.
 Double check — a close look found a Python bug (variable shadowing) that reduced a 3,400-character transcript to 3. "ola". Three characters. Without exaggerating.
+
+---
 
 What I take home: when you build an LLM-based system, you can't hope the model "behaves well." You have to assume it will mess up and build resilience around it.
 
@@ -47,6 +49,6 @@ Thanks to Ziobuddalabs for the daily quality content that made me want to build 
 
 ---
 
-👉 YouTube: youtube.com/@ziobuddalabs
-🤖 Repo: https://lnkd.in/dYFiM884
-💻 Demo: https://lnkd.in/dRbMimgn
+YouTube: youtube.com/@ziobuddalabs
+Repo: https://lnkd.in/dYFiM884
+Demo: https://lnkd.in/dRbMimgn
