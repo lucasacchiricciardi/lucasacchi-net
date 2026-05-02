@@ -54,9 +54,9 @@
       if (text) el.placeholder = text;
     });
 
-    document.title = window.i18n.t('thankYou.pageTitle', lang) || 
-                    window.i18n.t('pageTitle', lang) ||
-                    document.title;
+    if (document.body.hasAttribute('data-page-thank-you')) {
+      document.title = window.i18n.t('thankYou.pageTitle', lang) || document.title;
+    }
   }
   
   function switchLanguage(lang) {

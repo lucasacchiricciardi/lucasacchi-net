@@ -375,7 +375,7 @@ article > footer {
   </header>
   
   <div class="article-content">
-    <div data-i18n-primary="it"><p>Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.</p>
+    <p>Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.</p>
 <p>Non mi andava di pensarci. Cosi ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.</p>
 <p>Ecco come.</p>
 <h3>L'architettura</h3>
@@ -412,7 +412,7 @@ article > footer {
 <ul><li><strong>Safety first</strong> — flock per evitare corse parallele, permessi verificati, chiavi ED25519</li><li><strong>Little often</strong> — sync ogni minuto, non ogni ora</li><li><strong>Double check</strong> — logrotate forzato per verificare i permessi, integrita del file <code>.qdff</code> da controllare mensilmente</li></ul>
 <p>Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. Niente cloud, niente costi ricorrenti.</p>
 <hr>
-<p>Qualcuno ha pipeline di backup simili per i propri workspace di sviluppo? Scrivimi nei commenti.</p></div>
+<p>Qualcuno ha pipeline di backup simili per i propri workspace di sviluppo? Scrivimi nei commenti.</p>
   </div>
 
   <div class="article-footer-separator"></div>

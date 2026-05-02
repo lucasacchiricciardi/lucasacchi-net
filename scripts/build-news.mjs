@@ -57,21 +57,55 @@ export function markdownToHtml(md) {
   const lines = md.split('\n');
   const blocks = [];
   let current = [];
+  let inCodeBlock = false;
+  let codeBlock = [];
 
   function flush() {
     if (current.length > 0) {
-      blocks.push(current.join('\n'));
+      blocks.push({ type: 'paragraph', content: current.join('\n') });
       current = [];
+    }
+  }
+
+  function flushCode() {
+    if (codeBlock.length > 0) {
+      blocks.push({ type: 'code', content: codeBlock.join('\n') });
+      codeBlock = [];
     }
   }
 
   for (const line of lines) {
     const trimmed = line.trim();
+
+    // Code block fences
+    if (trimmed.startsWith('```')) {
+      if (inCodeBlock) {
+        flushCode();
+        inCodeBlock = false;
+      } else {
+        flush();
+        inCodeBlock = true;
+      }
+      continue;
+    }
+
+    if (inCodeBlock) {
+      codeBlock.push(line);
+      continue;
+    }
+
     if (trimmed === '') {
       flush();
+    } else if (/^---$/.test(trimmed)) {
+      flush();
+      blocks.push({ type: 'hr' });
     } else if (/^#{1,3}\s/.test(trimmed)) {
       flush();
-      blocks.push(trimmed);
+      blocks.push({ type: 'heading', content: trimmed });
+    } else if (/^>\s?/.test(trimmed)) {
+      flush();
+      const quoteText = trimmed.replace(/^>\s?/, '');
+      blocks.push({ type: 'blockquote', content: quoteText });
     } else if (/^- /.test(trimmed)) {
       current.push(trimmed);
     } else {
@@ -79,31 +113,45 @@ export function markdownToHtml(md) {
     }
   }
   flush();
+  flushCode();
+
+  function inlineFormat(text) {
+    var t = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    t = t.replace(/\*(.*?)\*/g, '<em>$1</em>');
+    t = t.replace(/`(.*?)`/g, '<code>$1</code>');
+    t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+    t = t.replace(/\n/g, '<br>');
+    return t;
+  }
 
   const htmlBlocks = blocks.map(function(block) {
-    if (/^#{1,3}\s/.test(block)) {
-      var leveled = block.replace(/^###\s+(.*)/, '<h3>$1</h3>')
+    if (block.type === 'heading') {
+      return block.content
+        .replace(/^###\s+(.*)/, '<h3>$1</h3>')
         .replace(/^##\s+(.*)/, '<h2>$1</h2>')
         .replace(/^#\s+(.*)/, '<h1>$1</h1>');
-      return leveled;
     }
-    if (/^- /.test(block)) {
-      var items = block.split('\n').map(function(l) {
+    if (block.type === 'code') {
+      var escaped = block.content
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      return '<pre><code>' + escaped + '</code></pre>';
+    }
+    if (block.type === 'blockquote') {
+      return '<blockquote><p>' + inlineFormat(block.content) + '</p></blockquote>';
+    }
+    if (block.type === 'hr') {
+      return '<hr>';
+    }
+    if (block.type === 'paragraph' && /^- /.test(block.content)) {
+      var items = block.content.split('\n').map(function(l) {
         var inner = l.replace(/^- /, '');
-        inner = inner.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        inner = inner.replace(/\*(.*?)\*/g, '<em>$1</em>');
-        inner = inner.replace(/`(.*?)`/g, '<code>$1</code>');
-        inner = inner.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-        return '<li>' + inner + '</li>';
+        return '<li>' + inlineFormat(inner) + '</li>';
       });
       return '<ul>' + items.join('') + '</ul>';
     }
-    var p = block.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    p = p.replace(/\*(.*?)\*/g, '<em>$1</em>');
-    p = p.replace(/`(.*?)`/g, '<code>$1</code>');
-    p = p.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
-    p = p.replace(/\n/g, '<br>');
-    return '<p>' + p + '</p>';
+    return '<p>' + inlineFormat(block.content) + '</p>';
   });
 
   return htmlBlocks.join('\n');
@@ -221,15 +269,7 @@ function generateArticlePage(article, template, translations, italianFallback = 
     ].join('\n');
   }
   
-  // Add i18n fallback wrapper if this is EN version and Italian fallback exists
   let contentHtml = article.html;
-  if (lang === 'en' && italianFallback) {
-    // Wrap content in data-i18n div with Italian fallback text
-    contentHtml = `<div data-i18n-fallback="it">${italianFallback.html}</div>\n${contentHtml}`;
-  } else if (lang === 'it') {
-    // Italian content is the fallback
-    contentHtml = `<div data-i18n-primary="it">${contentHtml}</div>`;
-  }
   
   // Replace placeholders
   let html = template
