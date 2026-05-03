@@ -316,7 +316,7 @@ function assembleDist() {
   mkdirSync(DIST, { recursive: true });
   mkdirSync(DIST_NEWS, { recursive: true });
 
-  const filesToCopy = ['index.html', 'main.js', 'newsWorker.js', 'favicon.svg', 'sw.js', 'manifest.json', 'analytics.js'];
+  const filesToCopy = ['index.html', 'main.js', 'newsWorker.js', 'favicon.svg', 'sw.js', 'manifest.json'];
   for (const f of filesToCopy) {
     const src = join(SRC_HOME, f);
     const dst = join(DIST, f);

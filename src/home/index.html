@@ -600,7 +600,7 @@ body.tlf-auth-required #tlf-auth-overlay {
 <p data-i18n="footer.copyright">&copy; LucaSacchi.net.</p>
 <p data-i18n="footer.allRightsReserved">All Rights Reserved.</p>
 <p class="mt-2" id="copyright-years"></p>
-<p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics: anonymous, cookie-free</p>
+<p class="mt-2 text-[9px]" data-i18n="footer.analytics">Analytics by Matomo (self-hosted)</p>
 <div class="mt-4 flex gap-3">
 <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-[9px] text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
 <span class="text-outline-variant/40">•</span>
@@ -610,7 +610,20 @@ body.tlf-auth-required #tlf-auth-overlay {
 </div>
 </div>
 </footer>
-<script src="analytics.js"></script>
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 <script src="main.js"></script>
 <script>
 (function() {
