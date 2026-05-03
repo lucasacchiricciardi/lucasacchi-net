@@ -270,9 +270,10 @@ function retrieveAndDecompress(lang) {
     function renderArticles(articles) {
       var skeleton = document.getElementById('news-feed-skeleton');
       if (skeleton) skeleton.remove();
-      while (articlesContainer.firstChild) {
-        articlesContainer.removeChild(articlesContainer.firstChild);
-      }
+
+      // Performance Optimization: Clear DOM efficiently
+      // Using textContent = '' is measurably faster than while(firstChild.remove())
+      articlesContainer.textContent = '';
       
       if (articles.length === 0) {
         // Show no articles message
@@ -281,9 +282,13 @@ function retrieveAndDecompress(lang) {
         noArticlesMsg.innerHTML = '<p class="font-body text-lg text-on-surface-variant">' + window.i18n.t('status.noArticlesFound', currentLang) + '</p>';
         articlesContainer.appendChild(noArticlesMsg);
       } else {
+        // Performance Optimization: Batch DOM insertions using DocumentFragment
+        // This minimizes layout reflows and paints, significantly improving render performance for large lists
+        var fragment = document.createDocumentFragment();
         articles.forEach(function(article) {
-          articlesContainer.appendChild(createArticleElement(article));
+          fragment.appendChild(createArticleElement(article));
         });
+        articlesContainer.appendChild(fragment);
       }
     }
 
