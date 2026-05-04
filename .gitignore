@@ -4,6 +4,14 @@ node_modules/
 # Build output
 dist/*
 !dist/blog/
+!dist/feed.xml
+!dist/manifest.json
+!dist/robots.txt
+!dist/sitemap.xml
+!dist/version.txt
+!dist/favicon.ico
+!dist/favicon.svg
+!dist/assets/
 
 # OpenCode
 .opencode/

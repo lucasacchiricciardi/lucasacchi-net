@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[LucaSacchi.net — Blog]]></title>
+    <link>https://lucasacchi.net/blog/</link>
+    <description><![CDATA[Senior Systems Administrator — Linux, enterprise infrastructure, AI, homelab]]></description>
+    <language>it</language>
+    <atom:link href="https://lucasacchi.net/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title><![CDATA[Whisper API — Come ho stravolto l'architettura per scalare la trascrizione]]></title>
+    <link>https://lucasacchi.net/blog/whisper-api-architecture/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/whisper-api-architecture/</guid>
+    <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
+Oggi ho ripensato il pattern architetturale, e ho deciso di stravolgere una cosa che sembrava già buona.
+Il problema: il modello embedded
+Inizialmente Shortcutter portava con sé faster-whisper embedded — il modello caricato localmente in memoria.
+Per un video da 60-90 secondi significa 1.5 GB di VRAM occupati da un singolo componente.
+Funziona, certo. Ma no]]></description>
+    <category>architecture, microservices, whisper, api, python, open-source</category>
+  </item>
+  <item>
+    <title><![CDATA[Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step]]></title>
+    <link>https://lucasacchi.net/blog/claude-workspace-backup-pipeline/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/claude-workspace-backup-pipeline/</guid>
+    <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.
+Non mi andava di pensarci. Cosi ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.
+Ecco come.
+L'architettura
+Tre stadi, semplice:
+1. Produzione: WSL2 sul mio laptop2. Staging: VM Docker (dockerhost02)3. Cold storage: ]]></description>
+    <category>backup, sysadmin, docker, syncthing, qnap, disaster-recovery, wsl2</category>
+  </item>
+  <item>
+    <title><![CDATA[Shortcutter — 5 lezioni da una giornata di coding con LLM locali]]></title>
+    <link>https://lucasacchi.net/blog/shortcutter-5-lessons/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/shortcutter-5-lessons/</guid>
+    <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
+Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.
+Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-]]></description>
+    <category>ai, llm, whisper, self-hosted, python, open-source</category>
+  </item>
+  <item>
+    <title><![CDATA[The Linux Formula — Il mio blog personale a tema Linux]]></title>
+    <link>https://lucasacchi.net/blog/thelinuxformula-launch/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/thelinuxformula-launch/</guid>
+    <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Ho lanciato The Linux Formula, il mio blog personale dedicato al mondo Linux e all'open source, già online su thelinuxformula.com.
+Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme Unix, Linux e Solaris, ho sentito la necessità di creare uno spazio dove condividere conoscenze, insight e best practice con la community.
+Cosa troverai su The Linux Formula
+Articoli tecnici su kernel, systemd, networking, sicurezzaGuide pratiche per sistemisti e appassionatiContenuti bilingui]]></description>
+    <category>linux, blog, thelinuxformula, open-source</category>
+  </item>
+  </channel>
+</rss>
