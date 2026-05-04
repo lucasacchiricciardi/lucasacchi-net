@@ -10,10 +10,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo, modelli che vorr..."/>
+<meta name="description" content="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vor..."/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:title" content="Shortcutter — 5 lezioni da una giornata di coding con LLM locali"/>
-<meta property="og:description" content="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo, modelli che vorr..."/>
+<meta property="og:description" content="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vor..."/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="https://lucasacchi.net/blog/shortcutter-5-lessons/og.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -61,7 +61,7 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo, modelli che vorr...",
+  "description": "Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vor...",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://lucasacchi.net/blog/shortcutter-5-lessons/"
@@ -376,29 +376,25 @@ article > footer {
   </header>
   
   <div class="article-content">
-    <p>Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo, modelli che vorrei provare.</p>
-<p>Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi meta delle informazioni.</p>
-<p>Così oggi mi sono detto: "costruisco una pipeline che li scarica, li analizza con AI locale, mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti."</p>
-<p>Stamattina credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti, e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.</p>
-<p>5 lezioni dalla giornata.</p>
+    <p>Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.</p>
+<p>Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.</p>
+<p>Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti.</p>
+<p>Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.</p>
+<p>Ecco 5 cose che ho imparato.</p>
 <h3>1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa</h3>
-<p>Sempre con "anthropics/" davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fai affidare dopo.</p>
-<h3>2. Il fixer LLM che corregge 19 errori Whisper su un transcript lungo diventa peggio del raw sotto i 1500 caratteri</h3>
-<p>"Troppo prompt per troppo poco lavoro." Lezione: skip e basta. Se il testo e troppo corto per il modello, il fix non aggiunge valore, solo rumore.</p>
+<p>Sempre con <code>anthropics/</code> davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fidati dopo.</p>
+<h3>2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri</h3>
+<p>"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore — aggiunge rumore.</p>
 <h3>3. Un sanity check di 5 righe ha salvato la giornata</h3>
-<p>Il LLM ha provato a sostituire il transcript con la description del video. Un "se differenza > 30%, torna al raw" ha bloccato il disastro. Sembra banale. E oro.</p>
-<h3>4. A volte non e la pipeline a sbagliare: e il creator che carica un video con l'audio mescolato</h3>
-<p>Caso reale trovato oggi. La cosa piu onesta che il mio sistema fa e dire "non lo so" quando i dati sono incoerenti.</p>
-<h3>5. Le 3 regole che ripeto sempre ai miei studenti hanno fatto la differenza piu di qualsiasi prompt o LLM</h3>
-<p>Safety first — sanity check, validazioni, fallback.<br>Little often — 9 piccole versioni invece di un big-bang.<br>Double check — un occhio attento ha trovato un bug Python (variable shadowing) che riduceva un transcript di 3.400 caratteri a 3. "ola". Tre caratteri. Senza accorgermi.</p>
+<p>Il LLM ha provato a sostituire il transcript con la description del video. Un "se la differenza è sopra il 30%, torna al raw" ha bloccato il disastro. Sembra banale. È oro.</p>
+<h3>4. A volte non è la pipeline a sbagliare: è il creator che ha caricato un video con l'audio mescolato</h3>
+<p>Caso reale trovato oggi. La cosa più onesta che il mio sistema fa è dire "non lo so" quando i dati sono incoerenti.</p>
+<h3>5. Le 3 regole che ripeto ai miei studenti hanno fatto più differenza di qualsiasi prompt o modello</h3>
+<p><strong>Safety first</strong> — sanity check, validazioni, fallback.<br><strong>Little often</strong> — 9 piccole versioni invece di un big-bang.<br><strong>Double check</strong> — un'occhiata attenta ha trovato un bug Python (variable shadowing) che riduceva un transcript da 3.400 caratteri a 3. "ola". Tre caratteri. Senza che me ne accorgessi.</p>
 <hr>
-<p>La cosa che mi porto a casa: quando costruisci un sistema basato su LLM, non puoi sperare che il modello "si comporti bene". Devi assumera che fara casino e progettare resilienza intorno.</p>
-<p>La pipeline robusta e quella che intercetta i suoi stessi errori prima che lo facciano i tuoi utenti.</p>
-<p>Stack: Python, Whisper, Ollama (qwen3.5:4b + llava:7b), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.</p>
-<p>Grazie a Ziobuddalabs per il contenuto quotidiano di qualita che mi ha fatto venire voglia di costruire questo sistema.</p>
-<hr>
-<p>YouTube: youtube.com/@ziobuddalabs<br>Repo: https://lnkd.in/dYFiM884<br>Demo: https://lnkd.in/dRbMimgn</p>
-<p>Chi ha esperienze simili con modelli piccoli? Scrivimi nei commenti.</p>
+<p>La cosa che mi porto a casa: quando costruisci un sistema basato su LLM non puoi sperare che il modello si comporti bene. Devi assumere che farà casino e progettare la resilienza intorno a quello.</p>
+<p>La pipeline robusta è quella che intercetta i suoi stessi errori prima che li vedano i tuoi utenti.</p>
+<p>Stack: Python, Whisper, Ollama (qwen 2.5 4B + llava 7B), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -460,7 +456,7 @@ article > footer {
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
-<p class="font-body text-xs text-on-surface-variant">Anonymous, cookie-free</p>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
@@ -469,6 +465,8 @@ article > footer {
 <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
 <span class="text-outline-variant/40">•</span>
 <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
 </div>
 </div>
 </div>
@@ -500,6 +498,36 @@ if (copyLinkBtn && copyIcon) {
 </script>
 
 <script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
 
 <script type="text/javascript">
 (function (w,d) {
