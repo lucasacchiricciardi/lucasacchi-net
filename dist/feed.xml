@@ -7,6 +7,18 @@
     <language>it</language>
     <atom:link href="https://lucasacchi.net/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title><![CDATA[Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme]]></title>
+    <link>https://lucasacchi.net/blog/model-manager-homelab/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/model-manager-homelab/</guid>
+    <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Nel mio homelab gira un server Ollama su 192.168.254.115 — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
+TikTok Downloader (trascrizione di video)Shortcutter (download + summary YouTube)n8n (workflow AI)Skill Claude (agenti personalizzati)embed-bookmarks.sh (embedding di appunti)
+Inizialmente tutti facevano quello che gli pareva: caricavano il modello quando gli serviva, lo scaricavano quando finivano. Facile.
+Fino a quando non lo è più.
+Il problema: il free-for-]]></description>
+    <category>homelab, ollama, api, queue, docker, python, open-source</category>
+  </item>
+  <item>
     <title><![CDATA[Whisper API — Come ho stravolto l'architettura per scalare la trascrizione]]></title>
     <link>https://lucasacchi.net/blog/whisper-api-architecture/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/whisper-api-architecture/</guid>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"countryDetection":true,"floatingPreferencesButtonDisplay":"anchored-center-right","perPurposeConsent":true,"siteId":2315562,"whitelabel":false,"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true,"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","backgroundOverlay":true,"brandBackgroundColor":"#FFFFFF","brandTextColor":"#000000","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"fontSizeBody":"18px","fontSizeCloseButton":"22px","listPurposes":true,"prependOnBody":true,"rejectButtonDisplay":true,"textColor":"#000000"}};
+_iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true}};
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2315562.js" async></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Nel mio homelab gira un server Ollama su 192.168.254.115 — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti: TikTok Downl..."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme"/>
+<meta property="og:description" content="Nel mio homelab gira un server Ollama su 192.168.254.115 — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti: TikTok Downl..."/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/model-manager-homelab/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/model-manager-homelab/"/>
+<meta property="article:published_time" content="2026-05-04"/>
+<meta property="article:author" content="Luca Sacchi"/>
+<meta property="article:section" content="Technology"/>
+<meta property="article:tag" content="homelab"/>
+<meta property="article:tag" content="ollama"/>
+<meta property="article:tag" content="api"/>
+<meta property="article:tag" content="queue"/>
+<meta property="article:tag" content="docker"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="open-source"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/model-manager-homelab/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/model-manager-homelab/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/model-manager-homelab-en/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/model-manager-homelab/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="TLF"/>
+<title>Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme — LucaSacchi.net</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme",
+  "datePublished": "2026-05-04",
+  "author": {
+    "@type": "Person",
+    "name": "Luca Sacchi",
+    "url": "https://lucasacchi.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucaSacchi.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lucasacchi.net/favicon.svg"
+    }
+  },
+  "description": "Nel mio homelab gira un server Ollama su 192.168.254.115 — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti: TikTok Downl...",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lucasacchi.net/blog/model-manager-homelab/"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/tailwind.css"/>
+<script src="/i18n.js"></script>
+<script src="/lang-switcher.js"></script>
+<script id="tailwind-config" type="application/json">
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d9dadb",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#424752",
+        "primary": "#003f87",
+        "primary-container": "#0056b3",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#bbd0ff",
+        "secondary": "#5f5e5f",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "outline": "#727784",
+        "outline-variant": "#c2c6d4"
+      },
+      "fontFamily": {
+        "headline": ["IBM Plex Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["IBM Plex Mono", "monospace"]
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem"
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+    background-image:
+        linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Article body: max line length 65ch for readability --- */
+nav[aria-label="Breadcrumb"],
+.article-content,
+article > header,
+.article-footer-separator,
+article > footer {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Headings --- */
+.article-content h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+}
+.article-content h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #003f87;
+}
+.article-content h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #191c1d;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    letter-spacing: -0.025em;
+    padding-left: 0.75rem;
+    border-left: 3px solid #003f87;
+}
+
+/* --- Paragraphs --- */
+.article-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+/* --- First paragraph (lead) --- */
+.article-content > p:first-child {
+    font-size: 1.125rem;
+    color: #424752;
+}
+
+/* --- Lists --- */
+.article-content ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+.article-content li {
+    margin-bottom: 0.25rem;
+}
+.article-content li > strong {
+    color: #191c1d;
+}
+
+/* --- Inline elements --- */
+.article-content a {
+    color: #003f87;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 63, 135, 0.3);
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+}
+.article-content a:hover {
+    color: #0056b3;
+}
+.article-content strong {
+    font-weight: 600;
+    color: #191c1d;
+}
+.article-content em {
+    font-style: italic;
+    color: #191c1d;
+}
+
+/* --- Inline code --- */
+.article-content code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    background-color: #e7e8e9;
+    padding: 0.125rem 0.375rem;
+    color: #191c1d;
+}
+
+/* --- Code blocks --- */
+.article-content pre {
+    background-color: #e1e3e4;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    border: 1px solid rgba(114, 119, 132, 0.2);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+.article-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* --- Blockquotes / callouts --- */
+.article-content blockquote {
+    border-left: 4px solid #003f87;
+    background-color: rgba(0, 63, 135, 0.05);
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #424752;
+    font-style: italic;
+}
+.article-content blockquote p {
+    font-size: 1rem;
+    color: #424752;
+    margin-bottom: 0;
+}
+
+/* --- Horizontal rule --- */
+.article-content hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-top: 2px solid rgba(114, 119, 132, 0.2);
+}
+
+/* --- Footer section separator --- */
+.article-footer-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-top: 2px solid rgba(0, 63, 135, 0.2);
+}
+
+/* --- Responsive: desktop --- */
+@media (min-width: 768px) {
+    .article-content h1 { font-size: 2.25rem; }
+    .article-content h2 { font-size: 1.875rem; }
+    .article-content h3 { font-size: 1.5rem; }
+    .article-content p { font-size: 1.125rem; }
+    .article-content > p:first-child { font-size: 1.25rem; }
+    .article-content ul { font-size: 1.125rem; }
+    .article-content pre { padding: 1.5rem 2rem; }
+    .article-content blockquote p { font-size: 1.125rem; }
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#article-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Skip to content</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Main navigation">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+  <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/" data-i18n="nav.home">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/#blog" data-i18n="nav.blog">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/" data-i18n="nav.home">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/#blog" data-i18n="nav.blog">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
+<button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="article-content" class="flex-grow max-w-4xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
+
+<nav class="mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li><a href="/#blog" class="hover:text-primary transition-colors">Blog</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li class="text-on-surface">model-manager-homelab</li>
+  </ol>
+</nav>
+
+<article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
+  
+  <header class="mb-8 pb-8 border-b border-outline-variant/20">
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme</h1>
+    
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-04">2026-05-04</time>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">queue</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="article-content">
+    <p>Nel mio homelab gira un server Ollama su <code>192.168.254.115</code> — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:</p>
+<ul><li>TikTok Downloader (trascrizione di video)</li><li>Shortcutter (download + summary YouTube)</li><li>n8n (workflow AI)</li><li>Skill Claude (agenti personalizzati)</li><li>embed-bookmarks.sh (embedding di appunti)</li></ul>
+<p>Inizialmente tutti facevano quello che gli pareva: caricavano il modello quando gli serviva, lo scaricavano quando finivano. Facile.</p>
+<p>Fino a quando non lo è più.</p>
+<h2>Il problema: il free-for-all</h2>
+<p>Senza coordinamento, ecco cosa succede.</p>
+<p>Due agenti chiedono il modello <code>whisper-large-v3</code> nello stesso momento. Entrambi vedono "non è in VRAM" e lo caricano. Risultato: 3 GB di VRAM occupati dal duplicato. Inutile.</p>
+<p>TikTok Downloader finisce la trascrizione e scarica il modello (keep_alive=0). Ma in quel momento shortcutter gli sta facendo il secondo chunk. Crash silenzioso.</p>
+<p>Chi sta usando cosa? Misterio. Non c'è visibilità.</p>
+<h2>La soluzione: prenotazioni per-modello</h2>
+<p>Ho creato <strong>Model Manager</strong>, un'API REST che funziona come un semaforo intelligente.</p>
+<p>Quando un agente vuole un modello, non lo carica direttamente. Lo <strong>prenota</strong>:</p>
+<pre><code>curl -X POST http://192.168.254.115:5000/reservations \
+  -d '{"model": "whisper-large-v3", "client": "tiktok-downloader", "timeout": 300}'</code></pre>
+<p>La risposta è una di queste:<br>- <code>status: active</code> — il modello è tuo, è in VRAM, vai<br>- <code>status: queued</code> con <code>position: 2</code> — c'è gente davanti, aspetta</p>
+<p>Quando finisci, lo rilasci:</p>
+<pre><code>curl -X DELETE http://192.168.254.115:5000/reservations/{id}</code></pre>
+<p>E il prossimo in coda viene attivato automaticamente.</p>
+<h2>Come funziona nella pratica</h2>
+<p>Client A prenota whisper → active (carica in VRAM).<br>Client B prenota lo stesso modello → queued, posizione 1.<br>Client C prenota lo stesso modello → queued, posizione 2.</p>
+<p>A finisce, rilascia. Il sistema attiva B. B sa che il modello è pronto, inizia a usarlo.<br>B finisce, rilascia. C viene attivato.</p>
+<p>Nessun duplicato. Nessun crash. Coda rispettata.</p>
+<p>Per i modelli diversi il sistema non si blocca: whisper e qwen3.5 possono caricarsi contemporaneamente (hanno lock separati, uno per modello). Non globale, per-modello.</p>
+<h2>Cosa ho guadagnato</h2>
+<p><strong>Niente crash.</strong> Se un agente dimentica di rilasciare? Auto-expire dopo 5 minuti (configurabile). Il modello si scarica e il prossimo viene attivato.</p>
+<p><strong>Visibilità.</strong> Chiamo:</p>
+<pre><code>curl http://192.168.254.115:5000/reservations/queue</code></pre>
+<p>E vedo l'intera coda, chi ha il lock, chi aspetta, per quanto tempo ancora.</p>
+<p><strong>Scalabilità stupida.</strong> Tre agenti in più? Non cambia niente. Continuano a prenotare.</p>
+<p><strong>Riusabilità.</strong> Lo stesso servizio è usato da TikTok Downloader, shortcutter, n8n, skill Claude. Una sola fonte di verità.</p>
+<h2>Il repository e l'API</h2>
+<p>Ho pubblicato il codice come open source: <strong>https://github.com/lucasacchiricciardi/model-manager</strong> (MIT license).</p>
+<p>Contiene:<br>- FastAPI REST service<br>- SQLAlchemy async con SQLite (o PostgreSQL, se vuoi scalare)<br>- Per-model reservation queue con auto-expire<br>- Swagger per fare i test direttamente dal browser: <strong>http://192.168.254.115:5000/docs</strong><br>- V1 endpoint retrocompatibili (load/unload diretto, se vuoi ignorare la coda)<br>- Test concorrenti inclusi</p>
+<p>L'API gira in Docker, ovviamente. Containerizzato, riavviabile, stateless, database persistito.</p>
+<h2>La lezione</h2>
+<p>Gli asyncio.Lock non servono solo quando stai scalando a milioni di utenti.</p>
+<p>Servono anche quando sei tu il solo utente, ma hai 5 processi indipendenti che si contendono la stessa GPU.</p>
+<p>"Che bravo che sei" non è il punto. Il punto è: il codice che ragiona su "who gets the resource when" diventa molto meno fragile quando il coordinamento è <strong>esterno</strong> e <strong>visibile</strong>.</p>
+<p>Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx.</p>
+<p>Niente cloud, niente serverless, niente costi ricorrenti.</p>
+<p>Vale la pena.</p>
+  </div>
+
+  <div class="article-footer-separator"></div>
+
+  <footer class="mb-0">
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        <span>Torna al Blog</span>
+      </a>
+      
+      <div class="flex gap-3">
+        <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/model-manager-homelab/&title=Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           title="Share on LinkedIn"
+           aria-label="Share on LinkedIn">
+          <span class="material-symbols-outlined">work</span>
+        </a>
+        
+        <a class="text-on-surface-variant hover:text-primary transition-colors" 
+           href="mailto:?subject=Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme&body=Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme%0A%0Ahttps://lucasacchi.net/blog/model-manager-homelab/" 
+           title="Share via email"
+           aria-label="Share via email">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
+        
+        <button class="text-on-surface-variant hover:text-primary transition-colors" 
+                id="copy-link-btn"
+                title="Copy link"
+                aria-label="Copy link">
+          <span class="material-symbols-outlined" id="copy-icon">link</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+</article>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Comm_Links</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="https://www.linkedin.com/in/lucasacchi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-[#ff0000] transition-colors" href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
+<p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+var mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
+
+// Copy link button
+var copyLinkBtn = document.getElementById('copy-link-btn');
+var copyIcon = document.getElementById('copy-icon');
+if (copyLinkBtn && copyIcon) {
+  copyLinkBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      copyIcon.textContent = 'check';
+      setTimeout(function() {
+        copyIcon.textContent = 'link';
+      }, 2000);
+    });
+  });
+}
+</script>
+
+<script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  window.openPolicy = openPolicy;
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

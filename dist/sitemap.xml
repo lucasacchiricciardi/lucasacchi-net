@@ -6,6 +6,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lucasacchi.net/blog/model-manager-homelab/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lucasacchi.net/blog/model-manager-homelab-en/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lucasacchi.net/blog/whisper-api-architecture/</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>weekly</changefreq>
