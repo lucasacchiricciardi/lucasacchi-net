@@ -483,6 +483,38 @@ function assembleDist() {
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE_URL}/</loc>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n${sitemapEntries.join('\n')}\n</urlset>\n`;
   writeFileSync(join(DIST, 'sitemap.xml'), sitemapXml, 'utf-8');
 
+  // Generate RSS feed (feed.xml) — Italian articles only
+  const feedItems = feed.articles
+    .filter(a => a.lang === 'it')
+    .map(a => {
+      const pubDate = a.date ? new Date(a.date + 'T00:00:00Z').toUTCString() : new Date().toUTCString();
+      const excerpt = a.html ? a.html.replace(/<[^>]*>/g, '').slice(0, 500) : '';
+      return `  <item>
+    <title><![CDATA[${a.title}]]></title>
+    <link>${SITE_URL}/blog/${a.id}/</link>
+    <guid isPermaLink="true">${SITE_URL}/blog/${a.id}/</guid>
+    <pubDate>${pubDate}</pubDate>
+    <description><![CDATA[${excerpt}]]></description>
+    <category>${(a.tags || []).join(', ')}</category>
+  </item>`;
+    }).join('\n');
+
+  const feedXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[LucaSacchi.net — Blog]]></title>
+    <link>${SITE_URL}/blog/</link>
+    <description><![CDATA[Senior Systems Administrator — Linux, enterprise infrastructure, AI, homelab]]></description>
+    <language>it</language>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+${feedItems}
+  </channel>
+</rss>
+`;
+
+  writeFileSync(join(DIST, 'feed.xml'), feedXml, 'utf-8');
+  console.log(`Generated RSS feed at ${join(DIST, 'feed.xml')}`);
+
   console.log(`Assembled ${DIST}/ with ${feed.articles.length} article(s)`);
   return feed;
 }

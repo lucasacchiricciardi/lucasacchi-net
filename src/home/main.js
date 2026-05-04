@@ -415,6 +415,74 @@ function retrieveAndDecompress(lang) {
         }, 300));
       }
     }
+
+    function showToast(message, type) {
+      type = type || 'info';
+      var toastContainer = document.getElementById('toast-container');
+      if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.id = 'toast-container';
+        toastContainer.style.cssText = 'position:fixed;top:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:8px;';
+        document.body.appendChild(toastContainer);
+      }
+
+      var toast = document.createElement('div');
+      var bgColor = type === 'success' ? 'bg-primary-container' : type === 'error' ? 'bg-error-container' : 'bg-surface-container-high';
+      var textColor = type === 'success' ? 'text-on-primary-container' : type === 'error' ? 'text-on-error-container' : 'text-on-surface';
+
+      toast.className = 'font-body text-sm ' + bgColor + ' ' + textColor + ' px-4 py-3 rounded border border-outline-variant/20 shadow-lg animate-slideIn';
+      toast.textContent = message;
+      toastContainer.appendChild(toast);
+
+      setTimeout(function() {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.3s';
+        setTimeout(function() { toast.remove(); }, 300);
+      }, 4000);
+    }
+
+    function setupPushNotifications() {
+      var pushBtn = document.getElementById('push-enable-btn');
+      var pushBtnMobile = document.getElementById('push-enable-btn-mobile');
+      if (!pushBtn && !pushBtnMobile) return;
+
+      function updateButtonState() {
+        if (Notification.permission === 'granted') {
+          if (pushBtn) {
+            pushBtn.style.opacity = '0.5';
+            pushBtn.disabled = true;
+            pushBtn.title = 'Notifiche abilitate ✓';
+          }
+          if (pushBtnMobile) {
+            pushBtnMobile.style.opacity = '0.5';
+            pushBtnMobile.disabled = true;
+            pushBtnMobile.title = 'Notifiche abilitate ✓';
+          }
+        }
+      }
+
+      function handlePushClick() {
+        if (Notification.permission === 'granted') {
+          updateButtonState();
+        } else if (Notification.permission !== 'denied') {
+          Notification.requestPermission().then(function(permission) {
+            if (permission === 'granted') {
+              updateButtonState();
+              showToast('Notifiche abilitate! Riceverai avvisi per i nuovi articoli.', 'success');
+            }
+          });
+        }
+      }
+
+      if (pushBtn) {
+        pushBtn.addEventListener('click', handlePushClick);
+      }
+      if (pushBtnMobile) {
+        pushBtnMobile.addEventListener('click', handlePushClick);
+      }
+
+      updateButtonState();
+    }
     
     function getRelatedArticles(currentArticle, limit) {
       if (!currentArticle || !currentArticle.tags || currentArticle.tags.length === 0) return [];
@@ -516,12 +584,19 @@ function retrieveAndDecompress(lang) {
       try {
         var msg = e.data;
         if (msg.type === 'news') {
+          var previousHash = localStorage.getItem(STORAGE_KEYS.HASH);
+          var isNewArticles = previousHash && previousHash !== msg.hash;
+
           compressAndStore(currentLang, msg.data);
           if (msg.hash) storeHash(msg.hash);
           if (msg.version) storeVersion(msg.version);
           allArticles = msg.data;
           var filteredArticles = msg.data.filter(function(article) { return article.lang === currentLang; });
           renderArticles(filteredArticles);
+
+          if (isNewArticles) {
+            showToast('📰 Nuovo articolo disponibile!', 'success');
+          }
         } else if (msg.type === 'error') {
           showError('Unable to load news. Please check your connection.');
     } else if (msg.type === 'unchanged') {
@@ -738,7 +813,8 @@ function retrieveAndDecompress(lang) {
     setupLanguageSwitcher();
     initializeOfflineFirst();
     setupSearch();
-    
+    setupPushNotifications();
+
     // web3forms handles form submission via POST
     
     if ('serviceWorker' in navigator) {

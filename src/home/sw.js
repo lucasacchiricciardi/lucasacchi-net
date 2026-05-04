@@ -9,6 +9,7 @@ const ASSETS_TO_CACHE = [
   BASE_PATH + '/favicon.svg',
   BASE_PATH + '/manifest.json',
   BASE_PATH + '/news/news-feed.json',
+  BASE_PATH + '/feed.xml',
   BASE_PATH + '/version.txt',
   BASE_PATH + '/robots.txt',
   BASE_PATH + '/sitemap.xml'
