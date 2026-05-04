@@ -1,5 +1,5 @@
 ---
-title: Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione
+title: Whisper API — Come ho stravolto l'architettura per scalare la trascrizione
 date: 2026-05-04
 tags: [architecture, microservices, whisper, api, python, open-source]
 ---
