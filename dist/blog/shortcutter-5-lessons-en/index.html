@@ -378,26 +378,23 @@ article > footer {
   <div class="article-content">
     <p>I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.</p>
 <p>Problem: the links aren't there. Not in the video description, not in the channel bio. Only spoken, in the short. And when you watch 30 videos a month, you lose half the information.</p>
-<p>So today I told myself: "I'll build a pipeline that downloads them, analyzes them with local AI, and produces a daily digest via email. All self-hosted, zero external APIs, zero recurring costs."</p>
-<p>This morning I thought it would take half a workday. Tonight I have 3 Python scripts, 9 iterative versions, 4 critical bugs fixed, and one certainty: small models betray you in creative ways.</p>
-<p>5 lessons from the day.</p>
+<p>So this morning I told myself: I'll build a pipeline that downloads them, analyzes them with local AI, and produces a daily digest via email. All self-hosted, zero external APIs, zero recurring costs.</p>
+<p>I thought it would take half a workday. Tonight I have 3 Python scripts, 9 iterative versions, 4 critical bugs fixed, and one certainty: small models betray you in creative ways.</p>
+<p>Here are 5 things I learned.</p>
 <h3>1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one</h3>
-<p>Always with "anthropics/" prepended. The fix: HEAD request. Does the repo exist? No? Drop the URL. Check first, trust after.</p>
+<p>Always with <code>anthropics/</code> prepended. The fix: HEAD request. Does the repo exist? No? Drop the URL. Check first, trust after.</p>
 <h3>2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters</h3>
-<p>"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix adds noise, not value.</p>
-<h3>3. A 5-line sanity check saved the day.</h3>
-<p>The LLM tried to replace the transcript with the video description. A "if difference > 30%, fall back to raw" blocked the disaster. Sounds trivial. It's gold.</p>
-<h3>4. Sometimes it's not the pipeline that's wrong: it's the creator uploading a video with mixed audio.</h3>
+<p>"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix doesn't add value — it adds noise.</p>
+<h3>3. A 5-line sanity check saved the day</h3>
+<p>The LLM tried to replace the transcript with the video description. A "if the difference is above 30%, fall back to raw" blocked the disaster. Sounds trivial. It's gold.</p>
+<h3>4. Sometimes it's not the pipeline that's wrong: it's the creator who uploaded a video with mixed audio</h3>
 <p>Real case found today. The most honest thing my system does is say "I don't know" when the data is inconsistent.</p>
-<h3>5. The 3 rules I repeat to my students made more difference than any prompt or LLM</h3>
-<p>Safety first — sanity checks, validations, fallbacks.<br>Little often — 9 small versions instead of a big-bang.<br>Double check — a close look found a Python bug (variable shadowing) that reduced a 3,400-character transcript to 3. "ola". Three characters. Without exaggerating.</p>
+<h3>5. The 3 rules I repeat to my students made more difference than any prompt or model</h3>
+<p><strong>Safety first</strong> — sanity checks, validations, fallbacks.<br><strong>Little often</strong> — 9 small versions instead of a big-bang.<br><strong>Double check</strong> — a close look found a Python bug (variable shadowing) that reduced a 3,400-character transcript to 3. "ola". Three characters. Without noticing.</p>
 <hr>
-<p>What I take home: when you build an LLM-based system, you can't hope the model "behaves well." You have to assume it will mess up and build resilience around it.</p>
+<p>What I take home: when you build an LLM-based system, you can't hope the model behaves well. You have to assume it will make a mess and design the resilience around that.</p>
 <p>The robust pipeline is the one that intercepts its own errors before your users see them.</p>
-<p>Stack: Python, Whisper, Ollama (qwen3.5:4b + llava:7b), n8n, all on AMD 780M iGPU with ROCm. No cloud, no APIs.</p>
-<p>Thanks to Ziobuddalabs for the daily quality content that made me want to build this system.</p>
-<hr>
-<p>YouTube: youtube.com/@ziobuddalabs<br>Repo: https://lnkd.in/dYFiM884<br>Demo: https://lnkd.in/dRbMimgn</p>
+<p>Stack: Python, Whisper, Ollama (qwen 2.5 4B + llava 7B), n8n, all on AMD 780M iGPU with ROCm. No cloud, no APIs.</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -459,7 +456,7 @@ article > footer {
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
-<p class="font-body text-xs text-on-surface-variant">Anonymous, cookie-free</p>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
@@ -468,6 +465,8 @@ article > footer {
 <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
 <span class="text-outline-variant/40">•</span>
 <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
 </div>
 </div>
 </div>
@@ -499,6 +498,36 @@ if (copyLinkBtn && copyIcon) {
 </script>
 
 <script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
 
 <script type="text/javascript">
 (function (w,d) {

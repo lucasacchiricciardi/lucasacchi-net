@@ -144,6 +144,9 @@
    */
   function setupScrollTracking() {
     var ticking = false;
+    // ⚡ Bolt Optimization: Added { passive: true } to the scroll event listener
+    // This allows the browser to scroll smoothly without waiting for the JS thread,
+    // improving scroll performance and preventing jank.
     window.addEventListener('scroll', function() {
       if (!ticking) {
         requestAnimationFrame(function() {
@@ -152,7 +155,7 @@
         });
         ticking = true;
       }
-    });
+    }, { passive: true });
   }
 
   /**

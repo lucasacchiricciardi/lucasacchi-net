@@ -440,7 +440,7 @@ article > footer {
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
-<p class="font-body text-xs text-on-surface-variant">Anonymous, cookie-free</p>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
 </div>
 <div class="space-y-2">
 <span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
@@ -449,6 +449,8 @@ article > footer {
 <a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
 <span class="text-outline-variant/40">•</span>
 <a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
 </div>
 </div>
 </div>
@@ -480,6 +482,36 @@ if (copyLinkBtn && copyIcon) {
 </script>
 
 <script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
 
 <script type="text/javascript">
 (function (w,d) {

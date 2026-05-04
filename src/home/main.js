@@ -281,9 +281,13 @@ function retrieveAndDecompress(lang) {
         noArticlesMsg.innerHTML = '<p class="font-body text-lg text-on-surface-variant">' + window.i18n.t('status.noArticlesFound', currentLang) + '</p>';
         articlesContainer.appendChild(noArticlesMsg);
       } else {
+        // ⚡ Bolt Optimization: Use DocumentFragment to batch DOM insertions
+        // This prevents layout thrashing and multiple reflows/repaints when rendering many articles
+        var fragment = document.createDocumentFragment();
         articles.forEach(function(article) {
-          articlesContainer.appendChild(createArticleElement(article));
+          fragment.appendChild(createArticleElement(article));
         });
+        articlesContainer.appendChild(fragment);
       }
     }
 
