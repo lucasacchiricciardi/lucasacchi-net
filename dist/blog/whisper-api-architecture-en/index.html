@@ -10,12 +10,12 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato. Oggi ho r..."/>
+<meta name="description" content="A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries. Today I r..."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione"/>
-<meta property="og:description" content="Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato. Oggi ho r..."/>
+<meta property="og:title" content="Whisper API — How I Reshaped the Architecture to Scale Transcription"/>
+<meta property="og:description" content="A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries. Today I r..."/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://lucasacchi.net/blog/whisper-api-architecture/og.png"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/whisper-api-architecture-en/og.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:type" content="image/png"/>
@@ -29,9 +29,9 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta property="article:tag" content="api"/>
 <meta property="article:tag" content="python"/>
 <meta property="article:tag" content="open-source"/>
-<link rel="canonical" href="https://lucasacchi.net/blog/whisper-api-architecture/"/>
-<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/whisper-api-architecture/"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/whisper-api-architecture-en/"/>
 <link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/whisper-api-architecture-en/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/whisper-api-architecture/"/>
 <link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/whisper-api-architecture/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -41,12 +41,12 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione — LucaSacchi.net</title>
+<title>Whisper API — How I Reshaped the Architecture to Scale Transcription — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione",
+  "headline": "Whisper API — How I Reshaped the Architecture to Scale Transcription",
   "datePublished": "2026-05-04",
   "author": {
     "@type": "Person",
@@ -61,7 +61,7 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato. Oggi ho r...",
+  "description": "A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries. Today I r...",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://lucasacchi.net/blog/whisper-api-architecture/"
@@ -359,7 +359,7 @@ article > footer {
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Whisper API — How I Reshaped the Architecture to Scale Transcription</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
       <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-04">2026-05-04</time>
@@ -376,33 +376,33 @@ article > footer {
   </header>
   
   <div class="article-content">
-    <p>Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.</p>
-<p>Oggi ho ripensato il pattern architetturale, e ho deciso di stravolgere una cosa che sembrava già buona.</p>
-<h2>Il problema: il modello embedded</h2>
-<p>Inizialmente Shortcutter portava con sé <code>faster-whisper</code> embedded — il modello caricato localmente in memoria.</p>
-<p>Per un video da 60-90 secondi significa 1.5 GB di VRAM occupati da un singolo componente.</p>
-<p>Funziona, certo. Ma non scala.</p>
-<h2>La soluzione: estrarre il servizio</h2>
-<p>Invece di tenere il modello dentro lo script, l'ho estratto: ho creato <strong>Whisper API</strong>, un servizio REST su un server LAN dedicato.</p>
-<p>Shortcutter ora chiama <code>POST /transcribe</code> via HTTP.</p>
-<p>Boom — zero VRAM locale, e il pattern diventa riusabile.</p>
-<h2>Cosa è cambiato nella pratica</h2>
-<p><strong>Decoupling</strong>: trascrizione non è più dentro lo script, è un servizio. Se domani cambio transcriber (da Whisper a un altro), aggiorno solo l'API.</p>
-<p><strong>Flessibilità dei modelli</strong>: da remoto posso usare <code>large-v3-turbo</code> senza pagare il costo di VRAM locale. Cambio il parametro <code>model=</code> e fatto.</p>
-<p><strong>Scalabilità</strong>: TikTok Downloader, Shortcutter, TwinScribeAI possono tutti chiamare lo stesso servizio. Una sola fonte di verità.</p>
-<p><strong>Chiarezza</strong>: il confine tra "cosa fa il mio script" e "cosa fa il servizio" diventa ovvio.</p>
-<h2>Non è un refactor per farsi bello</h2>
-<p>Questo non è un refactor per farsi bello.</p>
-<p>È una decisione pratica: <strong>separare le responsabilità rende il codice più onesto</strong>.</p>
-<p>Chi lavora su pipeline con AI sa che questi piccoli spostamenti di confine — "cosa vive dove" — cambiano come ragioni sui problemi.</p>
-<h2>Il repository</h2>
-<p>Ho pubblicato il codice come open source: <strong>https://github.com/lucasacchiricciardi/whisper-api</strong> (MIT license)</p>
-<p>Contiene:<br>- FastAPI REST service per audio transcription<br>- Support per 6 Whisper models (tiny a large-v3-turbo)<br>- Docker containerization<br>- Lazy model loading con caching<br>- Health check + status endpoints<br>- Model lifecycle management (load/unload)</p>
-<p>Il servizio è già in produzione su 192.168.254.115:5001 nel mio homelab, usato da TikTok Downloader e Shortcutter.</p>
-<h2>La lezione</h2>
-<p>La scala non è solo "quanti utenti servono", è anche "come organizzo il codice per farlo crescere senza rompersi".</p>
-<p>Questo cambiamento non ha aggiunto una feature. Ha reso la codebase più ragionevole.</p>
-<p>Vale la pena.</p>
+    <p>A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.</p>
+<p>Today I rethought the architecture, and decided to overthrow something that seemed already solid.</p>
+<h2>The problem: embedded model</h2>
+<p>Initially, Shortcutter carried <code>faster-whisper</code> embedded — the model loaded locally in memory.</p>
+<p>For a 60-90 second video, that means 1.5 GB of VRAM occupied by a single component.</p>
+<p>It works, sure. But it doesn't scale.</p>
+<h2>The solution: extract the service</h2>
+<p>Instead of keeping the model inside the script, I extracted it: I created <strong>Whisper API</strong>, a REST service on a dedicated LAN server.</p>
+<p>Shortcutter now calls <code>POST /transcribe</code> over HTTP.</p>
+<p>Done — zero local VRAM, and the pattern becomes reusable.</p>
+<h2>What changed in practice</h2>
+<p><strong>Decoupling</strong>: transcription is no longer inside the script, it's a service. If tomorrow I swap transcriber (from Whisper to something else), I only update the API.</p>
+<p><strong>Model flexibility</strong>: from remote, I can use <code>large-v3-turbo</code> without paying the local VRAM cost. I change the <code>model=</code> parameter and done.</p>
+<p><strong>Scalability</strong>: TikTok Downloader, Shortcutter, TwinScribeAI can all call the same service. Single source of truth.</p>
+<p><strong>Clarity</strong>: the boundary between "what my script does" and "what the service does" becomes obvious.</p>
+<h2>Not a refactor for show</h2>
+<p>This is not a refactor to look good.</p>
+<p>It's a practical decision: <strong>separating concerns makes code more honest</strong>.</p>
+<p>Anyone working on AI pipelines knows that these small boundary shifts — "what lives where" — change how you reason about problems.</p>
+<h2>The repository</h2>
+<p>I published the code as open source: <strong>https://github.com/lucasacchiricciardi/whisper-api</strong> (MIT license)</p>
+<p>It includes:<br>- FastAPI REST service for audio transcription<br>- Support for 6 Whisper models (tiny to large-v3-turbo)<br>- Docker containerization<br>- Lazy model loading with caching<br>- Health check + status endpoints<br>- Model lifecycle management (load/unload)</p>
+<p>The service is already in production on 192.168.254.115:5001 in my homelab, used by TikTok Downloader and Shortcutter.</p>
+<h2>The lesson</h2>
+<p>Scale isn't just "how many users to serve", it's also "how do I organize code so it grows without breaking".</p>
+<p>This change didn't add a feature. It made the codebase more reasonable.</p>
+<p>Worth it.</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -411,12 +411,12 @@ article > footer {
     <div class="flex flex-wrap gap-4 items-center justify-between">
       <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
-        <span>Torna al Blog</span>
+        <span>Back to Blog</span>
       </a>
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/whisper-api-architecture/&title=Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/whisper-api-architecture-en/&title=Whisper API — How I Reshaped the Architecture to Scale Transcription" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -425,7 +425,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject=Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione&body=Whisper API — Come ho stravvolto l'architettura per scalare la trascrizione%0A%0Ahttps://lucasacchi.net/blog/whisper-api-architecture/" 
+           href="mailto:?subject=Whisper API — How I Reshaped the Architecture to Scale Transcription&body=Whisper API — How I Reshaped the Architecture to Scale Transcription%0A%0Ahttps://lucasacchi.net/blog/whisper-api-architecture-en/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>
