@@ -486,20 +486,42 @@ function retrieveAndDecompress(lang) {
     
     function getRelatedArticles(currentArticle, limit) {
       if (!currentArticle || !currentArticle.tags || currentArticle.tags.length === 0) return [];
-      var currentTags = currentArticle.tags;
-      return allArticles
-        .filter(function(a) {
-          if (a.lang !== currentLang) return false;
-          if (a.id === currentArticle.id) return false;
-          var shared = a.tags.filter(function(t) { return currentTags.includes(t); });
-          return shared.length > 0;
-        })
+
+      /*
+       * ⚡ Bolt Optimization: Pre-compute shared tags and convert to O(1) map lookups
+       * Impact: Reduces time complexity from O(N log N * M * T) to O(N * T + N log N),
+       * preventing expensive redundant array iterations during the sorting phase.
+       */
+      var currentTagsMap = {};
+      for (var i = 0; i < currentArticle.tags.length; i++) {
+        currentTagsMap[currentArticle.tags[i]] = true;
+      }
+
+      var relatedWithScores = [];
+      for (var j = 0; j < allArticles.length; j++) {
+        var a = allArticles[j];
+        if (a.lang !== currentLang || a.id === currentArticle.id || !a.tags) continue;
+
+        var sharedCount = 0;
+        for (var k = 0; k < a.tags.length; k++) {
+          if (currentTagsMap[a.tags[k]]) {
+            sharedCount++;
+          }
+        }
+
+        if (sharedCount > 0) {
+          relatedWithScores.push({ article: a, score: sharedCount });
+        }
+      }
+
+      return relatedWithScores
         .sort(function(a, b) {
-          var aShared = a.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          var bShared = b.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          return bShared - aShared;
+          return b.score - a.score;
         })
-        .slice(0, limit || 3);
+        .slice(0, limit || 3)
+        .map(function(item) {
+          return item.article;
+        });
     }
     
     function renderRelatedArticles(related, container) {
