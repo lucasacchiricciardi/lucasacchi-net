@@ -1,0 +1,3 @@
+## 2024-05-08 - Duplicate IDs in DOM
+**Learning:** The codebase contains duplicate HTML IDs for elements that appear in both desktop and mobile navigation menus (e.g., `#nav-home`, `#nav-chi-sono`). This violates HTML specs but is currently handled by specifically selecting elements or using querySelectorAll with ID selectors.
+**Action:** Be extremely careful when querying by ID, especially for navigation elements. Always use `document.querySelectorAll` with ID selectors if the elements could appear in both desktop and mobile menus, rather than `document.getElementById` which will only return the first match.
