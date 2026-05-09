@@ -291,9 +291,13 @@ function retrieveAndDecompress(lang) {
         var end = start + PAGE_SIZE;
         var pageArticles = currentFilteredArticles.slice(start, end);
 
+        // ⚡ Bolt Optimization: Use DocumentFragment for batching DOM insertions
+        // to minimize reflows/repaints when rendering a page of articles.
+        var fragment = document.createDocumentFragment();
         pageArticles.forEach(function(article) {
-          articlesContainer.appendChild(createArticleElement(article));
+          fragment.appendChild(createArticleElement(article));
         });
+        articlesContainer.appendChild(fragment);
       }
 
       updatePaginationControls(page);
@@ -361,9 +365,14 @@ function retrieveAndDecompress(lang) {
             var start = currentPage * PAGE_SIZE;
             var end = start + PAGE_SIZE;
             var newArticles = currentFilteredArticles.slice(start, end);
+
+            // ⚡ Bolt Optimization: Use DocumentFragment for load more appends too
+            var fragment = document.createDocumentFragment();
             newArticles.forEach(function(article) {
-              articlesContainer.appendChild(createArticleElement(article));
+              fragment.appendChild(createArticleElement(article));
             });
+            articlesContainer.appendChild(fragment);
+
             if ((currentPage + 1) * PAGE_SIZE >= currentFilteredArticles.length) {
               loadMoreBtn.style.display = 'none';
             }
@@ -487,19 +496,28 @@ function retrieveAndDecompress(lang) {
     function getRelatedArticles(currentArticle, limit) {
       if (!currentArticle || !currentArticle.tags || currentArticle.tags.length === 0) return [];
       var currentTags = currentArticle.tags;
-      return allArticles
-        .filter(function(a) {
-          if (a.lang !== currentLang) return false;
-          if (a.id === currentArticle.id) return false;
-          var shared = a.tags.filter(function(t) { return currentTags.includes(t); });
-          return shared.length > 0;
-        })
-        .sort(function(a, b) {
-          var aShared = a.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          var bShared = b.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          return bShared - aShared;
-        })
-        .slice(0, limit || 3);
+
+      // ⚡ Bolt Optimization: Schwartzian transform to calculate shared tags exactly once per article
+      // rather than O(N log N) times inside the sort comparator. Prevents array allocations during sort.
+      var candidates = [];
+      for (var i = 0; i < allArticles.length; i++) {
+        var a = allArticles[i];
+        if (a.lang !== currentLang || a.id === currentArticle.id || !a.tags) continue;
+
+        var sharedCount = 0;
+        for (var j = 0; j < a.tags.length; j++) {
+          if (currentTags.includes(a.tags[j])) sharedCount++;
+        }
+
+        if (sharedCount > 0) {
+          candidates.push({ article: a, shared: sharedCount });
+        }
+      }
+
+      return candidates
+        .sort(function(a, b) { return b.shared - a.shared; })
+        .slice(0, limit || 3)
+        .map(function(c) { return c.article; });
     }
     
     function renderRelatedArticles(related, container) {
