@@ -1,0 +1,3 @@
+## 2024-05-18 - [Schwartzian Transform for Related Articles]
+**Learning:** Found a severe performance anti-pattern in `getRelatedArticles` where `.filter()` was used inside the `.sort()` comparator to calculate shared tags. This causes array allocations and iterations on every single comparison, resulting in O(N log N) array allocations and excessive garbage collection overhead.
+**Action:** Always pre-calculate complex sorting weights (Schwartzian transform) before calling `.sort()` to ensure the comparator remains O(1).
