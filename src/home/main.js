@@ -277,9 +277,8 @@ function retrieveAndDecompress(lang) {
     function renderPage(page) {
       var skeleton = document.getElementById('news-feed-skeleton');
       if (skeleton) skeleton.remove();
-      while (articlesContainer.firstChild) {
-        articlesContainer.removeChild(articlesContainer.firstChild);
-      }
+      // Optimization: textContent='' is significantly faster than removeChild loop
+      articlesContainer.textContent = '';
 
       if (currentFilteredArticles.length === 0) {
         var noArticlesMsg = document.createElement('div');
@@ -291,9 +290,12 @@ function retrieveAndDecompress(lang) {
         var end = start + PAGE_SIZE;
         var pageArticles = currentFilteredArticles.slice(start, end);
 
+        // Optimization: Use DocumentFragment to batch DOM insertions and avoid layout thrashing
+        var fragment = document.createDocumentFragment();
         pageArticles.forEach(function(article) {
-          articlesContainer.appendChild(createArticleElement(article));
+          fragment.appendChild(createArticleElement(article));
         });
+        articlesContainer.appendChild(fragment);
       }
 
       updatePaginationControls(page);
@@ -361,9 +363,14 @@ function retrieveAndDecompress(lang) {
             var start = currentPage * PAGE_SIZE;
             var end = start + PAGE_SIZE;
             var newArticles = currentFilteredArticles.slice(start, end);
+
+            // Optimization: Use DocumentFragment to batch DOM insertions and avoid layout thrashing
+            var fragment = document.createDocumentFragment();
             newArticles.forEach(function(article) {
-              articlesContainer.appendChild(createArticleElement(article));
+              fragment.appendChild(createArticleElement(article));
             });
+            articlesContainer.appendChild(fragment);
+
             if ((currentPage + 1) * PAGE_SIZE >= currentFilteredArticles.length) {
               loadMoreBtn.style.display = 'none';
             }
