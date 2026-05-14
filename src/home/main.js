@@ -399,10 +399,19 @@ function retrieveAndDecompress(lang) {
       }
       return allArticles.filter(function(a) {
         if (a.lang !== currentLang) return false;
-        var title = (a.title || '').toLowerCase();
-        var content = (a.content || '').toLowerCase();
-        var tags = (a.tags || []).join(' ').toLowerCase();
-        return title.includes(q) || content.includes(q) || tags.includes(q);
+
+        // ⚡ Bolt Performance Optimization:
+        // Memoize the lowercased searchable text for each article.
+        // This avoids allocating multiple new strings (O(N*M)) on every keystroke
+        // for large article bodies by performing the operation only once per article.
+        if (!a._searchableText) {
+          var title = (a.title || '').toLowerCase();
+          var content = (a.content || '').toLowerCase();
+          var tags = (a.tags || []).join(' ').toLowerCase();
+          a._searchableText = title + ' ' + content + ' ' + tags;
+        }
+
+        return a._searchableText.includes(q);
       });
     }
     
