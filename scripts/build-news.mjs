@@ -3,6 +3,7 @@ import { join, basename, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execSync } from 'node:child_process';
 import { chromium } from 'playwright';
+import sharp from 'sharp';
 
 function copyDirectoryRecursive(src, dst) {
   mkdirSync(dst, { recursive: true });
@@ -26,6 +27,8 @@ const FEED_OUTPUT = join(DIST_NEWS, 'news-feed.json');
 
 const SITE_URL = process.env.SITE_URL || 'https://lucasacchi.net';
 const APP_VERSION = process.env.BUILD_VERSION || '2.0.0';
+const SRC_IMAGES = join(SRC_RAW, 'images');
+const WEBP_QUALITY = 82;
 
 export function parseFrontmatter(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -76,6 +79,9 @@ export function markdownToHtml(md) {
     }
   }
 
+  // Regex: una riga che contiene SOLO ![alt](src)
+  const standaloneImageRe = /^!\[([^\]]*)\]\(([^)]+)\)$/;
+
   for (const line of lines) {
     const trimmed = line.trim();
 
@@ -98,6 +104,10 @@ export function markdownToHtml(md) {
 
     if (trimmed === '') {
       flush();
+    } else if (standaloneImageRe.test(trimmed)) {
+      flush();
+      const m = trimmed.match(standaloneImageRe);
+      blocks.push({ type: 'image', alt: m[1], src: m[2] });
     } else if (/^---$/.test(trimmed)) {
       flush();
       blocks.push({ type: 'hr' });
@@ -118,7 +128,10 @@ export function markdownToHtml(md) {
   flushCode();
 
   function inlineFormat(text) {
-    var t = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // IMPORTANT: image regex MUST come before link regex (image is link prefixed by !)
+    var t = text.replace(/!\[([^\]]*)\]\(([^)]+)\)/g,
+      '<img alt="$1" src="$2" loading="lazy" class="my-6 w-full max-w-full h-auto rounded">');
+    t = t.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     t = t.replace(/\*(.*?)\*/g, '<em>$1</em>');
     t = t.replace(/`(.*?)`/g, '<code>$1</code>');
     t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
@@ -146,6 +159,18 @@ export function markdownToHtml(md) {
     if (block.type === 'hr') {
       return '<hr>';
     }
+    if (block.type === 'image') {
+      var altEsc = block.alt.replace(/"/g, '&quot;');
+      var srcEsc = block.src.replace(/"/g, '&quot;');
+      var caption = block.alt
+        ? '<figcaption class="mt-2 text-sm text-on-surface-variant italic text-center">' + block.alt + '</figcaption>'
+        : '';
+      return '<figure class="my-8">'
+        + '<img alt="' + altEsc + '" src="' + srcEsc + '" loading="lazy" '
+        + 'class="w-full max-w-full h-auto rounded shadow-sm">'
+        + caption
+        + '</figure>';
+    }
     if (block.type === 'paragraph' && /^- /.test(block.content)) {
       var items = block.content.split('\n').map(function(l) {
         var inner = l.replace(/^- /, '');
@@ -170,6 +195,7 @@ function buildArticle(filePath) {
     date: metadata.date || null,
     tags: Array.isArray(metadata.tags) ? metadata.tags : [],
     lang: metadata.lang || 'it',
+    description: metadata.description || null,
     content: body,
     html,
   };
@@ -231,7 +257,8 @@ function generateArticlePage(article, template, translations, italianFallback = 
 
   // Generate excerpt (first 150 chars)
   const plainText = stripHtml(article.html || article.content);
-  const excerpt = plainText.slice(0, 150).trim() + (plainText.length > 150 ? '...' : '');
+  const autoExcerpt = plainText.slice(0, 150).trim() + (plainText.length > 150 ? '...' : '');
+  const excerpt = article.description || autoExcerpt;
 
   // Generate ISO date
   const dateISO = article.date || new Date().toISOString().split('T')[0];
@@ -301,11 +328,93 @@ function generateArticlePage(article, template, translations, italianFallback = 
   return html;
 }
 
+/**
+ * Converte un singolo file PNG/JPG in WebP nella destinazione data.
+ * Se il file è già webp/gif/svg, copia as-is.
+ * Non fatale: in caso di errore stampa warning e non blocca il build.
+ */
+async function convertImage(srcPath, dstPath) {
+  const ext = extname(srcPath).toLowerCase();
+  try {
+    if (ext === '.png' || ext === '.jpg' || ext === '.jpeg') {
+      // Output sempre come .webp (estensione forzata)
+      const dstWebp = dstPath.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+      await sharp(srcPath).webp({ quality: WEBP_QUALITY, effort: 4 }).toFile(dstWebp);
+      return basename(dstWebp);
+    } else {
+      // .webp, .gif, .svg: copia as-is
+      copyFileSync(srcPath, dstPath);
+      return basename(dstPath);
+    }
+  } catch (err) {
+    console.warn(`Warning: image conversion failed for ${srcPath}: ${err.message}`);
+    // Fallback: copy raw
+    try {
+      copyFileSync(srcPath, dstPath);
+      return basename(dstPath);
+    } catch (copyErr) {
+      console.warn(`Warning: fallback copy also failed: ${copyErr.message}`);
+      return null;
+    }
+  }
+}
+
+/**
+ * Processa le immagini di un articolo: converte PNG/JPG a WebP e popola dist/blog/{slug}/images/.
+ * Ritorna una Map<originalFilename, finalFilename> per riscrivere i path nell'HTML.
+ * Se src/raw/images/{baseSlug}/ non esiste, ritorna Map vuota (skip silenzioso).
+ */
+async function processArticleImages(baseSlug, destSlugDir) {
+  const srcDir = join(SRC_IMAGES, baseSlug);
+  const mapping = new Map();
+  if (!existsSync(srcDir)) return mapping;
+
+  const destImagesDir = join(destSlugDir, 'images');
+  mkdirSync(destImagesDir, { recursive: true });
+
+  for (const entry of readdirSync(srcDir)) {
+    const srcPath = join(srcDir, entry);
+    if (!statSync(srcPath).isFile()) continue;
+    const dstPath = join(destImagesDir, entry);
+    const finalName = await convertImage(srcPath, dstPath);
+    if (finalName) {
+      mapping.set(entry, finalName);
+      console.log(`  image: ${entry} -> images/${finalName}`);
+    }
+  }
+  return mapping;
+}
+
+/**
+ * Riscrive nell'HTML i path tipo src="images/foo.png" sostituendo con il nome finale (es. .webp).
+ * I path assoluti (http://, https://, //) sono lasciati invariati.
+ */
+function rewriteImagePaths(html, mapping) {
+  if (mapping.size === 0) return html;
+  return html.replace(/(<img\b[^>]*\bsrc=")([^"]+)("[^>]*>)/g, (match, pre, src, post) => {
+    // Skip absolute URLs
+    if (/^(https?:)?\/\//i.test(src)) return match;
+    // Estrai filename dal path (gestisce 'images/foo.png' o solo 'foo.png')
+    const fileName = basename(src);
+    if (mapping.has(fileName)) {
+      const finalName = mapping.get(fileName);
+      // Mantiene la dir 'images/' nel path
+      const newSrc = src.includes('/') ? src.replace(/[^/]+$/, finalName) : 'images/' + finalName;
+      return pre + newSrc + post;
+    }
+    // Se non in mapping ma path relativo che inizia con 'images/', lascia (warning solo se manca file)
+    if (src.startsWith('images/')) {
+      console.warn(`Warning: image referenced but not found in src/raw/images: ${src}`);
+    }
+    return match;
+  });
+}
+
 function stripHtml(html) {
   return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
-function assembleDist() {
+async function assembleDist() {
   if (existsSync(DIST)) {
     for (const entry of readdirSync(DIST)) {
       const full = join(DIST, entry);
@@ -428,13 +537,24 @@ function assembleDist() {
     
     for (const baseSlug in articleGroups) {
       const group = articleGroups[baseSlug];
-      
+
+      // Process images ONCE per baseSlug (IT dir is the canonical destination)
+      // EN version reuses the same source set but in its own directory.
+      let itMapping = new Map();
+      let enMapping = new Map();
+
       // Generate Italian version (always at /blog/{slug}/)
       if (group.it) {
         const articleDir = join(blogDir, baseSlug);
         mkdirSync(articleDir, { recursive: true });
 
-        const articleHtml = generateArticlePage(group.it, template, translations, null, group.en);
+        itMapping = await processArticleImages(baseSlug, articleDir);
+        const articleWithRewrittenHtml = {
+          ...group.it,
+          html: rewriteImagePaths(group.it.html, itMapping)
+        };
+
+        const articleHtml = generateArticlePage(articleWithRewrittenHtml, template, translations, null, group.en);
         writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
         console.log(`Generated article page: blog/${baseSlug}/index.html (IT)`);
       }
@@ -444,8 +564,25 @@ function assembleDist() {
         const articleDir = join(blogDir, baseSlug + '-en');
         mkdirSync(articleDir, { recursive: true });
 
-        // Pass Italian version as fallback for SEO, and no alternate needed (IT is passed via its own call)
-        const articleHtml = generateArticlePage(group.en, template, translations, group.it, group.it);
+        // Reuse: if IT processed images, copy already-converted files from IT dir
+        if (group.it && itMapping.size > 0) {
+          const itImagesDir = join(blogDir, baseSlug, 'images');
+          const enImagesDir = join(articleDir, 'images');
+          mkdirSync(enImagesDir, { recursive: true });
+          for (const [, finalName] of itMapping) {
+            copyFileSync(join(itImagesDir, finalName), join(enImagesDir, finalName));
+          }
+          enMapping = new Map(itMapping);
+        } else {
+          enMapping = await processArticleImages(baseSlug, articleDir);
+        }
+
+        const articleWithRewrittenHtml = {
+          ...group.en,
+          html: rewriteImagePaths(group.en.html, enMapping)
+        };
+
+        const articleHtml = generateArticlePage(articleWithRewrittenHtml, template, translations, group.it, group.it);
         writeFileSync(join(articleDir, 'index.html'), articleHtml, 'utf-8');
         console.log(`Generated article page: blog/${baseSlug}-en/index.html (EN)`);
       }
@@ -572,7 +709,7 @@ async function generateOgImages(articles, blogDir) {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   (async () => {
-    const feed = assembleDist();
+    const feed = await assembleDist();
     await generateOgImages(feed.articles, join(DIST, 'blog'));
   })();
 }
