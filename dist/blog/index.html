@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"countryDetection":true,"floatingPreferencesButtonDisplay":"anchored-center-right","perPurposeConsent":true,"siteId":2315562,"whitelabel":false,"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true,"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","backgroundOverlay":true,"brandBackgroundColor":"#FFFFFF","brandTextColor":"#000000","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"fontSizeBody":"18px","fontSizeCloseButton":"22px","listPurposes":true,"prependOnBody":true,"rejectButtonDisplay":true,"textColor":"#000000"}};
+_iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true}};
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2315562.js" async></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Tutti gli articoli di Luca Sacchi su Linux, infrastruttura enterprise, AI e homelab."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Blog — Luca Sacchi"/>
+<meta property="og:description" content="Tutti gli articoli di Luca Sacchi su Linux, infrastruttura enterprise, AI e homelab."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content="LSN"/>
+<title>Blog — Luca Sacchi</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/tailwind.css"/>
+<script id="tailwind-config" type="application/json">
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d9dadb",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#424752",
+        "primary": "#003f87",
+        "primary-container": "#0056b3",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#bbd0ff",
+        "secondary": "#5f5e5f",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "outline": "#727784",
+        "outline-variant": "#c2c6d4"
+      },
+      "fontFamily": {
+        "headline": ["IBM Plex Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["IBM Plex Mono", "monospace"]
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem"
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+    background-image:
+        linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.blog-card { display: block; }
+.blog-card[hidden] { display: none !important; }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#blog-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Skip to content</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Main navigation">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+  <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/videos/">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#corsi">Corsi</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" aria-current="page">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer">The Linux Formula</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti">Contattami</a>
+<button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/videos/">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#corsi">Corsi</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" aria-current="page">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer">The Linux Formula</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti">Contattami</a>
+<div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
+<button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="blog-content" class="flex-grow max-w-7xl mx-auto w-full px-6 md:px-12 py-12 md:py-16">
+
+<nav class="mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li class="text-on-surface">Blog</li>
+  </ol>
+</nav>
+
+<div class="mb-12">
+  <p class="font-label text-sm uppercase tracking-widest text-on-surface-variant mb-2">Blog</p>
+  <p class="font-headline text-3xl font-semibold text-on-surface mb-2">Tutti gli articoli</p>
+  <p class="font-body text-sm text-on-surface-variant">
+    <span id="count-it">7</span> articoli in italiano &middot; <span id="count-en">7</span> in English &middot; <span class="text-outline">Generato il 2026-05-16</span>
+  </p>
+</div>
+
+<div class="flex flex-wrap items-center gap-4 mb-10">
+  <input id="blog-search" type="text" placeholder="Cerca nel blog..." aria-label="Cerca articoli"
+    class="font-body text-sm bg-surface-container-low border border-outline-variant rounded px-4 py-2 focus:outline-none focus:border-primary w-full md:w-72"/>
+  <div class="flex gap-2 md:ml-auto">
+    <button id="lang-it-btn-blog"
+      class="font-label text-xs uppercase tracking-widest px-3 py-1 border border-primary bg-primary text-on-primary transition-colors"
+      aria-pressed="true">IT</button>
+    <button id="lang-en-btn-blog"
+      class="font-label text-xs uppercase tracking-widest px-3 py-1 border border-outline-variant hover:border-primary transition-colors"
+      aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<div id="blog-articles-it" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="Ieri sera ho visto questo video di sette minuti su YouTube: *&quot;DFlash — 8x faster inference on llama.cpp&quot;*. Il tipo mostra una pull request ancora in stato draft sul repo">
+  <a href="/blog/dflash-xtx-ebay/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-16</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ieri sera ho visto questo video di sette minuti su YouTube: *"DFlash — 8x faster inference on llama.cpp"*. Il tipo mostra una pull request ancora in stato draft sul repo…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llama.cpp</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">speculative-decoding</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">benchmark</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">dflash</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commit in 10 ore — questo è il mio flusso con Claude Code" data-tags="claude-code AI sviluppo homelab produttività" data-excerpt="Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.
+Ho esteso un sistema di monitoring da 2 a 10 checker.
+Ho completato una pipeline IMAP → LLM →">
+  <a href="/blog/claude-code-giornata/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-15</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">66 commit in 10 ore — questo è il mio flusso con Claude Code</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.
+Ho esteso un sistema di monitoring da 2 a 10 checker.
+Ho completato una pipeline IMAP → LLM →…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">claude-code</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">AI</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sviluppo</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">produttività</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme" data-tags="homelab ollama api queue docker python open-source" data-excerpt="Nel mio homelab gira un server Ollama su `192.168.254.115` — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
+
+- TikTok Downloader (trascrizione di video)
+- Shortcutter">
+  <a href="/blog/model-manager-homelab/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Nel mio homelab gira un server Ollama su `192.168.254.115` — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
+
+- TikTok Downloader (trascrizione di video)
+- Shortcutter…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">queue</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — Come ho stravolto l'architettura per scalare la trascrizione" data-tags="architecture microservices whisper api python open-source" data-excerpt="Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
+
+Oggi ho ripensato il pattern architetturale, e ho deciso">
+  <a href="/blog/whisper-api-architecture/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Whisper API — Come ho stravolto l'architettura per scalare la trascrizione</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
+
+Oggi ho ripensato il pattern architetturale, e ho deciso…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">microservices</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore,">
+  <a href="/blog/claude-workspace-backup-pipeline/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore,…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lezioni da una giornata di coding con LLM locali" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
+
+Problema: i link">
+  <a href="/blog/shortcutter-5-lessons/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Shortcutter — 5 lezioni da una giornata di coding con LLM locali</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
+
+Problema: i link…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — Il mio blog personale a tema Linux" data-tags="linux blog thelinuxformula open-source" data-excerpt="Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source, già online su [thelinuxformula.com](https://thelinuxformula.com).
+
+Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme">
+  <a href="/blog/thelinuxformula-launch/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-04-25</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">The Linux Formula — Il mio blog personale a tema Linux</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source, già online su [thelinuxformula.com](https://thelinuxformula.com).
+
+Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">linux</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">blog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">thelinuxformula</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+</div>
+
+<div id="blog-articles-en" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" hidden>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="Last night I watched a seven-minute YouTube video: *&quot;DFlash — 8x faster inference on llama.cpp.&quot;* The guy showcases a draft pull request on the `ggml-org/llama.cpp` repo with a speculative decoding">
+  <a href="/blog/dflash-xtx-ebay-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-16</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Last night I watched a seven-minute YouTube video: *"DFlash — 8x faster inference on llama.cpp."* The guy showcases a draft pull request on the `ggml-org/llama.cpp` repo with a speculative decoding…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llama.cpp</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">speculative-decoding</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">benchmark</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">dflash</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commits in 10 hours — this is my Claude Code workflow" data-tags="claude-code AI development homelab productivity" data-excerpt="Today I built three applications from scratch and deployed them to production.
+I extended a monitoring system from 2 to 12 checkers.
+I completed an IMAP → LLM → database → dashboard">
+  <a href="/blog/claude-code-giornata-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-15</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">66 commits in 10 hours — this is my Claude Code workflow</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Today I built three applications from scratch and deployed them to production.
+I extended a monitoring system from 2 to 12 checkers.
+I completed an IMAP → LLM → database → dashboard…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">claude-code</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">AI</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">development</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">productivity</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once" data-tags="homelab ollama api queue docker python open-source" data-excerpt="In my homelab runs an Ollama server on `192.168.254.115` — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents:
+
+- TikTok Downloader (video transcription)
+- Shortcutter (YouTube download">
+  <a href="/blog/model-manager-homelab-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">In my homelab runs an Ollama server on `192.168.254.115` — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents:
+
+- TikTok Downloader (video transcription)
+- Shortcutter (YouTube download…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">queue</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — How I Reshaped the Architecture to Scale Transcription" data-tags="architecture microservices whisper api python open-source" data-excerpt="A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.
+
+Today I rethought the architecture, and decided to overthrow something">
+  <a href="/blog/whisper-api-architecture-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Whisper API — How I Reshaped the Architecture to Scale Transcription</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.
+
+Today I rethought the architecture, and decided to overthrow something…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">microservices</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="How I hardened my Claude Code workspace — a backup pipeline in 5 steps" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="I use Claude Code CLI every day. My workspace lives on WSL2 and holds code, documentation, course notes, context files for my projects. If the disk dies tomorrow, I lose">
+  <a href="/blog/claude-workspace-backup-pipeline-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">How I hardened my Claude Code workspace — a backup pipeline in 5 steps</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I use Claude Code CLI every day. My workspace lives on WSL2 and holds code, documentation, course notes, context files for my projects. If the disk dies tomorrow, I lose…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lessons from a day of coding with local LLMs" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.
+
+Problem: the links aren't">
+  <a href="/blog/shortcutter-5-lessons-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Shortcutter — 5 lessons from a day of coding with local LLMs</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.
+
+Problem: the links aren't…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — My Personal Linux & Open Source Blog" data-tags="linux blog thelinuxformula open-source" data-excerpt="I've launched **The Linux Formula**, my personal blog dedicated to Linux and open source, now live at [thelinuxformula.com](https://thelinuxformula.com).
+
+With over 20 years of experience as a Systems Administrator on Unix, Linux,">
+  <a href="/blog/thelinuxformula-launch-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-04-25</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">The Linux Formula — My Personal Linux & Open Source Blog</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I've launched **The Linux Formula**, my personal blog dedicated to Linux and open source, now live at [thelinuxformula.com](https://thelinuxformula.com).
+
+With over 20 years of experience as a Systems Administrator on Unix, Linux,…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">linux</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">blog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">thelinuxformula</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+</div>
+
+<p id="blog-no-results" class="hidden font-label text-sm uppercase tracking-wider text-on-surface-variant py-12 text-center">Nessun articolo trovato.</p>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Comm_Links</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="https://www.linkedin.com/in/lucasacchi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-[#ff0000] transition-colors" href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
+<p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+(function() {
+  // Mobile menu toggle
+  var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  var mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Detect initial language from cookie or navigator
+  function getPreferredLang() {
+    var cookieRow = document.cookie.split('; ').find(function(r) { return r.startsWith('lsn_lang='); });
+    if (cookieRow) { var v = cookieRow.split('=')[1]; if (v) return v; }
+    var bl = navigator.language || navigator.userLanguage || 'it';
+    return bl.startsWith('en') ? 'en' : 'it';
+  }
+
+  var currentLang = getPreferredLang();
+
+  var articlesIt = document.getElementById('blog-articles-it');
+  var articlesEn = document.getElementById('blog-articles-en');
+  var btnIt = document.getElementById('lang-it-btn-blog');
+  var btnEn = document.getElementById('lang-en-btn-blog');
+  var navBtnIt = document.getElementById('lang-it-btn');
+  var navBtnEn = document.getElementById('lang-en-btn');
+  var navBtnItMobile = document.getElementById('lang-it-btn-mobile');
+  var navBtnEnMobile = document.getElementById('lang-en-btn-mobile');
+  var searchInput = document.getElementById('blog-search');
+  var noResults = document.getElementById('blog-no-results');
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.cookie = 'lsn_lang=' + lang + '; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+    if (lang === 'it') {
+      articlesIt.removeAttribute('hidden');
+      articlesEn.setAttribute('hidden', '');
+      btnIt.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+      btnIt.classList.remove('border-outline-variant');
+      btnIt.setAttribute('aria-pressed', 'true');
+      btnEn.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+      btnEn.classList.add('border-outline-variant');
+      btnEn.setAttribute('aria-pressed', 'false');
+      if (searchInput) searchInput.placeholder = 'Cerca nel blog...';
+    } else {
+      articlesEn.removeAttribute('hidden');
+      articlesIt.setAttribute('hidden', '');
+      btnEn.classList.add('bg-primary', 'text-on-primary', 'border-primary');
+      btnEn.classList.remove('border-outline-variant');
+      btnEn.setAttribute('aria-pressed', 'true');
+      btnIt.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+      btnIt.classList.add('border-outline-variant');
+      btnIt.setAttribute('aria-pressed', 'false');
+      if (searchInput) searchInput.placeholder = 'Search blog...';
+    }
+    if (searchInput && searchInput.value) filterArticles(searchInput.value);
+    else showAllCards();
+  }
+
+  function showAllCards() {
+    var container = currentLang === 'it' ? articlesIt : articlesEn;
+    var cards = container.querySelectorAll('.blog-card');
+    var any = false;
+    cards.forEach(function(c) { c.removeAttribute('hidden'); any = true; });
+    if (noResults) noResults.classList.toggle('hidden', any || cards.length === 0);
+  }
+
+  function filterArticles(query) {
+    var q = query.toLowerCase().trim();
+    var container = currentLang === 'it' ? articlesIt : articlesEn;
+    var cards = container.querySelectorAll('.blog-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+      var title = (card.dataset.title || '').toLowerCase();
+      var tags = (card.dataset.tags || '').toLowerCase();
+      var excerpt = (card.dataset.excerpt || '').toLowerCase();
+      if (!q || title.includes(q) || tags.includes(q) || excerpt.includes(q)) {
+        card.removeAttribute('hidden');
+        visible++;
+      } else {
+        card.setAttribute('hidden', '');
+      }
+    });
+    if (noResults) noResults.classList.toggle('hidden', visible > 0 || !q);
+  }
+
+  if (btnIt) btnIt.addEventListener('click', function() { setLang('it'); });
+  if (btnEn) btnEn.addEventListener('click', function() { setLang('en'); });
+  if (navBtnIt) navBtnIt.addEventListener('click', function() { setLang('it'); });
+  if (navBtnEn) navBtnEn.addEventListener('click', function() { setLang('en'); });
+  if (navBtnItMobile) navBtnItMobile.addEventListener('click', function() { setLang('it'); });
+  if (navBtnEnMobile) navBtnEnMobile.addEventListener('click', function() { setLang('en'); });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() { filterArticles(this.value); });
+  }
+
+  // Set initial state
+  setLang(currentLang);
+
+  // Matomo tracking (after iubenda consent)
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (!_iub.csConfiguration.callback.onConsentGiven._matomoLoaded) {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) { loadMatomo(); }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
+
+</body>
+</html>

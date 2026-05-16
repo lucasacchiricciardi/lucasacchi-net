@@ -69,7 +69,8 @@ if (document.readyState === 'loading') {
        LANG: 'lsn_lang',
        HASH: 'lsn_hash',
        VERSION: 'lsn_version',
-       APP_VERSION: 'lsn_app_version'
+       APP_VERSION: 'lsn_app_version',
+       FEED_VERSION: 'lsn_feed_version'
      };
 
     function compressAndStore(lang, articles) {
@@ -120,11 +121,11 @@ function retrieveAndDecompress(lang) {
     }
 
     function retrieveVersion() {
-      return localStorage.getItem(STORAGE_KEYS.APP_VERSION);
+      return localStorage.getItem(STORAGE_KEYS.FEED_VERSION);
     }
 
     function storeVersion(version) {
-      localStorage.setItem(STORAGE_KEYS.VERSION, version);
+      localStorage.setItem(STORAGE_KEYS.FEED_VERSION, version);
     }
 
     function clearArticleStorage(lang) {
@@ -149,8 +150,6 @@ function retrieveAndDecompress(lang) {
 
      function initializeOfflineFirst() {
        handleMigration();
-       // Store app version for version checking
-       storeVersion('2.0.0');
        try {
          var storedArticles = retrieveAndDecompress(currentLang);
          if (storedArticles && storedArticles.length > 0) {

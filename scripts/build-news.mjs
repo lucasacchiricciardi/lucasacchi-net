@@ -656,6 +656,56 @@ ${feedItems}
   return feed;
 }
 
+function generateBlogListingCard(article) {
+  const slug = article.id;
+  const url = `/blog/${slug}/`;
+  const tags = (article.tags || []).map(t =>
+    `<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">${t}</span>`
+  ).join('');
+  const plainText = (article.content || '').replace(/<[^>]+>/g, '');
+  const excerpt = plainText.split(' ').slice(0, 30).join(' ');
+  const titleEsc = (article.title || '').replace(/"/g, '&quot;');
+  const tagsStr = (article.tags || []).join(' ');
+  const excerptEsc = excerpt.replace(/"/g, '&quot;');
+  return `<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="${titleEsc}" data-tags="${tagsStr}" data-excerpt="${excerptEsc}">
+  <a href="${url}" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">${article.date || ''}</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">${article.title || ''}</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">${excerpt}…</p>
+    <div class="flex flex-wrap gap-2 mb-4">${tags}</div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>`;
+}
+
+function generateBlogListing(articles, blogDir) {
+  const templatePath = join('src', 'blog-listing-template.html');
+  if (!existsSync(templatePath)) {
+    console.warn('blog-listing-template.html not found, skipping /blog/ generation');
+    return;
+  }
+  let template = readFileSync(templatePath, 'utf-8');
+
+  const itArticles = articles.filter(a => a.lang === 'it');
+  const enArticles = articles.filter(a => a.lang === 'en');
+
+  const itCards = itArticles.map(generateBlogListingCard).join('\n');
+  const enCards = enArticles.map(generateBlogListingCard).join('\n');
+
+  const buildDate = new Date().toISOString().split('T')[0];
+
+  template = template
+    .replace('{{ARTICLES_IT}}', itCards)
+    .replace('{{ARTICLES_EN}}', enCards)
+    .replace(/\{\{COUNT_IT\}\}/g, String(itArticles.length))
+    .replace(/\{\{COUNT_EN\}\}/g, String(enArticles.length))
+    .replace(/\{\{BUILD_DATE\}\}/g, buildDate);
+
+  mkdirSync(blogDir, { recursive: true });
+  writeFileSync(join(blogDir, 'index.html'), template, 'utf-8');
+  console.log(`Generated blog listing: blog/index.html (${itArticles.length} IT + ${enArticles.length} EN articles)`);
+}
+
 async function generateOgImages(articles, blogDir) {
   const ogTemplatePath = join('src', 'og-template.html');
   if (!existsSync(ogTemplatePath)) {
@@ -711,5 +761,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   (async () => {
     const feed = await assembleDist();
     await generateOgImages(feed.articles, join(DIST, 'blog'));
+    generateBlogListing(feed.articles, join(DIST, 'blog'));
   })();
 }

@@ -80,6 +80,22 @@ export const translations = {
     noArticlesFound: "No articles found for this language",
     articlesNotFound: "No articles available in this language"
   },
+
+  blog: {
+    title: "Blog",
+    viewAll: "Tutti gli articoli →",
+    articleCount: "{n} articoli",
+    searchPlaceholder: "Cerca nel blog..."
+  },
+
+  pagination: {
+    prev: "Precedente",
+    next: "Successivo"
+  },
+
+  article: {
+    readMore: "Leggi"
+  },
   
   externalVectors: {
     linkedin: "LinkedIn",
