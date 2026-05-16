@@ -7,6 +7,25 @@
     <language>it</language>
     <atom:link href="https://lucasacchi.net/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title><![CDATA[Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B]]></title>
+    <link>https://lucasacchi.net/blog/dflash-xtx-ebay/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/dflash-xtx-ebay/</guid>
+    <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Ieri sera ho visto questo video di sette minuti su YouTube: "DFlash — 8x faster inference on llama.cpp". Il tipo mostra una pull request ancora in stato draft sul repo ggml-org/llama.cpp, con dentro un metodo di speculative decoding che — sulla carta — fa girare un Qwen3-8B a 419 token al secondo su un'NVIDIA L40S. Otto volte la baseline. Numeri da paper, non da blog post.
+Curiosità immediata. Non tanto per gli 8x — i benchmark "fino a" sono quasi sempre fino-a-mai — ma perché il concetto è eleg]]></description>
+    <category>homelab, llm, llama.cpp, rocm, amd, speculative-decoding, benchmark, dflash</category>
+  </item>
+  <item>
+    <title><![CDATA[66 commit in 10 ore — questo è il mio flusso con Claude Code]]></title>
+    <link>https://lucasacchi.net/blog/claude-code-giornata/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/claude-code-giornata/</guid>
+    <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.Ho esteso un sistema di monitoring da 2 a 10 checker.Ho completato una pipeline IMAP → LLM → database → dashboard.Ho fatto 66 commit.
+Tutto in circa 10 ore, lavorando da solo.
+Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso — da colleghi, da studenti, da chi inizia a usare questi strumenti — è: quanto si riesce davvero a fare? E la risposta onesta è che dipende tutto da come lavori con ]]></description>
+    <category>claude-code, AI, sviluppo, homelab, produttività</category>
+  </item>
+  <item>
     <title><![CDATA[Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme]]></title>
     <link>https://lucasacchi.net/blog/model-manager-homelab/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/model-manager-homelab/</guid>

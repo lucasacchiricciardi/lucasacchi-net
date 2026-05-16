@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"countryDetection":true,"floatingPreferencesButtonDisplay":"anchored-center-right","perPurposeConsent":true,"siteId":2315562,"whitelabel":false,"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true,"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","backgroundOverlay":true,"brandBackgroundColor":"#FFFFFF","brandTextColor":"#000000","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"fontSizeBody":"18px","fontSizeCloseButton":"22px","listPurposes":true,"prependOnBody":true,"rejectButtonDisplay":true,"textColor":"#000000"}};
+_iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true}};
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2315562.js" async></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="I tested DFlash speculative decoding (llama.cpp PR #22105) on an AMD RX 7900 XTX eGPU. Result: 2.62× on Qwen3-8B, 1.25× on gpt-oss-20b (MoE). Four honest stumbles on the way."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B"/>
+<meta property="og:description" content="I tested DFlash speculative decoding (llama.cpp PR #22105) on an AMD RX 7900 XTX eGPU. Result: 2.62× on Qwen3-8B, 1.25× on gpt-oss-20b (MoE). Four honest stumbles on the way."/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/dflash-xtx-ebay-en/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/dflash-xtx-ebay/"/>
+<meta property="article:published_time" content="2026-05-16"/>
+<meta property="article:author" content="Luca Sacchi"/>
+<meta property="article:section" content="Technology"/>
+<meta property="article:tag" content="homelab"/>
+<meta property="article:tag" content="llm"/>
+<meta property="article:tag" content="llama.cpp"/>
+<meta property="article:tag" content="rocm"/>
+<meta property="article:tag" content="amd"/>
+<meta property="article:tag" content="speculative-decoding"/>
+<meta property="article:tag" content="benchmark"/>
+<meta property="article:tag" content="dflash"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/dflash-xtx-ebay-en/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/dflash-xtx-ebay-en/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/dflash-xtx-ebay/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/dflash-xtx-ebay/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="TLF"/>
+<title>I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B — LucaSacchi.net</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B",
+  "datePublished": "2026-05-16",
+  "author": {
+    "@type": "Person",
+    "name": "Luca Sacchi",
+    "url": "https://lucasacchi.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucaSacchi.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lucasacchi.net/favicon.svg"
+    }
+  },
+  "description": "I tested DFlash speculative decoding (llama.cpp PR #22105) on an AMD RX 7900 XTX eGPU. Result: 2.62× on Qwen3-8B, 1.25× on gpt-oss-20b (MoE). Four honest stumbles on the way.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lucasacchi.net/blog/dflash-xtx-ebay/"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/tailwind.css"/>
+<script src="/i18n.js"></script>
+<script src="/lang-switcher.js"></script>
+<script id="tailwind-config" type="application/json">
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d9dadb",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#424752",
+        "primary": "#003f87",
+        "primary-container": "#0056b3",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#bbd0ff",
+        "secondary": "#5f5e5f",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "outline": "#727784",
+        "outline-variant": "#c2c6d4"
+      },
+      "fontFamily": {
+        "headline": ["IBM Plex Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["IBM Plex Mono", "monospace"]
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem"
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+    background-image:
+        linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Article body: max line length 65ch for readability --- */
+nav[aria-label="Breadcrumb"],
+.article-content,
+article > header,
+.article-footer-separator,
+article > footer {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Headings --- */
+.article-content h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+}
+.article-content h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #003f87;
+}
+.article-content h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #191c1d;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    letter-spacing: -0.025em;
+    padding-left: 0.75rem;
+    border-left: 3px solid #003f87;
+}
+
+/* --- Paragraphs --- */
+.article-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+/* --- First paragraph (lead) --- */
+.article-content > p:first-child {
+    font-size: 1.125rem;
+    color: #424752;
+}
+
+/* --- Lists --- */
+.article-content ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+.article-content li {
+    margin-bottom: 0.25rem;
+}
+.article-content li > strong {
+    color: #191c1d;
+}
+
+/* --- Inline elements --- */
+.article-content a {
+    color: #003f87;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 63, 135, 0.3);
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+}
+.article-content a:hover {
+    color: #0056b3;
+}
+.article-content strong {
+    font-weight: 600;
+    color: #191c1d;
+}
+.article-content em {
+    font-style: italic;
+    color: #191c1d;
+}
+
+/* --- Inline code --- */
+.article-content code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    background-color: #e7e8e9;
+    padding: 0.125rem 0.375rem;
+    color: #191c1d;
+}
+
+/* --- Code blocks --- */
+.article-content pre {
+    background-color: #e1e3e4;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    border: 1px solid rgba(114, 119, 132, 0.2);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+.article-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* --- Blockquotes / callouts --- */
+.article-content blockquote {
+    border-left: 4px solid #003f87;
+    background-color: rgba(0, 63, 135, 0.05);
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #424752;
+    font-style: italic;
+}
+.article-content blockquote p {
+    font-size: 1rem;
+    color: #424752;
+    margin-bottom: 0;
+}
+
+/* --- Horizontal rule --- */
+.article-content hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-top: 2px solid rgba(114, 119, 132, 0.2);
+}
+
+/* --- Footer section separator --- */
+.article-footer-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-top: 2px solid rgba(0, 63, 135, 0.2);
+}
+
+/* --- Responsive: desktop --- */
+@media (min-width: 768px) {
+    .article-content h1 { font-size: 2.25rem; }
+    .article-content h2 { font-size: 1.875rem; }
+    .article-content h3 { font-size: 1.5rem; }
+    .article-content p { font-size: 1.125rem; }
+    .article-content > p:first-child { font-size: 1.25rem; }
+    .article-content ul { font-size: 1.125rem; }
+    .article-content pre { padding: 1.5rem 2rem; }
+    .article-content blockquote p { font-size: 1.125rem; }
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#article-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Skip to content</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Main navigation">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+  <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/" data-i18n="nav.home">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/#blog" data-i18n="nav.blog">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/" data-i18n="nav.home">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/#blog" data-i18n="nav.blog">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
+<button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="article-content" class="flex-grow max-w-4xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
+
+<nav class="mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li><a href="/#blog" class="hover:text-primary transition-colors">Blog</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li class="text-on-surface">dflash-xtx-ebay</li>
+  </ol>
+</nav>
+
+<article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
+  
+  <header class="mb-8 pb-8 border-b border-outline-variant/20">
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B</h1>
+    
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-16">2026-05-16</time>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llama.cpp</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">speculative-decoding</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">benchmark</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">dflash</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="article-content">
+    <p>Last night I watched a seven-minute YouTube video: <em>"DFlash — 8x faster inference on llama.cpp."</em> The guy showcases a draft pull request on the <code>ggml-org/llama.cpp</code> repo with a speculative decoding method that — on paper — pushes a Qwen3-8B to 419 tokens per second on an NVIDIA L40S. Eight times the baseline. Paper numbers, not blog post numbers.</p>
+<p>Instant curiosity. Not so much for the 8x — "up to" benchmarks are almost always up-to-never — but because the concept is elegant. And because for two weeks now there's been a card on my desk asking to be stress-tested.</p>
+<h2>The card</h2>
+<p>An <strong>RX 7900 XTX 24 GB GDDR6 Gigabyte Gaming OC</strong>, bought on eBay at a used-but-not-too-used price. I connected it via OCUlink to the home-lab server <code>llm</code> — a Minisforum AI X1-255, AMD Ryzen 7 255, 64 GB DDR5 — replacing the integrated Radeon 780M iGPU that, until May 15, was the only GPU available to Ollama.</p>
+<p>Moving the LLM workload from a laptop-class iGPU to a top-tier desktop card makes sense on its own. But until today I hadn't had a real reason to push the XTX. DFlash showed up at the right moment.</p>
+<h2>What DFlash is, in thirty seconds</h2>
+<p>Speculative decoding is a trick worth knowing if you run local LLMs. The idea: instead of letting the big model autoregressively generate one token at a time, a small model (the <em>drafter</em>) proposes a whole block, the big model <strong>verifies them in parallel</strong>, accepts the correct ones and discards the rest. If the drafter guesses often, you go faster. If it misses too much, you end up slower than baseline.</p>
+<p>DFlash is a recent variant — paper from z-lab, implemented in <code>llama.cpp</code> by <a href="https://github.com/ggml-org/llama.cpp/pull/22105">PR #22105</a> from Ruixiang Wang. Key difference from EAGLE3 (the other speculative family): DFlash produces an entire block of candidates in a <strong>single forward pass of the drafter</strong>, not one token at a time. Higher draft throughput per iteration.</p>
+<p>The official drafter for Qwen3-8B is a specialized 1B-parameter model, <code>z-lab/Qwen3-8B-DFlash-b16</code>, published as BF16 safetensors on Hugging Face.</p>
+<p>In the paper, the acceptance rate on the "write quicksort in Python" prompt hits 93%. That's the number I wanted to see on my own machine.</p>
+<h2>The technical part — four honest stumbles</h2>
+<p>The PR is still <strong>draft</strong> (last commit April 27). No guarantee the code builds cleanly. And of course.</p>
+<p>I built a Docker container based on <code>rocm/dev-ubuntu-22.04</code>, cloned <code>llama.cpp</code>, checked out the PR, compiled with <code>-DGGML_HIP=ON -DAMDGPU_TARGETS=gfx1100</code> (the XTX architecture). Four real problems, in the order they hit:</p>
+<p><strong>1. ROCm 6.2 isn't enough.</strong> First build, error: <code>unknown type name '__hip_fp8_e4m3'</code>. The PR uses FP8 types introduced only in ROCm 6.3+. I jumped to 6.4.4. Build OK.</p>
+<p><strong>2. Missing <code>ldconfig</code>.</strong> <code>cmake --install</code> puts the shared libraries in <code>/usr/local/lib</code>, but the dynamic linker inside the container doesn't know they exist. <code>llama-server --version</code> fails with <code>libllama-common.so.0: cannot open shared object file</code>. I added one line to the Dockerfile:</p>
+<pre><code>RUN echo /usr/local/lib &gt; /etc/ld.so.conf.d/llama-cpp.conf &amp;&amp; ldconfig</code></pre>
+<p><strong>3. <code>huggingface-cli</code> is dead.</strong> At the model download step, the script errored out: <em>"huggingface-cli is deprecated and no longer works. Use <code>hf</code> instead."</em> From some recent release of the Hugging Face CLI, the binary has been renamed. Thirty years of Linux have taught me not to be surprised.</p>
+<p><strong>4. The drafter needs the target.</strong> The most subtle one. The PR's safetensors-to-GGUF conversion script adds a new required flag for DFlash drafters: <code>--target-model-dir</code>. It reads the <code>d2t</code>/<code>t2d</code> mapping tensors between the drafter's reduced vocabulary and the target's full vocabulary. Which means you can't use a pre-quantized GGUF from <code>unsloth/Qwen3-8B-GGUF</code> as the target source — you need the <strong>full safetensors folder</strong> of <code>Qwen/Qwen3-8B</code>, 16 GB, even if you'll throw it away right after that single conversion step. Same for the drafter: safetensors → GGUF bf16 → quantize Q4_K_M.</p>
+<p>Final result, after intermediate cleanup:</p>
+<pre><code>Qwen3-8B.gguf_Q4_K_M.gguf             4.7 GB   (target)
+Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf  596 MB   (drafter)</code></pre>
+<p>About 5.5 GB of VRAM occupied. Out of 24 GB on the XTX, leaving comfortable room for a q8_0 KV cache and even a couple of Ollama models in keep-alive.</p>
+<h2>The moment of truth</h2>
+<p>Container started on port 8081. <code>llama-server</code> loads both models, declares <code>speculative decoding context initialized</code> and starts listening. First request — the paper's prompt, <em>"Write a quicksort algorithm in Python. Write code only."</em></p>
+<p>DFlash active:</p>
+<pre><code>{
+  "tokens_predicted": 92,
+  "predicted_per_second": 132.7,
+  "predicted_per_token_ms": 7.54,
+  "draft_n": 80,
+  "draft_n_accepted": 75
+}</code></pre>
+<p>Acceptance rate: <strong>75/80 = 93.75%</strong>. Essentially identical to the paper (93.3%). Throughput: <strong>132.7 tok/s</strong>.</p>
+<p>To have a fair point of comparison — because a single number means nothing — I reloaded the same model, same prompt, same sampling parameters, but without <code>--dflash</code> and without the drafter. Just Qwen3-8B Q4_K_M, plain autoregressive decoding on the XTX.</p>
+<p>Baseline: <strong>50.7 tok/s</strong>.</p>
+<p>Measured speedup: <strong>132.7 / 50.7 = 2.62x</strong>.</p>
+<h2>What about the paper's 8x?</h2>
+<p>Fair question. Honest answer in three parts.</p>
+<p><strong>The paper measures <code>bf16</code>, I measured <code>Q4_K_M</code>.</strong> Apples and oranges. Quantizing the target to 4-bit raises the absolute baseline — fewer bytes to read from VRAM per forward pass — and therefore leaves less room for speculative decoding to make a difference. To give you the picture: my baseline (51 t/s on XTX Q4_K_M) almost exactly matches the paper's baseline (52 t/s on L40S bf16). Meaning the XTX in Q4 is working like an L40S in bf16. Very similar bandwidth balance, different card.</p>
+<p><strong>The HIP/ROCm backend isn't as tuned as the CUDA one.</strong> The PR is written CUDA-first, with <code>__hip_fp8_e4m3</code> remapped via a compatibility header. There's likely still margin on the ROCm kernel side — especially on drafter graph reuse, which the PR itself flags as <em>future work</em>.</p>
+<p><strong>A single prompt has no warmup.</strong> A single run includes compute graph cold start. A serious benchmark needs n=20 with variance, varied prompts (the PR uses three: quicksort, Pythagoras, "plan a 1-day trip to DC" — and shows that the acceptance rate drops from 93% to 9% on the third prompt, because DFlash works best when the drafter "guesses patterns," and generic prose is less predictable than code).</p>
+<p>So: 2.6x isn't 8x, but it's 2.6x <strong>real, repeatable, on my GPU, with my quantization, on my stack</strong>. It's the number that matters when I'm deciding whether to put a local LLM pipeline into production.</p>
+<h2>What I take home</h2>
+<p><strong>For the home lab</strong>: for code-heavy workflows (the most common use case for my Shortcutter and the agents running on the knowledge base), DFlash on Qwen3-8B Q4_K_M gives a real 2.6x. That's the difference between responding in 700 ms and 1.8 s, on a 90-token generation. For an interactive assistant, it's the difference between "smooth" and "slow."</p>
+<p><strong>For the XTX</strong>: it behaves well. The RX 7900 XTX is a gaming card pushed into LLM inference duty, and in absolute numbers it holds up against pro NVIDIA cards in a higher price bracket. ROCm 6.4 on gfx1100 works without the <code>HSA_OVERRIDE_GFX_VERSION</code> workaround that was mandatory for RDNA3 Radeons just a year ago. Mature driver, native support, predictable performance.</p>
+<p><strong>For the method</strong>: go back to measuring instead of assuming. The YouTube video said 8x. My machine does 2.6x. Both numbers are true — in their respective contexts. Which one you use to decide depends on which context resembles yours more.</p>
+<h2>Reproducibility</h2>
+<p>The full setup — Dockerfile with ROCm 6.4.4, docker-compose with <code>/dev/kfd</code> and <code>/dev/dri</code> mounts, model prep script, benchmark script — is public on GitHub: <a href="https://github.com/lucasacchiricciardi/llama-dflash-rocm"><strong>lucasacchiricciardi/llama-dflash-rocm</strong></a>. Clone, <code>docker compose build</code>, <code>docker compose up</code>. If you reproduce it on another RDNA3 card (7800 XT, W7800, W7900), open an issue with your numbers — reproducibility is the point. Server launch command, for those who want to start from the native <code>llama-server</code> binary:</p>
+<pre><code>llama-server \
+  -m  Qwen3-8B.gguf_Q4_K_M.gguf \
+  -md Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf \
+  --host 0.0.0.0 --port 8081 \
+  --cache-type-k q8_0 --cache-type-v q8_0 \
+  --cache-type-k-draft q8_0 --cache-type-v-draft q8_0 \
+  -ngl 99 --n-gpu-layers-draft 999 \
+  --dflash --draft-max 6 \
+  --temp 0 --top-k 1 \
+  --parallel 1 --no-mmap --mlock --jinja \
+  -c 4000 -cd 1000 -t 8 \
+  --chat-template-kwargs '{"enable_thinking": false}'</code></pre>
+<p>The env var <code>LLAMA_SPEC_NO_THINK=1</code> disables Qwen3's <em>thinking</em> mode at the speculative layer — critical: with thinking on, acceptance rate collapses and the speedup roughly halves. The paper states it, I verified it.</p>
+<h2>Bonus round: gpt-oss-20b</h2>
+<p>Couldn't resist. <code>openai/gpt-oss-20b</code> is the MoE model recently released by OpenAI on Hugging Face, with a dedicated drafter at <code>z-lab/gpt-oss-20b-DFlash</code>. Very different from Qwen3-8B: Mixture of Experts architecture, lower VRAM footprint relative to its nominal parameter count, distributed in <strong>mxfp4</strong> native format.</p>
+<p>First discovery: llama.cpp blocks re-quantization from mxfp4:</p>
+<pre><code>requantizing from type mxfp4 is disabled</code></pre>
+<p>The target must be used as-is — a 13 GB GGUF in native mxfp4. The drafter quantizes to Q4_K_M normally. Second discovery: a PR bug. From the second request onward, <code>llama-server</code> crashes with <code>GGML_ASSERT(n_new >= 1) failed</code> in <code>speculative.cpp:781</code> — the code doesn't correctly reset cross-request speculative state when restoring the KV cache. Workaround: isolated container per prompt.</p>
+<p>Results across three prompts (same benchmark as the original paper):</p>
+<p>| Prompt | Baseline | DFlash | Speedup | Accept% |<br>|---|---|---|---|---|<br>| quicksort | 46 t/s | 77 t/s | 1.67× | 43.5% |<br>| pythagoras | 79 t/s† | 75 t/s | 0.95× | 26.6% |<br>| dc-trip | 45 t/s | 60 t/s | 1.33× | 18.5% |<br>| <strong>average</strong> | ~57 t/s | ~71 t/s | <strong>1.25×</strong> | — |</p>
+<p>†The Pythagoras baseline at 79 t/s is anomalously high — the model likely varied its <code>reasoning_effort</code> between runs. Excluding it, average speedup is closer to 1.50×.</p>
+<h3>Why less than Qwen3-8B?</h3>
+<p>MoE architecture. During DFlash's parallel verification pass, the target activates expert routing for each candidate token — overhead that a dense model doesn't have. Acceptance rate collapses (18–44% vs 93% for Qwen3-8B on the same prompt type), and speedup follows.</p>
+<p>This isn't a DFlash failure. It's MoE physics: the bottleneck shifts from bandwidth to routing overhead, and parallel verification gains less ground.</p>
+<h3>Direct comparison</h3>
+<p>| Model | Architecture | Format | Baseline | DFlash | Speedup |<br>|---|---|---|---|---|---|<br>| Qwen3-8B | Dense | Q4_K_M | 50.7 t/s | 132.7 t/s | <strong>2.62×</strong> |<br>| gpt-oss-20b | MoE | mxfp4 | ~57 t/s | ~71 t/s | <strong>1.25×</strong> |</p>
+<p>For code-heavy workflows, Qwen3-8B with DFlash remains the right choice. gpt-oss-20b still makes sense as a production model — 20B MoE parameters in 13 GB VRAM is an excellent ratio — but it isn't the ideal candidate for speculative decoding.</p>
+<hr>
+<p><em>Updated 2026-05-16 with gpt-oss-20b results. Will update again when the PR is merged into master — currently draft. Next up: Qwen3.5-9B.</em></p>
+  </div>
+
+  <div class="article-footer-separator"></div>
+
+  <footer class="mb-0">
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        <span>Back to Blog</span>
+      </a>
+      
+      <div class="flex gap-3">
+        <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/dflash-xtx-ebay-en/&title=I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           title="Share on LinkedIn"
+           aria-label="Share on LinkedIn">
+          <span class="material-symbols-outlined">work</span>
+        </a>
+        
+        <a class="text-on-surface-variant hover:text-primary transition-colors" 
+           href="mailto:?subject=I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B&body=I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B%0A%0Ahttps://lucasacchi.net/blog/dflash-xtx-ebay-en/" 
+           title="Share via email"
+           aria-label="Share via email">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
+        
+        <button class="text-on-surface-variant hover:text-primary transition-colors" 
+                id="copy-link-btn"
+                title="Copy link"
+                aria-label="Copy link">
+          <span class="material-symbols-outlined" id="copy-icon">link</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+</article>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Comm_Links</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="https://www.linkedin.com/in/lucasacchi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-[#ff0000] transition-colors" href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
+<p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+var mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
+
+// Copy link button
+var copyLinkBtn = document.getElementById('copy-link-btn');
+var copyIcon = document.getElementById('copy-icon');
+if (copyLinkBtn && copyIcon) {
+  copyLinkBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      copyIcon.textContent = 'check';
+      setTimeout(function() {
+        copyIcon.textContent = 'link';
+      }, 2000);
+    });
+  });
+}
+</script>
+
+<script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  window.openPolicy = openPolicy;
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>
