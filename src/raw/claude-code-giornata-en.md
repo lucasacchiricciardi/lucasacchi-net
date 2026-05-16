@@ -13,7 +13,7 @@ I made 66 commits.
 
 All in about 10 hours, working alone.
 
-I'm not writing this to impress anyone. I'm writing it because the question I get most often — from colleagues, students, people starting to use these tools — is: *how much can you actually get done?* And the honest answer is that it depends entirely on **how** you work with AI, not on how capable the AI is.
+I'm not writing this to impress anyone. I'm writing it because the question I get most often, from colleagues and from people just starting with these tools, is one: *how much can you actually get done?* The honest answer is that it depends on how you work with AI, not on how capable the AI is.
 
 This article describes the workflow I use every day. With real examples from today.
 
@@ -41,15 +41,7 @@ These aren't demo numbers. This is real work, on real infrastructure, running in
 
 First things first: Claude Code is not a chatbot you prompt with "do this thing."
 
-The workflow I use has three distinct phases. Skipping one is the fastest way to waste time.
-
-**1. Planning** — build the plan before writing code
-
-**2. Plan review** — verify before saying "go"
-
-**3. Execution** — with explicit task tracking
-
-Let's go through each one.
+The workflow I use has three distinct phases: planning, plan review, execution with explicit task tracking. Skipping one is the fastest way to waste time. Going through each one.
 
 ## Planning: building the plan before writing a single line of code
 
@@ -59,7 +51,7 @@ The plan isn't a to-do list. It's explicit reasoning about what already exists a
 
 This morning, for `newsletter-intel`, I gave a brief of about twenty lines: what kind of system I wanted, which technologies to use, where it runs, what the requirements are. Claude Code explored the workspace, read the project context files, then produced a 5-phase plan with acceptance criteria for each phase.
 
-The plan wasn't perfect on the first pass. It had assumed the container had access to an NFS mount that wasn't actually there. It wrote it explicitly in the plan ("assuming `/mnt/qnap-public/newsletter-intel` is available") — and that one line let me catch and fix it *before* anything ran.
+The plan wasn't perfect on the first pass. It had assumed the container had access to an NFS mount that wasn't actually there. It wrote it explicitly in the plan ("assuming `/mnt/qnap-public/newsletter-intel` is available"), and that one line let me catch and fix it *before* anything ran.
 
 **Practical rule**: the plan should be detailed enough to surface problems before they become runtime errors. If it's too vague, it's not a plan yet.
 
@@ -77,9 +69,9 @@ A plan that puts testing after production deploy is not a good plan. I check whe
 Plans tend to optimize for the happy path. I ask: what happens if the container doesn't start? if the DB isn't reachable? if the external API returns 429? I don't need a plan for every edge case, but the critical failure points need to be identified.
 
 **4. Is the plan atomic?**
-Each phase must produce something verifiable. Not "implement the backend" — but "the backend responds to `/health` with `{"status": "ok"}` and to `/api/items` with a JSON list." If I can't describe how to verify a phase is complete, that phase is too big.
+Each phase must produce something verifiable. Not "implement the backend", but "the backend responds to `/health` with `{"status": "ok"}` and to `/api/items` with a JSON list." If I can't describe how to verify a phase is complete, that phase is too big.
 
-Today for `proof` — the testimonial collection app — I stopped the plan after the first read because it had included Google OAuth. Google OAuth had made sense in the initial brief, but in the days before I had decided to remove it. The plan didn't know that. I corrected the brief, regenerated, and moved on.
+Today for `proof`, the testimonial collection app, I stopped the plan after the first read because it had included Google OAuth. Google OAuth had made sense in the initial brief, but in the days before I had decided to remove it. The plan didn't know that. I corrected the brief, regenerated, and moved on.
 
 ## Management: how I keep direction across multiple projects
 
@@ -113,7 +105,7 @@ Second: I can fix one piece without redoing everything. If the `bookmark_ingest`
 
 Third: the parallelism is real. Checkers don't depend on each other. They run in parallel. With a single sequential process, one slow checker would block all the others.
 
-Same pattern with my brand copy system: an orchestrator receives the campaign brief, breaks it down, and delegates to specialized subagents — one for big ideas, one for headlines, one for bullet points. Each applies its specific framework, produces structured output, and the orchestrator assembles the final result.
+Same pattern with my brand copy system: an orchestrator receives the campaign brief, breaks it down, and delegates to specialized subagents. One for big ideas, one for headlines, one for bullet points. Each applies its framework, produces structured output, and the orchestrator assembles the final result.
 
 **When NOT to use subagents:**
 - Simple tasks that a single agent solves in one pass
@@ -132,7 +124,7 @@ It would be dishonest not to mention this.
 
 **The revert.** I had to revert a commit on `fonti` because a migration runner introduced unexpected behavior at startup. The revert itself took 2 minutes, but identifying the problem took 20. Claude Code doesn't make fewer mistakes than humans on startup edge cases. It makes different mistakes.
 
-**Cross-session memory.** The AI doesn't remember the previous session. Every time I have to reload context. The context files exist exactly for this — but it requires discipline to keep them up to date.
+**Cross-session memory.** The AI doesn't remember the previous session. Every time I have to reload context. The context files exist exactly for this, but keeping them up to date requires discipline.
 
 ## What remains after 10 hours
 
@@ -142,7 +134,7 @@ Three applications in production with active monitoring. A complete data pipelin
 
 What hasn't changed: you still need to understand what you're building. You still need to design before implementing. You still need to review the plan before executing it. You still need to know how the infrastructure works.
 
-Claude Code doesn't replace technical skill. It multiplies it — but only if there's something to multiply.
+Claude Code doesn't replace technical skill. It multiplies it, but only if there's something to multiply.
 
 ---
 

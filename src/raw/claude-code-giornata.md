@@ -12,7 +12,7 @@ Ho fatto 66 commit.
 
 Tutto in circa 10 ore, lavorando da solo.
 
-Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso — da colleghi, da studenti, da chi inizia a usare questi strumenti — è: *quanto si riesce davvero a fare?* E la risposta onesta è che dipende tutto da **come** lavori con l'AI, non da quanto l'AI sia capace.
+Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso, da colleghi e da chi inizia adesso con questi strumenti, è una sola: *quanto si riesce davvero a fare?* La risposta onesta è che dipende da come lavori con l'AI, non da quanto l'AI sia capace.
 
 Questo articolo racconta il flusso che uso ogni giorno. Con esempi reali da oggi.
 
@@ -38,15 +38,7 @@ Questi non sono numeri di una demo. È lavoro reale, su infrastruttura reale, in
 
 Prima di tutto: Claude Code non è un chatbot a cui scrivi "fai questa cosa".
 
-Il flusso che uso ha tre fasi distinte, e saltarne una è il modo più veloce per perdere tempo.
-
-**1. Pianificazione** — costruire il piano prima di scrivere codice
-
-**2. Esame del piano** — verificare prima di dire "vai"
-
-**3. Esecuzione** — con tracciamento esplicito dei task
-
-Andiamo a vederle una per una.
+Il flusso che uso ha tre fasi distinte: pianificazione, esame del piano, esecuzione con tracciamento esplicito dei task. Saltarne una è il modo più veloce per perdere tempo. Le vediamo una per una.
 
 ## Pianificazione: costruire il piano prima di scrivere codice
 
@@ -56,7 +48,7 @@ Il piano non è un elenco di cose da fare. È un ragionamento esplicito su cosa 
 
 Questa mattina, per `newsletter-intel`, ho fornito un brief di una ventina di righe: che tipo di sistema volevo, quali tecnologie usare, dove gira, quali sono i requisiti. Claude Code ha esplorato il workspace, letto i file di contesto del progetto, poi ha prodotto un piano in 5 fasi con acceptance criteria per ogni fase.
 
-Il piano non era perfetto al primo colpo. Aveva assunto che il container avesse accesso a un mount NFS che in realtà non c'era. Lo ha scritto nel piano ("assumo che `/mnt/qnap-public/newsletter-intel` sia disponibile") — e quella riga mi ha permesso di correggerlo *prima* di eseguire qualcosa.
+Il piano non era perfetto al primo colpo. Aveva assunto che il container avesse accesso a un mount NFS che in realtà non c'era. Lo ha scritto nel piano ("assumo che `/mnt/qnap-public/newsletter-intel` sia disponibile"), e quella riga mi ha permesso di correggerlo *prima* di eseguire qualcosa.
 
 **Regola pratica**: il piano deve essere abbastanza dettagliato da farti vedere i problemi prima che diventino errori a runtime. Se è troppo vago, non è ancora un piano.
 
@@ -74,9 +66,9 @@ Un piano che mette il testing dopo il deploy di produzione non è un buon piano.
 Il piano tende a ottimizzare per lo happy path. Chiedo: cosa succede se il container non parte? se il DB non è raggiungibile? se l'API esterna risponde 429? Non serve un piano per ogni edge case, ma i punti di fallimento critici devono essere identificati.
 
 **4. Il piano è atomico?**
-Ogni fase deve produrre qualcosa di verificabile. Non "implementa il backend" — ma "il backend risponde a `/health` con `{"status": "ok"}` e a `/api/items` con una lista JSON". Se non riesco a descrivere come verificare che una fase è completa, quella fase è troppo grande.
+Ogni fase deve produrre qualcosa di verificabile. Non "implementa il backend", ma "il backend risponde a `/health` con `{"status": "ok"}` e a `/api/items` con una lista JSON". Se non riesco a descrivere come verificare che una fase è completa, quella fase è troppo grande.
 
-Oggi per `proof` — l'app di raccolta testimonianze — ho fermato il piano dopo la prima lettura perché aveva incluso Google OAuth. Google OAuth aveva già senso nella versione iniziale del brief, ma nei giorni precedenti avevo deciso di rimuoverlo. Il piano non lo sapeva. Ho corretto il brief, ho rigenerato, e siamo andati.
+Oggi per `proof`, l'app di raccolta testimonianze, ho fermato il piano dopo la prima lettura perché aveva incluso Google OAuth. Google OAuth aveva senso nella versione iniziale del brief, ma nei giorni precedenti avevo deciso di rimuoverlo. Il piano non lo sapeva. Ho corretto il brief, ho rigenerato, e siamo andati.
 
 ## Gestione: come mantengo la direzione su più progetti
 
@@ -110,7 +102,7 @@ Secondo: posso correggere un pezzo senza rifare tutto. Se il checker di `bookmar
 
 Terzo: il parallelismo è reale. I checker non dipendono l'uno dall'altro. Li eseguo in parallelo. Con un singolo processo sequenziale, un checker lento blocca tutti gli altri.
 
-Stesso schema con il sistema di copy del brand: un orchestratore riceve il brief, lo scompone e delega a subagenti specializzati — uno per le big idea, uno per le headline, uno per i bullet point. Ognuno applica il suo framework specifico, produce output strutturato, e l'orchestratore assembla il risultato finale.
+Stesso schema con il sistema di copy del brand: un orchestratore riceve il brief, lo scompone e delega a subagenti specializzati. Uno per le big idea, uno per le headline, uno per i bullet point. Ognuno applica il suo framework, produce output strutturato, e l'orchestratore assembla il risultato finale.
 
 **Quando NON usare subagenti:**
 - Task semplici che un singolo agente risolve in una passata
@@ -129,7 +121,7 @@ Sarebbe disonesto non dirlo.
 
 **Il revert.** Ho fatto un revert su `fonti` perché il migration runner introdotto in una commit creava un comportamento imprevisto all'avvio. Il revert stesso ha richiesto 2 minuti, ma identificare il problema ha richiesto 20. Claude Code non sbaglia meno degli umani sulle edge case di startup. Sbaglia in modo diverso.
 
-**La memoria cross-sessione.** L'AI non ricorda la sessione precedente. Ogni volta devo ricaricare il contesto. I file di contesto servono esattamente a questo — ma richiede disciplina mantenerli aggiornati.
+**La memoria cross-sessione.** L'AI non ricorda la sessione precedente. Ogni volta devo ricaricare il contesto. I file di contesto servono esattamente a questo, ma mantenerli aggiornati richiede disciplina.
 
 ## Cosa resta dopo 10 ore
 
@@ -139,7 +131,7 @@ Tre applicazioni in produzione con monitoring attivo. Un sistema di pipeline dat
 
 Quello che non è cambiato: serve ancora capire cosa stai costruendo. Serve ancora progettare prima di implementare. Serve ancora esaminare il piano prima di eseguirlo. Serve ancora sapere come funziona l'infrastruttura su cui gira il codice.
 
-Claude Code non elimina la competenza tecnica. La moltiplica — ma solo se c'è qualcosa da moltiplicare.
+Claude Code non elimina la competenza tecnica. La moltiplica, ma solo se c'è qualcosa da moltiplicare.
 
 ---
 
