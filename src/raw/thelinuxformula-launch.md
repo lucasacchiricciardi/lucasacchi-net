@@ -5,19 +5,10 @@ tags: [linux, blog, thelinuxformula, open-source]
 lang: it
 ---
 
-Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source, già online su [thelinuxformula.com](https://thelinuxformula.com).
+Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source. È online su [thelinuxformula.com](https://thelinuxformula.com).
 
-Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme Unix, Linux e Solaris, ho sentito la necessità di creare uno spazio dove condividere conoscenze, insight e best practice con la community.
+Dopo oltre 20 anni come Systems Administrator su Unix, Linux e Solaris, ho sentito il bisogno di mettere in un posto solo quello che racconto in aula e quello che faccio in produzione. Articoli sul kernel, su systemd, sul networking, sulla sicurezza. Guide pratiche per chi lavora con sistemi enterprise e per chi smanetta sul portatile la sera. Tutto bilingue, italiano e inglese, perché il pubblico che leggo io è quello.
 
-### Cosa troverai su The Linux Formula
+Il taglio è quello di sempre: si parte dalle fondamenta, si costruisce un pezzo alla volta, e si verifica man mano. Niente tutorial copia-incolla, niente paragrafi che promettono "una panoramica completa" e poi non spiegano niente.
 
-- **Articoli tecnici** su kernel, systemd, networking, sicurezza
-- **Guide pratiche** per sistemisti e appassionati
-- **Contenuti bilingui** in italiano e inglese
-- Un approccio **metodico e rigoroso**, oltre il tutorial generico
-
-### Il metodo
-
-Ogni articolo segue il mio approccio didattico: partire dalle fondamenta, costruire passo dopo passo, con la precisione che richiede l'amministrazione di sistemi enterprise.
-
-Visita [thelinuxformula.com](https://thelinuxformula.com) per scoprire tutti i contenuti e gli aggiornamenti.
+Se ti interessa quel tipo di contenuto, [thelinuxformula.com](https://thelinuxformula.com) è il posto.
