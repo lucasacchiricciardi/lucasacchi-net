@@ -19,7 +19,7 @@ Three stages, simple:
 2. **Staging**: Docker VM (`dockerhost02`)
 3. **Cold storage**: QNAP NAS in RAID
 
-Everything starts with Syncthing, goes through rsync over SSH, ends up in a deduplicated backup. Let's walk through the steps.
+Everything starts with Syncthing, goes through rsync over SSH, ends up in a deduplicated backup. The steps, one by one.
 
 ### Step 1: Real-time sync with Syncthing
 
@@ -31,7 +31,7 @@ First check after deploy: `ls -la` on the Docker volume. Files present, permissi
 
 This is where I lost some time. QNAPs don't use the standard path for authorized SSH keys. It's not `~/.ssh/authorized_keys`, but `/etc/config/ssh/authorized_keys`.
 
-Generated an ED25519 key on the VM, injected the public key into the NAS, ran a connection test. But the connection test failed for a trivial reason:
+Generated an ED25519 key on the VM, injected the public key into the NAS, ran a connection test. The connection test failed for a trivial reason:
 
 ```bash
 ssh admin@192.168.254.100 "echo 'Connection successful!'"
@@ -77,9 +77,9 @@ The entire system maintains itself.
 
 Three rules that guided the whole build:
 
-- **Safety first** — flock to prevent parallel runs, verified permissions, ED25519 keys
-- **Little often** — sync every minute, not every hour
-- **Double check** — forced logrotate to verify permissions, `.qdff` integrity to check monthly
+- **Safety first**: flock to prevent parallel runs, verified permissions, ED25519 keys
+- **Little often**: sync every minute, not every hour
+- **Double check**: forced logrotate to verify permissions, `.qdff` integrity to check monthly
 
 Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. No cloud, no recurring costs.
 
