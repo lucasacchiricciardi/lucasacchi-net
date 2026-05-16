@@ -7,11 +7,11 @@ lang: en
 
 A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.
 
-Today I rethought the architecture, and decided to overthrow something that seemed already solid.
+Today I rethought the architecture and decided to rebuild a piece that already looked solid.
 
 ## The problem: embedded model
 
-Initially, Shortcutter carried `faster-whisper` embedded — the model loaded locally in memory.
+Initially, Shortcutter carried `faster-whisper` embedded, the model loaded locally in memory.
 
 For a 60-90 second video, that means 1.5 GB of VRAM occupied by a single component.
 
@@ -23,25 +23,21 @@ Instead of keeping the model inside the script, I extracted it: I created **Whis
 
 Shortcutter now calls `POST /transcribe` over HTTP.
 
-Done — zero local VRAM, and the pattern becomes reusable.
+Result: zero local VRAM, and the pattern becomes reusable.
 
 ## What changed in practice
 
-**Decoupling**: transcription is no longer inside the script, it's a service. If tomorrow I swap transcriber (from Whisper to something else), I only update the API.
+Transcription no longer lives inside the script: it's a service of its own. If tomorrow I swap the transcriber (from Whisper to something else), I update the API and none of the clients notice.
 
-**Model flexibility**: from remote, I can use `large-v3-turbo` without paying the local VRAM cost. I change the `model=` parameter and done.
+On the model side, from remote I can use `large-v3-turbo` without paying the local VRAM cost. Change the `model=` parameter and done.
 
-**Scalability**: TikTok Downloader, Shortcutter, TwinScribeAI can all call the same service. Single source of truth.
+On reuse, TikTok Downloader, Shortcutter, and TwinScribeAI all talk to the same endpoint. Single source of truth, no duplicated transcription code spread across three projects.
 
-**Clarity**: the boundary between "what my script does" and "what the service does" becomes obvious.
+And the boundary between "what my script does" and "what the service does" becomes obvious. Which, in the end, is the thing that saves you the most time.
 
 ## Not a refactor for show
 
-This is not a refactor to look good.
-
-It's a practical decision: **separating concerns makes code more honest**.
-
-Anyone working on AI pipelines knows that these small boundary shifts — "what lives where" — change how you reason about problems.
+This isn't a cosmetic refactor. It's a practical decision: separating concerns makes code more honest. Anyone working on AI pipelines knows that these small boundary shifts, "what lives where", change how you reason about problems.
 
 ## The repository
 
