@@ -11,8 +11,8 @@
     <link>https://lucasacchi.net/blog/dflash-xtx-ebay/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/dflash-xtx-ebay/</guid>
     <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Ieri sera ho visto questo video di sette minuti su YouTube: "DFlash — 8x faster inference on llama.cpp". Il tipo mostra una pull request ancora in stato draft sul repo ggml-org/llama.cpp, con dentro un metodo di speculative decoding che — sulla carta — fa girare un Qwen3-8B a 419 token al secondo su un'NVIDIA L40S. Otto volte la baseline. Numeri da paper, non da blog post.
-Curiosità immediata. Non tanto per gli 8x — i benchmark "fino a" sono quasi sempre fino-a-mai — ma perché il concetto è eleg]]></description>
+    <description><![CDATA[Ieri sera ho visto questo video di sette minuti su YouTube: "DFlash — 8x faster inference on llama.cpp". Il tipo mostra una pull request ancora in stato draft sul repo ggml-org/llama.cpp, con dentro un metodo di speculative decoding che sulla carta fa girare un Qwen3-8B a 419 token al secondo su un'NVIDIA L40S. Otto volte la baseline. Numeri da paper, non da blog post.
+Curiosità immediata. Non tanto per gli 8x (i benchmark "fino a" sono quasi sempre fino-a-mai), ma perché il concetto è elegante.]]></description>
     <category>homelab, llm, llama.cpp, rocm, amd, speculative-decoding, benchmark, dflash</category>
   </item>
   <item>
@@ -22,7 +22,7 @@ Curiosità immediata. Non tanto per gli 8x — i benchmark "fino a" sono quasi s
     <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
     <description><![CDATA[Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.Ho esteso un sistema di monitoring da 2 a 10 checker.Ho completato una pipeline IMAP → LLM → database → dashboard.Ho fatto 66 commit.
 Tutto in circa 10 ore, lavorando da solo.
-Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso — da colleghi, da studenti, da chi inizia a usare questi strumenti — è: quanto si riesce davvero a fare? E la risposta onesta è che dipende tutto da come lavori con ]]></description>
+Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso, da colleghi e da chi inizia adesso con questi strumenti, è una sola: quanto si riesce davvero a fare? La risposta onesta è che dipende da come lavori con l'AI, non ]]></description>
     <category>claude-code, AI, sviluppo, homelab, produttività</category>
   </item>
   <item>
@@ -30,11 +30,11 @@ Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più
     <link>https://lucasacchi.net/blog/model-manager-homelab/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/model-manager-homelab/</guid>
     <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Nel mio homelab gira un server Ollama su 192.168.254.115 — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
+    <description><![CDATA[Nel mio homelab gira un server Ollama su 192.168.254.115: 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
 TikTok Downloader (trascrizione di video)Shortcutter (download + summary YouTube)n8n (workflow AI)Skill Claude (agenti personalizzati)embed-bookmarks.sh (embedding di appunti)
 Inizialmente tutti facevano quello che gli pareva: caricavano il modello quando gli serviva, lo scaricavano quando finivano. Facile.
 Fino a quando non lo è più.
-Il problema: il free-for-]]></description>
+Il problema: il free-for-a]]></description>
     <category>homelab, ollama, api, queue, docker, python, open-source</category>
   </item>
   <item>
@@ -43,11 +43,12 @@ Il problema: il free-for-]]></description>
     <guid isPermaLink="true">https://lucasacchi.net/blog/whisper-api-architecture/</guid>
     <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
     <description><![CDATA[Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
-Oggi ho ripensato il pattern architetturale, e ho deciso di stravolgere una cosa che sembrava già buona.
+Oggi ho ripensato l'architettura e ho deciso di rifare una cosa che sembrava già buona.
 Il problema: il modello embedded
-Inizialmente Shortcutter portava con sé faster-whisper embedded — il modello caricato localmente in memoria.
+Inizialmente Shortcutter portava con sé faster-whisper embedded, il modello caricato localmente in memoria.
 Per un video da 60-90 secondi significa 1.5 GB di VRAM occupati da un singolo componente.
-Funziona, certo. Ma no]]></description>
+Funziona, certo. Ma non scala.
+La soluzi]]></description>
     <category>architecture, microservices, whisper, api, python, open-source</category>
   </item>
   <item>
@@ -56,7 +57,7 @@ Funziona, certo. Ma no]]></description>
     <guid isPermaLink="true">https://lucasacchi.net/blog/claude-workspace-backup-pipeline/</guid>
     <pubDate>Sat, 02 May 2026 00:00:00 GMT</pubDate>
     <description><![CDATA[Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.
-Non mi andava di pensarci. Cosi ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.
+Non mi andava di pensarci. Così ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.
 Ecco come.
 L'architettura
 Tre stadi, semplice:
@@ -78,10 +79,8 @@ Così stamattina mi sono detto: costruisco una pipeline che li scarica, li anali
     <link>https://lucasacchi.net/blog/thelinuxformula-launch/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/thelinuxformula-launch/</guid>
     <pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[Ho lanciato The Linux Formula, il mio blog personale dedicato al mondo Linux e all'open source, già online su thelinuxformula.com.
-Dopo oltre 20 anni di esperienza come Systems Administrator su piattaforme Unix, Linux e Solaris, ho sentito la necessità di creare uno spazio dove condividere conoscenze, insight e best practice con la community.
-Cosa troverai su The Linux Formula
-Articoli tecnici su kernel, systemd, networking, sicurezzaGuide pratiche per sistemisti e appassionatiContenuti bilingui]]></description>
+    <description><![CDATA[Ho lanciato The Linux Formula, il mio blog personale dedicato al mondo Linux e all'open source. È online su thelinuxformula.com.
+Dopo oltre 20 anni come Systems Administrator su Unix, Linux e Solaris, ho sentito il bisogno di mettere in un posto solo quello che racconto in aula e quello che faccio in produzione. Articoli sul kernel, su systemd, sul networking, sulla sicurezza. Guide pratiche per chi lavora con sistemi enterprise e per chi smanetta sul portatile la sera. Tutto bilingue, italiano ]]></description>
     <category>linux, blog, thelinuxformula, open-source</category>
   </item>
   </channel>

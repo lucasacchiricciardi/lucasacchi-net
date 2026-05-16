@@ -380,11 +380,11 @@ article > footer {
 <p>Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.</p>
 <p>Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti.</p>
 <p>Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.</p>
-<p>Ecco 5 cose che ho imparato.</p>
+<p>5 cose che ho imparato.</p>
 <h3>1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa</h3>
 <p>Sempre con <code>anthropics/</code> davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fidati dopo.</p>
 <h3>2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri</h3>
-<p>"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore — aggiunge rumore.</p>
+<p>"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore: aggiunge rumore.</p>
 <h3>3. Un sanity check di 5 righe ha salvato la giornata</h3>
 <p>Il LLM ha provato a sostituire il transcript con la description del video. Un "se la differenza è sopra il 30%, torna al raw" ha bloccato il disastro. Sembra banale. È oro.</p>
 <h3>4. A volte non è la pipeline a sbagliare: è il creator che ha caricato un video con l'audio mescolato</h3>

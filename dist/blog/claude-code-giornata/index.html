@@ -376,7 +376,7 @@ article > footer {
   <div class="article-content">
     <p>Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.<br>Ho esteso un sistema di monitoring da 2 a 10 checker.<br>Ho completato una pipeline IMAP → LLM → database → dashboard.<br>Ho fatto 66 commit.</p>
 <p>Tutto in circa 10 ore, lavorando da solo.</p>
-<p>Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso — da colleghi, da studenti, da chi inizia a usare questi strumenti — è: <em>quanto si riesce davvero a fare?</em> E la risposta onesta è che dipende tutto da <strong>come</strong> lavori con l'AI, non da quanto l'AI sia capace.</p>
+<p>Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più spesso, da colleghi e da chi inizia adesso con questi strumenti, è una sola: <em>quanto si riesce davvero a fare?</em> La risposta onesta è che dipende da come lavori con l'AI, non da quanto l'AI sia capace.</p>
 <p>Questo articolo racconta il flusso che uso ogni giorno. Con esempi reali da oggi.</p>
 <h2>I numeri della giornata</h2>
 <p>| Progetto | Tipo di attività | Commit |<br>|---|---|---|<br>| <code>proof</code> | Nuova app da zero → produzione | 8 |<br>| <code>newsletter-intel</code> | Pipeline completa (5 fasi) da zero → produzione | 14 |<br>| <code>humble-library-sync</code> | Nuova app da zero → deploy | 4 |<br>| <code>pipeline-monitor</code> | +8 checker, v3.0.0 | 6 |<br>| <code>fonti</code> + <code>knowledge-base</code> | Impact Engine, Fase 3 | 9 |<br>| <code>notebooklm-wiki-bridge</code> | Nuovo workflow TikTok watchdog | 3 |<br>| Infrastruttura varia | Inventario, Zabbix, fix minori | 22 |</p>
@@ -385,24 +385,20 @@ article > footer {
 <p>Questi non sono numeri di una demo. È lavoro reale, su infrastruttura reale, in homelab che gira in produzione.</p>
 <h2>Il flusso base: plan → review → esegui</h2>
 <p>Prima di tutto: Claude Code non è un chatbot a cui scrivi "fai questa cosa".</p>
-<p>Il flusso che uso ha tre fasi distinte, e saltarne una è il modo più veloce per perdere tempo.</p>
-<p><strong>1. Pianificazione</strong> — costruire il piano prima di scrivere codice</p>
-<p><strong>2. Esame del piano</strong> — verificare prima di dire "vai"</p>
-<p><strong>3. Esecuzione</strong> — con tracciamento esplicito dei task</p>
-<p>Andiamo a vederle una per una.</p>
+<p>Il flusso che uso ha tre fasi distinte: pianificazione, esame del piano, esecuzione con tracciamento esplicito dei task. Saltarne una è il modo più veloce per perdere tempo. Le vediamo una per una.</p>
 <h2>Pianificazione: costruire il piano prima di scrivere codice</h2>
 <p>Claude Code ha una modalità chiamata <em>plan mode</em>. Quando entro in questa modalità, l'AI non scrive codice: esplora il workspace, legge i file rilevanti e produce un piano strutturato.</p>
 <p>Il piano non è un elenco di cose da fare. È un ragionamento esplicito su cosa esiste già e può essere riusato, cosa va costruito da zero, in che ordine, le dipendenze tra i pezzi e dove possono nascere problemi.</p>
 <p>Questa mattina, per <code>newsletter-intel</code>, ho fornito un brief di una ventina di righe: che tipo di sistema volevo, quali tecnologie usare, dove gira, quali sono i requisiti. Claude Code ha esplorato il workspace, letto i file di contesto del progetto, poi ha prodotto un piano in 5 fasi con acceptance criteria per ogni fase.</p>
-<p>Il piano non era perfetto al primo colpo. Aveva assunto che il container avesse accesso a un mount NFS che in realtà non c'era. Lo ha scritto nel piano ("assumo che <code>/mnt/qnap-public/newsletter-intel</code> sia disponibile") — e quella riga mi ha permesso di correggerlo <em>prima</em> di eseguire qualcosa.</p>
+<p>Il piano non era perfetto al primo colpo. Aveva assunto che il container avesse accesso a un mount NFS che in realtà non c'era. Lo ha scritto nel piano ("assumo che <code>/mnt/qnap-public/newsletter-intel</code> sia disponibile"), e quella riga mi ha permesso di correggerlo <em>prima</em> di eseguire qualcosa.</p>
 <p><strong>Regola pratica</strong>: il piano deve essere abbastanza dettagliato da farti vedere i problemi prima che diventino errori a runtime. Se è troppo vago, non è ancora un piano.</p>
 <h2>Esame del piano: cosa cerco prima di dire "vai"</h2>
 <p>Un piano generato dall'AI non va letto in diagonale. Lo esamino con una checklist mentale di quattro domande.</p>
 <p><strong>1. Le assunzioni sono corrette?</strong><br>Claude Code descrive sempre le sue assunzioni. Cerco quelle che toccano infrastruttura reale: IP, porte, credenziali, path di file. Ogni assunzione sbagliata qui si trasforma in un bug da debuggare dopo il deploy.</p>
 <p><strong>2. L'ordine delle fasi ha senso?</strong><br>Un piano che mette il testing dopo il deploy di produzione non è un buon piano. Guardo se le dipendenze tra fasi sono reali o artificiali.</p>
 <p><strong>3. C'è qualcosa che manca?</strong><br>Il piano tende a ottimizzare per lo happy path. Chiedo: cosa succede se il container non parte? se il DB non è raggiungibile? se l'API esterna risponde 429? Non serve un piano per ogni edge case, ma i punti di fallimento critici devono essere identificati.</p>
-<p><strong>4. Il piano è atomico?</strong><br>Ogni fase deve produrre qualcosa di verificabile. Non "implementa il backend" — ma "il backend risponde a <code>/health</code> con <code>{"status": "ok"}</code> e a <code>/api/items</code> con una lista JSON". Se non riesco a descrivere come verificare che una fase è completa, quella fase è troppo grande.</p>
-<p>Oggi per <code>proof</code> — l'app di raccolta testimonianze — ho fermato il piano dopo la prima lettura perché aveva incluso Google OAuth. Google OAuth aveva già senso nella versione iniziale del brief, ma nei giorni precedenti avevo deciso di rimuoverlo. Il piano non lo sapeva. Ho corretto il brief, ho rigenerato, e siamo andati.</p>
+<p><strong>4. Il piano è atomico?</strong><br>Ogni fase deve produrre qualcosa di verificabile. Non "implementa il backend", ma "il backend risponde a <code>/health</code> con <code>{"status": "ok"}</code> e a <code>/api/items</code> con una lista JSON". Se non riesco a descrivere come verificare che una fase è completa, quella fase è troppo grande.</p>
+<p>Oggi per <code>proof</code>, l'app di raccolta testimonianze, ho fermato il piano dopo la prima lettura perché aveva incluso Google OAuth. Google OAuth aveva senso nella versione iniziale del brief, ma nei giorni precedenti avevo deciso di rimuoverlo. Il piano non lo sapeva. Ho corretto il brief, ho rigenerato, e siamo andati.</p>
 <h2>Gestione: come mantengo la direzione su più progetti</h2>
 <p>In una giornata come quella di oggi, salto tra 6-7 progetti diversi. Il rischio è ovvio: perdo il filo, inizio cose che non completo, mi ritrovo con 3 branch aperte e nessuna conclusa.</p>
 <p>Il sistema che uso è semplice.</p>
@@ -419,7 +415,7 @@ article > footer {
 <p>Primo: ogni checker è <em>migliore in quello che fa</em> rispetto a un checker generalista. Se chiedo a un singolo agente di controllare tutto, ottimizza sul tempo e taglia angoli. Se ho un checker specializzato per <code>litellm_proxy</code>, quell'agente conosce esattamente quali endpoint testare e cosa significano i valori.</p>
 <p>Secondo: posso correggere un pezzo senza rifare tutto. Se il checker di <code>bookmark_ingest</code> ha un bug sulla soglia, lo correggo solo lì. Il resto rimane.</p>
 <p>Terzo: il parallelismo è reale. I checker non dipendono l'uno dall'altro. Li eseguo in parallelo. Con un singolo processo sequenziale, un checker lento blocca tutti gli altri.</p>
-<p>Stesso schema con il sistema di copy del brand: un orchestratore riceve il brief, lo scompone e delega a subagenti specializzati — uno per le big idea, uno per le headline, uno per i bullet point. Ognuno applica il suo framework specifico, produce output strutturato, e l'orchestratore assembla il risultato finale.</p>
+<p>Stesso schema con il sistema di copy del brand: un orchestratore riceve il brief, lo scompone e delega a subagenti specializzati. Uno per le big idea, uno per le headline, uno per i bullet point. Ognuno applica il suo framework, produce output strutturato, e l'orchestratore assembla il risultato finale.</p>
 <p><strong>Quando NON usare subagenti:</strong><br>- Task semplici che un singolo agente risolve in una passata<br>- Quando le fasi sono così dipendenti che il parallelismo è impossibile<br>- Quando il costo di coordinamento supera il beneficio</p>
 <p>Se un task richiede meno di 20 minuti di lavoro sequenziale, lo faccio con un agente solo. Costruire un'architettura subagent per qualcosa di piccolo è lavoro che non serve.</p>
 <h2>Cosa non ha funzionato</h2>
@@ -427,12 +423,12 @@ article > footer {
 <p><strong>Le variabili d'ambiente.</strong> Ogni nuovo container ha le sue env var, e ogni volta che ne manca una il container parte male o produce errori silenziosi. Oggi <code>kb-worker</code> dava 401 su tutte le chiamate a LiteLLM perché <code>LITELLM_API_KEY</code> non era nel docker-compose. Il debug ha richiesto 15 minuti.</p>
 <p><strong>La latenza dei build Docker.</strong> Ogni ciclo modifica → build → test → deploy richiede 3-5 minuti. Su una giornata di 66 commit, quello è tempo reale.</p>
 <p><strong>Il revert.</strong> Ho fatto un revert su <code>fonti</code> perché il migration runner introdotto in una commit creava un comportamento imprevisto all'avvio. Il revert stesso ha richiesto 2 minuti, ma identificare il problema ha richiesto 20. Claude Code non sbaglia meno degli umani sulle edge case di startup. Sbaglia in modo diverso.</p>
-<p><strong>La memoria cross-sessione.</strong> L'AI non ricorda la sessione precedente. Ogni volta devo ricaricare il contesto. I file di contesto servono esattamente a questo — ma richiede disciplina mantenerli aggiornati.</p>
+<p><strong>La memoria cross-sessione.</strong> L'AI non ricorda la sessione precedente. Ogni volta devo ricaricare il contesto. I file di contesto servono esattamente a questo, ma mantenerli aggiornati richiede disciplina.</p>
 <h2>Cosa resta dopo 10 ore</h2>
 <figure class="my-8"><img alt="Proof — app testimonial live su proof.lucasacchi.net, costruita e deployata oggi" src="images/proof-app.webp" loading="lazy" class="w-full max-w-full h-auto rounded shadow-sm"><figcaption class="mt-2 text-sm text-on-surface-variant italic text-center">Proof — app testimonial live su proof.lucasacchi.net, costruita e deployata oggi</figcaption></figure>
 <p>Tre applicazioni in produzione con monitoring attivo. Un sistema di pipeline dati completato al 100%. Un sistema di monitoring esteso da 2 a 12 checker. 66 commit atomici con messaggi Conventional Commit. Documentazione aggiornata per ogni progetto toccato.</p>
 <p>Quello che non è cambiato: serve ancora capire cosa stai costruendo. Serve ancora progettare prima di implementare. Serve ancora esaminare il piano prima di eseguirlo. Serve ancora sapere come funziona l'infrastruttura su cui gira il codice.</p>
-<p>Claude Code non elimina la competenza tecnica. La moltiplica — ma solo se c'è qualcosa da moltiplicare.</p>
+<p>Claude Code non elimina la competenza tecnica. La moltiplica, ma solo se c'è qualcosa da moltiplicare.</p>
 <hr>
 <p>Se lavori con AI, infrastruttura o homelab e ti interessa questo tipo di contenuto, seguimi su LinkedIn dove pubblico regolarmente.</p>
 <p><a href="https://www.linkedin.com/in/lucasacchi/">Seguimi su LinkedIn → linkedin.com/in/lucasacchi</a></p>

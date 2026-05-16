@@ -384,13 +384,13 @@ article > footer {
 <h3>The architecture</h3>
 <p>Three stages, simple:</p>
 <p>1. <strong>Production</strong>: WSL2 on my laptop<br>2. <strong>Staging</strong>: Docker VM (<code>dockerhost02</code>)<br>3. <strong>Cold storage</strong>: QNAP NAS in RAID</p>
-<p>Everything starts with Syncthing, goes through rsync over SSH, ends up in a deduplicated backup. Let's walk through the steps.</p>
+<p>Everything starts with Syncthing, goes through rsync over SSH, ends up in a deduplicated backup. The steps, one by one.</p>
 <h3>Step 1: Real-time sync with Syncthing</h3>
 <p>Syncthing monitors the workspace folder on WSL2 and replicates it on the VM inside a dedicated Docker container.</p>
 <p>First check after deploy: <code>ls -la</code> on the Docker volume. Files present, permissions correct (<code>abc:users</code>), Git metadata intact. Sub-second sync. Done.</p>
 <h3>Step 2: Passwordless SSH to the QNAP</h3>
 <p>This is where I lost some time. QNAPs don't use the standard path for authorized SSH keys. It's not <code>~/.ssh/authorized_keys</code>, but <code>/etc/config/ssh/authorized_keys</code>.</p>
-<p>Generated an ED25519 key on the VM, injected the public key into the NAS, ran a connection test. But the connection test failed for a trivial reason:</p>
+<p>Generated an ED25519 key on the VM, injected the public key into the NAS, ran a connection test. The connection test failed for a trivial reason:</p>
 <pre><code>ssh admin@192.168.254.100 "echo 'Connection successful!'"</code></pre>
 <p>Bash interprets the <code>!</code> as history expansion. A single character that cost me 10 minutes. Fix: single quotes around the string. Never underestimate special characters.</p>
 <h3>Step 3: rsync + flock for per-minute sync</h3>
@@ -412,7 +412,7 @@ article > footer {
 <h3>The result</h3>
 <p>Every line of code replicates to the VM in <strong>1 second</strong>.<br>Every change reaches the NAS within <strong>60 seconds</strong>.<br>A deduplicated history exists for recovering previous versions.<br>The entire system maintains itself.</p>
 <p>Three rules that guided the whole build:</p>
-<ul><li><strong>Safety first</strong> — flock to prevent parallel runs, verified permissions, ED25519 keys</li><li><strong>Little often</strong> — sync every minute, not every hour</li><li><strong>Double check</strong> — forced logrotate to verify permissions, <code>.qdff</code> integrity to check monthly</li></ul>
+<ul><li><strong>Safety first</strong>: flock to prevent parallel runs, verified permissions, ED25519 keys</li><li><strong>Little often</strong>: sync every minute, not every hour</li><li><strong>Double check</strong>: forced logrotate to verify permissions, <code>.qdff</code> integrity to check monthly</li></ul>
 <p>Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. No cloud, no recurring costs.</p>
 <hr>
 <p>Anyone running similar backup pipelines for their dev workspaces? Let me know in the comments.</p>

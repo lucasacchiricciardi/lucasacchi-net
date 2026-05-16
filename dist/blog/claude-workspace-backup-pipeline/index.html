@@ -379,7 +379,7 @@ article > footer {
   
   <div class="article-content">
     <p>Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.</p>
-<p>Non mi andava di pensarci. Cosi ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.</p>
+<p>Non mi andava di pensarci. Così ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.</p>
 <p>Ecco come.</p>
 <h3>L'architettura</h3>
 <p>Tre stadi, semplice:</p>
@@ -389,14 +389,14 @@ article > footer {
 <p>Syncthing monitora la cartella del workspace su WSL2 e la replica sulla VM in un container Docker dedicato.</p>
 <p>Primo controllo dopo il deploy: <code>ls -la</code> sul volume Docker. File presenti, permessi corretti (<code>abc:users</code>), metadati di Git intatti. Sincronizzazione sotto il secondo. Fatto.</p>
 <h3>Step 2: SSH passwordless verso il QNAP</h3>
-<p>Qui ho perso un po' di tempo. I QNAP non usano il path standard per le chiavi SSH autorizzate. Non e <code>~/.ssh/authorized_keys</code>, ma <code>/etc/config/ssh/authorized_keys</code>.</p>
-<p>Chiave ED25519 generata sulla VM, pubblica iniettata nel NAS, test di connessione. Ma il test di connessione e fallito per un motivo banale:</p>
+<p>Qui ho perso un po' di tempo. I QNAP non usano il path standard per le chiavi SSH autorizzate. Non è <code>~/.ssh/authorized_keys</code>, ma <code>/etc/config/ssh/authorized_keys</code>.</p>
+<p>Chiave ED25519 generata sulla VM, pubblica iniettata nel NAS, test di connessione. Il test però è fallito per un motivo banale:</p>
 <pre><code>ssh admin@192.168.254.100 "echo 'Connessione riuscita!'"</code></pre>
-<p>La Bash interpreta il <code>!</code> come history expansion. Una virgletta che mi ha fatto perdere 10 minuti. Soluzione: virgolette singole intorno alla stringa. Mai sottovalutare i caratteri speciali.</p>
+<p>La Bash interpreta il <code>!</code> come history expansion. Un carattere che mi ha fatto perdere 10 minuti. Soluzione: virgolette singole intorno alla stringa. Mai sottovalutare i caratteri speciali.</p>
 <h3>Step 3: rsync + flock per lo sync al minuto</h3>
 <p>Lo script fa una cosa sola: rsync dalla VM al NAS ogni 60 secondi tramite crontab.</p>
-<p>Ma c'e un problema: se un sync impiega piu di un minuto, il processo successivo parte sopra e si sovrappongono. Entrambi scrivono sugli stessi file. Non e una bella idea.</p>
-<p>Soluzione: <code>flock</code>. Un file di lock a <code>/tmp/qnap_sync.lock</code>. Se un sync e gia in corso, il successivo aspetta educatamente il suo turno.</p>
+<p>C'è però un problema: se un sync impiega più di un minuto, il processo successivo parte sopra e si sovrappongono. Entrambi scrivono sugli stessi file. Non è una bella idea.</p>
+<p>Soluzione: <code>flock</code>. Un file di lock a <code>/tmp/qnap_sync.lock</code>. Se un sync è già in corso, il successivo aspetta educatamente il suo turno.</p>
 <pre><code>(
   flock -n 200 || exit 1
   rsync -avz -e "ssh -i /root/.ssh/id_rsa_qnap" \
@@ -404,15 +404,15 @@ article > footer {
     "admin@192.168.254.100:/share/CACHEDEV3_DATA/BackupClaude/"
 ) 200&gt;"/tmp/qnap_sync.lock"</code></pre>
 <h3>Step 4: Logrotate per non annegare nei log</h3>
-<p>Uno sync al minuto genera log a velocita impressionante. In poche ore il file era gia a 1.2MB.</p>
-<p>Ho configurato logrotate: rotazione giornaliera, limite di 10MB, 7 copie compresse, permessi <code>0640</code>. Verificato con <code>logrotate -f</code> che il nuovo file log avesse i permessi corretti. Perche i log sbagliati non servono a nessuno.</p>
+<p>Uno sync al minuto genera log a velocità impressionante. In poche ore il file era già a 1.2MB.</p>
+<p>Ho configurato logrotate: rotazione giornaliera, limite di 10MB, 7 copie compresse, permessi <code>0640</code>. Verificato con <code>logrotate -f</code> che il nuovo file log avesse i permessi corretti. Perché i log sbagliati non servono a nessuno.</p>
 <h3>Step 5: La cintura di sicurezza — deduplicazione su NAS</h3>
 <p>Ultimo strato: HBS 3 (Hybrid Backup Sync) sul QNAP. Un job che prende i dati dalla cartella di backup e li sposta su un volume separato, in formato <code>.qdff</code> con deduplicazione.</p>
-<p>Questo mi da una "macchina del tempo": se cancello un file per sbaglio oggi, lo recupero dalla versione di ieri. Se un ransomware mi cripta tutto, ho uno snapshot pulito su un volume diverso.</p>
+<p>Questo mi dà una "macchina del tempo": se cancello un file per sbaglio oggi, lo recupero dalla versione di ieri. Se un ransomware mi cripta tutto, ho uno snapshot pulito su un volume diverso.</p>
 <h3>Il risultato</h3>
 <p>Ogni riga di codice si replica sulla VM in <strong>1 secondo</strong>.<br>Ogni cambiamento finisce sul NAS entro <strong>60 secondi</strong>.<br>Esiste uno storico deduplicato per il recupero di versioni precedenti.<br>L'intero sistema si mantiene da solo.</p>
 <p>Tre regole che hanno guidato tutto il lavoro:</p>
-<ul><li><strong>Safety first</strong> — flock per evitare corse parallele, permessi verificati, chiavi ED25519</li><li><strong>Little often</strong> — sync ogni minuto, non ogni ora</li><li><strong>Double check</strong> — logrotate forzato per verificare i permessi, integrita del file <code>.qdff</code> da controllare mensilmente</li></ul>
+<ul><li><strong>Safety first</strong>: flock per evitare corse parallele, permessi verificati, chiavi ED25519</li><li><strong>Little often</strong>: sync ogni minuto, non ogni ora</li><li><strong>Double check</strong>: logrotate forzato per verificare i permessi, integrità del file <code>.qdff</code> da controllare mensilmente</li></ul>
 <p>Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. Niente cloud, niente costi ricorrenti.</p>
 <hr>
 <p>Qualcuno ha pipeline di backup simili per i propri workspace di sviluppo? Scrivimi nei commenti.</p>

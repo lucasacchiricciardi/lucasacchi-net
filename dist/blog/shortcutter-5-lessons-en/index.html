@@ -380,11 +380,11 @@ article > footer {
 <p>Problem: the links aren't there. Not in the video description, not in the channel bio. Only spoken, in the short. And when you watch 30 videos a month, you lose half the information.</p>
 <p>So this morning I told myself: I'll build a pipeline that downloads them, analyzes them with local AI, and produces a daily digest via email. All self-hosted, zero external APIs, zero recurring costs.</p>
 <p>I thought it would take half a workday. Tonight I have 3 Python scripts, 9 iterative versions, 4 critical bugs fixed, and one certainty: small models betray you in creative ways.</p>
-<p>Here are 5 things I learned.</p>
+<p>5 things I learned.</p>
 <h3>1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one</h3>
 <p>Always with <code>anthropics/</code> prepended. The fix: HEAD request. Does the repo exist? No? Drop the URL. Check first, trust after.</p>
 <h3>2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters</h3>
-<p>"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix doesn't add value — it adds noise.</p>
+<p>"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix doesn't add value: it adds noise.</p>
 <h3>3. A 5-line sanity check saved the day</h3>
 <p>The LLM tried to replace the transcript with the video description. A "if the difference is above 30%, fall back to raw" blocked the disaster. Sounds trivial. It's gold.</p>
 <h3>4. Sometimes it's not the pipeline that's wrong: it's the creator who uploaded a video with mixed audio</h3>

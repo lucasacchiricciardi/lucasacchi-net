@@ -380,14 +380,14 @@ article > footer {
   </header>
   
   <div class="article-content">
-    <p>Last night I watched a seven-minute YouTube video: <em>"DFlash — 8x faster inference on llama.cpp."</em> The guy showcases a draft pull request on the <code>ggml-org/llama.cpp</code> repo with a speculative decoding method that — on paper — pushes a Qwen3-8B to 419 tokens per second on an NVIDIA L40S. Eight times the baseline. Paper numbers, not blog post numbers.</p>
-<p>Instant curiosity. Not so much for the 8x — "up to" benchmarks are almost always up-to-never — but because the concept is elegant. And because for two weeks now there's been a card on my desk asking to be stress-tested.</p>
+    <p>Last night I watched a seven-minute YouTube video: <em>"DFlash — 8x faster inference on llama.cpp."</em> The guy showcases a draft pull request on the <code>ggml-org/llama.cpp</code> repo with a speculative decoding method that, on paper, pushes a Qwen3-8B to 419 tokens per second on an NVIDIA L40S. Eight times the baseline. Paper numbers, not blog post numbers.</p>
+<p>Instant curiosity. Not so much for the 8x ("up to" benchmarks are almost always up-to-never), but because the concept is elegant. And because for two weeks now there's been a card on my desk asking to be stress-tested.</p>
 <h2>The card</h2>
-<p>An <strong>RX 7900 XTX 24 GB GDDR6 Gigabyte Gaming OC</strong>, bought on eBay at a used-but-not-too-used price. I connected it via OCUlink to the home-lab server <code>llm</code> — a Minisforum AI X1-255, AMD Ryzen 7 255, 64 GB DDR5 — replacing the integrated Radeon 780M iGPU that, until May 15, was the only GPU available to Ollama.</p>
+<p>An <strong>RX 7900 XTX 24 GB GDDR6 Gigabyte Gaming OC</strong>, bought on eBay at a used-but-not-too-used price. I connected it via OCUlink to the home-lab server <code>llm</code> (a Minisforum AI X1-255, AMD Ryzen 7 255, 64 GB DDR5), replacing the integrated Radeon 780M iGPU that, until May 15, was the only GPU available to Ollama.</p>
 <p>Moving the LLM workload from a laptop-class iGPU to a top-tier desktop card makes sense on its own. But until today I hadn't had a real reason to push the XTX. DFlash showed up at the right moment.</p>
 <h2>What DFlash is, in thirty seconds</h2>
 <p>Speculative decoding is a trick worth knowing if you run local LLMs. The idea: instead of letting the big model autoregressively generate one token at a time, a small model (the <em>drafter</em>) proposes a whole block, the big model <strong>verifies them in parallel</strong>, accepts the correct ones and discards the rest. If the drafter guesses often, you go faster. If it misses too much, you end up slower than baseline.</p>
-<p>DFlash is a recent variant — paper from z-lab, implemented in <code>llama.cpp</code> by <a href="https://github.com/ggml-org/llama.cpp/pull/22105">PR #22105</a> from Ruixiang Wang. Key difference from EAGLE3 (the other speculative family): DFlash produces an entire block of candidates in a <strong>single forward pass of the drafter</strong>, not one token at a time. Higher draft throughput per iteration.</p>
+<p>DFlash is a recent variant, paper from z-lab, implemented in <code>llama.cpp</code> by <a href="https://github.com/ggml-org/llama.cpp/pull/22105">PR #22105</a> from Ruixiang Wang. Key difference from EAGLE3 (the other speculative family): DFlash produces an entire block of candidates in a <strong>single forward pass of the drafter</strong>, not one token at a time. Higher draft throughput per iteration.</p>
 <p>The official drafter for Qwen3-8B is a specialized 1B-parameter model, <code>z-lab/Qwen3-8B-DFlash-b16</code>, published as BF16 safetensors on Hugging Face.</p>
 <p>In the paper, the acceptance rate on the "write quicksort in Python" prompt hits 93%. That's the number I wanted to see on my own machine.</p>
 <h2>The technical part — four honest stumbles</h2>
@@ -397,13 +397,13 @@ article > footer {
 <p><strong>2. Missing <code>ldconfig</code>.</strong> <code>cmake --install</code> puts the shared libraries in <code>/usr/local/lib</code>, but the dynamic linker inside the container doesn't know they exist. <code>llama-server --version</code> fails with <code>libllama-common.so.0: cannot open shared object file</code>. I added one line to the Dockerfile:</p>
 <pre><code>RUN echo /usr/local/lib &gt; /etc/ld.so.conf.d/llama-cpp.conf &amp;&amp; ldconfig</code></pre>
 <p><strong>3. <code>huggingface-cli</code> is dead.</strong> At the model download step, the script errored out: <em>"huggingface-cli is deprecated and no longer works. Use <code>hf</code> instead."</em> From some recent release of the Hugging Face CLI, the binary has been renamed. Thirty years of Linux have taught me not to be surprised.</p>
-<p><strong>4. The drafter needs the target.</strong> The most subtle one. The PR's safetensors-to-GGUF conversion script adds a new required flag for DFlash drafters: <code>--target-model-dir</code>. It reads the <code>d2t</code>/<code>t2d</code> mapping tensors between the drafter's reduced vocabulary and the target's full vocabulary. Which means you can't use a pre-quantized GGUF from <code>unsloth/Qwen3-8B-GGUF</code> as the target source — you need the <strong>full safetensors folder</strong> of <code>Qwen/Qwen3-8B</code>, 16 GB, even if you'll throw it away right after that single conversion step. Same for the drafter: safetensors → GGUF bf16 → quantize Q4_K_M.</p>
+<p><strong>4. The drafter needs the target.</strong> The most subtle one. The PR's safetensors-to-GGUF conversion script adds a new required flag for DFlash drafters: <code>--target-model-dir</code>. It reads the <code>d2t</code>/<code>t2d</code> mapping tensors between the drafter's reduced vocabulary and the target's full vocabulary. Which means you can't use a pre-quantized GGUF from <code>unsloth/Qwen3-8B-GGUF</code> as the target source: you need the <strong>full safetensors folder</strong> of <code>Qwen/Qwen3-8B</code>, 16 GB, even if you'll throw it away right after that single conversion step. Same for the drafter: safetensors → GGUF bf16 → quantize Q4_K_M.</p>
 <p>Final result, after intermediate cleanup:</p>
 <pre><code>Qwen3-8B.gguf_Q4_K_M.gguf             4.7 GB   (target)
 Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf  596 MB   (drafter)</code></pre>
 <p>About 5.5 GB of VRAM occupied. Out of 24 GB on the XTX, leaving comfortable room for a q8_0 KV cache and even a couple of Ollama models in keep-alive.</p>
 <h2>The moment of truth</h2>
-<p>Container started on port 8081. <code>llama-server</code> loads both models, declares <code>speculative decoding context initialized</code> and starts listening. First request — the paper's prompt, <em>"Write a quicksort algorithm in Python. Write code only."</em></p>
+<p>Container started on port 8081. <code>llama-server</code> loads both models, declares <code>speculative decoding context initialized</code> and starts listening. First request, the paper's prompt: <em>"Write a quicksort algorithm in Python. Write code only."</em></p>
 <p>DFlash active:</p>
 <pre><code>{
   "tokens_predicted": 92,
@@ -413,21 +413,21 @@ Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf  596 MB   (drafter)</code></pre>
   "draft_n_accepted": 75
 }</code></pre>
 <p>Acceptance rate: <strong>75/80 = 93.75%</strong>. Essentially identical to the paper (93.3%). Throughput: <strong>132.7 tok/s</strong>.</p>
-<p>To have a fair point of comparison — because a single number means nothing — I reloaded the same model, same prompt, same sampling parameters, but without <code>--dflash</code> and without the drafter. Just Qwen3-8B Q4_K_M, plain autoregressive decoding on the XTX.</p>
+<p>To have a fair point of comparison, because a single number means nothing, I reloaded the same model, same prompt, same sampling parameters, but without <code>--dflash</code> and without the drafter. Just Qwen3-8B Q4_K_M, plain autoregressive decoding on the XTX.</p>
 <p>Baseline: <strong>50.7 tok/s</strong>.</p>
 <p>Measured speedup: <strong>132.7 / 50.7 = 2.62x</strong>.</p>
 <h2>What about the paper's 8x?</h2>
 <p>Fair question. Honest answer in three parts.</p>
-<p><strong>The paper measures <code>bf16</code>, I measured <code>Q4_K_M</code>.</strong> Apples and oranges. Quantizing the target to 4-bit raises the absolute baseline — fewer bytes to read from VRAM per forward pass — and therefore leaves less room for speculative decoding to make a difference. To give you the picture: my baseline (51 t/s on XTX Q4_K_M) almost exactly matches the paper's baseline (52 t/s on L40S bf16). Meaning the XTX in Q4 is working like an L40S in bf16. Very similar bandwidth balance, different card.</p>
-<p><strong>The HIP/ROCm backend isn't as tuned as the CUDA one.</strong> The PR is written CUDA-first, with <code>__hip_fp8_e4m3</code> remapped via a compatibility header. There's likely still margin on the ROCm kernel side — especially on drafter graph reuse, which the PR itself flags as <em>future work</em>.</p>
-<p><strong>A single prompt has no warmup.</strong> A single run includes compute graph cold start. A serious benchmark needs n=20 with variance, varied prompts (the PR uses three: quicksort, Pythagoras, "plan a 1-day trip to DC" — and shows that the acceptance rate drops from 93% to 9% on the third prompt, because DFlash works best when the drafter "guesses patterns," and generic prose is less predictable than code).</p>
+<p><strong>The paper measures <code>bf16</code>, I measured <code>Q4_K_M</code>.</strong> Apples and oranges. Quantizing the target to 4-bit raises the absolute baseline (fewer bytes to read from VRAM per forward pass), which leaves less room for speculative decoding to make a difference. To give you the picture: my baseline (51 t/s on XTX Q4_K_M) almost exactly matches the paper's baseline (52 t/s on L40S bf16). Meaning the XTX in Q4 is working like an L40S in bf16. Very similar bandwidth balance, different card.</p>
+<p><strong>The HIP/ROCm backend isn't as tuned as the CUDA one.</strong> The PR is written CUDA-first, with <code>__hip_fp8_e4m3</code> remapped via a compatibility header. There's likely still margin on the ROCm kernel side, especially on drafter graph reuse, which the PR itself flags as <em>future work</em>.</p>
+<p><strong>A single prompt has no warmup.</strong> A single run includes compute graph cold start. A serious benchmark needs n=20 with variance, varied prompts (the PR uses three: quicksort, Pythagoras, "plan a 1-day trip to DC") and shows that the acceptance rate drops from 93% to 9% on the third prompt, because DFlash works best when the drafter "guesses patterns," and generic prose is less predictable than code.</p>
 <p>So: 2.6x isn't 8x, but it's 2.6x <strong>real, repeatable, on my GPU, with my quantization, on my stack</strong>. It's the number that matters when I'm deciding whether to put a local LLM pipeline into production.</p>
 <h2>What I take home</h2>
 <p><strong>For the home lab</strong>: for code-heavy workflows (the most common use case for my Shortcutter and the agents running on the knowledge base), DFlash on Qwen3-8B Q4_K_M gives a real 2.6x. That's the difference between responding in 700 ms and 1.8 s, on a 90-token generation. For an interactive assistant, it's the difference between "smooth" and "slow."</p>
 <p><strong>For the XTX</strong>: it behaves well. The RX 7900 XTX is a gaming card pushed into LLM inference duty, and in absolute numbers it holds up against pro NVIDIA cards in a higher price bracket. ROCm 6.4 on gfx1100 works without the <code>HSA_OVERRIDE_GFX_VERSION</code> workaround that was mandatory for RDNA3 Radeons just a year ago. Mature driver, native support, predictable performance.</p>
-<p><strong>For the method</strong>: go back to measuring instead of assuming. The YouTube video said 8x. My machine does 2.6x. Both numbers are true — in their respective contexts. Which one you use to decide depends on which context resembles yours more.</p>
+<p><strong>For the method</strong>: go back to measuring instead of assuming. The YouTube video said 8x. My machine does 2.6x. Both numbers are true in their respective contexts. Which one you use to decide depends on which context resembles yours more.</p>
 <h2>Reproducibility</h2>
-<p>The full setup — Dockerfile with ROCm 6.4.4, docker-compose with <code>/dev/kfd</code> and <code>/dev/dri</code> mounts, model prep script, benchmark script — is public on GitHub: <a href="https://github.com/lucasacchiricciardi/llama-dflash-rocm"><strong>lucasacchiricciardi/llama-dflash-rocm</strong></a>. Clone, <code>docker compose build</code>, <code>docker compose up</code>. If you reproduce it on another RDNA3 card (7800 XT, W7800, W7900), open an issue with your numbers — reproducibility is the point. Server launch command, for those who want to start from the native <code>llama-server</code> binary:</p>
+<p>The full setup (Dockerfile with ROCm 6.4.4, docker-compose with <code>/dev/kfd</code> and <code>/dev/dri</code> mounts, model prep script, benchmark script) is public on GitHub: <a href="https://github.com/lucasacchiricciardi/llama-dflash-rocm"><strong>lucasacchiricciardi/llama-dflash-rocm</strong></a>. Clone, <code>docker compose build</code>, <code>docker compose up</code>. If you reproduce it on another RDNA3 card (7800 XT, W7800, W7900), open an issue with your numbers: reproducibility is the point. Server launch command, for those who want to start from the native <code>llama-server</code> binary:</p>
 <pre><code>llama-server \
   -m  Qwen3-8B.gguf_Q4_K_M.gguf \
   -md Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf \
@@ -440,23 +440,23 @@ Qwen3-8B-DFlash-b16.gguf_Q4_K_M.gguf  596 MB   (drafter)</code></pre>
   --parallel 1 --no-mmap --mlock --jinja \
   -c 4000 -cd 1000 -t 8 \
   --chat-template-kwargs '{"enable_thinking": false}'</code></pre>
-<p>The env var <code>LLAMA_SPEC_NO_THINK=1</code> disables Qwen3's <em>thinking</em> mode at the speculative layer — critical: with thinking on, acceptance rate collapses and the speedup roughly halves. The paper states it, I verified it.</p>
+<p>The env var <code>LLAMA_SPEC_NO_THINK=1</code> disables Qwen3's <em>thinking</em> mode at the speculative layer. Critical: with thinking on, acceptance rate collapses and the speedup roughly halves. The paper states it, I verified it.</p>
 <h2>Bonus round: gpt-oss-20b</h2>
 <p>Couldn't resist. <code>openai/gpt-oss-20b</code> is the MoE model recently released by OpenAI on Hugging Face, with a dedicated drafter at <code>z-lab/gpt-oss-20b-DFlash</code>. Very different from Qwen3-8B: Mixture of Experts architecture, lower VRAM footprint relative to its nominal parameter count, distributed in <strong>mxfp4</strong> native format.</p>
 <p>First discovery: llama.cpp blocks re-quantization from mxfp4:</p>
 <pre><code>requantizing from type mxfp4 is disabled</code></pre>
-<p>The target must be used as-is — a 13 GB GGUF in native mxfp4. The drafter quantizes to Q4_K_M normally. Second discovery: a PR bug. From the second request onward, <code>llama-server</code> crashes with <code>GGML_ASSERT(n_new >= 1) failed</code> in <code>speculative.cpp:781</code> — the code doesn't correctly reset cross-request speculative state when restoring the KV cache. Workaround: isolated container per prompt.</p>
+<p>The target must be used as-is: a 13 GB GGUF in native mxfp4. The drafter quantizes to Q4_K_M normally. Second discovery, a PR bug. From the second request onward, <code>llama-server</code> crashes with <code>GGML_ASSERT(n_new >= 1) failed</code> in <code>speculative.cpp:781</code>: the code doesn't correctly reset cross-request speculative state when restoring the KV cache. Workaround: isolated container per prompt.</p>
 <p>Results across three prompts (same benchmark as the original paper):</p>
 <p>| Prompt | Baseline | DFlash | Speedup | Accept% |<br>|---|---|---|---|---|<br>| quicksort | 46 t/s | 77 t/s | 1.67× | 43.5% |<br>| pythagoras | 79 t/s† | 75 t/s | 0.95× | 26.6% |<br>| dc-trip | 45 t/s | 60 t/s | 1.33× | 18.5% |<br>| <strong>average</strong> | ~57 t/s | ~71 t/s | <strong>1.25×</strong> | — |</p>
-<p>†The Pythagoras baseline at 79 t/s is anomalously high — the model likely varied its <code>reasoning_effort</code> between runs. Excluding it, average speedup is closer to 1.50×.</p>
+<p>†The Pythagoras baseline at 79 t/s is anomalously high: the model likely varied its <code>reasoning_effort</code> between runs. Excluding it, average speedup is closer to 1.50×.</p>
 <h3>Why less than Qwen3-8B?</h3>
-<p>MoE architecture. During DFlash's parallel verification pass, the target activates expert routing for each candidate token — overhead that a dense model doesn't have. Acceptance rate collapses (18–44% vs 93% for Qwen3-8B on the same prompt type), and speedup follows.</p>
+<p>MoE architecture. During DFlash's parallel verification pass, the target activates expert routing for each candidate token. Overhead that a dense model doesn't have. Acceptance rate collapses (18–44% vs 93% for Qwen3-8B on the same prompt type), and speedup follows.</p>
 <p>This isn't a DFlash failure. It's MoE physics: the bottleneck shifts from bandwidth to routing overhead, and parallel verification gains less ground.</p>
 <h3>Direct comparison</h3>
 <p>| Model | Architecture | Format | Baseline | DFlash | Speedup |<br>|---|---|---|---|---|---|<br>| Qwen3-8B | Dense | Q4_K_M | 50.7 t/s | 132.7 t/s | <strong>2.62×</strong> |<br>| gpt-oss-20b | MoE | mxfp4 | ~57 t/s | ~71 t/s | <strong>1.25×</strong> |</p>
-<p>For code-heavy workflows, Qwen3-8B with DFlash remains the right choice. gpt-oss-20b still makes sense as a production model — 20B MoE parameters in 13 GB VRAM is an excellent ratio — but it isn't the ideal candidate for speculative decoding.</p>
+<p>For code-heavy workflows, Qwen3-8B with DFlash remains the right choice. gpt-oss-20b still makes sense as a production model (20B MoE parameters in 13 GB VRAM is a strong ratio), but it isn't the ideal candidate for speculative decoding.</p>
 <hr>
-<p><em>Updated 2026-05-16 with gpt-oss-20b results. Will update again when the PR is merged into master — currently draft. Next up: Qwen3.5-9B.</em></p>
+<p><em>Updated 2026-05-16 with gpt-oss-20b results. Will update again when the PR is merged into master, currently draft. Next up: Qwen3.5-9B.</em></p>
   </div>
 
   <div class="article-footer-separator"></div>

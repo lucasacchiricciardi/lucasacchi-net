@@ -377,24 +377,22 @@ article > footer {
   
   <div class="article-content">
     <p>Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.</p>
-<p>Oggi ho ripensato il pattern architetturale, e ho deciso di stravolgere una cosa che sembrava già buona.</p>
+<p>Oggi ho ripensato l'architettura e ho deciso di rifare una cosa che sembrava già buona.</p>
 <h2>Il problema: il modello embedded</h2>
-<p>Inizialmente Shortcutter portava con sé <code>faster-whisper</code> embedded — il modello caricato localmente in memoria.</p>
+<p>Inizialmente Shortcutter portava con sé <code>faster-whisper</code> embedded, il modello caricato localmente in memoria.</p>
 <p>Per un video da 60-90 secondi significa 1.5 GB di VRAM occupati da un singolo componente.</p>
 <p>Funziona, certo. Ma non scala.</p>
 <h2>La soluzione: estrarre il servizio</h2>
 <p>Invece di tenere il modello dentro lo script, l'ho estratto: ho creato <strong>Whisper API</strong>, un servizio REST su un server LAN dedicato.</p>
 <p>Shortcutter ora chiama <code>POST /transcribe</code> via HTTP.</p>
-<p>Boom — zero VRAM locale, e il pattern diventa riusabile.</p>
+<p>Risultato: zero VRAM locale, e il pattern diventa riusabile.</p>
 <h2>Cosa è cambiato nella pratica</h2>
-<p><strong>Decoupling</strong>: trascrizione non è più dentro lo script, è un servizio. Se domani cambio transcriber (da Whisper a un altro), aggiorno solo l'API.</p>
-<p><strong>Flessibilità dei modelli</strong>: da remoto posso usare <code>large-v3-turbo</code> senza pagare il costo di VRAM locale. Cambio il parametro <code>model=</code> e fatto.</p>
-<p><strong>Scalabilità</strong>: TikTok Downloader, Shortcutter, TwinScribeAI possono tutti chiamare lo stesso servizio. Una sola fonte di verità.</p>
-<p><strong>Chiarezza</strong>: il confine tra "cosa fa il mio script" e "cosa fa il servizio" diventa ovvio.</p>
+<p>La trascrizione non vive più dentro lo script: è un servizio a sé. Se domani cambio transcriber (da Whisper a qualcos'altro), aggiorno solo l'API e nessuno dei client se ne accorge.</p>
+<p>Sul piano modelli, da remoto posso usare <code>large-v3-turbo</code> senza pagare il costo di VRAM in locale. Cambio il parametro <code>model=</code> e fatto.</p>
+<p>Sul piano riuso, TikTok Downloader, Shortcutter e TwinScribeAI parlano tutti con lo stesso endpoint. Una sola fonte di verità, niente codice di trascrizione duplicato in tre progetti.</p>
+<p>E il confine tra "cosa fa lo script" e "cosa fa il servizio" diventa ovvio. Che è la cosa che, alla fine, ti fa risparmiare più tempo di tutte.</p>
 <h2>Non è un refactor per farsi bello</h2>
-<p>Questo non è un refactor per farsi bello.</p>
-<p>È una decisione pratica: <strong>separare le responsabilità rende il codice più onesto</strong>.</p>
-<p>Chi lavora su pipeline con AI sa che questi piccoli spostamenti di confine — "cosa vive dove" — cambiano come ragioni sui problemi.</p>
+<p>Non è un refactor estetico. È una decisione pratica: separare le responsabilità rende il codice più onesto. Chi lavora su pipeline con AI sa che questi piccoli spostamenti di confine, "cosa vive dove", cambiano il modo in cui ragioni sui problemi.</p>
 <h2>Il repository</h2>
 <p>Ho pubblicato il codice come open source: <strong>https://github.com/lucasacchiricciardi/whisper-api</strong> (MIT license)</p>
 <p>Contiene:<br>- FastAPI REST service per audio transcription<br>- Support per 6 Whisper models (tiny a large-v3-turbo)<br>- Docker containerization<br>- Lazy model loading con caching<br>- Health check + status endpoints<br>- Model lifecycle management (load/unload)</p>

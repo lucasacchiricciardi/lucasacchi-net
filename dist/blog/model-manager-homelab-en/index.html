@@ -10,10 +10,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="In my homelab runs an Ollama server on 192.168.254.115 — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents: TikTok Downloader (video tr..."/>
+<meta name="description" content="My homelab runs an Ollama server on 192.168.254.115: 64 GB RAM, shared GPU, no cloud. Five agents fight for it: TikTok Downloader (video transcription..."/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:title" content="Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once"/>
-<meta property="og:description" content="In my homelab runs an Ollama server on 192.168.254.115 — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents: TikTok Downloader (video tr..."/>
+<meta property="og:description" content="My homelab runs an Ollama server on 192.168.254.115: 64 GB RAM, shared GPU, no cloud. Five agents fight for it: TikTok Downloader (video transcription..."/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="https://lucasacchi.net/blog/model-manager-homelab-en/og.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -62,7 +62,7 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "In my homelab runs an Ollama server on 192.168.254.115 — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents: TikTok Downloader (video tr...",
+  "description": "My homelab runs an Ollama server on 192.168.254.115: 64 GB RAM, shared GPU, no cloud. Five agents fight for it: TikTok Downloader (video transcription...",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://lucasacchi.net/blog/model-manager-homelab/"
@@ -378,7 +378,7 @@ article > footer {
   </header>
   
   <div class="article-content">
-    <p>In my homelab runs an Ollama server on <code>192.168.254.115</code> — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents:</p>
+    <p>My homelab runs an Ollama server on <code>192.168.254.115</code>: 64 GB RAM, shared GPU, no cloud. Five agents fight for it:</p>
 <ul><li>TikTok Downloader (video transcription)</li><li>Shortcutter (YouTube download + summary)</li><li>n8n (AI workflows)</li><li>Claude Skills (custom agents)</li><li>embed-bookmarks.sh (note embedding)</li></ul>
 <p>Initially everyone did what they pleased: loaded a model when they needed it, unloaded when done. Simple.</p>
 <p>Until it wasn't.</p>
@@ -392,7 +392,7 @@ article > footer {
 <p>When an agent needs a model, it doesn't load it directly. It <strong>reserves</strong> it:</p>
 <pre><code>curl -X POST http://192.168.254.115:5000/reservations \
   -d '{"model": "whisper-large-v3", "client": "tiktok-downloader", "timeout": 300}'</code></pre>
-<p>The response is one of these:<br>- <code>status: active</code> — the model is yours, it's in VRAM, go<br>- <code>status: queued</code> with <code>position: 2</code> — there's a line, wait</p>
+<p>The response is one of these:<br>- <code>status: active</code>: the model is yours, it's in VRAM, go<br>- <code>status: queued</code> with <code>position: 2</code>: there's a line, wait</p>
 <p>When you're done, you release it:</p>
 <pre><code>curl -X DELETE http://192.168.254.115:5000/reservations/{id}</code></pre>
 <p>And the next in queue gets activated automatically.</p>
@@ -402,12 +402,12 @@ article > footer {
 <p>No duplicates. No crashes. Queue respected.</p>
 <p>For different models the system doesn't block: whisper and qwen3.5 can load simultaneously (separate locks, one per model). Not global, per-model.</p>
 <h2>What I gained</h2>
-<p><strong>No crashes.</strong> If an agent forgets to release? Auto-expire after 5 minutes (configurable). The model unloads and the next gets activated.</p>
-<p><strong>Visibility.</strong> I call:</p>
+<p>No crashes, first of all. If an agent forgets to release the lock, auto-expire kicks in after 5 minutes (configurable): the model unloads and the next request goes through.</p>
+<p>Visibility too. I call:</p>
 <pre><code>curl http://192.168.254.115:5000/reservations/queue</code></pre>
 <p>And I see the entire queue, who has the lock, who's waiting, how long left.</p>
-<p><strong>Stupid scalability.</strong> Three more agents? Nothing changes. They just keep reserving.</p>
-<p><strong>Reusability.</strong> The same service is used by TikTok Downloader, Shortcutter, n8n, Claude Skills. Single source of truth.</p>
+<p>Three more agents? Nothing changes. They just keep reserving and the system holds.</p>
+<p>And the same service is used by TikTok Downloader, Shortcutter, n8n, Claude Skills. Single source of truth.</p>
 <h2>The repository and API</h2>
 <p>I released the code as open source: <strong>https://github.com/lucasacchiricciardi/model-manager</strong> (MIT license).</p>
 <p>It includes:<br>- FastAPI REST service<br>- SQLAlchemy async with SQLite (or PostgreSQL, if you want to scale)<br>- Per-model reservation queue with auto-expire<br>- Swagger to test directly from the browser: <strong>http://192.168.254.115:5000/docs</strong><br>- V1 backward-compatible endpoints (direct load/unload, if you want to skip the queue)<br>- Concurrent tests included</p>
@@ -415,9 +415,8 @@ article > footer {
 <h2>The lesson</h2>
 <p>Asyncio.Lock doesn't exist only when you're scaling to millions of users.</p>
 <p>It exists when you're the sole user but have 5 independent processes fighting over the same GPU.</p>
-<p>"Look how clever I am" is not the point. The point is: code that reasons about "who gets the resource when" becomes way less fragile when coordination is <strong>external</strong> and <strong>visible</strong>.</p>
-<p>Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx.</p>
-<p>No cloud, no serverless, no recurring costs.</p>
+<p>"Look how clever I am" is not the point. The point is: code that reasons about "who gets the resource when" becomes way less fragile when coordination is external and visible.</p>
+<p>Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx. No cloud, no recurring costs.</p>
 <p>Worth it.</p>
   </div>
 
