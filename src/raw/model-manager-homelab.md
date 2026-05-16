@@ -4,7 +4,7 @@ date: 2026-05-04
 tags: [homelab, ollama, api, queue, docker, python, open-source]
 ---
 
-Nel mio homelab gira un server Ollama su `192.168.254.115` — 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
+Nel mio homelab gira un server Ollama su `192.168.254.115`: 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
 
 - TikTok Downloader (trascrizione di video)
 - Shortcutter (download + summary YouTube)
@@ -38,8 +38,8 @@ curl -X POST http://192.168.254.115:5000/reservations \
 ```
 
 La risposta è una di queste:
-- `status: active` — il modello è tuo, è in VRAM, vai
-- `status: queued` con `position: 2` — c'è gente davanti, aspetta
+- `status: active`: il modello è tuo, è in VRAM, vai
+- `status: queued` con `position: 2`: c'è gente davanti, aspetta
 
 Quando finisci, lo rilasci:
 
@@ -64,9 +64,9 @@ Per i modelli diversi il sistema non si blocca: whisper e qwen3.5 possono carica
 
 ## Cosa ho guadagnato
 
-**Niente crash.** Se un agente dimentica di rilasciare? Auto-expire dopo 5 minuti (configurabile). Il modello si scarica e il prossimo viene attivato.
+Niente crash, prima di tutto. Se un agente dimentica di rilasciare scatta l'auto-expire dopo 5 minuti (configurabile): il modello si scarica e il prossimo viene attivato.
 
-**Visibilità.** Chiamo:
+Poi visibilità. Chiamo:
 
 ```bash
 curl http://192.168.254.115:5000/reservations/queue
@@ -74,9 +74,9 @@ curl http://192.168.254.115:5000/reservations/queue
 
 E vedo l'intera coda, chi ha il lock, chi aspetta, per quanto tempo ancora.
 
-**Scalabilità stupida.** Tre agenti in più? Non cambia niente. Continuano a prenotare.
+Tre agenti in più? Non cambia niente. Continuano a prenotare, il sistema regge senza che io tocchi nulla.
 
-**Riusabilità.** Lo stesso servizio è usato da TikTok Downloader, shortcutter, n8n, skill Claude. Una sola fonte di verità.
+E lo stesso servizio è usato da TikTok Downloader, shortcutter, n8n, skill Claude. Una sola fonte di verità.
 
 ## Il repository e l'API
 
@@ -98,10 +98,8 @@ Gli asyncio.Lock non servono solo quando stai scalando a milioni di utenti.
 
 Servono anche quando sei tu il solo utente, ma hai 5 processi indipendenti che si contendono la stessa GPU.
 
-"Che bravo che sei" non è il punto. Il punto è: il codice che ragiona su "who gets the resource when" diventa molto meno fragile quando il coordinamento è **esterno** e **visibile**.
+"Che bravo che sei" non è il punto. Il punto è: il codice che ragiona su "who gets the resource when" diventa molto meno fragile quando il coordinamento è esterno e visibile.
 
-Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx.
-
-Niente cloud, niente serverless, niente costi ricorrenti.
+Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx. Niente cloud, niente costi ricorrenti.
 
 Vale la pena.

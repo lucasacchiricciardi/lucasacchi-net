@@ -5,7 +5,7 @@ tags: [homelab, ollama, api, queue, docker, python, open-source]
 lang: en
 ---
 
-In my homelab runs an Ollama server on `192.168.254.115` — 64 GB RAM, shared GPU, no cloud. On this machine scream 5 agents:
+My homelab runs an Ollama server on `192.168.254.115`: 64 GB RAM, shared GPU, no cloud. Five agents fight for it:
 
 - TikTok Downloader (video transcription)
 - Shortcutter (YouTube download + summary)
@@ -39,8 +39,8 @@ curl -X POST http://192.168.254.115:5000/reservations \
 ```
 
 The response is one of these:
-- `status: active` — the model is yours, it's in VRAM, go
-- `status: queued` with `position: 2` — there's a line, wait
+- `status: active`: the model is yours, it's in VRAM, go
+- `status: queued` with `position: 2`: there's a line, wait
 
 When you're done, you release it:
 
@@ -65,9 +65,9 @@ For different models the system doesn't block: whisper and qwen3.5 can load simu
 
 ## What I gained
 
-**No crashes.** If an agent forgets to release? Auto-expire after 5 minutes (configurable). The model unloads and the next gets activated.
+No crashes, first of all. If an agent forgets to release the lock, auto-expire kicks in after 5 minutes (configurable): the model unloads and the next request goes through.
 
-**Visibility.** I call:
+Visibility too. I call:
 
 ```bash
 curl http://192.168.254.115:5000/reservations/queue
@@ -75,9 +75,9 @@ curl http://192.168.254.115:5000/reservations/queue
 
 And I see the entire queue, who has the lock, who's waiting, how long left.
 
-**Stupid scalability.** Three more agents? Nothing changes. They just keep reserving.
+Three more agents? Nothing changes. They just keep reserving and the system holds.
 
-**Reusability.** The same service is used by TikTok Downloader, Shortcutter, n8n, Claude Skills. Single source of truth.
+And the same service is used by TikTok Downloader, Shortcutter, n8n, Claude Skills. Single source of truth.
 
 ## The repository and API
 
@@ -99,10 +99,8 @@ Asyncio.Lock doesn't exist only when you're scaling to millions of users.
 
 It exists when you're the sole user but have 5 independent processes fighting over the same GPU.
 
-"Look how clever I am" is not the point. The point is: code that reasons about "who gets the resource when" becomes way less fragile when coordination is **external** and **visible**.
+"Look how clever I am" is not the point. The point is: code that reasons about "who gets the resource when" becomes way less fragile when coordination is external and visible.
 
-Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx.
-
-No cloud, no serverless, no recurring costs.
+Stack: FastAPI, SQLAlchemy async, SQLite, Docker, aiosqlite, httpx. No cloud, no recurring costs.
 
 Worth it.
