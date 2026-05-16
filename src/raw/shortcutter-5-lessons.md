@@ -12,7 +12,7 @@ Così stamattina mi sono detto: costruisco una pipeline che li scarica, li anali
 
 Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.
 
-Ecco 5 cose che ho imparato.
+5 cose che ho imparato.
 
 ### 1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa
 
@@ -20,7 +20,7 @@ Sempre con `anthropics/` davanti. La soluzione: HEAD request. Il repo esiste? No
 
 ### 2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri
 
-"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore — aggiunge rumore.
+"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore: aggiunge rumore.
 
 ### 3. Un sanity check di 5 righe ha salvato la giornata
 

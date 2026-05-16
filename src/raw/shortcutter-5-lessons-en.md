@@ -13,7 +13,7 @@ So this morning I told myself: I'll build a pipeline that downloads them, analyz
 
 I thought it would take half a workday. Tonight I have 3 Python scripts, 9 iterative versions, 4 critical bugs fixed, and one certainty: small models betray you in creative ways.
 
-Here are 5 things I learned.
+5 things I learned.
 
 ### 1. When a 4B parameter LLM can't find a GitHub repo in the description, it invents one
 
@@ -21,7 +21,7 @@ Always with `anthropics/` prepended. The fix: HEAD request. Does the repo exist?
 
 ### 2. The LLM fixer that corrects 19 Whisper errors on a long transcript becomes worse than the raw under 1,500 characters
 
-"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix doesn't add value — it adds noise.
+"Too much prompt for too little work." Lesson: skip it. If the text is too short for the model, the fix doesn't add value: it adds noise.
 
 ### 3. A 5-line sanity check saved the day
 
