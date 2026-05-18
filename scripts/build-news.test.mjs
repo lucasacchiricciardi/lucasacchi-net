@@ -37,6 +37,7 @@ describe('build-news.js', () => {
     writeFileSync(join(tmpRaw, 'test-article.md'), `---
 title: Test Article
 date: 2026-01-15
+description: Test description
 tags: [test, example]
 lang: it
 ---
@@ -50,6 +51,7 @@ This is the body of the test article.
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
 
@@ -83,6 +85,7 @@ Body`);
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
 
@@ -109,6 +112,7 @@ Body`);
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
 
@@ -139,6 +143,7 @@ Body`);
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
 
@@ -175,6 +180,7 @@ English content`);
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
 
@@ -212,6 +218,7 @@ English content`);
         BUILD_NEWS_SRC: tmpRaw,
         BUILD_DIST: tmpDist,
         BUILD_SRC_HOME: join(ROOT, 'src', 'home'),
+        STRICT_FRONTMATTER: '0',
       },
     });
     const output = join(tmpDist, 'news', 'news-feed.json');
