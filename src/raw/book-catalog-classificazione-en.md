@@ -113,4 +113,4 @@ Concrete consequence: when I launch batch 3, I won't go in blind. I know the mar
 
 That said: on the same day the classification was converging cleanly toward 80%, another piece of the project was failing silently. Same architectural thinking required, opposite decision, different consequences.
 
-**[Read Part II: Why the filesystem migration failed (and what it teaches)](./book-catalog-migrazione-en/)**
+**[Read Part II: Why the filesystem migration failed (and what it teaches)](/blog/book-catalog-migrazione-en/)**

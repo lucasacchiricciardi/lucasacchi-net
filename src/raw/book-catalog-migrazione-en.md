@@ -6,7 +6,7 @@ lang: en
 description: 6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs.
 ---
 
-**[← Read Part I: How I classified 46,878 books](./book-catalog-classificazione-en/)**
+**[← Read Part I: How I classified 46,878 books](/blog/book-catalog-classificazione-en/)**
 
 ---
 

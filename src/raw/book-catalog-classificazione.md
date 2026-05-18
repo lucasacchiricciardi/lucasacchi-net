@@ -113,4 +113,4 @@ Conseguenza concreta: quando lancerò il batch 3, non lo farò alla cieca. So ch
 
 Detto questo: nello stesso giorno in cui la classificazione convergeva pulita verso l'80%, un altro pezzo del progetto stava fallendo in silenzio. Stesso pensiero architetturale richiesto, decisione opposta, conseguenze diverse.
 
-**[Leggi la Parte II: Perché la migrazione del filesystem è fallita (e cosa insegna)](./book-catalog-migrazione/)**
+**[Leggi la Parte II: Perché la migrazione del filesystem è fallita (e cosa insegna)](/blog/book-catalog-migrazione/)**
