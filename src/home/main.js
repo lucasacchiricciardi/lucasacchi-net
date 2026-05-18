@@ -486,19 +486,34 @@ function retrieveAndDecompress(lang) {
     function getRelatedArticles(currentArticle, limit) {
       if (!currentArticle || !currentArticle.tags || currentArticle.tags.length === 0) return [];
       var currentTags = currentArticle.tags;
-      return allArticles
-        .filter(function(a) {
-          if (a.lang !== currentLang) return false;
-          if (a.id === currentArticle.id) return false;
-          var shared = a.tags.filter(function(t) { return currentTags.includes(t); });
-          return shared.length > 0;
-        })
-        .sort(function(a, b) {
-          var aShared = a.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          var bShared = b.tags.filter(function(t) { return currentTags.includes(t); }).length;
-          return bShared - aShared;
-        })
-        .slice(0, limit || 3);
+
+      // ⚡ Bolt: Schwartzian transform optimization
+      // What: Pre-calculate tag intersections before sorting
+      // Why: Calculating intersections inside .sort() comparator leads to O(n^2 log n) operations
+      // Impact: Reduces complexity to O(n) for intersection calculation, then O(n log n) for sorting integers
+      // Measurement: Sorting is performed on pre-calculated integers rather than nested array filters
+
+      var related = [];
+      for (var i = 0; i < allArticles.length; i++) {
+        var a = allArticles[i];
+        if (a.lang !== currentLang || a.id === currentArticle.id) continue;
+
+        var sharedCount = 0;
+        for (var j = 0; j < a.tags.length; j++) {
+          if (currentTags.includes(a.tags[j])) {
+            sharedCount++;
+          }
+        }
+
+        if (sharedCount > 0) {
+          related.push({ article: a, sharedCount: sharedCount });
+        }
+      }
+
+      return related
+        .sort(function(a, b) { return b.sharedCount - a.sharedCount; })
+        .slice(0, limit || 3)
+        .map(function(item) { return item.article; });
     }
     
     function renderRelatedArticles(related, container) {
