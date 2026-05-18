@@ -10,29 +10,28 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli."/>
+<meta name="description" content="LLM hit rate stuck at 61%, taxonomy exploded from 29 to 155 categories. Four specialized fallback levels to reach 80% without pulling out a bigger model."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Shortcutter — 5 lezioni da una giornata di coding con LLM locali"/>
-<meta property="og:description" content="Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli."/>
+<meta property="og:title" content="How I classified 46,878 books — the four levels that converge"/>
+<meta property="og:description" content="LLM hit rate stuck at 61%, taxonomy exploded from 29 to 155 categories. Four specialized fallback levels to reach 80% without pulling out a bigger model."/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://lucasacchi.net/blog/shortcutter-5-lessons/og.png"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/book-catalog-classificazione-en/og.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:type" content="image/png"/>
-<meta property="og:url" content="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<meta property="article:published_time" content="2026-05-02"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/book-catalog-classificazione/"/>
+<meta property="article:published_time" content="2026-05-18"/>
 <meta property="article:author" content="Luca Sacchi"/>
 <meta property="article:section" content="Technology"/>
-<meta property="article:tag" content="ai"/>
+<meta property="article:tag" content="book-catalog"/>
+<meta property="article:tag" content="architecture"/>
+<meta property="article:tag" content="automation"/>
 <meta property="article:tag" content="llm"/>
-<meta property="article:tag" content="whisper"/>
-<meta property="article:tag" content="self-hosted"/>
-<meta property="article:tag" content="python"/>
-<meta property="article:tag" content="open-source"/>
-<link rel="canonical" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/shortcutter-5-lessons-en/"/>
-<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
+<meta property="article:tag" content="homelab"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/book-catalog-classificazione-en/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/book-catalog-classificazione-en/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/book-catalog-classificazione/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/book-catalog-classificazione/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -41,13 +40,13 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>Shortcutter — 5 lezioni da una giornata di coding con LLM locali — LucaSacchi.net</title>
+<title>How I classified 46,878 books — the four levels that converge — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Shortcutter — 5 lezioni da una giornata di coding con LLM locali",
-  "datePublished": "2026-05-02",
+  "headline": "How I classified 46,878 books — the four levels that converge",
+  "datePublished": "2026-05-18",
   "author": {
     "@type": "Person",
     "name": "Luca Sacchi",
@@ -61,10 +60,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli.",
+  "description": "LLM hit rate stuck at 61%, taxonomy exploded from 29 to 155 categories. Four specialized fallback levels to reach 80% without pulling out a bigger model.",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lucasacchi.net/blog/shortcutter-5-lessons/"
+    "@id": "https://lucasacchi.net/blog/book-catalog-classificazione/"
   }
 }
 </script>
@@ -352,49 +351,82 @@ article > footer {
     <li><span class="text-outline-variant">/</span></li>
     <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
     <li><span class="text-outline-variant">/</span></li>
-    <li class="text-on-surface">shortcutter-5-lessons</li>
+    <li class="text-on-surface">book-catalog-classificazione</li>
   </ol>
 </nav>
 
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Shortcutter — 5 lezioni da una giornata di coding con LLM locali</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">How I classified 46,878 books — the four levels that converge</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
-      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-02">2026-05-02</time>
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-18">2026-05-18</time>
       
       <div class="flex flex-wrap gap-2">
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span>
         <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span>
       </div>
     </div>
   </header>
   
   <div class="article-content">
-    <p>Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.</p>
-<p>Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.</p>
-<p>Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti.</p>
-<p>Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.</p>
-<p>5 cose che ho imparato.</p>
-<h3>1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa</h3>
-<p>Sempre con <code>anthropics/</code> davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fidati dopo.</p>
-<h3>2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri</h3>
-<p>"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore: aggiunge rumore.</p>
-<h3>3. Un sanity check di 5 righe ha salvato la giornata</h3>
-<p>Il LLM ha provato a sostituire il transcript con la description del video. Un "se la differenza è sopra il 30%, torna al raw" ha bloccato il disastro. Sembra banale. È oro.</p>
-<h3>4. A volte non è la pipeline a sbagliare: è il creator che ha caricato un video con l'audio mescolato</h3>
-<p>Caso reale trovato oggi. La cosa più onesta che il mio sistema fa è dire "non lo so" quando i dati sono incoerenti.</p>
-<h3>5. Le 3 regole che ripeto ai miei studenti hanno fatto più differenza di qualsiasi prompt o modello</h3>
-<p><strong>Safety first</strong> — sanity check, validazioni, fallback.<br><strong>Little often</strong> — 9 piccole versioni invece di un big-bang.<br><strong>Double check</strong> — un'occhiata attenta ha trovato un bug Python (variable shadowing) che riduceva un transcript da 3.400 caratteri a 3. "ola". Tre caratteri. Senza che me ne accorgessi.</p>
+    <p>One morning in May I'm looking at the book-catalog dashboard and something's off. 46,878 books in the queue, LLM hit rate stuck at 61%, taxonomy exploded from 29 starting categories to 155 proposed by the system. Not a disaster: a plateau. The model classifies what it knows well and ignores the rest.</p>
+<p>That's the moment when you realize the problem isn't the model. It's the architecture.</p>
+<p>What follows is how I turned that plateau into a cascade of four specialized fallbacks: each one does its part up to a point, then hands off to the next. It's not a story about bigger models or smarter training sets. It's a story about what happens when you stop asking a single tool to do everything.</p>
+<h2>The LLM plateau</h2>
+<p>For the first two months I used an LLM via proxy to classify the books. Sensible call: acceptable latency (300-500 ms per request), broad coverage, and the model knows the entire world, not just my domain of 46,000 books.</p>
+<p>61% hit rate over the whole population. Generic categories (fantasy, mystery, science fiction) and recognizable titles (Harry Potter, Dune, 1984) drop into the right bucket without effort. The remaining 39% is where the problem shows up: the model starts guessing badly, often fails silently or dumps the book into a generic fallback category that makes search useless.</p>
+<p>At this point you have two roads. First: try a bigger model. Most obvious move, also the most expensive. Second: add a Plan B that doesn't try to be "smarter", but looks at the context from a different angle.</p>
+<p>I picked the second.</p>
+<h2>Level 2 — PyMuPDF and the document's own patterns</h2>
+<p>When the LLM confidence drops below 0.5, or the predicted category doesn't exist in the taxonomy, I move to level 2: I open the PDF.</p>
+<p>I extract the first 15 pages with PyMuPDF and look for text patterns. Tables of contents, indexes, repeated keywords, genre declarations written by the document itself. The book often tells you what it is without needing an LLM to interpret: you just have to read it in the language of structure.</p>
+<p>Result: 68% of the LLM failures get resolved here. A technical manual has a "Contents" section saying "Chapter 3: Networking". An academic biography has a "Curator's preface". A romance has scenes recognizable from keywords. It's not magic, the document already did the self-description work.</p>
+<p>Cost: 200-400 ms for extraction and matching. From 61% hit rate I jump to 75%.</p>
+<h2>Level 3 — scikit-learn and the training set's memory</h2>
+<p>What if the PDF is corrupted? What if the first 15 pages are blank? What if OCR fails on a bad scan?</p>
+<p>Level 3 enters: a scikit-learn classifier trained on 28,578 files already manually labeled in previous sessions. Nothing sophisticated: TF-IDF + logistic regression on tokens from title, author and metadata. Test set accuracy: 62%.</p>
+<p>Sounds low, and in absolute terms it is. But the model isn't trying to understand the world: it's trying to understand <em>my</em> specific domain of 46,000 books. It has seen hybrid categories, minor authors, anomalous taxonomies that an LLM never encounters. 62% is probably the rational upper bound for a domain where the rest of the patterns is human noise.</p>
+<p>When the score drops below 0.5, the model doesn't try to guess. It hands off to the next level.</p>
+<p>From 75% I move to 79%.</p>
+<h2>Level 4 — local Ollama as the confessional</h2>
+<p>21% remains. Files where the LLM caved, PyMuPDF found no patterns, scikit-learn guessed below confidence. Last attempt before giving up.</p>
+<p>Here I use <code>qwen2.5:3b</code>, a small model running on Ollama locally (zero extra latency, zero API calls). It isn't "the final smart model". It's the confessional: the system arrives with three previous failures annotated and asks a small model to try with what's left.</p>
+<p>What I noticed is that when the small model receives the context of the three previous failures, the answers become surprisingly good. Not because it's a smart model, but because it knows it's working at the margins and makes more cautious choices.</p>
+<p>Final hit rate on the validation batch: 80%.</p>
+<h2>What each level does</h2>
+<p>To recap:</p>
+<ul><li><strong>Level 1 (LLM via proxy)</strong>: classifies what's universal. Caves below confidence 0.5.</li><li><strong>Level 2 (PyMuPDF)</strong>: reads the document. Caves when the file is corrupted or has no useful patterns.</li><li><strong>Level 3 (local scikit-learn)</strong>: uses the specific training set memory. Caves when domain patterns collide.</li><li><strong>Level 4 (Ollama qwen2.5:3b)</strong>: last attempt with the context of all failures. Always returns something.</li></ul>
+<p>None of them try to win everything. Each does what it knows, and when it steps outside its domain it hands off to the next. It isn't redundancy (I'm not doing the same work four times). It's four different specialists passing the baton based on a confidence signal.</p>
+<p>The important detail is that each level passes to the next not just its output but also its uncertainty. Level 4 knows the other three caved. That knowledge is what makes it change strategy.</p>
+<h2>The metrics</h2>
+<p>On May 16 I launch a validation batch on 10,000 random books. The LLM alone does 61% hit rate. Those are the numbers that had frustrated me for weeks: not bad, but unable to climb further.</p>
+<p>Then I switch on level 2. Hit rate goes to 75%. It's not just a +14% number: it's a different question being asked of the same dataset. The 1,400 books the LLM hadn't understood, 68% of them speak the language of document structure.</p>
+<p>I switch on level 3. Hit rate goes to 79%. +4%, and here it's internal resonance: the classifier isn't discovering new patterns, it's confirming and refining what the previous levels proposed, with the memory of the training set.</p>
+<p>I switch on level 4. Final hit rate: 80%. +1% that looks small, but it represents 20% of the previous failures — cases where the other three levels had nothing solid to lean on.</p>
+<p>With this framework the initial batch of 10,000 books has been fully processed. Batch 2 of 20,000 books was launched autonomously, without supervision. Total classified: 30,000 out of 46,878 (64% coverage).</p>
+<p>In parallel the taxonomy expanded. From the 29 initial categories (rigid, institutional) I got to 155 categories proposed by the system. Of these: 84 Italian-native (essays, Italian literature, local specialist), 71 international. Not a single slug came from a decision of mine. They all emerged from the natural recursion of the four levels, batch after batch.</p>
+<h3>What these numbers actually mean</h3>
+<p>The 80% hit rate isn't perfection. Manual audit on 30 random books: 24 correct, 6 in ambiguous margins but still categorizable (a fantasy tagged as "anthropological-fantasy" instead of pure, a geopolitical thriller instead of generic). These aren't chaotic errors. They're failures the next batch already knows how to handle: unforeseen categories, corrupted PDFs, titles in poorly represented languages.</p>
+<p>80% wasn't the goal of the design. I didn't say "I want 80%, so I build four levels". I said "I want a system where every component knows when it doesn't know". And 80% emerged as a consequence.</p>
+<p>If I had aimed only at the number, I would have added VRAM to the LLM, doubled the budget, hacked the first level to the bone. I would probably have reached 70-72% and stopped.</p>
+<h2>Three things I take home</h2>
+<p><strong>Robust automation isn't "smarter". It's more self-aware.</strong></p>
+<p>Level 1's LLM doesn't become smarter when I combine it with PyMuPDF. But the system as a whole becomes aware of its own limits, because each level passes to the next both the output and the confidence score. That metainformation is all you need.</p>
+<p>Robustness doesn't live in a single model. It lives in the architecture around it. It isn't a question of <em>which</em> model you use: it's a question of <em>how</em> the models talk to each other when they fail.</p>
+<p><strong>The metric comes after, it doesn't drive the design.</strong></p>
+<p>I count 80% hit rate, but the number arrives <em>after</em> the system has been built. If I hadn't had the fallback structure, I couldn't even count the LLM's 61% as a starting point: I could only complain that "something doesn't work, but I don't know what".</p>
+<p>Numbers become visible only when the system is transparent about where it fails. Want to replicate this result in a project of your own? Don't start from a target number. Start from the question: "How do I know when the system failed, and at which level?". Answer that well and the metric arrives on its own.</p>
+<p><strong>Failure tolerance is the foundation, not a late addition.</strong></p>
+<p>In "agile" culture failure tolerance is often the thing you add <em>later</em>, if you have time. "We have the core, we'll add graceful degradation in v2". Here I did the opposite. Each level exists because the previous one <em>could</em> fail. Not from pessimism, but because in production chaos is guaranteed.</p>
+<p>Concrete consequence: when I launch batch 3, I won't go in blind. I know the marginal 20% of batch-to-batch failures will cluster around corrupted PDFs, new categories, titles in non-Latin scripts. I architected success and predictable fallibility at the same time.</p>
 <hr>
-<p>La cosa che mi porto a casa: quando costruisci un sistema basato su LLM non puoi sperare che il modello si comporti bene. Devi assumere che farà casino e progettare la resilienza intorno a quello.</p>
-<p>La pipeline robusta è quella che intercetta i suoi stessi errori prima che li vedano i tuoi utenti.</p>
-<p>Stack: Python, Whisper, Ollama (qwen 2.5 4B + llava 7B), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.</p>
+<p>That said: on the same day the classification was converging cleanly toward 80%, another piece of the project was failing silently. Same architectural thinking required, opposite decision, different consequences.</p>
+<p><strong><a href="./book-catalog-migrazione-en/">Read Part II: Why the filesystem migration failed (and what it teaches)</a></strong></p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -403,12 +435,12 @@ article > footer {
     <div class="flex flex-wrap gap-4 items-center justify-between">
       <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
-        <span>Torna al Blog</span>
+        <span>Back to Blog</span>
       </a>
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/shortcutter-5-lessons/&title=Shortcutter — 5 lezioni da una giornata di coding con LLM locali" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/book-catalog-classificazione-en/&title=How I classified 46,878 books — the four levels that converge" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -417,7 +449,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject=Shortcutter — 5 lezioni da una giornata di coding con LLM locali&body=Shortcutter — 5 lezioni da una giornata di coding con LLM locali%0A%0Ahttps://lucasacchi.net/blog/shortcutter-5-lessons/" 
+           href="mailto:?subject=How I classified 46,878 books — the four levels that converge&body=How I classified 46,878 books — the four levels that converge%0A%0Ahttps://lucasacchi.net/blog/book-catalog-classificazione-en/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>

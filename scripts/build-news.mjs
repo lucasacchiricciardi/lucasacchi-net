@@ -187,9 +187,20 @@ export function markdownToHtml(md) {
   return htmlBlocks.join('\n');
 }
 
+export function validateFrontmatter(metadata, filePath) {
+  const required = ['title', 'date', 'description', 'lang'];
+  const missing = required.filter(k => !metadata[k] || (typeof metadata[k] === 'string' && metadata[k].trim() === ''));
+  if (missing.length > 0) {
+    throw new Error(`${filePath}: missing required frontmatter field(s): ${missing.join(', ')}`);
+  }
+}
+
 function buildArticle(filePath) {
   const raw = readFileSync(filePath, 'utf-8');
   const { metadata, body } = parseFrontmatter(raw);
+  if (process.env.STRICT_FRONTMATTER !== '0') {
+    validateFrontmatter(metadata, filePath);
+  }
   const id = basename(filePath, extname(filePath));
   const html = markdownToHtml(body);
   return {
@@ -659,14 +670,19 @@ ${feedItems}
   return feed;
 }
 
-function generateBlogListingCard(article) {
+export function generateBlogListingCard(article) {
   const slug = article.id;
   const url = `/blog/${slug}/`;
   const tags = (article.tags || []).map(t =>
     `<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">${t}</span>`
   ).join('');
-  const plainText = (article.content || '').replace(/<[^>]+>/g, '');
-  const excerpt = plainText.split(' ').slice(0, 30).join(' ');
+  let excerpt;
+  if (article.description) {
+    excerpt = article.description;
+  } else {
+    const plainText = (article.content || '').replace(/<[^>]+>/g, '');
+    excerpt = plainText.split(' ').slice(0, 30).join(' ');
+  }
   const titleEsc = (article.title || '').replace(/"/g, '&quot;');
   const tagsStr = (article.tags || []).join(' ');
   const excerptEsc = excerpt.replace(/"/g, '&quot;');

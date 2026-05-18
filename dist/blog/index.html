@@ -94,7 +94,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 .blog-card { display: block; }
-.blog-card[hidden] { display: none !important; }
+/* Force-hide elements with [hidden] attribute. Needed because Tailwind's
+   display: grid on the container divs overrides the UA default [hidden] rule. */
+[hidden] { display: none !important; }
 </style>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
@@ -151,7 +153,7 @@ body {
   <p class="font-label text-sm uppercase tracking-widest text-on-surface-variant mb-2">Blog</p>
   <p class="font-headline text-3xl font-semibold text-on-surface mb-2">Tutti gli articoli</p>
   <p class="font-body text-sm text-on-surface-variant">
-    <span id="count-it">7</span> articoli in italiano &middot; <span id="count-en">7</span> in English &middot; <span class="text-outline">Generato il 2026-05-16</span>
+    <span id="count-it">9</span> articoli in italiano &middot; <span id="count-en">9</span> in English &middot; <span class="text-outline">Generato il 2026-05-18</span>
   </p>
 </div>
 
@@ -169,87 +171,83 @@ body {
 </div>
 
 <div id="blog-articles-it" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="Ieri sera ho visto questo video di sette minuti su YouTube: *&quot;DFlash — 8x faster inference on llama.cpp&quot;*. Il tipo mostra una pull request ancora in stato draft sul repo">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Come ho classificato 46.878 libri — i quattro livelli che convergono" data-tags="book-catalog architecture automation llm homelab" data-excerpt="Hit rate dell'LLM fermo al 61%, tassonomia esplosa da 29 a 155 categorie. Quattro livelli di fallback specializzati per arrivare a 80% senza tirare fuori un modello più grosso.">
+  <a href="/blog/book-catalog-classificazione/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-18</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Come ho classificato 46.878 libri — i quattro livelli che convergono</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Hit rate dell'LLM fermo al 61%, tassonomia esplosa da 29 a 155 categorie. Quattro livelli di fallback specializzati per arrivare a 80% senza tirare fuori un modello più grosso.…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Perché la migrazione del filesystem è fallita (e cosa insegna)" data-tags="book-catalog automation debugging nfs qnap infrastructure" data-excerpt="6.430 path aggiornati nel database, zero file mossi nel filesystem. Silent failure su NFS verso QNAP. La storia di un debugging in quattro ipotesi e una sorpresa nascosta nelle ACL della share.">
+  <a href="/blog/book-catalog-migrazione/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-18</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Perché la migrazione del filesystem è fallita (e cosa insegna)</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">6.430 path aggiornati nel database, zero file mossi nel filesystem. Silent failure su NFS verso QNAP. La storia di un debugging in quattro ipotesi e una sorpresa nascosta nelle ACL della share.…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">debugging</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">nfs</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">infrastructure</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="Ho testato DFlash speculative decoding (llama.cpp PR #22105) su una RX 7900 XTX eGPU AMD. Risultato: 2.62× su Qwen3-8B, 1.25× su gpt-oss-20b (MoE). Quattro inciampi onesti lungo la strada.">
   <a href="/blog/dflash-xtx-ebay/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-16</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ieri sera ho visto questo video di sette minuti su YouTube: *"DFlash — 8x faster inference on llama.cpp"*. Il tipo mostra una pull request ancora in stato draft sul repo…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ho testato DFlash speculative decoding (llama.cpp PR #22105) su una RX 7900 XTX eGPU AMD. Risultato: 2.62× su Qwen3-8B, 1.25× su gpt-oss-20b (MoE). Quattro inciampi onesti lungo la strada.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llama.cpp</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">speculative-decoding</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">benchmark</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">dflash</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commit in 10 ore — questo è il mio flusso con Claude Code" data-tags="claude-code AI sviluppo homelab produttività" data-excerpt="Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.
-Ho esteso un sistema di monitoring da 2 a 10 checker.
-Ho completato una pipeline IMAP → LLM →">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commit in 10 ore — questo è il mio flusso con Claude Code" data-tags="claude-code AI sviluppo homelab produttività" data-excerpt="Come ho costruito 3 app in produzione in una giornata usando Claude Code. Pianificazione, esame del piano, subagenti e orchestratore — con numeri reali.">
   <a href="/blog/claude-code-giornata/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-15</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">66 commit in 10 ore — questo è il mio flusso con Claude Code</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Oggi ho costruito tre applicazioni da zero e le ho portate in produzione.
-Ho esteso un sistema di monitoring da 2 a 10 checker.
-Ho completato una pipeline IMAP → LLM →…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Come ho costruito 3 app in produzione in una giornata usando Claude Code. Pianificazione, esame del piano, subagenti e orchestratore — con numeri reali.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">claude-code</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">AI</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sviluppo</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">produttività</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme" data-tags="homelab ollama api queue docker python open-source" data-excerpt="Nel mio homelab gira un server Ollama su `192.168.254.115`: 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
-
-- TikTok Downloader (trascrizione di video)
-- Shortcutter (download">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme" data-tags="homelab ollama api queue docker python open-source" data-excerpt="Cinque agenti che si contendono la VRAM di un server Ollama. Cosa succede senza coordinamento, e come ho costruito un manager con prenotazioni per-modello.">
   <a href="/blog/model-manager-homelab/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Nel mio homelab gira un server Ollama su `192.168.254.115`: 64 GB di RAM, GPU condivisa, niente cloud. Su questa macchina urlano 5 agenti:
-
-- TikTok Downloader (trascrizione di video)
-- Shortcutter (download…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Cinque agenti che si contendono la VRAM di un server Ollama. Cosa succede senza coordinamento, e come ho costruito un manager con prenotazioni per-modello.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">queue</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — Come ho stravolto l'architettura per scalare la trascrizione" data-tags="architecture microservices whisper api python open-source" data-excerpt="Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
-
-Oggi ho ripensato l'architettura e ho deciso di rifare">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — Come ho stravolto l'architettura per scalare la trascrizione" data-tags="architecture microservices whisper api python open-source" data-excerpt="Dal modello Whisper embedded nello script a un microservizio REST dedicato su server LAN. Perché l'ho fatto, cosa è cambiato, e quanta VRAM ho liberato.">
   <a href="/blog/whisper-api-architecture/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Whisper API — Come ho stravolto l'architettura per scalare la trascrizione</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
-
-Oggi ho ripensato l'architettura e ho deciso di rifare…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Dal modello Whisper embedded nello script a un microservizio REST dedicato su server LAN. Perché l'ho fatto, cosa è cambiato, e quanta VRAM ho liberato.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">microservices</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore,">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="Pipeline di backup automatica dal laptop al NAS passando per una VM Docker. WSL2 → Syncthing → rsync via SSH → QNAP. RPO di un minuto, zero intervento manuale.">
   <a href="/blog/claude-workspace-backup-pipeline/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore,…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Pipeline di backup automatica dal laptop al NAS passando per una VM Docker. WSL2 → Syncthing → rsync via SSH → QNAP. RPO di un minuto, zero intervento manuale.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lezioni da una giornata di coding con LLM locali" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
-
-Problema: i link">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lezioni da una giornata di coding con LLM locali" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli.">
   <a href="/blog/shortcutter-5-lessons/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Shortcutter — 5 lezioni da una giornata di coding con LLM locali</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.
-
-Problema: i link…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — Il mio blog personale a tema Linux" data-tags="linux blog thelinuxformula open-source" data-excerpt="Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source. È online su [thelinuxformula.com](https://thelinuxformula.com).
-
-Dopo oltre 20 anni come Systems Administrator su Unix, Linux e">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — Il mio blog personale a tema Linux" data-tags="linux blog thelinuxformula open-source" data-excerpt="Ho lanciato thelinuxformula.com — il mio blog personale su Linux e open source. Bilingue, articoli su kernel, systemd, networking, sicurezza. Niente tutorial copia-incolla.">
   <a href="/blog/thelinuxformula-launch/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-04-25</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">The Linux Formula — Il mio blog personale a tema Linux</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ho lanciato **The Linux Formula**, il mio blog personale dedicato al mondo Linux e all'open source. È online su [thelinuxformula.com](https://thelinuxformula.com).
-
-Dopo oltre 20 anni come Systems Administrator su Unix, Linux e…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Ho lanciato thelinuxformula.com — il mio blog personale su Linux e open source. Bilingue, articoli su kernel, systemd, networking, sicurezza. Niente tutorial copia-incolla.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">linux</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">blog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">thelinuxformula</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
@@ -257,89 +255,83 @@ Dopo oltre 20 anni come Systems Administrator su Unix, Linux e…</p>
 </div>
 
 <div id="blog-articles-en" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" hidden>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="Last night I watched a seven-minute YouTube video: *&quot;DFlash — 8x faster inference on llama.cpp.&quot;* The guy showcases a draft pull request on the `ggml-org/llama.cpp` repo with a speculative decoding">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="How I classified 46,878 books — the four levels that converge" data-tags="book-catalog architecture automation llm homelab" data-excerpt="LLM hit rate stuck at 61%, taxonomy exploded from 29 to 155 categories. Four specialized fallback levels to reach 80% without pulling out a bigger model.">
+  <a href="/blog/book-catalog-classificazione-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-18</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">How I classified 46,878 books — the four levels that converge</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">LLM hit rate stuck at 61%, taxonomy exploded from 29 to 155 categories. Four specialized fallback levels to reach 80% without pulling out a bigger model.…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Why the filesystem migration failed (and what it teaches)" data-tags="book-catalog automation debugging nfs qnap infrastructure" data-excerpt="6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs.">
+  <a href="/blog/book-catalog-migrazione-en/" class="block group">
+    <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-18</p>
+    <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Why the filesystem migration failed (and what it teaches)</h2>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs.…</p>
+    <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">debugging</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">nfs</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">infrastructure</span></div>
+    <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
+  </a>
+</article>
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B" data-tags="homelab llm llama.cpp rocm amd speculative-decoding benchmark dflash" data-excerpt="I tested DFlash speculative decoding (llama.cpp PR #22105) on an AMD RX 7900 XTX eGPU. Result: 2.62× on Qwen3-8B, 1.25× on gpt-oss-20b (MoE). Four honest stumbles on the way.">
   <a href="/blog/dflash-xtx-ebay-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-16</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">I bought an RX 7900 XTX on eBay to test DFlash. Result — 2.6x on Qwen3-8B</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Last night I watched a seven-minute YouTube video: *"DFlash — 8x faster inference on llama.cpp."* The guy showcases a draft pull request on the `ggml-org/llama.cpp` repo with a speculative decoding…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I tested DFlash speculative decoding (llama.cpp PR #22105) on an AMD RX 7900 XTX eGPU. Result: 2.62× on Qwen3-8B, 1.25× on gpt-oss-20b (MoE). Four honest stumbles on the way.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llama.cpp</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">speculative-decoding</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">benchmark</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">dflash</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commits in 10 hours — this is my Claude Code workflow" data-tags="claude-code AI development homelab productivity" data-excerpt="Today I built three applications from scratch and deployed them to production.
-I extended a monitoring system from 2 to 12 checkers.
-I completed an IMAP → LLM → database → dashboard">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="66 commits in 10 hours — this is my Claude Code workflow" data-tags="claude-code AI development homelab productivity" data-excerpt="How I built 3 apps to production in one day using Claude Code. Planning, plan review, subagents and orchestrator — with real numbers.">
   <a href="/blog/claude-code-giornata-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-15</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">66 commits in 10 hours — this is my Claude Code workflow</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Today I built three applications from scratch and deployed them to production.
-I extended a monitoring system from 2 to 12 checkers.
-I completed an IMAP → LLM → database → dashboard…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">How I built 3 apps to production in one day using Claude Code. Planning, plan review, subagents and orchestrator — with real numbers.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">claude-code</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">AI</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">development</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">productivity</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once" data-tags="homelab ollama api queue docker python open-source" data-excerpt="My homelab runs an Ollama server on `192.168.254.115`: 64 GB RAM, shared GPU, no cloud. Five agents fight for it:
-
-- TikTok Downloader (video transcription)
-- Shortcutter (YouTube download + summary)
-- n8n">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once" data-tags="homelab ollama api queue docker python open-source" data-excerpt="Five agents fighting for VRAM on a single Ollama server. What happens without coordination, and how I built a manager with per-model reservations.">
   <a href="/blog/model-manager-homelab-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Model Manager — How I Handle VRAM Contention When Too Many Agents Run at Once</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">My homelab runs an Ollama server on `192.168.254.115`: 64 GB RAM, shared GPU, no cloud. Five agents fight for it:
-
-- TikTok Downloader (video transcription)
-- Shortcutter (YouTube download + summary)
-- n8n…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Five agents fighting for VRAM on a single Ollama server. What happens without coordination, and how I built a manager with per-model reservations.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">queue</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — How I Reshaped the Architecture to Scale Transcription" data-tags="architecture microservices whisper api python open-source" data-excerpt="A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.
-
-Today I rethought the architecture and decided to rebuild a">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Whisper API — How I Reshaped the Architecture to Scale Transcription" data-tags="architecture microservices whisper api python open-source" data-excerpt="From a Whisper model embedded in the script to a dedicated REST microservice on a LAN server. Why I did it, what changed, and how much VRAM I freed.">
   <a href="/blog/whisper-api-architecture-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-04</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Whisper API — How I Reshaped the Architecture to Scale Transcription</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">A few days ago I shared Shortcutter, an open source tool that downloads YouTube videos, transcribes them, and produces structured summaries.
-
-Today I rethought the architecture and decided to rebuild a…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">From a Whisper model embedded in the script to a dedicated REST microservice on a LAN server. Why I did it, what changed, and how much VRAM I freed.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">architecture</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">microservices</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">api</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="How I hardened my Claude Code workspace — a backup pipeline in 5 steps" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="I use Claude Code CLI every day. My workspace lives on WSL2 and holds code, documentation, course notes, context files for my projects. If the disk dies tomorrow, I lose">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="How I hardened my Claude Code workspace — a backup pipeline in 5 steps" data-tags="backup sysadmin docker syncthing qnap disaster-recovery wsl2" data-excerpt="Automated backup pipeline from laptop to NAS through a Docker VM. WSL2 → Syncthing → rsync over SSH → QNAP. One-minute RPO, zero manual work.">
   <a href="/blog/claude-workspace-backup-pipeline-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">How I hardened my Claude Code workspace — a backup pipeline in 5 steps</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I use Claude Code CLI every day. My workspace lives on WSL2 and holds code, documentation, course notes, context files for my projects. If the disk dies tomorrow, I lose…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">Automated backup pipeline from laptop to NAS through a Docker VM. WSL2 → Syncthing → rsync over SSH → QNAP. One-minute RPO, zero manual work.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lessons from a day of coding with local LLMs" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.
-
-Problem: the links aren't">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="Shortcutter — 5 lessons from a day of coding with local LLMs" data-tags="ai llm whisper self-hosted python open-source" data-excerpt="One day to build a pipeline that downloads YouTube Shorts, transcribes them with Whisper and produces a digest via local LLM. Nine iterations, four bugs, five concrete lessons on small models.">
   <a href="/blog/shortcutter-5-lessons-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-05-02</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">Shortcutter — 5 lessons from a day of coding with local LLMs</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I follow an Italian YouTube channel every day, ZioBudda Labs, that posts AI news as 2-minute shorts. Full of tools, repos, and models I want to try.
-
-Problem: the links aren't…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">One day to build a pipeline that downloads YouTube Shorts, transcribes them with Whisper and produces a digest via local LLM. Nine iterations, four bugs, five concrete lessons on small models.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>
 </article>
-<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — My Personal Linux & Open Source Blog" data-tags="linux blog thelinuxformula open-source" data-excerpt="I've launched **The Linux Formula**, my personal blog about Linux and open source. It's live at [thelinuxformula.com](https://thelinuxformula.com).
-
-After more than 20 years as a Systems Administrator on Unix, Linux, and Solaris,">
+<article class="blog-card bg-surface-container-low p-8 border-t-4 border-primary hover:bg-surface-container-high transition-colors" data-title="The Linux Formula — My Personal Linux & Open Source Blog" data-tags="linux blog thelinuxformula open-source" data-excerpt="I launched thelinuxformula.com — my personal blog on Linux and open source. Bilingual, articles on kernel, systemd, networking, security. No copy-paste tutorials.">
   <a href="/blog/thelinuxformula-launch-en/" class="block group">
     <p class="font-label text-xs text-on-surface-variant uppercase tracking-wider mb-2">2026-04-25</p>
     <h2 class="font-body text-xl font-semibold text-on-surface mb-3 group-hover:text-primary transition-colors">The Linux Formula — My Personal Linux & Open Source Blog</h2>
-    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I've launched **The Linux Formula**, my personal blog about Linux and open source. It's live at [thelinuxformula.com](https://thelinuxformula.com).
-
-After more than 20 years as a Systems Administrator on Unix, Linux, and Solaris,…</p>
+    <p class="font-body text-sm text-on-surface-variant mb-4 line-clamp-3">I launched thelinuxformula.com — my personal blog on Linux and open source. Bilingual, articles on kernel, systemd, networking, security. No copy-paste tutorials.…</p>
     <div class="flex flex-wrap gap-2 mb-4"><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">linux</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">blog</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">thelinuxformula</span><span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span></div>
     <span class="font-label text-sm uppercase tracking-wider text-primary">Leggi →</span>
   </a>

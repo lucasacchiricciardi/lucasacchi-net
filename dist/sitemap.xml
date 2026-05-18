@@ -6,6 +6,30 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://lucasacchi.net/blog/book-catalog-classificazione/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lucasacchi.net/blog/book-catalog-classificazione-en/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lucasacchi.net/blog/book-catalog-migrazione/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lucasacchi.net/blog/book-catalog-migrazione-en/</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://lucasacchi.net/blog/dflash-xtx-ebay/</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>weekly</changefreq>

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, rmSync, mkdirSync, existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { execSync } from 'node:child_process';
-import { parseFrontmatter, markdownToHtml } from './build-news.mjs';
+import { parseFrontmatter, markdownToHtml, generateBlogListingCard, validateFrontmatter } from './build-news.mjs';
 
 const ROOT = join(import.meta.dirname, '..');
 const SRC_RAW = join(ROOT, 'src', 'raw');
@@ -374,6 +374,133 @@ Body`;
     const result = parseFrontmatter(content);
     assert.equal(result.metadata.title, 'Plain title without quotes');
     assert.equal(result.metadata.date, '2026-05-18');
+  });
+});
+
+describe('validateFrontmatter — strict required fields', () => {
+  it('should pass when all required fields present', () => {
+    const metadata = {
+      title: 'Test',
+      date: '2026-05-18',
+      description: 'A description',
+      lang: 'it',
+      tags: ['t1']
+    };
+    assert.doesNotThrow(() => validateFrontmatter(metadata, 'test.md'));
+  });
+
+  it('should throw when description is missing', () => {
+    const metadata = { title: 'T', date: '2026-05-18', lang: 'it' };
+    assert.throws(
+      () => validateFrontmatter(metadata, 'broken.md'),
+      /broken\.md.*description/i
+    );
+  });
+
+  it('should throw when lang is missing', () => {
+    const metadata = { title: 'T', date: '2026-05-18', description: 'd' };
+    assert.throws(
+      () => validateFrontmatter(metadata, 'broken.md'),
+      /broken\.md.*lang/i
+    );
+  });
+
+  it('should throw when title is missing', () => {
+    const metadata = { date: '2026-05-18', description: 'd', lang: 'it' };
+    assert.throws(
+      () => validateFrontmatter(metadata, 'broken.md'),
+      /broken\.md.*title/i
+    );
+  });
+
+  it('should throw when date is missing', () => {
+    const metadata = { title: 'T', description: 'd', lang: 'it' };
+    assert.throws(
+      () => validateFrontmatter(metadata, 'broken.md'),
+      /broken\.md.*date/i
+    );
+  });
+
+  it('should list all missing fields in single error', () => {
+    const metadata = { title: 'T' };
+    let err;
+    try {
+      validateFrontmatter(metadata, 'broken.md');
+    } catch (e) {
+      err = e;
+    }
+    assert.ok(err, 'should throw');
+    assert.match(err.message, /date/);
+    assert.match(err.message, /description/);
+    assert.match(err.message, /lang/);
+  });
+
+  it('should treat empty string as missing', () => {
+    const metadata = { title: 'T', date: '2026-05-18', description: '', lang: 'it' };
+    assert.throws(
+      () => validateFrontmatter(metadata, 'broken.md'),
+      /description/
+    );
+  });
+});
+
+describe('generateBlogListingCard — excerpt priority', () => {
+  it('should use article.description as excerpt when present', () => {
+    const article = {
+      id: 'test-slug',
+      title: 'Test Title',
+      date: '2026-05-18',
+      tags: ['t1'],
+      description: 'A clean, hand-written description.',
+      content: '**[Back link](./other/)** --- body text that should NOT be used as excerpt.'
+    };
+    const html = generateBlogListingCard(article);
+    assert.ok(html.includes('A clean, hand-written description.'),
+      `excerpt should contain description; got: ${html.slice(0, 400)}`);
+    assert.ok(!html.includes('Back link'),
+      `excerpt should NOT contain raw markdown back link`);
+  });
+
+  it('should fall back to body-extracted excerpt when description is missing', () => {
+    const article = {
+      id: 'test-slug',
+      title: 'Test Title',
+      date: '2026-05-18',
+      tags: [],
+      description: null,
+      content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    };
+    const html = generateBlogListingCard(article);
+    assert.ok(html.includes('Lorem ipsum dolor sit amet'),
+      `excerpt should fall back to body text when description missing`);
+  });
+
+  it('should fall back to body when description is empty string', () => {
+    const article = {
+      id: 'test-slug',
+      title: 'Test Title',
+      date: '2026-05-18',
+      tags: [],
+      description: '',
+      content: 'Body content used as fallback because description is empty.'
+    };
+    const html = generateBlogListingCard(article);
+    assert.ok(html.includes('Body content used as fallback'),
+      `empty description should be treated as missing`);
+  });
+
+  it('should escape double quotes in description data-attribute', () => {
+    const article = {
+      id: 'test-slug',
+      title: 'Test',
+      date: '2026-05-18',
+      tags: [],
+      description: 'Quote "inside" description.',
+      content: 'body'
+    };
+    const html = generateBlogListingCard(article);
+    assert.ok(html.includes('data-excerpt="Quote &quot;inside&quot; description."'),
+      `data-excerpt must HTML-escape inner double quotes`);
   });
 });
 

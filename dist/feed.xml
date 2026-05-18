@@ -7,6 +7,27 @@
     <language>it</language>
     <atom:link href="https://lucasacchi.net/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title><![CDATA[Come ho classificato 46.878 libri — i quattro livelli che convergono]]></title>
+    <link>https://lucasacchi.net/blog/book-catalog-classificazione/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/book-catalog-classificazione/</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Una mattina di maggio guardo la dashboard di book-catalog e c'è una cosa che non torna. 46.878 libri in coda, hit rate dell'LLM fermo al 61%, tassonomia esplosa da 29 categorie iniziali a 155 proposte dal sistema. Non è un disastro: è un plateau. Il modello classifica bene quello che conosce e ignora il resto.
+Questo è il momento in cui si capisce che il problema non è il modello. È l'architettura.
+Quello che racconto qui è come ho trasformato quel plateau in una cascata di quattro fallback spec]]></description>
+    <category>book-catalog, architecture, automation, llm, homelab</category>
+  </item>
+  <item>
+    <title><![CDATA[Perché la migrazione del filesystem è fallita (e cosa insegna)]]></title>
+    <link>https://lucasacchi.net/blog/book-catalog-migrazione/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/book-catalog-migrazione/</guid>
+    <pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[← Leggi la Parte I: Come ho classificato 46.878 libri
+
+Se la classificazione è andata bene, perché la migrazione no? Due pezzi dello stesso progetto, disegnati nello stesso giorno, con esito opposto.
+Mentre i quattro livelli di classificazione convergevano sull'80%, dovevo affrontare un'altra cosa: riorganizzare il filesystem. 43.337 file sparsi in tre vecchie location (/Download/, /Mega.com/, /Deposito/) dovevano migrare verso una nuova struttura in /Bookz/Uncategorized/{topic}/. Non un task ac]]></description>
+    <category>book-catalog, automation, debugging, nfs, qnap, infrastructure</category>
+  </item>
+  <item>
     <title><![CDATA[Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B]]></title>
     <link>https://lucasacchi.net/blog/dflash-xtx-ebay/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/dflash-xtx-ebay/</guid>

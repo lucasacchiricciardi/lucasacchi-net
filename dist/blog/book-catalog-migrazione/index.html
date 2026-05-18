@@ -10,30 +10,29 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Pipeline di backup automatica dal laptop al NAS passando per una VM Docker. WSL2 → Syncthing → rsync via SSH → QNAP. RPO di un minuto, zero intervento manuale."/>
+<meta name="description" content="6.430 path aggiornati nel database, zero file mossi nel filesystem. Silent failure su NFS verso QNAP. La storia di un debugging in quattro ipotesi e una sorpresa nascosta nelle ACL della share."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step"/>
-<meta property="og:description" content="Pipeline di backup automatica dal laptop al NAS passando per una VM Docker. WSL2 → Syncthing → rsync via SSH → QNAP. RPO di un minuto, zero intervento manuale."/>
+<meta property="og:title" content="Perché la migrazione del filesystem è fallita (e cosa insegna)"/>
+<meta property="og:description" content="6.430 path aggiornati nel database, zero file mossi nel filesystem. Silent failure su NFS verso QNAP. La storia di un debugging in quattro ipotesi e una sorpresa nascosta nelle ACL della share."/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/og.png"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/book-catalog-migrazione/og.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:type" content="image/png"/>
-<meta property="og:url" content="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
-<meta property="article:published_time" content="2026-05-02"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
+<meta property="article:published_time" content="2026-05-18"/>
 <meta property="article:author" content="Luca Sacchi"/>
 <meta property="article:section" content="Technology"/>
-<meta property="article:tag" content="backup"/>
-<meta property="article:tag" content="sysadmin"/>
-<meta property="article:tag" content="docker"/>
-<meta property="article:tag" content="syncthing"/>
+<meta property="article:tag" content="book-catalog"/>
+<meta property="article:tag" content="automation"/>
+<meta property="article:tag" content="debugging"/>
+<meta property="article:tag" content="nfs"/>
 <meta property="article:tag" content="qnap"/>
-<meta property="article:tag" content="disaster-recovery"/>
-<meta property="article:tag" content="wsl2"/>
-<link rel="canonical" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
-<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
-<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline-en/"/>
-<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"/>
+<meta property="article:tag" content="infrastructure"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/book-catalog-migrazione-en/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -42,13 +41,13 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step — LucaSacchi.net</title>
+<title>Perché la migrazione del filesystem è fallita (e cosa insegna) — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step",
-  "datePublished": "2026-05-02",
+  "headline": "Perché la migrazione del filesystem è fallita (e cosa insegna)",
+  "datePublished": "2026-05-18",
   "author": {
     "@type": "Person",
     "name": "Luca Sacchi",
@@ -62,10 +61,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "Pipeline di backup automatica dal laptop al NAS passando per una VM Docker. WSL2 → Syncthing → rsync via SSH → QNAP. RPO di un minuto, zero intervento manuale.",
+  "description": "6.430 path aggiornati nel database, zero file mossi nel filesystem. Silent failure su NFS verso QNAP. La storia di un debugging in quattro ipotesi e una sorpresa nascosta nelle ACL della share.",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lucasacchi.net/blog/claude-workspace-backup-pipeline/"
+    "@id": "https://lucasacchi.net/blog/book-catalog-migrazione/"
   }
 }
 </script>
@@ -353,69 +352,242 @@ article > footer {
     <li><span class="text-outline-variant">/</span></li>
     <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
     <li><span class="text-outline-variant">/</span></li>
-    <li class="text-on-surface">claude-workspace-backup-pipeline</li>
+    <li class="text-on-surface">book-catalog-migrazione</li>
   </ol>
 </nav>
 
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Perché la migrazione del filesystem è fallita (e cosa insegna)</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
-      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-02">2026-05-02</time>
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-18">2026-05-18</time>
       
       <div class="flex flex-wrap gap-2">
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">backup</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">sysadmin</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">docker</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">syncthing</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">debugging</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">nfs</span>
         <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">disaster-recovery</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">wsl2</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">infrastructure</span>
       </div>
     </div>
   </header>
   
   <div class="article-content">
-    <p>Uso Claude Code CLI tutti i giorni. Il mio workspace vive su WSL2 e contiene codice, documentazione, appunti di corso, context file per i progetti. Se domani il disco muore, perdo mesi di lavoro.</p>
-<p>Non mi andava di pensarci. Così ho costruito una pipeline di backup automatica: dal laptop al NAS, passando per una VM Docker. RPO di un minuto, zero intervento manuale.</p>
-<p>Ecco come.</p>
-<h3>L'architettura</h3>
-<p>Tre stadi, semplice:</p>
-<p>1. <strong>Produzione</strong>: WSL2 sul mio laptop<br>2. <strong>Staging</strong>: VM Docker (<code>dockerhost02</code>)<br>3. <strong>Cold storage</strong>: QNAP NAS in RAID</p>
-<p>Tutto parte da Syncthing, arriva a rsync via SSH, finisce in un backup deduplicato. Vediamo i passaggi.</p>
-<h3>Step 1: Sincronizzazione real-time con Syncthing</h3>
-<p>Syncthing monitora la cartella del workspace su WSL2 e la replica sulla VM in un container Docker dedicato.</p>
-<p>Primo controllo dopo il deploy: <code>ls -la</code> sul volume Docker. File presenti, permessi corretti (<code>abc:users</code>), metadati di Git intatti. Sincronizzazione sotto il secondo. Fatto.</p>
-<h3>Step 2: SSH passwordless verso il QNAP</h3>
-<p>Qui ho perso un po' di tempo. I QNAP non usano il path standard per le chiavi SSH autorizzate. Non è <code>~/.ssh/authorized_keys</code>, ma <code>/etc/config/ssh/authorized_keys</code>.</p>
-<p>Chiave ED25519 generata sulla VM, pubblica iniettata nel NAS, test di connessione. Il test però è fallito per un motivo banale:</p>
-<pre><code>ssh admin@192.168.254.100 "echo 'Connessione riuscita!'"</code></pre>
-<p>La Bash interpreta il <code>!</code> come history expansion. Un carattere che mi ha fatto perdere 10 minuti. Soluzione: virgolette singole intorno alla stringa. Mai sottovalutare i caratteri speciali.</p>
-<h3>Step 3: rsync + flock per lo sync al minuto</h3>
-<p>Lo script fa una cosa sola: rsync dalla VM al NAS ogni 60 secondi tramite crontab.</p>
-<p>C'è però un problema: se un sync impiega più di un minuto, il processo successivo parte sopra e si sovrappongono. Entrambi scrivono sugli stessi file. Non è una bella idea.</p>
-<p>Soluzione: <code>flock</code>. Un file di lock a <code>/tmp/qnap_sync.lock</code>. Se un sync è già in corso, il successivo aspetta educatamente il suo turno.</p>
-<pre><code>(
-  flock -n 200 || exit 1
-  rsync -avz -e "ssh -i /root/.ssh/id_rsa_qnap" \
-    "/var/lib/docker/volumes/syncthing_data/_data/Claude/" \
-    "admin@192.168.254.100:/share/CACHEDEV3_DATA/BackupClaude/"
-) 200&gt;"/tmp/qnap_sync.lock"</code></pre>
-<h3>Step 4: Logrotate per non annegare nei log</h3>
-<p>Uno sync al minuto genera log a velocità impressionante. In poche ore il file era già a 1.2MB.</p>
-<p>Ho configurato logrotate: rotazione giornaliera, limite di 10MB, 7 copie compresse, permessi <code>0640</code>. Verificato con <code>logrotate -f</code> che il nuovo file log avesse i permessi corretti. Perché i log sbagliati non servono a nessuno.</p>
-<h3>Step 5: La cintura di sicurezza — deduplicazione su NAS</h3>
-<p>Ultimo strato: HBS 3 (Hybrid Backup Sync) sul QNAP. Un job che prende i dati dalla cartella di backup e li sposta su un volume separato, in formato <code>.qdff</code> con deduplicazione.</p>
-<p>Questo mi dà una "macchina del tempo": se cancello un file per sbaglio oggi, lo recupero dalla versione di ieri. Se un ransomware mi cripta tutto, ho uno snapshot pulito su un volume diverso.</p>
-<h3>Il risultato</h3>
-<p>Ogni riga di codice si replica sulla VM in <strong>1 secondo</strong>.<br>Ogni cambiamento finisce sul NAS entro <strong>60 secondi</strong>.<br>Esiste uno storico deduplicato per il recupero di versioni precedenti.<br>L'intero sistema si mantiene da solo.</p>
-<p>Tre regole che hanno guidato tutto il lavoro:</p>
-<ul><li><strong>Safety first</strong>: flock per evitare corse parallele, permessi verificati, chiavi ED25519</li><li><strong>Little often</strong>: sync ogni minuto, non ogni ora</li><li><strong>Double check</strong>: logrotate forzato per verificare i permessi, integrità del file <code>.qdff</code> da controllare mensilmente</li></ul>
-<p>Stack: WSL2, Docker, Syncthing, rsync, SSH (ED25519), crontab, logrotate, QNAP HBS 3. Niente cloud, niente costi ricorrenti.</p>
+    <p><strong><a href="./book-catalog-classificazione/">← Leggi la Parte I: Come ho classificato 46.878 libri</a></strong></p>
 <hr>
-<p>Qualcuno ha pipeline di backup simili per i propri workspace di sviluppo? Scrivimi nei commenti.</p>
+<p>Se la classificazione è andata bene, perché la migrazione no? Due pezzi dello stesso progetto, disegnati nello stesso giorno, con esito opposto.</p>
+<p>Mentre i quattro livelli di classificazione convergevano sull'80%, dovevo affrontare un'altra cosa: riorganizzare il filesystem. 43.337 file sparsi in tre vecchie location (<code>/Download/</code>, <code>/Mega.com/</code>, <code>/Deposito/</code>) dovevano migrare verso una nuova struttura in <code>/Bookz/Uncategorized/{topic}/</code>. Non un task acrobatico: avevo il DB aggiornato, i path calcolati, i nomi dei file risolti con counter per evitare collisioni. Sulla carta tutto in piedi.</p>
+<p>E poi è successa una cosa strana. 6.430 path aggiornati nel database. Zero file spostati nel filesystem. Niente. Il sistema procedeva come se tutto andasse bene. Log puliti. DB coerente. Ma il filesystem — il posto dove i file vivono davvero — era fermo, immobile, indifferente.</p>
+<p>Non era un problema di volume. Non era complessità. Era un'assunzione invisibile che aveva spaccato tutto. La storia di come l'ho scoperta — quattro ipotesi sbagliate prima di trovarla — insegna più di quando le cose vanno bene.</p>
+<h2>Il piano</h2>
+<p>Era un piano conservativo, fatto da uno che ha visto migliaia di task DevOps.</p>
+<p><strong>Phase 1</strong>: identificare i 3.541 file già dentro <code>/Bookz/</code> con una struttura legacy (directory tipo <code>BookzOld-2024/</code> o <code>Archive_backup/</code>). Questi file erano già "a casa" ma con indirizzo sbagliato. Missione: aggiornare il path nel database senza toccare il filesystem.</p>
+<p><strong>Phase 2</strong>: identificare i 43.337 file sparpagliati nelle tre vecchie location. Creare la nuova struttura di directory in <code>/Bookz/Uncategorized/{topic}/</code> prima di muovere un solo file. Poi <code>shutil.move()</code> da vecchia location a nuova, uno per uno. Infine aggiornare il database. Ordine critico: albero creato → file mossi → DB aggiornato. Non il contrario.</p>
+<p>Per evitare collisioni di nome, contatori. Se due file si chiamavano <code>philosophy-book.pdf</code> in location diverse, il secondo diventava <code>philosophy-book__2.pdf</code>, il terzo <code>philosophy-book__3.pdf</code>. Semplice, prevedibile, reversibile.</p>
+<p>Tutto disegnato, tutto testato in dry-run su un subset di 200 file. Funzionava.</p>
+<h3>Perché sembrava solido</h3>
+<p>Il database aveva un <code>UNIQUE constraint</code> sulla colonna <code>filesystem_path</code>: se qualcosa fosse andato male con i path duplicati, il DB avrebbe rifiutato.</p>
+<p>Il mount NFS verso la QNAP era stato remontato <code>rw</code> nella sessione precedente, e <code>df -h</code> confermava 2.1 TB liberi. Le permission QNAP erano aggiornate: la subnet <code>192.168.254.0/24</code> aveva accesso in lettura-scrittura su tutte le share.</p>
+<p>Logica di contatore implementata, testata, pronta. Tutta la logica in Python, commit su git, dry-run pulito.</p>
+<p>Sulla carta era il piano di qualcuno che sa cosa sta facendo.</p>
+<h3>L'esecuzione</h3>
+<p><strong>Phase 1</strong>: 3.536 INSERT/UPDATE committed (4 skip per encoding error). ✅<br><strong>Phase 2 planning</strong>: 2.889 file identificati nelle tre vecchie location. Directory target create in <code>/Bookz/Uncategorized/</code>. 29 topic directories. ✅<br><strong>Phase 2 database</strong>: 2.889 path transformation calcolati e committed in transazione singola. Vincolo UNIQUE verificato, nessun duplicato. ✅<br><strong>Phase 2 filesystem</strong>: 0/2.889 file mossi. ❌</p>
+<p>Il codice era questo:</p>
+<pre><code>for file_id, old_path, new_path in migration_list:
+    try:
+        shutil.move(old_path, new_path)
+        db.update_file_location(file_id, new_path)
+    except Exception as e:
+        logger.error(f"Move failed for {file_id}: {e}")</code></pre>
+<p>Niente eccezione sollevata. Niente errore nel log. Il ciclo termina normalmente. Quando vado a controllare il filesystem con <code>ls -la /Bookz/Uncategorized/</code> — niente. Zero file.</p>
+<p>Il database dice che sono lì. Il filesystem dice il contrario.</p>
+<p>Silent failure. Il nemico dei sistemi automatizzati. Non è un crash drammatico dove tutto si rompe e lo capisci subito. È peggio: il sistema ti crede, il log dice "tutto ok", il processo termina, e quando vai a verificare la realtà fisicamente non c'è niente. È come scrivere a <code>/dev/null</code>: il processo continua, la pipe rimane aperta, il segnale di output ritorna "scritto", ma i dati scompaiono nel vuoto.</p>
+<h2>Quattro ipotesi prima della verità</h2>
+<p>Quando scopri che 2.889 file dovevano essere mossi e 0 sono stati toccati, il primo istinto è cercare l'errore ovvio. Eccezione non catturata? Permessi? Mount read-only? Quattro piste, quattro vicoli ciechi prima della rivelazione.</p>
+<h3>Ipotesi 1: il mount è ancora read-only</h3>
+<p>Primo istinto: il remount verso la QNAP non ha avuto effetto. Magari <code>mount -o rw,remount /mnt/qnap-nfs</code> non è stato eseguito davvero, magari il kernel ancora crede al mount <code>ro</code>.</p>
+<p>Verifica:</p>
+<pre><code>$ df -h /mnt/qnap-nfs
+Filesystem                  Size  Used Avail Use% Mounted on
+192.168.254.150:/Bookz     10.0T  3.5T  6.5T  35% /mnt/qnap-nfs
+Type: nfs4
+Options: rw,noatime,vers=4.1,...</code></pre>
+<p>Mount <code>rw</code>. Test esplicito: <code>touch /mnt/qnap-nfs/test-write</code>. Il file si crea. <code>cat</code> funziona. Il kernel considera il mount leggibile-scrivibile.</p>
+<p>Non è il mount.</p>
+<h3>Ipotesi 2: il problema è nei percorsi</h3>
+<p>Secondo istinto: forse i file vecchi non vengono trovati. <code>os.path.exists()</code> dice che il file non esiste, e <code>shutil.move()</code> fallisce in silenzio.</p>
+<p>Verifica su tutte le 2.889 coppie:</p>
+<pre><code>from pathlib import Path
+for old in sample_paths:
+    assert Path(old).exists(), f"FAIL: {old}"
+    assert Path(old).is_file(), f"Not a file: {old}"</code></pre>
+<p>Tutti green. 2.889/2.889 file esistono, Python li vede, sono accessibili.</p>
+<p>Non è path resolution.</p>
+<h3>Ipotesi 3: il problema sono le ACL QNAP</h3>
+<p>Terzo istinto: forse la share NFS è restrittiva. La lettura passa, ma la write è bloccata dal server.</p>
+<p>Audit ACL QNAP da web UI (<code>192.168.254.150:8080</code> → Storage Manager → NFS Access Rights). La subnet <code>192.168.254.0/24</code> ha read, write ed execute tutti <code>allowed</code>.</p>
+<p>Per essere sicuro, SSH diretto sulla QNAP:</p>
+<pre><code>touch /Bookz/Uncategorized/test-qnap.txt
+echo "hello" &gt; /Bookz/Uncategorized/test-qnap.txt
+mv /Bookz/Uncategorized/test-qnap.txt /Bookz/Uncategorized/test-moved.txt
+ls -la /Bookz/Uncategorized/test-moved.txt</code></pre>
+<p>Tutto green. Da lato QNAP la write funziona perfettamente.</p>
+<p>Non sono le ACL QNAP (almeno non quelle).</p>
+<h3>Ipotesi 4: il kernel NFS sta cachando metadata</h3>
+<p>Quarto istinto, il più sofisticato. NFS può cachare metadata. Il kernel crede che il file sia lì, ma quando il client prova davvero a riscrivere — l'operazione atomica di move — il server NFS dice di no, e il client invece di sollevare un'eccezione ritorna in silenzio.</p>
+<p>Capita raramente, ma con NFS non è impossibile. Stale inode cache, ACL cachate, o un client <code>soft</code> che dopo N retry "rinuncia" senza notificare al processo.</p>
+<p>Umount e remount con opzioni esplicite:</p>
+<pre><code>sudo umount /mnt/qnap-nfs
+sudo mount -t nfs4 \
+  -o noatime,nocto,soft,timeo=10,retrans=2 \
+  192.168.254.150:/Bookz /mnt/qnap-nfs</code></pre>
+<p>Retry della migrazione: 0/2.889. Niente.</p>
+<p>Secondo tentativo, opzioni opposte:</p>
+<pre><code>sudo mount -t nfs4 \
+  -o atime,cto,hard,timeo=600,retrans=3 \
+  192.168.254.150:/Bookz /mnt/qnap-nfs</code></pre>
+<p>Retry: 0/2.889. Ancora niente.</p>
+<p>Non è cache NFS. È più profondo.</p>
+<h3>Il momento in cui ho capito</h3>
+<p>Mentre rifaccio la prova noto un dettaglio. Le directory create in <code>/Bookz/Uncategorized/</code> esistono (<code>ls -la</code> le mostra), ma quando provo a creare un file dentro <strong>da client Linux</strong> (non da QNAP SSH):</p>
+<pre><code>touch /mnt/qnap-nfs/Uncategorized/fantasy/test-client.txt</code></pre>
+<p>Il comando termina senza errore. Ma <code>ls -la</code> dopo: niente.</p>
+<p>Eccolo. Non è l'intero mount che è read-only. È un livello sotto. <code>/Bookz/</code> è RW (le directory si creano), ma <code>/Bookz/Uncategorized/</code> ha qualcosa di diverso.</p>
+<p>SSH sulla QNAP, controllo le ACL locali della cartella:</p>
+<pre><code>$ ls -lda /Bookz/Uncategorized/
+drwxr-xr-x  31 admin root  4096 May 17 12:15 /Bookz/Uncategorized
+$ stat /Bookz/Uncategorized/
+  Access: (0755)
+  Uid: ( 1000/admin)  Gid: (   32/root)
+  NFS Export: /Bookz (ro for guest, rw for authenticated)</code></pre>
+<p>La directory è 775 sul filesystem locale, ma l'export NFS di <code>/Bookz/</code> ha una politica differenziata: la root è RW per i client autenticati, <strong>ma le sottodirectory create dopo il mount ereditano un default conservativo che non lo è</strong>. La cartella è leggibile dal client (per quello <code>ls</code> funziona), ma la scrittura è bloccata al livello di protocollo NFS.</p>
+<p>Quello che succede a livello kernel è che il server NFS risponde con un <code>NFSERR_ACCES</code> (o simile), ma <code>shutil.move()</code> non cattura quel ritorno come eccezione. Il move "ritorna ok", il file rimane dov'era, e il processo continua.</p>
+<p>Perché il silent failure? Il kernel NFS, quando riceve un rifiuto dal server, ha due comportamenti:<br>1. Se il mount è <code>hard</code> (default storico), il client riprova all'infinito e il processo si blocca.<br>2. Se il mount è <code>soft</code>, dopo N retry il client rinuncia in silenzio e ritorna il controllo al processo, non sempre alzando un'eccezione.</p>
+<p>Nel mio caso il mount aveva opzioni miste ereditate, il client riprovava per qualche secondo, poi rinunciava, e <code>shutil.move()</code> — che internamente fa <code>os.rename()</code> o copia+delete — riceveva un ritorno apparentemente ok dal kernel.</p>
+<p>L'assunzione invisibile che ha rotto tutto: <em>"se il mount point è RW, allora posso scrivere ovunque dentro"</em>. Era razionale. Era logica. Era falsa.</p>
+<p>Su NFS — soprattutto su appliance tipo QNAP — il mount point è RW per la root, ma le sottodirectory hanno regole proprie, ereditate da ACL server-side che il client non vede direttamente. Il filesystem non è una cosa. Sono strati, policy ereditate, assunzioni nascoste che vivono nel server e che il client scopre solo quando tenta l'operazione proibita.</p>
+<h2>Il contrasto con la classificazione</h2>
+<p>Ricordi i quattro livelli della Parte I? Perché quel sistema convergeva pulito mentre la migrazione falliva in silenzio? Due pezzi disegnati lo stesso giorno, dalla stessa testa. Esito opposto.</p>
+<p>La differenza non è fortuna. È una scelta architetturale, fatta o non fatta.</p>
+<p><strong>La classificazione era disegnata assumendo il fallimento.</strong> Ogni livello aveva una metrica spettro (confidence 0-1, non sì/no). Ogni fallimento di un livello attivava il successivo. Ogni decisione era loggata con timestamp, confidence, livello scelto. Un contatore real-time mostrava in qualunque istante quanti file erano stati processati e a che livello. Se qualcosa fosse andato male, i numeri l'avrebbero tradito subito.</p>
+<p><strong>La migrazione era disegnata assumendo il successo.</strong> Move riesce o no, niente spettro. Nessun fallback (se <code>shutil.move()</code> fallisce, niente piano B). Nessun feedback (nessuno verificava che il file fosse davvero nella nuova location). Nessun monitoraggio mid-flight (il processo diceva "ho mosso 2.889 file" e il database ci credeva).</p>
+<p>Quello che manca alla migrazione è una sola cosa nel loop:</p>
+<pre><code>shutil.move(old_path, new_path)
+if not Path(new_path).exists() or Path(old_path).exists():
+    raise FileNotFoundError(f"Move claimed success but file not found / still at origin")
+db.update_file_location(file_id, new_path)</code></pre>
+<p>Tre righe. Quelle tre righe avrebbero rotto il ciclo al primo fallimento, mostrato l'errore reale, e mi avrebbero fatto investigare in 5 minuti invece che in 4 ore.</p>
+<p>La classificazione presidiava i boundary <strong>logici</strong>: tra un livello e il prossimo, tra confidence e fallback, tra expectation e reality. La migrazione non presidiava i boundary <strong>infrastrutturali</strong>: tra il processo Python e il kernel, tra il codice e le policy NFS del server, tra un mount "rw" e una sottodirectory effettivamente read-only.</p>
+<h2>Tre cose che porto a casa</h2>
+<p><strong>L'automazione senza feedback loop è ottimista, e l'ottimismo è fragile.</strong></p>
+<p>Ogni decisione automatizzata deve avere una verifica post-azione. Non è paranoia, è onestà verso l'infrastruttura. Il prossimo tentativo di migrazione avrà la verifica dopo ogni move. Non sarà più lento in modo apprezzabile. Sarà più vero.</p>
+<p><strong>I boundary infrastrutturali non sono boundary logici.</strong></p>
+<p>Un mount NFS <code>rw</code> a livello kernel non è la stessa cosa di "scrivo sempre con successo". Un database aggiornato non è la stessa cosa di "il filesystem è in sync". Una ACL QNAP che dice "rw" non è la stessa cosa di "anche le sottodirectory ereditano quei permessi".</p>
+<p>La tolleranza al fallimento deve coprire il <strong>gap tra rappresentazione logica (DB) e realtà fisica (filesystem)</strong>. Non sono la stessa cosa. Non lo sono mai stati. Architetturalmente: dopo il move di un batch, verifica due cose. DB: i path sono aggiornati? FS: i file esistono dove il DB dice? Se divergono, rollback del batch.</p>
+<p>Fallback strategy se NFS fa storie: SSH diretto su QNAP, bypassare il client NFS, muovere via shell del server. Non è elegante, ma è resiliente.</p>
+<p><strong>Assumere il fallimento dal design è diverso da scoprirlo in produzione.</strong></p>
+<p>Costruire prima, testare dopo = fragile. Il subset di 200 file in dry-run non ha mai toccato i confini delle ACL QNAP, perché quei file finivano in directory già esistenti con permessi diversi. Il test è passato. La produzione ha fallito.</p>
+<p>Il prossimo tentativo di migrazione sarà disegnato come la classificazione. Piano A: <code>shutil.move()</code> con verifica post. Piano B se il piano A fallisce: SSH su QNAP, move locale. Piano C se il piano B fallisce: coda di retry asincrona. Piano D se anche la coda fallisce: i path logici nel DB rimangono consistenti e posso indagare manualmente.</p>
+<h2>Stato attuale e prossimi step</h2>
+<p>Il database è in stato parziale: 6.430 path aggiornati, filesystem invariato. È recuperabile. Niente data loss, perché i file originali sono ancora al loro posto. Il rollback è banale: <code>UPDATE books SET filesystem_path = original_path</code>.</p>
+<p>Prossima sessione: debug profondo della NFS export policy della QNAP, remount conservativo, e se serve fallback via SSH diretto sulla QNAP per bypassare NFS. Non è finita: book-catalog arriverà a <code>/Bookz/{topic}/</code>. Ma questa volta con i feedback loop architettati da zero, con il piano di fallback deciso prima e non improvvisato dopo.</p>
+<hr>
+<h2>Appendice tecnica</h2>
+<h3>Schema database essenziale</h3>
+<pre><code>books
+├─ id (INTEGER PRIMARY KEY)
+├─ path (TEXT UNIQUE NOT NULL)   -- percorso filesystem
+├─ filename (TEXT)
+├─ title (TEXT)
+├─ topics (TEXT JSON)            -- categorie calcolate in Parte I
+├─ sha256 (TEXT)                 -- impronta per duplicati
+├─ quality_score (REAL)
+├─ scanned_at (TIMESTAMP)
+└─ kb_status (TEXT)              -- stato pipeline knowledge-base
+
+Vincoli:
+- UNIQUE(path)
+- WAL mode (Write-Ahead Logging) per concurrency</code></pre>
+<p>Lo schema è il contratto tra il processo Python e il filesystem. Quando <code>path</code> è aggiornato, il processo assume che il file viva al nuovo indirizzo. Nel mio fallimento il processo ha scritto la path, il filesystem ha detto "no" in silenzio, e il contratto è stato rotto.</p>
+<h3>Architettura dei quattro livelli di classificazione (per riferimento)</h3>
+<pre><code>INPUT: file.pdf
+│
+├─ Livello 1: LLM via proxy HTTP
+│  POST /api/classify {pdf_path, model: "chat-quality"}
+│  Response: {category, confidence: 0.0-1.0}
+│  confidence &gt;= 0.5 ? return : fallback livello 2
+│
+├─ Livello 2: PyMuPDF text extraction (prime 15 pagine)
+│  text = PDF(path).get_text(page 0-14)
+│  pattern match su keyword di genere
+│  match ? return : fallback livello 3
+│
+├─ Livello 3: scikit-learn TF-IDF + LogisticRegression
+│  trained su 28.578 file etichettati manualmente
+│  confidence &gt;= 0.4 ? return : fallback livello 4
+│
+└─ Livello 4: Ollama qwen2.5:3b in locale
+   POST http://ollama:11434/api/generate
+   {prompt: "Categorize this text: [extracted_text]"}
+   return sempre (ultimo livello)</code></pre>
+<p>Ogni livello sa che il successivo esiste. Ogni fallimento è previsto, presidiato, alimenta una transizione. Niente è "assumed to work".</p>
+<p>La migrazione non aveva questa struttura. Un solo tentativo, niente fallback, niente verifica.</p>
+<h3>Timeline della migrazione</h3>
+<pre><code>2026-05-17
+
+08:00  Analisi: quale frazione di 46.878 libri risiede in non-native location?
+       43.337 file in /Download/, /Mega.com/, /Deposito/
+
+09:30  Decisione: reorganize within /Bookz/, no external delete
+       Phase 1 scoped: 3.541 file vecchi in /Bookz/*/old/
+       Phase 2 scoped: 2.889 file dalle tre location esterne
+
+11:00  Phase 1 start
+       ✅ 3.541 file identificati
+       ✅ 3.536 DB updates committed (4 skip per encoding error)
+       ✅ Filesystem untouched (as intended)
+
+12:15  Phase 2 planning
+       ✅ 2.889 file identificati
+       ✅ 29 directory create in /Bookz/Uncategorized/
+
+14:00  Phase 2 database
+       ✅ 2.889 path committed in single transaction
+       ✅ UNIQUE constraint OK
+       ⚠️ DB ora desincronizzato (path avanti rispetto al filesystem)
+
+14:15  Phase 2 filesystem
+       ❌ 0/2.889 file moves executed
+       ❌ shutil.move() reports ok, kernel says no in silenzio
+
+15:00  Detection: filesystem verification mostra divergenza
+       DB: 2.889 path aggiornate
+       FS: 0 file mossi
+
+15:15  Debug ipotesi 1: mount read-only → no
+17:00  Debug ipotesi 2-4: path, ACL, NFS cache → no
+
+17:30  Root cause: QNAP subdirectory NFS export policy
+       /Bookz/ rw per autenticati
+       /Bookz/Uncategorized/ inherited ro per nuove directory
+       NFS protocol drops writes in silenzio, shutil.move() non raise
+
+17:45  Interruzione: deep dive QNAP ACL + remount strategy rimandata
+       Stato dati: safe (rollback triviale)</code></pre>
+<h3>Tolleranza vs fragilità — il contrasto visivo</h3>
+<pre><code>CLASSIFICAZIONE                           MIGRAZIONE
+─────────────────────────────────────────────────────────────────
+Feedback loop      interno, real-time     assente
+Fallback           4 livelli, cascata     nessuno
+Verifica post      confidence, pattern    nessuna
+Rollback           ogni livello salva     difficile (DB ≠ FS)
+Esito              80% hit rate           0/2.889 file mossi
+                   0% divergenza          100% divergenza
+                   resilienza             silent failure</code></pre>
+<p>La differenza non è scala. Non è complessità. È una scelta architetturale: assumere il fallimento dal design, oppure scoprirlo in produzione.</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -429,7 +601,7 @@ article > footer {
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/claude-workspace-backup-pipeline/&title=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/book-catalog-migrazione/&title=Perché la migrazione del filesystem è fallita (e cosa insegna)" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -438,7 +610,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step&body=Come ho blindato il mio workspace Claude Code — pipeline di backup in 5 step%0A%0Ahttps://lucasacchi.net/blog/claude-workspace-backup-pipeline/" 
+           href="mailto:?subject=Perché la migrazione del filesystem è fallita (e cosa insegna)&body=Perché la migrazione del filesystem è fallita (e cosa insegna)%0A%0Ahttps://lucasacchi.net/blog/book-catalog-migrazione/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>

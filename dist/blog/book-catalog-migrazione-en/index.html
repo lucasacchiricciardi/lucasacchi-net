@@ -10,29 +10,29 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta name="description" content="Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli."/>
+<meta name="description" content="6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs."/>
 <meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Shortcutter — 5 lezioni da una giornata di coding con LLM locali"/>
-<meta property="og:description" content="Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli."/>
+<meta property="og:title" content="Why the filesystem migration failed (and what it teaches)"/>
+<meta property="og:description" content="6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs."/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="https://lucasacchi.net/blog/shortcutter-5-lessons/og.png"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/book-catalog-migrazione-en/og.png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:type" content="image/png"/>
-<meta property="og:url" content="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<meta property="article:published_time" content="2026-05-02"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
+<meta property="article:published_time" content="2026-05-18"/>
 <meta property="article:author" content="Luca Sacchi"/>
 <meta property="article:section" content="Technology"/>
-<meta property="article:tag" content="ai"/>
-<meta property="article:tag" content="llm"/>
-<meta property="article:tag" content="whisper"/>
-<meta property="article:tag" content="self-hosted"/>
-<meta property="article:tag" content="python"/>
-<meta property="article:tag" content="open-source"/>
-<link rel="canonical" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
-<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/shortcutter-5-lessons-en/"/>
-<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/shortcutter-5-lessons/"/>
+<meta property="article:tag" content="book-catalog"/>
+<meta property="article:tag" content="automation"/>
+<meta property="article:tag" content="debugging"/>
+<meta property="article:tag" content="nfs"/>
+<meta property="article:tag" content="qnap"/>
+<meta property="article:tag" content="infrastructure"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/book-catalog-migrazione-en/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/book-catalog-migrazione-en/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/book-catalog-migrazione/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 <link rel="manifest" href="/manifest.json"/>
@@ -41,13 +41,13 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
 <meta name="apple-mobile-web-app-title" content="TLF"/>
-<title>Shortcutter — 5 lezioni da una giornata di coding con LLM locali — LucaSacchi.net</title>
+<title>Why the filesystem migration failed (and what it teaches) — LucaSacchi.net</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Shortcutter — 5 lezioni da una giornata di coding con LLM locali",
-  "datePublished": "2026-05-02",
+  "headline": "Why the filesystem migration failed (and what it teaches)",
+  "datePublished": "2026-05-18",
   "author": {
     "@type": "Person",
     "name": "Luca Sacchi",
@@ -61,10 +61,10 @@ _iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferences
       "url": "https://lucasacchi.net/favicon.svg"
     }
   },
-  "description": "Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli.",
+  "description": "6,430 paths updated in the database, zero files moved on the filesystem. Silent failure over NFS to a QNAP. The story of a debugging session through four hypotheses and a surprise hidden in the share's ACLs.",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://lucasacchi.net/blog/shortcutter-5-lessons/"
+    "@id": "https://lucasacchi.net/blog/book-catalog-migrazione/"
   }
 }
 </script>
@@ -352,49 +352,242 @@ article > footer {
     <li><span class="text-outline-variant">/</span></li>
     <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
     <li><span class="text-outline-variant">/</span></li>
-    <li class="text-on-surface">shortcutter-5-lessons</li>
+    <li class="text-on-surface">book-catalog-migrazione</li>
   </ol>
 </nav>
 
 <article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
   
   <header class="mb-8 pb-8 border-b border-outline-variant/20">
-    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Shortcutter — 5 lezioni da una giornata di coding con LLM locali</h1>
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Why the filesystem migration failed (and what it teaches)</h1>
     
     <div class="flex flex-wrap items-center gap-4 text-sm">
-      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-02">2026-05-02</time>
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-18">2026-05-18</time>
       
       <div class="flex flex-wrap gap-2">
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ai</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">whisper</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">self-hosted</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">python</span>
-        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">open-source</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">book-catalog</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">automation</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">debugging</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">nfs</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">qnap</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">infrastructure</span>
       </div>
     </div>
   </header>
   
   <div class="article-content">
-    <p>Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.</p>
-<p>Problema: i link non ci sono. Non nella description del video, non nella bio del canale. Solo a voce, nello short. E quando guardi 30 video al mese, perdi metà delle informazioni.</p>
-<p>Così stamattina mi sono detto: costruisco una pipeline che li scarica, li analizza con AI locale e mi tira fuori un digest giornaliero via email. Tutto self-hosted, zero API esterne, zero costi ricorrenti.</p>
-<p>Credevo fosse mezza giornata di lavoro. Stasera ho 3 script Python, 9 versioni iterative, 4 bug critici risolti e una sola certezza: i modelli piccoli ti tradiscono in modi creativi.</p>
-<p>5 cose che ho imparato.</p>
-<h3>1. Quando un LLM da 4B parametri non trova un repo GitHub nella description, lo inventa</h3>
-<p>Sempre con <code>anthropics/</code> davanti. La soluzione: HEAD request. Il repo esiste? No? Cancello l'URL. Controlla prima, fidati dopo.</p>
-<h3>2. Il fixer LLM che corregge 19 errori di Whisper su un transcript lungo diventa peggio del raw sotto i 1.500 caratteri</h3>
-<p>"Troppo prompt per troppo poco lavoro." Lezione: saltalo. Se il testo è troppo corto per il modello, il fix non aggiunge valore: aggiunge rumore.</p>
-<h3>3. Un sanity check di 5 righe ha salvato la giornata</h3>
-<p>Il LLM ha provato a sostituire il transcript con la description del video. Un "se la differenza è sopra il 30%, torna al raw" ha bloccato il disastro. Sembra banale. È oro.</p>
-<h3>4. A volte non è la pipeline a sbagliare: è il creator che ha caricato un video con l'audio mescolato</h3>
-<p>Caso reale trovato oggi. La cosa più onesta che il mio sistema fa è dire "non lo so" quando i dati sono incoerenti.</p>
-<h3>5. Le 3 regole che ripeto ai miei studenti hanno fatto più differenza di qualsiasi prompt o modello</h3>
-<p><strong>Safety first</strong> — sanity check, validazioni, fallback.<br><strong>Little often</strong> — 9 piccole versioni invece di un big-bang.<br><strong>Double check</strong> — un'occhiata attenta ha trovato un bug Python (variable shadowing) che riduceva un transcript da 3.400 caratteri a 3. "ola". Tre caratteri. Senza che me ne accorgessi.</p>
+    <p><strong><a href="./book-catalog-classificazione-en/">← Read Part I: How I classified 46,878 books</a></strong></p>
 <hr>
-<p>La cosa che mi porto a casa: quando costruisci un sistema basato su LLM non puoi sperare che il modello si comporti bene. Devi assumere che farà casino e progettare la resilienza intorno a quello.</p>
-<p>La pipeline robusta è quella che intercetta i suoi stessi errori prima che li vedano i tuoi utenti.</p>
-<p>Stack: Python, Whisper, Ollama (qwen 2.5 4B + llava 7B), n8n, tutto su iGPU AMD 780M con ROCm. Niente cloud, niente API.</p>
+<p>If classification went well, why didn't migration? Two pieces of the same project, designed on the same day, with opposite outcomes.</p>
+<p>While the four classification levels were converging on 80%, I had another thing to deal with: reorganizing the filesystem. 43,337 files scattered across three old locations (<code>/Download/</code>, <code>/Mega.com/</code>, <code>/Deposito/</code>) had to migrate into a new structure under <code>/Bookz/Uncategorized/{topic}/</code>. Not an acrobatic task: I had the DB updated, the paths computed, filename collisions resolved with counters. On paper it all stood up.</p>
+<p>Then something strange happened. 6,430 paths updated in the database. Zero files moved on the filesystem. Nothing. The system was carrying on as if everything was fine. Clean logs. Coherent DB. But the filesystem — the place where files actually live — was still, motionless, indifferent.</p>
+<p>It wasn't a volume problem. It wasn't complexity. It was an invisible assumption that had broken everything. The story of how I found it — four wrong hypotheses before the right one — teaches more than the cases where things go well.</p>
+<h2>The plan</h2>
+<p>It was a conservative plan, the kind made by someone who has shipped thousands of DevOps tasks.</p>
+<p><strong>Phase 1</strong>: identify the 3,541 files already inside <code>/Bookz/</code> with a legacy structure (directories like <code>BookzOld-2024/</code> or <code>Archive_backup/</code>). These files were already "home" but at the wrong address. Mission: update the path in the database without touching the filesystem.</p>
+<p><strong>Phase 2</strong>: identify the 43,337 files scattered across the three old locations. Create the new directory structure under <code>/Bookz/Uncategorized/{topic}/</code> before moving a single file. Then <code>shutil.move()</code> from old location to new, one by one. Then update the database. Critical ordering: tree created → files moved → DB updated. Not the other way around.</p>
+<p>To avoid name collisions, counters. If two files were both called <code>philosophy-book.pdf</code> in different locations, the second became <code>philosophy-book__2.pdf</code>, the third <code>philosophy-book__3.pdf</code>. Simple, predictable, reversible.</p>
+<p>All designed, all tested in dry-run on a 200-file subset. It worked.</p>
+<h3>Why it looked solid</h3>
+<p>The database had a <code>UNIQUE constraint</code> on the <code>filesystem_path</code> column: if something went wrong with duplicate paths, the DB would refuse.</p>
+<p>The NFS mount toward the QNAP had been remounted <code>rw</code> in the previous session, and <code>df -h</code> confirmed 2.1 TB free. The QNAP permissions were updated: the <code>192.168.254.0/24</code> subnet had read-write access on every share.</p>
+<p>Counter logic implemented, tested, ready. All the logic in Python, committed to git, clean dry-run.</p>
+<p>On paper it was the plan of someone who knows what they're doing.</p>
+<h3>The execution</h3>
+<p><strong>Phase 1</strong>: 3,536 INSERT/UPDATE committed (4 skipped for encoding errors). ✅<br><strong>Phase 2 planning</strong>: 2,889 files identified in the three old locations. Target directories created under <code>/Bookz/Uncategorized/</code>. 29 topic directories. ✅<br><strong>Phase 2 database</strong>: 2,889 path transformations computed and committed in a single transaction. UNIQUE constraint verified, no duplicates. ✅<br><strong>Phase 2 filesystem</strong>: 0/2,889 files moved. ❌</p>
+<p>The code was this:</p>
+<pre><code>for file_id, old_path, new_path in migration_list:
+    try:
+        shutil.move(old_path, new_path)
+        db.update_file_location(file_id, new_path)
+    except Exception as e:
+        logger.error(f"Move failed for {file_id}: {e}")</code></pre>
+<p>No exception raised. No error in the log. The loop terminated normally. When I went to check the filesystem with <code>ls -la /Bookz/Uncategorized/</code> — nothing. Zero files.</p>
+<p>The database says they're there. The filesystem says the opposite.</p>
+<p>Silent failure. The enemy of automated systems. It isn't a dramatic crash where everything breaks and you know immediately. It's worse: the system trusts you, the log says "all ok", the process terminates, and when you go to check reality physically nothing is there. It's like writing to <code>/dev/null</code>: the process continues, the pipe stays open, the output signal returns "written", but the data vanishes into the void.</p>
+<h2>Four hypotheses before the truth</h2>
+<p>When you discover that 2,889 files were supposed to move and 0 were touched, the first instinct is to look for the obvious error. Uncaught exception? Permissions? Read-only mount? Four leads, four dead ends before the revelation.</p>
+<h3>Hypothesis 1: the mount is still read-only</h3>
+<p>First instinct: the remount toward the QNAP didn't take effect. Maybe <code>mount -o rw,remount /mnt/qnap-nfs</code> didn't actually run, maybe the kernel still thinks the mount is <code>ro</code>.</p>
+<p>Check:</p>
+<pre><code>$ df -h /mnt/qnap-nfs
+Filesystem                  Size  Used Avail Use% Mounted on
+192.168.254.150:/Bookz     10.0T  3.5T  6.5T  35% /mnt/qnap-nfs
+Type: nfs4
+Options: rw,noatime,vers=4.1,...</code></pre>
+<p>Mount is <code>rw</code>. Explicit test: <code>touch /mnt/qnap-nfs/test-write</code>. The file gets created. <code>cat</code> works. The kernel considers the mount readable-writable.</p>
+<p>It's not the mount.</p>
+<h3>Hypothesis 2: it's the paths</h3>
+<p>Second instinct: maybe the old files aren't found. <code>os.path.exists()</code> says the file doesn't exist, and <code>shutil.move()</code> fails silently.</p>
+<p>Check on all 2,889 pairs:</p>
+<pre><code>from pathlib import Path
+for old in sample_paths:
+    assert Path(old).exists(), f"FAIL: {old}"
+    assert Path(old).is_file(), f"Not a file: {old}"</code></pre>
+<p>All green. 2,889/2,889 files exist, Python sees them, they're accessible.</p>
+<p>It's not path resolution.</p>
+<h3>Hypothesis 3: it's the QNAP ACLs</h3>
+<p>Third instinct: maybe the NFS share is restrictive. Reads pass, but writes are blocked at the server.</p>
+<p>QNAP ACL audit via web UI (<code>192.168.254.150:8080</code> → Storage Manager → NFS Access Rights). The <code>192.168.254.0/24</code> subnet has read, write and execute all <code>allowed</code>.</p>
+<p>To be safe, SSH directly into the QNAP:</p>
+<pre><code>touch /Bookz/Uncategorized/test-qnap.txt
+echo "hello" &gt; /Bookz/Uncategorized/test-qnap.txt
+mv /Bookz/Uncategorized/test-qnap.txt /Bookz/Uncategorized/test-moved.txt
+ls -la /Bookz/Uncategorized/test-moved.txt</code></pre>
+<p>All green. From the QNAP side writes work perfectly.</p>
+<p>It's not the QNAP ACLs (at least not those).</p>
+<h3>Hypothesis 4: the NFS kernel is caching metadata</h3>
+<p>Fourth instinct, the most sophisticated one. NFS can cache metadata. The kernel believes the file is there, but when the client actually tries to write — the atomic move — the NFS server says no, and the client instead of raising an exception returns silently.</p>
+<p>It happens rarely, but with NFS it isn't impossible. Stale inode cache, cached ACLs, or a <code>soft</code> client that after N retries "gives up" without notifying the process.</p>
+<p>Unmount and remount with explicit options:</p>
+<pre><code>sudo umount /mnt/qnap-nfs
+sudo mount -t nfs4 \
+  -o noatime,nocto,soft,timeo=10,retrans=2 \
+  192.168.254.150:/Bookz /mnt/qnap-nfs</code></pre>
+<p>Retry the migration: 0/2,889. Nothing.</p>
+<p>Second attempt, opposite options:</p>
+<pre><code>sudo mount -t nfs4 \
+  -o atime,cto,hard,timeo=600,retrans=3 \
+  192.168.254.150:/Bookz /mnt/qnap-nfs</code></pre>
+<p>Retry: 0/2,889. Still nothing.</p>
+<p>It's not NFS cache. It's deeper.</p>
+<h3>The moment I got it</h3>
+<p>While running the test again I notice a detail. The directories created under <code>/Bookz/Uncategorized/</code> exist (<code>ls -la</code> shows them), but when I try to create a file inside <strong>from the Linux client</strong> (not from QNAP SSH):</p>
+<pre><code>touch /mnt/qnap-nfs/Uncategorized/fantasy/test-client.txt</code></pre>
+<p>The command ends without error. But <code>ls -la</code> after: nothing.</p>
+<p>There it is. It isn't the whole mount that's read-only. It's one level below. <code>/Bookz/</code> is RW (directories get created), but <code>/Bookz/Uncategorized/</code> has something different.</p>
+<p>SSH into the QNAP, I check the local ACLs of the folder:</p>
+<pre><code>$ ls -lda /Bookz/Uncategorized/
+drwxr-xr-x  31 admin root  4096 May 17 12:15 /Bookz/Uncategorized
+$ stat /Bookz/Uncategorized/
+  Access: (0755)
+  Uid: ( 1000/admin)  Gid: (   32/root)
+  NFS Export: /Bookz (ro for guest, rw for authenticated)</code></pre>
+<p>The directory is 775 on the local filesystem, but the <code>/Bookz/</code> NFS export has a differentiated policy: the root is RW for authenticated clients, <strong>but subdirectories created after mount inherit a conservative default that isn't</strong>. The folder is readable from the client (that's why <code>ls</code> works), but writes are blocked at the NFS protocol level.</p>
+<p>At the kernel level the NFS server replies with <code>NFSERR_ACCES</code> (or similar), but <code>shutil.move()</code> doesn't catch that return as an exception. The move "returns ok", the file stays where it was, the process continues.</p>
+<p>Why the silent failure? The NFS kernel, when it receives a rejection from the server, has two behaviors:<br>1. If the mount is <code>hard</code> (the historical default), the client retries forever and the process blocks.<br>2. If the mount is <code>soft</code>, after N retries the client gives up silently and returns control to the process, not always raising an exception.</p>
+<p>In my case the mount had inherited mixed options, the client retried for a few seconds, then gave up, and <code>shutil.move()</code> — which internally does <code>os.rename()</code> or copy+delete — received an apparently-ok return from the kernel.</p>
+<p>The invisible assumption that broke everything: <em>"if the mount point is RW, then I can write anywhere inside it"</em>. Rational. Logical. False.</p>
+<p>On NFS — especially on appliances like QNAP — the mount point is RW for the root, but subdirectories have their own rules, inherited from server-side ACLs the client doesn't see directly. The filesystem isn't one thing. It's layers, inherited policies, hidden assumptions that live on the server and the client discovers them only when it tries the forbidden operation.</p>
+<h2>The contrast with classification</h2>
+<p>Remember the four levels from Part I? Why did that system converge cleanly while the migration failed silently? Two pieces designed the same day, from the same head. Opposite outcomes.</p>
+<p>The difference isn't luck. It's an architectural choice, made or not made.</p>
+<p><strong>Classification was designed assuming failure.</strong> Each level had a spectrum metric (confidence 0-1, not yes/no). Each level's failure activated the next. Each decision was logged with timestamp, confidence, chosen level. A real-time counter showed at any moment how many files had been processed and at which level. If something had gone wrong, the numbers would have betrayed it immediately.</p>
+<p><strong>The migration was designed assuming success.</strong> Move either works or it doesn't, no spectrum. No fallback (if <code>shutil.move()</code> fails, no Plan B). No feedback (nobody verified the file was actually in the new location). No mid-flight monitoring (the process said "I moved 2,889 files" and the database believed it).</p>
+<p>What's missing from the migration is one thing inside the loop:</p>
+<pre><code>shutil.move(old_path, new_path)
+if not Path(new_path).exists() or Path(old_path).exists():
+    raise FileNotFoundError(f"Move claimed success but file not found / still at origin")
+db.update_file_location(file_id, new_path)</code></pre>
+<p>Three lines. Those three lines would have broken the loop at the first failure, shown the real error, and let me investigate in 5 minutes instead of 4 hours.</p>
+<p>Classification guarded the <strong>logical</strong> boundaries: between one level and the next, between confidence and fallback, between expectation and reality. The migration didn't guard the <strong>infrastructural</strong> boundaries: between the Python process and the kernel, between the code and the server's NFS policies, between an "rw" mount and a subdirectory that's effectively read-only.</p>
+<h2>Three things I take home</h2>
+<p><strong>Automation without feedback loops is optimistic, and optimism is fragile.</strong></p>
+<p>Every automated decision needs a post-action check. It isn't paranoia, it's honesty toward the infrastructure. The next migration attempt will have the check after every move. It won't be noticeably slower. It will be truer.</p>
+<p><strong>Infrastructural boundaries aren't logical boundaries.</strong></p>
+<p>An <code>rw</code> NFS mount at the kernel level isn't the same as "I always write successfully". An updated database isn't the same as "the filesystem is in sync". A QNAP ACL saying "rw" isn't the same as "subdirectories inherit those permissions".</p>
+<p>Failure tolerance must cover the <strong>gap between logical representation (DB) and physical reality (filesystem)</strong>. They aren't the same thing. They never were. Architecturally: after the move of a batch, verify two things. DB: are the paths updated? FS: are the files where the DB says? If they diverge, batch rollback.</p>
+<p>Fallback strategy if NFS misbehaves: SSH directly into the QNAP, bypass the NFS client, move via the server's shell. Not elegant, but resilient.</p>
+<p><strong>Assuming failure from the design is different from discovering it in production.</strong></p>
+<p>Build first, test later = fragile. The 200-file dry-run subset never touched the QNAP ACL boundaries, because those files ended up in already-existing directories with different permissions. The test passed. Production failed.</p>
+<p>The next migration attempt will be designed like classification. Plan A: <code>shutil.move()</code> with post-verification. Plan B if Plan A fails: SSH into QNAP, local move. Plan C if Plan B fails: async retry queue. Plan D if even the queue fails: logical paths in the DB remain consistent and I can investigate manually.</p>
+<h2>Current state and next steps</h2>
+<p>The database is in a partial state: 6,430 paths updated, filesystem unchanged. It's recoverable. No data loss, because the original files are still in their original places. Rollback is trivial: <code>UPDATE books SET filesystem_path = original_path</code>.</p>
+<p>Next session: deep dive into the QNAP NFS export policy, conservative remount, and if needed fallback via SSH directly on the QNAP to bypass NFS. It isn't over: book-catalog will reach <code>/Bookz/{topic}/</code>. But this time with feedback loops architected from the start, with a fallback plan decided before, not improvised after.</p>
+<hr>
+<h2>Technical appendix</h2>
+<h3>Essential database schema</h3>
+<pre><code>books
+├─ id (INTEGER PRIMARY KEY)
+├─ path (TEXT UNIQUE NOT NULL)   -- filesystem path
+├─ filename (TEXT)
+├─ title (TEXT)
+├─ topics (TEXT JSON)            -- categories computed in Part I
+├─ sha256 (TEXT)                 -- fingerprint for duplicates
+├─ quality_score (REAL)
+├─ scanned_at (TIMESTAMP)
+└─ kb_status (TEXT)              -- knowledge-base pipeline status
+
+Constraints:
+- UNIQUE(path)
+- WAL mode (Write-Ahead Logging) for concurrency</code></pre>
+<p>The schema is the contract between the Python process and the filesystem. When <code>path</code> is updated, the process assumes the file lives at the new address. In my failure the process wrote the path, the filesystem said "no" silently, and the contract broke.</p>
+<h3>Architecture of the four classification levels (for reference)</h3>
+<pre><code>INPUT: file.pdf
+│
+├─ Level 1: LLM via HTTP proxy
+│  POST /api/classify {pdf_path, model: "chat-quality"}
+│  Response: {category, confidence: 0.0-1.0}
+│  confidence &gt;= 0.5 ? return : fallback level 2
+│
+├─ Level 2: PyMuPDF text extraction (first 15 pages)
+│  text = PDF(path).get_text(page 0-14)
+│  pattern match on genre keywords
+│  match ? return : fallback level 3
+│
+├─ Level 3: scikit-learn TF-IDF + LogisticRegression
+│  trained on 28,578 manually labeled files
+│  confidence &gt;= 0.4 ? return : fallback level 4
+│
+└─ Level 4: Ollama qwen2.5:3b locally
+   POST http://ollama:11434/api/generate
+   {prompt: "Categorize this text: [extracted_text]"}
+   always returns (last level)</code></pre>
+<p>Each level knows the next one exists. Each failure is anticipated, guarded, feeds a transition. Nothing is "assumed to work".</p>
+<p>The migration didn't have this structure. One attempt, no fallback, no verification.</p>
+<h3>Migration timeline</h3>
+<pre><code>2026-05-17
+
+08:00  Analysis: what fraction of 46,878 books lives in non-native locations?
+       43,337 files in /Download/, /Mega.com/, /Deposito/
+
+09:30  Decision: reorganize within /Bookz/, no external delete
+       Phase 1 scoped: 3,541 old files under /Bookz/*/old/
+       Phase 2 scoped: 2,889 files from the three external locations
+
+11:00  Phase 1 start
+       ✅ 3,541 files identified
+       ✅ 3,536 DB updates committed (4 skipped for encoding errors)
+       ✅ Filesystem untouched (as intended)
+
+12:15  Phase 2 planning
+       ✅ 2,889 files identified
+       ✅ 29 directories created under /Bookz/Uncategorized/
+
+14:00  Phase 2 database
+       ✅ 2,889 paths committed in a single transaction
+       ✅ UNIQUE constraint OK
+       ⚠️ DB now desynchronized (paths ahead of the filesystem)
+
+14:15  Phase 2 filesystem
+       ❌ 0/2,889 file moves executed
+       ❌ shutil.move() reports ok, kernel says no silently
+
+15:00  Detection: filesystem verification shows divergence
+       DB: 2,889 paths updated
+       FS: 0 files moved
+
+15:15  Debug hypothesis 1: read-only mount → no
+17:00  Debug hypotheses 2-4: paths, ACL, NFS cache → no
+
+17:30  Root cause: QNAP subdirectory NFS export policy
+       /Bookz/ rw for authenticated clients
+       /Bookz/Uncategorized/ inherited ro for new directories
+       NFS protocol drops writes silently, shutil.move() doesn't raise
+
+17:45  Interruption: deep dive QNAP ACL + remount strategy deferred
+       Data state: safe (trivial rollback)</code></pre>
+<h3>Tolerance vs fragility — the visual contrast</h3>
+<pre><code>CLASSIFICATION                            MIGRATION
+─────────────────────────────────────────────────────────────────
+Feedback loop      internal, real-time    absent
+Fallback           4 levels, cascade      none
+Post-verification  confidence, pattern    none
+Rollback           every level saves      hard (DB ≠ FS)
+Outcome            80% hit rate           0/2,889 files moved
+                   0% divergence          100% divergence
+                   resilience             silent failure</code></pre>
+<p>The difference isn't scale. It isn't complexity. It's an architectural choice: assume failure from the design, or discover it in production.</p>
   </div>
 
   <div class="article-footer-separator"></div>
@@ -403,12 +596,12 @@ article > footer {
     <div class="flex flex-wrap gap-4 items-center justify-between">
       <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
         <span class="material-symbols-outlined text-lg">arrow_back</span>
-        <span>Torna al Blog</span>
+        <span>Back to Blog</span>
       </a>
       
       <div class="flex gap-3">
         <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
-           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/shortcutter-5-lessons/&title=Shortcutter — 5 lezioni da una giornata di coding con LLM locali" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/book-catalog-migrazione-en/&title=Why the filesystem migration failed (and what it teaches)" 
            target="_blank" 
            rel="noopener noreferrer"
            title="Share on LinkedIn"
@@ -417,7 +610,7 @@ article > footer {
         </a>
         
         <a class="text-on-surface-variant hover:text-primary transition-colors" 
-           href="mailto:?subject=Shortcutter — 5 lezioni da una giornata di coding con LLM locali&body=Shortcutter — 5 lezioni da una giornata di coding con LLM locali%0A%0Ahttps://lucasacchi.net/blog/shortcutter-5-lessons/" 
+           href="mailto:?subject=Why the filesystem migration failed (and what it teaches)&body=Why the filesystem migration failed (and what it teaches)%0A%0Ahttps://lucasacchi.net/blog/book-catalog-migrazione-en/" 
            title="Share via email"
            aria-label="Share via email">
           <span class="material-symbols-outlined">mail</span>
