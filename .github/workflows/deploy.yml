@@ -67,7 +67,9 @@ jobs:
       - name: Stop HTTP server
         if: always()
         run: |
-          kill $(cat /tmp/server.pid)
+          if [ -f /tmp/server.pid ]; then
+            kill "$(cat /tmp/server.pid)" || true
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
