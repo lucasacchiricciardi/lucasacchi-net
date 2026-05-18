@@ -2,6 +2,7 @@
 title: Ho comprato una RX 7900 XTX su eBay per provare DFlash. Risultato — 2.6x sul Qwen3-8B
 date: 2026-05-16
 tags: [homelab, llm, llama.cpp, rocm, amd, speculative-decoding, benchmark, dflash]
+lang: it
 description: Ho testato DFlash speculative decoding (llama.cpp PR #22105) su una RX 7900 XTX eGPU AMD. Risultato: 2.62× su Qwen3-8B, 1.25× su gpt-oss-20b (MoE). Quattro inciampi onesti lungo la strada.
 ---
 

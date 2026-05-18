@@ -2,6 +2,7 @@
 title: 66 commit in 10 ore — questo è il mio flusso con Claude Code
 date: 2026-05-15
 tags: [claude-code, AI, sviluppo, homelab, produttività]
+lang: it
 description: Come ho costruito 3 app in produzione in una giornata usando Claude Code. Pianificazione, esame del piano, subagenti e orchestratore — con numeri reali.
 ---
 

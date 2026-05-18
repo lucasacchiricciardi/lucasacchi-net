@@ -3,6 +3,7 @@ title: Model Manager — How I Handle VRAM Contention When Too Many Agents Run a
 date: 2026-05-04
 tags: [homelab, ollama, api, queue, docker, python, open-source]
 lang: en
+description: Five agents fighting for VRAM on a single Ollama server. What happens without coordination, and how I built a manager with per-model reservations.
 ---
 
 My homelab runs an Ollama server on `192.168.254.115`: 64 GB RAM, shared GPU, no cloud. Five agents fight for it:

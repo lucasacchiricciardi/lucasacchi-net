@@ -3,6 +3,7 @@ title: How I hardened my Claude Code workspace — a backup pipeline in 5 steps
 date: 2026-05-02
 tags: [backup, sysadmin, docker, syncthing, qnap, disaster-recovery, wsl2]
 lang: en
+description: Automated backup pipeline from laptop to NAS through a Docker VM. WSL2 → Syncthing → rsync over SSH → QNAP. One-minute RPO, zero manual work.
 ---
 
 I use Claude Code CLI every day. My workspace lives on WSL2 and holds code, documentation, course notes, context files for my projects. If the disk dies tomorrow, I lose months of work.

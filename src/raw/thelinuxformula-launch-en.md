@@ -3,6 +3,7 @@ title: The Linux Formula — My Personal Linux & Open Source Blog
 date: 2026-04-25
 tags: [linux, blog, thelinuxformula, open-source]
 lang: en
+description: I launched thelinuxformula.com — my personal blog on Linux and open source. Bilingual, articles on kernel, systemd, networking, security. No copy-paste tutorials.
 ---
 
 I've launched **The Linux Formula**, my personal blog about Linux and open source. It's live at [thelinuxformula.com](https://thelinuxformula.com).

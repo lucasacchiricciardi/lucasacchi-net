@@ -2,6 +2,8 @@
 title: Shortcutter — 5 lezioni da una giornata di coding con LLM locali
 date: 2026-05-02
 tags: [ai, llm, whisper, self-hosted, python, open-source]
+lang: it
+description: Una giornata per costruire una pipeline che scarica shorts YouTube, li trascrive con Whisper e ne genera un digest via LLM locale. Nove iterazioni, quattro bug, cinque lezioni concrete sui modelli piccoli.
 ---
 
 Seguo ogni giorno un canale YouTube italiano, ZioBudda Labs, che pubblica news AI in formato shorts da 2 minuti. Pieno di tool, repo e modelli che vorrei provare.

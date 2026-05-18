@@ -2,6 +2,8 @@
 title: Whisper API — Come ho stravolto l'architettura per scalare la trascrizione
 date: 2026-05-04
 tags: [architecture, microservices, whisper, api, python, open-source]
+lang: it
+description: Dal modello Whisper embedded nello script a un microservizio REST dedicato su server LAN. Perché l'ho fatto, cosa è cambiato, e quanta VRAM ho liberato.
 ---
 
 Pochi giorni fa ho presentato qui Shortcutter, il tool open source che scarica video YouTube, li trascrive e produce un summary strutturato.
