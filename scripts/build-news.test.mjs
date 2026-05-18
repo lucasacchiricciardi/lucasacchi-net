@@ -331,6 +331,50 @@ Body`;
     const result = parseFrontmatter(content);
     assert.equal(result.metadata.title, 'CRLF Test');
   });
+
+  it('should strip surrounding double quotes from values', () => {
+    const content = `---
+title: "Come ho classificato 46.878 libri: i quattro livelli"
+description: "Hit rate al 61%, tassonomia esplosa"
+---
+Body`;
+    const result = parseFrontmatter(content);
+    assert.equal(result.metadata.title, 'Come ho classificato 46.878 libri: i quattro livelli');
+    assert.equal(result.metadata.description, 'Hit rate al 61%, tassonomia esplosa');
+  });
+
+  it('should strip surrounding single quotes from values', () => {
+    const content = `---
+title: 'Single quoted title'
+---
+Body`;
+    const result = parseFrontmatter(content);
+    assert.equal(result.metadata.title, 'Single quoted title');
+  });
+
+  it('should NOT strip unbalanced or interior quotes', () => {
+    const content = `---
+title: He said "hello" and left
+description: "trailing quote missing
+slug: leading-quote-missing"
+---
+Body`;
+    const result = parseFrontmatter(content);
+    assert.equal(result.metadata.title, 'He said "hello" and left');
+    assert.equal(result.metadata.description, '"trailing quote missing');
+    assert.equal(result.metadata.slug, 'leading-quote-missing"');
+  });
+
+  it('should leave unquoted values unchanged', () => {
+    const content = `---
+title: Plain title without quotes
+date: 2026-05-18
+---
+Body`;
+    const result = parseFrontmatter(content);
+    assert.equal(result.metadata.title, 'Plain title without quotes');
+    assert.equal(result.metadata.date, '2026-05-18');
+  });
 });
 
 describe('markdownToHtml — unit tests', () => {

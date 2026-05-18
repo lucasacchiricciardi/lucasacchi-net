@@ -42,7 +42,7 @@ export function parseFrontmatter(content) {
     const sep = line.indexOf(':');
     if (sep === -1) continue;
     const key = line.slice(0, sep).trim();
-    const val = line.slice(sep + 1).trim();
+    let val = line.slice(sep + 1).trim();
     if (val.startsWith('[') && val.endsWith(']')) {
       const arrayStr = val.slice(1, -1).trim();
       if (arrayStr === '') {
@@ -51,6 +51,9 @@ export function parseFrontmatter(content) {
         metadata[key] = arrayStr.split(',').map(s => s.trim()).filter(s => s);
       }
     } else {
+      if (val.length >= 2 && ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'")))) {
+        val = val.slice(1, -1);
+      }
       metadata[key] = val;
     }
   }
