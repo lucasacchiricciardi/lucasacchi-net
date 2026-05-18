@@ -229,6 +229,31 @@ English content`);
   });
 });
 
+describe('build-news.js — service worker cache versioning', () => {
+  it('should produce dist/sw.js with a per-build CACHE_NAME and no unreplaced placeholder', () => {
+    execSync(`node ${SCRIPT}`, { cwd: ROOT });
+    const swPath = join(DIST, 'sw.js');
+    assert.ok(existsSync(swPath), 'dist/sw.js should exist');
+
+    const sw = readFileSync(swPath, 'utf-8');
+
+    // Placeholder must be replaced at build time, never shipped to browsers.
+    assert.ok(!sw.includes('__BUILD_ID__'),
+      'dist/sw.js must not contain the unreplaced __BUILD_ID__ placeholder');
+
+    // CACHE_NAME must be a single quoted string starting with lsn-v followed by
+    // a non-empty token (git short SHA or timestamp). The static legacy value
+    // 'lsn-v1' is no longer acceptable: every deploy must produce a distinct
+    // cache key so old assets get evicted on activate.
+    const m = sw.match(/CACHE_NAME\s*=\s*'lsn-v([A-Za-z0-9._-]+)'/);
+    assert.ok(m, `dist/sw.js must define CACHE_NAME = 'lsn-v<id>'; got:\n${sw.slice(0, 200)}`);
+    assert.notEqual(m[1], '1',
+      'CACHE_NAME must not be the legacy static "lsn-v1" — it must be versioned per build');
+    assert.ok(m[1].length >= 4,
+      `CACHE_NAME suffix should be at least 4 chars (git short SHA or timestamp); got "${m[1]}"`);
+  });
+});
+
 describe('build-news.js — dist assembly', () => {
   it('should copy index.html, main.js, newsWorker.js to dist/', () => {
     execSync(`node ${SCRIPT}`, { cwd: ROOT });

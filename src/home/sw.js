@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lsn-v1';
+const CACHE_NAME = 'lsn-v__BUILD_ID__';
 const BASE_PATH = location.pathname.replace(/\/[^/]*$/, '') || '';
 const ASSETS_TO_CACHE = [
   BASE_PATH + '/',

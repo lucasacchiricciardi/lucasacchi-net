@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, copyFileSync, rmSync, statSync } from 'node:fs';
 import { join, basename, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execSync } from 'node:child_process';
+import { execSync, spawnSync } from 'node:child_process';
 import { chromium } from 'playwright';
 import sharp from 'sharp';
 
@@ -29,6 +29,17 @@ const SITE_URL = process.env.SITE_URL || 'https://lucasacchi.net';
 const APP_VERSION = process.env.BUILD_VERSION || '2.0.0';
 const SRC_IMAGES = join(SRC_RAW, 'images');
 const WEBP_QUALITY = 82;
+
+// Per-build identifier for cache busting (e.g., service worker CACHE_NAME).
+// Prefer the current git short SHA so identical commits produce identical
+// caches; fall back to a timestamp when git metadata is unavailable.
+function getBuildId() {
+  if (process.env.BUILD_ID) return process.env.BUILD_ID;
+  const r = spawnSync('git', ['rev-parse', '--short', 'HEAD'], { encoding: 'utf-8' });
+  if (r.status === 0 && r.stdout) return r.stdout.trim();
+  return String(Date.now());
+}
+const BUILD_ID = getBuildId();
 
 export function parseFrontmatter(content) {
   const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -443,10 +454,17 @@ async function assembleDist() {
   for (const f of filesToCopy) {
     const src = join(SRC_HOME, f);
     const dst = join(DIST, f);
-    if (existsSync(src)) {
-      copyFileSync(src, dst);
-    } else {
+    if (!existsSync(src)) {
       console.warn(`Warning: ${src} not found, skipping`);
+      continue;
+    }
+    if (f === 'sw.js') {
+      // Inject per-build cache key so every deploy invalidates the SW cache.
+      const content = readFileSync(src, 'utf-8').replace(/__BUILD_ID__/g, BUILD_ID);
+      writeFileSync(dst, content, 'utf-8');
+      console.log(`Built sw.js with CACHE_NAME = lsn-v${BUILD_ID}`);
+    } else {
+      copyFileSync(src, dst);
     }
   }
 
