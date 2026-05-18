@@ -47,6 +47,26 @@ Non lo scrivo per impressionare. Lo scrivo perché la domanda che mi arriva più
     <category>claude-code, AI, sviluppo, homelab, produttività</category>
   </item>
   <item>
+    <title><![CDATA[Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU]]></title>
+    <link>https://lucasacchi.net/blog/egpu-7900xtx-power-management/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/egpu-7900xtx-power-management/</guid>
+    <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Nel mio home lab ho aggiunto una Radeon RX 7900 XTX come eGPU al mini-PC Minisforum AI X1 (Ryzen 7 255 + Radeon 780M iGPU + 64 GB DDR5), usando l'adattatore Minisforum DEG1 via OCuLink. La macchina si chiama llm e fa quello che il nome suggerisce: serve modelli locali via Ollama.
+Una volta che la scheda è installata e funzionante, mi pongo la domanda che ogni sysadmin homelabber si fa prima o poi davanti a una GPU da 355 W di TBP: quanto consuma quando non sta lavorando, e posso farla consumare ]]></description>
+    <category>linux, ubuntu, amd, gpu, egpu, oculink, power-management, rocm, amdgpu, minisforum, homelab</category>
+  </item>
+  <item>
+    <title><![CDATA[Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere]]></title>
+    <link>https://lucasacchi.net/blog/ollama-igpu-egpu-migration/</link>
+    <guid isPermaLink="true">https://lucasacchi.net/blog/ollama-igpu-egpu-migration/</guid>
+    <pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[← Leggi la Parte I: troubleshooting del power management della RX 7900 XTX
+
+Nella Parte I ho raccontato come ho aggiunto una RX 7900 XTX come eGPU al Minisforum AI X1 via OCuLink + DEG1, e come ho indagato il power management della scheda fino a verificare che in idle consuma 0 W reali.
+Quel pezzo era sull'energia. Questo è sulla configurazione di Ollama, perché quando passi da una iGPU integrata a una discreta non basta "collegarla e via": la config di Ollama che ti girava bene sulla Radeon 780]]></description>
+    <category>ollama, rocm, amd, gpu, igpu, radeon-780m, radeon-7900xtx, ubuntu, llm, homelab, systemd</category>
+  </item>
+  <item>
     <title><![CDATA[Model Manager — Come gestisco la VRAM quando troppi agenti vogliono girare insieme]]></title>
     <link>https://lucasacchi.net/blog/model-manager-homelab/</link>
     <guid isPermaLink="true">https://lucasacchi.net/blog/model-manager-homelab/</guid>

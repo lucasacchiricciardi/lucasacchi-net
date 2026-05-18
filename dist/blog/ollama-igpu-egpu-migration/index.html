@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"countryDetection":true,"floatingPreferencesButtonDisplay":"anchored-center-right","perPurposeConsent":true,"siteId":2315562,"whitelabel":false,"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true,"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","backgroundOverlay":true,"brandBackgroundColor":"#FFFFFF","brandTextColor":"#000000","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"fontSizeBody":"18px","fontSizeCloseButton":"22px","listPurposes":true,"prependOnBody":true,"rejectButtonDisplay":true,"textColor":"#000000"}};
+_iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true}};
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2315562.js" async></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Cambiare scheda significa anche disfare i workaround. La configurazione di Ollama che girava bene sulla Radeon 780M (gfx1103) è piena di env variabili che sulla 7900 XTX (gfx1100 nativa) sono inutili o attivamente dannose. Cosa togliere, cosa aggiungere, come verificare nel log."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere"/>
+<meta property="og:description" content="Cambiare scheda significa anche disfare i workaround. La configurazione di Ollama che girava bene sulla Radeon 780M (gfx1103) è piena di env variabili che sulla 7900 XTX (gfx1100 nativa) sono inutili o attivamente dannose. Cosa togliere, cosa aggiungere, come verificare nel log."/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/ollama-igpu-egpu-migration/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/ollama-igpu-egpu-migration/"/>
+<meta property="article:published_time" content="2026-05-14"/>
+<meta property="article:author" content="Luca Sacchi"/>
+<meta property="article:section" content="Technology"/>
+<meta property="article:tag" content="ollama"/>
+<meta property="article:tag" content="rocm"/>
+<meta property="article:tag" content="amd"/>
+<meta property="article:tag" content="gpu"/>
+<meta property="article:tag" content="igpu"/>
+<meta property="article:tag" content="radeon-780m"/>
+<meta property="article:tag" content="radeon-7900xtx"/>
+<meta property="article:tag" content="ubuntu"/>
+<meta property="article:tag" content="llm"/>
+<meta property="article:tag" content="homelab"/>
+<meta property="article:tag" content="systemd"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/ollama-igpu-egpu-migration/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/ollama-igpu-egpu-migration/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/ollama-igpu-egpu-migration-en/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/ollama-igpu-egpu-migration/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="TLF"/>
+<title>Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere — LucaSacchi.net</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere",
+  "datePublished": "2026-05-14",
+  "author": {
+    "@type": "Person",
+    "name": "Luca Sacchi",
+    "url": "https://lucasacchi.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucaSacchi.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lucasacchi.net/favicon.svg"
+    }
+  },
+  "description": "Cambiare scheda significa anche disfare i workaround. La configurazione di Ollama che girava bene sulla Radeon 780M (gfx1103) è piena di env variabili che sulla 7900 XTX (gfx1100 nativa) sono inutili o attivamente dannose. Cosa togliere, cosa aggiungere, come verificare nel log.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lucasacchi.net/blog/ollama-igpu-egpu-migration/"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/tailwind.css"/>
+<script src="/i18n.js"></script>
+<script src="/lang-switcher.js"></script>
+<script id="tailwind-config" type="application/json">
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d9dadb",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#424752",
+        "primary": "#003f87",
+        "primary-container": "#0056b3",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#bbd0ff",
+        "secondary": "#5f5e5f",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "outline": "#727784",
+        "outline-variant": "#c2c6d4"
+      },
+      "fontFamily": {
+        "headline": ["IBM Plex Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["IBM Plex Mono", "monospace"]
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem"
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+    background-image:
+        linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Article body: max line length 65ch for readability --- */
+nav[aria-label="Breadcrumb"],
+.article-content,
+article > header,
+.article-footer-separator,
+article > footer {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Headings --- */
+.article-content h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+}
+.article-content h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #003f87;
+}
+.article-content h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #191c1d;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    letter-spacing: -0.025em;
+    padding-left: 0.75rem;
+    border-left: 3px solid #003f87;
+}
+
+/* --- Paragraphs --- */
+.article-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+/* --- First paragraph (lead) --- */
+.article-content > p:first-child {
+    font-size: 1.125rem;
+    color: #424752;
+}
+
+/* --- Lists --- */
+.article-content ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+.article-content li {
+    margin-bottom: 0.25rem;
+}
+.article-content li > strong {
+    color: #191c1d;
+}
+
+/* --- Inline elements --- */
+.article-content a {
+    color: #003f87;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 63, 135, 0.3);
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+}
+.article-content a:hover {
+    color: #0056b3;
+}
+.article-content strong {
+    font-weight: 600;
+    color: #191c1d;
+}
+.article-content em {
+    font-style: italic;
+    color: #191c1d;
+}
+
+/* --- Inline code --- */
+.article-content code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    background-color: #e7e8e9;
+    padding: 0.125rem 0.375rem;
+    color: #191c1d;
+}
+
+/* --- Code blocks --- */
+.article-content pre {
+    background-color: #e1e3e4;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    border: 1px solid rgba(114, 119, 132, 0.2);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+.article-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* --- Blockquotes / callouts --- */
+.article-content blockquote {
+    border-left: 4px solid #003f87;
+    background-color: rgba(0, 63, 135, 0.05);
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #424752;
+    font-style: italic;
+}
+.article-content blockquote p {
+    font-size: 1rem;
+    color: #424752;
+    margin-bottom: 0;
+}
+
+/* --- Horizontal rule --- */
+.article-content hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-top: 2px solid rgba(114, 119, 132, 0.2);
+}
+
+/* --- Footer section separator --- */
+.article-footer-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-top: 2px solid rgba(0, 63, 135, 0.2);
+}
+
+/* --- Responsive: desktop --- */
+@media (min-width: 768px) {
+    .article-content h1 { font-size: 2.25rem; }
+    .article-content h2 { font-size: 1.875rem; }
+    .article-content h3 { font-size: 1.5rem; }
+    .article-content p { font-size: 1.125rem; }
+    .article-content > p:first-child { font-size: 1.25rem; }
+    .article-content ul { font-size: 1.125rem; }
+    .article-content pre { padding: 1.5rem 2rem; }
+    .article-content blockquote p { font-size: 1.125rem; }
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#article-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Skip to content</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Main navigation">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+  <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/" data-i18n="nav.home">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" data-i18n="nav.blog">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/" data-i18n="nav.home">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" data-i18n="nav.blog">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
+<button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="article-content" class="flex-grow max-w-4xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
+
+<nav class="mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li class="text-on-surface">ollama-igpu-egpu-migration</li>
+  </ol>
+</nav>
+
+<article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
+  
+  <header class="mb-8 pb-8 border-b border-outline-variant/20">
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere</h1>
+    
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-14">2026-05-14</time>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ollama</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">gpu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">igpu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">radeon-780m</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">radeon-7900xtx</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ubuntu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">llm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">systemd</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="article-content">
+    <p><strong><a href="/blog/egpu-7900xtx-power-management/">← Leggi la Parte I: troubleshooting del power management della RX 7900 XTX</a></strong></p>
+<hr>
+<p>Nella Parte I ho raccontato come ho aggiunto una RX 7900 XTX come eGPU al Minisforum AI X1 via OCuLink + DEG1, e come ho indagato il power management della scheda fino a verificare che in idle consuma 0 W reali.</p>
+<p>Quel pezzo era sull'energia. Questo è sulla <strong>configurazione di Ollama</strong>, perché quando passi da una iGPU integrata a una discreta non basta "collegarla e via": la config di Ollama che ti girava bene sulla Radeon 780M (gfx1103) è piena di workaround che sulla 7900 XTX (gfx1100) vanno rimossi, perché non solo non servono ma sono attivamente dannosi.</p>
+<p>Questo articolo documenta la migrazione passo passo: cosa eliminare, cosa aggiungere, perché. Con i numeri reali dei test.</p>
+<h2>Lo stato di partenza: Ollama che gira sulla 780M</h2>
+<p>Prima della 7900 XTX, il mini-PC faceva inferenza usando la sola Radeon 780M (gfx1103), che è la iGPU integrata nel mio Ryzen 7 255 (Zen 4 Hawk Point). La 780M non è ufficialmente supportata da ROCm: la community la fa funzionare facendola "fingere" di essere una gfx1100 con una variabile di override.</p>
+<p>Questa era la mia <code>override.conf</code> per il servizio systemd:</p>
+<pre><code># /etc/systemd/system/ollama.service.d/override.conf
+[Service]
+Environment="HSA_OVERRIDE_GFX_VERSION=11.0.0"
+Environment="HSA_ENABLE_SDMA=0"
+Environment="AMD_SERIALIZE_KERNEL=1"
+Environment="OLLAMA_MAX_VRAM=49392123904"
+Environment="OLLAMA_INTEL_GPU=0"
+Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_MAX_LOADED_MODELS=6"
+Environment="OLLAMA_NUM_PARALLEL=2"
+Environment="OLLAMA_KV_CACHE_TYPE=q8_0"</code></pre>
+<p>Questa config è corretta per una 780M, ma è anche un compromesso pieno di workaround per far girare ROCm su hardware non ufficialmente supportato. Ogni variabile ha una sua ragione storica.</p>
+<h2>Le quattro variabili "iGPU" da analizzare</h2>
+<p>Prima di toccare qualcosa, è bene capire cosa fa ogni variabile, altrimenti si copincolla configurazioni magiche senza imparare niente. Double check prima di scrivere.</p>
+<h3>`HSA_OVERRIDE_GFX_VERSION=11.0.0`</h3>
+<p>ROCm identifica le GPU AMD tramite l'architettura grafica (gfx version). La libreria HSA (Heterogeneous System Architecture) carica i kernel compilati per quella specifica architettura. La 780M è gfx1103, non supportata di default. Con questa variabile dico a ROCm di trattarla come se fosse gfx1100 (cioè una RDNA 3 desktop tipo 7900 XTX/XT). I kernel di gfx1100 girano comunque sulla 780M perché l'ISA è compatibile.</p>
+<p>Sulla 7900 XTX questo override è inutile: è già gfx1100 nativa.</p>
+<h3>`HSA_ENABLE_SDMA=0`</h3>
+<p>SDMA è il System DMA, l'engine hardware AMD che si occupa dei trasferimenti DMA tra VRAM e RAM di sistema senza coinvolgere CPU. Su molte APU (Phoenix, Hawk Point) l'SDMA ha bug noti che causano crash o silenziosi errori di trasferimento. La soluzione è disabilitarlo e usare path di copia alternativi via CPU.</p>
+<p>Sulla 7900 XTX SDMA funziona perfettamente, ed è anzi essenziale per le performance: disabilitarlo costringe a transfer più lenti, penalizzando soprattutto il loading dei modelli e i transfer VRAM↔RAM (quando un modello non entra interamente in VRAM).</p>
+<h3>`AMD_SERIALIZE_KERNEL=1`</h3>
+<p>Questa variabile costringe ROCm a eseguire un kernel alla volta, in modo seriale, invece di permettere l'overlap. È un workaround di stabilità per APU che hanno problemi con il command processor in scenari concorrenti. Penalizza pesantemente il throughput.</p>
+<p>Sulla 7900 XTX è dannosa: il command processor di Navi 31 è stato progettato proprio per gestire kernel concorrenti, e serializzarli butta via fino al 50% delle performance teoriche su workload paralleli (tipico delle inferenze multi-stream).</p>
+<h3>`OLLAMA_MAX_VRAM=49392123904`</h3>
+<p>Questi sono 49 GB. La 780M non ha VRAM dedicata: usa la RAM di sistema (sui miei 64 GB ne tenevo metà per inferenza). Con questa variabile dicevo a Ollama "fai conto di avere 49 GB di memoria GPU".</p>
+<p>Sulla 7900 XTX la VRAM è dedicata: 24 GB esatti. Lasciare 49 GB significa permettere a Ollama di tentare allocazioni che falliranno, oppure di spillare su RAM di sistema in modi inattesi. Va riportata al valore reale (con un piccolo headroom per framebuffer/firmware/contesti). Sidenote: nelle versioni recenti di Ollama (≥0.5.x) la variabile non è più letta — la libreria interroga direttamente il driver ROCm per la VRAM disponibile. Quindi è inutile in entrambi i sensi: o non fa niente, o se la versione vecchia di Ollama la legge, dà un valore sbagliato.</p>
+<h3>Le altre variabili (ininfluenti)</h3>
+<ul><li><code>OLLAMA_INTEL_GPU=0</code>: disabilita Intel ARC detection. Su AMD non cambia niente, ma evita un check inutile.</li><li><code>OLLAMA_HOST=0.0.0.0</code>: bind su tutte le interfacce di rete. Indipendente dalla GPU.</li><li><code>OLLAMA_MAX_LOADED_MODELS=6</code>, <code>OLLAMA_NUM_PARALLEL=2</code>: limiti di concorrenza. Sulla 7900 XTX vanno ricalibrati al ribasso perché la VRAM reale è 24 GB, non 49 GB virtuali.</li><li><code>OLLAMA_KV_CACHE_TYPE=q8_0</code>: quantizzazione 8-bit della KV cache. Va benissimo anche sulla discreta: dimezza la memoria della cache con degrado di qualità trascurabile. La lascio.</li></ul>
+<h2>La promessa della migrazione</h2>
+<p>Riassunto netto di cosa cambia:</p>
+<p>| Variabile | Era per 780M (gfx1103) | Sulla 7900 XTX (gfx1100) |<br>|---|---|---|<br>| <code>HSA_OVERRIDE_GFX_VERSION=11.0.0</code> | Necessaria per finto gfx1100 | Inutile (nativa gfx1100) |<br>| <code>HSA_ENABLE_SDMA=0</code> | Workaround bug APU | Dannosa, va rimossa |<br>| <code>AMD_SERIALIZE_KERNEL=1</code> | Stabilità APU | Dannosa, va rimossa |<br>| <code>OLLAMA_MAX_VRAM=49 GB</code> | Memoria virtuale shared | Sbagliata, va a 22 GB reali o rimossa |<br>| <code>OLLAMA_MAX_LOADED_MODELS=6</code> | OK con 49 GB | Va a 4 (più conservativo) |<br>| <code>OLLAMA_KV_CACHE_TYPE=q8_0</code> | Risparmio memoria | OK lasciare |</p>
+<p>In più, due aggiunte importanti:</p>
+<ul><li><code>ROCR_VISIBLE_DEVICES=0</code> + <code>HIP_VISIBLE_DEVICES=0</code>: esponi a ROCm/HIP solo la 7900 XTX. La 780M resta invisibile, niente conflitti tra gfx1100 nativa e gfx1100-via-override.</li><li><code>OLLAMA_FLASH_ATTENTION=1</code>: Flash Attention 2, riduce memoria e accelera. Funziona benissimo su gfx1100. Su gfx1103 era instabile, quindi non l'avevo abilitata prima.</li><li><code>OLLAMA_KEEP_ALIVE=5m</code>: dopo 5 minuti di idle, Ollama scarica i modelli dalla VRAM. Il kernel mette la GPU in <code>suspended</code> (vedi Parte I sul runtime PM), e il consumo torna a 0 W. È il pattern operativo "uso solo quando serve".</li></ul>
+<h2>Diagnostica preliminare: identificare gli indici GPU</h2>
+<p>Prima di scrivere <code>ROCR_VISIBLE_DEVICES</code>, dobbiamo essere sicuri di sapere quale indice corrisponde alla 7900 XTX. La regola dell'oro è non assumere: l'enumerazione dipende dall'ordine PCI e può variare.</p>
+<p>L'utility canonica è <code>rocminfo</code>, ma sul mio Ubuntu non era installata (Ollama non la espone nel PATH, e l'apt package è troppo vecchio per la 7900 XTX). Ho usato <code>rocm-smi</code> con i VBIOS, che è sufficiente:</p>
+<pre><code>rocm-smi -v</code></pre>
+<p>Output:</p>
+<pre><code>GPU[0]: VBIOS version: 113-3E4710U-O4W       ← 3E47 = Navi 31 (7900 XTX)
+GPU[1]: VBIOS version: 113-PHXGENERIC-001    ← Phoenix iGPU (780M)</code></pre>
+<p>I VBIOS rivelano la famiglia hardware: <code>3E47</code> è uno dei device ID della famiglia Navi 31, <code>PHXGENERIC</code> è esplicito. Conclusione: GPU[0] è la 7900 XTX, GPU[1] è la 780M.</p>
+<p><code>ROCR_VISIBLE_DEVICES=0</code> punta correttamente sulla 7900 XTX.</p>
+<h2>La nuova configurazione</h2>
+<p>Backup prima di tutto (safety first):</p>
+<pre><code>sudo cp /etc/systemd/system/ollama.service.d/override.conf \
+        /etc/systemd/system/ollama.service.d/override.conf.bak-$(date +%Y%m%d-%H%M)</code></pre>
+<p>Nuovo file, scritto in modo dichiarativo e commentato:</p>
+<pre><code># /etc/systemd/system/ollama.service.d/override.conf
+[Service]
+
+# === GPU selection ==========================================================
+# Esponi a ROCm SOLO la 7900 XTX (GPU[0] confermata da rocm-smi VBIOS 3E47).
+# La iGPU 780M (gfx1103) resta invisibile a Ollama. Nessun conflitto.
+Environment="ROCR_VISIBLE_DEVICES=0"
+Environment="HIP_VISIBLE_DEVICES=0"
+Environment="OLLAMA_INTEL_GPU=0"
+
+# === Memoria ================================================================
+# Lascio OLLAMA_MAX_VRAM solo per retrocompatibilità con vecchie versioni
+# di Ollama. Da v0.5+ è ignorato (Ollama lo legge dal driver ROCm).
+# 22 GB = 24 GB - ~2 GB headroom per framebuffer/firmware/contesti
+# Environment="OLLAMA_MAX_VRAM=23622320128"
+
+# KV cache 8-bit: dimezza memoria cache, degrado trascurabile
+Environment="OLLAMA_KV_CACHE_TYPE=q8_0"
+
+# Flash Attention 2: meno VRAM, più velocità. Stabile su gfx1100.
+Environment="OLLAMA_FLASH_ATTENTION=1"
+
+# === Concorrenza ============================================================
+Environment="OLLAMA_MAX_LOADED_MODELS=4"
+Environment="OLLAMA_NUM_PARALLEL=2"
+
+# Dopo 5 min idle: scarica modelli → GPU torna in suspended → 0 W
+Environment="OLLAMA_KEEP_ALIVE=5m"
+
+# === Networking =============================================================
+Environment="OLLAMA_HOST=0.0.0.0:11434"</code></pre>
+<p>Cose che ho <strong>rimosso</strong> rispetto alla config precedente:</p>
+<ul><li><code>HSA_OVERRIDE_GFX_VERSION=11.0.0</code></li><li><code>HSA_ENABLE_SDMA=0</code></li><li><code>AMD_SERIALIZE_KERNEL=1</code></li><li><code>OLLAMA_MAX_VRAM=49392123904</code> (sostituita con default driver)</li></ul>
+<p>Cose che ho <strong>aggiunto</strong>:</p>
+<ul><li><code>ROCR_VISIBLE_DEVICES=0</code> + <code>HIP_VISIBLE_DEVICES=0</code></li><li><code>OLLAMA_FLASH_ATTENTION=1</code></li><li><code>OLLAMA_KEEP_ALIVE=5m</code></li></ul>
+<p>Cose che ho <strong>mantenuto</strong>:</p>
+<ul><li><code>OLLAMA_KV_CACHE_TYPE=q8_0</code> (utile in entrambi gli scenari)</li><li><code>OLLAMA_HOST</code> (rete, indipendente da GPU)</li><li><code>OLLAMA_INTEL_GPU=0</code> (innocuo)</li></ul>
+<h2>Apply e verifica nel log</h2>
+<pre><code>sudo systemctl daemon-reload
+sudo systemctl restart ollama
+sudo systemctl status ollama --no-pager</code></pre>
+<p>La verifica veramente importante è leggere il log di startup, dove Ollama dichiara cosa ha trovato:</p>
+<pre><code>sudo journalctl -u ollama --since "2 minutes ago" --no-pager -l \
+  | grep -iE "inference compute|library=|gpu=|total=|gfx|rocm"</code></pre>
+<p>Output significativo:</p>
+<pre><code>msg="inference compute" id=GPU-6bcf966248bfe03d
+  library=ROCm
+  compute=gfx1100
+  name=ROCm0
+  description="AMD Radeon RX 7900 XTX"
+  driver=70253.21
+  pci_id=0000:03:00.0
+  type=discrete
+  total="24.0 GiB"
+  available="24.0 GiB"</code></pre>
+<p>Sei punti di controllo:</p>
+<p>| Check | Atteso | Trovato | OK |<br>|---|---|---|---|<br>| Library | ROCm (non Vulkan, non CPU) | <code>library=ROCm</code> | ✅ |<br>| Architettura | gfx1100 (no override) | <code>compute=gfx1100</code> | ✅ |<br>| Una sola GPU | iGPU mascherata | un solo <code>ROCm0</code> | ✅ |<br>| Device | 7900 XTX | <code>AMD Radeon RX 7900 XTX</code> | ✅ |<br>| VRAM totale | 24 GB | <code>total="24.0 GiB"</code> | ✅ |<br>| PCI ID | <code>0000:03:00.0</code> | OK | ✅ |</p>
+<p>Nella mappa env stampata da Ollama è importante notare che <code>HSA_OVERRIDE_GFX_VERSION</code> è ora vuota: significa che è stata rimossa correttamente dal drop-in, e ROCm sta usando la gfx1100 nativa della scheda invece di un finto override.</p>
+<h2>Test funzionale: i numeri veri</h2>
+<p>Il vero proof che la migrazione ha funzionato sono i tempi di inferenza. Tre scenari.</p>
+<h3>Scenario 1 — Cold start con download</h3>
+<pre><code>time ollama run llama3.2:3b "Rispondi con una sola parola: OK"
+# real    0m28.689s</code></pre>
+<p>I 28.7 secondi includono il download di 2 GB del modello da Internet. Non è un benchmark di latenza, è un benchmark della mia connessione + cold start. Una volta sola.</p>
+<h3>Scenario 2 — Hot run (modello in VRAM, GPU active)</h3>
+<pre><code>time ollama run llama3.2:3b "Rispondi con una sola parola: OK"
+# real    0m0.145s</code></pre>
+<p>145 millisecondi. Di cui 9 ms di user, 18 ms di sys. Il resto è la latenza HTTP localhost + generazione di un token. Per chi viene dalla 780M (dove un singolo token su un modello da 3B ne prendeva 800–1200 ms), è un fattore 6–8x di miglioramento sulla latenza.</p>
+<h3>Scenario 3 — Cold start senza download (modello su disco, GPU suspended)</h3>
+<p>Questo è il caso operativo reale: dopo 5+ minuti di idle, Ollama ha scaricato il modello dalla VRAM, la GPU è andata in <code>suspended</code>. Al prossimo prompt:</p>
+<ul><li>~0.5–1 s: wake-up della 7900 XTX da <code>suspended</code> → <code>active</code></li><li>~1–2 s: reload del modello in VRAM</li><li><1 s: inferenza</li></ul>
+<p>Totale 2–3 secondi. Accettabile per uso interattivo, perfetto per workflow batch. Soprattutto: dopo la prima richiesta, tutto resta caldo per 5 minuti, e dentro quella finestra ogni chiamata torna a essere da 145 ms.</p>
+<h2>Lezioni operative</h2>
+<h3>1. La configurazione iGPU è un debito tecnico nascosto</h3>
+<p>Quando ROCm non supporta ufficialmente il tuo hardware, accumuli workaround in cascata: <code>HSA_OVERRIDE</code> per forzare la gfx version, <code>HSA_ENABLE_SDMA</code> per evitare crash, <code>AMD_SERIALIZE_KERNEL</code> per stabilità. Ognuno di questi è una scelta consapevole per quell'hardware specifico, e ognuno di questi diventa zavorra quando passi a hardware supportato. Quando upgradi la GPU, la prima cosa da fare è rivedere ogni env variable da capo, non copincollare la config precedente.</p>
+<h3>2. L'enumerazione GPU non è ovvia</h3>
+<p>Il sysfs <code>cardN</code>, l'output di <code>rocm-smi</code>, l'enumerazione di <code>ROCR_VISIBLE_DEVICES</code> e quella di <code>HIP_VISIBLE_DEVICES</code> possono divergere. La regola di sicurezza è:</p>
+<p>1. Identifica la GPU via <code>lspci</code> e PCI ID<br>2. Verifica il VBIOS via <code>rocm-smi -v</code> per essere sicuro che l'indice ROCm corrisponda<br>3. Conferma con il log di startup di Ollama (<code>inference compute</code> ti dice esattamente cosa ha trovato)</p>
+<h3>3. KEEP_ALIVE è la chiave del power management collaborativo</h3>
+<p>Senza <code>OLLAMA_KEEP_ALIVE</code>, Ollama tiene i modelli in VRAM per un default di 5 minuti, ma soprattutto tiene la GPU <code>active</code>. Questo impedisce al kernel di mettere la scheda in <code>suspended</code> via PCI runtime PM, e la 7900 XTX continua a consumare 10–30 W "inutili" anche senza richieste. Impostando esplicitamente <code>KEEP_ALIVE=5m</code> (o un valore più basso se preferisci) chiudi il cerchio:</p>
+<pre><code>prompt → wake → load → infer
+       → 5 min idle → unload → GPU suspended → 0 W</code></pre>
+<h3>4. Verifica sempre nel log, non assumere</h3>
+<p>Ogni cambio di configurazione va validato leggendo cosa Ollama ha effettivamente capito. La mappa env nel log di startup è la fonte di verità: se ci vedi <code>HSA_OVERRIDE_GFX_VERSION:</code> vuoto e <code>compute=gfx1100</code>, sai che la migrazione è andata bene. Se ci vedi ancora il vecchio override o un <code>compute=gfx1103</code>, sai che hai dimenticato un drop-in da qualche parte.</p>
+<h2>Conclusione</h2>
+<p>Migrare Ollama dalla Radeon 780M alla Radeon RX 7900 XTX non significa "aggiungere la nuova GPU", significa rimuovere accuratamente tutti i workaround che servivano per far girare ROCm su hardware non supportato. La configurazione finale è più corta, più dichiarativa, più veloce, e collabora con il power management del kernel per consumare zero watt in idle.</p>
+<p>Per chi è in una situazione simile (mini-PC con APU AMD + eGPU AMD discreta), il pattern è chiaro:</p>
+<p>1. <strong>Backup</strong> della config esistente<br>2. <strong>Identifica</strong> la nuova GPU via PCI ID + VBIOS (<code>rocm-smi -v</code>)<br>3. <strong>Rimuovi</strong> tutti gli override iGPU (<code>HSA_OVERRIDE</code>, <code>HSA_ENABLE_SDMA=0</code>, <code>AMD_SERIALIZE_KERNEL=1</code>)<br>4. <strong>Esponi</strong> solo la discreta con <code>ROCR_VISIBLE_DEVICES</code><br>5. <strong>Ricalibra</strong> i limiti di VRAM e di concorrenza alla realtà del nuovo hardware<br>6. <strong>Aggiungi</strong> <code>OLLAMA_KEEP_ALIVE</code> per chiudere il cerchio con il power management<br>7. <strong>Verifica</strong> nel log che Ollama veda esattamente quello che ti aspetti</p>
+<p>E sempre, come dico ai miei studenti: safety first, little often, double check.</p>
+  </div>
+
+  <div class="article-footer-separator"></div>
+
+  <footer class="mb-0">
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        <span>Torna al Blog</span>
+      </a>
+      
+      <div class="flex gap-3">
+        <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/ollama-igpu-egpu-migration/&title=Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           title="Share on LinkedIn"
+           aria-label="Share on LinkedIn">
+          <span class="material-symbols-outlined">work</span>
+        </a>
+        
+        <a class="text-on-surface-variant hover:text-primary transition-colors" 
+           href="mailto:?subject=Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere&body=Migrare Ollama da Radeon 780M a RX 7900 XTX — cosa rimuovere, cosa aggiungere%0A%0Ahttps://lucasacchi.net/blog/ollama-igpu-egpu-migration/" 
+           title="Share via email"
+           aria-label="Share via email">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
+        
+        <button class="text-on-surface-variant hover:text-primary transition-colors" 
+                id="copy-link-btn"
+                title="Copy link"
+                aria-label="Copy link">
+          <span class="material-symbols-outlined" id="copy-icon">link</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+</article>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Comm_Links</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="https://www.linkedin.com/in/lucasacchi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-[#ff0000] transition-colors" href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
+<p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+var mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
+
+// Copy link button
+var copyLinkBtn = document.getElementById('copy-link-btn');
+var copyIcon = document.getElementById('copy-icon');
+if (copyLinkBtn && copyIcon) {
+  copyLinkBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      copyIcon.textContent = 'check';
+      setTimeout(function() {
+        copyIcon.textContent = 'link';
+      }, 2000);
+    });
+  });
+}
+</script>
+
+<script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  window.openPolicy = openPolicy;
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>

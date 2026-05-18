@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"askConsentAtCookiePolicyUpdate":true,"cookiePolicyInOtherWindow":true,"countryDetection":true,"floatingPreferencesButtonDisplay":"anchored-center-right","perPurposeConsent":true,"siteId":2315562,"whitelabel":false,"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true,"banner":{"acceptButtonCaptionColor":"#FFFFFF","acceptButtonColor":"#0073CE","acceptButtonDisplay":true,"backgroundColor":"#FFFFFF","backgroundOverlay":true,"brandBackgroundColor":"#FFFFFF","brandTextColor":"#000000","closeButtonRejects":true,"customizeButtonCaptionColor":"#4D4D4D","customizeButtonColor":"#DADADA","customizeButtonDisplay":true,"explicitWithdrawal":true,"fontSizeBody":"18px","fontSizeCloseButton":"22px","listPurposes":true,"prependOnBody":true,"rejectButtonDisplay":true,"textColor":"#000000"}};
+_iub.csLangConfiguration = {"it":{"cookiePolicyId":47143821,"floatingPreferencesButtonCaption":true}};
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2315562.js" async></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="rocm-smi diceva 87 W in idle. Il sysfs diceva 0 W. Lo strumento di misura sveglia la GPU. Ho rincorso il consumo vero attraverso quattro fonti indipendenti, e ho documentato il pattern di power management che funziona out-of-the-box su Linux."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU"/>
+<meta property="og:description" content="rocm-smi diceva 87 W in idle. Il sysfs diceva 0 W. Lo strumento di misura sveglia la GPU. Ho rincorso il consumo vero attraverso quattro fonti indipendenti, e ho documentato il pattern di power management che funziona out-of-the-box su Linux."/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="https://lucasacchi.net/blog/egpu-7900xtx-power-management/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:url" content="https://lucasacchi.net/blog/egpu-7900xtx-power-management/"/>
+<meta property="article:published_time" content="2026-05-14"/>
+<meta property="article:author" content="Luca Sacchi"/>
+<meta property="article:section" content="Technology"/>
+<meta property="article:tag" content="linux"/>
+<meta property="article:tag" content="ubuntu"/>
+<meta property="article:tag" content="amd"/>
+<meta property="article:tag" content="gpu"/>
+<meta property="article:tag" content="egpu"/>
+<meta property="article:tag" content="oculink"/>
+<meta property="article:tag" content="power-management"/>
+<meta property="article:tag" content="rocm"/>
+<meta property="article:tag" content="amdgpu"/>
+<meta property="article:tag" content="minisforum"/>
+<meta property="article:tag" content="homelab"/>
+<link rel="canonical" href="https://lucasacchi.net/blog/egpu-7900xtx-power-management/"/>
+<link rel="alternate" hreflang="it" href="https://lucasacchi.net/blog/egpu-7900xtx-power-management/"/>
+<link rel="alternate" hreflang="en" href="https://lucasacchi.net/blog/egpu-7900xtx-power-management-en/"/>
+<link rel="alternate" hreflang="x-default" href="https://lucasacchi.net/blog/egpu-7900xtx-power-management/"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="theme-color" content="#003f87"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<meta name="apple-mobile-web-app-title" content="TLF"/>
+<title>Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU — LucaSacchi.net</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU",
+  "datePublished": "2026-05-14",
+  "author": {
+    "@type": "Person",
+    "name": "Luca Sacchi",
+    "url": "https://lucasacchi.net/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LucaSacchi.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lucasacchi.net/favicon.svg"
+    }
+  },
+  "description": "rocm-smi diceva 87 W in idle. Il sysfs diceva 0 W. Lo strumento di misura sveglia la GPU. Ho rincorso il consumo vero attraverso quattro fonti indipendenti, e ho documentato il pattern di power management che funziona out-of-the-box su Linux.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lucasacchi.net/blog/egpu-7900xtx-power-management/"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/tailwind.css"/>
+<script src="/i18n.js"></script>
+<script src="/lang-switcher.js"></script>
+<script id="tailwind-config" type="application/json">
+{
+  "theme": {
+    "extend": {
+      "colors": {
+        "surface": "#f8f9fa",
+        "surface-container": "#edeeef",
+        "surface-container-low": "#f3f4f5",
+        "surface-container-high": "#e7e8e9",
+        "surface-container-highest": "#e1e3e4",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d9dadb",
+        "on-surface": "#191c1d",
+        "on-surface-variant": "#424752",
+        "primary": "#003f87",
+        "primary-container": "#0056b3",
+        "on-primary": "#ffffff",
+        "on-primary-container": "#bbd0ff",
+        "secondary": "#5f5e5f",
+        "error": "#ba1a1a",
+        "error-container": "#ffdad6",
+        "on-error": "#ffffff",
+        "on-error-container": "#93000a",
+        "outline": "#727784",
+        "outline-variant": "#c2c6d4"
+      },
+      "fontFamily": {
+        "headline": ["IBM Plex Serif", "serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["IBM Plex Mono", "monospace"]
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem"
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+    background-image:
+        linear-gradient(to right, rgba(194, 198, 212, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(194, 198, 212, 0.2) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Article body: max line length 65ch for readability --- */
+nav[aria-label="Breadcrumb"],
+.article-content,
+article > header,
+.article-footer-separator,
+article > footer {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Headings --- */
+.article-content h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+}
+.article-content h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #191c1d;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    letter-spacing: -0.025em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #003f87;
+}
+.article-content h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #191c1d;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    letter-spacing: -0.025em;
+    padding-left: 0.75rem;
+    border-left: 3px solid #003f87;
+}
+
+/* --- Paragraphs --- */
+.article-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+/* --- First paragraph (lead) --- */
+.article-content > p:first-child {
+    font-size: 1.125rem;
+    color: #424752;
+}
+
+/* --- Lists --- */
+.article-content ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #191c1d;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+.article-content li {
+    margin-bottom: 0.25rem;
+}
+.article-content li > strong {
+    color: #191c1d;
+}
+
+/* --- Inline elements --- */
+.article-content a {
+    color: #003f87;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 63, 135, 0.3);
+    text-underline-offset: 2px;
+    transition: color 0.15s;
+}
+.article-content a:hover {
+    color: #0056b3;
+}
+.article-content strong {
+    font-weight: 600;
+    color: #191c1d;
+}
+.article-content em {
+    font-style: italic;
+    color: #191c1d;
+}
+
+/* --- Inline code --- */
+.article-content code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    background-color: #e7e8e9;
+    padding: 0.125rem 0.375rem;
+    color: #191c1d;
+}
+
+/* --- Code blocks --- */
+.article-content pre {
+    background-color: #e1e3e4;
+    padding: 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    border: 1px solid rgba(114, 119, 132, 0.2);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+.article-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* --- Blockquotes / callouts --- */
+.article-content blockquote {
+    border-left: 4px solid #003f87;
+    background-color: rgba(0, 63, 135, 0.05);
+    padding: 1rem 1rem 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #424752;
+    font-style: italic;
+}
+.article-content blockquote p {
+    font-size: 1rem;
+    color: #424752;
+    margin-bottom: 0;
+}
+
+/* --- Horizontal rule --- */
+.article-content hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-top: 2px solid rgba(114, 119, 132, 0.2);
+}
+
+/* --- Footer section separator --- */
+.article-footer-separator {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-top: 2px solid rgba(0, 63, 135, 0.2);
+}
+
+/* --- Responsive: desktop --- */
+@media (min-width: 768px) {
+    .article-content h1 { font-size: 2.25rem; }
+    .article-content h2 { font-size: 1.875rem; }
+    .article-content h3 { font-size: 1.5rem; }
+    .article-content p { font-size: 1.125rem; }
+    .article-content > p:first-child { font-size: 1.25rem; }
+    .article-content ul { font-size: 1.125rem; }
+    .article-content pre { padding: 1.5rem 2rem; }
+    .article-content blockquote p { font-size: 1.125rem; }
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<a href="#article-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-on-primary px-4 py-2 rounded-none z-50 font-label text-xs uppercase tracking-widest">Skip to content</a>
+
+<nav class="bg-surface-container-lowest/80 backdrop-blur-xl w-full sticky top-0 z-50 flat no-shadows" aria-label="Main navigation">
+<div class="flex justify-between items-center px-12 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+  <a class="text-xl font-headline font-black tracking-tighter text-on-primary-fixed" href="/">LucaSacchi.net</a>
+</div>
+<div class="hidden md:flex space-x-8 items-center bg-surface-container-low px-6 py-2">
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/" data-i18n="nav.home">Home</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="text-primary font-bold border-l-4 border-primary px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" data-i18n="nav.blog">Blog</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors hover:-translate-y-0.5 transform duration-150" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<button id="lang-it-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn" class="border-l-4 border-outline-variant/20 px-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+<button class="md:hidden text-on-surface" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden px-12 pb-4">
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/" data-i18n="nav.home">Home</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/videos/" data-i18n="nav.videos">Video</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#chi-sono" data-i18n="nav.chiSono">Chi Sono</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#corsi" data-i18n="nav.corsi">Corsi</a>
+<a class="block text-primary font-bold border-l-4 border-primary px-2 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" href="/blog/" data-i18n="nav.blog">Blog</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="https://thelinuxformula.com" target="_blank" rel="noopener noreferrer" data-i18n="nav.theLinuxFormula">The Linux Formula</a>
+<a class="block text-on-surface-variant font-label text-sm uppercase tracking-wider hover:text-primary transition-colors py-2 px-2" href="/#contatti" data-i18n="nav.contattami">Contattami</a>
+<div class="flex justify-center gap-4 pt-4 border-t border-outline-variant/20">
+<button id="lang-it-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="Italiano">🇮🇹</button>
+<button id="lang-en-btn-mobile" class="border-l-4 border-outline-variant/20 px-3 py-2 font-label text-sm uppercase tracking-wider hover:bg-primary/5 transition-colors" aria-label="English">🇬🇧</button>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/20"></div>
+</nav>
+
+<main id="article-content" class="flex-grow max-w-4xl mx-auto w-full px-6 md:px-12 py-12 md:py-24">
+
+<nav class="mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface-variant">
+    <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
+    <li><span class="text-outline-variant">/</span></li>
+    <li class="text-on-surface">egpu-7900xtx-power-management</li>
+  </ol>
+</nav>
+
+<article class="bg-surface-container-low p-8 md:p-12 border-t-4 border-primary">
+  
+  <header class="mb-8 pb-8 border-b border-outline-variant/20">
+    <h1 class="font-headline text-4xl md:text-5xl font-bold text-on-surface mb-4">Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU</h1>
+    
+    <div class="flex flex-wrap items-center gap-4 text-sm">
+      <time class="font-label text-xs text-on-surface-variant uppercase tracking-wider" datetime="2026-05-14">2026-05-14</time>
+      
+      <div class="flex flex-wrap gap-2">
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">linux</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">ubuntu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amd</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">gpu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">egpu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">oculink</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">power-management</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">rocm</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">amdgpu</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">minisforum</span>
+        <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant bg-surface-container-highest px-2 py-1">homelab</span>
+      </div>
+    </div>
+  </header>
+  
+  <div class="article-content">
+    <p>Nel mio home lab ho aggiunto una Radeon RX 7900 XTX come eGPU al mini-PC Minisforum AI X1 (Ryzen 7 255 + Radeon 780M iGPU + 64 GB DDR5), usando l'adattatore Minisforum DEG1 via OCuLink. La macchina si chiama <code>llm</code> e fa quello che il nome suggerisce: serve modelli locali via Ollama.</p>
+<p>Una volta che la scheda è installata e funzionante, mi pongo la domanda che ogni sysadmin homelabber si fa prima o poi davanti a una GPU da 355 W di TBP: quanto consuma quando non sta lavorando, e posso farla consumare meno?</p>
+<p>Risposta breve: zero watt reali. Risposta lunga: questo articolo, perché ci sono arrivato passando per un falso allarme, un warning di firmware, e una correzione di stima sul display. Una piccola masterclass involontaria di misurazione e diagnostica Linux.</p>
+<h2>L'hardware</h2>
+<p>| Componente | Modello |<br>|---|---|<br>| Mini-PC | Minisforum AI X1 |<br>| CPU | AMD Ryzen 7 255 (8C/16T, Zen 4 Hawk Point, 4 nm, TDP 45 W) |<br>| iGPU | AMD Radeon 780M (12 CU RDNA 3, gfx1103, boost 2600 MHz) |<br>| RAM | 64 GB DDR5 |<br>| Adattatore eGPU | Minisforum DEG1 (OCuLink → PCIe x4 Gen 4) |<br>| GPU esterna | AMD Radeon RX 7900 XTX (Navi 31, 24 GB GDDR6, TBP 355 W) |<br>| Cavo | OCuLink SFF-8611 |<br>| Alimentazione GPU | PSU ATX dedicato del DEG1 |<br>| OS | Ubuntu 24.04 LTS |<br>| Kernel | 6.8.0-111-generic |</p>
+<p>Sul Ryzen 7 255: è il rebrand 2025 del Ryzen 7 8745H, sostanzialmente identico a parte un +50 MHz sul boost. Hawk Point Zen 4, 16 MB di L3, supporto AVX-512 nativo (utile come fallback CPU per inferenza LLM quando la eGPU è impegnata), DDR5 fino a 5600 MT/s, 20 lane PCIe Gen 4. Non ha l'NPU XDNA attivato, a differenza dei fratelli AI 9 HX 370 / 8945HS. Per un uso da homelab/LLM-host la mancanza dell'NPU è ininfluente: l'inferenza la fa la 7900 XTX, e quando serve calcolo CPU c'è AVX-512.</p>
+<p>L'AI X1 espone una porta OCuLink che porta fuori 4 lane PCIe Gen 4 con un cavo standard, senza i compromessi del Thunderbolt. Il DEG1 è una dock semplice: scocca con slot PCIe x16, alimentazione ATX, cavo OCuLink di ingresso. Esattamente quello che vuoi quando la macchina principale è troppo piccola per ospitare la GPU ma può tirare fuori segnale PCIe.</p>
+<p>Il collegamento fisico è banale: cavo OCuLink dal mini-PC al DEG1, ATX 24 pin sul DEG1, cavi PCIe 8+8 sulla 7900 XTX, accendi il DEG1 <em>prima</em> del PC. Il kernel <code>amdgpu</code> la riconosce automaticamente al boot.</p>
+<h2>Verifica iniziale</h2>
+<p>Le verifiche di rito una volta avviato il sistema:</p>
+<pre><code># La GPU è enumerata sul PCI bus?
+lspci | grep -i amd
+# 03:00.0 VGA compatible controller: AMD/ATI Navi 31 [Radeon RX 7900 XT/7900 XTX/7900M]
+# c7:00.0 VGA compatible controller: AMD/ATI Phoenix3 (rev ba)
+
+# Il driver amdgpu si è agganciato?
+lsmod | grep amdgpu
+
+# Quale cardN nel sysfs corrisponde alla 7900 XTX?
+for c in /sys/class/drm/card[0-9]; do
+  pci=$(basename $(readlink -f $c/device))
+  name=$(lspci -s ${pci#0000:} | cut -d: -f3-)
+  echo "$(basename $c) | $pci |$name"
+done</code></pre>
+<p>Nel mio caso <code>card1</code> è la 7900 XTX (PCI <code>0000:03:00.0</code>), <code>card2</code> è la iGPU integrata del Ryzen. Attenzione: la numerazione <code>cardN</code> non coincide con la numerazione di <code>rocm-smi</code>. Identifica sempre il device giusto via PCI ID o <code>lspci</code>, mai per indice.</p>
+<h2>La domanda da un milione di watt</h2>
+<p>Mi piacerebbe avere la macchina sempre accesa per Ollama, ma non posso permettermi (né tollerare) una 7900 XTX che consuma 100 W solo per stare lì in attesa. Quindi: la scheda va davvero in idle profondo quando non la uso?</p>
+<p>Prima verifica con <code>rocm-smi</code>:</p>
+<pre><code>GPU  Temp  AvgPwr   SCLK    MCLK     Fan    Perf  PwrCap   VRAM%  GPU%
+0    27c   87.0W    259Mhz  456Mhz   14.9%  auto  303.0W   0%     6%
+1    26c   5.035W   None    1000Mhz  0%     auto  Unsup.   1%     0%</code></pre>
+<p>87 watt in idle. Non un bel risultato. SCLK e MCLK sono bassi (259/456 MHz), ma il consumo medio rimane alto. Penso alla baseline idle nota della famiglia Navi 31 su Linux — un problema discusso su molte mailing list — e mi preparo a smanettare.</p>
+<h2>Il sysfs come fonte di verità</h2>
+<p>Prima regola: non fidarti del primo strumento di misura. Controllo direttamente nel sysfs.</p>
+<pre><code>cat /sys/class/drm/card1/device/power_dpm_force_performance_level
+# auto
+
+# Connector status
+for c in /sys/class/drm/card1-*/status; do
+  echo "$c: $(cat $c)"
+done
+# Tutti disconnected: nessun monitor attaccato alla eGPU</code></pre>
+<p><code>auto</code> significa che la Dynamic Power Management è libera di scalare. Nessun monitor sulla eGPU. Eppure il consumo resta alto.</p>
+<p>Provo a vedere chi sta usando la scheda:</p>
+<pre><code>sudo fuser -v /dev/dri/card1 /dev/dri/renderD128
+sudo lsof /dev/kfd
+# Niente, nessuno.</code></pre>
+<p><code>/dev/kfd</code> è il Kernel Fusion Driver di AMD, usato dai runtime ROCm/HIP per il compute. Vuoto. Nessun Ollama acceso, nessun processo GPU. Eppure <code>rocm-smi</code> dice 87 W.</p>
+<p>C'è qualcosa che non torna.</p>
+<h2>Il colpevole vero: gpu_busy_percent</h2>
+<p>Sample del carico GPU, due secondi alla volta:</p>
+<pre><code>81
+0
+0
+0
+0
+0
+0
+0
+0
+0</code></pre>
+<p>Il primo sample è 81%, tutti gli altri 0%. È un classico polling artifact: la lettura stessa del sensore è ciò che attiva la GPU per un istante. La metrica <code>gpu_busy_percent</code> su RDNA3 è un counter del command processor che reagisce a qualunque accesso, incluso quello fatto per leggerlo.</p>
+<p>Conclusione provvisoria: la GPU è realmente al 0% di carico. Ma allora cosa consuma 87 W?</p>
+<h2>Il momento eureka: rocm-smi sveglia la GPU che vorrebbe dormire</h2>
+<p>Vado a guardare il PCI runtime power management:</p>
+<pre><code>cat /sys/bus/pci/devices/0000:03:00.0/power/control
+# auto
+
+cat /sys/bus/pci/devices/0000:03:00.0/power/runtime_status
+# suspended
+
+cat /sys/bus/pci/devices/0000:03:00.0/power/autosuspend_delay_ms
+# 5000</code></pre>
+<p>La scheda è già in <code>suspended</code>. Runtime PM attivo di default sull'eGPU OCuLink, autosuspend dopo 5 secondi di inattività.</p>
+<p>Per essere sicuro, monitoro lo stato in continuo senza accedere ai sensori GPU:</p>
+<pre><code>for i in $(seq 1 10); do
+  status=$(cat /sys/bus/pci/devices/0000:03:00.0/power/runtime_status)
+  pwr=$(cat /sys/class/drm/card1/device/hwmon/hwmon*/power1_average 2&gt;/dev/null)
+  echo "$(date +%T) status=$status power=$((pwr/1000000))W"
+  sleep 2
+done</code></pre>
+<p>Output:</p>
+<pre><code>17:06:54 status=suspended power=0W
+17:06:56 status=suspended power=0W
+17:06:58 status=suspended power=0W
+... (per 20 secondi)</code></pre>
+<p>Zero watt. Per venti secondi consecutivi. In <code>suspended</code>.</p>
+<p>Quindi cosa stava succedendo prima? La risposta è semplice nella sua banalità: <code>rocm-smi</code> apre <code>/dev/dri/*</code> per leggere i sensori, e questo sveglia la GPU. Ogni volta che lo lanci, la scheda esce da <code>suspended</code> → <code>active</code>, viene letta nello stato "appena svegliata", e resta <code>active</code> per altri 5 secondi prima di tornare a dormire.</p>
+<p>Lo strumento di misura era la causa del consumo misurato. Il classico osservatore che perturba il sistema osservato, qui in versione amministratore di sistema.</p>
+<p>C'è anche una verifica fisica: quando la GPU è davvero <code>suspended</code>, il kernel restituisce un errore se provi a leggere <code>power1_average</code>:</p>
+<pre><code>cat: /sys/class/drm/card1/device/hwmon/hwmon7/power1_average: Device or resource busy</code></pre>
+<p>Il sistema ti sta dicendo: "non posso leggerti il sensore perché la scheda è proprio spenta, e per leggerlo dovrei svegliarla — cosa che non vuoi". Il sensore inaccessibile <em>è</em> la prova del power saving.</p>
+<h2>Il warning SMU che sembra brutto ma non lo è</h2>
+<p>Curiosando in <code>dmesg</code> trovo:</p>
+<pre><code>amdgpu 0000:03:00.0: amdgpu: smu driver if version = 0x0000003d,
+                              smu fw if version     = 0x00000040,
+                              smu fw version        = 0x004e8200 (78.130.0)
+amdgpu 0000:03:00.0: amdgpu: SMU driver if version not matched</code></pre>
+<p>Il System Management Unit firmware interface della GPU implementa la versione 64 (<code>0x40</code>), il driver kernel <code>amdgpu</code> di Ubuntu 6.8 supporta la 61 (<code>0x3d</code>). Mismatch di 3 release.</p>
+<p>Importante: il firmware è <em>più nuovo</em> del driver, non viceversa. Aggiornare <code>linux-firmware</code> peggiorerebbe la divergenza. La soluzione corretta è un kernel più recente (HWE 6.11+ per Ubuntu 24.04), oppure semplicemente accettare il warning, che è cosmetico — il firmware mantiene retrocompatibilità con la IF version precedente.</p>
+<p>Nel mio caso, dato che il runtime PM funziona già e la GPU va in deep sleep, il warning non sta limitando nulla di pratico. Lo segno nel runbook come "da rivedere al prossimo upgrade kernel".</p>
+<h2>La iGPU e il monitor: una piccola correzione di stima</h2>
+<p>A questo punto la 7900 XTX è chiusa: zero watt confermati. Mi resta da capire se posso ottimizzare la iGPU del Ryzen, dato che la macchina la userò headless via SSH.</p>
+<p>Verifico i connettori della iGPU (<code>card2</code>):</p>
+<pre><code>for c in /sys/class/drm/card2-*/status; do
+  echo "$c: $(cat $c)"
+done
+# card2-HDMI-A-3: connected   ← c'è un monitor di servizio</code></pre>
+<p>C'era un monitor HDMI attaccato per la console di setup. Adesso che SSH funziona, lo posso staccare.</p>
+<p>Lo stacco fisicamente, il kernel rileva HPD off, status passa a <code>disconnected</code>. Quanto risparmio? Ho ipotizzato 5–10 W di getto, poi ho dovuto correggermi.</p>
+<p>Su un'APU come la Phoenix3, <code>pp_dpm_mclk</code> mostra il clock della RAM di sistema, non di una VRAM dedicata. La RAM continua a girare ai clock di lavoro perché la usa la CPU, non perché c'è un display attaccato. Staccare il monitor quindi:</p>
+<ul><li>non fa scendere il memory clock (è driven dalla CPU, non dal display)</li><li>spegne solo display PHY + display pipe HDMI</li><li>risparmio reale: 1–3 W, non 5–10</li></ul>
+<p>Onestà intellettuale: stima precedente sbagliata, correzione applicata. Misurazione finale con <code>turbostat</code>:</p>
+<pre><code>sudo apt install linux-tools-$(uname -r) -y
+sudo turbostat --num_iterations 3 --interval 2 --quiet</code></pre>
+<p>Output (estratto):</p>
+<pre><code>PkgWatt  CorWatt  C3%     Busy%
+3.06     0.10     98.61   0.43
+3.52     0.30     96.51   0.78</code></pre>
+<p>Il package APU consuma 3.0–3.5 W in idle profondo, con i core CPU x86 a 0.1–0.3 W e tempo in C3 (deep idle) sopra il 96%.</p>
+<p>Per metterla in prospettiva: il Ryzen 7 255 ha un TDP nominale di 45 W. Stare a 3 W in idle significa circa il 6.6% del TDP, senza aver toccato nessun parametro di tuning, governor o profilo di power. È il default di Ubuntu 24.04 con <code>amdgpu</code> su questa piattaforma — un esempio molto pulito di come la stack Linux moderna sa già scalare bene da sola su hardware AMD recente.</p>
+<h2>Lo strumento giusto per misurare senza svegliare nulla</h2>
+<p>Lezione operativa: per monitorare il consumo della eGPU in modo affidabile, non usare <code>rocm-smi</code> in polling. Usa il sysfs e gestisci il caso "scheda sospesa":</p>
+<pre><code>sudo tee /usr/local/bin/gpu-stat &lt;&lt;'EOF'
+#!/usr/bin/env bash
+PCI="0000:03:00.0"
+CARD="card1"
+
+status=$(cat /sys/bus/pci/devices/$PCI/power/runtime_status)
+echo "Status:  $status"
+
+if [ "$status" = "suspended" ]; then
+  echo "Power:   ~0 W (GPU in deep sleep)"
+  echo "Note:    sensors inaccessible while suspended"
+  exit 0
+fi
+
+power_uw=$(cat /sys/class/drm/$CARD/device/hwmon/hwmon*/power1_average 2&gt;/dev/null)
+temp_mc=$(cat /sys/class/drm/$CARD/device/hwmon/hwmon*/temp1_input 2&gt;/dev/null)
+busy=$(cat /sys/class/drm/$CARD/device/gpu_busy_percent 2&gt;/dev/null)
+sclk=$(grep '\*' /sys/class/drm/$CARD/device/pp_dpm_sclk 2&gt;/dev/null | tr -d ' ')
+mclk=$(grep '\*' /sys/class/drm/$CARD/device/pp_dpm_mclk 2&gt;/dev/null | tr -d ' ')
+
+echo "Power:   $((${power_uw:-0}/1000000)) W"
+echo "Temp:    $((${temp_mc:-0}/1000)) °C"
+echo "Busy:    ${busy:-N/A}%"
+echo "SCLK:    ${sclk:-N/A}"
+echo "MCLK:    ${mclk:-N/A}"
+EOF
+sudo chmod +x /usr/local/bin/gpu-stat</code></pre>
+<p><code>gpu-stat</code> legge solo <code>runtime_status</code> quando la GPU è sospesa, e accede ai sensori solo quando è attiva. Niente wake-up indotto.</p>
+<p>Per Zabbix, lo stesso principio si traduce in tre UserParameter:</p>
+<pre><code># /etc/zabbix/zabbix_agent2.d/gpu.conf
+UserParameter=gpu.runtime_status,cat /sys/bus/pci/devices/0000:03:00.0/power/runtime_status
+UserParameter=gpu.power_w,test "$(cat /sys/bus/pci/devices/0000:03:00.0/power/runtime_status)" = "suspended" &amp;&amp; echo 0 || echo $(($(cat /sys/class/drm/card1/device/hwmon/hwmon*/power1_average)/1000000))
+UserParameter=gpu.temp_c,test "$(cat /sys/bus/pci/devices/0000:03:00.0/power/runtime_status)" = "suspended" &amp;&amp; echo 0 || echo $(($(cat /sys/class/drm/card1/device/hwmon/hwmon*/temp1_input)/1000))</code></pre>
+<p>Così il monitoring non sveglia mai la GPU, e in idle vedi correttamente <code>power=0</code> invece di errori o falsi positivi.</p>
+<h2>Bilancio finale del consumo idle</h2>
+<p>| Componente | Idle |<br>|---|---|<br>| APU Phoenix (CPU + iGPU + SoC) | ~3.0 W |<br>| Radeon RX 7900 XTX (eGPU, suspended) | ~0 W |<br>| DDR5 + PHY | ~3–5 W |<br>| NVMe SSD | ~1–2 W |<br>| Scheda madre, VRM, ventole | ~5–10 W |<br>| Alimentatori (efficienza ~88%) | overhead +10–15% |<br>| <strong>Stima alla presa</strong> | <strong>15–25 W</strong> |</p>
+<p>Per un sistema con una 7900 XTX collegata e pronta a inferire LLM al volo, idle alla presa sotto i 25 W è un ottimo risultato. La stessa scheda su Windows starebbe verosimilmente sui 35–45 W. La differenza è interamente merito del PCI runtime PM su Linux, più il fatto che la macchina è headless e la eGPU non ha display.</p>
+<h2>Le tre regole di Sacchi, applicate qui</h2>
+<p>Questo case study è un manuale in miniatura delle tre regole che insegno ai miei studenti e che applico ai miei deployment.</p>
+<p><strong>Safety first.</strong> Prima di toccare qualunque parametro di power management, ho fatto solo letture in sysfs. Niente <code>echo</code> su file in <code>/sys</code> prima di aver capito cosa stavo modificando. Niente cambio di kernel finché ROCm non era confermato indipendente dal sistema. Niente disconnessione del cavo monitor finché non avevo verificato che SSH funzionasse.</p>
+<p><strong>Little often.</strong> Un passo alla volta, mai due modifiche insieme. Prima diagnosi via <code>rocm-smi</code>, poi sysfs, poi <code>fuser</code>/<code>lsof</code>, poi connector status, poi runtime PM, poi <code>turbostat</code>. Ogni passo ha cambiato la mia comprensione del sistema. Se avessi fatto tutto in blocco non avrei mai capito che <code>rocm-smi</code> era il problema.</p>
+<p><strong>Double check.</strong> L'87 W iniziale sembrava un problema reale. Solo controllando in tre modi indipendenti (carico GPU sample, runtime status, sensore in <code>suspended</code> non leggibile) ho confermato che era un artefatto di misura. E quando ho stimato 5–10 W di risparmio dal display ho dovuto correggere a 1–3 W dopo aver guardato meglio cosa fosse davvero <code>mclk</code> su un'APU.</p>
+<h2>Prossimi passi</h2>
+<p>Cosa farò in futuro su questa macchina, in ordine di priorità:</p>
+<p>1. Aggiornare il kernel a HWE 6.11+ quando avrò tempo di testare anche Ollama dopo l'upgrade. Risolverà il warning SMU IF e potenzialmente abbasserà la baseline idle della 7900 XTX <em>durante</em> l'inferenza.<br>2. Misurare il consumo a presa con uno Shelly Plug S già nella mia infra MQTT, per validare la stima 15–25 W.<br>3. Dashboard Zabbix dedicato a <code>llm</code>, con <code>runtime_status</code>, <code>PkgWatt</code>, temp e correlazione con i carichi Ollama.<br>4. Wake-on-LAN documentato per il pattern "spegni la macchina quando non serve, accendila on-demand quando un'API esterna deve fare inferenza".</p>
+<h2>Conclusione</h2>
+<p>L'eGPU 7900 XTX su Minisforum AI X1 via OCuLink + DEG1 funziona molto bene su Ubuntu 24.04, e il PCI runtime power management del driver <code>amdgpu</code> è già attivo di default. Non servono tweak particolari, custom udev rules, o script di parking.</p>
+<p>Il consumo idle reale è zero watt sulla eGPU, e circa 3 W sull'APU host. Sotto i 25 W stimati alla presa per l'intero sistema. Se hai una 7900 XTX in una eGPU enclosure e su <code>rocm-smi</code> vedi 80–90 W in idle, non stai vedendo il consumo reale: stai vedendo il consumo causato da <code>rocm-smi</code> stesso.</p>
+<p>La lezione operativa più importante è quella della misurazione: lo strumento di osservazione cambia il sistema osservato, anche in informatica. Quando un valore non quadra, il primo sospetto deve essere il misuratore.</p>
+<p>E poi, sempre: safety first, little often, double check.</p>
+<hr>
+<p>Una volta verificato che la scheda dorme davvero, mi è rimasta una domanda parallela: la configurazione di Ollama che girava bene sulla 780M va bene anche sulla 7900 XTX? Spoiler: no, e i workaround vecchi diventano dannosi sulla nuova GPU.</p>
+<p><strong><a href="/blog/ollama-igpu-egpu-migration/">Leggi la Parte II: migrare Ollama da iGPU 780M a eGPU 7900 XTX</a></strong></p>
+  </div>
+
+  <div class="article-footer-separator"></div>
+
+  <footer class="mb-0">
+    <div class="flex flex-wrap gap-4 items-center justify-between">
+      <a href="/" class="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-wider flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">arrow_back</span>
+        <span>Torna al Blog</span>
+      </a>
+      
+      <div class="flex gap-3">
+        <a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" 
+           href="https://www.linkedin.com/shareArticle?mini=true&url=https://lucasacchi.net/blog/egpu-7900xtx-power-management/&title=Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           title="Share on LinkedIn"
+           aria-label="Share on LinkedIn">
+          <span class="material-symbols-outlined">work</span>
+        </a>
+        
+        <a class="text-on-surface-variant hover:text-primary transition-colors" 
+           href="mailto:?subject=Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU&body=Da 87 watt a zero — troubleshooting del power management di una RX 7900 XTX eGPU%0A%0Ahttps://lucasacchi.net/blog/egpu-7900xtx-power-management/" 
+           title="Share via email"
+           aria-label="Share via email">
+          <span class="material-symbols-outlined">mail</span>
+        </a>
+        
+        <button class="text-on-surface-variant hover:text-primary transition-colors" 
+                id="copy-link-btn"
+                title="Copy link"
+                aria-label="Copy link">
+          <span class="material-symbols-outlined" id="copy-icon">link</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+</article>
+
+</main>
+
+<footer class="bg-surface-container-low border-t border-outline-variant/20 mt-auto">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Coordinates</span>
+<p class="font-body text-sm text-on-surface-variant">Viale Bligny 13/a<br/>Milano, IT</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Comm_Links</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-[#0077b5] transition-colors" href="https://www.linkedin.com/in/lucasacchi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</a>
+<a class="text-on-surface-variant hover:text-[#ff0000] transition-colors" href="https://www.youtube.com/@lucasacchinet" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+<span class="material-symbols-outlined">smart_display</span>
+</a>
+</div>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Analytics</span>
+<p class="font-body text-xs text-on-surface-variant">Privacy-first analytics</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">© LucaSacchi.net</span>
+<p class="font-body text-xs text-on-surface-variant">All Rights Reserved.</p>
+<div class="mt-4 flex gap-3 text-[9px]">
+<a href="https://www.iubenda.com/privacy-policy/47143821" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Privacy Policy">Privacy Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" class="iubenda-nostyle iubenda-noiframe iubenda-embed text-on-surface-variant hover:text-primary transition-colors" title="Cookie Policy">Cookie Policy</a>
+<span class="text-outline-variant/40">•</span>
+<a href="https://analytics.lucasacchi.net/index.php?module=CoreAdminHome&action=optOut&language=it" class="text-on-surface-variant hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer" title="Opt-out from analytics">Opt-out</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+// Mobile menu toggle
+var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+var mobileMenu = document.getElementById('mobile-menu');
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.toggle('hidden');
+  });
+}
+
+// Copy link button
+var copyLinkBtn = document.getElementById('copy-link-btn');
+var copyIcon = document.getElementById('copy-icon');
+if (copyLinkBtn && copyIcon) {
+  copyLinkBtn.addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href).then(function() {
+      copyIcon.textContent = 'check';
+      setTimeout(function() {
+        copyIcon.textContent = 'link';
+      }, 2000);
+    });
+  });
+}
+</script>
+
+<script async src="/analytics.js"></script>
+<!-- Matomo (loaded only after iubenda consent) -->
+<script>
+(function() {
+  function loadMatomo() {
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    var u="//analytics.lucasacchi.net/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  }
+  if (typeof _iub !== 'undefined' && _iub.csConfiguration) {
+    _iub.csConfiguration.callback = _iub.csConfiguration.callback || {};
+    _iub.csConfiguration.callback.onConsentGiven = function() {
+      if (typeof _iub.csConfiguration.callback.onConsentGiven._matomoLoaded === 'undefined') {
+        _iub.csConfiguration.callback.onConsentGiven._matomoLoaded = true;
+        loadMatomo();
+      }
+    };
+    if (_iub.areCookiesEnabled && _iub.areCookiesEnabled()) {
+      loadMatomo();
+    }
+  } else {
+    loadMatomo();
+  }
+})();
+</script>
+<!-- End Matomo Code -->
+
+<script type="text/javascript">
+(function (w,d) {
+  var loader = function () {
+    var s = d.createElement("script");
+    var tag = d.getElementsByTagName("script")[0];
+    s.src="https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s,tag);
+  };
+  if(w.addEventListener){
+    w.addEventListener("load", loader, false);
+  }else if(w.attachEvent){
+    w.attachEvent("onload", loader);
+  }else{
+    w.onload = loader;
+  }
+})(window, document);
+</script>
+<!-- Policy Modal -->
+<div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-surface rounded-none max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-outline-variant/20">
+    <div class="sticky top-0 bg-surface-container-low border-b border-outline-variant/20 flex justify-between items-center p-6">
+      <h2 class="text-xl font-headline font-bold text-on-surface" id="policy-modal-title"></h2>
+      <button id="policy-modal-close" class="text-on-surface-variant hover:text-on-surface transition-colors" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6" id="policy-modal-content"></div>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('policy-modal');
+  const closeBtn = document.getElementById('policy-modal-close');
+  const modalTitle = document.getElementById('policy-modal-title');
+  const modalContent = document.getElementById('policy-modal-content');
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function openPolicy(type) {
+    document.body.style.overflow = 'hidden';
+    if (type === 'privacy') {
+      modalTitle.textContent = 'Privacy Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/legal" style="width:100%;height:600px;border:none;" title="Privacy Policy"></iframe>';
+    } else if (type === 'cookie') {
+      modalTitle.textContent = 'Cookie Policy';
+      modalContent.innerHTML = '<iframe src="https://www.iubenda.com/privacy-policy/47143821/cookie-policy" style="width:100%;height:600px;border:none;" title="Cookie Policy"></iframe>';
+    }
+    modal.classList.remove('hidden');
+  }
+
+  window.openPolicy = openPolicy;
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>
